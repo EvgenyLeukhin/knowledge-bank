@@ -1,8 +1,8 @@
 ---
 title: SEO-оптимизация
-sidebar_position: 10
+sidebar_position: 11
 ---
 
-# Изображения
+# SEO-оптимизация
 
-Изображения
+SEO-оптимизация

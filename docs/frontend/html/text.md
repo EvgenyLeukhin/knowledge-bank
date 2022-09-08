@@ -1,6 +1,6 @@
 ---
 title: Текст и символы
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Текст и символы
