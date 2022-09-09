@@ -1,8 +1,10 @@
 ---
 title: Изображения
-sidebar_position: 6
+sidebar_position: 2
 ---
 
-# Изображения
+## &lt;img&gt;
 
-Изображения
+## &lt;picture&gt;
+
+## &lt;svg&gt;

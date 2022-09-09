@@ -1,8 +1,9 @@
 ---
-title: Таблицы
-sidebar_position: 8
+title: Списки и таблицы
+sidebar_position: 3
 ---
 
-# Таблицы
+## Списки
 
-Таблицы
+## Таблицы
+

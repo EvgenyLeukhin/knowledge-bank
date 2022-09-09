@@ -1,6 +1,6 @@
 ---
 title: Спец-тэги
-sidebar_position: 13
+sidebar_position: 6
 ---
 
 # Спец-тэги

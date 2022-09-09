@@ -1,6 +1,6 @@
 ---
 title: Формы
-sidebar_position: 9
+sidebar_position: 4
 ---
 
 # Формы
