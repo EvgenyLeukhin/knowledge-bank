@@ -1,8 +1,7 @@
 {
-  "label": "Managment ✍",
-  "position": 5,
+  "label": "✍ Managment",
+  "position": 0,
   "link": {
-    "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "type": "generated-index"
   }
 }
