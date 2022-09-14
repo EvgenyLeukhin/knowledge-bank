@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[5239],{7766:e=>{e.exports=JSON.parse('{"title":"Design \ud83c\udf08","description":"5 minutes to learn the most important Docusaurus concepts.","slug":"/category/design-","permalink":"/knowledge-bank/docs/category/design-","navigation":{"next":{"title":"color","permalink":"/knowledge-bank/docs/design/color"}}}')}}]);
