@@ -1,6 +1,6 @@
 ---
 title: Head-тэги
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 ## Основные тэги внутри &lt;head&gt;
@@ -102,4 +102,34 @@ sidebar_position: 5
 Иконки на вкладках браузеров.
 
 ```html
+<!-- Для старых браузеров -->
+<link rel="icon" type="image/x-icon" sizes="32x32" href="favicon.ico">
+
+<!-- Для новых браузеров (svg) -->
+<link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg">
+
+<!-- Safari (достаточно одной на 180)-->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+
+<!-- Android Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- Windows -->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+```
+
+```json title="manifest.json"
+{
+  "name": "Sitemane",
+  "description": "Site description",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    { "src": "img/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "img/icon-512.png", "type": "image/png", "sizes": "512x512" },
+  ]
+}
 ```
