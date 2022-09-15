@@ -3,8 +3,10 @@ title: Изображения
 sidebar_position: 2
 ---
 
-## &lt;img&gt;
+## ```<img>```
 
-## &lt;picture&gt;
+## ```<picture>```
 
-## &lt;svg&gt;
+## ```<svg>```
+
+## ```<figure>```

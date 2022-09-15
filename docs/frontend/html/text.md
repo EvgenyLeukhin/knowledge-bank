@@ -206,4 +206,64 @@ Some text<sub>будет снизу</sub>&nbsp;
 
 ## Ссылки
 
+TODO
+
 ## Таблицы
+
+```html
+<table>
+  <caption>Заголовок таблицы</caption>
+
+  <thead>
+    <tr>
+      <td colspan="3">Головная строка</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1 - 1</td>
+      <td>1 - 2</td>
+      <td rowspan="2">1 - 3</td>
+    </tr>
+    <tr>
+      <td>2 - 1</td>
+      <td>2 - 2</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Футер таблицы</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+<table>
+  <caption>Заголовок таблицы</caption>
+
+  <thead>
+    <tr>
+      <td colspan="3">Головная строка</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1 - 1</td>
+      <td>1 - 2</td>
+      <td rowspan="2">1 - 3</td>
+    </tr>
+    <tr>
+      <td>2 - 1</td>
+      <td>2 - 2</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Футер таблицы</td>
+    </tr>
+  </tfoot>
+</table>
