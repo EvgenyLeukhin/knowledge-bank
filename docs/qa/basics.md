@@ -1,5 +1,5 @@
 ---
-title: Тестирование
+title: Определения
 sidebar_position: 0
 ---
 

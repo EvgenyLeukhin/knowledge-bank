@@ -19,3 +19,13 @@ sidebar_position: 2
 12. **Google page speed**, **GT-Metrix**
 13. **Web page test** (speed index около 1000 это круто)
 14. **Кеширование и Storage**
+
+## Онлайн-сервисы
+
+* [PageSpeed Insights](https://pagespeed.web.dev/)
+* [Webpagetest](https://www.webpagetest.org/)
+* [Caniuse - актуальность html/css](https://caniuse.com/)
+* [Statcounter - Статистика браузеров](https://gs.statcounter.com/)
+* [Валидатор HTML](https://validator.w3.org/nu/)
+* [Скорость загрузки на Mobile](https://www.thinkwithgoogle.com/feature/testmysite/)
+* [What is My Ip - Узнать свой IP](https://bestvpn.org/whats-my-ip/)

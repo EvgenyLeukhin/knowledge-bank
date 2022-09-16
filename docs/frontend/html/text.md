@@ -204,14 +204,42 @@ Some text<sub>будет снизу</sub>&nbsp;
   <p>текст №5</p>
 </details>
 
+***
+
 ## Ссылки
 
-TODO
+```html
+<!-- Простая ссылка на сторонний ресурс в новой вкладке -->
+<a href="http://ya.ru" target="_blank">Ссылка на сайт Яндекс</a>
+
+<!-- Простая ссылка на внуренний ресурс -->
+<a href="/knowledge-bank/docs/frontend/html/images/">Ссылка на "Изображения"</a>
+
+<!-- Якорная ссылка на id -->
+<a href="#списки">Якорная ссылка</a>
+
+<!-- Ссылка на pdf-файл -->
+<a href="https://tourpass.ru/docs/politic-person-data.pdf" download>Ссылка на pdf-файл</a>
+```
+
+* <a href="http://ya.ru">Ссылка на сайт Яндекс</a>
+* <a href="/knowledge-bank/docs/frontend/html/images/">Ссылка на "Изображения"</a>
+* <a href="#списки">Якорная ссылка</a>
+* <a href="https://tourpass.ru/docs/politic-person-data.pdf" download>Ссылка на pdf-файл</a>
+
+***
 
 ## Таблицы
 
 ```html
 <table>
+  <!-- Если нужно указать ширину колонок -->
+  <colgroup>
+    <col width="100" />
+    <col width="300" />
+    <col width="150" />
+  </colgroup>
+
   <caption>Заголовок таблицы</caption>
 
   <thead>
@@ -241,6 +269,12 @@ TODO
 ```
 
 <table>
+  <colgroup>
+    <col width="100" />
+    <col width="300" />
+    <col width="150" />
+  </colgroup>
+
   <caption>Заголовок таблицы</caption>
 
   <thead>
