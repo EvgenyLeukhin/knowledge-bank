@@ -251,7 +251,6 @@ Some text<sub>будет снизу</sub>&nbsp;
 * <a href="mailto:someone@example.com">Send email</a>
 * <a href="tel:+4733378901">+47 333 78 901</a>
 * <a href="https://t.me/eleukhin">eleukhin Telegram</a>
-* <a href="https://t.me/eleukhin">eleukhin Telegram</a>
 
 
 ***

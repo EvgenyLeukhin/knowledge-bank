@@ -35,6 +35,8 @@ sidebar_position: 4
 </html>
 ```
 
+***
+
 ## Mета-тэги
 
 - [Facebook sharing](https://developers.facebook.com/tools/debug/)
@@ -49,11 +51,6 @@ sidebar_position: 4
 <meta name="copyright" content="Компания">
 <meta name="robots" content="index, nofollow">
 <meta name="author" content="Name">
-
-<!-- важные тэги для seo -->
-<title>Заголовок страницы</title>
-<h1>Заголовок страницы</h1>
-<strong>Важный текст</strong>
 
 <!-- мета-тэги для превью -->
 <!-- open-graph -->
@@ -95,7 +92,7 @@ sidebar_position: 4
 <meta name="identifier-URL" content="http://kartinamira.com">
 ```
 
-Для также SEO важно использовать семантические тэги, такие как: ```<header>, <footer>, <aside>, <main>, <nav>, <section>, <article>, <strong>``` и др.
+***
 
 ## Фавиконки
 
@@ -132,4 +129,17 @@ sidebar_position: 4
     { "src": "img/icon-512.png", "type": "image/png", "sizes": "512x512" },
   ]
 }
+```
+
+***
+
+## Условные комментарии
+
+Сейчас уже почти не используется.
+
+```html
+<!-- Версия IE меньше 9 -->
+<!--[if lt IE 9]>
+  Можно загружать скрипты и стили
+<![endif]-->
 ```
