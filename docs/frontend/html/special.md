@@ -7,7 +7,7 @@ sidebar_position: 5
 
 ## &lt;iframe&gt;
 
-Фрейм это как бы сайт внутри сайта, который находится в отдельном блоке.
+Фрейм это как бы часть стороннего сайт внутри текущего сайта, который находится в отдельном блоке.
 
 ```html
 <!-- Фрейм с YouTube -->
@@ -30,11 +30,11 @@ sidebar_position: 5
 ### Фрейм с Яндекс-музыки
 <iframe frameborder="0" width="100%" height="180" src="https://music.yandex.ru/iframe/#track/25786/2484799">Слушайте <a href='https://music.yandex.ru/album/2484799/track/25786'>Gimme! Gimme! Gimme! (A Man After Midnight)</a> — <a href='https://music.yandex.ru/artist/9367'>ABBA</a> на Яндекс Музыке</iframe>
 
-* YouTube
+* [YouTube](https://www.youtube.com/)
 * [ВК](https://vk.com/video?z=video-106986602_456239036%2Fpl_cat_trends)
 * [Яндекс-карты](https://yandex.ru/dev/maps/) 
 * [Google-карты](https://developers.google.com/maps?hl=ru)
-* Различные Виджеты
+* Различные сторонние виджеты
 
 ***
 
