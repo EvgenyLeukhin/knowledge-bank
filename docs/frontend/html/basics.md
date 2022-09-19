@@ -3,11 +3,11 @@ title: Основная разметка
 sidebar_position: 0
 ---
 
+- [Webref](https://webref.ru/html)
+- [MDN - HTML](https://developer.mozilla.org/ru/docs/Web/HTML)
+- [htmlbook](http://htmlbook.ru/html/)
 - [W3C](https://www.w3.org/) - Спецификация HTML
 - [WHATWG](https://whatwg.org/) - Представилели браузеров
-- [MDN - HTML](https://developer.mozilla.org/ru/docs/Web/HTML)
-- [webref](https://webref.ru/html)
-- [htmlbook](http://htmlbook.ru/html/)
 
 
 ## Синтаксис языка html 
