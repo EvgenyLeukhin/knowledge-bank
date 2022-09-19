@@ -19,6 +19,7 @@ sidebar_position: 2
 12. **Google page speed**, **GT-Metrix**
 13. **Web page test** (speed index около 1000 это круто)
 14. **Кеширование и Storage**
+15. **Отстутствие ошибок в консоли** и валидный код.
 
 ## Онлайн-сервисы
 
