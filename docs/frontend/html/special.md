@@ -67,6 +67,11 @@ sidebar_position: 5
   <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
   <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg">
   <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm">
+
+  <!-- Субтитры -->
+  <track kind="subtitles" src="video/jane.en.vtt" srclang="en" label="English">
+  <track kind="subtitles" src="video/jane.ua.vtt" srclang="uk" label="Українська">
+  <track kind="subtitles" src="video/jane.ru.vtt" srclang="ru" label="Русский" default>
   Your browser doesn't support HTML5 video tag.
 </video>
 ```
@@ -81,4 +86,22 @@ sidebar_position: 5
 <noscript>
   Этот текст будет показал, если у браузера отключен JS
 </noscript>
+```
+
+***
+
+## &lt;template&gt;
+
+Элемент &lt;template&gt; представляет собой механизм для хранения содержимого на стороне клиента, которое не отображается в процессе загрузки страницы, но впоследствии может быть заполнено с помощью JavaScript.
+
+Содержимое &lt;template&gt; — это шаблон для фрагмента HTML, который может быть клонирован и вставлен в документ через скрипты. Обычно применяется для элементов с повторяющейся структурой, вроде списков, таблиц, списков &lt;select&gt; и др.
+
+## &lt;embed&gt;
+
+Флеш-анимации. Больше не используются.
+
+```html
+<embed src="../pict/masianya_dj.swf" width="700" height="800"
+       type="application/x-shockwave-flash"
+       pluginspage="http://www.macromedia.com/go/getflashplayer" border="1" />
 ```

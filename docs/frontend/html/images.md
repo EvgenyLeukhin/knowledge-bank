@@ -3,6 +3,18 @@ title: Изображения
 sidebar_position: 2
 ---
 
+export const MAP = ({children}) => (
+  <div
+    style={{
+      border: '1px dashed deeppink',
+      margin: '0 auto',
+      width: '260px',
+      height: '232px',
+    }}>
+    {children}
+  </div>
+);
+
 По умолчанию изображения отрисовываются по такой ширине и высоте в пикселях как в исходном файле. Атрибутами width и height можно изменять исходный размер.
 
 ## ```<img>```
@@ -10,6 +22,8 @@ sidebar_position: 2
 Как хак можно испольтзовать исходные изображения по ширине в 2 раза больше, чем оно отрисовываются в браузере, тогда будет поддержка ретины 2х. То есть, исходная картинка по ширине 1000px, а в html/css мы укахываем ей ширину 500px. Но есть недостаток, что на обычных экранах будет грузиться дольше. 
 
 Если нужна гибкая настройка с **srcset** и **sizes**, то лучше использовать тэг ```<picture>```.
+
+<img src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594" alt="Картинка" />
 
 ```html
 <!-- Изображение с относительным источником c заданной шириной и высотой-->
@@ -23,9 +37,39 @@ sidebar_position: 2
 
 <!-- Можно указывать сразу несколько изображений для двух- и трехслойной ретины -->
 <img src="img/pict400px.png" width="400" srcset="img/pict800px.png 2x, img/pict1200px.png 3x">
-```
 
+<!-- С картой map для позиционирования ссылок -->
 <img src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594" alt="Картинка" />
+
+<map name="infographic">
+  <area shape="poly" coords="130,147,200,107,254,219,130,228"
+        href="https://developer.mozilla.org/docs/Web/HTML"
+        target="_blank" alt="HTML" />
+  <area shape="poly" coords="130,147,130,228,6,219,59,107"
+        href="https://developer.mozilla.org/docs/Web/CSS"
+        target="_blank" alt="CSS" />
+  <area shape="poly" coords="130,147,200,107,130,4,59,107"
+        href="https://developer.mozilla.org/docs/Web/JavaScript"
+        target="_blank" alt="JavaScript" />
+</map>
+
+<img usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info2.png" alt="MDN infographic" />
+```
+<MAP>
+  <map name="infographic">
+    <area shape="poly" coords="130,147,200,107,254,219,130,228"
+          href="https://developer.mozilla.org/docs/Web/HTML"
+          target="_blank" alt="HTML" />
+    <area shape="poly" coords="130,147,130,228,6,219,59,107"
+          href="https://developer.mozilla.org/docs/Web/CSS"
+          target="_blank" alt="CSS" />
+    <area shape="poly" coords="130,147,200,107,130,4,59,107"
+          href="https://developer.mozilla.org/docs/Web/JavaScript"
+          target="_blank" alt="JavaScript" />
+  </map>
+
+  <img usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info2.png" alt="MDN infographic" />
+</MAP>
 
 ***
 
@@ -62,7 +106,7 @@ sidebar_position: 2
 
 ```html
 <figure>
-  <p><img src="img/thumb1.jpg" alt="thumb1.jpg" /></p>
+  <img src="img/thumb1.jpg" alt="thumb1.jpg" />
   <figcaption>Софийский собор</figcaption>
 </figure>
 ```
@@ -71,7 +115,7 @@ sidebar_position: 2
 
 ## ```<svg>```
 
-Векторная графика представленная ввиде html-тэгов.
+Векторная графика представленная в виде html-тэгов.
 
 ### Окружность
 
@@ -151,7 +195,6 @@ sidebar_position: 2
 
 ```html
 <!-- Вставить после открывающего тэга body -->
-
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <symbol id="svg-icon1">
     ...svg-код1...

@@ -17,12 +17,12 @@ sidebar_position: 1
 ```
 
 ```html
-// Параграф
+<!-- Параграф -->
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br /> Perferendis, perspiciatis cumque. Illum sed accusantium suscipit? Distinctio, exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati dolores provident soluta nulla illum vero.</p>
 
 <hr />
 
-// Блочная цитата
+<!-- Блочная цитата -->
 <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis cumque. Illum sed accusantium suscipit? Distinctio, exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati dolores provident soluta nulla illum vero.</blockquote>
 ```
 
@@ -32,9 +32,11 @@ sidebar_position: 1
 <u>Подчеркнутый</u>
 <mark>Выделенный</mark>
 <s>Зачеркнутый</s>
-<q>Строчная цитата</q>
+<cite>Строчная цитата в кавычках</cite>
+<q>Строчная цитата курсивом</q>
 Some text<sub>Some text</sub>
 Some text<sup>Some text</sup>
+<wbr /> - Допустимый перенос длинного слова
 <br /> - Перенос строки
 <hr /> - Горизинтальный разделитель
 ```
@@ -44,7 +46,9 @@ Some text<sup>Some text</sup>
 <u>Подчеркнутый</u>&nbsp;
 <mark>Выделенный</mark>&nbsp;
 <s>Зачеркнутый</s>&nbsp;
-<q>Строчная цитата</q>&nbsp;
+<cite>Строчная цитата</cite>&nbsp;
+<q>Строчная цитата в кавычках</q>&nbsp;
+<cite>Строчная цитата курсивом</cite>&nbsp;
 Some text<sup>будет сверху</sup>&nbsp;
 Some text<sub>будет снизу</sub>&nbsp;
 
@@ -56,16 +60,26 @@ Some text<sub>будет снизу</sub>&nbsp;
 <kbd>Ctrl + C</kbd>
 <abbr title="Union of Soviet Socialist Republics">USSR</abbr>
 <code>console.log('Какой-то код');</code>
+<samp>Ваш браузер поддерживает JavaScript (вывод текста программой)</samp>
 <pre>Текст будет такой же как в коде, со всеми п  р  о  б  е  л  а  м  и</pre>
+<var>переменная1</var> + <var>переменная2</var>
+<del>Удаленный текст</del> <ins>Новый текст</ins>
+<bdo>Текст справа-налево</bdo>
+
+<!-- Определение -->
+<dfn>Капителью</dfn> в типографике называется текст, набранный прописными буквами уменьшенного размера.
 ```
 
 <address>Россия, Москва, ул. Ленина, д, 1</address>
-
 <time>1961-04-12</time><br />
 <kbd>Ctrl + C</kbd><br />
 <abbr title="Union of Soviet Socialist Republics">USSR</abbr><br />
-<code>console.log('Hello, World!');</code>
+<code>console.log('Hello, World!');</code><br />
+<samp>Ваш браузер поддерживает JavaScript (вывод текста программой)</samp><br />
 <pre>Текст будет такой же как в коде, со всеми п  р  о  б  е  л  а  м  и</pre>
+<span><var>переменная1</var> + <var>переменная2</var></span><br />
+<span><del>Удаленный текст</del> <ins>Новый текст</ins></span><br />
+<dfn>Капителью</dfn> в типографике называется текст, набранный прописными буквами уменьшенного размера.
 
 ## Текст для SEO
 
@@ -259,7 +273,7 @@ Some text<sub>будет снизу</sub>&nbsp;
 
 ```html
 <table>
-  <!-- Если нужно указать ширину колонок -->
+  <!-- Если строго нужно указать ширину колонок -->
   <colgroup>
     <col width="100" />
     <col width="300" />
