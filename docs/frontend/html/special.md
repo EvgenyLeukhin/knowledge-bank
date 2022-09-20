@@ -90,11 +90,27 @@ sidebar_position: 5
 
 ***
 
+## &lt;data&gt;
+
+Специальный тэг, чтобы связать какой-ниб элемент в каким-ниб id.
+
+```html
+<ul>
+  <li><data value="21053">Cherry Tomato</data></li>
+  <li><data value="21054">Beef Tomato</data></li>
+  <li><data value="21055">Snack Tomato</data></li>
+</ul>
+```
+
+***
+
 ## &lt;template&gt;
 
 Элемент &lt;template&gt; представляет собой механизм для хранения содержимого на стороне клиента, которое не отображается в процессе загрузки страницы, но впоследствии может быть заполнено с помощью JavaScript.
 
 Содержимое &lt;template&gt; — это шаблон для фрагмента HTML, который может быть клонирован и вставлен в документ через скрипты. Обычно применяется для элементов с повторяющейся структурой, вроде списков, таблиц, списков &lt;select&gt; и др.
+
+***
 
 ## &lt;embed&gt;
 
@@ -104,4 +120,55 @@ sidebar_position: 5
 <embed src="../pict/masianya_dj.swf" width="700" height="800"
        type="application/x-shockwave-flash"
        pluginspage="http://www.macromedia.com/go/getflashplayer" border="1" />
+```
+
+***
+
+## &lt;dialog&gt;
+
+Контейнер для модального окна. 
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dialog</title>
+
+    <style>
+    body {
+      background: url(/example/image/shark.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    dialog {
+      background: rgba(255, 255, 255, 0.7);
+      width: 300px; 
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+    </style>
+  </head> 
+
+  <body> 
+    <button id="openDialog">Открыть окно</button>
+    <dialog>
+      <p>Полинезийцы называют Млечный путь Манго-Роа-И-Ата, 
+        что в переводе с маори означает «Длинная акула на рассвете».</p>
+      <p><button id="closeDialog">Закрыть окно</button></p>
+    </dialog>
+
+    <script>
+    var dialog = document.querySelector('dialog');
+
+    document.querySelector('#openDialog').onclick = function() {
+      dialog.show(); // Показываем диалоговое окно
+    }
+
+    document.querySelector('#closeDialog').onclick = function() {
+      dialog.close(); // Прячем диалоговое окно
+    }
+    </script>
+  </body> 
+</html>
 ```
