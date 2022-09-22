@@ -23,6 +23,7 @@ sidebar_position: 2
 
 ## Онлайн-сервисы для проверки оптимизации
 
+* [Browserstack](https://www.browserstack.com/)
 * [PageSpeed Insights](https://pagespeed.web.dev/)
 * [Webpagetest](https://www.webpagetest.org/)
 * [Caniuse - актуальность html/css](https://caniuse.com/)

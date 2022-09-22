@@ -75,16 +75,144 @@ sidebar_position: 3
 <input type="url" /> - Поле url
 <input type="tel" placeholder="+7-XXX-XXX-XXXX" patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"/> - Поле телефона
 <input type="search" /> - Поле поиска
+<input type="color" /> - Цвет
+<input type="file" /> - Загрузить файл в браузер
 <textarea rows="10" cols="45"></textarea> - Текстовое поле
 ```
 
+<input type="text" patern="[А-Яа-яЁё]" placeholder="Введите текст" />&nbsp;
+<input type="number" placeholder="Введите число" />&nbsp;
+<input type="password" placeholder="Введите пароль" />&nbsp;
+<input type="email" placeholder="Введите email" />&nbsp;
+<input type="url" placeholder="Введите url" />&nbsp;
+<input type="tel" placeholder="+7-XXX-XXX-XXXX" patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"/>&nbsp;
+<input type="search" placeholder="Поиск ..." />&nbsp;
+<input type="color" />&nbsp;
+<input type="file" />&nbsp;<br /><br />
+<textarea rows="10" cols="45" placeholder="Введите комментарий"></textarea>
+
 ***
 
-## Списки (селекты и дропдауны)
+## Списки
+
+### select
+
+```html
+<label for="year-id">Год рождения:</label>
+
+<select name="year" id="year-id">
+  <!-- optgroup - Группировка опшинов -->
+  <optgroup label="80-е">
+    <option>1981 год</option>
+    <option>1982 год</option>
+    <option>1983 год</option>
+  </optgroup> 
+  <optgroup label="90-е">
+    <option>1991 год</option>
+    <option>1992 год</option>
+    <option>1993 год</option>
+  </optgroup> 
+</select>
+```
+
+<label for="year-id">Год рождения:</label>&nbsp;
+<select name="year" id="year-id">
+  <optgroup label="80-е">
+    <option>1981 год</option>
+    <option>1982 год</option>
+    <option>1983 год</option>
+  </optgroup> 
+  <optgroup label="90-е">
+    <option>1991 год</option>
+    <option>1992 год</option>
+    <option>1993 год</option>
+  </optgroup> 
+</select>
+
+### datalist
+
+Как select, только можно вводить значения которых нет в option. Селект с поиском.
+
+```html
+<label for="education-input">Ваше образование</label>&nbsp;
+<input type="text" list="education" name="education" id="education-input" />
+
+<!-- Связь через id -->
+<datalist id="education">
+  <option value="Среднее неполное">
+  <option value="Среднее">
+  <option value="Средне-специальное">
+  <option value="Высшее неполное">
+  <option value="Высшее(бакалавр)">
+  <option value="Высшее">
+  <option value="Высшее(магистр)">
+</datalist>
+```
+
+<label for="education-input">Ваше образование</label>&nbsp;
+<input type="text" list="education" name="education" id="education-input" />
+<datalist id="education">
+  <option value="Среднее неполное" />
+  <option value="Среднее" />
+  <option value="Средне-специальное" />
+  <option value="Высшее неполное" />
+  <option value="Высшее(бакалавр)" />
+  <option value="Высшее" />
+  <option value="Высшее(магистр)" />
+</datalist>
 
 ***
 
 ## Checkbox и radio
+
+```html
+<!-- Checkbox -->
+<input type="checkbox" name="moscow" id="moscow-id" value="1">
+<label for="moscow-id">Я являюсь гражданином РФ</label>
+
+<!-- Radio -->
+<h3>Ваш возраст:</h3>
+<label>
+  <input type="radio" name="age" value="0-17" />
+  <span>0-17</span>
+</label>
+<label>
+  <input type="radio" name="age" value="18-35" />
+  <span>18-35</span>
+</label>
+<label>
+  <input type="radio" name="age" value="35-60" />
+  <span>35-60</span>
+</label>
+<label>
+  <input type="radio" name="age" value="over60" disabled />
+  <span>более 60 (disabled)</span>
+</label>
+```
+
+<input type="checkbox" name="moscow" id="moscow-id" value="1" />&nbsp;
+<label for="moscow-id">Являюсь гражданином РФ</label>
+
+<h3>Ваш возраст:</h3>
+<label>
+  <input type="radio" name="age" value="0-17" />
+  <span>0-17</span>
+</label>
+&nbsp;
+<label>
+  <input type="radio" name="age" value="18-35" />
+  <span>18-35</span>
+</label>
+&nbsp;
+<label>
+  <input type="radio" name="age" value="35-60" />
+  <span>35-60</span>
+</label>
+&nbsp;
+<label>
+  <input type="radio" name="age" value="over60" disabled />
+  <span>более 60 (disabled)</span>
+</label>
 
 ***
 
@@ -95,6 +223,10 @@ sidebar_position: 3
 <input type="month" /> - Выбор месяца
 <input type="week" /> - Выбор недели
 ```
+
+<input type="date" min="1980-01-01" max="2145-01-08" value="2022-01-01" />&nbsp;
+<input type="month" />&nbsp;
+<input type="week" />&nbsp;
 
 ***
 
@@ -115,20 +247,24 @@ sidebar_position: 3
 <input type="submit" value="Отправить" />
 <input type="reset" value="Сбросить" />
 
-<!-- Работает как submit, только еще отправляет доп. поля (x и y), координаты клика по картинке -->
+<!-- image работает как submit, только еще отправляет доп. поля (x и y), координаты клика по картинке -->
 <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48" />
-
-<!-- Загрузить файл в браузер -->
-<input type="file" />
-
-<!-- Цвет -->
-<input type="color" />
 ```
+
+### button
+
+<input type="submit" value="Отправить" />
+<input type="reset" value="Сбросить" />
+
+### input
+
+<input type="submit" value="Отправить" />
+<input type="reset" value="Сбросить" />
 
 ***
 
 
-## Цвет, range, &lt;meter&gt; и &lt;progress&gt;
+## Range, &lt;meter&gt; и &lt;progress&gt;
 
 range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэги. Показывают шкалу с индикацией.
 
