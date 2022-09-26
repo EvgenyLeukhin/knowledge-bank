@@ -154,7 +154,7 @@ sidebar_position: 4
 * **DEPLOYED ON PROD** - Задеплоено на основной сервер, пользователи уже видят обновления
 * **CLOSED** - Задача сделана и закрыта
 
-### Инструменты для SCRUM
+### Инструменты для KANBAN
 
 - [Trello](https://trello.com/ru)
 
