@@ -1,4 +1,4 @@
 ---
-title: Цвет
+title: Deutch
 sidebar_position: 1
 ---
