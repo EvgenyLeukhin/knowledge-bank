@@ -38,3 +38,4 @@ sidebar_position: 2
 * [Валидатор HTML](https://validator.w3.org/nu/)
 * [Скорость загрузки на Mobile](https://www.thinkwithgoogle.com/feature/testmysite/)
 * [What is My Ip - Узнать свой IP](https://bestvpn.org/whats-my-ip/)
+* [dynatrace - тест производительности](https://www.dynatrace.com/)
