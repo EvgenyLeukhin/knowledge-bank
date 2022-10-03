@@ -1,5 +1,5 @@
 ---
-title: Определения
+title: Основные понятия
 sidebar_position: 0
 ---
 
