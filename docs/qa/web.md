@@ -30,12 +30,12 @@ sidebar_position: 1
 
 ## Онлайн-сервисы для проверки оптимизации
 
-* [Browserstack](https://www.browserstack.com/)
-* [PageSpeed Insights](https://pagespeed.web.dev/)
-* [Webpagetest](https://www.webpagetest.org/)
-* [Caniuse - актуальность html/css](https://caniuse.com/)
-* [Statcounter - Статистика браузеров](https://gs.statcounter.com/)
-* [Валидатор HTML](https://validator.w3.org/nu/)
-* [Скорость загрузки на Mobile](https://www.thinkwithgoogle.com/feature/testmysite/)
-* [What is My Ip - Узнать свой IP](https://bestvpn.org/whats-my-ip/)
-* [dynatrace - тест производительности](https://www.dynatrace.com/)
+* [Browserstack](https://www.browserstack.com/) - Реальные тестовые стенды
+* [PageSpeed Insights](https://pagespeed.web.dev/) - Тест оптимизации
+* [Webpagetest](https://www.webpagetest.org/) - Тест оптимизации
+* [Caniuse](https://caniuse.com/) - Актуальность html/css
+* [Statcounter](https://gs.statcounter.com/) - Статистика браузеров
+* [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
+* [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - cкорость загрузки на Mobile
+* [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
+* [dynatrace](https://www.dynatrace.com/) - тест производительности
