@@ -1,6 +1,6 @@
 ---
 title: Mobile
-sidebar_position: 2
+sidebar_position: 7
 ---
 
 ## Специфика mobile-приложений

@@ -1,6 +1,6 @@
 ---
 title: Процесс тестирования
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 Перед началом проэкта: Test map (Чтобы понять тестовое покрытие) --> Checklist or test-cases
