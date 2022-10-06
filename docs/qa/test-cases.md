@@ -4,7 +4,8 @@ sidebar_position: 4
 ---
 
 
-![test-cases](/img/qa/test-cases.png)
+<!-- ![test-cases](/img/qa/test-cases.png) -->
+<img src="../../../img/qa/test-cases.png" width="450" alt="test-cases.png" />
 
 Более подробный детализированный чеклист, расписанный по шагам (набор действий). Можно оформлять также в виде таблиыы. Шаги пути пользователя. (Систематизация и документация процесса тестирования)
 
@@ -23,6 +24,11 @@ sidebar_position: 4
 
 ### Примерный список тест-кейсов
 
+|ID|Title|Priority|Module|Requirements|Precondition|Steps|Expected result|Status|Comments|
+|---|---|---|---|---|---|---|---|---|---|
+|TC1|Проверка отправки email|Средний|Регистрация|Some link|---|---|---|---|Some comments|
+
+
 |ID|Приоритет|Требования|Модуль|Заголовок|Шаги|Ожидаемый результат|Фактический результат|Дефект|
 |---|---|---|---|---|---|---|---|---|
 |TC1|1 (Smoke)|REQ1|Регистрация нового пользователя|Регистрация на мобильном|1. Открыть сайт|Сайт загружен| | |
@@ -31,19 +37,25 @@ sidebar_position: 4
 
 ### Примерные колонки тест-кейсов
 
+#### Обязательные:
+
 - **id**
 - **title**
-- **requirements link** - ссылка на требования
-- **author**
 - **priority**
 - **modules or sub-module**
+- **requirements** - ссылка на требования
 - **precondition** - условие, чтобы достичь этого тест-кейса (что нужно сделать, чтобы ...). Пишется в прошедшем времени (Открыта главная страница).
 - **steps** - шаги, пишутся в будущем времени (ввести номер телефона)
-- **postcondition**
 - **expected result**
-- **actual result** - (можно не использовать, а пользоваться статусом). Лучше описывать в задачах и баг-репортах
 - **status** - passed/success, failed, blocked
+
+#### Опциональные:
+- **author**
+- **postcondition**
+- **actual result** - (можно не использовать, а пользоваться статусом). Лучше описывать в задачах и баг-репортах
 - **attachments** - приложенные файлы
+- **assigned**
+- **testing level** - Вид/уровень тестирования
 
 ### Типы тест-кейсов
 
@@ -61,7 +73,8 @@ sidebar_position: 4
 
 ### Жизненный цикл тест-кейса
 
-![test-case-lifecycle](/img/qa/test-case-lifecycle.png)
+<!-- ![test-case-lifecycle](/img/qa/test-case-lifecycle.png) -->
+<img src="../../../img/qa/test-case-lifecycle.png" width="550" alt="test-case-lifecycle.png" />
 
 ### Инструменты для тест-кейсов
 
