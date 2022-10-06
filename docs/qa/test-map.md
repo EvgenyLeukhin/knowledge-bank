@@ -1,5 +1,5 @@
 ---
-title: Карта приложения
+title: Test map
 sidebar_position: 2
 ---
 
