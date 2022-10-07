@@ -96,10 +96,11 @@ TODO
 
 ***
 
-### Инструменты для тест-кейсов
+### Инструменты для тест-кейсов (TMS/TCMS)
 
 - [Jira + Zephyr](https://marketplace.atlassian.com/apps/1014681/zephyr-squad-test-management-for-jira?tab=overview&hosting=cloud)
 - [TESTRAIL](https://www.gurock.com/testrail/)
 - [TESTLINK](https://testlink.org/)
 - [PRACTITEST](https://www.practitest.com/)
+- [TEST IT](https://testit.software/)
 - QTEST

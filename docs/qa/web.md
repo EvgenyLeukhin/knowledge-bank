@@ -1,5 +1,5 @@
 ---
-title: Web
+title: Web testing
 sidebar_position: 7
 ---
 
