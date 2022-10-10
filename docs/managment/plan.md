@@ -23,6 +23,13 @@ sidebar_position: 2
 
 ***
 
+## Инструменты
+
+
+[MIND-MAPS - mindmeister.com](https://www.mindmeister.com/ru) - Майндмэппинг
+
+***
+
 ## Time-managment
 
 ### Концепция 4-x квадратов:
