@@ -1,5 +1,5 @@
 ---
-title: API testing
+title: API
 sidebar_position: 6
 ---
 

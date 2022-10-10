@@ -1,5 +1,5 @@
 ---
-title: Checklist
+title: Чеклист
 sidebar_position: 3
 ---
 

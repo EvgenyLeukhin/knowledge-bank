@@ -1,5 +1,5 @@
 ---
-title: Test-cases
+title: Тест-кейсы
 sidebar_position: 4
 ---
 

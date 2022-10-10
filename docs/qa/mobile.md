@@ -1,5 +1,5 @@
 ---
-title: Mobile testing
+title: Mobile
 sidebar_position: 8
 ---
 
