@@ -325,4 +325,6 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
 
 ## Pattern
 
+Для нативной валидации полей.
+
 ![pattern](/img/html/pattern.png)

@@ -222,5 +222,5 @@ sidebar_position: 0
 
 - [W3C](https://www.w3.org/) - Спецификация HTML
 - [WHATWG](https://whatwg.org/) - Представилели браузеров
-- [Список поддерживаемых расширений](https://webref.ru/html/value/mime) - MIME-типы
+- [Список поддерживаемых расширений файлов](https://webref.ru/html/value/mime) - MIME-типы
 - [Коды языков](https://webref.ru/html/value/lang) - для атрибута lang
