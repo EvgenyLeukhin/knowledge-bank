@@ -15,12 +15,16 @@ sidebar_position: 3
 
 [Google-sheets](https://docs.google.com/spreadsheets/u/0/) - Хороший инструмент для чеклистов
 
-### Примерный список проверок
+### Простой чеклист
 
 |ID|Проверка|Результат (статус)|Комментарии|
 |---|---|---|---|
 |TEST1|Авторизация|✅ (passed)| |
 |TEST2|Регистрация|❌ (failed)|*Что-то пошло не так*|
+
+### Более подробный
+
+<img src="../../../img/qa/checklist-example.png" width="550" alt="checklist-example.png" />
 
 ### Статусы проверок
 

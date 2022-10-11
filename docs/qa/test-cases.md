@@ -47,25 +47,18 @@ sidebar_position: 4
 - **postcondition**
 - **actual result** - (можно не использовать, а пользоваться статусом). Лучше описывать в задачах и баг-репортах
 - **attachments** - приложенные файлы
-- **assigned**
+- **assigned** - кто проверяет
 - **testing level** - Вид/уровень тестирования
 
 ***
 
-### Пример простого тест-кейса
+### Пример тест-кейса
 
 |ID|Title|Priority|Module/Submodule|Requirements|Enviroment|Precondition|Steps|Expected result|Status|Comments|
 |---|---|---|---|---|---|---|---|---|---|
 |TC1|Проверка&nbsp;отправки&nbsp;email|Средний|Регистрация/Форма регистрации|Some link|OS: MacOS 12.6, Google Chrome 105|1.Открыта форма 2.Пользователь не&nbsp;зарегистрирован|1.Step1 2.Step2 3.Step3|Email&nbsp;отправлен пользователю|Success|Some comments|
 
 ***
-
-### Пример сложного тест-кейса
-
-TODO
-
-***
-
 
 <!-- |ID|Приоритет|Требования|Модуль|Заголовок|Шаги|Ожидаемый результат|Фактический результат|Дефект|
 |---|---|---|---|---|---|---|---|---|
