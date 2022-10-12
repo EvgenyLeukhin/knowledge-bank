@@ -28,6 +28,7 @@ sidebar_position: 1
 - **npm Intellisense** (npm расширение)
 - **NPM Scripts** (запуск npm-скриптов)
 - **Prettier - Code formatter** (форматирование кода)
+- **EditorConfig for VS Code** (конфиг редактора)
 
 ### Plugins (optional)
 
@@ -142,7 +143,8 @@ sidebar_position: 1
 
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Monokai",
-  "workbench.statusBar.visible": true
+  "workbench.statusBar.visible": true,
+  "files.insertFinalNewline": true
 }
 ```
 
@@ -159,19 +161,19 @@ Configure Language в консоли - смена языка на англ (en)
 [Shortcuts for Sublime](https://shortcuts.design/tools/toolspage-sublimetext/)
 
 
-<kbd>Ctrl + `</kbd>	Открыть консоль
-Ctrl + Shift + P	Командная строка
-Ctrl + P	Перейти к файлу
-Ctrl + Shift + N	Новое окно
-Ctrl + B	Сайдбар
-Alt + ↑↓	Переместить строку
-F11	Полноэкранный режим
-Ctrl + \	Разделение окна
+- <kbd>Ctrl + `</kbd>	- Открыть консоль
+- <kbd>Ctrl + Shift + P</kbd>	- Командная строка
+- <kbd>Ctrl + P</kbd>	- Перейти к файлу
+- <kbd>Ctrl + Shift + N</kbd>	- Новое окно
+- <kbd>Ctrl + B</kbd>	- Сайдбар
+- <kbd>Alt + ↑↓</kbd>	- Переместить строку
+- <kbd>F11</kbd> - Полноэкранный режим
+- <kbd>Ctrl + \</kbd> - Разделение окна
 
 ### Package control:
 
 1. Открыть консоль в Sublime text 3 (View - Show console)
-2. (Ctrl + Shift + P) Install Package control
+2. <kbd>Ctrl + Shift + P</kbd> - Install Package control
 
 ### Packages
 
@@ -216,7 +218,29 @@ Ctrl + \	Разделение окна
 }
 ```
 
+***
+
+## Webstorm
+
+[jetbrains.com - Скачать](https://www.jetbrains.com/ru-ru/webstorm/)
+
+### Shortcuts
+
+- <kbd>Ctrl + Alt + S</kbd> - Настройки
+- <kbd>Ctrl + Alt + A</kbd> - Команды
+- <kbd>Ctrl + Shift + L - </kbd>Автоформатирование
+- <kbd>Ctrl + Shift + N</kbd> - Поиск по файлу
+- <kbd>Alt + F12</kbd> - Терминал
+- <kbd>Ctrl + E</kbd> - Недавние файлы
+- <kbd>Ctrl + F4</kbd> - Закрыть вкладку
+- <kbd>Ctrl + ~</kbd> - Меню настроек оформления
+- <kbd>Shift + Shift</kbd> - Поиск везде
+
+***
+
 ### .editorconfig
+
+[https://editorconfig.org/](https://editorconfig.org)
 
 ```json
 root = true
