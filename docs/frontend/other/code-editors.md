@@ -59,6 +59,7 @@ sidebar_position: 1
 - <kbd>Cmd + Shift + E</kbd>&nbsp;&ndash;&nbsp;Editor
 - <kbd>Cmd + Shift + X</kbd>&nbsp;&ndash;&nbsp;Extentions
 - <kbd>Cmd + Shift + R</kbd>&nbsp;&ndash;&nbsp;Thunder Client
+- <kbd>Cmd + \</kbd>&nbsp;&ndash;&nbsp;Divide window
 
 #### Файлы
 
