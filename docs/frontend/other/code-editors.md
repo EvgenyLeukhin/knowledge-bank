@@ -154,7 +154,78 @@ Configure Language в консоли - смена языка на англ (en)
 
 [Download Sublime Text 3 - sublimetext.com](https://www.sublimetext.com/3)
 
-## Shortcuts Sublime
+### Shortcuts
 
 [Shortcuts for Sublime](https://shortcuts.design/tools/toolspage-sublimetext/)
 
+
+<kbd>Ctrl + `</kbd>	Открыть консоль
+Ctrl + Shift + P	Командная строка
+Ctrl + P	Перейти к файлу
+Ctrl + Shift + N	Новое окно
+Ctrl + B	Сайдбар
+Alt + ↑↓	Переместить строку
+F11	Полноэкранный режим
+Ctrl + \	Разделение окна
+
+### Package control:
+
+1. Открыть консоль в Sublime text 3 (View - Show console)
+2. (Ctrl + Shift + P) Install Package control
+
+### Packages
+
+- **Emmet**
+- **AutoFileName** - пути к файлам
+- **BracketHighlighter** - подсветка скобок и парных тегов
+- **A File Icon** - иконки для файлов в сайдбаре
+- **ColorHighliter** - подсветка цветов в CSS
+- **Terminal** - открывать терминал командой
+- **LESS** - поддержка синтаксиса
+- **SASS** - поддержка синтаксиса
+- **Babel** - поддержка синтаксиса
+- **SideBarEnhancements** - расширение функций сайдбара
+- **Bootstrap** 3 Snippets
+- **Bootstrap** 4 Snippets
+- **JavaScript** Snippets - автозаполнение
+- **JavaScript** Completions - автозаполнение хорошее
+- **jQuery** Snippets
+- **CodeFormatter** - форматирование
+- **HTML** Minifier - минификатор HTML, CSS, JS
+- **BufferScroll** - запоминает сворачивание блоков
+- **EditorConfig** - запоминает форматирование кода (download)
+- **SublimeLinter** - Линтер
+- **SublimeLinter** - eslint - JS-линтер
+
+### Settings
+
+```json
+{
+  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "default_line_ending": "unix",
+  "draw_white_space": "all",
+  "font_face": "Consolas",
+  "line_padding_top": 3,
+  "line_padding_bottom": 3,
+  "font_size": 12,
+  "margin": -3,
+  "tab_size": 2,
+  "theme": "Default.sublime-theme",
+  "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
+  "word_wrap": true
+}
+```
+
+### .editorconfig
+
+```json
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
