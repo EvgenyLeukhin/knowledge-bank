@@ -39,3 +39,10 @@ sidebar_position: 7
 * [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - cкорость загрузки на Mobile
 * [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
 * [dynatrace](https://www.dynatrace.com/) - тест производительности
+
+## Плагины Chrome
+
+* [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Мониторинг технологий
+* [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
+* [Font Ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Мониторинг шрифтов
+* [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - Тестирование дизайна
