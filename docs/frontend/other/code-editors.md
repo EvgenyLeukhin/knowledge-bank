@@ -3,7 +3,7 @@ title: Редакторы кода
 sidebar_position: 1
 ---
 
-## VS code
+## Visual Studio Code (VS Code)
 
 [Download VS Code - visualstudio.com](https://code.visualstudio.com/)
 
