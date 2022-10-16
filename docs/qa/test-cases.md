@@ -90,6 +90,12 @@ sidebar_position: 4
 
 ***
 
+### Test run
+
+Прогон тест-кейсов, test suite. Индикация того, какие тест-кейсы прошли успешно, а какие нет.
+
+***
+
 ### Инструменты для тест-кейсов (TMS/TCMS)
 
 - [Jira + Zephyr](https://marketplace.atlassian.com/apps/1014681/zephyr-squad-test-management-for-jira?tab=overview&hosting=cloud)
@@ -98,3 +104,4 @@ sidebar_position: 4
 - [PRACTITEST](https://www.practitest.com/)
 - [TEST IT](https://testit.software/)
 - QTEST
+

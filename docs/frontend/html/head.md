@@ -44,14 +44,6 @@ sidebar_position: 4
 
 
 ```html
-<!-- мета-тэги для seo -->
-<meta name="keywords" content="ключевое слово1, ключевое слово2, ключевое слово3, ключевое слово4">
-<meta name="description" content="Краткое описание сайта илии приложения">
-<meta name="language" content="RU">
-<meta name="copyright" content="Компания">
-<meta name="robots" content="index, nofollow">
-<meta name="author" content="Name">
-
 <!-- мета-тэги для превью -->
 <!-- open-graph -->
 <meta property="og:url" content="http://kartinamira.com">
@@ -184,6 +176,23 @@ sidebar_position: 4
 ***
 
 ## SEO (Продвижение)
+
+### Теги для SEO
+
+```html
+<!-- мета-тэги для seo -->
+<meta name="keywords" content="ключевое слово1, ключевое слово2, ключевое слово3, ключевое слово4">
+<meta name="description" content="Краткое описание сайта илии приложения">
+<meta name="language" content="RU">
+<meta name="copyright" content="Компания">
+<meta name="robots" content="index, nofollow">
+<meta name="author" content="Name">
+
+<!-- текст для seo -->
+<h1>Главный заголовок</h1>
+<strong>Важный текст + будет жирным</strong>
+<em>Важный текст + будет курсивом</em>
+```
 
 ### Трафик
 
