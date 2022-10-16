@@ -65,7 +65,7 @@ Passed, Failed, Blocked, Skipped, No run
 #### Обязательные:
 
 - **id**
-- **title**
+- **title** (Заголовок проверки)
 - **priority**
 - **modules or sub-module**
 - **requirements** - ссылка на требования
