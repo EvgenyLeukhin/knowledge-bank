@@ -1,6 +1,6 @@
 ---
-title: Отчёт
-sidebar_position: 5
+title: Репорт
+sidebar_position: 3
 ---
 
 - Отчет должен быть понятным

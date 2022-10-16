@@ -1,6 +1,6 @@
 ---
 title: Web
-sidebar_position: 7
+sidebar_position: 5
 ---
 
 ## Тестирование web-приложений
