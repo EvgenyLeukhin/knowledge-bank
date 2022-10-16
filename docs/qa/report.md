@@ -49,7 +49,7 @@ sidebar_position: 3
 - **severity**
 - **priority** (тестровщик не заполняет, заполняет PM)
 - **author** - Автор баг-репорта
-- **enviroment**
+- **enviroment** (сервер dev, stage, prod)
 - **precondition**
 - **steps** - Шаги по воспроизведению
 - **expected result**
