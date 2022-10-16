@@ -36,9 +36,14 @@ sidebar_position: 5
 * [Caniuse](https://caniuse.com/) - Актуальность html/css
 * [Statcounter](https://gs.statcounter.com/) - Статистика браузеров
 * [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
-* [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - cкорость загрузки на Mobile
+* [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - Скорость загрузки на Mobile
 * [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
-* [dynatrace](https://www.dynatrace.com/) - тест производительности
+* [dynatrace](https://www.dynatrace.com/) - Тест производительности
+* [PlaceIMG](https://placeimg.com/) - Генератор картинок
+
+## Программы
+
+* [Responsively](https://responsively.app/download) - Тест адаптивности
 
 ## Плагины Chrome
 
@@ -46,3 +51,9 @@ sidebar_position: 5
 * [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
 * [Font Ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Мониторинг шрифтов
 * [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - Тестирование дизайна
+* [Fake Filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo/related) - Заполнитель форм
+* [Fake Data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - Заполнитель форм
+
+## Плагины Firefox
+
+* [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
