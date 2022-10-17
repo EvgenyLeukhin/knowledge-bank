@@ -38,6 +38,7 @@ sidebar_position: 5
     - [React](https://ru.reactjs.org/), [Preact](https://preactjs.com/)
     - [mobx](https://mobx.js.org/README.html), [mobx-state-tree](https://mobx-state-tree.js.org/intro/welcome)
     - [Redux](https://redux.js.org/), [Redux Toolkit](https://redux-toolkit.js.org/)
+    - [Formik](https://formik.org/docs/overview) - Надстройка для форм, [yup](https://github.com/jquense/yup) - Валидационная схема
   - Сборщики:
     - [Nextjs](https://nextjs.org/), [Webpack](https://webpack.js.org/), [create-react-app](https://create-react-app.dev/)
   - UI-фреймворки:
