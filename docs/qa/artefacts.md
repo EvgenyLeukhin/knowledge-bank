@@ -1,5 +1,5 @@
 ---
-title: Артефакты
+title: Артефакты тестирования
 sidebar_position: 1
 ---
 
