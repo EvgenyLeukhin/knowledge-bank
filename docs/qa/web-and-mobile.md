@@ -31,6 +31,7 @@ sidebar_position: 4
 ## Онлайн-сервисы для проверки оптимизации
 
 * [Browserstack](https://www.browserstack.com/) - Реальные тестовые стенды
+* [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
 * [PageSpeed Insights](https://pagespeed.web.dev/) - Тест оптимизации
 * [Webpagetest](https://www.webpagetest.org/) - Тест оптимизации
 * [Caniuse](https://caniuse.com/) - Актуальность html/css
@@ -57,6 +58,22 @@ sidebar_position: 4
 ## Плагины Firefox
 
 * [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
+
+## Статистика (РФ 2022)
+
+### OC
+
+- **Windons** - 88%
+- **MacOS** - 5%
+- **Linux** - 2% (по сути можно принебречь)
+
+### Браузеры
+
+- **Chrome** - 52%
+- **Yandex** - 21%
+- **Opera** - 10%
+- **Firefox** - 8%
+- **Edge** - 5%
 
 ***
 
@@ -130,6 +147,22 @@ VI. **Юзабилити**
   - **Android**: Android Studio, Android Debug, Fiddler, Google Chrome
   - **iOS**: Xcode, Apple Configurator, iTools, Fiddler, WireShark, Safari
   - **Интернет-сервисы**: [Browserstack](https://www.browserstack.com/)
+
+## Статистика (РФ 2022)
+
+### OC
+
+- **Android** - 69%
+- **iOS** - 30%
+- **Samsung** - 0,2% (можно принебречь)
+
+### Браузеры
+
+- **Chrome** - 58%
+- **Safari** - 27%
+- **Yandex** - 9%
+- **Samsung** - 2,6% (можно принебречь)
+- **Opera** - 1,9% (можно принебречь)
 
 ***
 
