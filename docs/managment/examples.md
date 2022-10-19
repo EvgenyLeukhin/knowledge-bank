@@ -1,5 +1,5 @@
 ---
-title: Примеры проектов
+title: Типовые проекты
 sidebar_position: 5
 ---
 
