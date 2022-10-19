@@ -11,6 +11,8 @@ sidebar_position: 4
 - Steam, Figma, PuntoSwitcher
 - node + npm + nvm
 
+***
+
 ## MacOS
 
 * **DESIGN:**
