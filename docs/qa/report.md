@@ -1,5 +1,5 @@
 ---
-title: Тест-репорт
+title: Репорт
 sidebar_position: 3
 ---
 
