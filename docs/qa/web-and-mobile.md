@@ -59,15 +59,15 @@ sidebar_position: 4
 
 * [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
 
-## Статистика (РФ 2022)
+## Статистика Desktop (РФ 2022)
 
-### OC
+### Desktop OS
 
 - **Windons** - 88%
 - **MacOS** - 5%
 - **Linux** - 2% (по сути можно принебречь)
 
-### Браузеры
+### Desktop Browsers
 
 - **Chrome** - 52%
 - **Yandex** - 21%
@@ -148,15 +148,15 @@ VI. **Юзабилити**
   - **iOS**: Xcode, Apple Configurator, iTools, Fiddler, WireShark, Safari
   - **Интернет-сервисы**: [Browserstack](https://www.browserstack.com/)
 
-## Статистика (РФ 2022)
+## Статистика Mobile (РФ 2022)
 
-### OC
+### Mobile OS
 
 - **Android** - 69%
 - **iOS** - 30%
 - **Samsung** - 0,2% (можно принебречь)
 
-### Браузеры
+### Mobile Browsers
 
 - **Chrome** - 58%
 - **Safari** - 27%
