@@ -15,25 +15,26 @@ sidebar_position: 4
 
 ## MacOS
 
+* **DEVELOPMENT:**
+  MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm
+* **INTERNET:**
+  Chrome, Firefox, Edge, Yandex
 * **DESIGN:**
-  Pixelmator Pro, Photoshop, Figma
+  Pixelmator Pro, Photoshop, Figma, Zeplin
 * **SOUND:**
-  Logic Pro X, Garage Band, MainStage, Abelton Live, Guitar Pro
+  Logic Pro X, Garage Band, MainStage, Abelton Live, Guitar Pro, Universal Control, Focusrite control,
 * **VIDEO:**
   Final Cut Pro, Downie 4, ScreenFlow, Movavi Screen Recorder, VLC, He3
 * **PHOTO:**
-  Luminar 4, Luminar AI, Anamorphic, VLC
-* **DEVELOPMENT:**
-  MAMP PRO, Insomnia, VS Code, Sublime Text 3
+  Luminar 4, Luminar AI, Luminar Neo, Anamorphic, VLC
+* **MESSANGERS:** 
+  Telegram, Slack, Skype, Zoom, Yandex.Telemost, Discord, WhatsApp
+* **UTILITES:** 
+  CleanMyMac X, Memory Clean 3, Commander One Pro, DisplayLink Manager, PuntoSwitcher, Transmission, DeepL
+* **OFFICE:** 
+  Pages, Numbers, PDF Reader Pro, Keynote
 
-<!-- * iTerm, Numbers, Pages, Skitch 
-* MAMP Pro, CleanMyDrive, Trello, Transmission 
-* Commander One Pro
-
-* Transmission, CleanMyMac X, Memory Clean 3, DisplayLink Manager
-* OpenEmu -->
-
-### [Homebrew](https://brew.sh/)
+### [Homebrew](https://brew.sh/) 
 
 Пакетный менеджер для MacOS.
 
