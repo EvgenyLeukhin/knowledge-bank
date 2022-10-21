@@ -3,14 +3,22 @@ title: Web & Mobile
 sidebar_position: 4
 ---
 
-## Web
+## Web-тестирование
 
-- Кроссбраузерное (Chrome, Safari, Edge, Firefox и др.)
-- Кросплатформенное (Windows, Linux, MacOS, iOS и др.)
-- Презентационный слой: Интерфейс, Адаптивность
-- Бизнес-логика (API)
+### Web-ПО
 
-## Критерии оптимизированной веб-страницы
+- Email-рассылки
+- Web-cайты, CMS 
+- Web-приложения
+
+### Что нужно тестировать:
+
+- **Кроссбраузерность** (Chrome, Safari, Edge, Firefox и др.)
+- **Кросплатформенноcть** (Windows, Linux, MacOS, iOS и др.)
+- **Презентационный слой**: Дизайн, Интерфейс, Адаптивность, Юзабилити и т.д.
+- **Бизнес-логику**: API, методы, основное функциональное тестирование
+
+### Критерии оптимизированной веб-страницы
 
 1. **Время** загрузки сайта
 2. Работа сайта **без js**
@@ -28,25 +36,24 @@ sidebar_position: 4
 14. **Кеширование и Storage**
 15. **Отстутствие ошибок в консоли** и валидный код.
 
-## Онлайн-сервисы для проверки оптимизации
+### Онлайн-сервисы для проверки оптимизации
 
 * [Browserstack](https://www.browserstack.com/) - Реальные тестовые стенды
 * [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
 * [PageSpeed Insights](https://pagespeed.web.dev/) - Тест оптимизации
 * [Webpagetest](https://www.webpagetest.org/) - Тест оптимизации
 * [Caniuse](https://caniuse.com/) - Актуальность html/css
-* [Statcounter](https://gs.statcounter.com/) - Статистика браузеров
 * [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
 * [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - Скорость загрузки на Mobile
 * [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
 * [dynatrace](https://www.dynatrace.com/) - Тест производительности
 * [PlaceIMG](https://placeimg.com/) - Генератор картинок
 
-## Программы
+### Программы
 
 * [Responsively](https://responsively.app/download) - Тест адаптивности
 
-## Плагины Chrome
+### Плагины Chrome
 
 * [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Мониторинг технологий
 * [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
@@ -55,19 +62,19 @@ sidebar_position: 4
 * [Fake Filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo/related) - Заполнитель форм
 * [Fake Data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - Заполнитель форм
 
-## Плагины Firefox
+### Плагины Firefox
 
 * [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
 
-## Статистика Desktop (РФ 2022)
+### Статистика Desktop (РФ 2022)
 
-### Desktop OS
+#### Desktop OS
 
 - **Windons** - 88%
 - **MacOS** - 5%
 - **Linux** - 2% (по сути можно принебречь)
 
-### Desktop Browsers
+#### Desktop Browsers
 
 - **Chrome** - 52%
 - **Yandex** - 21%
@@ -77,13 +84,17 @@ sidebar_position: 4
 
 ***
 
-## Mobile / Tablet
+## Mobile-тестирование
 
 <img src="../../../img/qa/mobile.png" width="450" alt="mobile.png" />
 
-1. Версии мобильных ОС обновляются чаще чем десктопные (Android ≈ 72%, iOS ≈ 28%)
+Планшеты (Tablet) также относятся к мобильному тестированию.
+
+### Специфика мобильных приложений
+
+1. Версии мобильных ОС обновляются чаще чем десктопные
 2. Производительность мобильных устройств ниже, чем десктопных
-3. Ограниченная площадь экрана
+3. Ограниченная площадь экрана, разные размеры экрана, разрешение, плотность
 4. Разные режимы отображения (Portrait and Landscape)
 5. Производительность может зависит от оператора (скорость сети 3G, 4G) или от Wifi, поэтому нужно тестировать как на WiFi, так и на мобильном интернете
 6. Планшеты и парк устройств Android очень широк, что усложняет тестирование
@@ -91,15 +102,15 @@ sidebar_position: 4
 
 ***
 
-## Виды мобильных приложений
+### Виды мобильных приложений
 
-- **Веб-версия** - через браузер (по сути веб-приложение в браузере с адаптивностью)
-- **Нативные** - специально написанные для платформы (Android - Java, iOS - Swift, Object C)
-- **Гибридные** - веб-версия, завернутая в нативный контейнер (WebView)
+- **Веб-приложение** - адаптивное приложение доступное через браузер, которым можно пользоваться на любых устройствах
+- **Нативные** - специально написанные для платформы (Android - Java/Kotlin, iOS - Swift/Objective-C)
+- **Гибридные** - гибрид нативного и веб-приложения. Для тех. реализации используется технология **WebView** (по сути будет открываться веб-страница или веб-приложение внутри нативного контейнера). Функционал таких приложений может быть как полностью реализованным с помощью WebView (голый нативный контейнер + вся логика на WebView), либо частично (есть часть нативного функционала, есть часть WebView), то есть реализованно на WebView может быть не всё приложение, а лишь отдельные его модули.
 
 ***
 
-## Как можно тестировать
+### Как можно тестировать
 
 - Реальное устройство
 - Эмулятор
@@ -107,7 +118,7 @@ sidebar_position: 4
 
 ***
 
-## Категории тестирования
+### Категории тестирования
 
 I. **Жизненный цикл приложения**
   - Установка/обновение/удаление (Google Play, App Store)
@@ -145,20 +156,28 @@ VI. **Юзабилити**
 
 ***
 
-## Инструменты для тестирования
+### Инструменты для тестирования
   - **Android**: Android Studio, Android Debug, Fiddler, Google Chrome
   - **iOS**: Xcode, Apple Configurator, iTools, Fiddler, WireShark, Safari
-  - **Интернет-сервисы**: [Browserstack](https://www.browserstack.com/)
+  - [Browserstack](https://www.browserstack.com/) - Сервис с парком всех устройств (всех версий и платформ)
+  - [Statcounter](https://gs.statcounter.com/) - Статистика браузеров
+  - [developer.android.com](https://developer.android.com/) - Основной сайт Android-разработки (гайдлайны, Android-studio)
+  - [developer.apple.com](https://developer.apple.com/) - Основной сайт iOS-разработки (гайдлайны, XCode)
+  - [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS и Android
 
-## Статистика Mobile (РФ 2022)
+***
 
-### Mobile OS
+### Статистика Mobile (РФ 2022)
+
+#### Mobile OS
+
+Перед тестированием нужно узнать ЦА пользователей, чтобы понять на каких устройствах нужно будет тестировать. 
 
 - **Android** - 69%
 - **iOS** - 30%
 - **Samsung** - 0,2% (можно принебречь)
 
-### Mobile Browsers
+#### Mobile Browsers
 
 - **Chrome** - 58%
 - **Safari** - 27%
@@ -168,7 +187,7 @@ VI. **Юзабилити**
 
 ***
 
-## Bug-report должен включать:
+### Bug-report должен включать:
 
 1. На каком тестовом сервере воспроизводится баг
 2. Тип устройства, версия ОС, браузер (если гибридное)
