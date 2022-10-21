@@ -1,6 +1,6 @@
 ---
 title: API
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 **Application Programming Interface** - интерфейс программы, который обеспечивает связь и обмен данными между отдельными системами.

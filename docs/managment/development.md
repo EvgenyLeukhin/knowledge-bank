@@ -1,5 +1,5 @@
 ---
-title: Разработка
+title: Методики разработки
 sidebar_position: 4
 ---
 
