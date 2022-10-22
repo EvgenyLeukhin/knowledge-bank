@@ -16,7 +16,7 @@ sidebar_position: 4
 ## MacOS
 
 * **DEVELOPMENT:**
-  MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm, XCode, Android Studio
+  MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm, XCode, Android Studio, Charles
 * **INTERNET:**
   Chrome, Firefox, Edge, Yandex
 * **DESIGN:**
