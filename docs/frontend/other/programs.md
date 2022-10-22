@@ -16,7 +16,7 @@ sidebar_position: 4
 ## MacOS
 
 * **DEVELOPMENT:**
-  MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm
+  MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm, XCode, Android Studio
 * **INTERNET:**
   Chrome, Firefox, Edge, Yandex
 * **DESIGN:**
@@ -53,7 +53,7 @@ sidebar_position: 4
 * **DESIGN:**
   Adobe Illustrator 2020, Adobe Photoshop 2020, Figma, Miro,
 * **DEVELOPMENT:** 
-  Filezilla, Git Bash, GitHub Desktop, Insomnia, Notepad3, Open Server x64, Sublime Text 3, Visual Studio Code, WebStorm 2021.2.2, Windows PowerShell
+  Filezilla, Git Bash, GitHub Desktop, Insomnia, Notepad3, Open Server x64, Sublime Text 3, Visual Studio Code, WebStorm 2021.2.2, Windows PowerShell, Android Studio
 * **INTERNET:** 
   Discord, Firefox, Google Chrome, Google Docs, Google Drive, Google Sheets, Google Slides, Microsoft Edge, qBittorrent, Slack, Telegram, TikTok, Yandex, Zoom, Яндекс.Диск, Яндекс.Телемост,
 * **OFFICE:** 
