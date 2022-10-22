@@ -185,6 +185,7 @@ VI. **Юзабилити**
 ***
 
 ### Инструменты для тестирования
+
   - **Android**: Android Studio, Android Debug, Fiddler, Google Chrome
   - **iOS**: Xcode, Apple Configurator, iTools, Fiddler, WireShark, Safari
   - [Browserstack](https://www.browserstack.com/) - Сервис с парком всех устройств (всех версий и платформ)
@@ -192,7 +193,7 @@ VI. **Юзабилити**
   - [developer.android.com](https://developer.android.com/) - Основной сайт Android-разработки (гайдлайны, Android-studio)
   - [developer.apple.com](https://developer.apple.com/) - Основной сайт iOS-разработки (гайдлайны, XCode)
   - [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS и Android
-  - [Charles](https://www.charlesproxy.com/latest-release/download.do) - Proxy-server - мониторинг запросов
+  - [Charles](https://www.charlesproxy.com/latest-release/download.do) - Proxy-server - мониторинг запросов. Сниффер - анализатор трафика.
 
 ***
 
@@ -216,9 +217,16 @@ VI. **Юзабилити**
 
 ***
 
-### Bug-report должен включать:
+## Bug-report должен включать
 
 1. На каком тестовом сервере воспроизводится баг
 2. Тип устройства, версия ОС, браузер (если гибридное)
 3. Приложить скриншоты или видеозапись
+
+***
+
+## Тестирование API
+
+- [Insomina](https://insomnia.rest/download) - Тестирование API
+- [Thunder Client for VS Code](https://www.thunderclient.com/) - Тестирование API
 
