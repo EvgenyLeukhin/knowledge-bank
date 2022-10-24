@@ -5,6 +5,14 @@ sidebar_position: 4
 
 ## Web-тестирование
 
+Bug-report должен включать
+
+1. На каком тестовом сервере воспроизводится баг
+2. Тип устройства, версия ОС, браузер
+3. Приложить скриншоты или видеозапись
+
+***
+
 ### Web-ПО
 
 - Email-рассылки
@@ -44,7 +52,7 @@ sidebar_position: 4
 - **Responsive** design - Реализация резинового/гибкого дизайна, который автоматически подстраивается под размер экрана (без скачков)
 - **Adaptive** design - Реализация адаптивного дизайна через явные брейкпоинты (видны скачки размеров основных контейнеров по ширине при ресайзе страницы)
 
-### Онлайн-сервисы для проверки оптимизации
+### Онлайн-сервисы для проверки оптимизации web-приложений
 
 * [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
 * [PageSpeed Insights](https://pagespeed.web.dev/) - Тест оптимизации
@@ -55,8 +63,9 @@ sidebar_position: 4
 * [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
 * [dynatrace](https://www.dynatrace.com/) - Тест производительности
 * [PlaceIMG](https://placeimg.com/) - Генератор картинок
+* [yesviz](https://yesviz.com/) - Экраны/viewport устройств
 
-### Плагины Chrome
+### Плагины Chrome для тестирования
 
 * [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Мониторинг технологий
 * [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
@@ -65,7 +74,7 @@ sidebar_position: 4
 * [Fake Filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo/related) - Заполнитель форм
 * [Fake Data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - Заполнитель форм
 
-### Плагины Firefox
+### Плагины Firefox для тестирования
 
 * [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
 
@@ -144,6 +153,17 @@ TODO
 - Эмулятор
 - Интернет-сервисы
 
+#### Онлайн тестовые фермы
+
+* [Browserstack](https://www.browserstack.com/)
+* [Saucelabs](https://saucelabs.com/)
+* [LambdaTest](https://www.lambdatest.com/)
+* [Saucelabs](https://saucelabs.com/)
+* [AWS Device Farm](https://aws.amazon.com/ru/device-farm/)
+* [Applause](https://www.applause.com/)
+* [Selenium](https://www.selenium.dev/)
+
+
 ***
 
 ### Категории тестирования
@@ -184,17 +204,14 @@ VI. **Юзабилити**
 
 ***
 
-### Инструменты для тестирования
+### Инструменты для mobile-тестирования
 
-  - **Android**: Android Studio, Android Debug, Fiddler, Google Chrome
-  - **iOS**: Xcode, Apple Configurator, iTools, Fiddler, WireShark, Safari
-  - [Browserstack](https://www.browserstack.com/) - Сервис с парком всех устройств (всех версий и платформ)
-  - [Statcounter](https://gs.statcounter.com/) - Статистика браузеров
-  - [developer.android.com](https://developer.android.com/) - Основной сайт Android-разработки (гайдлайны, Android-studio)
-  - [developer.apple.com](https://developer.apple.com/) - Основной сайт iOS-разработки (гайдлайны, XCode)
-  - [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS и Android
-  - [Charles](https://www.charlesproxy.com/latest-release/download.do) - Proxy-server - мониторинг запросов. Сниффер - анализатор трафика.
-  - [yesviz](https://yesviz.com/) - Экраны/viewport устройств
+- **Android**: Android Studio, Android Debug, Fiddler, Google Chrome
+- **iOS**: Xcode, Apple Configurator, iTools, Fiddler, WireShark, Safari
+- [developer.android.com](https://developer.android.com/) - Основной сайт Android-разработки (гайдлайны, Android-studio)
+- [developer.apple.com](https://developer.apple.com/) - Основной сайт iOS-разработки (гайдлайны, XCode)
+- [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS и Android
+- [Charles](https://www.charlesproxy.com/latest-release/download.do) - Proxy-server - мониторинг запросов. Сниффер - анализатор трафика.
 
 ***
 
@@ -218,28 +235,8 @@ VI. **Юзабилити**
 
 ***
 
-## Bug-report должен включать
-
-1. На каком тестовом сервере воспроизводится баг
-2. Тип устройства, версия ОС, браузер (если гибридное)
-3. Приложить скриншоты или видеозапись
-
-***
-
 ## Тестирование API
 
-- [Insomina](https://insomnia.rest/download) - Тестирование API
-- [Thunder Client for VS Code](https://www.thunderclient.com/) - Тестирование API
-
-***
-
-## Онлайн тестовые фермы
-
-* [Browserstack](https://www.browserstack.com/)
-* [Saucelabs](https://saucelabs.com/)
-* [LambdaTest](https://www.lambdatest.com/)
-* [Saucelabs](https://saucelabs.com/)
-* [AWS Device Farm](https://aws.amazon.com/ru/device-farm/)
-* [Applause](https://www.applause.com/)
-* [Selenium](https://www.selenium.dev/)
-
+- [Insomina](https://insomnia.rest/download)
+- [Thunder Client for VS Code](https://www.thunderclient.com/)
+- [Postman](https://www.postman.com/)
