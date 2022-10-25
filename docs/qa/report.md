@@ -1,5 +1,5 @@
 ---
-title: Репорт
+title: Репорты
 sidebar_position: 3
 ---
 

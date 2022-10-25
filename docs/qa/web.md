@@ -1,0 +1,115 @@
+---
+title: Web
+sidebar_position: 4
+---
+
+## Web-продукты 
+
+- Web-приложения (React, Vue, Angular)
+- Web-cайты, интернет-магазины, CMS 
+- Desktop-приложения на Electron
+- Email-рассылки
+
+## Что нужно тестировать
+
+- **Кроссбраузерность** (Chrome, Safari, Edge, Firefox и др.)
+- **Кросплатформенноcть** (Windows, Linux, MacOS, iOS и др.)
+- **Презентационный слой**: Дизайн, Интерфейс, Адаптивность, Юзабилити и т.д.
+- **Бизнес-логику**: API, методы, основное функциональное тестирование
+
+## Критерии оптимизированной веб-страницы
+
+1. **Время** загрузки сайта
+2. Работа сайта **без js**
+3. Прогрессивное улучшение
+4. Количество **запросов к серверу**
+5. Отказ от **большого количества библиотек**
+6. **Шрифты и изображения** - самые тяжёлые ресурсы (можно использовать тег picture)
+7. Нужно ли загружать **кастомные шрифты**? (Есть же много системных)
+8. Не стоит грузить шрифты, анимации, тяжелые картинки **на mobile** вообще (делаем @media на @font-face)
+9. **Оптимизация изображений**. SVG вместо png для декорирования. Встроенный в html svg-спрайт
+10. **Минификация и конкатинация** js и css
+11. **Critical CSS** & Load CSS (встроенный css в html для первых 1000px высоты страницы)
+12. **Google page speed**, **GT-Metrix**
+13. **Web page test** (speed index около 1000 это круто)
+14. **Кеширование и Storage**
+15. **Отстутствие ошибок в консоли** и валидный код.
+
+## Тестирование адаптивности
+
+* [Responsively](https://responsively.app/download) - Программа по тестированию адаптивности
+* [DevTools](https://developer.chrome.com/docs/devtools/) - Тестирование через эмулятор устройств в инструментах разработчика
+
+- **Responsive** design - Реализация резинового/гибкого дизайна, который автоматически подстраивается под размер экрана (без скачков)
+- **Adaptive** design - Реализация адаптивного дизайна через явные брейкпоинты (видны скачки размеров основных контейнеров по ширине при ресайзе страницы)
+
+## Онлайн-сервисы для проверки оптимизации web-приложений
+
+* [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
+* [PageSpeed Insights](https://pagespeed.web.dev/) - Оптимизация/скорость загрузки
+* [Webpagetest](https://www.webpagetest.org/) - Оптимизация
+* [dynatrace](https://www.dynatrace.com/) - Оптимизация
+* [Caniuse](https://caniuse.com/) - Актуальность html/css
+* [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
+* [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - Скорость загрузки на Mobile
+* [yesviz](https://yesviz.com/) - Экраны/viewport устройств
+* [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
+* [PlaceIMG](https://placeimg.com/) - Генератор картинок
+
+
+## Плагины для браузеров
+
+### Chrome
+
+* [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Мониторинг технологий
+* [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
+* [Font Ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Мониторинг шрифтов
+* [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - Тестирование дизайна
+* [Fake Filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo/related) - Заполнитель форм
+* [Fake Data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - Заполнитель форм
+
+### Firefox
+
+* [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
+
+***
+
+## Cтатистика (statcounter - РФ 2022)
+
+### Desktop OS
+
+- **Windons** - 88%
+- **MacOS** - 5%
+- **Linux** - 2% (по сути можно принебречь)
+
+### Desktop Browsers
+
+- **Chrome** - 52%
+- **Yandex** - 21%
+- **Opera** - 10%
+- **Firefox** - 8%
+- **Edge** - 5%
+- **Safari** - 3%
+
+### Tablet Browsers
+
+- **Chrome** - 41%
+- **Android** - 23%
+- **Safari** - 19%
+- **Yandex** - 12%
+- **Opera** - 3%
+
+
+### Mobile Browsers
+
+- **Chrome** - 58%
+- **Safari** - 27%
+- **Yandex** - 9%
+- **Samsung** - 2,6% (можно принебречь)
+- **Opera** - 1,9% (можно принебречь)
+
+Bug-report должен включать
+
+1. На каком тестовом сервере воспроизводится баг
+2. Тип устройства, версия ОС, браузер
+3. Приложить скриншоты или видеозапись
