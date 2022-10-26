@@ -5,6 +5,7 @@ sidebar_position: 7
 
 - **Xcode** - симмулятор iOS, Apple Configurator, iTools, Fiddler, WireShark, Safari
 - [developer.apple.com](https://developer.apple.com/) - Основной сайт iOS-разработки (гайдлайны, XCode)
+- [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS
 
 
 ## Гайдлайны iOS

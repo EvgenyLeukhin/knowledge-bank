@@ -50,16 +50,6 @@ sidebar_position: 5
 - Эмулятор
 - Интернет-сервисы
 
-### Онлайн тестовые фермы
-
-* [Browserstack](https://www.browserstack.com/)
-* [Saucelabs](https://saucelabs.com/)
-* [LambdaTest](https://www.lambdatest.com/)
-* [Saucelabs](https://saucelabs.com/)
-* [AWS Device Farm](https://aws.amazon.com/ru/device-farm/)
-* [Applause](https://www.applause.com/)
-* [Selenium](https://www.selenium.dev/)
-
 ## Категории тестирования
 
 I. **Жизненный цикл приложения**
@@ -96,12 +86,6 @@ VI. **Юзабилити**
   - Спиннеры и лоадеры
   - Поддержка нативных жестов
 
-
-## Инструменты
-
-<img src="../../../img/qa/mobile-tools.png" width="450" alt="mobile-tools.png" />
-
-
 ***
 
 ## Прерывания
@@ -125,3 +109,13 @@ VI. **Юзабилити**
 - **Android** - 69%
 - **iOS** - 30%
 - **Остальные** - 1%
+
+***
+
+## Инструменты
+
+<img src="../../../img/qa/mobile-tools.png" width="450" alt="mobile-tools.png" />
+
+* [Browserstack](https://www.browserstack.com/), [Saucelabs](https://saucelabs.com/), [LambdaTest](https://www.lambdatest.com/), [Saucelabs](https://saucelabs.com/), [AWS Device Farm](https://aws.amazon.com/ru/device-farm/), [Applause](https://www.applause.com/), [Selenium](https://www.selenium.dev/) - Онлайн тестовые фермы
+
+* [Charles](https://www.charlesproxy.com/) - Прокси-сервер

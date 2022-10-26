@@ -43,7 +43,7 @@ sidebar_position: 4
 - **Responsive** design - Реализация резинового/гибкого дизайна, который автоматически подстраивается под размер экрана (без скачков)
 - **Adaptive** design - Реализация адаптивного дизайна через явные брейкпоинты (видны скачки размеров основных контейнеров по ширине при ресайзе страницы)
 
-## Онлайн-сервисы для проверки оптимизации web-приложений
+## Онлайн-сервисы для тестирования web-приложений
 
 * [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
 * [PageSpeed Insights](https://pagespeed.web.dev/) - Оптимизация/скорость загрузки
@@ -53,8 +53,9 @@ sidebar_position: 4
 * [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
 * [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - Скорость загрузки на Mobile
 * [yesviz](https://yesviz.com/) - Экраны/viewport устройств
-* [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
+* [temp-email](https://temp-mail.org/ru/) - Временная почта
 * [PlaceIMG](https://placeimg.com/) - Генератор картинок
+* [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
 
 
 ## Плагины для браузеров
