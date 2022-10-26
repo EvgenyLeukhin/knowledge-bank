@@ -5,6 +5,7 @@ sidebar_position: 7
 
 - **Xcode** - симмулятор iOS, Apple Configurator, iTools, Fiddler, WireShark, Safari
 - [developer.apple.com](https://developer.apple.com/) - Основной сайт iOS-разработки (гайдлайны, XCode)
+- [Скачать XCode](https://developer.apple.com/xcode/) - Основной сайт iOS-разработки (гайдлайны, XCode)
 - [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS
 
 
@@ -27,3 +28,5 @@ sidebar_position: 7
 15. Если возникает какой-то сбой, то не нужно закрывать приложение/выбрасывать, а должно быть оповещение, что что-то пошло не также
 
 ## XCode
+
+TODO
