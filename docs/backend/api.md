@@ -34,3 +34,10 @@ sidebar_position: 1
 - **SSL-сертификат** - secure socket layer. Стороняя организация.
 
 ### Backend-разработка
+
+TODO
+
+### Админ-панель
+
+TODO
+ 

@@ -3,6 +3,10 @@ title: Android
 sidebar_position: 6
 ---
 
+## Технологии для создания Android-приложений:
+
+- Java и Kotlin
+- Pyton, Flutter, React Native, HTML & CSS
 
 ## Инструменты для mobile-тестирования
 
@@ -32,6 +36,14 @@ sidebar_position: 6
 - **Остальные** - 11%
 
 ## Android studio
+
+### Создание проекта
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zzV2aML_zNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Выбрать шаблон --> Выбрать API (Допустим API 17) --> Finish
+
+### Эмулятор
 
 Создать тестовый проект или взять готовый.
 
