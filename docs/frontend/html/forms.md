@@ -7,31 +7,34 @@ sidebar_position: 3
 
 ```html
 <form action="https://some-url.ru" method="post | get" autocomplete>
-  <!-- Группа полей 1 -->
+  <!-- Набор полей 1 -->
   <fieldset>
-    <!-- Название для группы полей -->
+    <!-- Название для набора полей -->
     <legend><label for="field-1">Группа полей 1</label></legend>
 
-    <!-- поле-1 -->
+    <!-- Контейнер поля-1 -->
     <div class="form-group">
+      <!-- лейбл -->
       <label for="field-1">Field-1 title</label>
+
+      <!-- само поле -->
       <input id='field-1' type="text" name="field-1" placeholder="Something1" tabindex="1" required />
     </div>
 
-    <!-- поле-2 -->
+    <!-- Контейнер поля-2 -->
     <div class="form-group">
       <label for="field-2">Field-2 title</label>
       <input id='field-2' type="text" name="field-2" placeholder="Something2" tabindex="2" />
     </div>
   </fieldset>
 
-  <!-- Группа полей 2 -->
+  <!-- Набор полей 2 -->
   <fieldset>
     <legend><label for="field-2">Группа полей 2</label></legend>
     ...
   </fieldset>
 
-  <!-- Группа полей 3 -->
+  <!-- Набор полей 3 -->
   <fieldset>
     <legend><label for="field-3">Группа полей 3</label></legend>
     ...
