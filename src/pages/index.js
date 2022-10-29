@@ -47,7 +47,8 @@ export default function Home() {
               Начать читать
             </Link>
           </div>
-          &nbsp;
+          <br />
+          <a href="https://docusaurus.io/" target="_blank">Docusaurus guide</a>
         </div>
         {/* <HomepageFeatures /> */}
 
