@@ -95,31 +95,31 @@ const config = {
           //     },
           //   ],
           // },
-          {
-            title: 'Social',
-            items: [
-              // {
-              //   label: 'Stack Overflow',
-              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              // },
-              {
-                label: 'VK',
-                href: 'https://vk.com/leukhin_ei',
-              },
-              {
-                label: 'YouTube',
-                href: 'https://www.youtube.com/channel/UCIR5cec6IDzkCjlIXd4HINQ',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/users/eleukhin#5329',
-              },
-              // {
-              //   label: 'Twitter',
-              //   href: 'https://twitter.com/docusaurus',
-              // },
-            ],
-          },
+          // {
+          //   title: 'Social',
+          //   items: [
+          //     // {
+          //     //   label: 'Stack Overflow',
+          //     //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          //     // },
+          //     {
+          //       label: 'VK',
+          //       href: 'https://vk.com/leukhin_ei',
+          //     },
+          //     {
+          //       label: 'YouTube',
+          //       href: 'https://www.youtube.com/channel/UCIR5cec6IDzkCjlIXd4HINQ',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/users/eleukhin#5329',
+          //     },
+          //     // {
+          //     //   label: 'Twitter',
+          //     //   href: 'https://twitter.com/docusaurus',
+          //     // },
+          //   ],
+          // },
           // {
           //   title: 'More',
           //   items: [
