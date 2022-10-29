@@ -36,7 +36,7 @@ export default function Home() {
       <main>
         <div className="container" style={{ textAlign: 'center' }}>
           &nbsp;
-          <h1 className="hero__title">{`My ${siteConfig.title}`}</h1>
+          <h1 className="hero__title">Мой справочник знаний</h1>
           <p className="hero__subtitle">Находится в разработке и постоянно дополняется</p>
 
           <div className={styles.buttons}>
