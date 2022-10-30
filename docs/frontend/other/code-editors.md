@@ -50,10 +50,10 @@ sidebar_position: 2
 - <kbd>Cmd + B</kbd>&nbsp;&ndash;&nbsp;Сайдбар
 - <kbd>Cmd + ,</kbd>&nbsp;&ndash;&nbsp;Настройки
 - <kbd>Cmd + Q</kbd>&nbsp;&ndash;&nbsp;Закрыть редактор
-- <kbd>Cmd + Ctrl + F</kbd>&nbsp;&ndash;&nbsp;Полноэкранный режим в MacOS
+- <kbd>Ctrl + Cmd + F</kbd>&nbsp;&ndash;&nbsp;Полноэкранный режим в MacOS
 - <kbd>Cmd + Shift + P</kbd>&nbsp;&ndash;&nbsp;Командный интерфейс
 - <kbd>Ctrl + ` / Cmd + J</kbd>&nbsp;&ndash;&nbsp;Открыть/закрыть терминал
-- <kbd>Cmd + K + Cmd + S</kbd>&nbsp;&ndash;&nbsp;Список шорткатов
+- <kbd>Cmd + K + S</kbd>&nbsp;&ndash;&nbsp;Список шорткатов
 - <kbd>Ctrl + Shift + G</kbd>&nbsp;&ndash;&nbsp;Git
 - <kbd>Cmd + Shift + D</kbd>&nbsp;&ndash;&nbsp;Debugger
 - <kbd>Cmd + Shift + E</kbd>&nbsp;&ndash;&nbsp;Editor
@@ -68,7 +68,7 @@ sidebar_position: 2
 - <kbd>Cmd + N</kbd>&nbsp;&ndash;&nbsp;Новый файл
 - <kbd>Cmd + O</kbd>&nbsp;&ndash;&nbsp;Открыть файл
 - <kbd>Cmd + W</kbd>&nbsp;&ndash;&nbsp;Закрыть вкладку
-- <kbd>Cmd + Shift + T</kbd>&nbsp;&ndash;&nbsp;Jткрыть закрытуювкладку
+- <kbd>Cmd + Shift + T</kbd>&nbsp;&ndash;&nbsp;Открыть закрытую вкладку
 
 #### Код
 
@@ -77,7 +77,7 @@ sidebar_position: 2
 - <kbd>Cmd + Shift + ←→</kbd>&nbsp;&ndash;&nbsp;Выделить строку
 - <kbd>Cmd + X</kbd>&nbsp;&ndash;&nbsp;Вырезать строку
 - <kbd>Cmd + Shift + K</kbd>&nbsp;&ndash;&nbsp;Удалить строку
-- <kbd>Alt + ←→</kbd>&nbsp;&ndash;&nbsp;Движение курсора по коду/текстуƒ
+- <kbd>Alt + ←→</kbd>&nbsp;&ndash;&nbsp;Движение курсора по коду/тексту
 - <kbd>Alt + Shift + ⇅</kbd>&nbsp;&ndash;&nbsp;Копирование строк
 - <kbd>Alt + ⇅</kbd>&nbsp;&ndash;&nbsp;Перенос строки
 - <kbd>Cmd + F/E/G</kbd>&nbsp;&ndash;&nbsp;Поиск
@@ -88,6 +88,7 @@ sidebar_position: 2
 - <kbd>Cmd + Alt + ⇅ / Cmd + ЛКМ</kbd>&nbsp;&ndash;&nbsp;Новый курсор
 - <kbd>Cmd + Shift + ⇅</kbd>&nbsp;&ndash;&nbsp;Выделить всё, что выше/ниже
 - <kbd>Cmd + D</kbd>&nbsp;&ndash;&nbsp;Умное выделение
+- <kbd>Cmd + Shift + L</kbd>&nbsp;&ndash;&nbsp;Выделить одинаковые
 - <kbd>Ctrl + G</kbd>&nbsp;&ndash;&nbsp;На строку
 
 
