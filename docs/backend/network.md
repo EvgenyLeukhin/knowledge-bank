@@ -12,6 +12,8 @@ sidebar_position: 0
 ### Порты TCP
 
 - **HTTP(S)** - **HyperText transfer protocol (secure)**. Основной протокол передачи данных между клиентом и сервером. Изначально был для передачи только html-файлов, а сейчас уже можно передавать всё что угодно (css, js, images, fonts, json и т.д.). Простой, быстрый, гибкий, многофункциональный. Версия протокола 1.1 или 2.0. (https:443, http:80)
+  - HTTP 1.1 - несколько соединений на различные типы файлов
+  - HTTP 2.0 - одно соединение на различные типы файлов
 - **WS** - web-socket (:443, :80 поверх http)
 - **FTP** - file (:21)
 - **SSH** - cli (:22)
@@ -153,7 +155,7 @@ Content-Length: 208
 - Representation (Content-Type, Content-Encoding, Content-Language, and Content-Location)
 - Entity (устаревшие заголовки сущности - Allow, Content-Encoding, Length, Type и др.)
 
-Сервер обрабатывает сначала заголовки запроса, а уже потом тело запроса.
+Служебная информация. Сервер обрабатывает сначала заголовки запроса, а уже потом тело запроса.
 
 #### Клиентские заголовки
 
@@ -246,9 +248,13 @@ Connection: keep-alive
 
 ### Request body / Request Data / Form data / Payload
 
-Можно посмотреть во вкладке Payload/Preview.
+<img src="../../../img/backend/request.png" width="550" alt="request.png" />
 
-Данные в формате json, которые отправляются вместе с запросом. Пример payload:
+Тело запроса или ответа отделено пустой строкой. Можно посмотреть во вкладке Payload/Preview.
+
+Html, который приходит по get-запросу располагается как раз в body.
+
+При post-запросах данные отправляются в формате json. Пример payload:
 
 ```json
 {"email":"EvgenyLeukhin@yandex.ru", "answer":"1234", "captchaCode":"45439daf-39e8-a71f-0434-d4c88b3cbb08"}
