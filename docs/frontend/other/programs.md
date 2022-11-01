@@ -38,7 +38,7 @@ sidebar_position: 4
 
 Пакетный менеджер для MacOS.
 
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
 
 * Git: ```brew install git```
 * Wget: ```brew install wget```
