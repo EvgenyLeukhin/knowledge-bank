@@ -37,4 +37,4 @@ sidebar_position: 8
 
 ***
 
-```npm install -g newman ``` - Install Newman
+```npm install -g newman ``` - Install Newman (Уже устаревшая технология)

@@ -20,6 +20,8 @@ sidebar_position: 0
 - **SMTP** (:25), **POP3** - email (:110)
 - [Полный список](https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BF%D0%BE%D1%80%D1%82%D0%BE%D0%B2_TCP_%D0%B8_UDP)
 
+<img src="../../../img/backend/https.png" width="550" alt="https.png" />
+
 ***
 
 ## IP-адрес
@@ -37,7 +39,7 @@ IPv6-адрес: ```1050:0:0:0:5:600:300c:326b```
 
 ## Клиент-серверная архитектура
 
-<img src="../../../img/backend/http.png" width="550" alt="http.png" />
+<img src="../../../img/backend/client-server.png" width="550" alt="client-server.png" />
 
 Трехуровневая архитектура (Клиент --> Серевер --> БД): 
   1. Уровень **представления**
@@ -113,6 +115,8 @@ IPv6-адрес: ```1050:0:0:0:5:600:300c:326b```
 
 ## Запросы
 
+При каждом запросе сначала срабатывает **DNS-lookup**, котоый ищет IP-адрес требуемого ресурса у системы DNS-серверов, потом эта информация по IP-адресу храниться в кэше клиента, чтобы постоянно не обращаться к DNS.
+
 - **Методы**
   - **GET** - получить данные (можно указывать query-параметры через ?) ```http://some-url.com/endpoint?param1=value1&param2=value2&sort=name,asc```
   - **POST** - отправить данные
@@ -127,11 +131,15 @@ IPv6-адрес: ```1050:0:0:0:5:600:300c:326b```
 - **Содержимое запроса** (body, form data)
 - **Содержимое ответа** (json - более популярный или xml - более читаемый, но лишние символы)
 
+### IP-адрес
+
+<img src="../../../img/backend/ip.png" width="550" alt="ip.png" />
+
 ### URL
 
 Uniform Resource Locator. Человекочитабильная обертка IP-адреса.
 
-<img src="../../../img/backend/url-address.png" width="550" alt="url-address.png" />
+<img src="../../../img/backend/url.png" width="750" alt="url.png" />
 
 URL-адрес ---> DNS-сервер (конвертирует URL в IP-адрес) --> Запрос на этот IP --> Ответ клиенту
 
