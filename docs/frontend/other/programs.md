@@ -46,6 +46,13 @@ sidebar_position: 4
 * yarn: ```brew install yarn```
 * oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
 
+#### Настройки
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TDVnk9RhYOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- Клавиатура -> Источники ввода -> Русская - ПК (чтобы на исправить . и ,). ? - будет Shift + 7.
+- Клавиатура -> Сочетание клавиш -> Выбрать следующий источник в меню ввода (сделать Cmd + Пробел, а Spotlight поменять на Option + Пробел)
+
 ***
 
 ## Windows
