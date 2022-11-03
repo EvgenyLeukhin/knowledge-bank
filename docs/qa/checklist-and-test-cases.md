@@ -29,7 +29,7 @@ sidebar_position: 2
 
 ### Статусы проверок
 
-Passed, Failed, Blocked, Skipped, No run
+Passed (Пройден), Failed (Провален), Blocked (Заблокирован), Skipped (Пропущен), No run (Не запускался)
 
 ***
 
