@@ -120,12 +120,13 @@ IPv6-адрес: ```1050:0:0:0:5:600:300c:326b```
 - **Методы**
   - **GET** - получить данные (можно указывать query-параметры через ?) ```http://some-url.com/endpoint?param1=value1&param2=value2&sort=name,asc```
   - **POST** - отправить данные
-  - **PUT** - изменение ресурса (типа UPDATE)
-  - **PATCH** (aналог PUT) - редактирование
+  - **PUT** - полное изменение ресурса (типа UPDATE)
+  - **PATCH** (aналог PUT) - частичное изменение ресурса
   - **DELETE** - удаление ресурса
   - **OPTIONS** - тестовый метод, который вернет все поддерживаемые запросы к серверу
-  - **TRACE** - тестовый метод, возвращает полученный запрос так, что клиент может увидет, что промежуточные сервера добавляют или изменяю в запросе
-- **URL** запроса, куда он будет отправлен
+  - **TRACE** - тестовый метод, возвращает полученный запрос так, что клиент может увидет, что промежуточные сервера добавляют или изменяю в запросе (устаревший)
+  - LINK/UNLINK/CONNECT - устаревшие
+- **URL** запроса, куда он будет отправленА
 - **Заголовки** запроса (headers), где хранятся данные запроса, поле-значение
 - **Код ответа** сервера
 - **Содержимое запроса** (body, form data)
@@ -191,7 +192,7 @@ Content-Length: 208
   - Sec-Fetch-Mode: no-cors
   - Sec-Fetch-Site: same-origin
   - User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36
-- RESPOONSE HEADERS
+- RESPONSE HEADERS
   - Accept-Ranges: bytes
   - access-control-allow-origin: *
   - Cache-Control: public, max-age=0
@@ -254,7 +255,7 @@ Connection: keep-alive
   - 503 Service Unavailable
 
 
-### Request body / Request Data / Form data / Payload
+### Тело запроса / Request body / Request Data / Form data / Payload
 
 <img src="../../../img/backend/request.png" width="550" alt="request.png" />
 

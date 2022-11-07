@@ -57,7 +57,7 @@ sidebar_position: 3
 - **precondition**
 - **steps** - Шаги по воспроизведению
 - **expected result**
-- **observed result**
+- **actual result**
 - **comments**
 - **atachments**
 
