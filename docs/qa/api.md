@@ -29,12 +29,13 @@ sidebar_position: 8
 
 ## Postman
 
+
 ```brew install --cask postman``` - Install Postman CLI
 
 ```postman login --with-api-key API_KEY``` - Зарегистрировать пользователя по CLI
 
 ```postman collection run 4238395-f9da3763-3190-47d9-b3ee-e1529653fa88``` - Запустить тестирование коллекции
 
-***
-
 ```npm install -g newman ``` - Install Newman (Уже устаревшая технология)
+
+***
