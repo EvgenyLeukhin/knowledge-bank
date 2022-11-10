@@ -11,6 +11,8 @@ export const CODE = ({children}) => (
 
 ## GIT
 
+Version Control System.
+
 ### Настройка
 
 - <CODE>git config --list</CODE> - Показывает список конфигураций
