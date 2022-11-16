@@ -12,7 +12,7 @@ export const H3 = ({children}) => (
 
 ## Logic Pro X
 
-<a href="../../../pdf/logic-pro-user-guide.pdf" target="_blank">logic-pro-user-guide.pdf</a>
+<!-- <a href="../../../pdf/logic-pro-user-guide.pdf" target="_blank">logic-pro-user-guide.pdf</a> -->
 
 
 <H3>Настойки программы (Ctrl + ,) - Preferences</H3>
