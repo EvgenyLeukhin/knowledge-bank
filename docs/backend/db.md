@@ -24,6 +24,10 @@ sidebar_position: 2
 
 **SQL** - Structure query language. Язык структурированных запросов. Появился ещё в 70-х. Язык запросов (язык общения с реляционной БД).
 
+https://proglib.io/p/sql-for-20-minutes
+https://www.w3schools.com/html/default.asp
+https://www.w3schools.com/sql/exercise.asp - Тренажер SQL
+
 
 ***
 
