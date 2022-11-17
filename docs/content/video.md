@@ -3,7 +3,7 @@ title: Видео
 sidebar_position: 3
 ---
 
-## Final Cut
+## Final Cut Pro
 
 TODO
 
