@@ -3,6 +3,8 @@ title: Концепция
 sidebar_position: 1
 ---
 
+## Поиск готовых концепций и референсов
+
 - [behance.net](https://www.behance.net/)
 - [pinterest.ru](https://www.pinterest.ru/)
 - [dribbble.com](https://dribbble.com/)

@@ -51,3 +51,20 @@ sidebar_position: 5
 
 ## 6. Дизайн email, сайтов и приложений
   - [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
+
+
+***
+
+## Типы сайтов
+
+- Одностраничный (landing page, scrolling site)
+- Реклама одного товара / одной услуги
+- Реклама одного события (эвентов)
+- Promo-компании
+- Сайт-визитка
+- Сайт-потфолио Многостраничный (иерархия страниц)
+- Визитная карточка компании
+- Корпоративный сайт (фирменный)
+- Интернет-магазин (ЛК, Карточки товаров, Каталог, Оплата) Application (приложение)
+- SPA (React, Vue, Angular)
+- PWA (like mobile app)

@@ -3,6 +3,14 @@ title: Прототип
 sidebar_position: 2
 ---
 
+
+- [whimsical.com](https://whimsical.com/)
+- [marvelapp.com](https://marvelapp.com/)
+- [invisionapp.com](https://www.invisionapp.com/freehand)
+- [16 инструментов для создания прототипов](https://habr.com/ru/company/aiken/blog/129653/)
+
+<img src="../../../img/design/user-logic.jpg" width="550" alt="user-logic.jpg" />
+
 ## UX-дизайн (User Experience)
 
 Опыт пользователей (по сути это создание продуманного прототипа сайта для удобства пользователя), проектирование интерфейса, логика сайта, продумывание каждого шага пользователя, карта сайта, акценты в блоках для заинтересованности пользователя, последовательность блоков, путь пользователя при использовании сайта.
@@ -135,17 +143,6 @@ sidebar_position: 2
 - Наши технологии
 - Стоимость, цены
 - Форма заявки
-
-***
-
-## Инструменты для разработки прототипов
-
-<img src="../../../img/design/user-logic.jpg" width="550" alt="user-logic.jpg" />
-
-- [whimsical.com](https://whimsical.com/)
-- [marvelapp.com](https://marvelapp.com/)
-- [invisionapp.com](https://www.invisionapp.com/freehand)
-- [16 инструментов для создания прототипов](https://habr.com/ru/company/aiken/blog/129653/)
 
 ***
 
