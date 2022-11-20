@@ -6,6 +6,9 @@ sidebar_position: 3
 - [colorscheme.ru](https://colorscheme.ru/) - Цветовой круг
 - [Adobe Color](https://color.adobe.com/ru/explore) - Цветовые схемы от Adobe
 - [colrd](http://colrd.com/) - Готовые цветовые схемы
+- [culrs](https://www.culrs.com/#/) - Готовые цветовые схемы 2
+- [colorleap](https://colorleap.app/dates) - Готовые цветовые схемы 3
+- [shapefactory](https://pigment.shapefactory.co/) - Готовые цветовые схемы 4
 - [Color Palette Generator](https://www.toptal.com/designers/colourcode) - Генератор цветовых схем
 - [colorhexa](https://www.colorhexa.com/) - Генератор цветовых схем 2
 - [webfx](https://www.webfx.com/web-design/color-picker/) - Генератор цветовых схем 3
@@ -14,6 +17,9 @@ sidebar_position: 3
 - [flatuicolorpicker](https://www.flatuicolorpicker.com/) - Flat colors 3
 - [materialpalette](https://www.materialpalette.com/) - Flat colors Material-UI
 - [palettable](https://www.palettable.io/DAE6CF) - Подборка цвета с помощью ИИ
+- [colordesigner](https://colordesigner.io/color-mixer) - Миксер цветов
+- [gradienthunt](https://gradienthunt.com/) - Градиенты
+- [webkul](https://webkul.github.io/coolhue/) - Градиенты 2
 
 ## Рекомендации
 
@@ -219,7 +225,7 @@ sidebar_position: 3
     - **<span style={{ color: '#c2b280' }}>ПЕСОЧНЫЙ</span>** - пастельный коричневый
     - **<span style={{ color: '#b5651d' }}>СВЕТЛО-КОРИЧНЕВЫЙ</span>**
     - **<span style={{ color: '#cd7f32' }}>БРОНЗОВЫЙ</span>**
-    - Земля, глина, дерево, стройка
+    - Земля, песок, глина, дерево, кирпич, стройка
     - Кофе, какао, шоколад
     - Кожа, обувь, мебель
     - Хорошо сочетаются с черным текстом и белым фоном (для акцента в простом тексте).
