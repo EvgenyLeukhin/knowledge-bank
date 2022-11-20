@@ -5,21 +5,36 @@ sidebar_position: 3
 
 - [colorscheme.ru](https://colorscheme.ru/) - Цветовой круг
 - [Adobe Color](https://color.adobe.com/ru/explore) - Цветовые схемы от Adobe
+- [palettable](https://www.palettable.io/DAE6CF) - Подборка цвета с помощью ИИ
+- [colordesigner](https://colordesigner.io/color-mixer) - Миксер цветов
+
+### Готовые цветовые схемы
+
 - [colrd](http://colrd.com/) - Готовые цветовые схемы
 - [culrs](https://www.culrs.com/#/) - Готовые цветовые схемы 2
 - [colorleap](https://colorleap.app/dates) - Готовые цветовые схемы 3
 - [shapefactory](https://pigment.shapefactory.co/) - Готовые цветовые схемы 4
+
+### Генераторы цветовых схем
+
 - [Color Palette Generator](https://www.toptal.com/designers/colourcode) - Генератор цветовых схем
 - [colorhexa](https://www.colorhexa.com/) - Генератор цветовых схем 2
 - [webfx](https://www.webfx.com/web-design/color-picker/) - Генератор цветовых схем 3
+
+
+### Плоские цвета
+
 - [flatcolors](https://flatcolors.net/) - Flat colors
 - [getuicolors](http://getuicolors.com/) - Flat colors 2
 - [flatuicolorpicker](https://www.flatuicolorpicker.com/) - Flat colors 3
 - [materialpalette](https://www.materialpalette.com/) - Flat colors Material-UI
-- [palettable](https://www.palettable.io/DAE6CF) - Подборка цвета с помощью ИИ
-- [colordesigner](https://colordesigner.io/color-mixer) - Миксер цветов
+
+### Градиенты
+
 - [gradienthunt](https://gradienthunt.com/) - Градиенты
 - [webkul](https://webkul.github.io/coolhue/) - Градиенты 2
+
+***
 
 ## Рекомендации
 
