@@ -54,13 +54,13 @@ export default function Home() {
 
         <ul>
           <li>Фотография +++</li>
-          <li>Звукозапись ---</li>
-          <li>Видео ---</li>
+          <li>Звукозапись +++</li>
+          <li>Видео +++</li>
           <li><b>Web-design</b> ---</li>
-          <li><b>English</b> ---</li>
-          <li><b>Nodejs, GraphQL</b> ---</li>
           <li><b>CSS</b> ---</li>
+          <li><b>English</b> ---</li>
           <li><b>Начать JS, React</b> ---</li>
+          <li><b>Nodejs, GraphQL</b> ---</li>
         </ul>
 
       </main>

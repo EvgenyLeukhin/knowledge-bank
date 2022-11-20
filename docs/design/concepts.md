@@ -15,7 +15,7 @@ sidebar_position: 1
 
 ## Некоторые виды концепций
 
-**МИНИМАЛИЗМ**
+### МИНИМАЛИЗМ
 
   <img src="../../../img/design/minimalism.jpg" width="550" alt="minimalism.jpg" />
 
@@ -28,7 +28,9 @@ sidebar_position: 1
 
 ***
 
-**ПЛОСКИЙ** (flat design) (разновидность минимализма)
+### ПЛОСКИЙ
+
+Flat design (разновидность минимализма).
 
   <img src="../../../img/design/flat.png" width="550" alt="flat.png" />
 
@@ -44,7 +46,7 @@ sidebar_position: 1
 
 ***
 
-**БИЗНЕС**
+### БИЗНЕС
 
   <img src="../../../img/design/business.png" width="550" alt="business.png" />
 
@@ -62,7 +64,7 @@ sidebar_position: 1
 
 ***
 
-**ГЛАМУР**
+### ГЛАМУР
 
   <img src="../../../img/design/glamour.jpg" width="550" alt="glamour.jpg" />
 
@@ -75,7 +77,7 @@ sidebar_position: 1
 
 ***
 
-**КИСЛОТНЫЙ**
+### КИСЛОТНЫЙ
 
   <img src="../../../img/design/acid2.png" width="550" alt="acid2.png" />
 
@@ -88,7 +90,7 @@ sidebar_position: 1
 
 ***
 
-**РЕТРО**
+### РЕТРО
 
   <img src="../../../img/design/retro.jpg" width="550" alt="retro.jpg" />
 
@@ -98,7 +100,7 @@ sidebar_position: 1
 
 ***
 
-**ДЕТСКИЙ**
+### ДЕТСКИЙ
 
   <img src="../../../img/design/children.jpg" width="550" alt="children.jpg" />
 
@@ -108,17 +110,17 @@ sidebar_position: 1
 
 ***
 
-**КРЕАТИВ**
+### КРЕАТИВ
 
   <img src="../../../img/design/creative.png" width="550" alt="creative.png" />
 
   - Большое количество анимаций и интерактивности
   - Сложный и долгоразрабатываемый
-  - Трудоёмкая реализация при программировании
+  - Трудоёмкая разработка
 
 ***
 
-**АРТ**
+### АРТ
 
   <img src="../../../img/design/art.png" width="550" alt="art.png" />
 
@@ -129,7 +131,8 @@ sidebar_position: 1
 
 ***
     
-**УСТАРЕВШИЕ КОНЦЕПТЫ**
+### УСТАРЕВШИЕ КОНЦЕПТЫ
+
   - Web 2.0, "карамельный" веб-дизайн
   - 1999 - 2009, становление веб-дизайна, Windows XP, яркие тона, закругленные углы, объемные иконки
   - Скевоморфизм, реализм
