@@ -8,7 +8,7 @@ sidebar_position: 1
 - [behance.net](https://www.behance.net/)
 - [pinterest.ru](https://www.pinterest.ru/)
 - [dribbble.com](https://dribbble.com/)
-- [deviantart.com](https://www.deviantart.com/) - Нужен VPN
+- [deviantart.com](https://www.deviantart.com/) (нужен VPN)
 - [99designs.com](https://99designs.com)
 
 Для дизайн-концепции нужно выбрать какое-нибудь **ПРИЛАГАТЕЛЬНОЕ**, чтобы распростанить это качество на всем дизайне (простой, строгий, яркий, гламурный, модный, молодежный, стильный, старинный, технологичный, футуристический, вызывающий и т.д.)

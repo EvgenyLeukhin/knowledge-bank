@@ -2,3 +2,87 @@
 title: Изображения
 sidebar_position: 4
 ---
+
+### Бесплатные
+
+- [unsplash.com](https://unsplash.com/)
+- [freepik.com - SVG](https://ru.freepik.com/)
+- [freeimages.com](https://www.freeimages.com/)
+
+***
+
+- [splitshire.com](https://www.splitshire.com/)
+- [flickr.com](https://www.flickr.com/)
+- [gratisography.com](https://gratisography.com/)
+- [lifeofpix.com](https://www.lifeofpix.com/)
+- [thestocks.im](https://thestocks.im/)
+- [designspiration.net](https://www.designspiration.com/)
+- [Google - Картинки](https://www.google.ru/search?newwindow=1&hl=ru&tbm=isch&sxsrf=ALeKk03GSVoF3-EZKXmw3cVhrRF1VVfdCA%3A1611212714741&source=hp&biw=1920&bih=969&ei=qicJYNmSK8TeasO7gYAI&q=planet&oq=planet&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADIICAAQsQMQgwEyAggAMgQIABADMgIIADICCAAyAggAMgIIADoHCCMQ6gIQJzoECCMQJzoFCAAQsQNQpVdYooEBYJWCAWgFcAB4AIABW4gB0AaSAQIxMJgBAKABAaoBC2d3cy13aXotaW1nsAEK&sclient=img&ved=0ahUKEwjZj5KMu6zuAhVErxoKHcNdAIAQ4dUDCAc&uact=5)
+- [Яндекс - Картинки](https://yandex.ru/images/search?text=planet)
+
+
+### Платные
+
+- [shutterstock.com](https://www.shutterstock.com/ru/)
+- [photodune.net](https://photodune.net/)
+- [ru.fotolia.com](https://stock.adobe.com/ru/?as_campaign=ftmigration2&as_channel=dpcft&as_campclass=brand&as_source=ft_web&as_camptype=acquisition&as_audience=users&as_content=closure_home-page)
+- [ru.123rf.com](https://ru.123rf.com/)
+- [storyblocks.com](https://www.storyblocks.com/images)
+
+### Фоны
+
+- [toptal.com](https://www.toptal.com/designers/subtlepatterns/) - Текстуры
+- [projects.verou.me](https://projects.verou.me/css3patterns/) - CSS-текстуры
+- [olorzilla.com](https://www.colorzilla.com/gradient-editor/) - Градиенты
+- [uigradients.com](https://uigradients.com/#SublimeVivid) - Градиенты 2
+
+
+***
+
+## Рекомендации
+
+Изображение должно правильно передавать ЭМОЦИИ в соответствии с тематикой сайта.
+
+
+- НУЖНО СЛЕДИТЬ ЗА **АВТОРСКИМИ ПРАВАМИ** ФОТОГРАФИЙ
+- Старайтесь выбирать фотографии **хорошего качества** (если фото будет пикселизированным, то это испортит общее впечатление и покажет ваш профессионализм).
+- Выбирайте однозначные по смыслу, но притертые пользователям фотографии (например, если вы создаете сайт для авиакомпании, то не ищите первым делом фотографию самолета - это банально, попробуйте подобрать для поиска другие ассоциации).
+- Фотография должна быть не просто красивой, она должна **нести определенный смысл**, который будет подкреплен текстовым блоком
+- Если картинка достаточно большая или во всю ширину блока, то всё текстовое опсинание должно распологаться **ПОД НЕЙ**, а не над ней!
+- Для фона лучше всего использовать **светлый цвет** (белый, светло-серый и светло-бежевый), это не позволит глазам пользователя быстро устать.
+
+### Вес картинок
+
+- [base64](https://www.base64-image.de/) - Конвертёр img --> base64
+- [tinypng.com](https://tinypng.com/) - Уменьшить вес картинок
+- Логотипы: 0-20 KB;
+- Фотографии: 70-300 KB;
+- Используйте подходящий графический формат. Для больших фотографий — это JPEG
+- PNG - если нужна прозрачность
+- Не растрировать шрифты и png(должно быть в смарт-объекте)
+
+### Новые форматы, можно уже использовать
+
+- jpeg 2000
+- jpeg XR
+- webp
+
+***
+
+## Форматы изображений
+
+- ### JPEG
+- ### PNG-24 (обычный png)
+- ### PNG-8
+- ### SVG
+- ### WEBP
+- ### GIF
+
+***
+
+## Обтравка изображений
+
+## Коллажирование изображений
+
+## Правильное расположение изображений
+
