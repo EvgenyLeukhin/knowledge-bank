@@ -5,11 +5,14 @@ sidebar_position: 1
 
 ## Поиск готовых концепций и референсов
 
-- [behance.net](https://www.behance.net/)
-- [pinterest.ru](https://www.pinterest.ru/)
-- [dribbble.com](https://dribbble.com/)
-- [deviantart.com](https://www.deviantart.com/) (нужен VPN)
-- [99designs.com](https://99designs.com)
+99% дизайна уже есть в готовой реализации, не изобретайте велосипед!
+
+- [behance.net](https://www.behance.net)
+- [pinterest.ru](https://www.pinterest.ru)
+- [dribbble.com](https://dribbble.com)
+- [deviantart.com](https://www.deviantart.com) (нужен VPN)
+- [siteinspire.com](https://www.siteinspire.com)
+- [onepagelove.com](https://onepagelove.com)
 
 Для дизайн-концепции нужно выбрать какое-нибудь **ПРИЛАГАТЕЛЬНОЕ**, чтобы распростанить это качество на всем дизайне (простой, строгий, яркий, гламурный, модный, молодежный, стильный, старинный, технологичный, футуристический, вызывающий и т.д.)
 
