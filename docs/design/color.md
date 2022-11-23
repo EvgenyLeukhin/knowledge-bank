@@ -179,7 +179,7 @@ sidebar_position: 3
 
   - ### <span style={{ color: 'violet'}}>ФИОЛЕТОВЫЙ</span>
 
-    <img src="../../../img/design/violet.jpg" width="650" alt="violet.jpg" />
+    <img src="../../../img/design/violet.jpg" width="450" alt="violet.jpg" />
 
     - **<span style={{ color: '#800080' }}>ПУРПУРНЫЙ (#800080)</span>** -  красный + синий
     - **<span style={{ color: '#c8a2c8' }}>СИРЕНЕВЫЙ (#c8a2c8)</span>** -  бледно-фиолетовый
@@ -196,7 +196,7 @@ sidebar_position: 3
 
   - ### <span style={{ color: 'white', background: 'black' }}>БЕЛЫЙ</span>
 
-    <img src="../../../img/design/white.jpg" width="650" alt="white.jpg" />
+    <img src="../../../img/design/white.jpg" width="450" alt="white.jpg" />
 
     Часто как цвет фона. Трендовый для минимализма. Блоги, книжные сайты. Отлично выделяет внутренний контент контрастных цветов
 
@@ -208,7 +208,7 @@ sidebar_position: 3
     ***
   - ### <span style={{ color: 'black', background: 'white' }}>ЧЁРНЫЙ</span>
 
-    <img src="../../../img/design/black.png" width="650" alt="black.png" />
+    <img src="../../../img/design/black.png" width="450" alt="black.png" />
 
     Чаще как цвет текста. Сайты для фотографов, видеографов. Нужно с ним поосторожнее в качестве фона. Комбинирование с оттенками серого
     
@@ -221,7 +221,7 @@ sidebar_position: 3
 
   - ### <span style={{ color: 'gray' }}>СЕРЫЙ</span>
 
-    <img src="../../../img/design/gray.webp" width="650" alt="gray.webp" />
+    <img src="../../../img/design/gray.webp" width="450" alt="gray.webp" />
 
     Лучше светло-серый. Светло-серый в качестве хорошего фона (близкий в белому). Тёмно-серый может смотреться грязно в качестве фона (с ним нужно быть поаккуратнее). Оттенки серого можно не учитывать в общем количестве цветов в дизайне.
 
@@ -233,7 +233,7 @@ sidebar_position: 3
 
   - ### <span style={{ color: 'brown' }}>КОРИЧНЕВЫЙ</span>
 
-    <img src="../../../img/design/brown.webp" width="650" alt="brown.webp" />
+    <img src="../../../img/design/brown.webp" width="450" alt="brown.webp" />
 
     - **<span style={{ color: '#c2b280' }}>ПЕСОЧНЫЙ (#c2b280)</span>** - пастельный коричневый
     - **<span style={{ color: '#b5651d' }}>СВЕТЛО-КОРИЧНЕВЫЙ (#b5651d)</span>**
@@ -256,7 +256,7 @@ sidebar_position: 3
 
 ## Цветовой круг
 
-<img src="../../../img/design/color-cyrcle.jpg" width="650" alt="color-cyrcle.jpg" />
+<img src="../../../img/design/color-cyrcle.jpg" width="450" alt="color-cyrcle.jpg" />
 
 - Белый, Черный и Серый цвета НЕ включены в цветовой круг. (нейтральные тона, сочетаются со всеми цветами)
 - Нужно научиться выделять из фото один основной цвет
