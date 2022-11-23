@@ -6,7 +6,7 @@ sidebar_position: 4
 ### Бесплатные
 
 - [unsplash.com](https://unsplash.com/)
-- [freepik.com - SVG](https://ru.freepik.com/)
+- [freepik.com](https://ru.freepik.com/)
 - [freeimages.com](https://www.freeimages.com/)
 
 ***

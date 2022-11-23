@@ -39,8 +39,9 @@ sidebar_position: 4
 
 ## Mета-тэги
 
+- [megatags.co](https://megatags.co/#generate-tags) - Генератор мета-тегов
+- [Meta-tags generator](https://webcode.tools/) - Генератор мета-тегов 2
 - [Facebook sharing](https://developers.facebook.com/tools/debug/)
-- [Meta-tags generator](https://webcode.tools/)
 
 
 ```html
