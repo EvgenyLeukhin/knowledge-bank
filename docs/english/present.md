@@ -3,6 +3,8 @@ title: Present
 sidebar_position: 0
 ---
 
+<img src="../../../img/english/present.jpg" width="100%" alt="present.jpg" />
+
 ## PRESENT SIMPLE (I do)
 
 - Констатируем факты, общеизвестные истины, что-то неизменное, что-то повторяющееся, привычки (```I'm not a student```)
@@ -55,7 +57,6 @@ Mat doesn’t like to cook.
 
 ***
 ***
-***
 
 ## PRESENT CONTINUOUS (I am doing)
 
@@ -90,7 +91,6 @@ Mat doesn’t like to cook.
 |I/He/She/It was going to buy smth|I/He/She/It was not(wasn’t) going to buy smth||
 |You/WeThey were going to buy smth|You/We/They were not(wasn’t) going to buy smth||
 
-***
 ***
 ***
 
@@ -129,7 +129,6 @@ Mat doesn’t like to cook.
 
 ***
 ***
-***
 
 ## PRESENT PERFECT CONTINUOUS (I have been doing)
 
@@ -155,16 +154,3 @@ Mat doesn’t like to cook.
 |He/She/It has been learning|He/She/It has not (hasn’t) been learning|Has He/She/It been learning?|
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TU78I3CRVlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-!!! Вроде бы как встречается редко и вместо этого можно использовать Past Simple.
-
-***
-
-
-
-
-
-
-
-
-
