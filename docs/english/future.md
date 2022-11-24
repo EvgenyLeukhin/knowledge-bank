@@ -5,7 +5,7 @@ sidebar_position: 2
 
 <img src="../../../img/english/future.jpg" width="100%" alt="future.jpg" />
 
-## FUTURE SIMPLE (I will do)
+## <mark>FUTURE SIMPLE</mark> (I will do)
 
 - Простые события в будущем
 - Прогнозы, предсказания
@@ -36,7 +36,7 @@ I will not (won't) be here tomorrow.
 
 ***
 ***
-## FUTURE CONTINUOUS
+## <mark>FUTURE CONTINUOUS</mark>
 
 - Действие, которое будет в процессе в будущем времени.
 
@@ -57,7 +57,7 @@ I will be waiting for you
 ***
 ***
 
-## FUTURE PERFECT
+## <mark>FUTURE PERFECT</mark>
 
 - Действия, которые мы планируем совершить в будущем (Я собираюсь сделать что-то в будующем в конкретное время).
 
@@ -76,7 +76,7 @@ How many sweets will you eaten by the evening?
 ***
 ***
 
-## FUTURE PERFECT CONTINUOUS
+## <mark>FUTURE PERFECT CONTINUOUS</mark>
 
 - Событие в будущем, которое тянется из прошлого и что-то с ним будет в будущем.
 - В будущем какое-то действие будет длиться, находится в процессе.

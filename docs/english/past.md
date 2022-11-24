@@ -5,7 +5,7 @@ sidebar_position: 1
 
 <img src="../../../img/english/past.jpg" width="100%" alt="past.jpg" />
 
-## PAST SIMPLE (I did)
+## <mark>PAST SIMPLE</mark> (I did)
 
 - простое действие в прошлом
 - 2-я форма глагола только в этом времени
@@ -44,7 +44,7 @@ Study -> Studied
 ***
 ***
 
-## PAST CONTINUOUS (I was doing)
+## <mark>PAST CONTINUOUS</mark> (I was doing)
 
 Длительное, находился в процессе время обозначает какое-либо действие, происходящее в прошлом в течение какого-либо времени или занимавшее продолжительное время.
 
@@ -72,7 +72,7 @@ Study -> Studied
 ***
 ***
 
-## PAST PERFECT (I had done)
+## <mark>PAST PERFECT</mark> (I had done)
 
 - Показывает действие, которое случилось раньше другого действия или определенного момента в прошлом.
 - Одна часть предложения будет в PAST PERFECT (потом это), другая в PAST SIMPLE (сначало это действие)
@@ -110,7 +110,7 @@ They were not at home (Past Simple). They HAD gone shoping (Past Perfect).
 ***
 ***
 
-## PAST PERFECT CONTINUOUS (I had been doing)
+## <mark>PAST PERFECT CONTINUOUS</mark> (I had been doing)
 
 - Действие в прошлом длилось какое-то время до того как случилось какое-либо другое действие. Должно быть два действия.
 - Причины в прошлом, почему что-то случилось

@@ -5,7 +5,7 @@ sidebar_position: 0
 
 <img src="../../../img/english/present.jpg" width="100%" alt="present.jpg" />
 
-## PRESENT SIMPLE (I do)
+## <mark>PRESENT SIMPLE</mark> (I do)
 
 - Констатируем факты, общеизвестные истины, что-то неизменное, что-то повторяющееся, привычки (```I'm not a student```)
 - Постоянно / регулярно (```The Earth goes around the Sun```)
@@ -58,7 +58,7 @@ Mat doesn’t like to cook.
 ***
 ***
 
-## PRESENT CONTINUOUS (I am doing)
+## <mark>PRESENT CONTINUOUS</mark> (I am doing)
 
 - События, которые происходят прямо сейчас (```I’m driving, that’s why I can’t talk, I’m going to my job, We’re standing in the airport.```)
 - События, которые происходят в настоящем, но не обязательно в данный момент. Около настоящего момента (```I’m working hard on my English to get into university```)
@@ -94,7 +94,7 @@ Mat doesn’t like to cook.
 ***
 ***
 
-## PRESENT PERFECT (I have done)
+## <mark>PRESENT PERFECT</mark> (I have done)
 
 Действие, которое произошло в прошлом, но связано с НАСТОЯЩИМ моментом. ПОКАЗЫВАЕТ РЕЗУЛЬТАТ ДЕЙСТВИЯ. 
 
@@ -130,7 +130,7 @@ Mat doesn’t like to cook.
 ***
 ***
 
-## PRESENT PERFECT CONTINUOUS (I have been doing)
+## <mark>PRESENT PERFECT CONTINUOUS</mark> (I have been doing)
 
 - Когда дейсвие уже закончилоь, но результат от этого действия еще виден
   - ```Oh, the kitchen is a mess! Who has been coocking?```
