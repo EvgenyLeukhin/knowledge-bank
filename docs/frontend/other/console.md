@@ -1,5 +1,5 @@
 ---
-title: Консоль
+title: Git / Консоль
 sidebar_position: 3
 ---
 
