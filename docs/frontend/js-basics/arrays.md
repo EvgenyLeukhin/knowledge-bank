@@ -1,9 +1,9 @@
 ---
-title: Array
+title: Массивы
 sidebar_position: 5
 ---
 
-# Array
+# Массивы
 
 Some content
 

@@ -1,9 +1,9 @@
 ---
-title: Variable
+title: Переменные
 sidebar_position: 1
 ---
 
-# Variable
+# Переменные
 
 Some content
 

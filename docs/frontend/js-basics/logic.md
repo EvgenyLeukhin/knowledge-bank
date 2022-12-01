@@ -1,8 +1,8 @@
 ---
-title: Logic
+title: Логика
 sidebar_position: 3
 ---
 
-# Logic
+# Логика
 
 Some content

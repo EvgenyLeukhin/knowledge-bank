@@ -1,3 +1,8 @@
+---
+title: Storage
+sidebar_position: 20
+---
+
 ## Local Storage (локальное хранилище)
 
 Хранит данные бессрочно.

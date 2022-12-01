@@ -1,8 +1,8 @@
 ---
-title: DOM-дерево
+title: Classes
 sidebar_position: 20
 ---
 
-# DOM-дерево
+# Classes
 
 Some content

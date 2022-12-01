@@ -1,8 +1,8 @@
 ---
-title: Cycles
-sidebar_position: 3
+title: Циклы
+sidebar_position: 4
 ---
 
-# Cycles
+# Циклы
 
 Some content

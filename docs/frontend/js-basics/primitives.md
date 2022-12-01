@@ -1,9 +1,9 @@
 ---
-title: Primitives
-sidebar_position: 3
+title: Примитивы
+sidebar_position: 0
 ---
 
-# Primitives 
+# Примитивы 
 
 Some content
 
