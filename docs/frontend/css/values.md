@@ -1,65 +1,283 @@
 ---
-title: Размеры и величины
+title: Величины / Box model
 sidebar_position: 1
 ---
 
-## Свойства, влияющие на размер
+## Единицы измерения в CSS
+
+### Пиксели (px)
+
+**Пиксели** - самые распространенные. Абсолютное значение. Строго фиксированное значение размера.
+
+```css
+font-size: 16px;
+width: 100px;
+height: 100px;
+margin-left: 10px;
+```
+
+***
+
+### Проценты (%)
+
+От ширины родителя. Относительное значение. 
+
+```css
+width: 30%;
+margin-right: 5%;
+```
+
+***
+
+### Вьюпорт (vh, vw)
+
+Процент ширины/высоты вьюпорта. Относительное значение.
+
+```css
+height: 100vh;
+width: 100vw;
+```
+
+Часто комбинируют со встроенной css-функцией calc.
+
+```css
+width: calc(100vw - 300px);
+```
+
+***
+
+### em и rem
+
+Относительное значение от значения родителя (em), от базового значения (rem). Используется в основном для свойств текста font-size.
+
+- #### em
+
+  Относительная величина от прямого родителя. У родителя значения может стоять необязательно в **em**.
+
+  ```css
+  /* 1em = 16px */
+  html { font-size: 1em; }
+
+  /* 2em = 16px (у html font-size 16px) * 2 = 32px */
+  .parent {  font-size: 2em; }
+
+  /* 0.5em = 32px (у .parent font-size 32px) * 0.5 = 16px */
+  .child { font-size: 0.5em; }
+  ```
+
+- #### rem
+
+  Относительная величина от корневой настройки браузера. Учитывается не прямой родитель как у em, а корневой (html).
+
+  ```css
+  html { font-size: 16px; }
+
+  /* 2rem = 16px (у html font-size 16px) * 2 = 32px */
+  .parent {  font-size: 2rem; }
+
+  /* 0.5rem = 16px (у html font-size 16px) * 0.5 = 8px */
+  .child { font-size: 0.5rem; }
+  ```
+***
+
+### Неиспользуемые / Редкоиспользуемые
+
+- **in** (Дюйм)
+- **cm** (Сантиметр) 
+- **mm** (Миллиметр) 
+- **pt** (Пункт)
+- **vmin**, **vmax** - ???
+
+***
+
+## Цвет
+
+### Название цвета
+
+aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, yellow и др.
+
+[Полный список цветов](https://colorscheme.ru/html-colors.html)
+
+```css
+color: maroon;
+color: deeppink;
+color: lightblue;
+```
+
+***
+
+### HEX-формат (16-ый формат (0-9, a-f))
+
+```css
+color: #1198f5;
+color: #62f808;
+color: #0af5c6;
+color: #f00; /* shortcut - #ff0000 */
+```
+
+***
+
+### RGB-формат 0-255 (RED, GREEN, BLUE)
+
+```css
+/* 3 канала */
+color: rgb(56, 140, 123);
+color: rgb(30%, 40%, 50%);
+color: rgb(0, 0, 0); /* чёрный */
+color: rgb(255, 255, 255); /* белый */
+
+/* 4 канала (+ альфа-канал - прозрачность) */
+color: rgba(56, 140, 123, 0.85);
+color: rgba(50%, 40%, 100%, 0.55);
+color: rgba(145, 16, 100, 0.35);
+```
+
+***
+
+### HSL-формат
+
+Редкоиспользуемый формат.
+
+1 - поворот по цветовому колесу,
+2 - насыщенность,
+3 - яркость
+
+```css
+/* 3 канала */
+color: hsl(0, 50%, 50%);
+color: hsl(0, 75%, 75%);
+color: hsl(0, 100%, 50%);
+
+/* 4 канала (+ альфа-канал - прозрачность) */
+color: hsl(0, 100%, 50%, 0.5);
+color: hsl(0, 100%, 50%, 0.75);
+color: hsl(0, 100%, 50%, 1.0);
+```
+
+***
+
+### Прозрачность
+
+Изменяется от 0 до 1 или от 0 до 100%.
+
+```css
+opacity: 0; /* По ум* 1 */
+color: transparent;
+color: rgb(56, 140, 123, 0);
+color: hsl(0, 100%, 50%, 0);
+```
+
+### сurrentColor
+
+При применении свойства color (строго или по наследованию), автоматически происходит сохранение этого значения в переменную сurrentColor, и можно записывать css-код таким образом, если нужно присвоить тоже значение цвета. При такой записи вернётся значение того же цвета, что и у color.
+
+```css
+div {
+  color: #888;
+  border: 1px solid currentColor;
+  /* ... или так ... */
+  border: 1px solid;
+}
+```
+
+
+***
+
+## Box model
 
 <img src="../../../../img/css/box-model.png" width="250px" alt="box-model.png" />
 
-```
-Размеры элемента =
-1. размеры вложенного контента + 
-2. padding +
-3. border
-```
+```Размеры элемента = размеры вложенного контента + padding + border```
 
+Также на расположение элемента в потоке влияют внешние отступы (margin) и позиционирование.
+
+### Ширина, высота
+
+Если у элемента есть вложенный контент (например текста), то он будет отталивать дочерние элементы своими размерами.
+
+**Высота**, минимальная и максимальная высота. По умолчанию auto.
 ```css
-/* Высота, минимальная и максимальная высота */
 min-height: 20px;
 height: 100%;
 max-width: 200px;
+```
 
-/* Ширина, минимальная и максимальная ширина */
+**Ширина**, минимальная и максимальная ширина. По умолчанию auto.
+```css
 min-width: 30%;
 width: 100px;
 max-width: 40%;
 ```
 
-## Управление блочной моделью
-
-```css
-/* По ум. стоит content-box (width и height не включает padding и border) */
-
-/* Но это можно изменить */
-*, *::before, *::after { box-sizing: border-box;; }
-```
-
 ***
 
-## Отступы
+### Внутренние отступы (padding)
+
+Горизонтальные и вертикальные - складываются. По умолчанию 0.
 
 ```css
-/* Внутренний отступ
-Горизонтальные и вертикальные - складываются  */
-padding: 5px;
+padding-left: 5px;
+padding-top: 6px;
+padding-right: 7px;
+padding-bottom: 8px;
 
-/* Внешний отступ
-Горизонтальные - складываются
-Вертикальные - больший из двух  */
-margin: 5px;
+/* shortcut */
+padding: 5px 6px 7px 8px;
+```
 
-/* Выравнивает фикс. блочный элемент */
+```css
+padding-left: 5px;
+padding-top: 5px;
+padding-right: 10px;
+padding-bottom: 10px;
+
+/* shortcut */
+padding: 5px 10px;
+```
+***
+
+### Внешние (margin)
+
+Горизонтальные - складываются. Вертикальные - больший из двух. По умолчанию 0.
+
+```css
+margin-left: 5px;
+margin-top: 6px;
+margin-right: 7px;
+margin-bottom: 8px;
+
+/* shortcut */
+margin: 5px 6px 7px 8px;
+```
+
+```css
+margin-left: 5px;
+margin-top: 5px;
+margin-right: 10px;
+margin-bottom: 10px;
+
+/* shortcut */
+margin: 5px 10px;
+```
+
+#### Выравнивает фикс. блочный элемент по горизонтали
+
+```css
+margin-left: auto;
+margin-right: auto;
+
+/* shortcut */
+margin: 0 auto;
 margin: auto;
 ```
 
-### Схлопывание маргинов
+#### Схлопывание маргинов
 
 Внутренний контейнер не оттолкнется от родителя, а это свойство передатся родителю, и уже родитель оттолкнется от верхнего содержимого, при этом внутренний контейнер прижмётся к верхней границе родителя.
 
 Как это лечится?
 
-```
+```css
 padding-top: 1px;
 border-top: 1px solid transparent;
 Текст внутри родителя, также можно прозрачный
@@ -67,40 +285,21 @@ border-top: 1px solid transparent;
 
 ***
 
-## Величины
+### Управление блочной моделью
 
+По ум. стоит content-box (width и height не включает padding и border). Но это можно изменить
 ```css
-/* Пиксели (самые распространенные) */
-font-size: 16px;
-
-/* Проценты (от ширины родителя) */
-width: 30%;
-
-/* % от высоты вьюпорта */
-height: 100vh;
-height: 100vh;
-
-/* % от ширины вьюпорта */
-width: 100vw;
-width: calc(100vw - 130px);
-
-/* Относительная величина от родителя (1em = 16px) */
-font-size: 1em;
-
-/* Относительная величина от корневой настройки браузера  */
-/* 12px * 2 = 24px; */
-html { font-size: 12px; }
-font-size: 2rem; 
-
+*, *::before, *::after { box-sizing: border-box; }
 ```
-
-### Неиспользуемые
-
-in (Дюйм), cm (Сантиметр), mm (Миллиметр), pt (Пункт), vmin, vmax
 
 ***
 
 ## Блочные элементы
+
+```html
+<!-- Универсальный блочный контейнер -->
+<div>BLOCK</div> <div>BLOCK</div> <div>BLOCK</div>
+```
 
 <div style={{ 
   height: 50,
@@ -108,7 +307,15 @@ in (Дюйм), cm (Сантиметр), mm (Миллиметр), pt (Пункт)
   border: '1px solid orange',
   padding: 5,
   margin: 5,
-}}>BOX</div>
+}}>BLOCK</div>
+
+<div style={{ 
+  height: 50,
+  backgroundColor: 'maroon',
+  border: '1px solid orange',
+  padding: 5,
+  margin: 5,
+}}>BLOCK</div>
 
 К блочным тэгам также относятся: &lt;html&gt;, &lt;body&gt;, &lt;section&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;p&gt;, &lt;h1&gt; - &lt;h6&gt; и др.
 
@@ -134,49 +341,45 @@ in (Дюйм), cm (Сантиметр), mm (Миллиметр), pt (Пункт)
 
 ## Строчные
 
-<span style={{ 
-  backgroundColor: 'maroon',
-  border: '1px solid orange',
-  padding: 30,
-  margin: 10,
-}}>BOX</span>
-<span style={{ 
-  backgroundColor: 'maroon',
-  border: '1px solid orange',
-  padding: 20,
-  margin: 10,
-}}>BOX</span>
+```html
+<!-- Универсальный строчный контейнер -->
+<span>INLINE</span> <span>INLINE</span> <span>INLINE</span>
+```
+
+<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE</span>
+&nbsp;
+<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE</span>
+&nbsp;
+<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE</span>
 
 ```css
 .string {
-  display: inline; /*по ум.*/
-  height: 50px; /*не реагируют*/
-  width: 50px; /*не реагируют*/
-  background-color: maroon; /*действует*/
-  border: 1px solid orange; /*действует*/
-  margin-top: 5px; /*не реагируют*/
-  margin-bottom: 5px; /*не реагируют*/
-  margin-left: 5px; /*(+ пробелы учитываются)*/
-  margin-right: 5px; /*(+ пробелы учитываются)*/
-  padding-left: 10px; /*действует*/
-  padding-right: 10px; /*действует*/
+  display: inline; /* по ум. */
+  height: 50px; /* не реагируют */
+  width: 50px; /* не реагируют */
+  background-color: maroon; /* действует */
+  border: 1px solid orange; /* действует */
+  margin-top: 5px; /* не реагируют */
+  margin-bottom: 5px; /* не реагируют */
+  margin-left: 5px; /* действует + пробелы учитываются */
+  margin-right: 5px; /* действует + пробелы учитываются */
+  padding-left: 10px; /* действует */
+  padding-right: 10px; /* действует */
   padding-top: 10px; /* фон увеличивается, но контент не отодвигает */
   padding-bottom: 10px; /* фон увеличивается, но контент не отодвигает */
 } 
 ```
 
 1. До и после строчного элемента отсутствуют переносы строки;
-2. Ширина и высота строчного элемента зависит только от его содержания, задать размеры с помощью CSS нельзя;
+2. Ширина и высота строчного элемента зависит только от его содержания, задать размеры с помощью CSS нельзя (width и height не действуют);
 3. Можно задавать только горизонтальные отступы.
 4. Не действуют margin-top, margin-bottom.
 5. padding-top и padding-bottom влияют на фон, на поток не влияют.
-6. width и height не действуют
 
-Для строчных элементов лучше не задавать вертикальных отступов, т.к. они ведут себя непредсказуемо.
-
-Границы строчных элементов полностью реагируют на padding, но вертикальный padding не отталкивает другие элементы, выпадает из потока.
-
-Если заFLOATить строчный элемент, то он станет БЛОЧНЫМ
+- Как правило, к строчным элементам свойства блочной модели не применяют (width, height, margin, padding, border)
+- Для строчных элементов лучше не задавать вертикальных отступов, т.к. они ведут себя непредсказуемо.
+- Границы строчных элементов полностью реагируют на padding, но вертикальный padding не отталкивает другие элементы, выпадает из потока.
+- Если заFLOATить строчный элемент, то он станет БЛОЧНЫМ
 
 ### Строчные элементы применяют:
 
@@ -187,9 +390,25 @@ in (Дюйм), cm (Сантиметр), mm (Миллиметр), pt (Пункт)
 
 ## Инлайн-блоки
 
-Комбинация block и inline. Уже редко используются.
+Комбинация block и inline. Уже практически не используются, их вытеснелии флекс-элементы.
+
+<div style={{ padding: 5, border: '1px solid yellow', textAlign: 'right' }}>
+  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '120px', height: '100px', margin: 5, background: 'maroon' }}>INLINE-BLOCK</div>
+  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '120px', height: '120px', margin: 5, background: 'maroon' }}>INLINE-BLOCK</div>
+  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '120px', height: '140px', margin: 5, background: 'maroon' }}>INLINE-BLOCK</div>
+</div>
+
+```html
+<div style="tex-alight: right">
+  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK</div>
+  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK</div>
+  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK</div>
+</div>
+```
 
 **ОТ СТРОЧНЫХ:**
+  - выравниваются от свойства text-align родителя
+  - выравниваются от собственного свойства vertical-align
   - располагаются в одну строку;
   - реагируют на гор. и верт. выравнивание;
   - ужимаются под содержимое;
@@ -200,27 +419,17 @@ in (Дюйм), cm (Сантиметр), mm (Миллиметр), pt (Пункт)
   - можно флоатить;
 
 
-Если инлайн-блок один, то он вертикально выравнивается по своей height относительно line-height родительского контейнера, причём line-height родителя должно быть больше чем height инлайн-блока.
 
-Если их несколько, то они выравниваются относительно большей height отдельного инлайн-блока.
+- Если инлайн-блок один, то он вертикально выравнивается по своей height относительно line-height родительского контейнера, причём line-height родителя должно быть больше чем height инлайн-блока.
+- Если их несколько, то они выравниваются относительно большей height отдельного инлайн-блока.
+- ```vertical-align``` выравнивает не только по высоте контейнера. Это свойство выравнивает инлайн-блоки между собой, относительно самого высокого элемента СТРОЧНО
+- Выравнивание inline-блоков без margin-right(3n) (Обернуть в блок и задать ему маргин-слева -20px, а у каждого инлайн-блок поставить маргин-слева 20px)
 
-```css
-.display { text-align: right; }
-.inline_block {
-  display: inline-block;
-  width: 100px;
-  margin-right: 10px;
-  padding: 10px;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  background-color: maroon;
-  border: 3px solid deeppink;
-}
-.block1 { height: 50px; }
-.block2 { height: 75px; }
-.block3 { height: 100px; }
-```
+### Инлайн-блоки применяют:
+
+- Создание групп иконок
+- Элементы меню
+- Контейнеры карточек товаров и прочего
 
 ***
 

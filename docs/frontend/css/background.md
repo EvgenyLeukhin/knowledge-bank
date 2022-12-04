@@ -1,6 +1,6 @@
 ---
-title: Фон / Градиент/ Тени
-sidebar_position: 4
+title: Фон / Границы / Тени
+sidebar_position: 3
 ---
 
 ## Градиент
