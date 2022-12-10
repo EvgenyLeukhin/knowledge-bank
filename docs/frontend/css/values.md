@@ -454,8 +454,9 @@ overflow: scroll;
 overflow-x: ...
 overflow-y: ...
 
-/* Новое свойство */
-overscroll-behavior: contain;
+/* Предотвращение цепной прокрутки */
+/* Чтобы не прокручивался еще скролл, который не в фокусе */
+overscroll-behavior: auto* | contain | none | auto contain;
 ```
 
 ### Визуально спрятать скроллбар
