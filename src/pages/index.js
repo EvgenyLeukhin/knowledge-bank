@@ -57,7 +57,7 @@ export default function Home() {
           <li>Звукозапись +++</li>
           <li>Видео +++</li>
           <li><b>Web-design</b> +++</li>
-          <li><b>English</b> ---</li>
+          <li><b>English</b> +++</li>
           <li><b>CSS</b> ---</li>
           <li><b>Начать JS, React</b> ---</li>
           <li><b>Nodejs, GraphQL</b> ---</li>

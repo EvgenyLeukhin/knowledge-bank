@@ -56,7 +56,7 @@ sidebar_position: 6
 
 ***
 
-### Релизм
+### Релизм / Скевоморфизм
 
 <img src="../../../img/design/realism.jpg" width="650" alt="realism.jpg" />
 

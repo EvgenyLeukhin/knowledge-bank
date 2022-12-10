@@ -9,3 +9,4 @@ sidebar_position: 3
 
 ## Фильтры
 
+backdrop-filter: blur(1px);

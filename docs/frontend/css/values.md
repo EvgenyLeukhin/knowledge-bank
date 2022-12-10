@@ -433,7 +433,7 @@ border-top: 1px solid transparent;
 
 ***
 
-## Скролл
+## Скролл / Overflow
 
 Если контент не вместился в фиксированные размеры бокса, то он будет выпадать из него и выходить из потока. Чтобы контент пролистывался можно добавить гор. или вертикальный скролл
 
@@ -453,4 +453,22 @@ overflow: scroll;
 /* Управление отдельными осями */
 overflow-x: ...
 overflow-y: ...
+
+/* Новое свойство */
+overscroll-behavior: contain;
+```
+
+### Визуально спрятать скроллбар
+
+```css
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 ```
