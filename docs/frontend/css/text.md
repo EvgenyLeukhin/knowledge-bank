@@ -26,7 +26,7 @@ sidebar_position: 2
     url("/fonts/inter/inter-regular.ttf") format("truetype");
 }
 
-/* Inter-700 */
+/* Inter-700-i */
 @font-face {
   font-family: "Inter";
   font-display: swap;
@@ -207,26 +207,96 @@ p {
 }
 ```
 
-<p style={{ 
-  textOverflow: 'ellipsis', 
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-  border: '1px solid green',
-}}>lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-
-### Текст колонками
-
-TODO
+<p 
+  style={{ 
+    textOverflow: 'ellipsis', 
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    border: '1px solid green',
+  }}
+>
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+</p>
 
 ### Текст градиентом
 
-TODO
+<p 
+  style={{ 
+    color: 'transparent', 
+    '-webkit-background-clip': 'text',
+    backgroundImage: 'linear-gradient(to bottom, #f68a12, #eff20c)',
+  }}
+>
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+</p>
 
-### Вариации font-weight
+```css
+p {
+  color: transparent;
+  background-image: 'linear-gradient(to bottom, #f68a12, #eff20c)',
+  -webkit-background-clip: text;
+}
+```
 
-TODO
+### Текст колонками
 
-### Вариации font-size
+<p 
+  style={{ 
+    columnCount: 3, 
+    columnWidth: '200px',
+    columnGap: '15px',
+  }}
+>
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+</p>
+
+```css
+p {
+  column-count: 3;
+  column-width: 200px;
+
+  /* Краткая запись */
+  columns: 200px 3;
+
+  /* Расстояние между колонками */
+  column-gap: 15px;
+}
+```
+
+## Вариации font-weight
+
+```css
+p {
+  /* Thin */
+  font-weight: 100;
+
+  /* Extra light */
+  font-weight: 200;
+
+  /* Light */
+  font-weight: 300;
+
+  /* Regular (Normal) */
+  font-weight: 400;
+
+  /* Medium */
+  font-weight: 500;
+
+  /* SemiBold */
+  font-weight: 600;
+
+  /* Bold */
+  font-weight: 700;
+
+  /* ExtraBold */
+  font-weight: 800;
+
+  /* Black */
+  font-weight: 900;
+}
+```
+
+## Вариации font-size
 
 Используется редко 
 
@@ -243,3 +313,7 @@ p {
   font-size: larger; /* (на шаг выше) */
 }
 ```
+
+## Высота строки
+
+<img src="../../../../img/css/line-height.jpg" width="450" alt="line-height.jpg" />

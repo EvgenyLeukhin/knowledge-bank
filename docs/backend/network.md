@@ -101,7 +101,6 @@ IPv6-адрес: ```1050:0:0:0:5:600:300c:326b```
 
 <img src="../../../img/backend/proxy-server.png" width="450" alt="proxy-server.png" />
 
-
 ### БД
 
 - Данные хранятся на сервере БД
