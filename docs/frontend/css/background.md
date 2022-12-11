@@ -3,7 +3,7 @@ title: Фон / Границы / Тени
 sidebar_position: 3
 ---
 
-## Фоновый цвет и изображенияназвания
+## Фоновый цвет и изображения
 
 Допускаются множественные свойства через запятую.
 
@@ -54,11 +54,98 @@ div {
 
 ## Градиент
 
-### Линейный 
+### Линейный
+
+<div style={{ height: '100px', background: 'linear-gradient(yellow, deeppink)', marginBottom: 20 }} />
+
+```css
+div {
+  background-image:
+
+    /* Направление названием - to left | to top | to right | to bottom* */
+    linear-gradient(to bottom, yellow, deeppink),
+
+    /* Направление в градусах */
+    linear-gradient(45deg, white, black),
+
+    /* многоцветный градиент */
+    /* По умолчанию все цвета равномерно распределяются по ширине */
+    linear-gradient(to right, red, green, blue),
+
+    /* колорстопы в % */
+    /* Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,  */
+    /* то самого градиента не будет, будут только эти цвета в чистом виде */
+    linear-gradient(45deg, green 30%, yellow 70%),
+    linear-gradient(45deg, green 0, green 50%, yellow 50%, yellow 100%),
+
+    /* колорстопы в px */
+    linear-gradient(
+      to right,
+      red 0, red 15px,
+      green 15px, green 30px,
+      blue 30px, blue 45px
+    ),
+
+    /* повторяющийся градиент */
+    repeating-linear-gradient(
+      to right,
+      red 0, red 15px,
+      green 15px, green 30px,
+      blue 30px, blue 45px
+    );
+}
+
+```
 
 ***
 
 ### Радиальный
+
+Радиальный градиент начинается в центре элемента, считается по ширине и высоте.
+
+<div style={{ height: '100px', background: 'radial-gradient(ellipse, yellow, deeppink)', marginBottom: 20 }} />
+
+```css
+div {
+  background-image: 
+    radial-gradient(ellipse, yellow, deeppink),
+
+    /* многоцветный градиент */
+    radial-gradient(red, green, blue),
+
+    /* колорстопы в % */
+    radial-gradient(
+      red 0, red 15%,
+      green 15%, green 30%,
+      blue 30%, blue 45%
+    ),
+
+    /* колорстопы в px */
+    radial-gradient(
+      red 0, red 15px,
+      green 15px, green 30px,
+      blue 30px, blue 45px
+    ),
+
+    /* повторяющийся градиент */
+    repeating-radial-gradient(
+      red 0, red 15px,
+      green 15px, green 30px,
+      blue 30px, blue 45px
+    ),
+}
+```
+
+#### Формы радиального градиента
+
+- **ellipse** - эллипс (по ум*);
+- **circle** - круг;
+- **30% 40%** - координаты центра;
+- **closest-side** - предписывает браузеру создать градиент, распространяющийся из центра только до ближайшей к центру стороне элемента;
+- **closest-corner** - приводит к вычислению ширины градиента из его центра до ближайшего угла элемента;
+- **farthest-side** - приводит к вычислению радиуса окружности от ее середины до самой дальней стороны элемента;
+- **farthest-corner** - приводит к вычислению радиуса окружности от ее центра до самого дальнего угла элемента;
+
 
 ***
 ## Границы
@@ -103,7 +190,7 @@ div {
 
 ***
 
-### border-image
+#### border-image
 
 Применяется крайне редко.
 
@@ -130,7 +217,7 @@ div {
 
 ***
 
-### Треугольники из границ
+#### Треугольники из границ
 
 ```css
 .triangle {
@@ -147,7 +234,7 @@ div {
 ```
 
 ***
-### Outline
+### outline
 
 - Внешняя рамка
 - Не участвует в box-model (выпадает из потока)
@@ -169,11 +256,108 @@ div {
 
 ## Тени
 
+### Box-shadow
+
+<div style={{ height: 50, background: 'rgb(50,50,50)', marginBottom: 20, boxShadow: '5px 5px 5px 0px cyan' }} />
+
+```
+box-shadow: inset 1px 2px 3px 4px #ccc;
+  outset* (внешняя) | inset (внутренняя)
+  1px - |смещение оси х|
+  2px - |смещение оси y|
+  3px - |радиус размытия|
+  4px - |растяжение|
+  #ccc - |цвет|
+```
+
+```css
+div {
+  box-shadow: 5px 5px 1px 2px deeppink;
+
+  /* Множественная тень (через запятую) */
+  box-shadow:
+    4px 4px 1px 0 red,
+    8px 8px 1px 0 green,
+    12px 12px 1px 0 blue;
+}
+```
+
+***
+
+### Text-shadow
+
+<p style={{ height: 50, color: 'darkcyan', textShadow: '5px 5px 2px gray' }}>Lorem Ipsum Dolor</p>
+
+```
+text-shadow: 1px 2px 3px #ccc;
+  1px - |смещение ох| + -
+  2px - |смещение оy|+ -
+  3px - |радиус размытия|+
+  #ccc - |цвет|
+```
+
+```css
+p {
+  text-shadow: 1px 2px 3px #ccc;
+
+  /* Множественная тень (через запятую) */
+  text-shadow:
+    6px 6px 1px red,
+    -6px -6px 1px green,
+    -9px -9px 1px blue;
+}
+```
+
 ***
 
 ## Фильтры
 
+<img src="../../../../img/css/photo-filters.webp" alt="photo-filters.webp" />
+
+Работают и для img и для background-image.
+
+```css
+img {
+  /* тень (хорошо с png) */
+  filter: drop-shadow(10px 10px 1px deeppink);
+
+  /* яркость */
+  filter: brightness(0 - 100%);
+
+  /* контраст */
+  filter: contrast(0 - 10);
+
+  /* обесцвечивание */
+  filter: grayscale(0 - 1);
+
+  /* сепия */
+  filter: sepia(0 - 1);
+
+  /* иеверсия цвета */
+  filter: invert(0 - 1);
+
+  /* насыщенность цвета */
+  filter: saturate(0 - 1);
+
+  /* поворот по цветовому кругу */
+  filter: hue-rotate(0 - 360deg);
+
+  /* размытие */
+  filter: blur(0 - 100px);
+
+  /* прозрачность */
+  filter: opacity(0 - 1);
+
+  /* множественный фильтр (через пробел) */
+  filter: opacity(0.9) blur(2px) contrast(3) sepia(0.2);
+}
+```
+
+### backdrop-filter
+
+```css
 backdrop-filter: blur(1px);
+```
 
 ***
 
