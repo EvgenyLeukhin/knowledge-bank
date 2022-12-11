@@ -355,8 +355,27 @@ img {
 
 ### backdrop-filter
 
+<img src="../../../../img/css/backdrop-filter.jpg" width="400" alt="backdrop-filter.jpg" />
+
+
+Если какой-ниб полупрозрачный элемент расположен над другим элементом, у которого есть фон, то можно сделать преломление этого фона у верхнего элемента с помощью данного свойства.
+
 ```css
-backdrop-filter: blur(1px);
+header {
+  backdrop-filter: blur(2px);
+  backdrop-filter: brightness(60%);
+  backdrop-filter: contrast(40%);
+  backdrop-filter: drop-shadow(4px 4px 10px blue);
+  backdrop-filter: grayscale(30%);
+  backdrop-filter: hue-rotate(120deg);
+  backdrop-filter: invert(70%);
+  backdrop-filter: opacity(20%);
+  backdrop-filter: sepia(90%);
+  backdrop-filter: saturate(80%);
+
+  /* Несколько фильтров (через пробел) */
+  backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+}
 ```
 
 ***
