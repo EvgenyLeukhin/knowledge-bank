@@ -89,6 +89,7 @@ width: calc(100vw - 300px);
 - **vmin**, **vmax** - ???
 
 ***
+***
 
 ## Цвет
 
@@ -161,7 +162,7 @@ color: hsl(0, 100%, 50%, 1.0);
 Изменяется от 0 до 1 или от 0 до 100%.
 
 ```css
-opacity: 0; /* По ум* 1 */
+opacity: 0; /* 1 по ум */
 color: transparent;
 color: rgb(56, 140, 123, 0);
 color: hsl(0, 100%, 50%, 0);
@@ -175,12 +176,14 @@ color: hsl(0, 100%, 50%, 0);
 div {
   color: #888;
   border: 1px solid currentColor;
-  /* ... или так ... */
+
+  /*  или так  */
   border: 1px solid;
 }
 ```
 
 
+***
 ***
 
 ## Box model
@@ -293,12 +296,13 @@ border-top: 1px solid transparent;
 ```
 
 ***
+***
 
 ## Блочные элементы
 
 ```html
 <!-- Универсальный блочный контейнер -->
-<div>BLOCK</div> <div>BLOCK</div> <div>BLOCK</div>
+<div>BLOCK-1</div> <div>BLOCK-2</div> <div>BLOCK-3</div>
 ```
 
 <div style={{ 
@@ -307,7 +311,7 @@ border-top: 1px solid transparent;
   border: '1px solid orange',
   padding: 5,
   margin: 5,
-}}>BLOCK</div>
+}}>BLOCK-1</div>
 
 <div style={{ 
   height: 50,
@@ -315,7 +319,15 @@ border-top: 1px solid transparent;
   border: '1px solid orange',
   padding: 5,
   margin: 5,
-}}>BLOCK</div>
+}}>BLOCK-2</div>
+
+<div style={{ 
+  height: 50,
+  backgroundColor: 'maroon',
+  border: '1px solid orange',
+  padding: 5,
+  margin: 5,
+}}>BLOCK-3</div>
 
 К блочным тэгам также относятся: &lt;html&gt;, &lt;body&gt;, &lt;section&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;aside&gt;, &lt;p&gt;, &lt;h1&gt; - &lt;h6&gt; и др.
 
@@ -338,19 +350,20 @@ border-top: 1px solid transparent;
 - Контейнеры
 
 ***
+***
 
 ## Строчные
 
 ```html
 <!-- Универсальный строчный контейнер -->
-<span>INLINE</span> <span>INLINE</span> <span>INLINE</span>
+<span>INLINE-1</span> <span>INLINE-2</span> <span>INLINE-3</span>
 ```
 
-<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE</span>
+<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE-1</span>
 &nbsp;
-<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE</span>
+<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE-2</span>
 &nbsp;
-<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE</span>
+<span style={{ backgroundColor: 'maroon', border: '1px solid orange'}}>INLINE-3</span>
 
 ```css
 .string {
@@ -387,22 +400,23 @@ border-top: 1px solid transparent;
 - Контейнеры для небольших текстовых фраз
 
 ***
+***
 
 ## Инлайн-блоки
 
-Комбинация block и inline. Уже практически не используются, их вытеснелии флекс-элементы.
+Комбинация block и inline. Уже практически не используются, их вытеснили флекс-элементы.
 
 <div style={{ padding: 5, border: '1px solid yellow', textAlign: 'right' }}>
-  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '120px', height: '100px', margin: 5, background: 'maroon' }}>INLINE-BLOCK</div>
-  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '120px', height: '120px', margin: 5, background: 'maroon' }}>INLINE-BLOCK</div>
-  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '120px', height: '140px', margin: 5, background: 'maroon' }}>INLINE-BLOCK</div>
+  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '130px', height: '100px', margin: 5, background: 'maroon' }}>INLINE-BLOCK-1</div>
+  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '130px', height: '130px', margin: 5, background: 'maroon' }}>INLINE-BLOCK-2</div>
+  <div style={{ display: 'inline-block', verticalAlign: 'middle', width: '130px', height: '160px', margin: 5, background: 'maroon' }}>INLINE-BLOCK-3</div>
 </div>
 
 ```html
 <div style="tex-alight: right">
-  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK</div>
-  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK</div>
-  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK</div>
+  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK-1</div>
+  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK-2</div>
+  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK-3</div>
 </div>
 ```
 
@@ -431,6 +445,36 @@ border-top: 1px solid transparent;
 - Элементы меню
 - Контейнеры карточек товаров и прочего
 
+***
+***
+
+## Display
+
+По умолчанию у блочных элементов display: block, а у строчных display: inline.
+
+```css
+div {
+  /* box-model */
+  display: block | inline | inline-block;
+
+  /* flex */
+  display: flex | inline-flex;
+
+  /* grid */
+  display: grid;
+
+  /* table */
+  display: table | table-row | table-cell | table-caption;
+
+  /* none - убирает элемент из DOM-дерева, как будто его никогда не было */
+  display: none;
+
+  /* убрать визуально (в потоке остается) */
+  visibility: hidden;
+}
+```
+
+***
 ***
 
 ## Скролл / Overflow

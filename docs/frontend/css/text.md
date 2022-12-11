@@ -152,6 +152,8 @@ p {
 }
 ```
 
+***
+
 ### Выравнивание и направление
 
 ```css
@@ -170,6 +172,8 @@ p {
   writing-mode: horizontal-tb | vertical-rl | vertical-lr;
 }
 ```
+
+***
 
 ### Переносы и переполнение
 
@@ -195,6 +199,8 @@ p {
 }
 ```
 
+***
+
 ### Пример text-overflow
 
 Можно сделать только при условии, что текст будет в одну строку без переносов. 
@@ -217,6 +223,8 @@ p {
 >
   lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 </p>
+
+***
 
 ### Текст градиентом
 
@@ -263,6 +271,8 @@ p {
 }
 ```
 
+***
+
 ## Вариации font-weight
 
 ```css
@@ -296,6 +306,8 @@ p {
 }
 ```
 
+***
+
 ## Вариации font-size
 
 Используется редко 
@@ -313,6 +325,8 @@ p {
   font-size: larger; /* (на шаг выше) */
 }
 ```
+
+***
 
 ## Высота строки
 
