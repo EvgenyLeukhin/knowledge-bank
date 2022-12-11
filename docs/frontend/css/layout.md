@@ -7,7 +7,6 @@ sidebar_position: 5
 
 ## Grid
 
-## Резиновая
-
-
 ## Float
+
+## Резиновая вёрстка
