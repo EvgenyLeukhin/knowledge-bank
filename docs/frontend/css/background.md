@@ -382,6 +382,8 @@ header {
 
 ## object-fit для &lt;img&gt;
 
+Аналог свойства background-size только для тэга &lt;img&gt;
+
 ```css
 img {
   object-fit: none* | fill | cover | contain;

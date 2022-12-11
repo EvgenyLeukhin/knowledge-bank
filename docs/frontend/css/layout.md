@@ -1,5 +1,5 @@
 ---
-title: Flex / Grid / Float
+title: Flex / Grid / Float / Gum
 sidebar_position: 5
 ---
 

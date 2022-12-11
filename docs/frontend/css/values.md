@@ -505,6 +505,8 @@ overscroll-behavior: auto* | contain | none | auto contain;
 
 ### Визуально спрятать скроллбар
 
+Скроллбара визуально не будет, но контент будет скроллиться.
+
 ```css
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {

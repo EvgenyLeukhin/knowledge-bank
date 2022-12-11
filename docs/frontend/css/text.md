@@ -20,7 +20,7 @@ sidebar_position: 2
   font-style: normal;
   font-weight: 400;
   src: 
-    local("Inter"),
+    local("Inter"), /* Поиск локальных шрифтов в ОС */
     url("/fonts/inter/inter-regular.woff2") format("woff2"),
     url("/fonts/inter/inter-regular.woff") format("woff"),
     url("/fonts/inter/inter-regular.ttf") format("truetype");
@@ -40,9 +40,7 @@ sidebar_position: 2
 }
 ```
 
-Варианты свойства font-display: 
-
-Отображение шрифта при загрузке
+Варианты свойства **font-display** (Отображение шрифта при загрузке): 
 
 - **auto** — поведение браузера по умолчанию, обычно это то же самое, что и block.
 - **block** — ожидание шрифта в течение трёх секунд и бесконечный период для замены на подгружаемый шрифт.
