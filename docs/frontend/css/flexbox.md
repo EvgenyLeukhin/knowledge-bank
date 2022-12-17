@@ -1,5 +1,5 @@
 ---
-title: Flex
+title: Flexbox
 sidebar_position: 5
 ---
 
