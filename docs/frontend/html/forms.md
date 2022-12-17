@@ -147,7 +147,7 @@ sidebar_position: 3
   <option value="Средне-специальное">
   <option value="Высшее неполное">
   <option value="Высшее(бакалавр)">
-  <option value="Высшее">
+  <option value="Высшее" selected="selected">
   <option value="Высшее(магистр)">
 </datalist>
 ```
