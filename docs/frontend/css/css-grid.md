@@ -75,7 +75,16 @@ export const GridChild = ({ style, children }) => (
 
 ### grid-auto-flow
 
-Управление грид-потоком. Как будут отображаться грид-потомки изначально? Как строки* или как колонки
+Управление грид-потоком. Как будут отображаться грид-потомки изначально? Как строки* или как колонки. Аналог flex-direction, только смысл здесь обратный, у flex - это направлление оси как row, а у grid - это распределение потомков в качестве колонок.
+
+Визаульно это выглядит так (вообще запутать хотят):
+```css
+flex-direction: column === grid-auto-flow: row
+flex-direction: row === grid-auto-flow: column
+
+flex-row === grid-column
+flex-column === grid-row
+```
 
 ```scss
 .grid-container {
@@ -550,3 +559,35 @@ export const GridChild = ({ style, children }) => (
 </GridParent>
 
 ***
+
+## Позиционирование grid-потомков
+
+### grid-column-start
+
+***
+
+### grid-column-end
+
+***
+
+### grid-column
+
+***
+
+### grid-row-start
+
+***
+
+### grid-row-end
+
+***
+
+### grid-row
+
+***
+
+## Grid areas
+
+### grid-template-areas
+
+### grid-area
