@@ -35,7 +35,7 @@ export const GridChild = ({ style, children }) => (
 
 [CCS-Grid guide](https://doka.guide/css/grid-guide/)
 
-Самый современный, мощный, но в то же время сложный инструмент для вёрстки в текущее время. Grid - сетка.
+Самый современный, мощный, но в то же время сложный инструмент для вёрстки в текущее время. Grid - сетка. Это как бы новый взгяд и прокачка устаревшей "табличной вёрстки".
 
 - **Flexbox** - одномерные макеты
 - **Grid** - двумерные макеты (можно управлять и колонками и строками одновременно)
@@ -727,7 +727,35 @@ flex-column === grid-row
 
 ***
 
-## Шаблонизация разметки
-
 ### grid-template-areas
+
+Можно каждому грид-потомку указывать в ```grid-area``` не значения start и end, а указывать шаблон. На этих шаблонах можно строить сетки.
+
+'.' - в шаблоне пустое место.
+
+
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+  grid-gap: 1px;
+    "header header"
+    "aside content"
+    "footer footer";
+}
+
+.grid-child:nth-child(1) { grid-area: header; }
+.grid-child:nth-child(2) { grid-area: aside; }
+.grid-child:nth-child(3) { grid-area: content; }
+.grid-child:nth-child(4) { grid-area: footer; }
+```
+
+<GridParent style={{ minHeight: '40vh', gridTemplateColumns: '200px 1fr', gridGap: 1, gridTemplateRows: '50px 1fr 50px', gridTemplateAreas: '"header header" "aside content" "footer footer"' }}>
+  <GridChild style={{ background: 'pink', color: 'black', gridArea: 'header' }}>HEADER</GridChild>
+  <GridChild style={{ background: 'lightgreen', color: 'black', gridArea: 'aside' }}>ASIDE</GridChild>
+  <GridChild style={{ background: 'lightblue', color: 'black', gridArea: 'content' }}>CONTENT</GridChild>
+  <GridChild style={{ background: 'lightgray', color: 'black', gridArea: 'footer' }}>FOOTER</GridChild>
+</GridParent>
 
