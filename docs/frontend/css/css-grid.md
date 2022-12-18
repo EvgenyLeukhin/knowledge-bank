@@ -388,9 +388,81 @@ flex-column === grid-row
 
 ## Выравнивание грид-потомков
 
+### align-content
+
+Выравнивание контента по оси Y относительно род. контейнера (актуально при наличие свободного места в контейнере)
+
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px, 200px;
+  align-content: center;
+  // align-content: stretch* | start | end | center | space-around | space-between | space-evenly;
+}
+```
+
+<GridParent style={{ gridTemplateColumns: '150px 200px', alignContent: 'center' }}>
+  <GridChild>1</GridChild>
+  <GridChild>2</GridChild>
+  <GridChild>3</GridChild>
+  <GridChild>4</GridChild>
+</GridParent>
+
+***
+
+### justify-content 
+
+Выравнивание контента по оси X относительно род. контейнера (актуально при наличие свободного места в контейнере)
+
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px, 200px;
+  justify-content: space-around;
+  // justify-content: start* | end | center | space-around | space-between | space-evenly;
+}
+```
+
+<GridParent style={{ gridTemplateColumns: '150px 200px', justifyContent: 'space-around' }}>
+  <GridChild>1</GridChild>
+  <GridChild>2</GridChild>
+  <GridChild>3</GridChild>
+  <GridChild>4</GridChild>
+  <GridChild>5</GridChild>
+  <GridChild>6</GridChild>
+  <GridChild>7</GridChild>
+  <GridChild>8</GridChild>
+  <GridChild>9</GridChild>
+  <GridChild>10</GridChild>
+</GridParent>
+
+***
+
+### place-content 
+
+Шорткат (align-content justify-content).
+
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px, 200px;
+  place-content: end center;
+  // place-content: center center --> place-content: center;
+}
+```
+
+<GridParent style={{ gridTemplateColumns: '150px 200px', placeContent: 'end center' }}>
+  <GridChild>1</GridChild>
+  <GridChild>2</GridChild>
+  <GridChild>3</GridChild>
+  <GridChild>4</GridChild>
+</GridParent>
+
+***
+
 ### align-items 
 
-Выравнивание grid-элемента по вертикали. Будет ужиматься по контенту, если явно не задана высота.
+Выравнивание контента внутри grid-ячеек по оси Y. Будет ужиматься по контенту, если явно не задана высота, при этом незримая разлиновка grid-ячеек будет оставаться неизменной, а позиционироваться будет только внутренний контент этих ячеек.
 
 ```scss
 .grid-container {
@@ -586,7 +658,7 @@ flex-column === grid-row
 
 ***
 
-## Grid areas
+## Шаблонизация разметки
 
 ### grid-template-areas
 
