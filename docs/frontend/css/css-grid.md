@@ -139,7 +139,7 @@ flex-column === grid-row
 
 ***
 
-Можно использовать новую относительную grid-единицу - фракцию (fr). Аналог коэф. flex-grow.
+Можно использовать новую относительную grid-единицу - фракцию (fr). Аналог коэф. flex-grow. Её ввели, чтобы не записывать проценты с дробями.
 
 ```scss
 .grid-container {
@@ -189,8 +189,11 @@ flex-column === grid-row
 ```scss
 .grid-container {
   display: grid;
+
+  // 3 колонки по 250px: 250px 250px 250px === repeat(3, 250px)
   grid-template-columns: repeat(3, 250px);
 
+  // 4 колонки (нечетные 2fr, четные 1fr)
   // grid-template-columns: 2fr 1fr 2fr 1fr === repeat(2, 2fr 1fr);
 }
 ```
@@ -333,6 +336,7 @@ flex-column === grid-row
   // у незаданных строк будет фикс. высота 40px (даже контент не будет менять высоту)
   // чтобы задать мин. высоту можно использовать функцию minmax()
   grid-auto-rows: 40px | minmax(40px, auto);
+  // auto-fill и auto-fit - автоматическое распределение
 }
 ```
 
