@@ -638,27 +638,92 @@ flex-column === grid-row
 
 ## Позиционирование grid-потомков
 
-### grid-column-start
+Можно позиционировать grid-потомки по так называемым grid-линиям (column lines и row lines), то есть расстягивать отдельные grid-потомки по колонкам или строкам. С этой технологией можно строить достаточно сложные и нестандартные сетки. Можно очень гибко менять поток, порядок и размеры отдельных grid-элементов (будет меняться стандартное поведение распределения grid-потока, и элементы будут перегруппировываться).
 
-***
-
-### grid-column-end
-
-***
+<img src="../../../../img/css/grid-lines.png" alt="grid-lines.png" width="400" />
 
 ### grid-column
 
-***
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
-### grid-row-start
+.grid-child {
+  // grid-column-start: 1; // колонка стартует на 1-ой линии
+  // grid-column-end: 4; // а заканчивается на 4-ой 
+  grid-column: 1 / 4; // shortcut
+}
+```
 
-***
-
-### grid-row-end
+<GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+  <GridChild>1</GridChild>
+  <GridChild>2</GridChild>
+  <GridChild>3</GridChild>
+  <GridChild>4</GridChild>
+  <GridChild>5</GridChild>
+  <GridChild>6</GridChild>
+  <GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridColumn: '1 / 4' }}>7</GridChild>
+</GridParent>
 
 ***
 
 ### grid-row
+
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-child {
+  // grid-row-start: 1; // строка стартует на 1-ой линии
+  // grid-row-end: 4; // а заканчивается на 4-ой 
+  grid-row: 1 / 4; // shortcut
+}
+```
+
+<GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+  <GridChild>1</GridChild>
+  <GridChild>2</GridChild>
+  <GridChild>3</GridChild>
+  <GridChild>4</GridChild>
+  <GridChild>5</GridChild>
+  <GridChild>6</GridChild>
+  <GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridRow: '1 / 4' }}>7</GridChild>
+</GridParent>
+
+***
+
+### grid-area
+
+Шорткат для ```[grid-row-start / grid-column-start / grid-row-end / grid-column-end]```.
+
+```scss
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-child {
+  // grid-row-start: 2
+  // grid-column-start: 1;
+  // grid-row-end: 3;
+  // grid-column-end: 4;
+  grid-area: 2 / 1 / 3 / 4;
+}
+```
+
+<GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+  <GridChild>1</GridChild>
+  <GridChild>2</GridChild>
+  <GridChild>3</GridChild>
+  <GridChild>4</GridChild>
+  <GridChild>5</GridChild>
+  <GridChild>6</GridChild>
+  <GridChild style={{ background: 'deeppink', gridArea: '2 / 1 / 3 / 4' }}>7</GridChild>
+</GridParent>
 
 ***
 
@@ -666,4 +731,3 @@ flex-column === grid-row
 
 ### grid-template-areas
 
-### grid-area
