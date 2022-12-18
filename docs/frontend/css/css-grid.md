@@ -746,6 +746,7 @@ flex-column === grid-row
     "footer footer";
 }
 
+// Для данного шаблона нужно 4-е грид-потомка
 .grid-child:nth-child(1) { grid-area: header; }
 .grid-child:nth-child(2) { grid-area: aside; }
 .grid-child:nth-child(3) { grid-area: content; }
