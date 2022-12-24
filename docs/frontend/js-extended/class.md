@@ -1,8 +1,5 @@
 ---
-title: Classes
-sidebar_position: 20
+title: Классы
+sidebar_position: 3
 ---
 
-# Classes
-
-Some content
