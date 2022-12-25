@@ -4,53 +4,70 @@ sidebar_position: 5
 ---
 
 ## 1. Вёрстка email-рассылок
-  - [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
-  - [Сборка на gulp](https://github.com/EvgenyLeukhin/product-hired-emails)
-  - [MJML-фреймворк](https://mjml.io/)
-  - [GitHub Pages - Тестовый стенд](https://pages.github.com/)
+- [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
+- [Сборка на gulp](https://github.com/EvgenyLeukhin/product-hired-emails)
+- [MJML-фреймворк](https://mjml.io/)
+- [GitHub Pages - Тестовый стенд](https://pages.github.com/)
 
 ---
 
 ## 2. Landing page и статичные сайты
-  - [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
-  - [jQuery](https://jquery.com/)
-  - [Bootstrap](https://getbootstrap.com/)
-  - [Сборка на Webpack](https://github.com/EvgenyLeukhin/kartina-mira/tree/one-bundle)
-  - [GitHub Pages - Тестовый стенд](https://pages.github.com/)
+
+- [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html) - Дизайн
+- [GitHub Pages](https://pages.github.com/) - Тестовый стенд
+
+### Old-school
+
+- [jQuery](https://jquery.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Сборка - staticsiteboilerplate](https://staticsiteboilerplate.com/)
+
+### New-school
+
+- [React](https://ru.reactjs.org/)
+- [Webpack](https://webpack.js.org/), [parcel](https://parceljs.org/)
+- [gatsbyjs](https://www.gatsbyjs.com/), [nextjs](https://nextjs.org/)
+- [Сборка на Webpack](https://github.com/EvgenyLeukhin/kartina-mira/tree/one-bundle)
 
 ---
 
 ## 3. Сайты для блогов и документации
-  - [Gatsbyjs](https://www.gatsbyjs.com/)
-  - [Docusaurus](https://docusaurus.io/)
-  - Хостинг с NodeJS
+
+- [Gatsbyjs](https://www.gatsbyjs.com/)
+- [Docusaurus](https://docusaurus.io/)
+- Хостинг с NodeJS
 
 ---
 ## 4. Небольшие контентные сайты (CMS)
-  - [Couchcms](https://www.couchcms.com/)
-  - [OctoberCMS](https://octobercms.com/)
-  - Хостинг с PHP/MySQL
+
+- [Couchcms](https://www.couchcms.com/)
+- [OctoberCMS](https://octobercms.com/)
+- [Yii](https://www.yiiframework.com/)
+- [PHP](https://www.php.net/)
+- Хостинг с PHP/MySQL
 
 ---
 
 ## 5. Web applications (SPA React)
-  - React экосистема:
-    - [React](https://ru.reactjs.org/), [Preact](https://preactjs.com/)
-    - [mobx](https://mobx.js.org/README.html), [mobx-state-tree](https://mobx-state-tree.js.org/intro/welcome)
-    - [Redux](https://redux.js.org/), [Redux Toolkit](https://redux-toolkit.js.org/)
-    - [Formik](https://formik.org/docs/overview) - Надстройка для форм, [yup](https://github.com/jquense/yup) - Валидационная схема
-  - Сборщики:
-    - [Nextjs](https://nextjs.org/), [Webpack](https://webpack.js.org/), [create-react-app](https://create-react-app.dev/)
-  - UI-фреймворки:
-    [react-bootstrap](https://react-bootstrap.github.io/), [ant-design](https://ant.design/), [mui-ui](https://mui.com/)
-  - Облачный бэкенд
-    - [Strapi](https://strapi.io/)
-  - Хостинг с NodeJS
+
+- React экосистема:
+  - [React](https://ru.reactjs.org/), [Preact](https://preactjs.com/)
+  - [mobx](https://mobx.js.org/README.html), [mobx-state-tree](https://mobx-state-tree.js.org/intro/welcome)
+  - [Redux](https://redux.js.org/), [Redux Toolkit](https://redux-toolkit.js.org/)
+  - [Formik](https://formik.org/docs/overview) - Надстройка для форм, [yup](https://github.com/jquense/yup) - Валидационная схема
+- Сборщики:
+  - [Nextjs](https://nextjs.org/), [Webpack](https://webpack.js.org/), [create-react-app](https://create-react-app.dev/)
+- UI-фреймворки:
+  [react-bootstrap](https://react-bootstrap.github.io/), [ant-design](https://ant.design/), [mui-ui](https://mui.com/)
+- Облачный бэкенд
+  - [Strapi](https://strapi.io/)
+- Хостинг с NodeJS
 
 ---
 
 ## 6. Дизайн email, сайтов и приложений
-  - [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
+
+- [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
 
 
 ***
@@ -68,3 +85,39 @@ sidebar_position: 5
 - Интернет-магазин (ЛК, Карточки товаров, Каталог, Оплата) Application (приложение)
 - SPA (React, Vue, Angular)
 - PWA (like mobile app)
+
+***
+
+## Project team
+
+- **Заказчик, клиент** (Product owner)
+  - Владелец бизнеса, генератор идеи, инвестор
+  - ТЗ, документы, стратегия
+- **Менеджер** проекта (PM, project manager)
+  - Связующее звено между заказчиком и исполнителями, управляет процессом разработки, коммуникация с командой, организатор митингов, SCRUM-мастер
+  - Создание и распределение задач, установление сроков
+  - Работа с документацией, презентация готовых этапов и всего продукта
+- **Дизайнер**
+  - Проектирование
+  - Мудборды и дизайн-концепция
+  - Дизайн-макеты
+- **Frontend**-разработчик
+  - Верстка страниц и компонентов по дизайн-макетам
+  - Запросы к API, отрисовка данных
+  - Бизнес-логика на клиенте
+  - Роутинг приложения, иерархия страниц и пр.
+- **Backend**-разработчик
+  - API
+  - Админ-панель
+  - Логика для работы БД
+  - Бизнес-логика на сервере
+- **Tecтировщик** (Tester)
+  - Проверка работоспособности
+  - Тестовая документация (тест-кейсы, репорты и пр.)
+- **DevOps** (Девопс)
+  - Не разрабаытывает, только настраивает, чтобы все работало
+  - Настройка депллоя приложения (скрипты deploy cli)
+  - Доступ к репозиториям
+  - Настройка серверов (тестовый и продуктовый) и БД
+  - Хостинг и домен
+  - Хороший девопс - девопс, которого никогда не видел и ничего о нем не знаешь
