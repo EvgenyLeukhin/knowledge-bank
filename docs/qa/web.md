@@ -56,6 +56,7 @@ sidebar_position: 4
 * [temp-email](https://temp-mail.org/ru/) - Временная почта
 * [PlaceIMG](https://placeimg.com/) - Генератор картинок
 * [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
+* [Test UFO](https://www.testufo.com/) - Тест частоты дисплея
 
 
 ## Плагины для браузеров
