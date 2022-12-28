@@ -12,6 +12,8 @@ sidebar_position: 6
 - [material icons](https://fonts.google.com/icons?selected=Material+Icons) - material svg иконки
 - [ionic.io](https://ionic.io/ionicons)
 - [streamlinehq.com](https://www.streamlinehq.com/)
+- [fontawesome](https://fontawesome.com/icons)
+- [materialdesignicons](https://materialdesignicons.com/)
 
 ### Sharing
 

@@ -6,6 +6,7 @@ sidebar_position: 4
 ### Бесплатные
 
 - [unsplash.com](https://unsplash.com/)
+- [pixabay.com](https://pixabay.com/ru/)
 - [freepik.com](https://ru.freepik.com/)
 - [freeimages.com](https://www.freeimages.com/)
 
