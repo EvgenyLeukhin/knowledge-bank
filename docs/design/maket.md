@@ -9,6 +9,7 @@ sidebar_position: 9
 - [Макеты - All-PSD](https://all-psd.ru/)
 - [Макеты - Freepsdfiles](https://freepsdfiles.net/)
 - [Макеты - html5up](https://html5up.net/)
+- [marvelapp - Сервис для "оживления" прототипов](https://marvelapp.com/)
 - [Памятка дизайнеру сайтов](https://habr.com/ru/post/50497/)
 
 ## Хороший тон в psd-макете:

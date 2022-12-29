@@ -274,6 +274,10 @@ L1 - расстояние в пикселях
 
 Есть десктопное приложение ([скачать](https://www.figma.com/downloads/)). 
 
+- [Гид по Figma](https://tilda.education/articles-figma)
+- [Книга «Руководство по Figma»](https://slashdesigner.ru/figma-guide);
+- [5 причин забыть про Photoshop и начать работать в Figma](https://dzen.ru/media/id/5ab7f76c4bf161c61769f748/5-prichin-zabyt-pro-photoshop-i-nachat-rabotat-v-figma-5ab803c255876bcbdd35fe91?utm_source=serp)
+
 ### Старт проекта
 
 В этом редакторе весь дизайн можно хранить на одном полотне.

@@ -13,6 +13,9 @@ sidebar_position: 1
 - [deviantart.com](https://www.deviantart.com) (нужен VPN)
 - [siteinspire.com](https://www.siteinspire.com)
 - [onepagelove.com](https://onepagelove.com)
+- [cssdesignawards.com](https://www.cssdesignawards.com/)
+- [awwwards.com](https://www.awwwards.com/)
+- [medium.muz](https://medium.muz.li/)
 
 Для дизайн-концепции нужно выбрать какое-нибудь **ПРИЛАГАТЕЛЬНОЕ**, чтобы распростанить это качество на всем дизайне (простой, строгий, яркий, гламурный, модный, молодежный, стильный, старинный, технологичный, футуристический, вызывающий и т.д.)
 
