@@ -18,6 +18,8 @@ sidebar_position: 2
 
 ### Plugins (must have)
 
+[VS Code marketplace](https://marketplace.visualstudio.com/)
+
 - **Thunder Client** (тестирование API)
 - **GitLens** (расширение для Git)
 - **vscode-pdf** (поддержка pdf)
@@ -29,15 +31,21 @@ sidebar_position: 2
 - **NPM Scripts** (запуск npm-скриптов)
 - **Prettier - Code formatter** (форматирование кода)
 - **EditorConfig for VS Code** (конфиг редактора)
+- **Import Cost** (показывает размеры пакетов или файлов)
+- **JavaScript and TypeScript Nightly** (показывает размеры пакетов или файлов)
+- **SFTP** (FTP-доступ к серверу прямо из редактора)
 
 ### Plugins (optional)
 
+- **Live Share** (шеринг кода)
+- **REST Client** (аналог Thunder Client)
 - **MJML** (поддерка mjml файлов)
 - **Live server** (открытие html-файлов в браузере)
 - **Sublime Text Keymap and Settings Importer** (шорткаты как в Sublime Text 3)
 - **Svg Preview** (svg-превью)
 - **Auto open markdown preview** (md-превью)
 - **markdownlint** (md-линтер)
+- **Template Generator** (генерирует сниппеты кода)
 
 ### Shortcuts
 
