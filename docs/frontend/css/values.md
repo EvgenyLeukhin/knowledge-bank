@@ -519,3 +519,28 @@ overscroll-behavior: auto* | contain | none | auto contain;
   scrollbar-width: none;  /* Firefox */
 }
 ```
+
+```scss
+// Кастомизация скролбара
+.content {
+  max-height: 370px;
+  overflow-y: auto;
+  padding-right: 35px;
+
+  // scrollbar track width
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  // scrollbar track background (полоска)
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  // scrollbar thumb (бегунок)
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    border-radius: 8px;
+  }
+}
+```
