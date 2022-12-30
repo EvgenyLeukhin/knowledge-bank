@@ -13,6 +13,8 @@ export const CODE = ({children}) => (
 
 Version Control System.
 
+Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с ```master``` на ```main```.
+
 ### Настройка
 
 - <CODE>git config --list</CODE> - Показывает список конфигураций
@@ -34,6 +36,7 @@ Version Control System.
 - <CODE>git branch (-v)</CODE> - Показать все ветки репозитория (с инфой), текущую ветку
 - <CODE>git branch &lt;branch_name&gt; </CODE>- Создать новую ветку
 - <CODE>git checkout &lt;branch_name&gt; </CODE>- Переключиться в указанную ветку
+- <CODE>git checkout -f &lt;branch_name&gt; </CODE>- Переключиться фосированно в указанную ветку (с удалением зезакоммиченных изменений)
 - <CODE>git checkout (-b) &lt;branch_name&gt;</CODE> - Создать новую ветку (и сразу переключиться в неё)
 - <CODE>git checkout -b &lt;branch_name&gt; &lt;commit_hash&gt;</CODE> - Создать новую ветку (и сразу переключиться в неё) от указанного коммита
 - <CODE>git branch -d (-D) &lt;branch_name&gt;</CODE> - Удалить указанную ветку (принудительно)
@@ -99,6 +102,9 @@ Version Control System.
 
 7. Если все конфликты решены и перебазирование закончено, то можно форсированно пушить изменения дочерней ветки
 <CODE>git push origin -f</CODE>
+
+Cвязываем ветку с origin и пушим её на сервер 
+<CODE>git push -u origin deploy</CODE> 
 
 
 ### Squash commits

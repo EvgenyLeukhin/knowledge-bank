@@ -7,7 +7,20 @@ sidebar_position: 5
 - [Figma](https://www.figma.com/), [Photoshop](https://www.adobe.com/ru/products/photoshop.html)
 - [Сборка на gulp](https://github.com/EvgenyLeukhin/product-hired-emails)
 - [MJML-фреймворк](https://mjml.io/)
-- [GitHub Pages - Тестовый стенд](https://pages.github.com/)
+
+### Тестовые стенды для статики
+
+- [GitHub Pages](https://pages.github.com/) - Интеграция с GitHub
+- [Netlify](https://www.netlify.com/) - Интеграция с GitHub
+- [Heroku](https://www.heroku.com/)
+- [Vercel](https://vercel.com/)
+
+### Тестовые стенды с docker
+
+- [Yandex Cloud](https://cloud.yandex.ru/)
+- [AWS](https://aws.amazon.com/ru/)
+- [DigitalOcean](https://www.digitalocean.com/)
+
 
 ---
 
