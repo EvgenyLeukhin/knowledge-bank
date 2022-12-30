@@ -44,7 +44,8 @@ Version Control System.
 ### Изменения
 
 - <CODE>git status</CODE> - Статус файлов
-- <CODE>git add &lt;filename&gt; &lt;filename2&gt; (.)</CODE> - Добавить указанные (все) измененные файлы к коммиту
+- <CODE>git add &lt;filename&gt; &lt;filename2&gt;</CODE> - Добавить указанные измененные файлы к коммиту
+- <CODE>git add .</CODE> || <CODE>git add -A (--all)</CODE> - Добавить все указанные измененные файлы к коммиту
 - <CODE>git checkout &lt;filename&gt; &lt;filename2&gt;</CODE> - Убрать указанные измененные файлы из коммита
 - <CODE>git checkout &lt;filename&gt; &lt;commit_hash&gt;</CODE> - Вернуть состояние файла, какое оно было в указанном коммите
 - <CODE>git checkout -- .</CODE> - Убрать измененния во всех файлах
