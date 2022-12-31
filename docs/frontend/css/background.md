@@ -387,6 +387,7 @@ header {
 ```css
 img {
   object-fit: none* | fill | cover | contain;
+  object-position: 50% 50%;
 }
 ```
 
