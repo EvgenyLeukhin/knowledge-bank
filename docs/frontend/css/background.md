@@ -50,6 +50,38 @@ div {
 }
 ```
 
+### mix-blend-mode
+
+Текст фоном.
+
+```css
+.parent { 
+  background-image: url(https://www.w3schools.com/css/img_lights.jpg);
+}
+
+.child { 
+  background-color: black;
+  mix-blend-mode: multiply;
+}
+```
+
+### data url
+
+Можно вставлять inline svg прямо в css и добавлять туда внутренние стили через тэк style, поддерживаются даже анимации.
+
+[Lea Verou - Even More CSS Secrets](https://www.youtube.com/watch?v=YxW8fnY4zak)
+
+```css
+body {
+  background-image: url("data:image/svg+xml;utf8,\
+    <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+      <style>@keyframes dance {to{transform: rotate(-20deg)}}</style>\
+      <line x1='50' y1='50' x2='250' y2='100' stroke='deeppink' stroke-width='6' style='animation: dance 1s infinite alternate' />\
+    </svg>");
+}
+```
+
+
 ***
 
 ## Градиент
@@ -145,6 +177,19 @@ div {
 - **closest-corner** - приводит к вычислению ширины градиента из его центра до ближайшего угла элемента;
 - **farthest-side** - приводит к вычислению радиуса окружности от ее середины до самой дальней стороны элемента;
 - **farthest-corner** - приводит к вычислению радиуса окружности от ее центра до самого дальнего угла элемента;
+
+***
+
+### Конический градиент
+
+Можно строить pie-charts.
+
+```css
+div {
+  border-radius: 50%;
+  background-image: conic-gradient(red 40%, yellow 40%, yellow 70%, green 70%);
+}
+```
 
 
 ***

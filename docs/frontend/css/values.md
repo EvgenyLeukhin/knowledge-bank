@@ -474,6 +474,12 @@ div {
 }
 ```
 
+```css
+div {
+  display: contents;
+}
+```
+
 ***
 ***
 

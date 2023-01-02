@@ -5,6 +5,7 @@ sidebar_position: 2
 
 - [Google Fonts](https://fonts.google.com/)
 - [Вертикальный ритм текста](https://gridlover.net/try)
+- [VariableЯ](https://v-fonts.com/)
 
 ## Подключение шрифтов
 

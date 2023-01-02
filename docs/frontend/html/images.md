@@ -117,6 +117,10 @@ export const MAP = ({children}) => (
 
 Векторная графика представленная в виде html-тэгов.
 
+Аттрибут **viewBox** определяет расположение и размеры окна отображения SVG.
+
+Значение атрибута viewBox — это набор четырёх чисел: min-x, min-y, width и height, — разделённых пробелами и/или запятой, которые задают прямоугольник в пользовательском пространстве, стороны которого определяют границы окна отображения элемента SVG.
+
 ### Окружность
 
 ```html
@@ -171,12 +175,12 @@ export const MAP = ({children}) => (
 
 ```html
 <svg>
-  <line x1="50 " y1="50 " x2="250 " y2="100 " stroke="deeppink " stroke-width="6" />
+  <line x1="50" y1="50" x2="250" y2="100" stroke="deeppink" stroke-width="6" />
 </svg>
 ```
 
 <svg>
-  <line x1="50 " y1="50 " x2="250 " y2="100 " stroke="deeppink " stroke-width="6" />
+  <line x1="50" y1="50" x2="250" y2="100" stroke="deeppink" stroke-width="6" />
 </svg>
 
 ### Ломанные
