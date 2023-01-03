@@ -1,12 +1,35 @@
 ---
-title: План
-sidebar_position: 1
+title: Стэк
+sidebar_position: 2
 ---
 
-- Сборка
-  - NextJS
-  - create-reaact-app
-  - webpack
+### Стилизация
+
+- SCSS-препроцесор
+- SCSS/CSS-modules
+- Глобальные стили (import global.scss)
+- Точечная инлайн стилизация через &lt;style&gt;
+- ~~JSS~~
+- ~~styled-component~~
+
+***
+
+### Сборка (биндлер)
+
+- NextJS
+- create-reaact-app
+- webpack
+- parcel
+
+### UI-фреймворк
+
+### State-management
+
+### Обработчик форм
+
+### Взаимодействие с API
+
+
   - prettier
   - eslint
   - переменные окружения
@@ -25,8 +48,6 @@ sidebar_position: 1
   - Private route
 - Стилизация
   - scss
-  - jss
-  - styled-component
   - шрифты и типографика
   - emotion
   - темизация

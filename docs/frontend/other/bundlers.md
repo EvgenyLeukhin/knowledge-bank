@@ -1,7 +1,9 @@
 ---
-title: Сборщики
+title: Бандлеры
 sidebar_position: 0
 ---
+
+## NextJS
 
 ## Parcel
 
