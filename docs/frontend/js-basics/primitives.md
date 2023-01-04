@@ -3,6 +3,9 @@ title: Примитивы
 sidebar_position: 0
 ---
 
+- [Справочник JS](https://wm-school.ru/js/index.php)
+- [Справочник JS](https://www.wisdomweb.ru/JS/javascript-first.php)
+
 ## typeof
 
 Унарный оператор, который возвращает тип данных какого-либо выражения строкой.
