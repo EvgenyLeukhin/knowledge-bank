@@ -114,7 +114,7 @@ window.utils = (function () {
 
     myOtherSuperFunc1();
 
-    // Можно сохранять в любые поля
+    // Можно сохранять в кастомные поля window
     window.otherUtils = {
       myOtherSuperFunc1,
       myOtherSuperFunc2,
