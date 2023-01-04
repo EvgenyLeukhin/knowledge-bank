@@ -1,6 +1,6 @@
 ---
 title: Модули
-sidebar_position: 20
+sidebar_position: 0
 ---
 
 ## Псевдомодульные скрипты
@@ -74,6 +74,8 @@ document.body.appendChild(element);
 ```
 
 Теперь все ОК, скрипты выполняют свою задачу
+
+***
 
 ### windw.utils
 
@@ -185,6 +187,22 @@ window.utils = (function () {
 </body>
 ```
 
+#### Варианты сохранения кастомных полей в window
+
+```js
+window._reverse = reverse; // window._reverse();
+
+window._reverse = { reverse }; // window._reverse.reverse();
+
+// window._reverse.reverse();
+window._reverse = (function () {
+    function reverse(str) {
+        return str.split('').reverse().join('');
+    }
+
+    return { reverse };
+})();
+```
 
 ***
 
