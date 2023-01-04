@@ -67,9 +67,15 @@ let SOMETHING;
 
 ## var
 
+- Используется уже редко (ES5) 
+- Область видимости - функция, если переменная объявлена внутри функции
+- Область видимости - глобальная, если переменная объявлена наверху. Запись прямо в window
+- Можно изменять значение
+- Можно переобъявлять
+
 ```js
 // объявление переменной c присвоением
-var a = 123;
+var a = 123; // window.a; // 123
 
 // объявление нескольких переменных с присвоением
 var a = 123, b = 'abc', c = true;
@@ -79,11 +85,6 @@ var a = 123, b = 'abc', c = true;
 var a, b, c;
 ```
 
-- Используется уже редко (ES5) 
-- Глобальная область видимости
-- Можно изменять значение
-- Можно переобъявлять
-
 ***
 
 ## let
@@ -91,6 +92,8 @@ var a, b, c;
 - ES6
 - Можно изменять значение
 - Нельзя переобъявлять
+- Область видимости - глобальная, если объявлена наверху
+- Область видимости - {}, если объявлена внутри {}
 
 ```js
 let a = true;
@@ -107,7 +110,8 @@ let a = 123; // будет ошибка
 - ES6, самое широкое применение
 - Нельзя изменять значение (для объектов и массивов можно)
 - Нельзя переобъявлять
-
+- Область видимости - глобальная, если объявлена наверху
+- Область видимости - {}, если объявлена внутри {}
 
 ```js
 const a = true;
@@ -119,9 +123,30 @@ a = false; // будет ошибка
 const a = 123; // будет ошибка
 ```
 
+```js
+const person = {
+  name: 'John',
+  age: 18,
+};
+
+// будет ошибка
+const person = {
+  name: 'Jack',
+  age: 19,
+};
+
+// Ошибки не будет
+person.name = 'Jack';
+
+Object.freeze(car); // запрещает изменять свойства в объекте
+```
+
+
 ***
 
 ## Область видимости (Scope) 
+
+При объявлении переменных в global scope они будут доступны отовсюду! 
 
 Функция не перепишет глобальные переменные, так как внутри нее объявлены новые одноименные переменные в своей локальной области видимости. Область видимости в js ограничивается фигурными скобками {}. Работает для var, let и const.
 
@@ -172,3 +197,54 @@ console.log(VAR, LET, CONST);  // 'var-new', 'let-new', 'ОШИБКА!!!'
 ```
 
 ***
+
+Нефункция. var, объявленный внутри if будет доступен снаружи, а let и const нет.
+
+```js
+var a = true;
+
+// global scope
+var VAR = 'VAR';
+let LET = 'LET';
+const CONST = 'CONST';
+
+if (a) {
+  console.log(VAR); // 'VAR'
+  console.log(LET); // 'LET'
+  console.log(CONST); // 'CONST'
+
+  if (a) {
+    console.log(VAR); // 'VAR'
+    console.log(LET); // 'LET'
+    console.log(CONST); // 'CONST'
+  }
+}
+
+console.log(VAR); // 'VAR'
+console.log(LET); // 'LET'
+console.log(CONST); // 'CONST'
+```
+
+```js
+var a = true;
+
+if (a) {
+  // local scope
+  var VAR = 'VAR';
+  let LET = 'LET';
+  const CONST = 'CONST';
+
+  console.log(VAR); // 'VAR'
+  console.log(LET); // 'LET'
+  console.log(CONST); // 'CONST'
+  if (a) {
+    console.log(VAR); // 'VAR'
+    console.log(LET); // LET is not defined
+    console.log(CONST); // CONST is not defined
+  }
+}
+
+console.log(VAR); // 'VAR'
+console.log(LET); // LET is not defined
+console.log(CONST); // CONST is not defined
+```

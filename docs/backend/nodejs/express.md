@@ -45,3 +45,43 @@ app.listen(PORT, () => {
   console.log(`Мой текст в логе после запуска ${PORT}!`);
 });
 ```
+
+### С обработчиком запросов
+
+```js title="server.js"
+const path = require('path');
+const express = require('express');
+const app = express();
+const PORT = 3000;
+const API_PREFIX = '/api/v1';
+const PATH = path.join(__dirname, './');
+
+app.use(express.static(PATH));
+
+// хэндлер get-запроса
+app.get(`${API_PREFIX}/text`, (req, res) => {
+  res.status(200).send('Hello, World!');
+});
+
+// хэндлер put-запроса
+app.put(`${API_PREFIX}/json`, (req, res) => {
+	res.setHeader('Content-Type', 'application/json');
+  res.status(201).send({data: {items: [1,2,3]}});
+});
+
+// слушанье сервера
+app.listen(PORT, function() {
+  console.log(`Example app listening on port ${PORT}`);
+});
+
+```
+
+Будут возвращаться данные по таким запросам
+
+```bash
+# status: 200, "Hello, World!"
+curl http://localhost:3000/api/v1/text
+
+curl -X PUT http://localhost:3000/api/v1/json
+# status: 201, headers: content-type - json, {"data": {"items": [1, 2, 3]}}
+```
