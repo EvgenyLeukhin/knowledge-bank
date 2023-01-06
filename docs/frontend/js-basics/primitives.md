@@ -3,8 +3,17 @@ title: Примитивы
 sidebar_position: 0
 ---
 
-- [Справочник JS](https://wm-school.ru/js/index.php)
-- [Справочник JS](https://www.wisdomweb.ru/JS/javascript-first.php)
+- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — очень важный ресурс. Важно — пролистайте прочитайте первую главу про язык JS, его основы и основные фишки ES6;
+- [Презентация «Яндекс.Практикума»](https://disk.yandex.ru/i/ekqxfARcwTqkwg): «Бегло по ES6 для старта»;
+- [JavaScript Weekly](https://javascriptweekly.com/) — каждую неделю на почту будут падать интересные статьи;
+- [«Вы не знаете JS»](https://github.com/azat-io/you-dont-know-js-ru) — сборник книг для виртуозного владения JavaScript (станете ниндзя, не шутка). Кто читает оригиналы, ссылки там тоже есть;
+- [Видео и материалы с ШАДа](https://www.youtube.com/playlist?list=PLJOzdkh8T5koEPv-R5W0ovmL_T2BjB1HX) -  по алгоритмам и структурам данных;
+- [Шпаргалка по сложности алгоритмов](https://habr.com/ru/post/188010/)
+- [Первый взгляд на записи и кортежи в JavaScript](https://habr.com/ru/post/504092/)
+- [Оценка сложности алгоритмов](https://habr.com/ru/post/173821/)
+---
+- [еще один справочник JS](https://wm-school.ru/js/index.php)
+- [еще один справочник JS](https://www.wisdomweb.ru/JS/javascript-first.php)
 
 ## typeof
 
