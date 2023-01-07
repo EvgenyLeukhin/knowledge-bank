@@ -1,5 +1,5 @@
 ---
-title: Стилизация
+title: Стилизация +
 sidebar_position: 3
 ---
 
