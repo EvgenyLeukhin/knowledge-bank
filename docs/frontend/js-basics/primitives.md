@@ -1,6 +1,6 @@
 ---
 title: Примитивы +++
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 - [«Современный учебник JavaScript»](https://learn.javascript.ru/) — очень важный ресурс;

@@ -1,37 +1,7 @@
 ---
 title: DOM-дерево +--
-sidebar_position: 20
+sidebar_position: 21
 ---
-
-## Браузер
-
-Основные компоненты браузера
-
-<img src="../../../../img/frontend/browser.png" alt="browser.png" />
-
-**Пользовательский интерфейс** — включает адресную строку, кнопки «назад» и «вперёд», меню закладок и т. д. В пользовательский интерфейс входит всё, что видит пользователь, за исключением окна с содержимым страницы.
-
-**Движок браузера** — обеспечивает взаимодействие между пользовательским интерфейсом и движком рендеринга.
-Механизм рендеринга — **отвечает за отображение веб-страницы. Механизм рендеринга анализирует HTML и CSS и отображает содержимое на экране.
-
-**Сеть** — сетевые вызовы, такие как XHR-запросы. Их реализация различается в зависимости от платформы. 
-
-**Бэкенд пользовательского интерфейса** — рисует основные виджеты, такие как флажки и окна. Этот бэкенд предоставляет универсальный интерфейс, который не зависит от платформы. Он использует методы пользовательского интерфейса операционной системы.
-
-**Движок JavaScript** — выполняет JavaScript. Например, V8 в Сhrome.
-
-**Хранилище данных** — возможно, вашему приложению потребуется хранить все данные локально. Типы механизмов хранения: localStorage, indexDB, Web SQL (не рекомендован, но знать о нём нужно), файловая система.
-
-### Ограничения JavaScript в браузере
-
-Разработчики веб-приложений сталкиваются с несколькими ограничениями:
-
-- Нельзя взаимодействовать с файловой системой.
-- Нет доступа к сетевым функциям, кроме тех, что предоставляет сам браузер.
-- Невозможны многопоточные вычисления. Есть воркеры, но они не решают проблему полностью.
-- Нельзя создавать новые процессы или запускать программы.
-
-NodeJS из «коробки» позволяет обойти некоторые из этих ограничений.
 
 ## DOM-дерево
 
@@ -59,71 +29,47 @@ function applyDiscount() {
 
 ***
 
-## &lt;script&gt;
 
-```html
-<!-- inline js-code -->
-<script>
-  alert('Hello, World!');
-</script>
+### Convert NodeList to array
 
-<!-- external js file -->
-<script src="file.js">
-  // этот код будет проигнорирован, так как у тега скрипт есть аттрибут src
-  alert(123);
-</script>
-
-<!-- if JS is turn off in a browser -->
-<noscript>
-  <p>Please, turn on JS!</p>
-</noscript>
+```js
+  const elements = document.querySelectorAll(selector);
+  
+  return Array.from(elements);
 ```
 
-Хороший тон подключать все скрипты перед ```</body>```. Чтобы они не блокировали отрисовку html, если возникнут какие-лио ошибки.
+## Формы
 
-### Обычное подключение
+```js
+const form = document.forms.formWithInput;
+const printResult = document.querySelector('.content__result');
+const inputNumber = document.querySelector('.form__input');
+const congratulation = document.querySelector('#congratulation');
 
-- Загружаются друг за другом (порядок как в коде)
-- Выполняются друг за другом (порядок как в коде)
-- Блокируют отрисовку html пока не загрузятся и не выполняться
+function findNearestFactorial(value) {
+  if (value === '' || value === undefined) {
+    return '*';
+  }
 
-```html
-  ...
-  <script src="script1.js"></script>
-  <script src="script2.js"></script>
-  <script src="script3.js"></script>
-</body>
-```
+  if (value <= 0) {
+    console.log(value);
+    return 1;
+  }
+  let currentValue = 1;
 
-Загрузкой скриптов можно управлять с помощью аттрибутов **async** и **defer** и их расположение в html-коде уже не будет влиять.
+  for (var i = 1; currentValue * i <= value; i++) { // c let будет ошибка
+    currentValue *= i;
+  }
+  return i - 1;
+}
 
-### Асинхронное (async)
+form.addEventListener('keyup', evt => {
+  evt.preventDefault();
+  printResult.textContent = findNearestFactorial(inputNumber.value);
+  congratulation.textContent = inputNumber.value && 'Вау, это успех!';
+});
 
-- Работает только с src
-- Скрипт будет загружаться сразу, не дожидаясь и не блокируя отрисовку html
-- После загрузки будет сразу выполняться и будет блокировать отрисовку html
-- Независимый скрипт, его место расположения в коде неважно
-- Если скриптов с async несколько, то порядок их загрузки и выполнения может не совпать с порядком в коде. Какой скрипт згрузится первым - тот и будет первым выполняться.
-
-```html
-  ...
-  <script src="script1.js" async></script>
-  <script src="script2.js" async></script>
-  <script src="script3.js" async></script>
-</body>
-```
-
-### Отложенное (defer)
-
-- Работает только с src
-- Скрипт будет загружаться сразу, не дожидаясь и не блокируя отрисовку html
-- После загрузки будет ждать полную отрисовку html и не будет выполняться пока html не загрузится
-- Если скриптов с defer несколько, то порядок их выполнения БУДЕТ СОВПАДАТЬ с порядком в коде (пока не выполнился первый, второй будет ждать, даже если загрузился раньше)
-
-```html
-  ...
-  <script src="script1.js" defer></script>
-  <script src="script2.js" defer></script>
-  <script src="script3.js" defer></script>
-</body>
+form.addEventListener('submit', evt => {
+  evt.preventDefault();
+});
 ```

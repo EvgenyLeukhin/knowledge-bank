@@ -55,30 +55,34 @@ sidebar_position: 2
 
 ```css
 body {
-  /* Cross-platform generic font family (default user interface font) */
-  system-ui,
+  font-family: 
+    /* Cross-platform generic font family (default user interface font) */
+    system-ui,
 
-  /* Safari for macOS and iOS (San Francisco) */
-  -apple-system,
+    /* Safari for macOS and iOS (San Francisco) */
+    -apple-system,
 
-  /* Windows */
-  "Segoe UI",
+    /* Windows */
+    "Segoe UI",
 
-  /* Android */
-  Roboto,
+    /* Android */
+    Roboto,
 
-  /* Basic web fallback */
-  "Helvetica Neue", Arial,
+    /* Basic web fallback */
+    "Helvetica Neue", Arial,
 
-  /* Linux */
-  "Noto Sans",
-  "Liberation Sans",
+    /* Linux */
+    "Noto Sans",
+    "Liberation Sans",
 
-  /* Sans serif fallback */
-  sans-serif,
+    /* Sans serif fallback */
+    sans-serif,
 
-  /* Emoji fonts */
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* Emoji fonts */
+    "Apple Color Emoji", 
+    "Segoe UI Emoji", 
+    "Segoe UI Symbol", 
+    "Noto Color Emoji";
 }
 ```
 
@@ -94,7 +98,7 @@ body {
 
 <!-- 2 вариант - Подключение внутри css -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 </style>
 ```
 
