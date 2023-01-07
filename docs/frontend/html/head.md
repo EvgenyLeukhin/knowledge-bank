@@ -89,6 +89,9 @@ sidebar_position: 4
 
 ## Фавиконки
 
+- [Favicons generator](https://realfavicongenerator.net/)
+- [Logo generator](https://looka.com/logo-maker/)
+
 Иконки на вкладках браузеров.
 
 ```html
