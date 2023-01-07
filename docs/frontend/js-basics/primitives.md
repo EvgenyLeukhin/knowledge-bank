@@ -3,7 +3,7 @@ title: Примитивы
 sidebar_position: 0
 ---
 
-- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — очень важный ресурс. Важно — пролистайте прочитайте первую главу про язык JS, его основы и основные фишки ES6;
+- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — очень важный ресурс;
 - [Презентация «Яндекс.Практикума»](https://disk.yandex.ru/i/ekqxfARcwTqkwg): «Бегло по ES6 для старта»;
 - [JavaScript Weekly](https://javascriptweekly.com/) — каждую неделю на почту будут падать интересные статьи;
 - [«Вы не знаете JS»](https://github.com/azat-io/you-dont-know-js-ru) — сборник книг для виртуозного владения JavaScript (станете ниндзя, не шутка). Кто читает оригиналы, ссылки там тоже есть;
@@ -12,10 +12,10 @@ sidebar_position: 0
 - [Первый взгляд на записи и кортежи в JavaScript](https://habr.com/ru/post/504092/)
 - [Оценка сложности алгоритмов](https://habr.com/ru/post/173821/)
 ---
-- [еще один справочник JS](https://wm-school.ru/js/index.php)
-- [еще один справочник JS](https://www.wisdomweb.ru/JS/javascript-first.php)
+- [Справочник JS wm-school](https://wm-school.ru/js/index.php)
+- [Справочник JS wisdomweb](https://www.wisdomweb.ru/JS/javascript-first.php)
 
-## typeof
+## typeof - проверка типа данных
 
 Унарный оператор, который возвращает тип данных какого-либо выражения строкой.
 
@@ -576,7 +576,7 @@ false || true; // true (которое правее)
 1 != '1'; // false
 ```
 
-Строгое сравнение
+Строгое сравнение (best practice)
 ```js
 1 === '1'; // false
 1 !== '1'; // true

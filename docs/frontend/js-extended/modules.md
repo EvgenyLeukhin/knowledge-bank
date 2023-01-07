@@ -1,6 +1,6 @@
 ---
 title: Модули
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 ## Псевдомодульные скрипты
@@ -85,16 +85,16 @@ document.body.appendChild(element);
 window.utils = (function () {
   // Здесь суперреализации функций, которые хочется переиспользовать в проекте
   function mySuperFunc1() {
-      console.log('utils.mySuperFunc1');
+    console.log('utils.mySuperFunc1');
   }
 
   function mySuperFunc2() {
-      console.log('utils.mySuperFunc2');
+    console.log('utils.mySuperFunc2');
   }
 
   return {
-      mySuperFunc1,
-      mySuperFunc2,
+    mySuperFunc1,
+    mySuperFunc2,
   };
 })();
 ```
@@ -135,9 +135,9 @@ window.utils = (function () {
   const TAG = 'div';
 
   function createElement(tag = TAG, content) {
-      const element = document.createElement(tag);
-      element.textContent = content;
-      return element;
+    const element = document.createElement(tag);
+    element.textContent = content;
+    return element;
   }
 
   window._createElement = createElement;
@@ -150,14 +150,14 @@ window.utils = (function () {
   const TAG = 'p';
 
   function renderDOM(selector, content) {
-      const root = document.querySelector(selector);
+    const root = document.querySelector(selector);
 
-      if (!root) {
-          return;
-      }
+    if (!root) {
+      return;
+    }
 
-      const element = window._createElement(TAG, content); // createElement из файла dom.js
-      root.appendChild(element);
+    const element = window._createElement(TAG, content); // createElement из файла dom.js
+    root.appendChild(element);
   }
   window._renderDOM = renderDOM;
 })();
@@ -196,11 +196,11 @@ window._reverse = { reverse }; // window._reverse.reverse();
 
 // window._reverse.reverse();
 window._reverse = (function () {
-    function reverse(str) {
-        return str.split('').reverse().join('');
-    }
+  function reverse(str) {
+    return str.split('').reverse().join('');
+  }
 
-    return { reverse };
+  return { reverse };
 })();
 ```
 
@@ -256,78 +256,16 @@ export function testFile1() {
   return 42;
 }
 
-testFile1 ();
+testFile1();
 ```
 
 ```js title="file2.js"
 import { testFile1 } from "./file2"
 
-export function testFile2){
-  console. log (testFile1 ());
+export function testFile2() {
+  console.log(testFile1());
   return 10;
 }
 ```
 
 Так, как показано на примере выше, — делать не стоит. Ваш браузер начнёт «бегать по кругу» до не очень победного конца, то есть пока не переполнится стек вызовов.
-
-***
-
-## Импорт / экспорт
-
-### Простой и дефолтный 
-
-```js title="script1.js"
-// простой именованный экспорт
-export const a = 123;
-
-const b = 123;
-
-// дефолтный экспорт
-export default b;
-```
-
-Если экспортируется несколько переменных, то дефолтные должны быть в начале. Если export без default, то импортировать нужно в фигурных скобках.
-
-```js title="script2.js"
-import b, { a } from './script1';
-...
-```
-
-***
-
-### import as / export as
-
-Дефолтные импорты можно переименовывать сразу при импорте, а простые через ```as```.
-
-```js title="script2.js"
-import c, { a as d } from './script1.js';
-...
-```
-
-***
-
-Мульти экспорт объектом. Простые экспорты можно также переименовывать через ```as```.
-
-```js title="script1.js"
-const a = 1;
-const b = 2;
-
-export {
-  a,
-  b as c, // экспорт с переименованием (не работает с default)
-}
-```
-
-***
-
-### import * as data
-
-Импорт всех экспортов файла в объект.
-
-```js title="script2.js"
-import * as data from './script1.js';
-
-console.log('data', data); // { a: 1, default: 2 }
-console.log('a', data.a); // 1
-console.log('b', data.default); // 2
-```
