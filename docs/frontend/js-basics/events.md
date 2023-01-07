@@ -1,5 +1,5 @@
 ---
-title: Events
+title: Events ---
 sidebar_position: 20
 ---
 

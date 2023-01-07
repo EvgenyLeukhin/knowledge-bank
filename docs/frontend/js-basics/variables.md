@@ -1,5 +1,5 @@
 ---
-title: Переменные +
+title: Переменные +++
 sidebar_position: 1
 ---
 

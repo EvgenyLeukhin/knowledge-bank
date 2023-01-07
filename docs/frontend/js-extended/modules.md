@@ -1,5 +1,5 @@
 ---
-title: Модули +
+title: Модули +++
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Стэк
+title: Стэк ++-
 sidebar_position: 2
 ---
 

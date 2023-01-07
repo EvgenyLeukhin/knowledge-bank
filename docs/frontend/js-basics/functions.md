@@ -1,5 +1,5 @@
 ---
-title: Функции
+title: Функции +--
 sidebar_position: 7
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Асинхронность
+title: Асинхронность +--
 sidebar_position: 15
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Архитектура +
+title: Архитектура +++
 sidebar_position: 1
 ---
 

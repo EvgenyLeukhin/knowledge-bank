@@ -1,5 +1,5 @@
 ---
-title: Массивы
+title: Массивы +--
 sidebar_position: 5
 ---
 

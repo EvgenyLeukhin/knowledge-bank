@@ -1,5 +1,5 @@
 ---
-title: Примитивы +
+title: Примитивы +++
 sidebar_position: 0
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Логика
+title: Логика ---
 sidebar_position: 3
 ---
 
