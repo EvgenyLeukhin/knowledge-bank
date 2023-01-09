@@ -4,6 +4,7 @@ sidebar_position: 1
 ---
 
 - [«Современный учебник JavaScript»](https://learn.javascript.ru/) — очень важный ресурс;
+- [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript) - Mozilla Development Network;
 - [Презентация «Яндекс.Практикума»](https://disk.yandex.ru/i/ekqxfARcwTqkwg): «Бегло по ES6 для старта»;
 - [JavaScript Weekly](https://javascriptweekly.com/) — каждую неделю на почту будут падать интересные статьи;
 - [«Вы не знаете JS»](https://github.com/azat-io/you-dont-know-js-ru) — сборник книг для виртуозного владения JavaScript (станете ниндзя, не шутка). Кто читает оригиналы, ссылки там тоже есть;

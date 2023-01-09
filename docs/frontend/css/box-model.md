@@ -3,6 +3,10 @@ title: Блочная модель
 sidebar_position: 02
 ---
 
+- [normalize.css](https://necolas.github.io/normalize.css/)
+- [bootstrap reboot](https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap-reboot.min.css)
+- [reset.css](https://github.com/elad2412/the-new-css-reset)
+
 <img src="../../../../img/css/box-model.png" width="250px" alt="box-model.png" />
 
 ```Размеры элемента = размеры вложенного контента + padding + border```
