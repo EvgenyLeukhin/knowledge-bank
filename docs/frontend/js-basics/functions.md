@@ -68,15 +68,31 @@ summ(1, 2); // 3
 - Если параметр только один, то круглые скобки можно не вставлять
 
 ```js
+// два параметра - скобки нужны
 const summ = (a, b) => a + b;
 
 summ(1, 2); // 3
 ```
 
 ```js
+// один параметр - скобки не нужны
 const greeting = name => console.log(`Hello, ${name}!`);
 
-greeting('John'); // 'Hello, John!\
+greeting('John'); // 'Hello, John!'
+```
+
+***
+
+### Парамтры по умолчанию
+
+В стрелочной записи с одним параметром нужны круглые скобки, если есть параметр по умолчанию.
+
+```js
+const greeting = (name = "User") => {
+  console.log(`Hello, ${name}!`);
+}
+
+greeting(); // 'Hello, User!'
 ```
 
 ***
@@ -124,6 +140,6 @@ console.log(a, b, result); // 1 2 3
 
 ***
 
-## Асинхронные
+## Асинхронные (async-await)
 
 ***
