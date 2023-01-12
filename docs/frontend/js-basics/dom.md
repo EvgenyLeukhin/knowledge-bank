@@ -1,5 +1,5 @@
 ---
-title: DOM-дерево +--
+title: DOM +--
 sidebar_position: 21
 ---
 
@@ -73,3 +73,10 @@ form.addEventListener('submit', evt => {
   evt.preventDefault();
 });
 ```
+
+## Events
+
+Some content
+
+- Event loop
+- Listerners
