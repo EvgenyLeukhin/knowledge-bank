@@ -194,3 +194,59 @@ sidebar_position: 9
 <!-- запрет на зум -->
 <meta name="viewport" content="minimum-scale=1, maximum-scale=1, user-scalable=0">
 ```
+
+***
+
+### Пример Desktop-first на scss
+
+```scss
+// variables
+//                  DESKTOP [1201 - 1920] --> 1920 дизайн-макет
+$laptop: 1200px; // LAPTOP  [1024 - 1200] --> 1024 дизайн-макет
+$tablet: 1023px; // TABLET  [768 - 1023]  --> 768  дизайн-макет
+$mobile: 767px; //  MOBILE  [0 - 767]     --> 414  дизайн-макет
+```
+
+```scss
+// mixins
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+```
+
+```scss
+// применение
+.some-selector {
+  // desktop and common styles
+  color: white;
+
+  // laptop & tablet & mobile styles (<=1200px)
+  @include laptop {
+    color: red;
+  }
+
+  // tablet & mobile styles (<=1023px)
+  @include tablet {
+    color: green;
+  }
+
+  // only mobile styles (<=767px)
+  @include mobile {
+    color: blue;
+  }
+}
+```
