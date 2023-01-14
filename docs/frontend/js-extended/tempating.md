@@ -1,6 +1,6 @@
 ---
 title: Шаблонизаторы +--
-sidebar_position: 23
+sidebar_position: 8
 ---
 
 ## Известные шаблонизаторы

@@ -1,6 +1,6 @@
 ---
 title: Классы ---
-sidebar_position: 13
+sidebar_position: 4
 ---
 
 ### Привязка контекста к методам класса

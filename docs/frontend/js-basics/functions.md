@@ -1,6 +1,6 @@
 ---
-title: Функции ++-
-sidebar_position: 8
+title: Функции +++
+sidebar_position: 3
 ---
 
 В JS функции по сути являются объектами.
@@ -100,7 +100,7 @@ greeting('John'); // 'Hello, John!'
 
 ***
 
-### Сохранение в переменную
+### Сохранение результата в переменную
 
 Также результат выполнения функции можно сохранять в переменные.
 
@@ -115,40 +115,6 @@ const b = greeting;
 // вызов переменных
 a; // 'Hello, John!'
 b('Jack'); // 'Hello, Jack!'
-```
-
-***
-
-### Анонимные самовызывающиеся функции
-
-- Не нужно именовать
-- Изолированы от области видимости
-- Результат таких функций можно сохранять в переменные
-
-```js
-// Этот код сразу выполнится
-(function() {
-  console.log('Hello');
-}());
-
-// Можно передавать параметры
-(function(value) {
-  console.log(value);
-}('Hello'));
-```
-
-```js
-// Сохраняем результат в переменную
-const greeting = (function(name) {
-  return `Hello, ${name}`;
-}('Sorax'));
-
-console.log(greeting);
-
-// Так тоже будет работать (без скобок) - но обычно АСФ указывают в скобках
-const greeting = function(name) {
-  return `Hello, ${name}`;
-}('Sorax');
 ```
 
 ***
@@ -281,12 +247,6 @@ someFunc('Jack')()(); // 'undefined'
 
 ***
 
-## Возврат функции из самой себя - Рекурсия
-
-TODO
-
-***
-
 ## Колбэк-функция (callback)
 
 - Это передача функции в качестве аргумента, она будет выполнена после выполнения функции, в которую она передаётся
@@ -322,44 +282,3 @@ const someFunc = function(value, cb) {
 someFunc(5, alert('value > 0'));
 someFunc(-5, alert('value < 0'));
 ```
-
-***
-
-## Замыкания (closures) ---
-
-***
-
-## IIFE-замыкания
-
-- Паттерн IIFE — анонимные изолированные самовызывающиеся функции. 
-- Любые переменные внутри IIFE невидимы для внешнего мира.
-- Функция сразу вызовится, как до нее дойдет интерпритатор.
-- Также такие функции можно использовать как модульные, сохраняя в объект window.utils
-
-```js
-'use strict';
-
-(function () {
-  const TAG = 'div';
-
-  const element = document.createElement(TAG);
-
-  element.textContent = 'Мой первый тег';
-  document.body.appendChild(element);
-})();
-```
-
-```js
-let a = 1;
-var b = 2;
-
-const result = (function() {
-  let a = 3;
-  console.log(a, b); // 3 2
-  return a;
-})();
-
-console.log(a, b, result); // 1 2 3 
-```
-
-***

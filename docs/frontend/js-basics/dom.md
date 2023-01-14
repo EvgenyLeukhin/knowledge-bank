@@ -1,6 +1,6 @@
 ---
 title: DOM +--
-sidebar_position: 21
+sidebar_position: 8
 ---
 
 ## DOM-дерево

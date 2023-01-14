@@ -1,6 +1,6 @@
 ---
 title: Обработка данных ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ## Обработка массивов
