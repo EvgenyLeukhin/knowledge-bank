@@ -379,3 +379,34 @@ const multiLevelArray = [arr1, arr2, arr3];
 
 console.log(multiLevelArray[2][0]); // 7
 ```
+
+## Методы для строк
+
+Для массивов также работают некоторые методы строк
+
+### IndexOf
+
+```js
+const someArray = ['a', 'b', 'c', 'd'];
+console.log(someArray.indexOf('a')); // 0
+
+// начиная с 1-го индекса
+console.log(someArray.indexOf('a', 1)); // -1 - индекс не найден
+```
+
+***
+
+### Includes
+
+Поиск элемента
+
+```js
+const someArray = ['a', 'b', 'c', 'd'];
+console.log(someArray.includes('a')); // true
+console.log(someArray.includes('g')); // false
+
+// начиная с 1-го индекса
+console.log(someArray.includes('a', 1)); // false
+```
+
+
