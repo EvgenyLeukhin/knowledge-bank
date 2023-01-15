@@ -191,9 +191,11 @@ function summ(a, b) {
 }
 ```
 
+***
+
 ## Вложенные функции
 
-- Внутри объявленных функций можно создавать фложенные служебные функции для каких-либо операций
+Внутри объявленных функций можно создавать фложенные служебные функции для каких-либо операций
 
 ```js
 const someFunc = (someString) => {
@@ -209,8 +211,6 @@ const someFunc = (someString) => {
 someFunc('Hello, world!'); // 'HELLO, WORLD!'
 someFunc(123); // 'Передаётся не строка'
 ```
-
-TODO
 
 ***
 
@@ -243,42 +243,4 @@ function someFunc(name) {
 
 // Так как есть одноименный параметр у внутренней функции
 someFunc('Jack')()(); // 'undefined'
-```
-
-***
-
-## Колбэк-функция (callback)
-
-- Это передача функции в качестве аргумента, она будет выполнена после выполнения функции, в которую она передаётся
-- Колбеки отрабатываться после выполнения каких-либо операций.
-- Часто применяются для действий над какими-нибудь полученными данными (которые посчитались в самой функции)
-
-### Пример с function
-
-```js
-function doHomework(subject, callback) {
-  alert(`Starting my ${subject} homework.`);
-  callback();
-}
-
-doHomework('math', function() {
-  alert('Finished my homework');
-});
-```
-
-### Пример с alert
-
-В данном примере alert будет являться колбеком.
-
-```js
-const someFunc = function(value, cb) {
-  console.log(value);
-
-  if (value > 0) {
-    cb;
-  }
-}
-
-someFunc(5, alert('value > 0'));
-someFunc(-5, alert('value < 0'));
 ```
