@@ -23,30 +23,32 @@ sidebar_position: 5
 
 ***
 
-## map
+## Обработчики массивов
+
+### map
 
 ***
 
-## filter
+### filter
 
 ***
 
-## find
+### find
 
 ***
 
-## some
+### some
 
 ***
 
-## every
+### every
 
 ***
 
-## reduce
+### reduce
 
 ***
 
-## includes
+### includes
 
 ***
