@@ -1,8 +1,20 @@
 ---
-title: Логика ---
-sidebar_position: 4
+title: Логика +--
+sidebar_position: 3
 ---
 
-# Логика
+## Операторы сравнения
 
-Some content
+***
+
+## if-else
+
+***
+
+## switch-case
+
+***
+
+## Тернарный оператор
+
+***

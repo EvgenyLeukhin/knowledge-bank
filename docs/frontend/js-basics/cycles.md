@@ -1,8 +1,52 @@
 ---
-title: Циклы ---
+title: Циклы +--
 sidebar_position: 5
 ---
 
-# Циклы
+## forEach
 
-Some content
+***
+
+## for
+
+***
+
+## while
+
+***
+
+## do-while
+
+***
+
+## for ... of
+
+***
+
+## map
+
+***
+
+## filter
+
+***
+
+## find
+
+***
+
+## some
+
+***
+
+## every
+
+***
+
+## reduce
+
+***
+
+## includes
+
+***
