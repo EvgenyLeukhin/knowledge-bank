@@ -1,6 +1,6 @@
 ---
 title: Database
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 **База данных** - набор данных, хранящихся некоторым упорядоченным способом 

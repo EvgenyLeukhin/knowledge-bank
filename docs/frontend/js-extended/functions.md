@@ -1,5 +1,5 @@
 ---
-title: Функции II +--
+title: Функции II ++-
 sidebar_position: 0
 ---
 
@@ -85,7 +85,7 @@ const greeting = (function(name) {
   return `Hello, ${name}`;
 }('Sorax'));
 
-console.log(greeting);
+console.log(greeting); // Hello, Sorax
 
 // Так тоже будет работать (без скобок) - но обычно АСФ указывают в скобках
 const greeting = function(name) {
