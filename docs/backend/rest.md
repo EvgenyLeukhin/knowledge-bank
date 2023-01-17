@@ -3,6 +3,10 @@ title: REST
 sidebar_position: 2
 ---
 
+- [Web API Design](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+- [REST API Tutorial](https://www.restapitutorial.com/)
+- [WebSocket](https://learn.javascript.ru/websocket)
+
 ## Зачем?
 
 Как говорилось в предыдущем уроке, HTTP — это текстовый протокол, по которому можно передавать любые данные с клиента на сервер и обратно. Но такая свобода может быть пагубной — без правил взаимодействия бэкэнда и фронтенда начнётся бардак. Чтобы упорядочить свободу, были придуманы различные подходы и протоколы поверх HTTP. Один из них REST.
