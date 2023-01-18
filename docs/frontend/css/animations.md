@@ -158,18 +158,81 @@ animation:
 }
 ```
 
-### matrix
+### matrix (a, c, b, d, x, y)
+
+- a - scale X
+- c - scale Y
+- b - деформация по вертикали
+- b - деформация по вертикали
+- d - деформация по горизонтали
+- x - смещение по X
+- y - смещение по Y
+
+***
+
+***
+
+## 3D-трансформации
+
+### matrix3d (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)
+
+16 параметров
+
+***
+
+### translate3d, scale3d, rotare3d (x, y, z)
+
+
+```scss
+.some {
+  transform-style: preserve-3d;
+  transform: scale3d(2, 2, 5);
+  transform: translate3D(20px, 20px, 50px);
+  transform: rotate3d(10px, 10px, 10px, 40deg);
+}
+```
+
+***
+
+### perspective, perspective-origin
+
+```scss
+.some {
+  perspective: none;
+  /* <length> values */
+  perspective: 20px;
+  perspective: 3.5em;
+
+  /* Global values */
+  perspective: inherit;
+  perspective: initial;
+  perspective: revert;
+  perspective: revert-layer;
+  perspective: unset;
+}
+```
+
+### backface-visibility
 
 TODO
 
-```css
+***
+
+
+```scss
 .some-element {
+  // без трансформации
+  transform: matrix(1, 0, 0, 1, 0, 0);
+
+
   transfomr: matrix(1, 1, 1, 1, 1, 1);
   transfomr: matrix3d(1, 1, 1, 1, 1, 1);
 }
 ```
 
-### Центровка с помощью transform
+***
+
+## Центровка с помощью transform
 
 Центровка с помощью transform и position внутри родительского элемента. Должны быть фикс. размеры дочерненго элемента и свободное пространство у родительского.
 
