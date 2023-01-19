@@ -5,19 +5,17 @@ sidebar_position: 3
 
 Напишите функцию, которая умеет превращать строки вроде "a.b.c" в объекты. Результатом для строки-примера будет "a": {"b": {"c": {}}}. 
 
-```js
-function namespace(string) {
-  const stringArray = string.split('.');
-  // return stringArray;
-  return stringArray.reduceRight((previousValue, currentValue, index, array) => {
-    let newObject = new Object;
+```ts
+const namespace = (str: string): object =>
+  str.split(".").reduceRight((acc, key) => ({ [key]: acc }), {});
 
-    // ??? непоянтно что свойству присваиваем два значения через запятую
-    return newObject[currentValue] = previousValue, newObject;
-  });
+namespace('a.b.c.d.e') // "{"a":{"b":{"c":{"d":{"e":{}}}}}}"
+```
 
-  // return stringArray;
-}
-  const a = namespace('a.b.c.d.e'); // "{"a":{"b":{"c":{"d":{"e":{}}}}}}"
-  console.log(a);
+***
+
+Реактивность. Вторая задача будет о реактивности. Если вы раньше сталкивались, например, с фреймворком Vue, то, скорее всего, знаете что это. Суть реактивности в том, что при изменении данных или состояния интерфейс автоматически ререндерится. В нативном JS нет встроенной реактивности, но её можно реализовать. Именно этим вы и займётесь на практике.
+
+```ts
+
 ```
