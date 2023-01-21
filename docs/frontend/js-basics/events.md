@@ -3,6 +3,8 @@ title: Events
 sidebar_position: 9
 ---
 
+- [События: от браузерных до пользовательских» от Игоря Зубова](https://www.youtube.com/watch?v=aNMdUUuBFmo)
+
 ## События в браузере
 
 Для реакции на действия пользователя или внутреннее взаимодействие кода используют события — сигнал от браузера о том, что что-то произошло.
@@ -231,3 +233,36 @@ ul.addEventListener('click', logger);
 - при добавлении новых элементов им не нужно добавлять обработчик.
 
 
+***
+
+### onClick пример
+
+Сработает только последний
+
+```js
+btn.onclick = function () {
+  result.push('first event');
+  console.log(result);
+}
+
+btn.onclick = () => {
+  result.push('second event');
+  console.log(result);
+};
+
+btn.click();
+```
+
+Навешивание обработчика
+
+```js
+const btn = document.querySelector('.button');
+
+const result = [];
+
+btn.addEventListener('click', function(event) {
+  result.push('first event');
+  result.push('second event');
+  console.log(result);
+});
+```
