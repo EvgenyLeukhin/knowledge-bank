@@ -3,6 +3,14 @@ title: Сеть
 sidebar_position: 0
 ---
 
+- [Модель Open Systems Interconnection (OSI);](https://wiki.merionet.ru/seti/18/model-osi-eto-prosto/)
+- [Тройное рукопожатие;](https://habr.com/ru/company/webo/blog/326258/)
+- [Методы HTTP запроса;](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods)
+- [Коды ответа HTTP;](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
+- [HTTP State Management Mechanism;](https://datatracker.ietf.org/doc/html/rfc6265)
+- [Заголовок Cookie: Cookie: name=value;](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
+- [Отличие идентификации, аутентификации и авторизации;](http://it-uroki.ru/uroki/bezopasnost/identifikaciya-autentifikaciya-avtorizaciya.html)
+
 ## TCP/IP
 
 **TCP/IP** - основной сетевой протокол. Реализации TCP обычно встроены в ядра ОС.

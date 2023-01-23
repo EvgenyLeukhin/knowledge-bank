@@ -326,3 +326,309 @@ box.show();
 ```
 
 ***
+
+## Tooltip на классе
+
+```js
+(function () {
+
+  class Tooltip {
+    constructor() {
+          this.el = document.createElement('div');
+          this.el.style.position = 'absolute';
+
+          this.el.classList.add(this.name);
+          this.el.classList.toggle(`${this.name}_active`, false);
+
+          this.listeners = [];
+
+          document.body.appendChild(this.el);
+
+          this.onHide = this.onHide.bind(this);
+      }
+    
+      get name() {
+          return 'tooltip';
+      }
+
+      get indent() {
+          return 5;
+      }
+
+      delegate(eventName, element, cssSelector, callback) {
+          const fn = event => {
+              if (!event.target.matches(cssSelector)) {
+                  return;
+              }
+
+              callback(event);
+          };
+
+          element.addEventListener(eventName, fn);
+          this.listeners.push({ fn, element, eventName });
+
+          return this;
+      }
+
+      onShow = (event) => {
+          this.el.innerHTML = event.target.getAttribute('data-tooltip');
+          this.el.classList.toggle(`${this.name}_active`, true);
+
+          const spanRect = event.target.getBoundingClientRect();
+          const elRect = this.el.getBoundingClientRect();
+
+          let top = spanRect.bottom + this.indent;
+
+          if (top + elRect.height > document.documentElement.clientHeight) {
+              // если тултип не влезает по высоте, то поднимаем его над элементом
+              top = spanRect.top - elRect.height - this.indent;
+          }
+
+          this.el.style.top = `${top}px`;
+      }
+
+      onHide() {
+          this.el.classList.toggle(`${this.name}_active`, false);
+      }
+
+      attach(root) {
+          this
+              .delegate('mouseover', root, '[data-tooltip]', this.onShow)
+              .delegate('mouseout', root, '[data-tooltip]', this.onHide);
+
+      }
+
+      detach() {
+          
+          for (let {fn, element, eventName} of this.listeners) {
+              element.removeEventListener(eventName, fn);
+          }
+
+      }
+  }
+
+  window.Tooltip = Tooltip;
+})();
+
+const tooltip = new Tooltip();
+tooltip.attach(document.body);
+```
+
+***
+
+## Tooltip на классе - подробно
+
+Всплывающие подсказки можно встретить чуть ли не на каждом сайте. Они очень помогают пользователям осваивать интерфейсы, которые в наше время довольно сложные.
+
+Одна из самых сложных вещей в тултипах — правильно их позиционировать. К счастью, сейчас браузеры предоставляют методы для определения позиции элемента во viewport (область страницы на экране, которую видит пользователь) и, применяя простые формулы, можно разместить подсказки в необходимом месте.
+
+Нужно реализовать 3 метода (onShow, onHide и detach). Ниже найдёте заготовки с кодом.
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <span class="left_top" data-tooltip="Взяли текст из data-tooltip">Верхний тултип</span>
+        <span class="left_bottom" data-tooltip="И еще один">Нижний тултип</span>
+    </div>
+    <script src='script.js'> </script>
+</body>
+</html> 
+```
+
+```css
+.tooltip {
+    display: none;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.tooltip.tooltip_active {
+    display: block;
+    position: absolute;
+}
+
+.left_bottom {
+  position: fixed; 
+  bottom: 5px;
+  left: 0;
+} 
+```
+
+```js
+class Tooltip {
+  name = 'tooltop';
+  indent = 5;
+
+    constructor() {
+      this.el = document.createElement('div');
+      this.el.style.position = 'absolute';
+      this.el.classList.add(this.name);
+
+      document.body.appendChild(this.el);
+
+      this.listeners = [];
+  }
+
+  delegate(eventName, element, cssSelector, callback) {
+      const fn = event => {
+          if (!event.target.matches(cssSelector)) {
+              return;
+          }
+
+          callback(event);
+      };
+
+      element.addEventListener(eventName, fn);
+      this.listeners.push({ fn, element, eventName });
+
+      return this;
+  }
+
+  // нужно реализовать
+  onShow = (event) => {
+      console.log('onShow');
+  }
+
+  // нужно реализовать
+  onHide = () => {
+      console.log('onHide');
+  }
+
+  attach(root) {
+      this
+          .delegate('event', root, '[data-tooltip]', this.onShow)
+          .delegate('event', root, '[data-tooltip]', this.onHide);
+
+  }
+
+  // нужно реализовать
+  detach() {
+
+  }
+}
+
+const tooltip = new Tooltip();
+tooltip.attach(document.body);
+```
+
+В конструкторе класса ```Tooltip``` создаётся DOM-элемент, который будет использован для отображения подсказки. Методы ```attach``` и ```delegate``` навешивают на элемент указанные обработчики (в данном примере слушаются события document.body). Если у DOM-ноды (```event.target```) селектор соответствует переданному CSS-селектору, то вызывается указанный колбэк (в нашем случае ```onShow``` и ```onHide```).
+
+События, которые необходимо слушать, должны отрабатывать при наведении на элемент и когда курсор мыши уходит с элемента. Для такого случая отлично подойдут два события: ```mouseover``` и ```mouseout```, которые всплывут и вызовут обработчик на ```body``` при наведении или уходе с любого дочернего элемента (подробнее про [event bubbling](https://learn.javascript.ru/bubbling-and-capturing)).
+
+В реальных условиях такие слушатели не рекомендуют вешать на весь документ, так как они будут вызываться на всех дочерних нодах, а среднестатистический документ содержит тысячи элементов. Обычно слушатели навешиваются на конкретные DOM-узлы, события которых нужно слушать. В таком случае можно использовать события ```mouseenter``` и ```mouseleave``` для конкретных элементов, которые, в отличие от ```mouseover``` и ```mouseout```, не всплывают.
+
+Остановимся на первом варианте и обновим метод ```attach```:
+
+```js
+attach(root) {
+  this
+    .delegate('mouseover', root, '[data-tooltip]', this.onShow)
+    .delegate('mouseout', root, '[data-tooltip]', this.onHide);
+
+} 
+```
+
+В методе ```detach``` достаточно удалить всех слушателей из массива ```this.listeners``` и отписать DOM-элементы от событий:
+
+```js
+detach() {        
+    for (const {fn, element, eventName} of this.listeners) {
+        element.removeEventListener(eventName, fn);
+    }
+
+    this.listeners = [];
+} 
+```
+
+В методе onHide достаточно удалить CSS-класс tooltip_active у тултипа. С этим поможет метод classList.remove():
+
+```js
+onHide() {
+    this.el.classList.remove(`${this.name}_active`);
+} 
+```
+
+Остается последний, самый интересный метод — ```onShow```, в котором нужно отобразить тултип в правильном месте. Посмотрим на следующие схемы:
+
+<img src="../../../../img/js/tooltip1.png" width="650" alt="tooltip1.png" />
+
+На месте красной отметки необходимо отобразить тултип. Его положение соответствует нижнему левому углу блока с текстом с небольшим отступом (в нашем случае — в 5 пикселей). Получить расстояние от вьюпорта до угла можно с помощью метода [getBoundingClientRect](https://developer.mozilla.org/ru/docs/Web/API/Element/getBoundingClientRect) (метод возвращает позицию относительно вьюпорта и размеры элемента):
+
+<img src="../../../../img/js/tooltip2.png" width="650" alt="tooltip2.png" />
+
+С учётом отступа (он хранится в геттере ```indent```) координата по Y будет равна ```bottom + indent```. Чтобы отрисовать сам тултип (в стилях для него уже задан position: absolute), можно использовать атрибуты ```top``` и ```left```. В реальных проектах лучше использовать ```position: fixed```, чтобы тултип позиционировался относительно страницы, а не родительского блока. 
+Как это выглядит в коде:
+
+```js
+onShow = (event) => {
+  // Элемент, на который пользователь навёл мышкой
+  const sourceEl = event.target;
+
+  // HTML тултипа задаём из data-аттрибута
+  this.el.innerHTML = sourceEl.getAttribute('data-tooltip');
+
+  // Добавляем класс _active, чтобы отобразить тултип
+  this.el.classList.add(`${this.name}_active`);
+
+  const sourceElRect = sourceEl.getBoundingClientRect();
+
+  const top = sourceElRect.bottom + this.indent;
+  const left = sourceElRect.left;
+
+  this.el.style.top = `${top}px`;
+  this.el.style.left = `${left}px`;
+} 
+```
+
+Сейчас всё довольно просто, но есть ещё одно условие. Тултип должен отображаться сверху, если снизу он не помещается во вьюпорт. Посмотрим на схему:
+
+<img src="../../../../img/js/tooltip3.png" width="650" alt="tooltip3.png" />
+
+Красная метка —  место, где нужно отобразить тултип, и по координате X оно остаётся неизменным, а по Y — равно ```sourceElRect.top - elRect.height - this.indent```. Условие, когда тултип не вмещается в экран, можно составить с помощью свойства [documentElement.clientHeight](https://developer.mozilla.org/ru/docs/Web/API/Element/clientHeight) документа:
+
+```js
+onShow = (event) => {
+    // Элемент, на который пользователь навёл мышкой
+    const sourceEl = event.target;
+
+    // HTML тултипа задаём из data-аттрибута
+    this.el.innerHTML = sourceEl.getAttribute('data-tooltip');
+
+    // Добавляем класс _active, чтобы отобразить тултип
+    this.el.classList.add(`${this.name}_active`);
+
+    const sourceElRect = sourceEl.getBoundingClientRect();
+    const elRect = this.el.getBoundingClientRect();
+
+    let top = sourceElRect.bottom + this.indent;
+    const left = sourceElRect.left;
+
+    // Если тултип не влезает по высоте, то поднимаем его над элементом
+    if (top + elRect.height > document.documentElement.clientHeight) {
+    top = sourceElRect.top - elRect.height - this.indent;
+    }
+
+    this.el.style.top = `${top}px`;
+    this.el.style.left = `${left}px`;
+} 
+```
+
+Решение почти готово, но давайте сделаем его более универсальным и обработаем случай, когда на странице есть скролл. Параметр top вернёт расстояние до начала вьюпорта, а проскролленную область можно получить с помощью window.scrollY и window.scrollX. Обновим код:
+
+```js
+onShow = (event) => {
+  // ...
+
+  this.el.style.top = `${top + window.scrollY}px`;
+  this.el.style.left = `${left + window.scrollX}px`;
+} 
+```
+
+В итоге получился полноценный компонент тултипа, который никогда не спрячется за пределами экрана.

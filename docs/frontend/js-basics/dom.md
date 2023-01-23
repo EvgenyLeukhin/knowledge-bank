@@ -3,6 +3,9 @@ title: DOM +--
 sidebar_position: 8
 ---
 
+- [Element.getBoundingClientRect()](https://developer.mozilla.org/ru/docs/Web/API/Element/getBoundingClientRect)
+- [Element.clientHeight](https://developer.mozilla.org/ru/docs/Web/API/Element/clientHeight)
+
 ## DOM-дерево
 
 Some content

@@ -6,6 +6,11 @@ sidebar_position: 2
 - [Web API Design](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
 - [REST API Tutorial](https://www.restapitutorial.com/)
 - [WebSocket](https://learn.javascript.ru/websocket)
+- [Отличия PATCH и PUT](https://datatracker.ietf.org/doc/html/rfc5789)
+- [Первое упоминание REST в диссертации Роя Филдинга](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+- [Web API Design](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+- [REST API Tutorial](https://www.restapitutorial.com/)
+
 
 ## Зачем?
 

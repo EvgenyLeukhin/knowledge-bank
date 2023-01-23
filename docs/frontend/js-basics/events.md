@@ -4,6 +4,10 @@ sidebar_position: 9
 ---
 
 - [События: от браузерных до пользовательских» от Игоря Зубова](https://www.youtube.com/watch?v=aNMdUUuBFmo)
+- [Описание событий на MDN.](https://developer.mozilla.org/en-US/docs/Web/Events)
+- [preventDefault()](https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault)
+- [stopPropagation()](https://developer.mozilla.org/ru/docs/Web/API/Event/stopPropagation)
+- [Всплытие и погружение](https://learn.javascript.ru/bubbling-and-capturing)
 
 ## События в браузере
 
@@ -266,3 +270,5 @@ btn.addEventListener('click', function(event) {
   console.log(result);
 });
 ```
+
+***
