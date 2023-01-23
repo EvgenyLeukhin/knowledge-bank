@@ -998,3 +998,81 @@ function fn3(p0, p1, p2, p3, p4){
 ```
 
 Команда запуска и сборки не меняется. Так же запускаете команду запуска dev-режима и продолжаете разрабатывать на TypeScript.
+
+***
+
+## Ссылки
+
+### Тема «TypeScript I» - Проблемы со стандартами
+
+- [Развитие стандарта ECMAScript.](https://github.com/tc39/ecma262)
+
+### Отсутствие строгой типизации
+
+- [JSDoc](https://jsdoc.app/)
+
+### Варианты решения проблем
+
+Компилятор [Babel](https://babeljs.io/) и его [playground](https://babeljs.io/repl#?browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=IYZwngdgxgBAZgV2gFwJYHsI2QUxMgCgEoYBvAKAEhgB3YVZGAFgCYBucgXyA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Cenv&prettier=false&targets=&version=7.11.0&externalPlugins=), где можно посмотреть, как инструмент компилирует современный код под различные версии и настройки.]()
+
+### Отдельные языки со своими компиляторами:
+
+- [Dart;](https://dart.dev/)
+- [CoffeeScript;](https://coffeescript.org/)
+- [ClojureScript;](https://clojurescript.org/)
+- [Elm.](https://elm-lang.org/)
+
+### Типизированный JS:
+
+- [Flow](https://flow.org/);
+- [TypeScript](https://www.typescriptlang.org/).
+
+### TypeScript
+
+- [Документация по ключам tsconfig.](https://www.typescriptlang.org/tsconfig)
+
+### Типы данных, вывод и приведение
+
+- [Enums;](https://www.typescriptlang.org/docs/handbook/enums.html#const-enums)
+
+### Полезные утилиты типов:
+
+- [advanced types,](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+- [utility types.](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+
+### ООП
+
+- [Type Alias;](https://www.typescriptlang.org/docs/handbook/declaration-files/by-example.html#reusable-types-type-aliases)
+- [О декораторах в TypeScript есть замечательная статья на хабре;](https://habr.com/ru/company/docsvision/blog/310870/)
+- [Документация по классам — главный источник;](https://www.typescriptlang.org/docs/handbook/classes.html)
+- [Классы в TypeScript — введение в тему;](https://medium.com/@sergey.bakaev/%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B-%D0%B2-typescript-b6e2e0e86864)
+- [Подробнее про абстрактные классы.](https://metanit.com/web/typescript/3.2.php)
+
+### Обобщение типов
+
+- [Type Guard;](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+- [Conditional Types.](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
+
+###  Parcel + TypeScript = Дружба?
+
+- [Документация сборщика Parcel.](https://parceljs.org/recipes/react/#typescript)
+
+###  Полезные ссылки
+
+- [TS playground;](https://www.typescriptlang.org/play?#code/PTAEHUFMBsGMHsC2lQBd5oBYoCoE8AHSAZVgCcBLA1UABWgEM8BzM+AVwDsATAGiwoBnUENANQAd0gAjQRVSQAUCEmYKsTKGYUAbpGF4OY0BoadYKdJMoL+gzAzIoz3UNEiPOofEVKVqAHSKymAAmkYI7NCuqGqcANag8ABmIjQUXrFOKBJMggBcISGgoAC0oACCbvCwDKgU8JkY7p7ehCTkVDQS2E6gnPCxGcwmZqDSTgzxxWWVoASMFmgYkAAeRJTInN3ymj4d-jSCeNsMq-wuoPaOltigAKoASgAywhK7SbGQZIIz5VWCFzSeCrZagNYbChbHaxUDcCjJZLfSDbExIAgUdxkUBIursJzCFJtXydajBBCcQQ0MwAUVWDEQC0gADVHBQGNJ3KAALygABEAAkYNAMOB4GRonzFBTBPB3AERcwABS0+mM9ysygc9wASmCKhwzQ8ZC8iHFzmB7BoXzcZmY7AYzEg-Fg0HUiQ58D0Ii8fLpDKZgj5SWxfPADlQAHJhAA5SASPlBFQAeS+ZHegmdWkgR1QjgUrmkeFATjNOmGWH0KAQiGhwkuNok4uiIgMHGxCyYrA4PCCJSAA)
+- [Документация;](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+- [Ещё одна документация;](https://basarat.gitbook.io/typescript/)
+- [Большая русская книга-документация по TypeScript;](https://typescript-definitive-guide.ru/)
+- [Про типизацию;](https://www.youtube.com/watch?v=tybjhHPj3io)
+- [Эволюция TypeScript.](https://www.youtube.com/watch?v=srqqwuqzYMM)
+
+###  Серия докладов Ильи Климова про типизацию:
+
+- [Надёжный JavaScript;](https://www.youtube.com/watch?time_continue=168&v=o9zh5EHrpQA&feature=emb_logo)
+- [Строгий JavaScript.](https://www.youtube.com/watch?v=etKOc80-cw0)
+
+###  Рубрика «Решаем вместе»: Реактивность
+
+- [Акцессоры;](https://learn.javascript.ru/property-accessors)
+- [Библиотека MobX.](https://mobx.js.org/README.html)
+- [Примеры Array.prototype.flat.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
