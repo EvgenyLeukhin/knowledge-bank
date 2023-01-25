@@ -28,6 +28,7 @@ sidebar_position: 1
 
 ```\u00A0``` - JS-Юникод можно вставлять в строку (js, ts или json)
 
+* [Таблица символов Emoji](https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/)
 * [Таблица символов W3schools](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 * [Таблица символов Unicode-table](https://unicode-table.com/ru/html-entities/)
 * [Таблица символов Html5book](https://html5book.ru/specsimvoly-html)
