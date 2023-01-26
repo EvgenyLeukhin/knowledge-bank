@@ -1,7 +1,14 @@
 ---
-title: Основная разметка
-sidebar_position: 0
+title: Тэги и семантика
+sidebar_position: 1
 ---
+
+- [W3C](https://www.w3.org/) - Спецификация HTML
+- [WHATWG](https://whatwg.org/) - Представилели браузеров
+- [Список поддерживаемых расширений файлов](https://webref.ru/html/value/mime) - MIME-типы
+- [Коды языков](https://webref.ru/html/value/lang) - для атрибута lang
+
+***
 
 ## Версии
 
@@ -154,12 +161,3 @@ sidebar_position: 0
 * Ширина и высота строчного элемента **зависит только от его содержания** (задать размеры с помощью CSS нельзя);
 * Можно задавать **только горизонтальные отступы** (css);
 * Cсылки и **форматирования текста**.
-
-***
-
-## Разное
-
-- [W3C](https://www.w3.org/) - Спецификация HTML
-- [WHATWG](https://whatwg.org/) - Представилели браузеров
-- [Список поддерживаемых расширений файлов](https://webref.ru/html/value/mime) - MIME-типы
-- [Коды языков](https://webref.ru/html/value/lang) - для атрибута lang
