@@ -164,6 +164,9 @@ p {
   /* Выравнивание текста по гор. ((для контейнеров)) */
   text-align: left | center | right | justify;
 
+  /* Выравнивание последней строки в параграфе */
+  text-align-last: left | center | right;
+
   /* Выравнивание текста по вер. (для элементов) */
   vertical-align: top | middle | bottom | baseline;
 
