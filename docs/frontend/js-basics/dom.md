@@ -1,5 +1,5 @@
 ---
-title: DOM +--
+title: DOM ---
 sidebar_position: 12
 ---
 

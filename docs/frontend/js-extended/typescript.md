@@ -1,5 +1,5 @@
 ---
-title: TypeScript +++
+title: TypeScript (кратко) +++
 sidebar_position: 6
 ---
 
