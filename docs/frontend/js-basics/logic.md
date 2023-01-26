@@ -1,6 +1,6 @@
 ---
 title: Логика +--
-sidebar_position: 3
+sidebar_position: 9
 ---
 
 ## Операторы сравнения

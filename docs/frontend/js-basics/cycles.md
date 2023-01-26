@@ -1,6 +1,6 @@
 ---
 title: Циклы +--
-sidebar_position: 5
+sidebar_position: 10
 ---
 
 ## forEach
@@ -52,3 +52,6 @@ sidebar_position: 5
 ### includes
 
 ***
+
+## Обработчики объектов
+

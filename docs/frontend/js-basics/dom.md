@@ -1,6 +1,6 @@
 ---
 title: DOM +--
-sidebar_position: 8
+sidebar_position: 12
 ---
 
 - [Element.getBoundingClientRect()](https://developer.mozilla.org/ru/docs/Web/API/Element/getBoundingClientRect)
