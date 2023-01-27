@@ -1,4 +1,4 @@
 ---
-title: Жизненный цикл
-sidebar_position: 4
+title: Жизненный цикл ---
+sidebar_position: 6
 ---

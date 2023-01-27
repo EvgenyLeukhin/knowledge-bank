@@ -1,7 +1,11 @@
 ---
 title: Компоненты +--
-sidebar_position: 2
+sidebar_position: 5
 ---
+
+- [Акцессоры;](https://learn.javascript.ru/property-accessors)
+- [Библиотека MobX.](https://mobx.js.org/README.html)
+- [Примеры Array.prototype.flat.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
 ## Компонентный подход
 

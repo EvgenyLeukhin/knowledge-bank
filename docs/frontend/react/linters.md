@@ -8,6 +8,26 @@ sidebar_position: 3
 - [Держи свой код чистым с помощью ESLint](https://frontend-stuff.com/blog/eslint/)
 - [Программируем лучше с ESLint, Prettier и TypeScript](https://tproger.ru/translations/setting-up-eslint-and-prettier/)
 
+### Тема «Code style». Статический анализ кода
+
+- [EditorConfig](https://editorconfig.org/).
+
+### Инструмент для скриптов
+
+- [ESlint](https://eslint.org/) — это инструмент статического анализа кода, написанного на любом выбранном стандарте JS.
+- [Rules in ESLint](https://eslint.org/docs/latest/rules/);
+- [Готовые конфиги](https://npms.io/search?q=eslint-config);
+- Библиотека [TSLint - deprecated](https://www.npmjs.com/package/tslint);
+
+### Полезное:
+
+- [ESlint. Знакомство](https://medium.com/@catwithapple/eslint-%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%81%D1%82%D0%B2%D0%BE-69ffc19edbf8);
+- [Сложно о простом](https://habr.com/ru/post/322550/);
+- [Держи свой код чистым](https://frontend-stuff.com/blog/eslint/);
+- Программируем лучше с [ESLint, Prettier и TypeScript](https://tproger.ru/translations/setting-up-eslint-and-prettier/).
+
+***
+
 ## Статический анализ кода
 
 Код в проекте должен быть единообразен. Представьте, что вы читаете книгу на русском, а там на каждой странице текст написан по абсолютно разным правилам грамматики, орфографии и пунктуации. При чём часто эти правила ещё и взаимоисключающие. Вроде понять можно, но приходится на это тратить много усилий. Так и с кодом. Если от файла к файлу одно и то же писать по разному, это вызовет не только трудности в «чтении» такого проекта, но и станет причиной споров. Пример:

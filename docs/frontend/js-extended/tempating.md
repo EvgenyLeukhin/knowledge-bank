@@ -1,5 +1,5 @@
 ---
-title: Шаблонизаторы +--
+title: Шаблонизаторы
 sidebar_position: 8
 ---
 

@@ -3,6 +3,22 @@ title: API
 sidebar_position: 1
 ---
 
+### XMLHttpRequest
+
+Подробнее про сигнатуру этого объекта и его методы расскажут:
+
+- [MDN](https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest),
+- [«Современный учебник JavaScript»](https://learn.javascript.ru/xmlhttprequest).
+
+### Fetch API
+
+- Метод [fetch](https://medium.com/webbdev/fetch-3d0b811ffcb5);
+- [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController);
+- [Axios](https://github.com/axios/axios) — модифицированный и более сложный аналог Fetch API;
+- Интересное [сравнение fetch и axios](https://habr.com/ru/company/ruvds/blog/477286/).
+
+***
+
 **Application Programming Interface** - интерфейс программы, который обеспечивает связь и обмен данными между клиентами и отдельными системами.
 
 Одна API может обращаться сама к себе или к другим сторонним API. API может быть открытой (доступной) или закрытой.

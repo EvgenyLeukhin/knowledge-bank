@@ -1,5 +1,5 @@
 ---
-title: TypeScript (кратко) +++
+title: TypeScript
 sidebar_position: 6
 ---
 
@@ -1001,7 +1001,27 @@ function fn3(p0, p1, p2, p3, p4){
 
 ***
 
+### Типизация react-компонента через generic
+
+```ts
+const Clip: React.FC<{ fill?: string; width?: number; height?: number }> = ({
+  fill,
+  width,
+  height,
+}) => {
+  return (
+```
+
+***
+
 ## Ссылки
+
+- [TS playground;](https://www.typescriptlang.org/play?#code/PTAEHUFMBsGMHsC2lQBd5oBYoCoE8AHSAZVgCcBLA1UABWgEM8BzM+AVwDsATAGiwoBnUENANQAd0gAjQRVSQAUCEmYKsTKGYUAbpGF4OY0BoadYKdJMoL+gzAzIoz3UNEiPOofEVKVqAHSKymAAmkYI7NCuqGqcANag8ABmIjQUXrFOKBJMggBcISGgoAC0oACCbvCwDKgU8JkY7p7ehCTkVDQS2E6gnPCxGcwmZqDSTgzxxWWVoASMFmgYkAAeRJTInN3ymj4d-jSCeNsMq-wuoPaOltigAKoASgAywhK7SbGQZIIz5VWCFzSeCrZagNYbChbHaxUDcCjJZLfSDbExIAgUdxkUBIursJzCFJtXydajBBCcQQ0MwAUVWDEQC0gADVHBQGNJ3KAALygABEAAkYNAMOB4GRonzFBTBPB3AERcwABS0+mM9ysygc9wASmCKhwzQ8ZC8iHFzmB7BoXzcZmY7AYzEg-Fg0HUiQ58D0Ii8fLpDKZgj5SWxfPADlQAHJhAA5SASPlBFQAeS+ZHegmdWkgR1QjgUrmkeFATjNOmGWH0KAQiGhwkuNok4uiIgMHGxCyYrA4PCCJSAA)
+- [Документация;](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+- [Ещё одна документация;](https://basarat.gitbook.io/typescript/)
+- [Большая русская книга-документация по TypeScript;](https://typescript-definitive-guide.ru/)
+- [Про типизацию;](https://www.youtube.com/watch?v=tybjhHPj3io)
+- [Эволюция TypeScript.](https://www.youtube.com/watch?v=srqqwuqzYMM)
 
 ### Тема «TypeScript I» - Проблемы со стандартами
 
@@ -1057,34 +1077,7 @@ function fn3(p0, p1, p2, p3, p4){
 
 - [Документация сборщика Parcel.](https://parceljs.org/recipes/react/#typescript)
 
-###  Полезные ссылки
-
-- [TS playground;](https://www.typescriptlang.org/play?#code/PTAEHUFMBsGMHsC2lQBd5oBYoCoE8AHSAZVgCcBLA1UABWgEM8BzM+AVwDsATAGiwoBnUENANQAd0gAjQRVSQAUCEmYKsTKGYUAbpGF4OY0BoadYKdJMoL+gzAzIoz3UNEiPOofEVKVqAHSKymAAmkYI7NCuqGqcANag8ABmIjQUXrFOKBJMggBcISGgoAC0oACCbvCwDKgU8JkY7p7ehCTkVDQS2E6gnPCxGcwmZqDSTgzxxWWVoASMFmgYkAAeRJTInN3ymj4d-jSCeNsMq-wuoPaOltigAKoASgAywhK7SbGQZIIz5VWCFzSeCrZagNYbChbHaxUDcCjJZLfSDbExIAgUdxkUBIursJzCFJtXydajBBCcQQ0MwAUVWDEQC0gADVHBQGNJ3KAALygABEAAkYNAMOB4GRonzFBTBPB3AERcwABS0+mM9ysygc9wASmCKhwzQ8ZC8iHFzmB7BoXzcZmY7AYzEg-Fg0HUiQ58D0Ii8fLpDKZgj5SWxfPADlQAHJhAA5SASPlBFQAeS+ZHegmdWkgR1QjgUrmkeFATjNOmGWH0KAQiGhwkuNok4uiIgMHGxCyYrA4PCCJSAA)
-- [Документация;](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-- [Ещё одна документация;](https://basarat.gitbook.io/typescript/)
-- [Большая русская книга-документация по TypeScript;](https://typescript-definitive-guide.ru/)
-- [Про типизацию;](https://www.youtube.com/watch?v=tybjhHPj3io)
-- [Эволюция TypeScript.](https://www.youtube.com/watch?v=srqqwuqzYMM)
-
 ###  Серия докладов Ильи Климова про типизацию:
 
 - [Надёжный JavaScript;](https://www.youtube.com/watch?time_continue=168&v=o9zh5EHrpQA&feature=emb_logo)
 - [Строгий JavaScript.](https://www.youtube.com/watch?v=etKOc80-cw0)
-
-###  Рубрика «Решаем вместе»: Реактивность
-
-- [Акцессоры;](https://learn.javascript.ru/property-accessors)
-- [Библиотека MobX.](https://mobx.js.org/README.html)
-- [Примеры Array.prototype.flat.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
-
-
-### Типизация react-компонента через generic
-
-```ts
-const Clip: React.FC<{ fill?: string; width?: number; height?: number }> = ({
-  fill,
-  width,
-  height,
-}) => {
-  return (
-```

@@ -1,6 +1,6 @@
 ---
-title: Стилизация +++
-sidebar_position: 3
+title: Стилизация
+sidebar_position: 7
 ---
 
 ## Аттрибут style
