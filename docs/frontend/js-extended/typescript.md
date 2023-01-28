@@ -81,7 +81,7 @@ ts-node script.ts
 {
   "compilerOptions": {
     "outDir": "dist",
-    "target": "es2016"
+    "target": "es2016",
     "declaration": false,
     "module": "commonjs",
     "strictNullChecks": true,

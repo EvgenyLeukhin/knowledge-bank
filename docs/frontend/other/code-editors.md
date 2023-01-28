@@ -37,6 +37,8 @@ sidebar_position: 2
 
 ### Plugins (optional)
 
+- **GitHub Copilot** (AI)
+- **TailWind** (Css IntelliSence)
 - **Live Share** (шеринг кода)
 - **REST Client** (аналог Thunder Client)
 - **MJML** (поддерка mjml файлов)
