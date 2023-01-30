@@ -6,7 +6,7 @@ sidebar_position: 4
 - О Proxy подробно и с примерами в [«Современном учебнике JavaScript»](https://learn.javascript.ru/proxy);
 - Новые [#приватные поля классов](https://medium.com/devschacht/javascripts-new-private-class-fields-c60daffe361b) в JavaScript.
 
-```Классы``` - это своего рода конструкторы объектов. В них можно создавать методы и наследовать свойства. 
+```Классы``` - это своего рода конструкторы объектов или "умные объекты", которые можно наследовать. В них можно создавать методы и наследовать свойства. 
 
 ```Классы в JS``` = функции, создающие объекты-заготовки, компоненты, которые можно многократно переиспользовать (экпортировать/импортировать, а также РАСШИРЯТЬ свойства) для создания типовых объектов, чтобы постоянно не дубрировать одинаковый код. Именуются с большой буквы.
 
@@ -56,7 +56,7 @@ class Footballer {
 ### Создание объектов (экземпляров класса)
 
 ```js
-// Создание экземпляра класса - передача объекта в параметре
+// Создание экземпляра класса - передача объекта c данными в параметре
 const player1 = new Footballer(players[0]);
 
 // объект
@@ -148,10 +148,10 @@ class LegengaryFootballer extends Footballer {
 
 ### get, set (Изменение свойств)
 
-Типа для создания особых свойств объектов, как бы «виртуальное» свойство.
+Надстройка над полями объектов. Типа для создания особых свойств объектов, как бы «виртуальное» свойство.
 
-- «геттер» – для чтения
-- «сеттер» – для записи
+- «геттер» – для чтения (можно вставлять логику при обращении к свойству)
+- «сеттер» – для записи (можно вставлять логику при записи свойства)
 
 Обычные свойства объектов - это свойства-данные, но есть еще другой тип свойств объектов - 
 свойства-аксессоры. По своей сути это функции, которые используются для присвоения и получения значения, но во внешнем коде они выглядят как обычные свойства объекта.
@@ -165,14 +165,26 @@ class LegengaryFootballer extends Footballer {
   get ageInMonths() {
     return this.age * 12
   }
+
+  set ageInMonths(value) {
+    this.age = value / 12;
+  }
   ...
 }
 
-// Выводим данное поле
+// Выводим данное поле - сработает get
 player2.ageInMonths; // 600
+
+// Присвоим значение этому полю - сработате set,
+player2.ageInMonths = 612;
+
+// ... который перезапишет поле aage
+player2.age; // 51
 ```
 
-Это поле менять нельзя. Если сделать запись:
+***
+
+Если бы **set** не было, то это поле изменить было бы нельзя
 
 ```js
 player2.ageInMonths = 1000;
@@ -190,7 +202,7 @@ player2.ageInMonths; // 600
 
 ### Короткая запись (без constructor())
 
-Если конструктор класса не содержит параметров, то конструктор можно не записывать.
+Если конструктор класса не содержит параметров, то конструктор можно не записывать, а сразу присваивать свойства.
 
 ```js
 class Someclass {
@@ -337,77 +349,75 @@ box.show();
 
   class Tooltip {
     constructor() {
-          this.el = document.createElement('div');
-          this.el.style.position = 'absolute';
+      this.el = document.createElement('div');
+      this.el.style.position = 'absolute';
 
-          this.el.classList.add(this.name);
-          this.el.classList.toggle(`${this.name}_active`, false);
+      this.el.classList.add(this.name);
+      this.el.classList.toggle(`${this.name}_active`, false);
 
-          this.listeners = [];
+      this.listeners = [];
 
-          document.body.appendChild(this.el);
+      document.body.appendChild(this.el);
 
-          this.onHide = this.onHide.bind(this);
-      }
+      this.onHide = this.onHide.bind(this);
+    }
     
-      get name() {
-          return 'tooltip';
+    get name() {
+      return 'tooltip';
+    }
+
+    get indent() {
+      return 5;
+    }
+
+    delegate(eventName, element, cssSelector, callback) {
+      const fn = event => {
+        if (!event.target.matches(cssSelector)) {
+          return;
+        }
+
+        callback(event);
+      };
+
+      element.addEventListener(eventName, fn);
+      this.listeners.push({ fn, element, eventName });
+
+      return this;
+    }
+
+    onShow = (event) => {
+      this.el.innerHTML = event.target.getAttribute('data-tooltip');
+      this.el.classList.toggle(`${this.name}_active`, true);
+
+      const spanRect = event.target.getBoundingClientRect();
+      const elRect = this.el.getBoundingClientRect();
+
+      let top = spanRect.bottom + this.indent;
+
+      if (top + elRect.height > document.documentElement.clientHeight) {
+        // если тултип не влезает по высоте, то поднимаем его над элементом
+        top = spanRect.top - elRect.height - this.indent;
       }
 
-      get indent() {
-          return 5;
+      this.el.style.top = `${top}px`;
+    }
+
+    onHide() {
+      this.el.classList.toggle(`${this.name}_active`, false);
+    }
+
+    attach(root) {
+      this
+        .delegate('mouseover', root, '[data-tooltip]', this.onShow)
+        .delegate('mouseout', root, '[data-tooltip]', this.onHide);
+
+    }
+
+    detach() {
+      for (let {fn, element, eventName} of this.listeners) {
+          element.removeEventListener(eventName, fn);
       }
-
-      delegate(eventName, element, cssSelector, callback) {
-          const fn = event => {
-              if (!event.target.matches(cssSelector)) {
-                  return;
-              }
-
-              callback(event);
-          };
-
-          element.addEventListener(eventName, fn);
-          this.listeners.push({ fn, element, eventName });
-
-          return this;
-      }
-
-      onShow = (event) => {
-          this.el.innerHTML = event.target.getAttribute('data-tooltip');
-          this.el.classList.toggle(`${this.name}_active`, true);
-
-          const spanRect = event.target.getBoundingClientRect();
-          const elRect = this.el.getBoundingClientRect();
-
-          let top = spanRect.bottom + this.indent;
-
-          if (top + elRect.height > document.documentElement.clientHeight) {
-              // если тултип не влезает по высоте, то поднимаем его над элементом
-              top = spanRect.top - elRect.height - this.indent;
-          }
-
-          this.el.style.top = `${top}px`;
-      }
-
-      onHide() {
-          this.el.classList.toggle(`${this.name}_active`, false);
-      }
-
-      attach(root) {
-          this
-              .delegate('mouseover', root, '[data-tooltip]', this.onShow)
-              .delegate('mouseout', root, '[data-tooltip]', this.onHide);
-
-      }
-
-      detach() {
-          
-          for (let {fn, element, eventName} of this.listeners) {
-              element.removeEventListener(eventName, fn);
-          }
-
-      }
+    }
   }
 
   window.Tooltip = Tooltip;

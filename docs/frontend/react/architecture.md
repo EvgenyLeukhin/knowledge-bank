@@ -15,6 +15,7 @@ sidebar_position: 1
 - [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) — you ain't gonna need it («вам это не понадобится»);
 - [GRASP](https://afly.co/hsh3) — документированные и стандартизированные принципы объектно-ориентированного анализа;
 - [Package Principles](https://en.wikipedia.org/wiki/Package_principles) — package cohesion (REP, CRP, CCP) и package coupling (ADP, SDP, SAP).
+- [Архитектура современных FRONTEND приложений. 5 видов. Преимущества и недостатки](https://www.youtube.com/watch?v=c3JGBdxfYcU&t=4s)
 
 ### Декомпозиция
 
