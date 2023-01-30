@@ -141,7 +141,20 @@ class LegengaryFootballer extends Footballer {
     super.showName();
   }
   ...
-}
+  addToDom() {
+    // create ul element
+    const ul = document.createElement('ul');
+
+    // create li elements and add to ul
+    for (const key in this) {
+      const li = document.createElement('li');
+      li.innerHTML = `${key}: <b>${this[key]}</b>`;
+      ul.appendChild(li);
+    }
+
+    // add ul to body
+    document.body.appendChild(ul);
+  }
 ```
 
 ***
