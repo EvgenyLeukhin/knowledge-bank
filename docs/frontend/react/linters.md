@@ -28,63 +28,110 @@ sidebar_position: 3
 
 ***
 
-## Статический анализ кода
+## ESLint 
 
-Код в проекте должен быть единообразен. Представьте, что вы читаете книгу на русском, а там на каждой странице текст написан по абсолютно разным правилам грамматики, орфографии и пунктуации. При чём часто эти правила ещё и взаимоисключающие. Вроде понять можно, но приходится на это тратить много усилий. Так и с кодом. Если от файла к файлу одно и то же писать по разному, это вызовет не только трудности в «чтении» такого проекта, но и станет причиной споров. Пример:
+ESLint — это утилита, которая может анализировать написанный код. Фактически, это статический анализатор кода, и он может находить синтаксические ошибки, баги или неточности форматирования. В других языках, например, Go, это является неотъемлемой частью языка программирования.
 
-```js
-let foo = 1,
-    bar = 2,
-    baz = 3;
+### 1. Установить ESLint:
 
-// vs    
+`npm i -g eslint` - Глобально
 
-let foo = 1;
-let bar = 2;
-let baz = 3; 
+`npm i --save-dev` - Локально
+
+***
+
+### 2. Инициализация:
+
+`eslint --init`
+
+Ответить на вопросы:
+
+```sh
+> To check syntax and find problems
+> JavaScript modules (import/export)
+> React
+> TypeScript
+> Browser
+> JSON
 ```
 
-Или space против tab. Или использование let и const:
+Автоматически установятся пакеты и создастся конфиг-файл .eslintrc.json
 
-Посмотрите на обычный блок кода, который прислали на ревью:
+***
 
-```tsx
-exports.list = function (req, res) { 
-  let notes = chats.findAll(); 
-  let data = { 
-    chats: chats,
-    meta: req['meta'] 
-  };
+### 3. `.vscode/settings.json` (Нужно установить плагин в браузере ESLint)
 
-  res.render('chats', data);
-}; 
+{
+  "editor.codeActionsOnSave": {
+     "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"]
+}
+
+***
+
+### 4. Установка конфига `eslint-config-airbnb`
+
+`npm install --save-dev eslint-config-airbnb `
+
+***
+
+### 5. .eslintignore
+
+Какие файлы не проверять (игнорировать)
+
+```json
+/dist
+**/*.min.js
+/node_modules
 ```
 
-Однако после ревью встретим вот такие комментарии:
+***
 
-```tsx
-exports.list = function (req, res) { // Используй стрелочные
-  let notes = chats.findAll(); // Используй const
-  let data = { // И здесь
-    chats: chats, // Здесь можно просто `chats,`
-    meta: req['meta'] // Здесь можно так: req.meta
-  };
+### 6. Конфиг-файл `.eslintrc.json`
 
-  res.render('chats', data);
-}; 
+Примерный конфиг
+
+
+```json
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "indent": ["error", 2],
+    "no-unused-vars": 2,
+    "max-len": [1, 100],
+    "max-params": [2, 3]
+  }
+}
 ```
 
-Подобное ревью максимально бесполезно. Оно отнимает много времени у коллег, которые будут друг другу писать одни и те же комментарии, не отличающиеся по смыслу.
-Определение единого код-стайла позволяет не только удобнее и проще поддерживать проект, но и уважать время коллег. 
-Чем полезен код-стайл:
+***
 
-- Упростит чтение кода всей команды;
-- Поможет избежать пустых конфликтов внутри;
-- Сделает код-ревью полезнее и быстрее;
-- Позволит избежать типичных ошибок в коде;
-- Сделает код качественнее.
+### 7. npm-cкрипты
 
-Чтобы правила были описаны не только в конфиге инструментов линтера, в котором обычно много наследования от чужих конфигов, — стоит завести в проекте [файл](https://github.com/ymaps/codestyle/blob/master/javascript.md) ```Codestyle.md```, где описать свои правила как письменную договорённость в команде:
+```json
+"lint": "eslint . ",
+"lint:fix": "eslint . --fix"
+```
 
 ***
 
@@ -111,11 +158,11 @@ indent_size = 2
 
 ***
 
-## Линтеры
-
 Линтеры — это полезные инструменты, которые в пределах своих возможностей будут держать код «в чистоте». Чтобы они полностью раскрыли свой потенциал, нужно уделить время их дополнительной настройке.
 
-### ESLint
+***
+
+## ESLint
 
 В проектной работе вы будете использовать два линтера. Первый — это [ESLint](https://eslint.org/). Он представляет собой инструмент статического анализа кода, написанного на любом выбранном стандарте JS. 
 Поскольку он нужен только на этапе разработки кода, сохраняем его зависимости для разработки (```devDependencies``` в ```package.json```). Установка из npm:
@@ -197,8 +244,7 @@ node_modules/.bin/eslint . --fix
 ESlint отлично работает в VS Code и WebStorm.
 
 ***
-
-### TypeScript
+## ESLint и TypeScript
 
 На просторах интернета можно встретить библиотеку TSLint. Она уже давно deprecated, что говорит о необходимости использовать ESlint для всего: JS или TS-файлов.
 
@@ -225,7 +271,140 @@ npm install --save-dev @typescript-eslint/eslint-plugin
 
 ***
 
-### Stylelint
+## Prettier
+
+### 1. Устоновить плагин для VSCode
+
+***
+
+### 2. Конфиг `.prettierrc`
+
+{
+  "endOfLine": "auto",
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "arrowParens": "avoid",
+  "semi": true,
+  "useTabs": false,
+  "trailingComma": "all",
+  "tabWidth": 2
+}
+
+***
+
+### 3. `.prettierignore`
+
+Ignore artifacts:
+
+```
+node_modules
+public
+.next
+.swc
+yarn.lock
+package-lock.json
+```
+
+***
+
+### 4. Установка пакетов `prettier`, `@types/prettier`
+
+`yarn add -D prettier @types/prettier`
+
+***
+
+### 5. Npm-скрипты
+
+```json
+"prettier:check": "prettier --check .",
+"prettier:fix": "prettier --write .",
+```
+
+***
+
+
+### 6. Конфиг редактора VsCode
+
+```json title="settings.json"
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "prettier.singleQuote": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+```
+
+***
+
+### 7. Подружим с ESLint
+
+`yarn add eslint-config-prettier`
+
+```json title="eslintrc.js"
+  ...
+  extends: ["plugin:react/recommended", "prettier"],
+  ...
+```
+***
+
+## Husky
+
+Нужно для того, чтобы были проверки во время коммита. ЧТобы наличие ошибок не давало сделать коммит.
+
+### 1. Установка husky и lint-staged
+
+- ```npm install husky -D```
+- ```npx husky install```
+- ```npx husky add .husky/pre-commit "npx tsc --noEmit && npx eslint --fix . && npx prettier --write ."```
+- ```npm install lint-staged -D```
+
+***
+
+### 2. Конфиг для lint-staged
+
+```js title="lint-staged.config.js"
+module.exports = {
+  // this will check Typescript files
+  '**/*.(ts|tsx)': () => 'yarn tsc --noEmit',
+
+  // This will lint and format TypeScript and                                             //JavaScript files
+  '**/*.(ts|tsx|js)': (filenames) => [
+    `yarn eslint --fix ${filenames.join(' ')}`,
+    `yarn prettier --write ${filenames.join(' ')}`,
+  ],
+
+  // this will Format MarkDown and JSON
+  '**/*.(md|json)': (filenames) =>
+    `yarn prettier --write ${filenames.join(' ')}`,
+}
+```
+
+***
+
+### 3. Запись скрипта
+
+Go to the file under the .husky folder and open pre-commit and then replace the last line with .
+npx lint-staged
+
+***
+
+## Stylelint
 
 Линтинг — это не уникальный инструмент исключительно для JS- или TS-кода. Например, можно анализировать стили. 
 Для этого есть специальный линтер, а именно stylelint. Устанавливается он так же легко, как и ESLint:
@@ -284,3 +463,64 @@ Chai, Mocha - тестеры
 Прекоммитеры
 
 list-staged, husky, precommit
+
+
+***
+
+## Почему нужны линтеры и CodeStyle
+
+Код в проекте должен быть единообразен. Представьте, что вы читаете книгу на русском, а там на каждой странице текст написан по абсолютно разным правилам грамматики, орфографии и пунктуации. При чём часто эти правила ещё и взаимоисключающие. Вроде понять можно, но приходится на это тратить много усилий. Так и с кодом. Если от файла к файлу одно и то же писать по разному, это вызовет не только трудности в «чтении» такого проекта, но и станет причиной споров. Пример:
+
+```js
+let foo = 1,
+    bar = 2,
+    baz = 3;
+
+// vs    
+
+let foo = 1;
+let bar = 2;
+let baz = 3; 
+```
+
+Или space против tab. Или использование let и const:
+
+Посмотрите на обычный блок кода, который прислали на ревью:
+
+```tsx
+exports.list = function (req, res) { 
+  let notes = chats.findAll(); 
+  let data = { 
+    chats: chats,
+    meta: req['meta'] 
+  };
+
+  res.render('chats', data);
+}; 
+```
+
+Однако после ревью встретим вот такие комментарии:
+
+```tsx
+exports.list = function (req, res) { // Используй стрелочные
+  let notes = chats.findAll(); // Используй const
+  let data = { // И здесь
+    chats: chats, // Здесь можно просто `chats,`
+    meta: req['meta'] // Здесь можно так: req.meta
+  };
+
+  res.render('chats', data);
+}; 
+```
+
+Подобное ревью максимально бесполезно. Оно отнимает много времени у коллег, которые будут друг другу писать одни и те же комментарии, не отличающиеся по смыслу.
+Определение единого код-стайла позволяет не только удобнее и проще поддерживать проект, но и уважать время коллег. 
+Чем полезен код-стайл:
+
+- Упростит чтение кода всей команды;
+- Поможет избежать пустых конфликтов внутри;
+- Сделает код-ревью полезнее и быстрее;
+- Позволит избежать типичных ошибок в коде;
+- Сделает код качественнее.
+
+Чтобы правила были описаны не только в конфиге инструментов линтера, в котором обычно много наследования от чужих конфигов, — стоит завести в проекте [файл](https://github.com/ymaps/codestyle/blob/master/javascript.md) ```Codestyle.md```, где описать свои правила как письменную договорённость в команде:

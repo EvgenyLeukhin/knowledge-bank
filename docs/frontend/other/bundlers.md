@@ -16,7 +16,35 @@ sidebar_position: 0
 
 ## NextJS
 
-TODO
+## Nextjss
+
+Инициализация проекта:
+
+```bash
+mkdir nextjs
+
+npx create-next-app@latest .
+
+? Would you like to use TypeScript with this project? › No / Yes
+
+? Would you like to use ESLint with this project? › No / Yes
+
+? Would you like to use experimental `app/` directory with this project?
+
+? Would you like to use `src/` directory with this project? › No / Yes
+
+? What import alias would you like configured? › @/*
+```
+
+### Declare file types
+
+```ts title="react-app-env.d.ts"
+declare module '*.png';
+declare module '*.svg';
+declare module '*.jpeg';
+declare module '*.jpg';
+declare module '*.scss';
+```
 
 ***
 

@@ -7,6 +7,10 @@ sidebar_position: 2
 
 [Download VS Code - visualstudio.com](https://code.visualstudio.com/)
 
+### Add code to path
+
+Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell ```Command: Install 'code' command in PATH command.```
+
 ### Преимущества
 
 - **Бесплатный** и **Кроссплатформенный**
