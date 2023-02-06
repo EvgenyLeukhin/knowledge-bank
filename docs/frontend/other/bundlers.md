@@ -1,5 +1,5 @@
 ---
-title: Бандлеры
+title: Бандлеры и сборки
 sidebar_position: 0
 ---
 

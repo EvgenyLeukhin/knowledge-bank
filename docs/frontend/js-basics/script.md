@@ -3,6 +3,7 @@ title: Script и Браузер
 sidebar_position: 0
 ---
 
+- [www.w3schools.com](https://www.w3schools.com/js/default.asp) — JS Tutorial
 - [«Современный учебник JavaScript»](https://learn.javascript.ru/) — learn.javascript.ru;
 - [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript) - Mozilla Development Network;
 - [Sorax](https://www.youtube.com/watch?v=H6G63NKRSi8&list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem) - видео-курс "Основы JS - Javascript-джедай" (2014)
