@@ -3,13 +3,21 @@ title: Редакторы кода
 sidebar_position: 2
 ---
 
+export const CODE = ({children}) => (
+  <code style={{ color: 'cyan' }}>
+    {children}
+  </code>
+);
+
 ## Visual Studio Code (VS Code)
 
 [Download VS Code - visualstudio.com](https://code.visualstudio.com/)
 
 ### Add code to path
 
-Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell ```Command: Install 'code' command in PATH command.```
+Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell:
+
+<CODE>Command: Install 'code' command in PATH command.</CODE>
 
 ### Преимущества
 
@@ -270,4 +278,23 @@ indent_size = 2
 end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
+```
+
+***
+
+## VIM (CLI editor)
+
+Редактирование файла из консоли.
+
+```vim <filename>``` - Редактирование файла
+
+```cat <filename>``` - посмотреть содержимое файла
+
+Режим редактирования: ```i``` или ```Insert```
+
+```
+:w - save
+:w! - save readonly file
+:q - quit
+:wq - save and quit
 ```
