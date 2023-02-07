@@ -1,9 +1,56 @@
 ---
-title: Стилизация
-sidebar_position: 7
+title: О React
+sidebar_position: 0
 ---
 
-## Аттрибут style
+[React official docs](https://ru.reactjs.org/) - ru.reactjs.org
+
+Библиотека использующая:
+
+- Virtual DOM, DOM который монтируется через JS 
+- Жизненный цикл компонентов
+- SPA. Смена роутов без перезагрузки страницы
+- Модульность. Во внутрь компонента можно импортировать все что угодно
+- ES6, jsx-шаблонизацию и синтаксический сахар
+
+***
+
+## SPA
+
+TODO
+
+***
+
+## Virtual DOM
+
+TODO
+
+***
+
+## Components
+
+TODO
+
+***
+
+## LifeCycle
+
+TODO
+
+***
+
+## hooks
+
+Глобальный Стейт и стейт-манипуляции как можно ближе к корневому родителю
+И состояния и стейт-экшены должны передаваться потомкам.
+
+TODO
+
+***
+
+## Стилизация
+
+### Аттрибут style
 
 Можно использовать инлайн-стили для точечной стилизации и для стилизации при каких-либо триггерах.
 
@@ -24,7 +71,7 @@ const styles = {
 
 ***
 
-## Глобальные стили
+### Глобальные стили
 
 Old-school aproach. Можно использовать только для каких-либо повторяющихся классов, которые будут доступны глобально.
 
@@ -38,7 +85,7 @@ import './global.css';
 
 ***
 
-## CSS-модули
+### CSS-модули
 
 В крупном проекте такие пересечения стилей получится отловить только случайно — когда они приведут к ошибкам оформления. Хорошо, если ошибка вскроется при тестировании. Хуже, когда она найдётся в продакшне.
 
@@ -56,7 +103,7 @@ import buttonStyles from './button.css';
 element.innerHTML = `<div class="${buttonStyles.button} ${buttonStyles.red}" ...`;
 ```
 
-### Применение
+#### Применение
 
 ```jsx
 import styles from './Button.module.css';
@@ -72,7 +119,9 @@ import styles from './Button.module.css';
 </button>
 ```
 
-## JSS - css in js
+***
+
+### JSS - css in js
 
 ```yarn add react-jss```
 
@@ -123,7 +172,7 @@ render(<App />, document.getElementById('root'))
 
 ***
 
-## Styled-component
+### Styled-component
 
 ```yarn add styled-components```
 
@@ -170,6 +219,7 @@ render(
 
 ***
 
-## PostCSS
+### PostCSS
 
 [Post CSS plugins](https://www.postcss.parts/)
+

@@ -1,5 +1,5 @@
 ---
-title: Стэк ++-
+title: React-cтэк ++-
 sidebar_position: 4
 ---
 
