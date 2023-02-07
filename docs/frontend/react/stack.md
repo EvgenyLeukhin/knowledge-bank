@@ -1,6 +1,6 @@
 ---
-title: React-cтэк ++-
-sidebar_position: 4
+title: React-cтэк +--
+sidebar_position: 1
 ---
 
 ### Стилизация

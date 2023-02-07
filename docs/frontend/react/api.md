@@ -1,6 +1,6 @@
 ---
-title: Запросы к REST API
-sidebar_position: 2
+title: REST API и запросы ---
+sidebar_position: 5
 ---
 
 ## axios

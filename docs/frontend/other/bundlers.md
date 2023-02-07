@@ -16,8 +16,6 @@ sidebar_position: 0
 
 ## NextJS
 
-## Nextjss
-
 Инициализация проекта:
 
 ```bash
@@ -38,7 +36,7 @@ npx create-next-app@latest .
 
 ### Declare file types
 
-```ts title="react-app-env.d.ts"
+```ts title="react-app-env.d.ts, next-env.d.ts"
 declare module '*.png';
 declare module '*.svg';
 declare module '*.jpeg';

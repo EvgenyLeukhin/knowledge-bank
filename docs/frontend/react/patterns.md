@@ -1,6 +1,6 @@
 ---
-title: Паттерны и методологии
-sidebar_position: 1
+title: Паттерны и методологии +++
+sidebar_position: 10
 ---
 
 ## Тема «Паттерны»
