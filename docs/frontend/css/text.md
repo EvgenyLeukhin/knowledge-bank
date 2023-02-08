@@ -21,7 +21,8 @@ sidebar_position: 2
   font-style: normal;
   font-weight: 400;
   src: 
-    local("Inter"), /* Поиск локальных шрифтов в ОС */
+     /* Поиск локальных шрифтов в ОС */
+    local("Inter Regular"), local("Inter-Regular"), local("Inter_Regular"),
     url("/fonts/inter/inter-regular.woff2") format("woff2"),
     url("/fonts/inter/inter-regular.woff") format("woff"),
     url("/fonts/inter/inter-regular.ttf") format("truetype");
@@ -34,7 +35,8 @@ sidebar_position: 2
   font-style: italic;
   font-weight: 700;
   src: 
-    local("Inter"),
+   /* Поиск локальных шрифтов в ОС */
+    local("Inter Bold Italic"), local("Inter-Bold-Italic"), local("Inter_Bold_Italic"),
     url("/fonts/inter/inter-bold-i.woff2") format("woff2"),
     url("/fonts/inter/inter-bold-i.woff") format("woff"),
     url("/fonts/inter/inter-bold-i.ttf") format("truetype");
