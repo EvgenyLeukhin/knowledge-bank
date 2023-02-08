@@ -41,6 +41,21 @@ sidebar_position: 2
     url("/fonts/inter/inter-bold-i.woff") format("woff"),
     url("/fonts/inter/inter-bold-i.ttf") format("truetype");
 }
+
+/* maven-pro-800 */
+@font-face {
+  font-family: "Maven Pro";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+  /* Поиск локальных шрифтов в ОС */
+  src: local("Maven Pro ExtraBold"), local("Maven-Pro-ExtraBold"),
+    local("Maven_Pro_ExtraBold"), local("Maven Pro Extra Bold"),
+    local("Maven-Pro-Extra-Bold"), local("Maven_Pro_Extra_Bold"),
+    url("/fonts/maven-pro/800/maven-pro-800.woff2") format("woff2"),
+    url("/fonts/maven-pro/800/maven-pro-800.woff") format("woff"),
+    url("/fonts/maven-pro/800/maven-pro-800.ttf") format("truetype");
+}
 ```
 
 Варианты свойства **font-display** (Отображение шрифта при загрузке): 
