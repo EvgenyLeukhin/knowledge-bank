@@ -258,6 +258,22 @@ const settings: {
 };
 ```
 
+Или через type:
+
+```ts
+
+type TSettings = {
+  color: string;
+  delay: number;
+  retry: boolean;
+}
+
+const settings: TSettings = {
+  color: '#F00',
+  delay: 2000,
+  retry: false
+};
+```
 ***
 
 ### Record
