@@ -5,9 +5,10 @@ sidebar_position: 9
 
 - [megatags.co](https://megatags.co/#generate-tags) - Генератор мета-тегов
 - [Meta-tags generator](https://webcode.tools/) - Генератор мета-тегов 2
-- [Facebook sharing](https://developers.facebook.com/tools/debug/) - Проверка og-тегов
 - [Favicons generator](https://realfavicongenerator.net/) - Генератор фавиконок
 - [Logo generator](https://looka.com/logo-maker/) - Генератор логотипов
+- [Facebook sharing](https://developers.facebook.com/tools/debug/) - Проверка og-тегов
+- [Проверка meta-тегов](https://socialsharepreview.com/) - Проверка meta-тегов
 
 ***
 

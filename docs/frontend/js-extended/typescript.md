@@ -1097,3 +1097,8 @@ const Clip: React.FC<{ fill?: string; width?: number; height?: number }> = ({
 
 - [Надёжный JavaScript;](https://www.youtube.com/watch?time_continue=168&v=o9zh5EHrpQA&feature=emb_logo)
 - [Строгий JavaScript.](https://www.youtube.com/watch?v=etKOc80-cw0)
+
+<!-- as, instandeOf -->
+<!-- call, bind, aply -->
+<!-- regExp -->
+<!-- new Map -->
