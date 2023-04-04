@@ -17,7 +17,7 @@ TODO
 
 ## Redux
 
-TODO
+`yarn add @reduxjs/toolkit react-redux`
 
 ***
 
