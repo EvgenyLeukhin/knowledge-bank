@@ -29,6 +29,12 @@ registry=https://npm.yandex.net/
 
 ***
 
+### nvm 
+
+TODO: How to install
+
+***
+
 ## Импорты в nodejs
 
 ### require

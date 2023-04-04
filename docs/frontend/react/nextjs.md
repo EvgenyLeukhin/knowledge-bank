@@ -3,4 +3,6 @@ title: NextJS ---
 sidebar_position: 8
 ---
 
-TODO
+Install with TypeScript:
+
+```npm create-next-app@latest --ts```

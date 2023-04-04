@@ -1,16 +1,20 @@
 ---
-title: Scenarios
+title: Scenarios ---
 sidebar_position: 5
 ---
 
-## Расказ о себе
+## About myself
 
 TODO
 
-## Митинг
+## Meeting
 
 TODO
 
-## Шопинг
+## Shoping
+
+TODO
+
+## Travel
 
 TODO

@@ -1,5 +1,5 @@
 ---
-title: Видео
+title: Видео ---
 sidebar_position: 3
 ---
 
