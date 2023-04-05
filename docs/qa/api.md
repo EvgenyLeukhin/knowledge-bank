@@ -18,15 +18,6 @@ sidebar_position: 8
 
 ***
 
-## Тестовые API
-
-- [Swapi](https://swapi.dev/) - ```https://swapi.dev/api```
-- [REQRES](https://reqres.in/) - ```https://reqres.in/```
-- [Список университетов](http://universities.hipolabs.com/) - ```http://universities.hipolabs.com/search?name=middle&country=Turkey```
-- [GraphQL and REST API for Testing and Prototyping](https://gorest.co.in/) - ```https://gorest.co.in/public/v2/users```
-
-***
-
 ## Postman
 
 

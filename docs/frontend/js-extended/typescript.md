@@ -10,6 +10,7 @@ sidebar_position: 6
 - [Андрей Старовойт — Эволюция TypeScript](https://www.youtube.com/watch?v=srqqwuqzYMMo)
 - [Илья Климов — Надежный JavaScript](https://www.youtube.com/watch?v=o9zh5EHrpQA&t=168s)
 - [Илья Климов — «Строгий» JavaScript](https://www.youtube.com/watch?v=etKOc80-cw0)
+- [json-to-typescript](https://transform.tools/json-to-typescript)
 
 **TypeScript** — это тот же JavaScript, а не другой язык программирования. Он обратно совместим с JavaScript — после компиляции разработчик получит обычный JS.
 TypeScript отличается от JavaScript возможностью явного статического назначения типов.

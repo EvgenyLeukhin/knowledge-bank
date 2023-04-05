@@ -3,11 +3,8 @@ title: Текст
 sidebar_position: 2
 ---
 
-* [emojio.ru](https://emojio.ru/) - Таблица символов Emoji
-* [freecodecamp.org](https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/) - Таблица символов Emoji
-* [W3schools](https://www.w3schools.com/charsets/ref_utf_symbols.asp) - Таблица символов
-* [Unicode-table](https://unicode-table.com/ru/html-entities/) - Таблица символов
-* [Html5book](https://html5book.ru/specsimvoly-html) - Таблица символов
+* [emojio.ru](https://emojio.ru/) | [getemoji.com](https://getemoji.com/) | [freecodecamp.org](https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/) - Emoji
+* [W3schools](https://www.w3schools.com/charsets/ref_utf_symbols.asp) | [Unicode-table](https://unicode-table.com/ru/html-entities/) | [Html5book](https://html5book.ru/specsimvoly-html) - Символы
 
 ***
 
