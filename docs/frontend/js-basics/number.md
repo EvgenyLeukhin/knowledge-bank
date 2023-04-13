@@ -77,7 +77,7 @@ value--; // value = value - 1; (меняет значение на следую�
 
 ### Infinity и NaN
 
-Специальные типы number
+Специальные типы number (Частные случаи number)
 
 ```js
 123 / 0; // Infinity
@@ -181,3 +181,10 @@ typeof 10n; // BigInt
 ***
 ***
 <br />
+
+## TypeScript 
+
+```ts
+const someNumber1: number = 123;
+const someNumber2: 123 | 321 = 123;
+```

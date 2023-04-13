@@ -23,3 +23,13 @@ typeof a; // undefined
 
 if (a === undefined) console.log('Переменная не определена');
 ```
+
+***
+
+## TypeScript 
+
+```ts
+const some1: null = null;
+const some2: undefined = undefined;
+const some3: null | undefined = undefined;
+```

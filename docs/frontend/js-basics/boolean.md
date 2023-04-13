@@ -94,3 +94,17 @@ false || true; // true (которое правее)
 1 !== '1'; // true
 ```
 
+Двойное отрицание. Обычно используется для конвертации типов, но лучше использовать Boolean
+
+```js
+!!'true'; // true
+!''; // false
+```
+
+***
+
+## TypeScript 
+
+```ts
+const someBool: boolean = true;
+```
