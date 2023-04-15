@@ -1,5 +1,5 @@
 ---
-title: Лучшие практики +++
+title: Лучшие практики
 sidebar_position: 2
 ---
 

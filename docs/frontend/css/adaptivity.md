@@ -60,7 +60,7 @@ sidebar_position: 9
 - **768px, 810px, 820px, 834px** - iPads (portrait)
 - **568px - 926px** - mobile (landscape)
 
-### Mobile (320px —  480px)
+### Mobile (360px —  480px)
 
 - **428px** - iPhone 12/13/14 Pro Max
 - **414px** - iPhone 11 + 6/7/8 Plus
