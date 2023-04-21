@@ -7,6 +7,19 @@ sidebar_position: 9
 - [Библиотека MobX.](https://mobx.js.org/README.html)
 - [Примеры Array.prototype.flat.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
+## Передать event по клику
+
+```tsx
+const onTableCellClick = (e: React.MouseEvent) => {
+  console.log(e);
+  // do something
+}
+
+...
+
+<div onClick={(e) => onTableCellClick(e)}>Some jsx-element</div>
+```
+
 ## Реактивный компонент
 
 ### Представление

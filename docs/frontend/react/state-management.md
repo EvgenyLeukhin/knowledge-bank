@@ -27,7 +27,15 @@ Redux лучше понять на примере с банком.
 
 `yarn add @reduxjs/toolkit react-redux @types/react-redux`
 
-TODO
+Отличия от классического redux:
+
+- Не нужны acttion types
+- Не нужны acttion creators для синхронных (нужны только для асинхронных экшенов)
+- Не нужен ```redux-thunk``` и middleware (уже идет "из коробки")
+- Не нужен ```redux-devtools``` (уже идет "из коробки")
+- Может менять (мутировать) стейт, в отличие от классического, где всегда возвращается новый стейт
+
+<img src="../../../../img/frontend/redux-actions.png" width="400" alt="redux-actions.png" />
 
 ***
 
