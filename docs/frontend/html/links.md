@@ -11,7 +11,7 @@ sidebar_position: 5
 
 ```html
 <!-- Простая ссылка на сторонний ресурс в новой вкладке -->
-<a href="http://ya.ru"  target="_blank" rel="nofollow" title="Click me!">
+<a href="http://ya.ru"  target="_blank" rel="nofollow noreferrer" title="Click me!">
   Ссылка на сайт Яндекс
 </a>
 
