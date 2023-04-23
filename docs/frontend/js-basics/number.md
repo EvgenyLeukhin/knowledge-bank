@@ -3,6 +3,16 @@ title: Number и BigInt
 sidebar_position: 3
 ---
 
+### TypeScript
+
+```ts
+const someNumber: number = 123;
+const someNumber2: Readonly<number> = 321;
+const someNumber3: 123 | 321 = 123;
+```
+
+***
+
 Ограничен диапозоном ```±(2 в 53-ей - 1)```.
 
 ```js

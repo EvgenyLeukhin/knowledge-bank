@@ -59,9 +59,8 @@ export default function Home() {
           <li><b>Web-design</b> +++</li>
           <li><b>English</b> +++</li>
           <li><b>CSS</b> +++</li>
-          <li><b>Начать JS, React</b> ---</li>
-          <li><b>Nodejs, GraphQL</b> ---</li>
-          <li><b>Сборки</b> ---</li>
+          <li><b>JS, React</b> --&gt;</li>
+          <li><b>Nodejs, GraphQL</b> X</li>
         </ul>
 
       </main>

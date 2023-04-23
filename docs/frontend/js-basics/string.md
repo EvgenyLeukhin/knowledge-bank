@@ -3,6 +3,16 @@ title: String и Symbol
 sidebar_position: 2
 ---
 
+### TypeScript
+
+```ts
+const someString1: string = 'Some string';
+const someString2: Readonly<string> = 'Some string';
+const someString3: 'Some1' | 'Some2' = 'Some1';
+```
+
+***
+
 Строка. Любое выражение в кавычках будет строкой (одинарные, двойные, обратные - Template literals);
 
 Строки в JS в кодировке **UTF-16**.
@@ -297,12 +307,4 @@ console.log(person[Symbol.for('password-open')]); // 'John321'
 Посмотреть все сиволы, которые есть в объекте
 ```js
 console.log(Object.getOwnPropertySymbols(person)); // (2) [Symbol(password-closed), Symbol(password-open)]
-```
-
-### TypeScript
-
-```ts
-const someString1: string = 'Some string';
-const someString2: Readonly<string> = 'Some string';
-const someString3: 'Some1' | 'Some2' = 'Some1';
 ```
