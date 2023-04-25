@@ -66,44 +66,6 @@ for (let key in person) {
 
 ***
 
-## Сравнение объектов
-
-Функциии - это тоже объекты. Можно создавать ссылки на объекты и сравнивать.
-
-```js
-function a() {};
-
-const b = a;
-
-console.log(a === b); // true
-console.log([b].includes(a)); // true 
-```
-
-```js
-const callback1 = () => {
-  console.log('Event emitted');
-}
-
-const callback2 = () => {
-  console.log('Event emitted');
-}
-
-const b1 = callback1;
-const b2 = callback2;
-
-// сравнение объектов
-b1 === callback1; // true
-b1 === callback2; // false
-b2 === callback1; // false
-b2 === callback2; // true
-
-
-// так как анонимная функция не содержит ссылки и поэтому будут не равны
-callback !== () => console.log('Event emitted');;
-```
-
-***
-
 ## Proxy и Reflect
 
 Своего рода гибкая надстройка над объектом. Можно добавлять логику для обычных действий взаимодействия с объектамии.

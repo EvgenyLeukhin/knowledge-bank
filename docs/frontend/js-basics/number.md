@@ -3,6 +3,15 @@ title: Number и BigInt
 sidebar_position: 3
 ---
 
+## TypeScript 
+
+```ts
+const someNumber1: number = 123;
+const someNumber2: 123 | 321 = 123;
+```
+
+---
+
 Ограничен диапозоном ```±(2 в 53-ей - 1)```.
 
 ```js
@@ -176,15 +185,4 @@ Math.LOG10E;  // 0.434
 ```js
 typeof 1234567890123456789012345678901234567890n; // BigInt
 typeof 10n; // BigInt
-```
-
-***
-***
-<br />
-
-## TypeScript 
-
-```ts
-const someNumber1: number = 123;
-const someNumber2: 123 | 321 = 123;
 ```

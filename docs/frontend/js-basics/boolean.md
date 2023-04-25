@@ -3,6 +3,14 @@ title: Boolean
 sidebar_position: 4
 ---
 
+## TypeScript 
+
+```ts
+const someBool: boolean = true;
+```
+
+---
+
 ```js
 true;
 false;
@@ -99,12 +107,4 @@ false || true; // true (которое правее)
 ```js
 !!'true'; // true
 !''; // false
-```
-
-***
-
-## TypeScript 
-
-```ts
-const someBool: boolean = true;
 ```
