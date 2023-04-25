@@ -93,12 +93,30 @@ const person = {
 // some object method
 let person = {
   name: 'Evgeny',
+
   showName() {
-    return `${this.name}`;
+    return this.name;
   },
 };
 
 person.showName(); // 'Evgeny'
+```
+
+## this
+
+Обращение к ТЕКУЩЕМУ объекту. this указывает на принадлежность к текущему объекту, как бы глубоко не находились его свойства.
+
+```ts
+// старая запись
+var table = {
+  height: 100,
+  legsCount: 4,
+  changeHeight: function() {
+    this.height = 300;   }
+};
+
+table.changeHeight();
+table.height; // 300
 ```
 
 ---
@@ -129,27 +147,6 @@ const { title: 'anoter value', width } = options; // bad practive
 
 // nesting
 const { title, width: { fullWidth } } = options;
-```
-
----
-
-## this
-
-- Обращение к ТЕКУЩЕМУ объекту. this указывает на принадлежность к текущему объекту, как бы глубоко не находились его свойства.
-
-- Сейчас (2023) this уже в основном не используется, так как все перешли на стрелочный метод записи, у которого нет ```this```.
-
-```ts
-// старая запись
-var table = {
-  height: 100,
-  legsCount: 4,
-  myFunc: function() {
-    this.height = 300;   }
-};
-
-// новая запись
-TODO
 ```
 
 ---
@@ -233,21 +230,68 @@ callback !== () => console.log('Event emitted');;
 
 ## Объекты-ссылки
 
-TODO
+```ts
+const someObj = {
+  name: 'John',
+  surname: 'Smith',
+};
+
+const someObj2 = someObj;
+const someObj3 = someObj;
+
+// ссылки совпадают
+someObj === someObj2; // true
+someObj === someObj3; // true
+someObj2 === someObj3; // true
+
+// при изменеии каких-ли свойств, будет изменение у ссылки
+// и поменяется во всех копиях
+someObj2.age = 37;
+
+someObj2.age; // 37
+someObj3.age; // 37
+someObj.age; // 37
+
+```
 
 ---
 
 ## Spread оператор
 
-TODO
+Исползуется для копирования свойств объекта и при сравнении этих объектов не будет общей ссылки.
+
+```ts
+const someObj = {
+  name: 'John',
+  surname: 'Smith',
+};
+
+const someObj2 = {
+  ...someObj,
+};
+
+someObj === someObj2; // false
+```
 
 ---
 
 ## JSON
 
+[MDN-link](http://localhost:3000/knowledge-bank/docs/frontend/js-basics/objects/#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%8E%D1%89%D0%B8%D0%B5-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)
+
 React apps works with JSON API.
 
-TODO
+JSON является синтаксисом для сериализации объектов, массивов, чисел, строк логических значений и значения null. Он основывается на синтаксисе JavaScript, однако всё же отличается от него: не каждый код на JavaScript является JSON, и не каждый JSON является кодом на JavaScript.
+
+```json
+{
+  "some-prop1": 123,
+  "some-prop2": [...],
+  "some-prop3": {},
+  "some-prop4": "String",
+}
+```
+
 
 ---
 
@@ -264,3 +308,11 @@ const user1 = makeUser('John', 33);
 
 user1; // { name: 'John', age: 33 }
 ```
+
+## Object.assign
+
+TODO
+
+## Object.keys
+
+TODO
