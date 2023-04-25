@@ -5,7 +5,99 @@ sidebar_position: 6
 
 ## TypeScript
 
-TODO
+Объекты в TypeScript можно описывать с помощью ключевого слова ```object```. Про это ключевое слово нужно знать, но не стоит использовать. Этот тип не говорит почти ни о чём ни компилятору, ни человеку. И последнее — даже важнее.
+
+```ts
+// Плохо — ничего не знаем про содержимое объекта
+const colors: object = {
+  red: '#F00',
+  green: '#0F0',
+  blue: '#00F'
+}; 
+```
+
+Намного лучше описывать объекты так, как они есть — со всеми полями и типами данных в них. Для этого используется такая запись:
+
+```ts
+const settings: {
+  color: string;
+  delay: number;
+  retry: boolean;
+} = {
+  color: '#F00',
+  delay: 2000,
+  retry: false
+};
+```
+
+Или через type:
+
+```ts
+type TSettings = {
+  color: string;
+  delay: number;
+  retry: boolean;
+}
+
+const settings: TSettings = {
+  color: '#F00',
+  delay: 2000,
+  retry: false
+};
+```
+
+### Record
+
+Иногда бывают задачи, где не важно знать о ключах объекта (например, они динамически добавляются и удаляются), но важно знать, что в значениях лежат только числа (например делаем счётчик чего-то). В таких случаях поможет тип ```Record```:
+
+```ts
+// Record<тип_ключа, тип_значения>
+const counter: Record<string, number> = {
+    apple: 1,
+    orange: 8,
+    banana: 6,
+    grape: 5
+};
+```
+
+Альтернативой Record может быть вот такая запись:
+
+```ts
+const counter: { [key: string]: number } = {
+  apple: 1,
+  orange: 8,
+  banana: 6,
+  grape: 5
+};
+```
+
+Этот синтаксис стоит иметь в виду при работе с типами, но для продуктовых задач чаще хватает Record или явного описания объекта.
+
+***
+
+### Опциональные ключи
+
+В объектах также можно описать опциональные ключи — они могут быть, а могут не быть. Для этого используется символ ```?``` после ключа:
+
+
+```ts
+// Это ок, поля price нет в объекте
+const price: { name: string; price?: number } = {
+  name: 'Товар1'
+};
+
+// Это ок, поле price есть и имеет тип number
+const price2: { name: string; price?: number } = {
+  name: 'Товар1',
+  price: 5
+};
+
+// Не ок, тип price не попадает в number
+const price3: { name: string; price?: number } = {
+  name: 'Товар1',
+  price: '5'
+}; 
+```
 
 ---
 
@@ -35,6 +127,9 @@ TODO
 const a = new Object();
 a.someProperty = true;
 
+const someDynamicField = 'hasCar';
+const key = 'name';
+
 
 // с помощью переменной (новый способ)
 const person = {
@@ -42,8 +137,13 @@ const person = {
   sername: 'Leukhin',
   age: 33,
   man: true,
-  "likes birds": true,
+  "likes birds": true, // свойство в несколько слов
+  [someDynamicField]: true, // свойство-переменная в []
 };
+
+person.hasCar; // true
+
+person[key]; // 'Evgeny'
 ```
 
 ---
@@ -315,9 +415,49 @@ const user1 = makeUser('John', 33);
 user1; // { name: 'John', age: 33 }
 ```
 
+---
+
+## Optional chaining
+
+```ts
+const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 33,
+  // wife: {
+  //   name: 'Inna',
+  //   surname: 'Begunova',
+  // }
+};
+
+person.wife.name; // Uncaught TypeError: Cannot read properties of undefined (reading 'name') 
+person?.wife?.age; // undefined
+```
+
+---
+
 ## Object.assign
 
-TODO
+Создание нового объекта по подобию другого.
+
+```ts
+// исходный объект
+const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 33,
+};
+
+// новый объект
+const person2 = Object.assign(person);
+
+person2.age = 37; // не перепишет person.age
+
+// создание нового объекта + добавление новых полей
+const person3 = Object.assign(person, { city: 'Omsk', region: 55 }); // { name: 'Evgeny', sername: 'Leukhin', age: 33, city: 'Omsk', region: 55 }
+```
+
+---
 
 ## Object.keys
 
