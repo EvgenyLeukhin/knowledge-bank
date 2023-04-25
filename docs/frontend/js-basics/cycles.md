@@ -55,3 +55,4 @@ sidebar_position: 10
 
 ## Обработчики объектов
 
+### for / in
