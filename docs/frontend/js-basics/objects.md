@@ -218,7 +218,8 @@ var table = {
   height: 100,
   legsCount: 4,
   changeHeight: function() {
-    this.height = 300;   }
+    this.height = 300;
+  }
 };
 
 table.changeHeight();
@@ -253,20 +254,6 @@ const { title: 'anoter value', width } = options; // bad practive
 
 // nesting
 const { title, width: { fullWidth } } = options;
-```
-
----
-
-## ```__proto__```
-
-```__proto__``` - особое свойство всех объектов, в котором нельзя что-либо изменять. Содержит много встроенных свойст.
-
-Можно создавать объекты-прототипы
-
-```ts
-// с помощью класса Object принимает объект прототип
-// создание объекта с наследуемыми свойствами в прототипе
-const b = Object.create({ x: 10, y: 20 });
 ```
 
 ---
@@ -330,6 +317,20 @@ b2 === callback2; // true
 
 // так как анонимная функция не содержит ссылки и поэтому будут не равны
 callback !== () => console.log('Event emitted');;
+```
+
+с помощью Object.is
+
+```js
+const person1 = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 37,
+};
+
+const person2 = person1;
+
+const isEqual = Object.is(person1, person2); // true
 ```
 
 ---
@@ -436,6 +437,31 @@ person?.wife?.age; // undefined
 
 ---
 
+## Object.create
+
+Более гибкое создание объекта.  
+
+```__proto__``` - особое свойство всех объектов, в котором нельзя что-либо изменять. Содержит много встроенных свойств.
+
+Можно создавать объекты-прототипы
+
+```ts
+// с помощью класса Object принимает объект прототип
+// создание объекта с наследуемыми свойствами в прототипе
+const b = Object.create(
+  // поля прототипы (запишутся в __proto__)
+  {  x: 10,  y: 20  },
+
+  // реальные поля
+  {
+    name: { value: 'John' },
+    surname: { value: 'Smith' },
+  }
+);
+```
+
+---
+
 ## Object.assign
 
 Создание нового объекта по подобию другого.
@@ -449,7 +475,9 @@ const person = {
 };
 
 // новый объект
-const person2 = Object.assign(person);
+const person2 = Object.assign(person, {
+  age: 37, // переписываем поле
+});
 
 person2.age = 37; // не перепишет person.age
 
@@ -459,6 +487,99 @@ const person3 = Object.assign(person, { city: 'Omsk', region: 55 }); // { name: 
 
 ---
 
-## Object.keys
+## Object.keys, Object.values и Object.entries
 
-TODO
+```ts
+const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 37,
+};
+
+// получить массив из названий полей
+Object.keys(person); // ['name', 'sername', 'age']
+
+// получить массив значений
+Object.values(person); // ['Evgeny', 'Leukhin', 37]
+
+// получить массив массивов
+Object.entries(person);
+// (2) ['name', 'Evgeny']
+// (2) ['sername', 'Leukhin']
+// (2) ['age', 33]
+
+```
+
+## Object.freeze
+
+"Заморозить" объект от изменений. Нельзя изменять\добавлять\удалять.
+
+```ts
+const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 37,
+};
+
+Object.freeze(person);
+
+person.age = 33; // пытаемся изменить
+
+person.age; // 37 (не изменилось)
+
+```
+
+***
+
+ ## Object.seal
+
+ Можно  изменять, но нельзя добавлять\удалять.
+
+```ts
+const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 37,
+};
+
+Object.seal(person);
+
+person.age = 33; // пытаемся изменить
+person.email = 'some@email.ru'; // пытаемся добавить новое свойство
+
+person.age; // 33 (изменилось)
+person.email; // undefined (не добавилось)
+```
+
+***
+
+ ## Обработка объектов циклом for
+
+ ```ts
+ const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 37,
+};
+
+const keys = Object.keys(person); // ключи
+const values = Object.values(person); // значчения
+const entries = Object.entries(person); // массивы [ключ, значение]
+
+// вывод всех названий полей
+for (const key of keys) {
+  console.log(key);
+}
+
+// вывод всех значчений полей
+for (const value of values) {
+  console.log(value);
+}
+
+// вывод всех ключей и значений
+for (const [key, value] of entries) {
+  console.log(key, value);
+}
+ ```
+
+
