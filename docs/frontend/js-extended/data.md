@@ -42,9 +42,11 @@ export const typeOfPickups: { [key: string]: string } = {
   [PickUpType.STOCK_DROPSHIPING]: "Склад ДШ",
 }
 
-// Проверяем если объект имеет такое свойство, то подставляем его значение
+let str = '';
+
 } else if (name === 'drugstoreType') {
-  str = typeOfPickups.hasOwnProperty(value) ? (typeOfPickups[value as string] as string)
+  // Проверяем если объект имеет такое свойство, то подставляем его значение
+  str = typeOfPickups.hasOwnProperty(value) ? (typeOfPickups[value as string] as string) : '';
 ```
 
 Еще пример
