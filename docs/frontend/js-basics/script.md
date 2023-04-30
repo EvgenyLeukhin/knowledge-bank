@@ -3,6 +3,7 @@ title: Script и Браузер
 sidebar_position: 0
 ---
 
+- [shortcode.dev](https://shortcode.dev/javascript-cheatsheet#javascript-cheatsheet) — JS-cheatsheet
 - [www.w3schools.com](https://www.w3schools.com/js/default.asp) — JS Tutorial
 - [«Современный учебник JavaScript»](https://learn.javascript.ru/) — learn.javascript.ru;
 - [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript) - Mozilla Development Network;

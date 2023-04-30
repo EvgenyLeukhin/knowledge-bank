@@ -1,5 +1,5 @@
 ---
-title: Storage ---
+title: Storage
 sidebar_position: 14
 ---
 
@@ -11,12 +11,28 @@ sidebar_position: 14
 Не поддерживается старыми браузерами, например, IE 7 и ниже.
 Работает по правилу ограничения домена (same origin policy). То есть сохранённые данные доступны только для одного источника.
 
+```js
+// взять
+localStorage.getItem('some-ls-field');
+
+// сохранить
+localStorage.setItem('some-ls-field', someValue);
+
+// удалить
+localStorage.removeItem('some-ls-field');
+
+// очистить localStorage
+localStorage.clear();
+```
+
 ## Session Storage (сессионное хранилище)
 
 Хранит данные, пока продолжается текущая сессия. Когда пользователь закрывает браузер, данные становятся недоступными.
 Используется контекст браузера верхнего уровня, поэтому каждая вкладка браузера хранит уникальные данные.
 Объём данных больше чем в Cookie.
 Не поддерживается старыми браузерами, например, IE 7 и ниже.
+
+---
 
 ## Cookie
 
@@ -28,7 +44,36 @@ sidebar_position: 14
 Объём данных не превышает 4 Кбайт.
 Cookie могут быть защищёнными, в этом случае их содержимое нельзя получить на стороне клиента. Это важно для аутентификации при хранении пользовательских токенов.
 
-***
+```js
+// 
+const readCookie = document.cookie;
+
+// сохранить в куки поле user со значением John, которое сотрется 19 Jan 2038 03:14:07 GMT
+document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+document.cookie = "cookieName=Cookie value; expires=Sun, 15 Jun 2019 23:59:00 UTC; path=/javascript-cheatsheet" // Cookie with an expiry date and a path set
+
+// с переменными, установить на год
+document.cookie = `cookie_name=${cookie_value}; expires=${new Date(new Date().getTime()+1000*60*60*24*365).toGMTString()}; path=/`;
+```
+
+- [js-cookie](https://www.npmjs.com/package/js-cookie)
+- [@types/js-cookie](https://www.npmjs.com/package/@types/js-cookiecookie)
+
+```js
+// set
+Cookies.set('name', 'value');
+Cookies.set('name', 'value', { expires: 7 });
+
+// get
+Cookies.get('name') // => 'value'
+Cookies.get('nothing') // => undefined
+Cookies.get() // => { name: 'value' }
+
+// remove
+Cookies.remove('name')
+```
+
+---
 
 ## Stateless
 
