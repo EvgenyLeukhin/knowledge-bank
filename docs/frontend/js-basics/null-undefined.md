@@ -3,6 +3,16 @@ title: Null и Undefined
 sidebar_position: 5
 ---
 
+## TypeScript 
+
+```ts
+const some1: null = null;
+const some2: undefined = undefined;
+const some3: null | undefined = undefined;
+```
+
+---
+
 ## Null
 
 Задаётся строго. Обычно как инициализируюшее значение, а после каких-либо операций ему может присваиваться любой другой тип. В отличие от usdefined, здесь переменная определена и равна null.
@@ -22,14 +32,4 @@ let a;
 typeof a; // undefined
 
 if (a === undefined) console.log('Переменная не определена');
-```
-
-***
-
-## TypeScript 
-
-```ts
-const some1: null = null;
-const some2: undefined = undefined;
-const some3: null | undefined = undefined;
 ```

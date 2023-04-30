@@ -1,5 +1,5 @@
 ---
-title: Линтеры и тестеры ++-
+title: Линтеры и тестеры
 sidebar_position: 4
 ---
 
@@ -536,5 +536,3 @@ exports.list = function (req, res) { // Используй стрелочные
 ---
 - [mochajs.org](https://mochajs.org/)
 - [mocha](https://www.npmjs.com/package/mocha)
-
-TODO

@@ -3,7 +3,7 @@ title: String и Symbol
 sidebar_position: 2
 ---
 
-### TypeScript
+## TypeScript
 
 ```ts
 const someString1: string = 'Some string';
@@ -11,7 +11,7 @@ const someString2: Readonly<string> = 'Some string';
 const someString3: 'Some1' | 'Some2' = 'Some1';
 ```
 
-***
+---
 
 Строка. Любое выражение в кавычках будет строкой (одинарные, двойные, обратные - Template literals);
 
