@@ -272,3 +272,8 @@ btn.addEventListener('click', function(event) {
 ```
 
 ***
+
+## TODO
+
+- Event loop
+- Listerners

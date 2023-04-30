@@ -1,5 +1,5 @@
 ---
-title: Запросы к API ---
+title: Запросы и асинхронность ---
 sidebar_position: 10
 ---
 
