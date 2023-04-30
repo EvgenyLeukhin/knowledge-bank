@@ -46,6 +46,7 @@ import { bindActionCreators, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { counterSlice } from './counter/counter.slice';
 import { usersSlice } from './users/users.slice';
+import { usersThunks } from './users/users.thunks';
 
 // storeToolkit2
 export const storeToolkit2 = configureStore({
@@ -66,6 +67,7 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 const allActions = {
   ...counterSlice.actions,
   ...usersSlice.actions,
+  ...usersThunks,
 };
 
 export const useSyncActions = () => {
@@ -172,14 +174,6 @@ export const usersSlice = createSlice({
 
   // reducer with actions
   reducers: {
-    // setLoading
-    // setLoading: (state, { payload }: PayloadAction<boolean>) => {
-    //   return {
-    //     ...state,
-    //     isLoading: payload,
-    //   };
-    // },
-
     resetUsersState(state) {
       state.isLoading = false;
       state.isError = false;
@@ -189,6 +183,17 @@ export const usersSlice = createSlice({
     // usersLoading
     usersLoading(state, { payload }: PayloadAction<boolean>) {
       state.isLoading = payload;
+    },
+
+    // usersLoading - 2 variant
+    usersLoading2: (state, { payload }: PayloadAction<boolean>) => {
+      return {
+        // возвращаем стейт
+        ...state,
+
+        // модифцируем поле стейта
+        isLoading: payload,
+      };
     },
 
     // usersFetchingSuccess
@@ -255,6 +260,7 @@ export const usersSlice = createSlice({
     },
   },
 });
+
 ```
 
 #### Users thunks
@@ -268,7 +274,7 @@ import { usersSlice } from './users.slice';
 const { usersLoading, usersSuccess, usersError, resetUsersState } =
   usersSlice.actions;
 
-export const fetchUsersThunk = () => async (dispatch: Dispatch) => {
+const fetchUsersThunk = () => async (dispatch: Dispatch) => {
   dispatch(resetUsersState());
   dispatch(usersLoading(true));
 
@@ -291,20 +297,20 @@ export const fetchUsersThunk = () => async (dispatch: Dispatch) => {
   }
 };
 
+export const usersThunks = {
+  fetchUsersThunk,
+};
+
 ```
 
 ### Use inside component
 
 ```tsx
 import { useSyncActions, useAppSelector } from '@/store/redux-toolkit2';
-import { fetchUsersThunk } from '@/store/redux-toolkit2/users/users.thunks';
 import { Loader } from '@/components/ui';
-import { useDispatch } from 'react-redux';
 import styles from './ReduxToolkit2.module.scss';
 
 const ReduxToolkit2 = () => {
-  const dispatch = useDispatch();
-
   // get state from store by useAppSelector
   const {
     counterStore: { counter },
@@ -321,6 +327,7 @@ const ReduxToolkit2 = () => {
     clearUsers,
     deleteUser,
     deleteLastUser,
+    fetchUsersThunk,
   } = useSyncActions();
 
   return (
@@ -376,7 +383,7 @@ const ReduxToolkit2 = () => {
 
         {/* buttons */}
         {/* thunks нужно продиспачивать */}
-        <button onClick={() => dispatch(fetchUsersThunk() as never)}>
+        <button onClick={() => fetchUsersThunk()}>
           Fetch users
         </button>
         <button onClick={() => addRandomUser2()}>Add random user</button>
