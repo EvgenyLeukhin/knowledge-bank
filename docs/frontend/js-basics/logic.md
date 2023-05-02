@@ -39,6 +39,20 @@ if (a) {
 }
 ```
 
+## without else inside function
+
+```js
+const a = true;
+
+const returnA = (param) => {
+  if (param > 0) {
+    console.log('a is positive');
+  }
+
+  console.log('a is negative');
+}
+```
+
 ---
 
 ## switch-case

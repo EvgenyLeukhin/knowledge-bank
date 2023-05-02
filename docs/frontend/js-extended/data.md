@@ -5,6 +5,35 @@ sidebar_position: 3
 
 ## Обработка массивов
 
+### Сортировка по id
+
+```ts
+const a = [
+  {
+    "id": 3,
+    "name": "<не указан>"
+  },
+  {
+    "id": 2,
+    "name": "Тестовый статус "
+  },
+  {
+    "id": 0,
+    "name": "Старый тестовый статус"
+  },
+  {
+    "id": 1,
+    "name": "что то непонятно происходит со "
+  },
+];
+
+// straight sorting
+const sortedA = a.sort((nextEl, curEl) => nextEl.id - curEl.id); // 0, 1, 2, 3
+
+// reversed sorting
+const sortedAReversed = a.sort((nextEl, curEl) => curEl.id - nextEl.id); // 3, 2, 1, 0
+```
+
 TODO
 
 ---
