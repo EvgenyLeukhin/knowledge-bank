@@ -41,6 +41,8 @@ el.classList.toggle('some-class');
 el.classList.contains('some-class');
 ```
 
+---
+
 ## Attributes
 
 ```js

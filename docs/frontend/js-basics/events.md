@@ -1,5 +1,5 @@
 ---
-title: Events
+title: События
 sidebar_position: 13
 ---
 
@@ -21,12 +21,23 @@ sidebar_position: 13
 - ```mousedown/mouseup``` — кнопку мыши нажали или отпустили;
 - ```mousemove``` — движение курсора над элементом.
 
+```click, submit, dblclick, keydown, keyup, keypress, mouseover, mouseout, reset, focus, focusin, focusout, change, blur```
+
 ***
 
 ### События клавиатуры
 
 - ```keydown``` — клавишу нажали;
 - ```keyup``` — клавишу отпустили.
+
+[key-codes](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
+
+```js
+el.addEventListener('keydown', function(e) {
+  // js for keypress;
+  if (e.keyCode == 27) { ... }
+});
+```
 
 ***
 
@@ -36,6 +47,12 @@ sidebar_position: 13
 - ```touchmove``` — по элементу провели пальцем;
 - ```touchend``` — касание закончилось и палец убрали;
 - ```touchcancel``` — палец переместился на интерфейс браузера или тач-событие нужно отменить.
+
+```js
+el.addEventListener('click', (event) => {
+  // do smth
+});
+```
 
 ***
 
@@ -47,6 +64,17 @@ sidebar_position: 13
 - ```blur``` — пользователь выходит из фокуса элемента, например, кликает вне &lt;input&gt;.
 
 Больше событий описано на [MDN](https://developer.mozilla.org/en-US/docs/Web/Events).
+
+```js
+// onchange
+el.onchange = () => { ... }
+
+// onsubmit
+el.onsubmit = () => { ... }
+
+// onload
+<body onload="alert('Страница загружена');">
+```
 
 ***
 
@@ -273,7 +301,10 @@ btn.addEventListener('click', function(event) {
 
 ***
 
-## TODO
+## Event loop
 
-- Event loop
-- Listerners
+Бесконечный цикл, который постоянно крутиться интерпретатором и улавливает все события.
+
+После того, как отлавливает события, то записывает их в СТЕК(очередь) ЗАДАЧ.
+
+Задачи выполняются АСИНХРОННО, это означает, что если какая-либо задача выполняется, то Event loop не прекращается свою работу, а будет улавливать все события постоянно.

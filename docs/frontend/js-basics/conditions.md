@@ -39,6 +39,8 @@ if (a) {
 }
 ```
 
+---
+
 ## without else inside function
 
 ```js

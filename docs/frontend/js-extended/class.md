@@ -661,6 +661,6 @@ onShow = (event) => {
 
 ***
 
-## call, bind, apply
+## call, apply
 
 TODO

@@ -1,5 +1,5 @@
 ---
-title: Утилиты +--
+title: Утилиты
 sidebar_position: 7
 ---
 

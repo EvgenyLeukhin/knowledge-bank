@@ -3,7 +3,7 @@ title: String и Symbol
 sidebar_position: 2
 ---
 
-### TypeScript
+## TypeScript
 
 ```ts
 const someString1: string = 'Some string';
