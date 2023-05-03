@@ -36,8 +36,23 @@ export default function Home() {
       <main>
         <div className="container" style={{ textAlign: 'center' }}>
           &nbsp;
-          <h1 className="hero__title">Мой справочник-конспект знаний</h1>
-          <p className="hero__subtitle">Находится в разработке и постоянно дополняется. Штудировать полезно!</p>
+          <h2 className="hero__title">Мой справочник-конспект знаний</h2>
+
+          <hr />
+
+          {/* <p className="hero__subtitle">Находится в разработке и постоянно дополняется. Штудировать полезно!</p> */}
+
+          <p className="hero__subtitle">
+              <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
+                <li><b>ПРАКТИЧЕСКИЕ</b><br /> (фреймворк, работа с API данными, стейтом, код) - MOST WANTED!!!</li>
+                <li>↑</li>
+                <li><b>ИНСТРУМЕНТАЛЬНЫЕ</b><br /> (редактор, браузер, сервисы)</li>
+                <li>↑</li>
+                <li><b>ФУНДАМЕНТАЛЬНЫЕ</b><br /> (справочные, теория HTML/CSS/JS)</li>
+              </ul>
+          </p>
+
+          <hr />
 
           <div className={styles.buttons}>
             <Link
@@ -47,21 +62,9 @@ export default function Home() {
               Начать читать
             </Link>
           </div>
-          <br />
-          <a href="https://docusaurus.io/" target="_blank">Docusaurus guide</a>
+          {/* <a href="https://docusaurus.io/" target="_blank">Docusaurus guide</a> */}
         </div>
         {/* <HomepageFeatures /> */}
-
-        <ul>
-          <li>Фотография +++</li>
-          <li>Звукозапись +++</li>
-          <li>Видео +++</li>
-          <li><b>Web-design</b> +++</li>
-          <li><b>English</b> +++</li>
-          <li><b>CSS</b> +++</li>
-          <li><b>JS, React</b> --&gt;</li>
-          <li><b>Nodejs, GraphQL</b> X</li>
-        </ul>
 
       </main>
     </Layout>
