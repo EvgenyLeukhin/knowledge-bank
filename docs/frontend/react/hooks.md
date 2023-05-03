@@ -1,4 +1,4 @@
 ---
-title: Hooks ---
+title: Хуки ---
 sidebar_position: 6
 ---
