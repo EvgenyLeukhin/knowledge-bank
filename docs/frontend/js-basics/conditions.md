@@ -80,13 +80,15 @@ switch(A) {
   case 7: console.log('A = 7'); break;
 
   // default case
-  default: console.log('A are not inside this range');
+  default: console.log('A are not inside 0-7 range');
 };
 ```
 
 ---
 
 ## Тернарный оператор (?:)
+
+Более лаконичный `if-else`.
 
 ```js
 let a = true;
