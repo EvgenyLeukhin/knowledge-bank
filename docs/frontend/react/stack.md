@@ -1,92 +1,65 @@
 ---
-title: React-cтэк +--
+title: React-cтэк
 sidebar_position: 1
 ---
 
 ### Стилизация
 
-- SCSS-препроцесор
-- SCSS/CSS-modules
+- [SCSS-препроцесор](https://www.npmjs.com/package/sass)
+- [SCSS/CSS-modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
 - Глобальные стили (import global.scss)
-- Точечная инлайн стилизация через &lt;style&gt;
+- Точечная инлайн стилизация через style={{ ... }}
 - ~~JSS~~
 - ~~styled-component~~
 
-***
+---
 
 ### Сборка (биндлер)
 
-- NextJS
-- create-reaact-app
-- webpack
-- parcel
+- [NextJS](https://nextjs.org/)
+- [create-reaact-app](https://create-react-app.dev/)
+- [webpack](https://webpack.js.org/)
+- [parcel](https://parceljs.org/)
+
+---
 
 ### UI-фреймворк
 
+- [mui](https://mui.com/)
+- [next-ui](https://nextui.org/)
+- [ant.design](https://ant.design/)
+- [react-bootstrap](https://react-bootstrap.github.io/)
+
+---
+
 ### State-management
+
+- [redux](https://redux.js.org/)
+- [redux-toolkit](https://redux-toolkit.js.org/)
+- [mobx.js](https://mobx.js.org/README.html)
+
+---
 
 ### Обработчик форм
 
+- [formik](https://formik.org/)
+- [yup](https://github.com/jquense/yup)
+- [react-select](https://react-select.com/home)
+- [react-table](https://react-table-v7.tanstack.com/)
+
+---
+
 ### Взаимодействие с API
 
+- [axios](https://axios-http.com/ru/docs/intro)
+- [fetch](https://learn.javascript.ru/fetch)
+- [js-cookie](https://www.npmjs.com/package/js-cookie)
 
-  - prettier
-  - eslint
-  - переменные окружения
-  - express-server
-  - bundle-analizer
-  - оптимизация (chunks, google-page-speed, bundle-analizer)
-- Архитектура проекта
-  - Модульность
-  - Atomic design
-- Компоненты
-  - FC
-  - Lazy-loading
-- Страницы
-  - SEO
-  - Шаринг
-  - Private route
-- Стилизация
-  - scss
-  - шрифты и типографика
-  - emotion
-  - темизация
-- UI-элементы
-  - Таблицы
-  - Кнопки
-  - Слайдеры
-  - Плейеры
-  - Тултипы, алерты, дропдауны
-  - Мод. окна
-  - Иконки (react-icons)
-- Изображения
-  - иконки
-  - фав-иконки
-  - ретина
-  - прелоадинг
-- Типизация (TypeScript)
-- Хуки
-  - Кастомные хуки
-- Локализация (i18n)
-- Gzip
-- Формы
-  - Formik
-  - Валидация, yup
-  - Инпуты
-  - Селекты, поисковые селекты
-  - Чекбоксы и радио-баттоны
-  - Файлы
-- State-managment
-  - хранение данных
-  - localStorage
-  - cookies
-  - mobx
-  - redux
-- API
-  - API_URL
-  - axios, httpClient, fetch, async-await, Promises
-  - запросы и actions
-  - Регистрация
-  - Авторизация
-  - Сброс пароля
-  - Личный кабинет
+---
+
+### Оптимизация
+
+- [gzip-compression](https://www.npmjs.com/package/compression)
+- Lazy-loading
+
+---
