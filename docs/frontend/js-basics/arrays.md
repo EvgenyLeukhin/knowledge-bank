@@ -21,7 +21,7 @@ const someArray = [0, 1, 2];
 const data = [{...}, {...}, {...}];
 ```
 
-***
+---
 
 ## Простые операции с массивами
 
@@ -38,6 +38,12 @@ const someArray2 = new Array(0, 1, 2);
 const someArray2 = new Array(12);
 ```
 
+Создать массив и наполнить.
+
+```js
+const a = new Array(5).fill('some-value');
+```
+
 ### Длина (length)
 
 Это по сути индекс последнего элемента минус один.
@@ -48,7 +54,7 @@ const someArray = [0, 1, 2];
 someArray.length; // 3
 ```
 
-***
+---
 
 ### Вывести элемент по индексу
 
@@ -67,7 +73,7 @@ someArray[4]; // undefined
 someArray[someArray.length - 1]; // 2
 ```
 
-***
+---
 
 ### Изменить существующий элемент
 
@@ -78,7 +84,7 @@ someArray[0] = 3;
 console.log(someArray); // [3, 1, 2]
 ```
 
-***
+---
 
 ### Добавить элемент (push, unshift)
 
@@ -114,7 +120,7 @@ someArray.unshift(3);
 console.log(someArray); // [3, 0, 1, 2]
 ```
 
-***
+---
 
 ### Удалить элемент (delete, pop, shift)
 
@@ -144,7 +150,27 @@ someArray.shift();
 console.log(someArray); // [1, 2]
 ```
 
-***
+---
+
+### Преобразовать в объект
+
+```js
+const a = [ 1, 2, 3 ];
+const b = { ...a }; 
+
+```
+
+---
+
+### Убрать дубликаты из массива
+
+```js
+const a = [ 1, 2, 3, 1, 2, 4 ];
+const aWithOutDublicates = Array.from(new Set(a));
+
+```
+
+---
 
 ### Обрезать массив (slice, splice, lenght)
 
@@ -162,7 +188,7 @@ someArray.slice(3); // [3, 4, 5, 6, 7]
 someArray.slice(-3); // [5, 6, 7]
 ```
 
-***
+---
 
 #### Splice
 
@@ -184,7 +210,7 @@ console.log('removed:', removed); // [3, 4, 5, 6, 7]
 console.log('array:', someArray); // [0, 1, 2] - исходный массив изменился
 ```
 
-***
+---
 
 Удалить последние 3 элемента (splice(-3))
 
@@ -196,7 +222,7 @@ console.log('removed:', removed); // [5, 6, 7]
 console.log('array:', someArray); // [0, 1, 2, 3, 4]- исходный массив изменился
 ```
 
-***
+---
 
 Удалить 2 элемента, начиная с 3-его индекса (splice(3, 2))
 
@@ -208,7 +234,7 @@ console.log('removed:', removed); // [3, 4]
 console.log('array:', someArray); // [0, 1, 2, 5, 6, 7] - исходный массив изменился
 ```
 
-***
+---
 
 Удалить 2 элемента, начиная с 3-его индекса с конца (splice(-3, 2))
 
@@ -220,7 +246,7 @@ console.log('removed:', removed); // [5, 6]
 console.log('array:', someArray); // [0, 1, 2, 3, 4, 7] - исходный массив изменился
 ```
 
-***
+---
 
 #### length
 
@@ -244,7 +270,7 @@ console.log('removed:', removed); // [3, 4]
 console.log('array:', someArray); // [0, 1, 2, 'a', 'b', 'c', 5, 6, 7] - исходный массив изменился
 ```
 
-***
+---
 
 Удалить 2 элемента, начиная с 3-его индекса c конца и вставить туда новые элементы (splice(-3, 2, 'a', 'b'))
 
@@ -256,7 +282,7 @@ console.log('removed:', removed); // [5, 6]
 console.log('array:', someArray); // [0, 1, 2, 3, 4, 'a', 'b', 7] - исходный массив изменился
 ```
 
-***
+---
 
 ### Изменить порядок (reverse)
 
@@ -269,7 +295,7 @@ someArray.reverse();
 console.log(someArray); // [2, 1, 0]
 ```
 
-***
+---
 
 ### Отсортировать порядок (sort)
 
@@ -285,7 +311,7 @@ console.log(someArray); // [0, 1, 2, 3, 4]
 console.log(someArray2); // [0, 1, 2, 'a', 'b', 'c', 'd']
 ```
 
-***
+---
 
 ### Преобразовать массив в строку (join)
 
@@ -299,7 +325,7 @@ console.log(someString1); // 'a,b,c,d,e,f,g,h'
 console.log(someString2); // '1 | 2 | 3 | 4'
 ```
 
-***
+---
 
 ### Преобразовать строку в массив (split)
 
@@ -309,7 +335,7 @@ const someArray = someString.split('');
 console.log(someArray); // ['S', 'o', 'm', 'e', 't', 'h', 'i', 'n', 'g']
 ```
 
-***
+---
 
 ## Объединение массивов
 
@@ -335,7 +361,7 @@ const newArray = [...someArray1, ...someArray2];
 console.log(newArray); // [0, 1, 2, 3, 4, 5]
 ```
 
-***
+---
 
 ## Проверка на массив
 
@@ -346,7 +372,7 @@ Array.isArray(someArray); // true
 Array.isArray(true); // false
 ```
 
-***
+---
 
 ## Array distructuring
 
@@ -364,7 +390,7 @@ console.log(b); // 2
 console.log(c); // 3
 ```
 
-***
+---
 
 ## Многомерные
 
@@ -380,7 +406,7 @@ const multiLevelArray = [arr1, arr2, arr3];
 console.log(multiLevelArray[2][0]); // 7
 ```
 
-***
+---
 
 ## Методы для строк
 
@@ -396,7 +422,7 @@ console.log(someArray.indexOf('a')); // 0
 console.log(someArray.indexOf('a', 1)); // -1 - индекс не найден
 ```
 
-***
+---
 
 ### Includes
 

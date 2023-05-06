@@ -177,7 +177,7 @@ div {
 //                  DESKTOP [1201 - 1920] --> 1920 макет
 $laptop: 1200px; // LAPTOP  [1024 - 1200] --> 1024 макет 
 $tablet: 1023px; // TABLET  [768 - 1023]  --> 768 макет
-$mobile: 767px;  //  MOBILE  [0 - 767]     --> 414 макет
+$mobile: 767px;  // MOBILE  [0 - 767]     --> 414 макет
 
 @mixin laptop {
   @media screen and (max-width: $laptop) {
