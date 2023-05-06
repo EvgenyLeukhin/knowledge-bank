@@ -3,6 +3,10 @@ title: Запросы и асинхронность +--
 sidebar_position: 10
 ---
 
+<img src="../../../../img/js/async.png" width="550" alt="async.png" />
+
+JS однопоточный. Очередь событий.
+
 ## fetch 
 
 ---
