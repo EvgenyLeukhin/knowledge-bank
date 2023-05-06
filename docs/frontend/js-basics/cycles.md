@@ -266,4 +266,9 @@ for (let key in obj) {
 for (let key of Object.keys(obj)) {
   console.log(obj[key]);
 };
+
+// вывод и полей и значений
+for (const [key, value] of Object.entries(obj)) {
+  console.log(`${key}: ${value}`);
+};
 ```
