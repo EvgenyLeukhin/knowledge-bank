@@ -1,5 +1,5 @@
 ---
-title: State-management ++-
+title: State-management
 sidebar_position: 6
 ---
 
