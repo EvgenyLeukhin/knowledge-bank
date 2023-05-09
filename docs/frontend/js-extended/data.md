@@ -1,21 +1,12 @@
 ---
-title: Обработка данных +--
+title: Обработка данных ++-
 sidebar_position: 3
 ---
 
 ## Обработка массивов
 
-### `for()` - Цикл for
+<img src="../../../../img/js/arrays.png" width="550" alt="arrays.png" />
 
-TODO
-
----
-
-### `forEach()` - Цикл forEach
-
-TODO
-
----
 ### `map()` - Мапинг
 
 `[{i, j, k}, {i, j, k}, ... {i, j, k}] --> [i, i, ..., i]`
@@ -34,7 +25,7 @@ const a = [
 const restructedA = a.map(el => el.id); // [3, 2, 0, 1]
 
 // вывод данных
-const mapedA = a.map((el, index) => <div key={el.id}>{el.name}</div>);
+const mapedA = a.map((el, index, thisArray) => <div key={index}>{el.name}</div>);
 ```
 
 ---
@@ -60,32 +51,157 @@ const sortedA = a.sort((nextEl, curEl) => nextEl.id - curEl.id); // 0, 1, 2, 3
 const sortedAReversed = a.sort((nextEl, curEl) => curEl.id - nextEl.id); // 3, 2, 1, 0
 ```
 
+---
+
 ### `filter()` - Фильтрация
 
-TODO
+`[3, 2, 0, 1] --> [3]`
+
+Возвращает отфильтрованный массив.
+
+```ts
+const a = [
+  { id: 3, name: 'Не указан' },
+  { id: 2, name: 'Тестовый статус' },
+  { id: 0, name: 'Старый тестовый статус' },
+  { id: 1, name: 'Что то происходит' },
+];
+
+// фильтрация по совпадению 
+const b = a.filter((el, index, thisArray) => el.id === 3); // [{ 3 }]
+
+// фильтрация по несовпадению 
+const с = a.filter((el, index, thisArray) => el.id !== 3); // [{ 0, 1, 2 }]
+```
 
 ---
 
 ### `find()` - Поиск
 
-TODO
+`[3, 2, 0, 1] --> 3`
+
+Возвращает элемент массива. Метод для поиска элемента внутри массива. Возвращает первый найденный элемент. Возвращает из из массива то, что найдет.
+
+```ts
+const a = [
+  { id: 3, name: 'Не указан' },
+  { id: 2, name: 'Тестовый статус' },
+  { id: 0, name: 'Старый тестовый статус' },
+  { id: 1, name: 'Что то происходит' },
+];
+
+// поиск по совпадению 
+const b = a.find((el, index, thisArray) => el.id === 3); // { 3 }
+
+// поиск по несовпадению 
+const с = a.find((el, index, thisArray) => el.id !== 3); // { 2 } - вернется первый элемент
+```
 
 ---
-### `reduce()`
 
-TODO
+### `findIndex()` - Поиск индекса
 
----
+Если ничего не найдено вернется `-1`.
 
-### `every()`
+```ts
+const a = [
+  { id: 3, name: 'Не указан' },
+  { id: 2, name: 'Тестовый статус' },
+  { id: 0, name: 'Старый тестовый статус' },
+  { id: 1, name: 'Что то происходит' },
+];
 
-TODO
+// вернет индекс массива по совпадению
+const index = a.findIndex((el, index, thisArray) => {
+  return el.name === 'Что то происходит'; // 3
+}); 
+```
 
 ---
 
 ### `some()`
 
-TODO
+Проверяет элемент массива на соответствие какому-либо УСЛОВИЮ.
+Возвращает true, если хотя бы один элемент true.
+Когда "наткнётся" на первое true, то цикл прекращается и возвращается true.
+
+```ts
+const a = [
+  { id: 3, name: 'Не указан' },
+  { id: 2, name: 'Тестовый статус' },
+  { id: 0, name: 'Старый тестовый статус' },
+  { id: 1, name: 'Что то происходит' },
+];
+
+a.some((el, index, array) => el.id === 3); // true
+a.some((el, index, array) => el.id === 33); // false
+
+```
+
+---
+
+### `every()`
+
+Проверяет ВСЕ элементы массива на соответствие какому-либо УСЛОВИЮ.
+Возвращает false, если хотя бы один элемент false.
+Когда "наткнётся" на первый false, то цикл прекращается и возвращается false
+
+```ts
+const a = [
+  { id: 3, name: 'Не указан' },
+  { id: 2, name: 'Тестовый статус' },
+  { id: 0, name: 'Старый тестовый статус' },
+  { id: 1, name: 'Что то происходит' },
+];
+
+a.every((el, index, array) => el.id >= 0); // true
+a.every((el, index, array) => el.id > 0); // false
+
+```
+
+---
+
+### `includes()`
+
+Как some() с более лаконичной записью, только простых массивов с однотипными данными.
+
+```ts
+const playerId = 'id2';
+const players = ['id1', 'id2', 'id3', ...];
+
+const isPlayerExist = players.includes(playerId); // true
+```
+
+---
+
+### `reduce()`
+
+Функция для "СВОРАЧИВАНИЯ" массива в одно значение (суммирование). Возвращает number. preVal - предыдущий элемент. 0 - второй аргумент необязательный (НАЧАЛЬНОЕ ЗНАЧЕНИЕ).
+
+```ts
+const arr = [1, 2, 3];
+const arrCount = arr.reduce((preVal, item) => {
+  // сложение элементов
+  return preVal + item;
+}, 0);
+
+// сумма элементов массива
+console.log(arrCount); // 6
+```
+
+Вычислить сумму
+
+```ts
+const a = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// summ = 36
+const summ = a.reduce((prev, item, index) => {
+  return prev + item;
+})
+```
+
+---
+
 
 ---
 ---
@@ -93,11 +209,6 @@ TODO
 
 ## Обработка объектов
 
-### Цикл for in
-
-TODO
-
----
 
 ### Если нужно вывести лейбл по id
 
