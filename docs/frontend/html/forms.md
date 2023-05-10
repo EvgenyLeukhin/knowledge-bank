@@ -103,17 +103,17 @@ sidebar_position: 6
 ```html
 <label for="year-id">Год рождения:</label>
 
-<select name="year" id="year-id">
+<select name="year" id="year-id" value="1981">
   <!-- optgroup - Группировка опшинов -->
   <optgroup label="80-е">
-    <option>1981 год</option>
-    <option>1982 год</option>
-    <option>1983 год</option>
+    <option value="1981" selected>1981 год</option> <!-- default checked equal to select value -->
+    <option value="1982">1982 год</option>
+    <option value="1983">1983 год</option>
   </optgroup> 
   <optgroup label="90-е">
-    <option>1991 год</option>
-    <option>1992 год</option>
-    <option>1993 год</option>
+    <option value="1991">1991 год</option>
+    <option value="1992">1992 год</option>
+    <option value="1993">1993 год</option>
   </optgroup> 
 </select>
 ```
