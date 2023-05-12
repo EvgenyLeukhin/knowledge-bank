@@ -106,7 +106,7 @@ sidebar_position: 6
 <select name="year" id="year-id" value="1981">
   <!-- optgroup - Группировка опшинов -->
   <optgroup label="80-е">
-    <option value="1981" selected>1981 год</option> <!-- default checked equal to select value -->
+    <option value="1981">1981 год</option> <!-- default checked equal to select value -->
     <option value="1982">1982 год</option>
     <option value="1983">1983 год</option>
   </optgroup> 

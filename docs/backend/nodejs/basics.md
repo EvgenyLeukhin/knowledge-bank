@@ -31,7 +31,29 @@ registry=https://npm.yandex.net/
 
 ### nvm 
 
-TODO: How to install
+[https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+
+- Install script: ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash```
+
+---
+
+- Check versions: ```nvm ls```
+- Check current version: ```node -v```
+
+---
+
+- Intall version: 
+  ```nvm install 20```
+  ```nvm install stable (last stable version)```
+  ```nvm install/uninstall 10.15.0 (install exact version)```
+
+---
+
+- Use version: ```nvm use 20```
+- Create .nvmrc file: ```node -v > .nvmrc```
+- Use node-version from .nvmrc file: ```node use```
+- Use installed version: ```nvm use 10.15.0```
+- Use alisas: ```nvm alias default 10.15.0```
 
 ***
 
@@ -83,7 +105,7 @@ class GithubController {
       .catch(error => {
           next(error);
       });
-  }        
+  }
 }
 
 // Для экспорта достаточно использовать ключ exports в глобальном объекте module.
@@ -104,4 +126,194 @@ app.get('/', controller.getRepositories);
 app.listen(3000, function () {
   console.log('Мы запустили приложение и можем ходить в гитхаб');
 });
+```
+
+---
+
+## npm 
+
+Npm install with node automaticly.
+
+### Install
+
+```npm i -g package-name```
+```npm i --save-dev package-name```
+
+### Remove
+
+```npm remove -g package-name```
+```npm remove --save-dev package-name```
+
+
+### Update
+
+```npm update -g <package_name>```
+```npm update --save-dev <package_name>```
+
+
+### Update all packages
+
+```npm update -g```
+```npm update --save-dev```
+
+
+### Rebuild
+
+Helpful command when need to reinstall package after change node version.
+
+```npm rebuild <package_name>```
+
+See installed: ```Localy npm list -g --depth 0```
+
+Globaly: ```npm list --save-dev --depth 0```
+
+---
+
+## Yarn
+
+### Install: 
+
+```npm i -g yarn```
+```yarn -v```
+
+---
+
+### Add package
+
+```yarn add <package--name>```
+
+### Remove
+
+```yarn remove <package-name>```
+
+---
+
+## Remove nodejs, nvm, npm 
+
+[link stackoverflow](https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x)
+
+```sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}```
+```sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node* /usr/local/lib/dtrace/node.d ~/.npm ~/.node-gyp```
+
+### To completely uninstall node + npm is to do the following:
+
+- go to ```/usr/local/lib``` and delete any node and node_modules
+- go to ```/usr/local/include``` and delete any node and node_modules directory
+- if you installed with brew install node, then run brew uninstall node in your terminal
+- check your Home directory for any local or lib or include folders, and delete any node or node_modules from there
+- go to ```/usr/local/bin``` and delete any node executable
+
+```sudo rm -rf /opt/local/bin/node /opt/local/include/node /opt/local/lib/node_modules```
+```sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node.1 /usr/local/lib/dtrace/node.d```
+
+```rm -rf ~/.node-gyp```
+```rm -rf ~/.nvm```
+```rm -rf ~/.npm```
+
+---
+
+## package.json
+
+Package.json --> Initialize new project --> package.json will be create automaticly.
+
+```npm init -y```
+
+Install all packages
+
+```npm install || npm i```
+```yarn install || yarn```
+
+List of scripts to manipulation of project.
+
+```json
+  "scripts": {}
+```
+
+List of packeges with versions, which installed with --save flag
+
+```json
+"dependencies": {}
+```
+
+List of packeges with versions, which installed with --save-dev flag
+
+```json
+"devDependencies": {}
+```
+### Example
+
+```json
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "main": "src/main.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flaviocopes/testing.git"
+  },
+  "keywords": [
+    "email",
+    "machine learning",
+    "ai"
+  ],
+  "author": {
+    "name": "Flavio Copes",
+    "email": "flavio@flaviocopes.com",
+    "url": "https://flaviocopes.com"
+  },
+  "bugs": "https://github.com/flaviocopes/package/issues",
+  "homepage": "https://flaviocopes.com/package",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "test": "npm run unit",
+    "lint": "eslint --ext .js,.vue src test/unit",
+    "build": "node build/build.js"
+  },
+  "dependencies": {
+    ...
+    "vue": "^2.5.2",
+    ...
+  },
+  "devDependencies": {
+    ...
+    "webpack-merge": "^4.1.0",
+    ...
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0",
+    "yarn": "^0.13.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
+```
+
+---
+
+## browser-sync
+
+[Official docs](https://browsersync.io/)
+
+```npm i -g browser-sync```
+```npm i --save-dev browser-sync```
+
+Use from console
+Будет выполнен запуск файла index.html в браузере, который лежит в текущей директории. И браузер будет перезагружаться при изменении любого файла в директории.
+
+```browser-sync start --server './src' --files '**/*'```
+
+For testing on several devices
+In package.json
+
+```json
+  "adaptive-test": "browser-sync start -s dist",
 ```
