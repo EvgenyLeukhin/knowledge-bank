@@ -195,3 +195,9 @@ IdentityFile ~/.ssh/id_rsa
 4. Пишем команду в этой директории для гинерации ключей ```ssh-keygen -C "Jenya@FERMA21"```
 5. Добавляем содержимое сгенерированого публичного ключа ```id_rsa.pub``` в конец строки файла ```.ssh/autorized_keys``` на сервере
 6. Можно заходить на сервер командой ```ssh some_server``` и пользоваться гитом
+
+---
+
+## Personal Access token
+
+[Gitlab link](https://gitlab.npo-at.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token)
