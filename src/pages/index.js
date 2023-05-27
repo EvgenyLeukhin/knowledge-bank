@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           {/* <a href="https://docusaurus.io/" target="_blank">Docusaurus guide</a> */}
         <br />
-        На будущее: React Native, Backend on Nodejs, PWA, Swelte
+        На будущее: React Native, Backend on Nodejs, Desktop express app, PWA, Swelte
         </div>
         {/* <HomepageFeatures /> */}
 
