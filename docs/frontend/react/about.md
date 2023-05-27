@@ -58,7 +58,12 @@ SPA умеют переключаться между страницами без
 
 ***
 
-## Lifecycle
+## Lifecycle ---
+
+- Mount
+- Render
+- Update
+- Unmont
 
 TODO
 
