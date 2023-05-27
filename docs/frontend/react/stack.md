@@ -7,6 +7,8 @@ sidebar_position: 1
 
 - [SCSS-препроцесор](https://www.npmjs.com/package/sass)
 - [SCSS/CSS-modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
+- [classnames](https://www.npmjs.com/package/classnames)
+- [normalize.css](https://necolas.github.io/normalize.css/)
 - Глобальные стили (import global.scss)
 - Точечная инлайн стилизация через style={{ ... }}
 - ~~JSS~~
@@ -40,12 +42,12 @@ sidebar_position: 1
 
 ---
 
-### Обработчик форм
+### Формы
 
 - [formik](https://formik.org/)
 - [yup](https://github.com/jquense/yup)
-- [react-select](https://react-select.com/home)
-- [react-table](https://react-table-v7.tanstack.com/)
+- [react-input-mask](https://www.npmjs.com/package/react-input-mask)
+- [react-debounce-input](https://www.npmjs.com/package/react-debounce-input)
 
 ---
 
@@ -60,6 +62,38 @@ sidebar_position: 1
 ### Оптимизация
 
 - [gzip-compression](https://www.npmjs.com/package/compression)
-- Lazy-loading
+- [compression](https://www.npmjs.com/package/compression)
+- [compression-webpack-plugin](https://www.npmjs.com/package/compression-webpack-plugin)
+
+---
+
+## Таблицы
+
+- [react-table](https://react-table-v7.tanstack.com/)
+- [react-data-table-component](https://www.npmjs.com/package/react-data-table-component)
+
+---
+
+### UI
+
+- [react-select](https://react-select.com/home) - Select
+- [rc-tooltip](https://www.npmjs.com/package/rc-tooltip) - Tooltip
+- [react-datepicker](https://www.npmjs.com/package/react-datepicker) - Datapicker
+- [react-input-range](https://www.npmjs.com/package/react-input-range) - Rannge
+- [react-quill](https://www.npmjs.com/package/react-quill) - Rich text editor
+- [react-alert](https://www.npmjs.com/package/react-alert) - Алерт
+- [react-alert-template-basic](https://www.npmjs.com/package/react-alert-template-basic) - Алерт
+
+---
+
+### Utils
+
+- [react-share](https://www.npmjs.com/package/react-share)
+- [react-device-detect](https://www.npmjs.com/package/react-device-detect)
+- [console-log-colors](https://www.npmjs.com/package/console-log-colors)
+- [lodash](https://www.npmjs.com/package/lodash)
+- [date-fns](https://www.npmjs.com/package/date-fns)
+- [cross-env](https://www.npmjs.com/package/cross-env)
+- [env-cmd](https://www.npmjs.com/package/env-cmd)
 
 ---
