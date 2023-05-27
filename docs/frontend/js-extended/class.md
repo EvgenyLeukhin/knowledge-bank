@@ -1,5 +1,5 @@
 ---
-title: Классы ++-
+title: Классы
 sidebar_position: 4
 ---
 
@@ -661,6 +661,6 @@ onShow = (event) => {
 
 ***
 
-## call, apply
+## call, apply ---
 
 TODO
