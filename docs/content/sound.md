@@ -240,6 +240,19 @@ PCM (.AIFF or .WAV), MP3 -> OK
 |Cmd + 8|Project info|
 |Cmd + K|Inspector|
 
-## Ableton Live 11 Lite
+---
 
-TODO
+## Как записывать Loopback в Logic (звук из ОС)
+
+1. Focusrite Control
+2. Loopback unmute, choose (1-2 stereo)
+3. Mute all mic inputs
+3. Logic Pro
+4. Audio track, Choose Input 5+5
+5. Mute this track!!! Will be buzzing sound (because loopback)
+6. Play OS sound and Record
+7. Focusrite Control --> Mute loopback
+8. Hear the record
+
+---
+
