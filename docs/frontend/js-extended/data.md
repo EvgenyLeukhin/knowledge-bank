@@ -200,6 +200,34 @@ const summ = a.reduce((prev, item, index) => {
 })
 ```
 
+```ts
+const a = [1, 2, 3, 4, 5];
+
+// first or pre item
+a.reduce(preVal => preVal); // 1
+
+// last item
+a.reduce((preVal, nextVal) => nextVal); // 5
+
+// iteratiions count
+a.reduce((preVal, nextVal, iteratiions, sourceArray) => iteratiions); // 4 (1+2, 2+3, 3+4, 4+5)
+
+// source array
+a.reduce((preVal, nextVal, iteratiions, sourceArray) => sourceArray); // [1, 2, 3, 4, 5]
+
+// arguments naming
+a.reduce((preVal, nextVal, iteratiions, sourceArray))
+
+// sum
+const sum = a.reduce((preVal, nextVal) => preVal + nextVal);
+
+// max value
+const max = a.reduce((preVal, nextVal) => Math.max(preVal, nextVal)); // 5
+
+// min value
+const min = a.reduce((preVal, nextVal) => Math.min(preVal, nextVal)); // 1
+```
+
 ---
 
 
@@ -256,4 +284,138 @@ const a = {
 };
 
 a.hasOwnProperty('some-id-1') && a['some-id-1']; // 'label-1'
+```
+
+---
+
+## Примеры
+
+### 1. Поиск совпадения по простым элементам (есть ли этот простой элемент в массиве)
+
+Если ли параметр `param` в списке параметров `paramsList`? Работает только если массив из примитивных данных
+
+```ts
+const paramList = ['param1', 'param3', 'param3', 'param4', 'param5'];
+
+const param = 'param1';
+
+const isParamListIncludesParam = paramList.includes(param);
+
+// возвращает boolean
+console.log(isParamListIncludesParam); // true
+```
+
+`includes()` не будет работать с объектами.
+
+```ts
+const paramList = [
+  { id: 1, param: 'param1' },
+  { id: 2, param: 'param2' },
+  { id: 3, param: 'param3' },
+  { id: 4, param: 'param4' },
+];
+
+const param = { id: 1, param: 'param1' };
+
+const isParamListIncludesParam = paramList.includes(param);
+
+console.log(isParamListIncludesParam); // false - не работает
+```
+
+---
+
+### 2. Поиск совпадения по объектам (есть ли этот объект в массиве)
+
+Нужно сравнивать не объекты, а поля объектов на совпадения, например `id`.
+
+```ts
+const paramList = [
+  { id: 1, param: 'param1' },
+  { id: 2, param: 'param2' },
+  { id: 3, param: 'param3' },
+  { id: 4, param: 'param4' },
+];
+
+const someParam = { id: 1, param: 'param1' };
+
+// сравнение по id
+const isParamListIncludesParam = paramList.some(param => param.id === someParam.id); // true
+```
+
+---
+
+### 3. Поиск элемента / индекса элемента по совпадению
+
+```ts
+const paramList = [
+  { id: 1, param: 'param1' },
+  { id: 2, param: 'param2' },
+  { id: 3, param: 'param3' },
+  { id: 4, param: 'param4' },
+];
+
+const someParam = { id: 1, param: 'param1' };
+
+// вернет первый совпавший объект из списка объект
+const findedObj = paramList.find(param => param.id === someParam.id); // {id: 1, param: 'param1'}
+
+const findedIndex = paramList.findIndex(param => param.id === someParam.id); // 0
+```
+
+---
+
+### 4. Фильтрация массива
+
+```ts
+const paramList = [
+  { id: 1, param: 'param1' },
+  { id: 2, param: 'param2' },
+  { id: 3, param: 'param3' },
+  { id: 4, param: 'param4' },
+];
+
+const someParam = { id: 1, param: 'param1' };
+
+// вернет массив объектов, которые удовлетворяют условию
+const isFillteredArray = paramList.find(param => param.id === someParam.id); // [ {id: 1, param: 'param1'} ]
+
+// условие может быть комбинированным (вернется массив объектов) [{ id: 1, ..}, { id: 3, ...}]
+const isParamListIncludesParam = paramList.filter(param => { 
+  return param.id === someParam.id ||  param.id === 3; 
+});
+```
+
+---
+
+### 5. Поиск совпадения между массивами
+
+Ecnm два массива, нужно проверить, находятся ли элементы одного массива в другом.
+
+```ts
+// first array
+const a = [
+  { id: 1, name: 'Name 1' },
+  { id: 2, name: 'Name 2' },
+  { id: 3, name: 'Name 3' },
+  { id: 4, name: 'Name 4' },
+  { id: 5, name: 'Name 5' },
+];
+
+// second array
+const b = [
+  { id: 1, name: 'Name 1' },
+  { id: 10, name: 'Name 10' },
+];
+
+// пробегаемся по массиву b
+const check = b.map(i => {
+  // и на каждую итерацию будем пробегаться по всем элементам массива a
+  // и искать совпадения по id
+  const isChecked = a.some(j => j.id === i.id);
+
+  // вернется boolean массив
+  return isChecked; // [true, false]
+});
+
+
 ```
