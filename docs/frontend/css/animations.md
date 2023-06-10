@@ -189,12 +189,19 @@ animation:
   transform: scale3d(2, 2, 5);
   transform: translate3D(20px, 20px, 50px);
   transform: rotate3d(10px, 10px, 10px, 40deg);
+
+  // сдвиги по осям
+  transform: translateX(10);
+  transform: translateY(10);
+  transform: translateZ(10);
 }
 ```
 
 ***
 
 ### perspective, perspective-origin
+
+Грубина по оси Z.
 
 ```scss
 .some {

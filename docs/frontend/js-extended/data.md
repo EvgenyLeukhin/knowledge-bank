@@ -389,7 +389,7 @@ const isParamListIncludesParam = paramList.filter(param => {
 
 ### 5. Поиск совпадения между массивами
 
-Ecnm два массива, нужно проверить, находятся ли элементы одного массива в другом.
+Ecnm два массива, нужно проверить, находятся ли элементы одного массива в другом. Метод `.includes()` не работает с объектами.
 
 ```ts
 // first array
@@ -417,5 +417,16 @@ const check = b.map(i => {
   return isChecked; // [true, false]
 });
 
+```
 
+### 6. Объект вместо вызова функции
+
+Если нужно подставлять какие-либо данные в зависимости от значения прорса.
+
+```tsx
+type TProps = 'left' | 'up' | 'right' | 'down';
+
+const Arrow = (direction: TProps) => {
+  return 
+} 
 ```
