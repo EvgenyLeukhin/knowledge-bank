@@ -116,10 +116,12 @@ const onButtonClick = () => {
 - Может использоваться несколько раз в одном компоненте.
 - Можно управлять перерендером компонента.
 
-### componentDidMount()
+---
 
-- Срабатывает при каждом вмонтировании компонента в `Virtual Dom`;
-- Запросы к API;
+### componentDidMount() (первый рендер, запросы к API)
+
+- Будет срабатывать при первом рендере (при каждом вмонтировании компонента в `Virtual Dom`);
+- Запросы к API (fetch data);
 - Изменение локального state при загрузке (change `initialState`);
 - Лоадеры;
 
@@ -127,23 +129,29 @@ const onButtonClick = () => {
 import { useState, useEffect } from 'react';
 
 const SomeComp = () => {
-  const [count, setCount] = useState(0);
+  const [users, setUsers] = useState<any[]>([]);
 
 
-  // будет срабатывать при каждом рендеринге компонента
+  // ЗАПРОС к API - будет срабатывать при первом рендеринге компонента
   useEffect(() => {
-    setCount(count + 1);
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(json => setUsers(json));
   }, []);
 
   return (
-    <div>{count}</div>
+    <ul>
+      {users?.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
   );
 }
 ```
 
 ---
 
-### componentDidUpdate(), props/state update
+### componentDidUpdate() (props/state update)
 
 - Будет срабатывать при первом рендере;
 - Будет срабатывать каждый раз после изменения зависимостей;
@@ -157,21 +165,42 @@ const SomeComp = () => {
   const [count, setCount] = useState(0);
 
 
-  // каждый раз после изменения count и при первом рендере
+  // будет срабатывать при первом ренденре
+  // будет срабатывать каждый раз при изменении count
   useEffect(() => {
-    // вернет новое состояние count 
-    // будет срабатывать при первом рендере
-    console.info('new counter value: ', count);
+    console.info('counter value: ', count);
+  }, [count]);
 
-    // вернет предыдущее состояние count до изменения 
+  return (
+    <button onClick={() => setCount(count + 1)}>{count}</button>
+  );
+}
+```
+
+---
+
+### componentDidUpdate() (возврат предыдущего state)
+
+- Не будет срабатывать при первом рендере;
+- Будет срабатывать каждый раз ДО изменения зависимостей;
+- Поэтому возвращает предылущий state;
+
+```tsx
+import { useState, useEffect } from 'react';
+
+const SomeComp = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
     // не будет срабатывать при первом рендере!
+    // вернет предыдущее состояние count до изменения 
     return () => {
       console.info('previos counter value: ', count);
     };
   }, [count]);
 
   return (
-    <div>{count}</div>
+    <button onClick={() => setCount(count + 1)}>{count}</button>
   );
 }
 ```
@@ -189,13 +218,22 @@ const SomeComp = () => {
 import { useState, useEffect } from 'react';
 
 const SomeComp = () => {
-  const [count, setCount] = useState(0);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
+  // resizeX update state method
+  const resizeXListener = () => {
+    const updateWidth = window.innerWidth;
+    setWindowWidth(updateWidth);
+    console.log('windowWidth', windowWidth);
+  };
 
-  // будет срабатывать при каждом демонтировании компонента
   useEffect(() => {
-    return () => setCount(0);
-  }, []);
+    // add event listener
+    window.addEventListener('resize', resizeXListener);
+
+    // remove event listener
+    return () => window.removeEventListener('resize', resizeXListener);
+  }); // do not add [] - will not working
 
   return (
     <div>{count}</div>
@@ -205,12 +243,37 @@ const SomeComp = () => {
 
 ---
 
-### componentWill
+### Вариации useEffect
+
+В записи useEffect без [ ] вообще по сути нет смысла, так как этот код будет выполняться при каждом рендере, useEffect можно убрать.
 
 ```tsx
-useEffect(() => {
-  return () => setCount(0);
-});
+const SomeComp = ({ count }: TProps) => {
+  // сработает при каждом рендере / ререндере
+  console.log('count inside', count);
+
+  // сработает при каждом рендере / ререндере
+  useEffect(() => {
+    console.log('count', count);
+
+    // если внутри такой записи менять state, то будет бесконечный цикл
+    setValue(value + 1);
+
+    // можно считать кол-во рендеров
+  });
+
+  // сработает 1 раз при загрузке
+  useEffect(() => {
+    console.log('count []', count);
+  }, []);
+
+  // сработает 1 раз при загрузке и далее каждый раз при изменении count
+  useEffect(() => {
+    console.log('count [count]', count);
+  }, [count]);
+
+  return <div>{count}</div>;
+};
 ```
 
 ---
@@ -219,6 +282,39 @@ useEffect(() => {
 
 - Такой же как и `useEffect`, только грузиться ещё до отрисовки html.
 - Срабатывает раньше чем `useEffect`
+- Применяется редко
+
+---
+
+## useRef()
+
+- Ссылка на DOM-элемент
+- Можно применять все методы работы с DOM
+
+```tsx
+const SomeComp = ({ count }: TProps) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [inputValue, setInputValue] = useState<string>('some string');
+
+  // можно использовать dom-методы
+  const onButtonClick = () => {
+    inputRef.current?.focus();
+  };
+
+  return (
+    <div>
+      <input
+        ref={inputRef}
+        type='text'
+        value={inputValue}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
+      />
+
+      <button onClick={onButtonClick}>Click me</button>
+    </div>
+  )
+};
+```
 
 ---
 
@@ -257,13 +353,6 @@ const onButtonClick = () => {
 ```
 
 С помощью хука `useContext` можно получить доступ к `theme` из любого компонента внутри `<ThemeContext.Provider>`
-
----
-
-## useRef()
-
-- Ссылка на DOM-элемент
-- Можно применять все методы работы с DOM
 
 ---
 
