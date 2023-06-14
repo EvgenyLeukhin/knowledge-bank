@@ -423,10 +423,86 @@ const check = b.map(i => {
 
 Если нужно подставлять какие-либо данные в зависимости от значения прорса.
 
-```tsx
-type TProps = 'left' | 'up' | 'right' | 'down';
+### 1 вариант - использовать вызов функции
 
-const Arrow = (direction: TProps) => {
-  return 
-} 
+```tsx
+type TDirection = 'left' | 'up' | 'right' | 'down';
+type TProps = {
+  direction?: TDirection;
+};
+
+const Arrow = ({ direction = 'down' }: TProps) => {
+  const returnDirection = (directionName: TDirection) => {
+    switch (directionName) {
+      case 'left': return 90;
+      case 'up': return 180;
+      case 'right': return 270;
+      case 'down': return 0;
+
+      default: return 0;
+    }
+  };
+
+  return (
+    <svg
+      style={{ transform: `rotate(${returnDirection(direction)}deg)` }}
+      width='14'
+      height='8'
+      viewBox='0 0 14 8'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M1 1L7 7L13 1'
+        stroke='#000'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  );
+};
+
+export default Arrow;
+```
+
+### 2 вариант - использовать объект (так проще)
+
+```tsx
+type TDirection = 'left' | 'up' | 'right' | 'down';
+type TProps = {
+  direction?: TDirection;
+};
+
+const Arrow = ({ direction = 'down' }: TProps) => {
+  const directions: Record<TDirection, number> = {
+    left: 90,
+    up: 180,
+    right: 270,
+    down: 0,
+  };
+
+  const selectedDirection = directions[direction];
+
+  return (
+    <svg
+      style={{ transform: `rotate(${selectedDirection}deg)` }}
+      width='14'
+      height='8'
+      viewBox='0 0 14 8'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M1 1L7 7L13 1'
+        stroke='#000'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  );
+};
+
+export default Arrow;
 ```
