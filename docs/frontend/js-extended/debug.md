@@ -13,6 +13,10 @@ console.error('some string', someValue);
 // how to look js-code on this break line
 debugger; // ---> Dev tool "Sources"
 
-// show state data inside html
+// show state info as text data inside html
 {JSON.stringify(state)}
+```
+
+```jsx
+<pre>{JSON.stringify(user, null, 2)}</pre>
 ```

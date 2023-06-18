@@ -356,7 +356,7 @@ export const UserContext = createContext<TUserData>({
 });
 ```
 
-### 2 шаг - подключаем контекст к приложению, значение подключаем к useState
+### 2 шаг - подключаем контекст к приложению, значение контекста подключаем к useState
 
 ```tsx
 import { UserContext } from './UserContext';
@@ -388,7 +388,7 @@ const App = () => {
 }
 ```
 
-### 3 шаг - используем контекст внутри компонента
+### 3 шаг - используем контекст внутри вложенных компонентов в провайдер
 
 Получаем доступ к personData через хук `useContext`. При изменении personData, данные будут обновляться внутри компонента.
 
@@ -416,17 +416,125 @@ export default function SomeComp() {
 
 ## <MARK>useMemo()</MARK>
 
-Похож на useMemo, но возвращает функцию. Тоже для оптимизации.
+Своего рода умная обертка для функций "из вне", которая избавляет компонент от лишних вызовах этих функций при изменении параметров 
 
-TODO
+- Запоминает значение(объект) возвращаемой функции, пока не изменились зависимости
+- Включает в себя функцию, которую нужно мемоизировать и зависимости для вызова
+- Оптимизация
+
+Как бы кешируем значение, если оно не менялось, то функция выполняться не будет. Для оптимизации.
+
+```tsx
+// https://www.youtube.com/watch?v=btlo8kOoc-A
+import { useMemo, useState } from 'react';
+
+type TUser = {
+  name: string;
+  surname: string;
+};
+
+// выше есть функция, создающая юзера
+function createUser(name: string, surname: string, mode: string): TUser {
+  const userData = { name, surname };
+  console.log(`userData-${mode}`, userData);
+
+  return userData;
+}
+
+const SomeComp = () => {
+  const [name, setName] = useState<string>('John');
+  const [surname, setSurname] = useState<string>('Smith');
+  const [counter, setCounter] = useState<number>(0);
+
+  // проблема, что эта функция вызывается каждый раз при обновлении state
+  // при нажатии на button меняется counter и функция перевызывается каждый раз
+  // хотя мы вообще не трогаем name или surname
+
+  // плохо - вызов функции на каждый чих
+  const badUser: TUser = createUser(name, surname, 'bad');
+
+  // хорошо - вызов функции только когда меняются нужные нам параметры
+  const goodUser = useMemo(() => {
+    createUser(name, surname, 'good');
+  }, [name, surname]);
+
+
+  return (
+    <div>
+      <form>
+        <input
+          type='text'
+          name='name'
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+
+        <br />
+
+        <input
+          type='text'
+          name='surname'
+          value={surname}
+          onChange={e => setSurname(e.target.value)}
+        />
+
+        <pre>{JSON.stringify(badUser, null, 2)}</pre>
+        <pre>{JSON.stringify(goodUser, null, 2)}</pre>
+      </form>
+
+      <button onClick={() => setCounter(counter + 1)}>
+        На меня нажали {counter} раз
+      </button>
+    </div>
+  );
+};
+
+export default SomeComp;
+```
 
 ---
 
 ## <MARK>useCallback()</MARK>
 
-Похож на useMemo, но возвращает функцию. Тоже для оптимизации.
+```tsx
+- Похож на `useMemo`, только запоминает саму функцию, а не ее возвращаемое значение
+- Нужно, когда какие-либо функции есть в зависимостях у useEffect
+- Запоминает правильную ссылку на функцию
+- Запоминает ссылку функции, пока не изменились зависимости
 
-TODO
+import { useState, useCallback, useEffect } from 'react';
+
+const SomeComp = () => {
+  const [message, setMessage] = useState<string>('Hi, everyone!!!');
+  const [counter, setCounter] = useState<number>(0);
+
+  // плохо: если функция есть в зависимости, то ее ссылка будет всегда не совпадать с той,
+  // что указана в useEffect, и даже если функция не менялась, то useEffect будет реагировать
+  const greeting = (message: string) => {
+    console.log(message);
+  };
+
+  // хорошо - оборачиваем в useCallback
+  const greeting = useCallback((message: string) => {
+    console.log(message);
+  }, []);
+
+  useEffect(() => {
+    greeting(message);
+  }, [message, greeting]);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {message}
+      <button onClick={() => setCounter(counter + 1)}>
+        Clicked me {counter} times
+      </button>
+    </div>
+  );
+};
+
+export default SomeComp;
+```
 
 ---
 
