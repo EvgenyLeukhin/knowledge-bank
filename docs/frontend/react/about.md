@@ -3,7 +3,7 @@ title: О React
 sidebar_position: 0
 ---
 
-[React official docs](https://ru.reactjs.org/) - ru.reactjs.org
+[React official docs](https://react.dev) - ru.reactjs.org
 
 Библиотека (18-я версия) использующая:
 
@@ -17,9 +17,20 @@ sidebar_position: 0
 
 ## Virtual DOM
 
-DOM который генерируется JavaScript через ```createElemet()```, при обновлении данных или состояния перерисовывается не весь DOM как в статичном вебе, а только то, что обновилось, в этом главное премущество в отличие от Static DOM. 
+- Реактивность (создание DOM, с помощью JS гораздо быстрее, чем переключение между статичными html-страницами);
+- Virtual DOM строиться на основе jsx-разметки компонентов React-приложения;
+- Real DOM это точная копия Virtual DOM в определенный момент времени;
+- На основе Virtual DOM создается Real DOM через js-метод `createElement()`;
+- Real DOM постоянно сравнивается с Virtual DOM, и если Virtual DOM будет отличается от Real DOM, то именно то, что отличается будет сразу обновлено в Real DOM;
+- Процесс создания/удаления/обновления Real DOM на основе Virtual DOM называется **жизненным циклом компонентов** React-приложения
 
 ***
+
+## Lifecycle
+
+**Mount**/**Render** --> **Update** --> **Unmont**
+
+---
 
 ## Компоненты
 
@@ -32,6 +43,56 @@ DOM который генерируется JavaScript через ```createEleme
 - CSS,
 - HTML,
 - интерфейсам взаимодействия.
+
+### Запись через функцию
+
+```tsx 
+// export
+export function SomeComponent() {
+  return (
+    <div>SomeComponent</div>
+  )
+}
+
+// export default
+export default function SomeComponent() {
+  return (
+    <div>SomeComponent</div>
+  )
+}
+```
+
+---
+
+### Запись через константу
+
+```tsx
+const SomeComponent = () => {
+  return (
+    <div>SomeComponent</div>
+  )
+}
+
+export default SomeComponent;
+```
+
+---
+
+### Запись через класс
+
+```tsx
+import { Component } from 'react';
+
+class SomeComponent extends Component {
+  render() {
+    return (
+      <div>SomeComponent</div>
+    )
+  }
+}
+
+export default SomeComponent;
+```
 
 ---
 
@@ -55,17 +116,6 @@ SPA умеют переключаться между страницами без
 - History API,
 - API бэкенда (общение через HTTP),
 - сервисы для работы с MVC, MV*, MVVM архитектурами (написан ли сервис своими силами или использована готовая библиотека — неважно).
-
-***
-
-## Lifecycle ---
-
-- Mount
-- Render
-- Update
-- Unmont
-
-TODO
 
 ***
 
@@ -244,3 +294,46 @@ render(
 
 [Post CSS plugins](https://www.postcss.parts/)
 
+---
+
+
+## React Compound Components
+
+<img src="../../../../img/react/compound.jpg" alt="compound.jpg" />
+
+```tsx
+import { ReactNode } from 'react';
+
+const Card = ({ children }: { children?: ReactNode }) => {
+  return <div>{children}</div>;
+};
+
+const Title = ({ children }: { children?: ReactNode }) => <h2>{children}</h2>;
+
+const Text = ({ children }: { children?: ReactNode }) => <p>{children}</p>;
+
+const Button = ({ text, onClick }: { text: string; onClick: () => void }) => (
+  <button onClick={onClick}>{text}</button>
+);
+
+Card.Title = Title;
+Card.Text = Text;
+Card.Button = Button;
+
+const SomeComp = () => {
+  return (
+    <Card>
+      <Card.Title>Title</Card.Title>
+      <Card.Text>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+        aperiam repellendus voluptate corrupti? Error consequuntur ea, in
+        mollitia, reiciendis, et minima possimus officia quisquam quod sit
+        eligendi! Officia, voluptatibus doloribus.
+      </Card.Text>
+      <Card.Button text='Click me' onClick={() => alert('Clicked')} />
+    </Card>
+  );
+};
+
+export default SomeComp;
+```

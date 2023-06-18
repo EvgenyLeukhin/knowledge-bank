@@ -63,7 +63,7 @@ const someUnknownObj: Record<string, number> = {
 }
 
 // 2 вариант (key)
-const someUnknownObj: { [key: string]: number} = {
+const someUnknownObj: { [key: string]: number } = {
   someField1: 1,
   someField2: 2,
   someField3: 3,
@@ -102,7 +102,12 @@ TODO
 
 ## FC
 
-TODO
+```ts
+// children type
+type TProps = {
+  children: React.ReactNode
+}
+```
 
 ---
 
@@ -119,6 +124,10 @@ TODO
 ---
 
 ## DOM
+
+```ts
+const ref = useRef<HTMLDivElement>(null);
+```
 
 TODO
 

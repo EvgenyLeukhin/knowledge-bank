@@ -1,7 +1,21 @@
 ---
-title: Хуки +--
+title: Хуки ++-
 sidebar_position: 6
 ---
+
+export const MARK = ({ children }) => {
+  const styles = {
+    background: 'deeppink', 
+    color: 'white', 
+    padding: 10, 
+    borderRadius: 10,
+  };
+  return (
+    <mark style={styles}>
+      {children}
+    </mark>
+  )
+};
 
 - Хуки - это функции, которые нужно вызывать для того, чтобы они работали;
 - Хуки используют деструктуризацию массива, чтобы можно было сразу присвоить переменные равные элементам массива;
@@ -22,7 +36,7 @@ const3; // 'c'
 
 ---
 
-## useState()
+## <MARK>useState()</MARK>
 
 - Позволяет использовать локальный стейт внутри функциональных React-компонентов, а не только в классовых как было в ранних версиях React;
 - Функции, изменяюшие state принято именовать с помощью префикса `set__`;
@@ -110,7 +124,7 @@ const onButtonClick = () => {
 
 ---
 
-## useEffect()
+## <MARK>useEffect()</MARK>
 
 - Если хук `useState` заменил `state` классового компонента, то хук `useEffect` заменил все методы жизненного цикла (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` и т.д.). 
 - Может использоваться несколько раз в одном компоненте.
@@ -278,7 +292,7 @@ const SomeComp = ({ count }: TProps) => {
 
 ---
 
-## useLayoutEffect()
+## <MARK>useLayoutEffect()</MARK>
 
 - Такой же как и `useEffect`, только грузиться ещё до отрисовки html.
 - Срабатывает раньше чем `useEffect`
@@ -286,9 +300,9 @@ const SomeComp = ({ count }: TProps) => {
 
 ---
 
-## useRef()
+## <MARK>useRef()</MARK>
 
-- Ссылка на DOM-элемент
+- Ссылка на DOM-элемент или на любую другую js-конструкцию
 - Можно применять все методы работы с DOM
 
 ```tsx
@@ -318,83 +332,131 @@ const SomeComp = ({ count }: TProps) => {
 
 ---
 
-## useContext()
+## <MARK>useContext()</MARK>
 
 - Позволяет передавать `state` на любой уровень, что-то вроде встроенного `redux` в `react`
 - Можно избавиться от `property drilling`
-- Внутрь контекста можно передавать всё, что угодно (примитивы, функции, объекты).
+- Внутрь контекста можно передавать всё что угодно (примитивы, функции, объекты).
 
-```ts title='ThemeContext.ts'
-// создаём контекст
-import React from 'react';
+### 1 шаг - создаем пустой контекст
 
-// default value
-const theme = 'light';
+```ts
+import { createContext } from 'react';
 
-export const ThemeContext = React.createContext(theme);
-```
-
-У контекста есть встроенный `Provider`, которым нужно обернуть вложенные компоненты
-
-```tsx title="_app.tsx"
-const [theme, setTheme] = useState('light');
-
-const onButtonClick = () => {
-  setTheme(theme === 'light' ? 'dark' : 'light');
+export type TUserData = {
+  name: string;
+  surname: string;
+  age?: number;
 };
-...
-<ThemeContext.Provider value={theme}>
-  <PageBaseLayout>
-    <Component {...pageProps} />
 
-    <button onClick={onButtonClick}>{theme}</button>
-  </PageBaseLayout>
-</ThemeContext.Provider>
+export const UserContext = createContext<TUserData>({
+  name: '',
+  surname: '',
+  age: undefined,
+});
 ```
 
-С помощью хука `useContext` можно получить доступ к `theme` из любого компонента внутри `<ThemeContext.Provider>`
+### 2 шаг - подключаем контекст к приложению, значение подключаем к useState
+
+```tsx
+import { UserContext } from './UserContext';
+
+const App = () => {
+  const [personData, setPersonData] = useState<TUserData>({
+    name: 'Default Username',
+    surname: 'Default Surname',
+    age: null,
+  });
+
+  return (
+    <UserContext.Provider value={personData}>
+      <button
+        onClick={() =>
+          setPersonData({
+            name: 'Jack',
+            surname: 'Corbell',
+            age: 35,
+          })
+        }
+      >
+        Change UserContext
+      </button>
+
+      <SomeComponent />
+    </UserContext.Provider>
+  )
+}
+```
+
+### 3 шаг - используем контекст внутри компонента
+
+Получаем доступ к personData через хук `useContext`. При изменении personData, данные будут обновляться внутри компонента.
+
+Оборачиваем в `<Provider />`.
+
+```tsx
+import { useContext } from 'react';
+import { UserContext } from './UserContext';
+
+export default function SomeComp() {
+  const personData = useContext(UserContext);
+  const { name, surname, age } = personData;
+
+  return (
+    <ul>
+      <li>{`name: ${name}`}</li>
+      <li>{`surname: ${surname}`}</li>
+      <li>{`age: ${age}`}</li>
+    </ul>
+  );
+}
+```
 
 ---
 
-## useCallback()
+## <MARK>useMemo()</MARK>
+
+Похож на useMemo, но возвращает функцию. Тоже для оптимизации.
 
 TODO
 
 ---
 
-## useMemo()
+## <MARK>useCallback()</MARK>
+
+Похож на useMemo, но возвращает функцию. Тоже для оптимизации.
 
 TODO
 
 ---
 
-## useReducer()
-
-
-TODO
-
----
-
-## useSelector()
+## <MARK>useReducer()</MARK>
 
 
 TODO
 
 ---
 
-## useImperativeHandle()
+## <MARK>useSelector()</MARK>
+
 
 TODO
 
 ---
 
-## useDebugValue()
+## <MARK>useImperativeHandle()</MARK>
 
 TODO
 
 ---
 
-## Катомные хуки
+## <MARK>useDebugValue()</MARK>
+
+TODO
+
+---
+
+## Кастомные хуки
 
 - Самописные переиспользуемые хуки, в которых используются стандартные.
 - По идее, не должны возвращать разметку (расширение .js или .ts)
