@@ -38,7 +38,7 @@ sidebar_position: 1
 
 - [redux](https://redux.js.org/)
 - [redux-toolkit](https://redux-toolkit.js.org/)
-- [mobx.js](https://mobx.js.org/README.html)
+- [mobx](https://mobx.js.org/README.html)
 
 ---
 

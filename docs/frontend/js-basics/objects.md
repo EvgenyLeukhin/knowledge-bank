@@ -420,6 +420,8 @@ user1; // { name: 'John', age: 33 }
 
 ## Optional chaining
 
+Если будет обращение к несуществующему вложенному полю несуществующего поля, чтобы не возникало краш-ошибки нужно пользоваться optional chaining.
+
 ```ts
 const person = {
   name: 'Evgeny',
@@ -430,9 +432,14 @@ const person = {
   //   surname: 'Begunova',
   // }
 };
+// обращаемся к несуществующему полю на первом уровне
+person.sister; // undefined - ошибки не будет
 
-person.wife.name; // Uncaught TypeError: Cannot read properties of undefined (reading 'name') 
-person?.wife?.age; // undefined
+// обращаемся к несуществующему полю на первом уровне
+person.sister.age; // Uncaught TypeError: Cannot read properties of undefined (reading 'name') 
+
+// c optional chaining
+person.sister?.age; // undefined
 ```
 
 ---
