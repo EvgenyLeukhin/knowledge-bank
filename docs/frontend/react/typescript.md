@@ -119,7 +119,52 @@ TODO
 
 ## Events
 
-TODO
+### HTMLInputElement / ChangeEvent
+
+```tsx
+const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const value = event.target.value;
+  console.log(value);
+};
+```
+
+---
+
+### HTMLInputElement / FocusEvent
+
+```tsx
+const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+  const value = event.target.value;
+  console.log(value);
+};
+```
+
+---
+
+### HTMLInputElement / FormEvent
+
+```tsx
+const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+
+  if (email && password) {
+    let errors = await dispatch(login(email, password)) as unknown as boolean;
+  }
+}
+```
+
+---
+
+### HTMLDivElement / MouseEvent
+
+```tsx
+const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const value = event.target.value;
+  console.log(value);
+}
+```
+
+
 
 ---
 
