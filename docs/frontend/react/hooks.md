@@ -492,6 +492,99 @@ const SomeComp = () => {
 export default SomeComp;
 ```
 
+### Еще пример
+
+1. Есть `drugstores`, которые приходят из redux
+2. Есть `drugstoreSearching`, которая меняется при вводе поискового текста 
+3. Если вывод списка делать так `filteringDrugstores().map` (без `useMemo()`), то при каждом внешнем изменении `drugstores`, функция `filteringDrugstores` будет постоянно перевызываться, хотя результат возврата этой функции остается постоянным.
+4. При имспользовании `useMemo()` функция будет перевызываться только в случае изменения `drugstoreSearching`, как должно и быть.
+
+`filteringDrugstores().map()` - Плохо
+`memoizedFilteredDrugstores.map()` - Хорошо
+
+```tsx
+const DrugstoreFilter = () => {
+  const { drugstores } = useSelector((state: TStore) => state.map);
+  const { drugstoreSearching } = mapFilter;
+
+  const onSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    dispatch(setDrugstoreSearching(value));
+  };
+
+  const filteringDrugstores = () => {
+    return drugstores.filter(drugstore => {
+      // convert searching keys
+      const drugstoreId = drugstore.id.toString().toLowerCase();
+      const drugstoreName = drugstore.name.toLowerCase();
+      const drugstoreAddress = drugstore.address.toLowerCase();
+
+      // convert searching input string
+      const searchingString = drugstoreSearching.toLowerCase().trim();
+
+      return (
+        drugstoreId.includes(searchingString) ||
+        drugstoreName.includes(searchingString) ||
+        drugstoreAddress.includes(searchingString)
+      );
+    });
+  };
+
+  const memoizedFilteredDrugstores = useMemo(() => {
+    return filteringDrugstores();
+  }, [drugstoreSearching]);
+
+  return (
+    <div className={styles.DrugstoreFilter}>
+      {/* searching input */}
+      <input
+        type='search'
+        name='map-drugstore-filter'
+        id='map-drugstore-filter'
+        placeholder='Поиск аптек'
+        value={drugstoreSearching}
+        className={styles.SearchingInput}
+        onChange={event => onSearchChange(event)}
+      />
+
+      <ul className={styles.DrugstoreFilter__list}>
+        {memoizedFilteredDrugstores.length ? (
+          memoizedFilteredDrugstores.map((drugstore: TDrugstore, index) => {
+            const isSelected = selectedDrugstores.some(
+              selectedDrugstore => selectedDrugstore.id === drugstore.id,
+            );
+
+            return (
+              <li
+                key={drugstore.id}
+                onClick={() => onDrugstoreClick(drugstore)}
+                className={cn(styles.DrugstoreFilter__listItem, {
+                  [styles.isSelected]: isSelected,
+                })}
+              >
+                <span>{`${index + 1}. ${drugstore.name}`}</span>&nbsp;-&nbsp;
+                <span>{drugstore.address}</span>
+              </li>
+            );
+          })
+        ) : (
+          <li
+            className={cn(
+              styles.DrugstoreFilter__listItem,
+              styles.DrugstoreFilter__noResults,
+            )}
+          >
+            Нет результатов
+          </li>
+        )}
+      </ul>
+    </div>
+  );
+};
+
+export default DrugstoreFilter;
+```
+
 ---
 
 ## <MARK>useCallback()</MARK>
