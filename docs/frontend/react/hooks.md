@@ -585,6 +585,81 @@ const DrugstoreFilter = () => {
 export default DrugstoreFilter;
 ```
 
+## Еще пример
+
+```tsx
+import { DrugstoreType, DrugstoreView, TDrugstore } from 'interfaces/map';
+import styles from './RegionInfo.module.scss';
+import { useMemo } from 'react';
+
+type TProps = {
+  drugstores: TDrugstore[];
+};
+
+const RegionInfo = ({ drugstores }: TProps) => {
+  // filteredDrugstores
+  const filteredDrugstores = (filterType: DrugstoreType | DrugstoreView) => {
+    return drugstores.filter(drugstore => {
+      const { drugstoreType, type } = drugstore;
+
+      return drugstoreType === filterType || type === filterType;
+    });
+  };
+
+  // counts
+  const ownDrugstoresCount = useMemo(
+    () => filteredDrugstores(DrugstoreType.OWN).length,
+    [drugstores],
+  );
+  const partherDrugstoresCount = useMemo(
+    () => filteredDrugstores(DrugstoreType.PARTNER).length,
+    [drugstores],
+  );
+  const hubsCount = useMemo(
+    () => filteredDrugstores(DrugstoreView.HUB).length,
+    [drugstores],
+  );
+  const vspCount = useMemo(
+    () => filteredDrugstores(DrugstoreView.VSP).length,
+    [drugstores],
+  );
+
+  return (
+    <ul className={styles.RegionInfo}>
+      {/* Собственные */}
+      <li>
+        <span>Собственные:</span>
+        <div />
+        <b>{ownDrugstoresCount}</b>
+      </li>
+
+      {/* Партнерские */}
+      <li>
+        <span>Партнерские:</span>
+        <div />
+        <b>{partherDrugstoresCount}</b>
+      </li>
+
+      {/* Хабы */}
+      <li>
+        <span>Хабы:</span>
+        <div />
+        <b>{hubsCount}</b>
+      </li>
+
+      {/* ВСП */}
+      <li>
+        <span>ВСП:</span>
+        <div />
+        <b>{vspCount}</b>
+      </li>
+    </ul>
+  );
+};
+
+export default RegionInfo;
+```
+
 ---
 
 ## <MARK>useCallback()</MARK>
