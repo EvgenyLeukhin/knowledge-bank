@@ -5,10 +5,10 @@ sidebar_position: 6
 
 ### Иконки
 
+- [svgrepo](https://www.svgrepo.com/) - svg иконки
 - [flaticon](https://www.flaticon.com/)
 - [icons8.ru](https://icons8.ru/)
 - [icons8.com](https://icons8.com/animated-icons) - Анимированные иконки
-- [svgrepo](https://www.svgrepo.com/) - svg иконки
 - [material icons](https://fonts.google.com/icons?selected=Material+Icons) - material svg иконки
 - [ionic.io](https://ionic.io/ionicons)
 - [streamlinehq.com](https://www.streamlinehq.com/)
