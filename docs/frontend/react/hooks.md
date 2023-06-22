@@ -418,9 +418,9 @@ export default function SomeComp() {
 
 Своего рода умная обертка для функций "из вне", которая избавляет компонент от лишних вызовах этих функций при изменении параметров 
 
-- Запоминает значение(объект) возвращаемой функции, пока не изменились зависимости
-- Включает в себя функцию, которую нужно мемоизировать и зависимости для вызова
-- Оптимизация
+- Запоминает/кэширует значение(объект) возвращаемой функции, пока не изменились зависимости
+- Включает в себя функцию, результат которой нужно мемоизировать и зависимости для вызова
+- Оптимизация компонентов
 
 Как бы кешируем значение, если оно не менялось, то функция выполняться не будет. Для оптимизации.
 
@@ -492,12 +492,20 @@ const SomeComp = () => {
 export default SomeComp;
 ```
 
-### Еще пример
+### Примеры
 
 1. Есть `drugstores`, которые приходят из redux
 2. Есть `drugstoreSearching`, которая меняется при вводе поискового текста 
 3. Если вывод списка делать так `filteringDrugstores().map` (без `useMemo()`), то при каждом внешнем изменении `drugstores`, функция `filteringDrugstores` будет постоянно перевызываться, хотя результат возврата этой функции остается постоянным.
 4. При имспользовании `useMemo()` функция будет перевызываться только в случае изменения `drugstoreSearching`, как должно и быть.
+
+
+```tsx
+// синтаксис
+const memoziedFuncResult = useMemo(() => someComponentFunc(), [deps]);
+
+// Если обернуть функцию someComponentFunc в useCallback(), то это не поможет
+```
 
 `filteringDrugstores().map()` - Плохо
 `memoizedFilteredDrugstores.map()` - Хорошо
@@ -585,7 +593,7 @@ const DrugstoreFilter = () => {
 export default DrugstoreFilter;
 ```
 
-## Еще пример
+---
 
 ```tsx
 import { DrugstoreType, DrugstoreView, TDrugstore } from 'interfaces/map';
@@ -597,7 +605,7 @@ type TProps = {
 };
 
 const RegionInfo = ({ drugstores }: TProps) => {
-  // filteredDrugstores
+  // filteredDrugstores - это функция будут постоянно вызываться при изменении props, если не использовать useMemo()
   const filteredDrugstores = (filterType: DrugstoreType | DrugstoreView) => {
     return drugstores.filter(drugstore => {
       const { drugstoreType, type } = drugstore;
@@ -606,7 +614,7 @@ const RegionInfo = ({ drugstores }: TProps) => {
     });
   };
 
-  // counts
+  // counts - сохранение результатов выполнения функции в useMemo с зависимостью [drugstores]
   const ownDrugstoresCount = useMemo(
     () => filteredDrugstores(DrugstoreType.OWN).length,
     [drugstores],
@@ -662,14 +670,61 @@ export default RegionInfo;
 
 ---
 
+```tsx
+import { useMemo } from 'react';
+
+const Test = ({ name, count }: { name: string; count: number }) => {
+  // returnTitle - функция, которая будет постоянно вызываться при изменении любых props (например count)
+  // хотя данная функция count не обрабатывает вообще
+  const returnTitle = () => {
+    return (
+      <span>
+        Hello, <b>{name}!</b>
+      </span>
+    );
+  };
+
+  // useCallback - doesn't work - в этом случае не поможет
+  // const returnTitle2 = useCallback(() => {
+  //   console.log('returnTitle2');
+  //   return (
+  //     <span>
+  //       Hello, <b>{name}!</b>
+  //     </span>
+  //   );
+  // }, [name]);
+
+  // use memo - works - запоминает результат и функция будет вызываться только при изменении name
+  const title = useMemo(() => returnTitle(), [name]);
+
+  return (
+    <div>
+      <div>{title}</div>
+      <div>
+        Count: <b>{count}</b>
+      </div>
+    </div>
+  );
+};
+
+export default Test;
+```
+
+---
+
 ## <MARK>useCallback()</MARK>
 
-```tsx
 - Похож на `useMemo`, только запоминает саму функцию, а не ее возвращаемое значение
 - Нужно, когда какие-либо функции есть в зависимостях у useEffect
 - Запоминает правильную ссылку на функцию
 - Запоминает ссылку функции, пока не изменились зависимости
 
+```tsx
+const testFunc = useMemo(() => (arg: number) => ({}), []);
+const testFunc = useCallback((arg: number) => ({}), []);
+```
+
+```tsx
 import { useState, useCallback, useEffect } from 'react';
 
 const SomeComp = () => {
