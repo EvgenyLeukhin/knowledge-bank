@@ -302,8 +302,9 @@ const SomeComp = ({ count }: TProps) => {
 
 ## <MARK>useRef()</MARK>
 
-- Ссылка на DOM-элемент или на любую другую js-конструкцию
-- Можно применять все методы работы с DOM
+- Ссылка на любую другую js-конструкцию
+- Ссылка на DOM-элемент
+- К DOM-ссылка можно применять все нативные методы работы с DOM
 
 ```tsx
 const SomeComp = ({ count }: TProps) => {
@@ -416,259 +417,29 @@ export default function SomeComp() {
 
 ## <MARK>useMemo()</MARK>
 
-Своего рода умная обертка для функций "из вне", которая избавляет компонент от лишних вызовах этих функций при изменении параметров 
+При перерендере компонента все вложенные функции в компоненте будут пересоздаваться и перевызываться, что не очень круто.
 
-- Запоминает/кэширует значение(объект) возвращаемой функции, пока не изменились зависимости
-- Включает в себя функцию, результат которой нужно мемоизировать и зависимости для вызова
-- Оптимизация компонентов
+Своего рода умная обертка-оптимизация для функций, которые должны вызываться внутри компонентов.
 
 Как бы кешируем значение, если оно не менялось, то функция выполняться не будет. Для оптимизации.
 
-```tsx
-// https://www.youtube.com/watch?v=btlo8kOoc-A
-import { useMemo, useState } from 'react';
-
-type TUser = {
-  name: string;
-  surname: string;
-};
-
-// выше есть функция, создающая юзера
-function createUser(name: string, surname: string, mode: string): TUser {
-  const userData = { name, surname };
-  console.log(`userData-${mode}`, userData);
-
-  return userData;
-}
-
-const SomeComp = () => {
-  const [name, setName] = useState<string>('John');
-  const [surname, setSurname] = useState<string>('Smith');
-  const [counter, setCounter] = useState<number>(0);
-
-  // проблема, что эта функция вызывается каждый раз при обновлении state
-  // при нажатии на button меняется counter и функция перевызывается каждый раз
-  // хотя мы вообще не трогаем name или surname
-
-  // плохо - вызов функции на каждый чих
-  const badUser: TUser = createUser(name, surname, 'bad');
-
-  // хорошо - вызов функции только когда меняются нужные нам параметры
-  const goodUser = useMemo(() => {
-    createUser(name, surname, 'good');
-  }, [name, surname]);
+- `useMemo(() => fn, deps)`
+- useMemo is Not Recommended to Call Other Hooks (нельзя менять локальный стейт)
+- Мемоизации значений
+- Запоминает / кэширует значение(объект) возвращаемой функции, пока не изменились зависимости
+- В useMemo аргумент-функция не принимает параметры
+- Включает в себя функцию, результат которой нужно мемоизировать и зависимости для вызова
+- Оптимизация компонентов
 
 
-  return (
-    <div>
-      <form>
-        <input
-          type='text'
-          name='name'
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
+### Применение:
 
-        <br />
+1. Есть какая-то функция внутри или вне (через import) компонента с пропсами, которая высчитывает какое-либо значение.
+2. Результат выполнения этой функции можно представить в виде константы, по типу `const a = someFunc();`.
+3. В этой функции могут параметром передаются или вычисляться какие-ниб пропсы компонента.
+4. При изменении любых пропсов (даже которые не передаются в функцию параметрами) эта функция постоянно перевызывается, что НЕ КРУТО!
+5. Эту константу нужно переписать с `useMemo()` и поставить только нужную зависимость.
 
-        <input
-          type='text'
-          name='surname'
-          value={surname}
-          onChange={e => setSurname(e.target.value)}
-        />
-
-        <pre>{JSON.stringify(badUser, null, 2)}</pre>
-        <pre>{JSON.stringify(goodUser, null, 2)}</pre>
-      </form>
-
-      <button onClick={() => setCounter(counter + 1)}>
-        На меня нажали {counter} раз
-      </button>
-    </div>
-  );
-};
-
-export default SomeComp;
-```
-
-### Примеры
-
-1. Есть `drugstores`, которые приходят из redux
-2. Есть `drugstoreSearching`, которая меняется при вводе поискового текста 
-3. Если вывод списка делать так `filteringDrugstores().map` (без `useMemo()`), то при каждом внешнем изменении `drugstores`, функция `filteringDrugstores` будет постоянно перевызываться, хотя результат возврата этой функции остается постоянным.
-4. При имспользовании `useMemo()` функция будет перевызываться только в случае изменения `drugstoreSearching`, как должно и быть.
-
-
-```tsx
-// синтаксис
-const memoziedFuncResult = useMemo(() => someComponentFunc(), [deps]);
-
-// Если обернуть функцию someComponentFunc в useCallback(), то это не поможет
-```
-
-`filteringDrugstores().map()` - Плохо
-`memoizedFilteredDrugstores.map()` - Хорошо
-
-```tsx
-const DrugstoreFilter = () => {
-  const { drugstores } = useSelector((state: TStore) => state.map);
-  const { drugstoreSearching } = mapFilter;
-
-  const onSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    dispatch(setDrugstoreSearching(value));
-  };
-
-  const filteringDrugstores = () => {
-    return drugstores.filter(drugstore => {
-      // convert searching keys
-      const drugstoreId = drugstore.id.toString().toLowerCase();
-      const drugstoreName = drugstore.name.toLowerCase();
-      const drugstoreAddress = drugstore.address.toLowerCase();
-
-      // convert searching input string
-      const searchingString = drugstoreSearching.toLowerCase().trim();
-
-      return (
-        drugstoreId.includes(searchingString) ||
-        drugstoreName.includes(searchingString) ||
-        drugstoreAddress.includes(searchingString)
-      );
-    });
-  };
-
-  const memoizedFilteredDrugstores = useMemo(() => {
-    return filteringDrugstores();
-  }, [drugstoreSearching]);
-
-  return (
-    <div className={styles.DrugstoreFilter}>
-      {/* searching input */}
-      <input
-        type='search'
-        name='map-drugstore-filter'
-        id='map-drugstore-filter'
-        placeholder='Поиск аптек'
-        value={drugstoreSearching}
-        className={styles.SearchingInput}
-        onChange={event => onSearchChange(event)}
-      />
-
-      <ul className={styles.DrugstoreFilter__list}>
-        {memoizedFilteredDrugstores.length ? (
-          memoizedFilteredDrugstores.map((drugstore: TDrugstore, index) => {
-            const isSelected = selectedDrugstores.some(
-              selectedDrugstore => selectedDrugstore.id === drugstore.id,
-            );
-
-            return (
-              <li
-                key={drugstore.id}
-                onClick={() => onDrugstoreClick(drugstore)}
-                className={cn(styles.DrugstoreFilter__listItem, {
-                  [styles.isSelected]: isSelected,
-                })}
-              >
-                <span>{`${index + 1}. ${drugstore.name}`}</span>&nbsp;-&nbsp;
-                <span>{drugstore.address}</span>
-              </li>
-            );
-          })
-        ) : (
-          <li
-            className={cn(
-              styles.DrugstoreFilter__listItem,
-              styles.DrugstoreFilter__noResults,
-            )}
-          >
-            Нет результатов
-          </li>
-        )}
-      </ul>
-    </div>
-  );
-};
-
-export default DrugstoreFilter;
-```
-
----
-
-```tsx
-import { DrugstoreType, DrugstoreView, TDrugstore } from 'interfaces/map';
-import styles from './RegionInfo.module.scss';
-import { useMemo } from 'react';
-
-type TProps = {
-  drugstores: TDrugstore[];
-};
-
-const RegionInfo = ({ drugstores }: TProps) => {
-  // filteredDrugstores - это функция будут постоянно вызываться при изменении props, если не использовать useMemo()
-  const filteredDrugstores = (filterType: DrugstoreType | DrugstoreView) => {
-    return drugstores.filter(drugstore => {
-      const { drugstoreType, type } = drugstore;
-
-      return drugstoreType === filterType || type === filterType;
-    });
-  };
-
-  // counts - сохранение результатов выполнения функции в useMemo с зависимостью [drugstores]
-  const ownDrugstoresCount = useMemo(
-    () => filteredDrugstores(DrugstoreType.OWN).length,
-    [drugstores],
-  );
-  const partherDrugstoresCount = useMemo(
-    () => filteredDrugstores(DrugstoreType.PARTNER).length,
-    [drugstores],
-  );
-  const hubsCount = useMemo(
-    () => filteredDrugstores(DrugstoreView.HUB).length,
-    [drugstores],
-  );
-  const vspCount = useMemo(
-    () => filteredDrugstores(DrugstoreView.VSP).length,
-    [drugstores],
-  );
-
-  return (
-    <ul className={styles.RegionInfo}>
-      {/* Собственные */}
-      <li>
-        <span>Собственные:</span>
-        <div />
-        <b>{ownDrugstoresCount}</b>
-      </li>
-
-      {/* Партнерские */}
-      <li>
-        <span>Партнерские:</span>
-        <div />
-        <b>{partherDrugstoresCount}</b>
-      </li>
-
-      {/* Хабы */}
-      <li>
-        <span>Хабы:</span>
-        <div />
-        <b>{hubsCount}</b>
-      </li>
-
-      {/* ВСП */}
-      <li>
-        <span>ВСП:</span>
-        <div />
-        <b>{vspCount}</b>
-      </li>
-    </ul>
-  );
-};
-
-export default RegionInfo;
-```
-
----
 
 ```tsx
 import { useMemo } from 'react';
@@ -676,34 +447,26 @@ import { useMemo } from 'react';
 const Test = ({ name, count }: { name: string; count: number }) => {
   // returnTitle - функция, которая будет постоянно вызываться при изменении любых props (например count)
   // хотя данная функция count не обрабатывает вообще
-  const returnTitle = () => {
-    return (
-      <span>
-        Hello, <b>{name}!</b>
-      </span>
-    );
-  };
+  const returnTitle = () => (
+    <span>
+      Hello, <b>{name}!</b>
+    </span>
+  );
 
-  // useCallback - doesn't work - в этом случае не поможет
-  // const returnTitle2 = useCallback(() => {
-  //   console.log('returnTitle2');
-  //   return (
-  //     <span>
-  //       Hello, <b>{name}!</b>
-  //     </span>
-  //   );
-  // }, [name]);
+  // bad: always calls
+  const title = returnTitle();
 
-  // use memo - works - запоминает результат и функция будет вызываться только при изменении name
+
+  // good: запоминает результат и функция будет вызываться только при изменении name
   const title = useMemo(() => returnTitle(), [name]);
 
   return (
-    <div>
+    <>
       <div>{title}</div>
       <div>
         Count: <b>{count}</b>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -714,49 +477,138 @@ export default Test;
 
 ## <MARK>useCallback()</MARK>
 
-- Похож на `useMemo`, только запоминает саму функцию, а не ее возвращаемое значение
+Применяется тогда, когда в качестве пропсов передается функция, и вот ее нужно мемоизировать.
+
+- `useCallback(fn, deps)`
+- Похож на `useMemo()`, только запоминает всю саму функцию, а не только ее возвращаемое значение
+- мемоизации коллбеков
 - Нужно, когда какие-либо функции есть в зависимостях у useEffect
 - Запоминает правильную ссылку на функцию
 - Запоминает ссылку функции, пока не изменились зависимости
+- Должен использоваться в первую очередь, а уже потом `useMemo()`
+
+### Применение:
+
+1. У родительского компонента есть стейт и есть дочерний компонент, который принимает какой-ниб функцию с `setState` родителя.
+2. При перерендере родителя, передаваемая функция с `setState` дочернему компоненту будет постоянно обновляться (сслылка будет изменяться).
+3. Как следствие, дочерний компонент тоже будет ререндериться, так как у него типа обновился пропс `setState`, хотя по факту ничего не изменилось, что НЕ КРУТО!
+4. Чтобы такого не возникало, нужно обернуть родительскую функцию в `useCallback()`.
+
+---
+
+## <MARK>useMemo() и useCallback() на практике</MARK>
+
+- При изменении count будет перерендер всего и `<Memo />` и `<Child />`
 
 ```tsx
-const testFunc = useMemo(() => (arg: number) => ({}), []);
-const testFunc = useCallback((arg: number) => ({}), []);
+import { useCallback, useState } from 'react';
+import styles from './ToDoList.module.scss';
+
+import Memo from './Memo';
+import Callback from './Callback';
+
+export default function ToDoList() {
+  const [count, setCount] = useState<number>(0);
+  const [name, setName] = useState<string>('Some name');
+
+  const increaseCount = () => {
+    setCount(count + 1);
+  };
+
+  const changeName = () => {
+    setName(name + Math.floor(Math.random() * 10));
+  };
+
+  return (
+    <section className={styles.ToDoList}>
+      <Memo count={count} name={name} />
+      <Callback changeName={changeName} />
+
+      <button onClick={increaseCount}>Icrise count</button>
+    </section>
+  );
+}
 ```
 
 ```tsx
-import { useState, useCallback, useEffect } from 'react';
+import React from 'react';
 
-const SomeComp = () => {
-  const [message, setMessage] = useState<string>('Hi, everyone!!!');
-  const [counter, setCounter] = useState<number>(0);
+type TProps = {
+  children?: React.ReactNode;
+  count: number;
+  name: string;
+};
 
-  // плохо: если функция есть в зависимости, то ее ссылка будет всегда не совпадать с той,
-  // что указана в useEffect, и даже если функция не менялась, то useEffect будет реагировать
-  const greeting = (message: string) => {
-    console.log(message);
+const Memo = ({ children, count, name }: TProps) => {
+  console.log('B - Memo render');
+
+  // ПЛОХО  - будет перевызов всегда
+  const returnCount = () => {
+    return (
+      <div>
+        <span>Count:&nbsp;</span>
+        <b>{count}</b>
+      </div>
+    );
   };
 
-  // хорошо - оборачиваем в useCallback
-  const greeting = useCallback((message: string) => {
-    console.log(message);
-  }, []);
+  // ХОРОШО - будет перевызов только при изменении count
+  const returnCount = useMemo(() => {
+    return (
+      <div>
+        <span>Count:&nbsp;</span>
+        <b>{count}</b>
+      </div>
+    );
+  }, [count]);
 
-  useEffect(() => {
-    greeting(message);
-  }, [message, greeting]);
+  // ПЛОХО  - будет перевызов всегда
+  const returnName = () => {
+    console.log('B - returnName');
+
+    return (
+      <div>
+        <span>Name:&nbsp;</span>
+        <b>{name}</b>
+      </div>
+    );
+  };
+
+  // ХОРОШО - будет перевызов только при изменении name
+  const returnName = useMemo(() => {
+    return (
+      <div>
+        <span>Name:&nbsp;</span>
+        <b>{name}</b>
+      </div>
+    );
+  }, [name]);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      {message}
-      <button onClick={() => setCounter(counter + 1)}>
-        Clicked me {counter} times
-      </button>
+    <div>
+      <h2>Memo</h2>
+
+      {returnCount}
+      {returnName}
     </div>
   );
 };
 
-export default SomeComp;
+export default Memo;
+```
+
+```tsx
+type TProps = {
+  changeName: () => void;
+};
+
+const Callback = ({ changeName }: TProps) => {
+  console.log('C - Callback render');
+
+  return <div>Callback</div>;
+};
+
+export default Callback;
 ```
 
 ---
