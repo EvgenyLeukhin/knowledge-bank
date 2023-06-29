@@ -417,47 +417,27 @@ export default function SomeComp() {
 
 ## <MARK>useMemo()</MARK>
 
-При перерендере компонента все вложенные функции в компоненте будут пересоздаваться и перевызываться, что не очень круто.
-
-Своего рода умная обертка-оптимизация для функций, которые должны вызываться внутри компонентов.
-
-Как бы кешируем значение, если оно не менялось, то функция выполняться не будет. Для оптимизации.
-
-- `useMemo(() => fn, deps)`
-- useMemo is Not Recommended to Call Other Hooks (нельзя менять локальный стейт)
-- Мемоизации значений
-- Запоминает / кэширует значение(объект) возвращаемой функции, пока не изменились зависимости
-- В useMemo аргумент-функция не принимает параметры
-- Включает в себя функцию, результат которой нужно мемоизировать и зависимости для вызова
-- Оптимизация компонентов
-
-
-### Применение:
-
-1. Есть какая-то функция внутри или вне (через import) компонента с пропсами, которая высчитывает какое-либо значение.
-2. Результат выполнения этой функции можно представить в виде константы, по типу `const a = someFunc();`.
-3. В этой функции могут параметром передаются или вычисляться какие-ниб пропсы компонента.
-4. При изменении любых пропсов (даже которые не передаются в функцию параметрами) эта функция постоянно перевызывается, что НЕ КРУТО!
-5. Эту константу нужно переписать с `useMemo()` и поставить только нужную зависимость.
-
+- Оптимизация от перерендеров, кеширование вычисляемого значения;
+- Если есть в компоненте функции, которые вычисляют какие-либо значения, то они будут заново вызываться при любых перерендерах;
+- Чтобы такого не было, нужно использовать `useMemo()`;
+- Синтаксис:`useMemo(() => fn, [deps])`;
 
 ```tsx
 import { useMemo } from 'react';
 
 const Test = ({ name, count }: { name: string; count: number }) => {
   // returnTitle - функция, которая будет постоянно вызываться при изменении любых props (например count)
-  // хотя данная функция count не обрабатывает вообще
   const returnTitle = () => (
     <span>
       Hello, <b>{name}!</b>
     </span>
   );
 
-  // bad: always calls
+  // BAD: always calls
   const title = returnTitle();
 
 
-  // good: запоминает результат и функция будет вызываться только при изменении name
+  // GOOD: запоминает результат и функция будет вызываться только при изменении name
   const title = useMemo(() => returnTitle(), [name]);
 
   return (
@@ -477,138 +457,29 @@ export default Test;
 
 ## <MARK>useCallback()</MARK>
 
-Применяется тогда, когда в качестве пропсов передается функция, и вот ее нужно мемоизировать.
-
-- `useCallback(fn, deps)`
-- Похож на `useMemo()`, только запоминает всю саму функцию, а не только ее возвращаемое значение
-- мемоизации коллбеков
-- Нужно, когда какие-либо функции есть в зависимостях у useEffect
-- Запоминает правильную ссылку на функцию
-- Запоминает ссылку функции, пока не изменились зависимости
-- Должен использоваться в первую очередь, а уже потом `useMemo()`
-
-### Применение:
-
-1. У родительского компонента есть стейт и есть дочерний компонент, который принимает какой-ниб функцию с `setState` родителя.
-2. При перерендере родителя, передаваемая функция с `setState` дочернему компоненту будет постоянно обновляться (сслылка будет изменяться).
-3. Как следствие, дочерний компонент тоже будет ререндериться, так как у него типа обновился пропс `setState`, хотя по факту ничего не изменилось, что НЕ КРУТО!
-4. Чтобы такого не возникало, нужно обернуть родительскую функцию в `useCallback()`.
-
----
-
-## <MARK>useMemo() и useCallback() на практике</MARK>
-
-- При изменении count будет перерендер всего и `<Memo />` и `<Child />`
+- Такой же как `useMemo()` только кэшируется не вычисляемое значение;
+- Если компонент принимает какую-ниб пропс-функцию (например, которая меняет стейт), то при ререндере род. компонента, дочерний компонент также будет перерендеривааться так как ссылка на эту функцию будет обновлена;
+- Чтобы такого не было, нужно использовать `useCallback()`;
+- Синтаксис:`useCallback(fn, deps)`;
 
 ```tsx
-import { useCallback, useState } from 'react';
-import styles from './ToDoList.module.scss';
-
-import Memo from './Memo';
-import Callback from './Callback';
-
 export default function ToDoList() {
   const [count, setCount] = useState<number>(0);
-  const [name, setName] = useState<string>('Some name');
 
-  const increaseCount = () => {
-    setCount(count + 1);
-  };
-
-  const changeName = () => {
-    setName(name + Math.floor(Math.random() * 10));
-  };
+  const onSetCount = useCallback(() => setCount(count + 1), [count]);
 
   return (
     <section className={styles.ToDoList}>
-      <Memo count={count} name={name} />
-      <Callback changeName={changeName} />
-
-      <button onClick={increaseCount}>Icrise count</button>
+      {/* count */}
+      <div>
+        Count: <b>{count}</b>
+        <div>
+          <button onClick={onSetCount1}>Update count</button>
+        </div>
+      </div>
     </section>
-  );
+  )
 }
-```
-
-```tsx
-import React from 'react';
-
-type TProps = {
-  children?: React.ReactNode;
-  count: number;
-  name: string;
-};
-
-const Memo = ({ children, count, name }: TProps) => {
-  console.log('B - Memo render');
-
-  // ПЛОХО  - будет перевызов всегда
-  const returnCount = () => {
-    return (
-      <div>
-        <span>Count:&nbsp;</span>
-        <b>{count}</b>
-      </div>
-    );
-  };
-
-  // ХОРОШО - будет перевызов только при изменении count
-  const returnCount = useMemo(() => {
-    return (
-      <div>
-        <span>Count:&nbsp;</span>
-        <b>{count}</b>
-      </div>
-    );
-  }, [count]);
-
-  // ПЛОХО  - будет перевызов всегда
-  const returnName = () => {
-    console.log('B - returnName');
-
-    return (
-      <div>
-        <span>Name:&nbsp;</span>
-        <b>{name}</b>
-      </div>
-    );
-  };
-
-  // ХОРОШО - будет перевызов только при изменении name
-  const returnName = useMemo(() => {
-    return (
-      <div>
-        <span>Name:&nbsp;</span>
-        <b>{name}</b>
-      </div>
-    );
-  }, [name]);
-
-  return (
-    <div>
-      <h2>Memo</h2>
-
-      {returnCount}
-      {returnName}
-    </div>
-  );
-};
-
-export default Memo;
-```
-
-```tsx
-type TProps = {
-  changeName: () => void;
-};
-
-const Callback = ({ changeName }: TProps) => {
-  console.log('C - Callback render');
-
-  return <div>Callback</div>;
-};
-
-export default Callback;
 ```
 
 ---
