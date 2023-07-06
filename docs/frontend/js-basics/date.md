@@ -112,3 +112,14 @@ import format from 'date-fns/format';
 
 const nowDate = format(new Date(), 'yyyy-MM-dd');
 ```
+
+### Прошедшая дата
+
+Возвращает boolean
+
+```js
+import isPast from 'date-fns/isPast';
+
+const isPastDate1 = isPast(new Date().getFullYear() - 1); // true
+const isPastDate2 = isPast(new Date()); // false
+```
