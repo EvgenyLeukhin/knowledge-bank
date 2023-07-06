@@ -100,3 +100,15 @@ export const CODE = ({children}) => (
 ```const date = ```<CODE>new Date("Fri Mar 17 2023 17:47:37 GMT+0600 (Омск, стандартное время)")</CODE>
 
 ```date```.<CODE>toISOString().split("T")[0]</CODE> – 2023-03-17
+
+---
+
+## date-fns
+
+### Форматировать дату в строку
+
+```js
+import format from 'date-fns/format';
+
+const nowDate = format(new Date(), 'yyyy-MM-dd');
+```
