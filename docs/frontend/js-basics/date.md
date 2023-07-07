@@ -101,6 +101,10 @@ export const CODE = ({children}) => (
 
 ```date```.<CODE>toISOString().split("T")[0]</CODE> – 2023-03-17
 
+или
+
+```date```.<CODE>toISOString()..slice(0, 10)</CODE> – 2023-03-17
+
 ---
 
 ## date-fns
