@@ -64,6 +64,9 @@ npm install --save-dev typescript
 
 # Компиляция файла
 tsc helloworld.ts
+
+# Компиляция всех файлов
+npx tsc
  
 # Утилита позволяет компилировать и сразу запускать .ts файлы
 npm install --save-dev ts-node
@@ -81,12 +84,15 @@ ts-node script.ts
 ```json
 {
   "compilerOptions": {
-    "outDir": "dist",
     "target": "es2016",
+    "outDir": "./dist",
     "declaration": false,
     "module": "commonjs",
     "strictNullChecks": true,
+    "strict": "true",
+    "allowJs": true,
     "sourceMap": true,
+    "esModuleInterop": true,
         ...
    }
 } 
