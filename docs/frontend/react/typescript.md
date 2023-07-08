@@ -7,6 +7,8 @@ sidebar_position: 7
 
 Декларация типов в файле
 
+https://www.youtube.com/watch?v=_KweR3LUGRA
+
 ---
 
 ## Простые переменные
