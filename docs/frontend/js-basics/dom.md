@@ -91,6 +91,40 @@ el.contains(someElement2); // return bool
 
 ---
 
+## Поиск потомка внутри родителя
+
+```ts
+const parentElement = document.querySelector('#parent-id');
+const childElement = parentElement?.querySelector(`#item-${id}`) as HTMLElement;
+```
+
+---
+
+## Отступы и скролл
+
+```ts
+// отступ родителя
+const parentOffset = parentElement?.offsetTop || 0;
+
+// отступ элемента
+const childOffset = childElement?.offsetTop || 0;
+
+// добавление паддинга
+const PADDING_SIZE = 25
+
+// величина скролла
+const scrollHeight = (targetOffset - listOffset) - PADDING_SIZE;
+
+// скролим родителя до потомка
+parentElement?.scroll({
+    top: scrollHeight,
+    left: 0,
+    behavior: "smooth",
+});
+```
+
+---
+
 ## createElement
 
 ```js
