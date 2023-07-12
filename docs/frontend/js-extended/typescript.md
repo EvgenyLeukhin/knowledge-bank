@@ -1,5 +1,5 @@
 ---
-title: TypeScript
+title: TypeScript от Я
 sidebar_position: 6
 ---
 

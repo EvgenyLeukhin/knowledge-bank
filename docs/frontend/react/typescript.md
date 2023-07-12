@@ -1,5 +1,5 @@
 ---
-title: TypeScript в React ++-
+title: TypeScript в React
 sidebar_position: 7
 ---
 
@@ -314,9 +314,9 @@ const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
 
 ```ts
 const ref = useRef<HTMLDivElement>(null);
-```
 
-TODO
+const ref2 = useRef<HTMLInputElement>(null);
+```
 
 ---
 
@@ -340,6 +340,8 @@ interface LikeButtonProps extends CssProps {
 // 2 вариант - через type
 type LikeButtonProps = CssProps & { count: number; }
 ```
+
+---
 
 ## Дженерики
 
@@ -390,4 +392,14 @@ const a = (
 }
 ```
 
----
+### Partial
+
+Может буть использован не весь тип данных, а только какая-то часть
+
+```tsx
+type TProps = {
+  update: (pagination: Partial<IPagination>) => void;
+  params: Partial<IArrowParams>;
+}
+
+```
