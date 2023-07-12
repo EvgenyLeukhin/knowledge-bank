@@ -227,6 +227,20 @@ enum Size {
   XL,
 }
 ```
+Convert enum to array for maping
+
+```ts
+export enum DrugstoreView {
+  DRUGSTORE = 'Аптека',
+  HUB = 'Хаб',
+  VSP = 'ВСП',
+  LINK_TO_DISCONNECT = 'На отключение',
+  LINK_APPROVED = 'На подключение',
+  LINK_REJECT = 'Отказ от подключения',
+}
+
+const drugstoreViews = Object.values(DrugstoreView);
+```
 
 ---
 
