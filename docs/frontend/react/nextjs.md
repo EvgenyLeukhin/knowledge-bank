@@ -11,9 +11,15 @@ sidebar_position: 10
 - SEO frendly
 - Встроенный роутинг
 
-## Install with TypeScript:
+## Install with TypeScript (old):
 
 ```yarn create next-app --typescript```
+
+## Install with TypeScript (new):
+
+now ships with TypeScript by default.
+
+```npx create-next-app@latest project-name```
 
 ### Install 1 old (create-next-app)
 
