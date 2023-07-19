@@ -19,6 +19,10 @@ const someArray = [0, 1, 2];
 
 // массив объектов
 const data = [{...}, {...}, {...}];
+
+// проверка на массив
+Array.isArray([]); // true
+Array.isArray('abc'); // false
 ```
 
 ---
