@@ -141,6 +141,20 @@ return (
 )}
 ```
 
+### Пример цепочки шорткатов
+
+```tsx
+const { hubs } = useSelector((state: TStore) => ({
+    hubs: state.hubs.hubs.filter(hub => { 
+        return state.auth.hubIds?.includes(hub.id) && (!!hub.timezone && !!hub.timeFrom && !!hub.timeTo);
+    })
+    .map(({ name, id, code }) => ({
+        name: code ? `${name} (${code})` : name,
+        value: id,
+    })).sort((a, b) => a.name.localeCompare(b.name))
+}));
+```
+
 ## Плохие и хорошие примеры
 
 Требуется найти наличие доступа haveAccess() по правам (permission)
