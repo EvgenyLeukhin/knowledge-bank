@@ -157,7 +157,7 @@ const isAllowed = (permission?: EPermission[][]): boolean => !permission || perm
 
 // хорошо
 // 1 - используем одинарный массив permission
-// 2  - понятное условие
+// 2 - понятное условие
 // 3 - используем every вместо reduce
 const checkForAllowed = (permission?: EPermission[]):boolean => {
     if (permission) {

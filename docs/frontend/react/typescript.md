@@ -341,6 +341,42 @@ interface LikeButtonProps extends CssProps {
 type LikeButtonProps = CssProps & { count: number; }
 ```
 
+### Пример extends
+
+```tsx
+import { Tooltip }               from '@material-ui/core';
+import { useSelector }           from 'react-redux';
+
+ // импортируем готовые пропсы из либы
+import { NavLink, NavLinkProps } from 'react-router-dom';
+import { TStore }                from 'redux/store/store';
+
+// примешиваем свои кастомные пропсы
+interface NavLinkWithHashProps extends NavLinkProps {
+    title?: string;
+}
+
+// передаем в свой компонент-обертку все пропсы (существующие и кастомные)
+const NavLinkWithHash: React.FC<NavLinkWithHashProps> = ({ title, ...props }) => {
+    const { hubId } = useSelector((state: TStore) => (
+        { hubId: state.orders.filters.hubIds[0] }
+    ));
+
+    const newHref = `${props.to}#ordersFilterHubId=${hubId};`
+
+    return (
+        <Tooltip title={title || ''}>
+            <NavLink {...props} to={newHref}>
+                {props.children}
+            </NavLink>
+        </Tooltip>
+    );
+}
+
+export default NavLinkWithHash;
+
+```
+
 ---
 
 ## Дженерики
