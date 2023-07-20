@@ -52,3 +52,118 @@ sidebar_position: 2
 - Вcтавку токена лучше делать через интерцептор axios, чем просто вставлять из куков или localStorage, так как могут быть проблемы
 - Не нужно разводить "целый зоопарк" npm-пакетов, наличие того или иного пакета должно быть обосновано.
 - Тот, кто знает как приложение взаимодействует с API, тот знает само приложение.
+
+---
+## Мапинг
+
+### Обычный мапинг
+
+- Все функции-обработчики нужно выносить за пределы основного return компонента, чтобы такая функция не создавалась на каждый перерендер.
+- Массивы данных также должны быть за пределами компонента, чтобы не было постоянных инициализаций.
+
+```tsx
+// отдельный файл navLinks.ts
+const navLinks: INavigationLink[] = [ link1, link2, ... ];
+```
+
+```tsx
+const checkForPermission = (permission?: EPermission[]):boolean => {
+    if (permission) {
+        return !!haveAccess(permission);
+    }
+
+    return !permission;
+}
+
+// подсвечиваем ссылку (зеленым цветом), если у пользователя есть все права (И/И) из isAllowed
+// если в поле permission ничего не указано, то также подсвечиваем ссылку
+const checkForAllowed = (permission?: EPermission[]):boolean => {
+    if (permission) {
+        return permission.every(permission => haveAccess(permission));
+    }
+
+    return true;
+}
+
+return (
+  {navLinks.map(navLink => {
+    const { path, tooltipText, className, isAllowed, permission, name }  = navLink;
+    const isHasPermission = checkForPermission(permission);
+    const isHasAllowed = checkForAllowed(isAllowed);
+
+    if (isHasPermission) {
+        return (
+            <NavLinkWithHash
+                to={path[0]}
+                title={tooltipText}
+                data-testid={`nav-${className}`}
+                className={
+                    CN(styles.item, styles[className],
+                        {
+                            [styles.active]: path.includes(url),
+                            'allowed': isHasAllowed,
+                        }
+                    )
+                }
+            >
+                <span>{name}</span>
+            </NavLinkWithHash>
+        );
+    }
+  })}
+)
+```
+
+### Шорткат
+
+При мапинге можно использовать сокращенную запись и после => в () вставлять условия и с помощью && рендерить jsx. Но у обычного мапинга лучшая читаемость.
+
+```tsx
+[item1, item2, ...].map(item => (item.id > 0) && <li key={item.id}>{item.name}</li>)
+```
+
+Пример
+
+```tsx
+{navLinks.map(navLink => ((navLink.permission && haveAccess(navLink.permission)) || !navLink.permission) &&
+  <NavLinkWithHash
+      to={navLink.path[0]}
+      title={navLink.tooltipText}
+      data-testid={`nav-${navLink.className}`}
+      className={
+          CN(styles.item, styles[navLink.className],
+              {
+                  [styles.active]: navLink.path.includes(url),//showActive(),
+                  'allowed': isAllowed(navLink.isAllowed),
+              }
+          )
+      }
+)}
+```
+
+## Плохие и хорошие примеры
+
+Требуется найти наличие доступа haveAccess() по правам (permission)
+
+```ts
+// плохо
+// 1- EPermission[][] - массив массивов
+// 2 !permission || permission.reduce<boolean> - лучше в отдельной переменной
+// 3 (t, c) => t && !!haveAccess(c), true - нечитаемый код
+
+const isAllowed = (permission?: EPermission[][]): boolean => !permission || permission.reduce<boolean>(
+    (t, c) => t && !!haveAccess(c), true
+);
+
+// хорошо
+// 1 - используем одинарный массив permission
+// 2  - понятное условие
+// 3 - используем every вместо reduce
+const checkForAllowed = (permission?: EPermission[]):boolean => {
+    if (permission) {
+        return permission.every(permission => haveAccess(permission));
+    }
+
+    return true;
+}
+```
