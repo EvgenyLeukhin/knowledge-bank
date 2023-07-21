@@ -155,6 +155,29 @@ const { hubs } = useSelector((state: TStore) => ({
 }));
 ```
 
+### Spread и мапинг
+
+```ts
+options={
+    [
+        // опция "Без Хаба"
+        ...(selectedRegions.length === 0
+            ? [{
+                value: WITHOUT_HUB.id,
+                name: WITHOUT_HUB.name,
+            }]
+            : []
+        ),
+
+        // список хабов
+        ...hubs.map(hub => ({ 
+            value: hub.id, 
+            name: hub.code ? `${hub.name} (${hub.code})` : hub.name,
+        }))
+    ].sort((a, b) => +a.value - +b.value)
+}
+```
+
 ## Плохие и хорошие примеры
 
 Требуется найти наличие доступа haveAccess() по правам (permission)

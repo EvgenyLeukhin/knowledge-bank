@@ -14,14 +14,14 @@ sidebar_position: 7
 ```js
 function name(parametr1, parament2, ..., paramentN) {
   // function body (тело функции) хранит выполняемый код
-  // return something;
+  return 'something';
 }
 
 // вызов функции
 name();
 ```
 
-***
+---
 
 ## Нейминг
 
@@ -33,7 +33,7 @@ name();
 - **show** - что-то показывают
 - **check** - что-то проверяют и возвращают логическое значение
 
-***
+---
 
 ## Варианты записи
 
@@ -59,7 +59,7 @@ function(a, b) {
 };
 ```
 
-***
+---
 
 ### Запись через переменную (Function expression)
 
@@ -75,7 +75,7 @@ const summ = function (a, b) {
 summ(1, 2); // 3
 ```
 
-***
+---
 
 ### Стрелочная запись (ES6 - Arrow function)
 
@@ -98,7 +98,7 @@ const greeting = name => console.log(`Hello, ${name}!`);
 greeting('John'); // 'Hello, John!'
 ```
 
-***
+---
 
 ### Сохранение результата в переменную
 
@@ -117,7 +117,101 @@ a; // 'Hello, John!'
 b('Jack'); // 'Hello, Jack!'
 ```
 
-***
+---
+
+### Возвращение объекта
+
+
+```js
+// function statament
+function obj1() {
+  return {
+    a: 1,
+    b: 2,
+  }
+}
+```
+
+```js
+// function expression
+const obj2 = function() {
+  return {
+    a: 1,
+    b: 2,
+  }
+};
+```
+
+```js
+// arrow function
+const obj6 = () => {
+  return { a: 1, b: 2 };
+}
+```
+
+### Сокращенная запись
+
+```js
+// ТАК НЕЛЬЗЯ - БУДЕТ ОШИБКА (так как {} будут восприниматься как тело функции)
+const obj3 = () => { a: 1, b: 2 };
+```
+
+```js
+// чтобы ошибки не было нужно обернуть возвращаемое выражение в ()
+const obj4 = () => ({ a: 1, b: 2 });
+
+// Можно даже делать такую запись на несколько строк
+const obj5 = () => ({ 
+  a: 1, 
+  b: 2,
+});
+```
+
+---
+
+### Возвращение массива
+
+```js
+// function statament
+function arr1() {
+  return [ 1, 2 ];
+}
+```
+
+```js
+// function expression
+const arr2 = function() {
+  return [1, 2];
+};
+```
+
+```js
+// arrow function
+const arr3 = () => {
+  return [1, 2];
+}
+
+// ТАК МОЖНО, так как [] уже воспринимаются как массив
+const arr4 = () => [ 1, 2 ];
+
+```
+
+### Добавление условий в шорткат запись
+
+В такие сокращенные записи можно также добавлять условия к возвращаемой операции через логические операторы.
+
+Если условие трушное будет возвращаться правая часть, если нетрушное, то false.
+
+```js
+const cond1 = () => true && ({ 
+  a: 1, 
+  b: 2,
+});
+
+const cond2 = () => false && [ 1, 2 ];
+```
+
+---
 
 ## Параметры
 
@@ -147,7 +241,7 @@ function returnConsole() {
 
 returnConsole(); // 'Something'
 ```
-***
+---
 
 ### Параметры по умолчанию
 
@@ -176,7 +270,7 @@ const greeting = function (name = "User") {
 greeting('Jack', 'Jack2', 'Jack3'); // 'Hello, User!'
 // Arguments(3) ['Jack', 'Jack2', 'Jack3', callee: (...), Symbol(Symbol.iterator): ƒ]
 ```
-***
+---
 
 ## return
 
@@ -191,7 +285,7 @@ function summ(a, b) {
 }
 ```
 
-***
+---
 
 ## Вложенные функции
 
@@ -212,7 +306,7 @@ someFunc('Hello, world!'); // 'HELLO, WORLD!'
 someFunc(123); // 'Передаётся не строка'
 ```
 
-***
+---
 
 ## Возврат функции из функции
 

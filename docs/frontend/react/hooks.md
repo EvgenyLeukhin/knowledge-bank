@@ -510,6 +510,75 @@ TODO
 
 ---
 
+## Redux hooks
+
+### useSelector
+
+```tsx
+import { useSelector } from 'react-redux';
+
+// сохраняем список users в переменную users
+const users = useSelector(store => store.users);
+
+// destructuring
+const { orders, deliveryTypes, routes, loading, forcing } = useSelector((state: TStore) => ({
+    forcing: state.orders.forcing,
+    orders: state.orders.orders,
+    loading: state.orders.loading,
+    routes: state.routes.routes,
+    deliveryTypes: state.dictionaries.deliveryTypes
+}));
+
+// возврат объекта с обработанными полями с последующей деструктуризацией
+const { selectedRoutes, editingRoute } = useSelector((state: TStore) => ({
+    selectedRoutes: state.routes.routes.filter(route => route.selected),
+    editingRoute: state.routes.routes.find(route => route.editing)  || state.routes.exportedRoutes.find(route => route.editing)
+}));
+
+// двойная деструктуризация
+const {
+    hubs,
+    zones,
+    auth,
+    dictionaries: { paymentTypes, deliveryTypes, additionalTypes }
+} = useSelector((state: TStore) => ({
+    hubs: state.hubs.hubs,
+    zones: state.zones.zones,
+    auth: state.auth,
+    dictionaries: state.dictionaries,
+}));
+```
+
+```tsx
+// много логики внутри useSelector
+const { hubs } = useSelector((state: TStore) => ({
+    hubs: state.hubs.hubs.filter(hub => { 
+        return state.auth.hubIds?.includes(hub.id) && (!!hub.timezone && !!hub.timeFrom && !!hub.timeTo);
+    })
+    .map(({ name, id, code }) => ({
+        name: code ? `${name} (${code})` : name,
+        value: id,
+    })).sort((a, b) => a.name.localeCompare(b.name))
+}));
+```
+
+### useDispatch
+
+```tsx
+import { useDispatch } from 'react-redux';
+import { getAllZones } from 'redux/effect/Zones';
+...
+
+const dispatch = useDispatch();
+
+// применение
+useEffect(() => {
+    dispatch(getAllZones());
+}, []);
+```
+
+---
+
 ## Кастомные хуки
 
 - Самописные переиспользуемые хуки, в которых используются стандартные.
