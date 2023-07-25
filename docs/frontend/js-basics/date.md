@@ -115,6 +115,7 @@ export const CODE = ({children}) => (
 import format from 'date-fns/format';
 
 const nowDate = format(new Date(), 'yyyy-MM-dd');
+const nowDate = format(new Date(), 'hh:mm:ss');
 ```
 
 ### Прошедшая дата
