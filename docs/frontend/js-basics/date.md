@@ -128,3 +128,26 @@ import isPast from 'date-fns/isPast';
 const isPastDate1 = isPast(new Date().getFullYear() - 1); // true
 const isPastDate2 = isPast(new Date()); // false
 ```
+
+### Утилита для даты
+
+```ts
+/***
+ * Форматирует дату в формате HH:MM DD:MM:YYYY
+ * @Date date
+ */
+export const formatDate = (date: Date, showSeconds = false) =>
+    [
+        [date.getHours(), -2],
+        [':', -1],
+        [date.getMinutes(), -2],
+        [showSeconds ? ':' : ' ', -1],
+        [date.getSeconds() + ' ', showSeconds ? -3 : -1],
+        [date.getDate(), -2],
+        ['.', -1],
+        [date.getMonth() + 1, -2],
+        ['.', -1],
+        [date.getFullYear(), -4]
+    ]
+        .reduce((msg, el) => msg + ('0' + el[0]).slice(+el[1]), '');
+```

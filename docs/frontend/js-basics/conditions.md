@@ -86,6 +86,22 @@ switch(A) {
 };
 ```
 
+Можно также менять переприсваивать переменные
+
+```js
+let text = '';
+let tooltip = '';
+
+...
+
+case 'duration':
+    text = calcDuration(item);
+    tooltip = 'Время в часовом поясе хаба';
+    break;
+
+...
+```
+
 ---
 
 ## Тернарный оператор (?:)

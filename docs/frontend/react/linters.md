@@ -10,6 +10,10 @@ sidebar_position: 4
 
 ---
 
+- [2023 - Установка ESLint](https://dev.to/anukr98/setting-up-eslint-with-tsjs-in-your-react-project-in-2023-57o)
+
+---
+
 **Тема «Code style». Статический анализ кода**
 
 - [EditorConfig](https://editorconfig.org/).
