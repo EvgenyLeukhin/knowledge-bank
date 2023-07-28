@@ -84,6 +84,8 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - <kbd>Cmd + Shift + X</kbd>&nbsp;&ndash;&nbsp;Extentions
 - <kbd>Cmd + Shift + R</kbd>&nbsp;&ndash;&nbsp;Thunder Client
 - <kbd>Cmd + \</kbd>&nbsp;&ndash;&nbsp;Divide window
+- <kbd>Option + Z</kbd>&nbsp;&ndash;&nbsp;Переносы строк
+- <kbd>Option + H</kbd>&nbsp;&ndash;&nbsp;Открыть список коммитов (git log)
 
 #### Файлы
 
@@ -108,12 +110,13 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - <kbd>Cmd + Alt + F</kbd>&nbsp;&ndash;&nbsp;Поиск и исправление
 - <kbd>Cmd + /</kbd>&nbsp;&ndash;&nbsp;Комментирование
 - <kbd>Tab</kbd>&nbsp;&ndash;&nbsp;Табуляция
-- <kbd>Shift + Tab</kbd>&nbsp;&ndash;&nbsp;Обратная табуляция
+- <kbd>Shift + Tab, Cmd + []</kbd>&nbsp;&ndash;&nbsp;Обратная табуляция
 - <kbd>Cmd + Alt + ⇅ / Cmd + ЛКМ</kbd>&nbsp;&ndash;&nbsp;Новый курсор
 - <kbd>Cmd + Shift + ⇅</kbd>&nbsp;&ndash;&nbsp;Выделить всё, что выше/ниже
 - <kbd>Cmd + D</kbd>&nbsp;&ndash;&nbsp;Умное выделение
 - <kbd>Cmd + Shift + L</kbd>&nbsp;&ndash;&nbsp;Выделить одинаковые
 - <kbd>Ctrl + G</kbd>&nbsp;&ndash;&nbsp;На строку
+- <kbd>Option + Shift + F</kbd>&nbsp;&ndash;&nbsp;Автоформатирование
 
 
 ### Settings
