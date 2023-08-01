@@ -300,3 +300,16 @@ transition:
   transition: all .23s;
 }
 ```
+
+### Шорткаты транформаций
+
+С недавнего времени в ccs включена поддержка более короткой записи трансформаций.
+
+```scss
+.some-class {
+  rotate: 45deg;
+  scale: 2;
+  translate: 30px 10px;
+}
+```
+
