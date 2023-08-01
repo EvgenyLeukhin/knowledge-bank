@@ -129,6 +129,7 @@ const onButtonClick = () => {
 - Если хук `useState` заменил `state` классового компонента, то хук `useEffect` заменил все методы жизненного цикла (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` и т.д.). 
 - Может использоваться несколько раз в одном компоненте.
 - Можно управлять перерендером компонента.
+- Не блокирует отрисовку разметки
 
 ---
 
@@ -293,6 +294,8 @@ const SomeComp = ({ count }: TProps) => {
 ---
 
 ## <MARK>useLayoutEffect()</MARK>
+
+`useLayoutEffect` выполняет код до отрисовки в браузере
 
 - Такой же как и `useEffect`, только грузиться ещё до отрисовки html.
 - Срабатывает раньше чем `useEffect`

@@ -136,6 +136,21 @@ el.className = 'class-1 class-2';
 el.innerHTML = '<b>New text</b>';
 ```
 
+```ts
+const listElement = listRef?.current;
+const lastEditedSlaElement = listElement?.querySelector(`#sla-item-${sla.lastEditedSlaId}`) as HTMLElement;
+
+// созаем временный элемент для индикации
+const tempElement = document.createElement('i');
+tempElement.innerHTML = 'Недавнее редактирование';
+lastEditedSlaElement?.appendChild(tempElement);
+
+setTimeout(() => {
+    // удаляем временный элемент
+    tempElement.remove();
+}, 5000);
+```
+
 ---
 
 ## Inject html
