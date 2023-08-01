@@ -107,6 +107,25 @@ export const CODE = ({children}) => (
 
 ---
 
+## Сравненение дат
+
+Какая дата раньше, та и больше
+
+```js
+'16.03.1962' > '01.04.1986'; // true
+
+// позже на 1 секунду
+'2023-08-01T03:41:05.071Z' > '2023-08-01T03:41:04.071Z'; // true
+
+// 2023 > 2022
+new Date().getFullYear() > new Date().getFullYear() - 1; // true
+
+// 2023 > 2024
+new Date().getFullYear() > new Date().getFullYear() + 1; // false
+```
+
+---
+
 ## date-fns
 
 ### Форматировать дату в строку
