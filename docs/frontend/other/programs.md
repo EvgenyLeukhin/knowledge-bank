@@ -51,7 +51,9 @@ sidebar_position: 5
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TDVnk9RhYOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 - Клавиатура -> Источники ввода -> Русская - ПК (чтобы на исправить . и ,). ? - будет Shift + 7.
+- Клавиатура -> Источники ввода -> поменять местами, чтобы не было глюка с переключением раскладки
 - Клавиатура -> Сочетание клавиш -> Выбрать следующий источник в меню ввода (сделать Cmd + Пробел, а Spotlight поменять на Option + Пробел)
+
 
 #### Автозапуск
 

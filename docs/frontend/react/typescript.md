@@ -153,6 +153,53 @@ const props = {
 
 ```export type TStore = ReturnType<typeof store.getState>;```
 
+## Типизация полей объекта
+
+```ts
+interface LikeButtonProps {
+  className: string;
+  count: number;
+  size: number;
+}
+
+const props: LikeButtonProps = {
+  className: 'Like',
+  count: 3,
+  size: 'L',
+};
+
+// типизация полей --> 'className', 'count', 'size'
+type Keys = keyof IUsageDates;
+
+// типизация зачений --> 'string' | 'number'
+type Keys = keyof typeof props;
+type Values = (typeof props)[Keys];
+```
+
+## Пример
+
+```tsx
+interface IUsageDates {
+    showDates: boolean;
+    startDate: Date | null;
+    endDate: Date | null;
+}
+
+// usageDates
+const [usageDates, setUsageDates] = useState<IUsageDates>({
+    showDates: false,
+    startDate: null,
+    endDate: null,
+});
+
+  const changeUsageDates = (
+      fieldName: keyof IUsageDates, 
+      payload: (typeof usageDates)[keyof typeof usageDates],
+  ) => {
+      setUsageDates({  ...usageDates, [fieldName]: payload });
+  }
+```
+
 ---
 
 ## Массивы
