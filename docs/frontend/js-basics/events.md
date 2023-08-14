@@ -4,10 +4,14 @@ sidebar_position: 13
 ---
 
 - [События: от браузерных до пользовательских» от Игоря Зубова](https://www.youtube.com/watch?v=aNMdUUuBFmo)
-- [Описание событий на MDN.](https://developer.mozilla.org/en-US/docs/Web/Events)
+- [Описание событий на MDN](https://developer.mozilla.org/en-US/docs/Web/Events)
 - [preventDefault()](https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault)
 - [stopPropagation()](https://developer.mozilla.org/ru/docs/Web/API/Event/stopPropagation)
 - [Всплытие и погружение](https://learn.javascript.ru/bubbling-and-capturing)
+
+<img src="../../../../img/js/async.png" width="550" alt="async.png" />
+
+JS однопоточный. Очередь событий.
 
 ## События в браузере
 
