@@ -528,9 +528,3 @@ const LazyComp2 = React.lazy(() => import('./Component2'));
 Images, fonts, libs, components, reducers, 
 
 ---
-
-## API_URL & env
-
-TODO
-
-***
