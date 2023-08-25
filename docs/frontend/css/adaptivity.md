@@ -29,7 +29,7 @@ sidebar_position: 9
 ## Распростанненые брейкпоинты
 
 [yesviz.com - Список viewport устройств](https://yesviz.com/devices.php)
-[webmobilefirst - Список viewport устройств](https://www.webmobilefirst.com/en/devices/)
+[webmobilefirst - Спецификация viewport устройств](https://www.webmobilefirst.com/en/devices/)
 
 <img src="../../../../img/css/breakpoints.webp" alt="breakpoints.webp" />
 
