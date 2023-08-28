@@ -494,13 +494,6 @@ TODO
 
 ---
 
-## <MARK>useSelector()</MARK>
-
-
-TODO
-
----
-
 ## <MARK>useImperativeHandle()</MARK>
 
 TODO
@@ -520,16 +513,17 @@ TODO
 ```tsx
 import { useSelector } from 'react-redux';
 
-// сохраняем список users в переменную users
+// сохраняем список users в переменную users, couriers в переменную couriers 
 const users = useSelector(store => store.users);
+const couriers = useSelector(store => store.couriers);
 
-// destructuring
+// destructuring - возвращение объекта из функиции и его деструктуризация
 const { orders, deliveryTypes, routes, loading, forcing } = useSelector((state: TStore) => ({
     forcing: state.orders.forcing,
     orders: state.orders.orders,
     loading: state.orders.loading,
     routes: state.routes.routes,
-    deliveryTypes: state.dictionaries.deliveryTypes
+    deliveryTypes: state.dictionaries.deliveryTypes,
 }));
 
 // возврат объекта с обработанными полями с последующей деструктуризацией
