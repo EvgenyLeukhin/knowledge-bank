@@ -15,6 +15,7 @@ sidebar_position: 8
 - [Charles](https://www.charlesproxy.com/latest-release/download.do) - Proxy-server - мониторинг запросов. Сниффер - анализатор трафика.
 - [authenticationtest.com](https://authenticationtest.com/simpleFormAuth/) - Тестирование авторизации
 - [users.bugred](http://users.bugred.ru/) - Тестирование авторизации 2
+- [Интернетомер](https://yandex.ru/internet/) - Проверка скорости интернета
 
 ***
 
