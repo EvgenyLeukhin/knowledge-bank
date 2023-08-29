@@ -40,6 +40,21 @@ sidebar_position: 4
 </table>
 ```
 
+### Свойства CSS для таблиц
+
+```css
+.table {
+  border-spacing: 5px; - расстояние между границами
+  border-collapse: separate; - границы разделены(по ум.)
+  border-collapse: collapse; - границы слиплись
+  cellspacing: 5px; - отступы между ячейками
+  border-spacing: 5px 10px; - отступы между ячейками
+  table-layout: fixed; - ???
+  или padding для ячеек
+  caption-side: |top|bottom| - расположение заголовка таблицы
+}
+```
+
 <table>
   <colgroup>
     <col width="100" />
