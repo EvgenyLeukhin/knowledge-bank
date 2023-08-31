@@ -87,6 +87,16 @@ const someObj: {
   someBoolean: false,
   someUnknown: null,
 }
+
+// 3 вариант (объект или null)
+const courier: {
+  id: number;
+  firstName: string;
+  lastName: string;
+  middleName: string;
+  salaryType: number;
+  additionalTypeIds: number[];
+} | null;
 ```
 
 ---
