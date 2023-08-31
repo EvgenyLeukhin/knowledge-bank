@@ -119,7 +119,31 @@ const onButtonClick = () => {
   });
 };
 ...
+```
 
+### Типизация setState
+
+Если `setState` передается как пропс, то его нужно типизировать
+
+```ts
+
+type TObj = {
+  id: number;
+  name: string;
+}
+
+// родитель
+const [state, setState] = useState<number>(0);
+const [obj, setObj] = useState<TObj>({ id: 0, name: '' });
+
+// потомок
+type TProps = {
+  // изменение примитива
+  setState : React.Dispatch<React.SetStateAction<number>>;
+
+  // изменение объекта
+  setObj: React.Dispatch<TObj>;
+}
 ```
 
 ---
