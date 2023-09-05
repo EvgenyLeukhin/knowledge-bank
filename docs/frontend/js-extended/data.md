@@ -52,6 +52,8 @@ const sortedAReversed = a.sort((nextEl, curEl) => curEl.id - nextEl.id); // 3, 2
 
 // sort by name property
 a.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+
+// сортировка по алфавиту
 a.sort((a, b) => a.name.localeCompare(b.name));
 ```
 
