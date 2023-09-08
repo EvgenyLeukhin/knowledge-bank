@@ -238,3 +238,12 @@ export const convertISODateStringFromServer = (isoDate: string): string => {
     return '';
 }
 ```
+
+Либо нужно обрезать этот кусок '+00:00' у строки:
+
+```js
+{format(
+    new Date(courierStatusDate.split('+')[0]),
+    'dd.MM.yyyy, hh:mm',
+)}
+```
