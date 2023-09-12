@@ -7,6 +7,7 @@ sidebar_position: 5
 
 ## Онлайн-сервисы с шрифтами
 
+- [Шрифты - Fonts Online](https://fonts-online.ru/)
 - [Шрифты - Google Fonts](https://fonts.google.com/)
 - [Шрифты - Fonts4web(RUS)](http://fonts4web.ru/)
 - [Шрифты - Fontriver(RUS)](https://ru.fontriver.com/)
