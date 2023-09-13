@@ -20,9 +20,9 @@ sidebar_position: 5
 
 ### Конвертация шрифта
 
+- [Конвертатор шрифтов - Transfonter.org](https://transfonter.org/)
 - [Конвертатор шрифтов - Fontsquirrel](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Конвертатор шрифтов - OnlineFontConverter](https://onlinefontconverter.com/)
-- [Конвертатор шрифтов - Transfonter.org](https://transfonter.org/)
 
 ### Шрифтовые пары
 
