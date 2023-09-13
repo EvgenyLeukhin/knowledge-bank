@@ -444,6 +444,28 @@ export default function SomeComp() {
 
 ## <MARK>useMemo()</MARK>
 
+<mark>useMemo - это как useEffect + useState. Чтобы не менять стейт при изменении пропса компонента с useEffect, можно использовать useMemo, в которой в константе сразу будет вычисляться значение</mark>
+
+```tsx
+// плохо: используем 2 хука для высчитывания значения
+const [activePlayer, setActivePlayer] = useState(null);
+
+useEffect(() => {
+  setActivePlayer(players.find(player.id === activePlayerId));
+}, [players])
+
+
+// хорошо: используем 1 хук useMemo
+const activePlayer = useMemo(() => {
+  return players.find(player.id === activePlayerId);
+}, [players]);
+
+// если никаких зависимостей нет, то (будет создаваться только при загрузке и не будет перерендериваться)
+const activePlayer = useMemo(() => {
+  return // do something
+}, []);
+```
+
 - Оптимизация от перерендеров, кеширование вычисляемого значения;
 - Если есть в компоненте функции, которые вычисляют какие-либо значения, то они будут заново вызываться при любых перерендерах;
 - Чтобы такого не было, нужно использовать `useMemo()`;
@@ -483,6 +505,30 @@ export default Test;
 ---
 
 ## <MARK>useCallback()</MARK>
+
+<mark>useCallback - как useMemo только для экшенов. Управление реактивностью</mark>
+
+```tsx
+// плохо - при каждом перерендере эта функция будет каждый раз пересоздаваться
+// Не управляем реактивностью
+const onClick = () => {
+  props.onClick?.apply(null);
+  !isAuthenticated ? login() : onRename();
+};
+
+// хорошо - эта функция будет каждый раз пересоздаваться только при изменении [isAuthenticated, onRename]
+// Управляем реактивностью
+const onClick = useCallback(() => {
+  props.onClick?.apply(null);
+  !isAuthenticated ? login() : onRename();
+}, [isAuthenticated, onRename]);
+
+// если никаких зависимостей нет, то (будет создаваться только при загрузке и не будет перерендериваться)
+const onClick = useCallback(() => {
+  // do somethint
+}, []);
+```
+
 
 - Такой же как `useMemo()` только кэшируется не вычисляемое значение;
 - Если компонент принимает какую-ниб пропс-функцию (например, которая меняет стейт), то при ререндере род. компонента, дочерний компонент также будет перерендеривааться так как ссылка на эту функцию будет обновлена;
