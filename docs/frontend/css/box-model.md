@@ -335,7 +335,9 @@ overscroll-behavior: auto* | contain | none | auto contain;
 ```css
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
+  width: 0;
   display: none;
+  background: 'transparent',
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
