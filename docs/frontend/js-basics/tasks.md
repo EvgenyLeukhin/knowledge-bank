@@ -81,3 +81,147 @@ input.addEventListener("keyup", event => {
 
 export default Nullable
 ```
+
+## Обработка циклом for и forEach
+
+```ts
+// объект-заготовка для хранения "умных" маршрутов
+const iSmartRoutes: {
+    [key: number]: IOrderInRoute[][];
+} = {};
+
+// прогоняем коллекцию маршрутов
+data.forEach(routeData => {
+    // объект-заготовка для хранения уникальных атрибутов
+    const uniqueOrderAttributes: IUniqueOrderAttributes = {};
+
+    // массив массивов-заготовка для группировки заказов в точки
+    const dots: IOrderInRoute[][] = [];
+
+    // проходим по заказам внутри маршрута
+    for (let i = 0; i < routeData.orders.length; i++) {
+        // массив-заготовка для группировки заказов текущего маршрута
+        // [] curentDots, будем пушить в [] dots (массив массивов)
+        const curentDots = [];
+
+        // данные текущего заказа
+        const currentOrder = routeData.orders[i];
+
+        // сбрасываем уникальный аттрибут
+        let uniqueAttr = '';
+
+        // поиск и присвоение уникального аттрибута
+        if (currentOrder.originalInterval) {
+            uniqueAttr = currentOrder.address;
+        } else if (
+            currentOrder.deliveryType ===
+                OrderDeliveryTypeEnum.PARTNER_PICKUP ||
+            currentOrder.deliveryType ===
+                OrderDeliveryTypeEnum.PARTNER_RETURN
+        ) {
+            uniqueAttr = currentOrder.pickUpPointErpId
+                ? `${currentOrder.pickUpPointErpId}-partner`
+                : `${currentOrder.longitude},${currentOrder.latitude}`;
+        } else if (
+            currentOrder.deliveryType ===
+                OrderDeliveryTypeEnum.OWN_DELIVERY ||
+            currentOrder.deliveryType ===
+                OrderDeliveryTypeEnum.CUSTOMER_RETURN
+        ) {
+            uniqueAttr =
+                currentOrder.client ||
+                `${currentOrder.longitude},${currentOrder.latitude}`;
+        } else if (
+            currentOrder.deliveryType ===
+            OrderDeliveryTypeEnum.OWN_PICKUP
+        ) {
+            uniqueAttr = currentOrder.pickUpPointErpId
+                ? `${currentOrder.pickUpPointErpId}-own`
+                : `${currentOrder.longitude},${currentOrder.latitude}`;
+        } else {
+            uniqueAttr = `${currentOrder.longitude},${currentOrder.latitude}`;
+        }
+
+        // уникальные аттрибуты заказов записываются как поля объекта uniqueOrderAttributes,
+        // если у заказа уникальный аттрибут совпадает с уже сохраненным в uniqueOrderAttributes
+        // то он записан не будет
+        // кол-во полей в uniqueOrderAttributes = кол-во точек внутри маршрута
+        if (!uniqueOrderAttributes.hasOwnProperty(uniqueAttr)) {
+            uniqueOrderAttributes[uniqueAttr] = true;
+        }
+
+        // пушим заказ в curentDots
+        curentDots.push(currentOrder);
+
+        // на каждую итерацию заказа также пробегаемся по всем заказам для сравнения заказа с заказом
+        for (let j = 0; j < routeData.orders.length - i; j++) {
+            // сравниваемый заказ
+            const compareOrder = routeData.orders[j];
+
+            // исключаем сравнение одинаковых заказов
+            if (currentOrder.id !== compareOrder.id) {
+                // сбрасываем уникальный аттрибут 2
+                let uniqueAttr2 = '';
+
+                // поиск и присвоение уникального аттрибута 2
+                if (compareOrder.originalInterval) {
+                    uniqueAttr2 = compareOrder.address;
+                } else if (
+                    compareOrder.deliveryType ===
+                        OrderDeliveryTypeEnum.PARTNER_PICKUP ||
+                    compareOrder.deliveryType ===
+                        OrderDeliveryTypeEnum.PARTNER_RETURN
+                ) {
+                    uniqueAttr2 = compareOrder.pickUpPointErpId
+                        ? `${compareOrder.pickUpPointErpId}-partner`
+                        : `${compareOrder.longitude},${compareOrder.latitude}`;
+                } else if (
+                    compareOrder.deliveryType ===
+                        OrderDeliveryTypeEnum.OWN_DELIVERY ||
+                    compareOrder.deliveryType ===
+                        OrderDeliveryTypeEnum.CUSTOMER_RETURN
+                ) {
+                    uniqueAttr2 =
+                        compareOrder.client ||
+                        `${compareOrder.longitude},${compareOrder.latitude}`;
+                } else if (
+                    compareOrder.deliveryType ===
+                    OrderDeliveryTypeEnum.OWN_PICKUP
+                ) {
+                    uniqueAttr2 = compareOrder.pickUpPointErpId
+                        ? `${compareOrder.pickUpPointErpId}-own`
+                        : `${compareOrder.longitude},${compareOrder.latitude}`;
+                } else {
+                    uniqueAttr2 = `${compareOrder.longitude},${compareOrder.latitude}`;
+                }
+
+                // если уникальный аттрибуты неодинакового сравниваемого заказа совпадает с текущим
+                // то пушим этот заказ тоже в curentDots
+                if (uniqueAttr2 === uniqueAttr) {
+                    curentDots.push(currentOrder);
+
+                    // удаляем этот заказ из массива внутри j-цикла
+                    routeData.orders.splice(j, 1);
+                    j--;
+                }
+            }
+        }
+
+        // console.log('curentDots', curentDots);
+        // пушим массив
+        dots.push(curentDots);
+
+        // после вычислений удаляем заказ из массива внутри i-цикла
+        routeData.orders.splice(i, 1);
+
+        // так как мы удалили обработанный заказ
+        // можно обнулить счетчик i-го массива, если в нем еще остались заказы
+        if (routeData.orders.length > 0) {
+            i = 0;
+        }
+
+        // записываем "умные заказы" внутрь iSmartRoutes
+        iSmartRoutes[routeData.id] = dots;
+    }
+});
+```
