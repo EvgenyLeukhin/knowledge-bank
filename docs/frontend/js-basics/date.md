@@ -247,3 +247,60 @@ export const convertISODateStringFromServer = (isoDate: string): string => {
     'dd.MM.yyyy, hh:mm',
 )}
 ```
+
+## Сравнение дат
+
+```tsx
+export const returnIsOntimePointTimeDeliveryStatus = (pointsArray: IOrderInRouteWithPointId[]): boolean => {
+    return pointsArray.some((order) => {
+        if (order.courierStatus === сourierStatusEnum.DELIVERED) {
+            const deliveryDateArray = order.deliveryDate.split('-');
+
+            // '17:00:00' (конец интервала в заказе)
+            const deliveryEndInterval = `${order.interval.split('-')[1]}:00`;
+
+            // '13:40:01' (время, когда курьер доставил заказ клиенту)
+            const courierDeliveryTime = order.courierStatusDate.split('T')[1].substring(0, 8);
+
+            // даты для сравления (берем с поля deliveryDate)
+            const deliveryEndIntervalDateForCompare = new Date(
+                // date
+                Number(deliveryDateArray[0]),
+                Number(deliveryDateArray[1]) - 1,
+                Number(deliveryDateArray[2]),
+
+                // end of interval time
+                Number(deliveryEndInterval.split(':')[0]),
+                Number(deliveryEndInterval.split(':')[1]),
+                Number(deliveryEndInterval.split(':')[2])
+            );
+
+            const courierDeliveryDateForCompare = new Date(
+                // date
+                Number(deliveryDateArray[0]),
+                Number(deliveryDateArray[1]) - 1,
+                Number(deliveryDateArray[2]),
+
+                // time
+                Number(courierDeliveryTime.split(':')[0]),
+                Number(courierDeliveryTime.split(':')[1]),
+                Number(courierDeliveryTime.split(':')[2])
+            );
+
+            // сравниваем даты
+            return deliveryEndIntervalDateForCompare >= courierDeliveryDateForCompare;
+        }
+    });
+};
+```
+
+## Массив массивов
+
+```ts
+// из массива точек получаем отфильрованные массивы заказов по pointId
+// [pointId1, pointId2, ...,] --> [[{order, order}], [{order}], [{order},{order},{order},] ]
+// ordersWithPointId - коллекция заказов
+const routePoints: IOrderInRouteWithPointId[][] = routePointIds.map((id) => {
+    return ordersWithPointId.filter((order) => order.pointId === id);
+});
+```

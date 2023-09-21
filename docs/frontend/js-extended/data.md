@@ -512,3 +512,40 @@ const Arrow = ({ direction = 'down' }: TProps) => {
 
 export default Arrow;
 ```
+
+## Фильтрация c filter()
+
+C forEach так не получится!!!
+
+```ts
+const a = [
+  [
+    { order11: 'order11', status: 'Delivered' },
+    { order12: 'order12', status: 'Delivered' },
+    { order13: 'order13', status: 'Not-delivered' },
+    { order14: 'order14', status: 'Not-delivered' },
+  ],
+  [
+    { order21: 'order21', status: 'Delivered' },
+    { order22: 'order22', status: 'Delivered' },
+    { order23: 'order23', status: 'Not-delivered' },
+  ],
+];
+
+// a --> b
+const b = a.map((pointsArray) => {
+  return pointsArray.filter((order) => order.status === 'Delivered');
+});
+
+// result
+const b = [
+  [
+    { order11: 'order11', status: 'Delivered' },
+    { order12: 'order12', status: 'Delivered' },
+  ],
+  [
+    { order21: 'order21', status: 'Delivered' },
+    { order22: 'order22', status: 'Delivered' },
+  ],
+];
+```
