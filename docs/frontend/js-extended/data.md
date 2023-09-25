@@ -78,6 +78,11 @@ const b = a.filter((el, index, thisArray) => el.id === 3); // [{ 3 }]
 
 // фильтрация по несовпадению 
 const с = a.filter((el, index, thisArray) => el.id !== 3); // [{ 0, 1, 2 }]
+
+// example
+const deleteDeckFromSelected = (id: number) => {
+  setSelectedDecks(selectedDecks.filter((deck) => deck.id !== id));
+};
 ```
 
 ---
@@ -142,6 +147,21 @@ const a = [
 a.some((el, index, array) => el.id === 3); // true
 a.some((el, index, array) => el.id === 33); // false
 
+
+// example
+const onSelectDeck = (clickedDeck: TDeckObj) => {
+  const isAlreadyExists = selectedDecks.some((deck) => deck.id === clickedDeck.id);
+
+  if (!isAlreadyExists) {
+    // add selected deck
+    if (selectedDecks.length < 10) {
+      setSelectedDecks([...selectedDecks, clickedDeck]);
+    }
+  } else {
+    // remove deck if already exists
+    setSelectedDecks(selectedDecks.filter((deck) => deck.id !== clickedDeck.id));
+  }
+};
 ```
 
 ---

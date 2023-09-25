@@ -181,6 +181,10 @@ const b = { ...a };
 const a = [ 1, 2, 3, 1, 2, 4 ];
 const aWithOutDublicates = Array.from(new Set(a));
 
+// с помощью lodash
+// [{ index: 1, value: 'a' }, { index: 2, value: 'b' }, { index: 1, value: 'c' }] --> [{ index: 1, value: 'a' }, { index: 2, value: 'b' }]
+_.uniqWith(array, (arrVal, othVal) => arrVal.index === othVal.index)
+
 ```
 
 ---
