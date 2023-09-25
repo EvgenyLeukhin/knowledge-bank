@@ -46,6 +46,8 @@ const someArray2 = new Array(12);
 
 ```js
 const a = new Array(5).fill('some-value');
+
+const b = [...Array(100).keys()]; // [0, 1, 2, 3, 4, ..., 100]
 ```
 
 ### Длина (length)
