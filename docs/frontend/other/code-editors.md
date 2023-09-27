@@ -282,22 +282,3 @@ end_of_line = lf
 trim_trailing_whitespace = true
 insert_final_newline = true
 ```
-
-***
-
-## VIM (CLI editor)
-
-Редактирование файла из консоли.
-
-```vim <filename>``` - Редактирование файла
-
-```cat <filename>``` - посмотреть содержимое файла
-
-Режим редактирования: ```i``` или ```Insert```
-
-```
-:w - save
-:w! - save readonly file
-:q - quit
-:wq - save and quit
-```
