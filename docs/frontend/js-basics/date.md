@@ -163,7 +163,8 @@ new Date().getFullYear() > new Date().getFullYear() + 1; // false
 import format from 'date-fns/format';
 
 const nowDate = format(new Date(), 'yyyy-MM-dd');
-const nowDate = format(new Date(), 'hh:mm:ss');
+const nowDate = format(new Date(), 'hh:mm:ss'); // hh 12-часовой формат
+const nowDate = format(new Date(), 'HH:mm:ss'); // HH 24-часовой формат
 ```
 
 ### Прошедшая дата
