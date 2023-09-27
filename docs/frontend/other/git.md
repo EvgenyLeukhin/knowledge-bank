@@ -201,3 +201,15 @@ IdentityFile ~/.ssh/id_rsa
 ## Personal Access token
 
 [Gitlab link](https://gitlab.npo-at.com/help/user/profile/personal_access_tokens.md#creating-a-personal-access-token)
+
+---
+
+## Редактирование последнего коммита
+
+Допустим, что вы создали коммит и сохранили его в текущую ветку или уже запушили в репозиторий
+
+- <CODE>git log -1</CODE> - Посмотреть последний коммит
+- <CODE>git commit --amend -m "New message"</CODE> - Создать (только для истории, без файлов)
+- <CODE>git push -f</CODE> - Форсированный пуш в репо
+
+В логе коммитов не останется старого коммита, новый отредактированный перезатрет старый при форс пуше. 
