@@ -227,7 +227,9 @@ IdentityFile ~/.ssh/id_rsa
   - s(squash) - Склейка коммита
   - d(drop) - Удалить коммит
 
-- **:wq** + Enter - Сохраняем, пишем коммит месседж
+
+- Ctrl + C, **:wq** + Enter - Сохраняем 
+- i, Пишем коммит месседж, Ctrl + C, :qa
 
 - - <CODE>git push -f</CODE> - пушим с форсом
 
