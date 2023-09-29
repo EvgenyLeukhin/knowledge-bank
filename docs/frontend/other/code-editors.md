@@ -77,6 +77,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - <kbd>Ctrl + Cmd + F</kbd>&nbsp;&ndash;&nbsp;Полноэкранный режим в MacOS
 - <kbd>Cmd + Shift + P</kbd>&nbsp;&ndash;&nbsp;Командный интерфейс
 - <kbd>Ctrl + ` / Cmd + J</kbd>&nbsp;&ndash;&nbsp;Открыть/закрыть терминал
+- <kbd>Ctrl + Tab</kbd>&nbsp;&ndash;&nbsp;Переключение между вкладками
 - <kbd>Cmd + K + S</kbd>&nbsp;&ndash;&nbsp;Список шорткатов
 - <kbd>Ctrl + Shift + G</kbd>&nbsp;&ndash;&nbsp;Git
 - <kbd>Cmd + Shift + D</kbd>&nbsp;&ndash;&nbsp;Debugger
