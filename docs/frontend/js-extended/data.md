@@ -256,6 +256,70 @@ const min = a.reduce((preVal, nextVal) => Math.min(preVal, nextVal)); // 1
 
 ---
 
+### `reduce()` new
+
+Суть reduce вернуть не просто массив как это делает .map(), .filter(), .sort(), а вернуть какой-то вычисляемое значение, которое принимается в качестве первого аргумента, и там может быть любой тип данных.
+
+#### Подсчет суммы циклом for.
+
+```js
+const array = [1, 2, 3, 4, 5];
+let summOfArray = 0;
+
+for (i = 0; i < array.length; i++) {
+  summOfArray += array[i];
+}
+```
+
+#### Подсчет суммы через reduce();
+
+```js
+const array = [1, 2, 3, 4, 5];
+
+const summOfArray = array.reduce((total, item) => total += item);
+```
+
+```js
+const array = [1, 2, 3, 4, 5];
+
+// total по ум. равен 1-ому элементу массива, если не указали значение в конце, при этом в цикле будет пропущена первая итерация
+
+// пробежаться циклом по элементам
+// total он же accumulator, accum, item он же curEl
+array.reduce((total, item, index, sourceArray) => {
+  console.log('item', item);
+}, 0); // 0 - total - начальное значение
+
+// посчитать сумму
+const summOfArray = array.reduce((total, item, index, sourceArray) => {
+  total += item;
+
+  return total;
+}, 0);
+
+В total можно держать не только number, a также {} и [];
+```
+
+#### Макс. значение цикл for
+
+```ts
+const array = [1, 2, 3, 4, 5];
+let max = array[0];
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+        max = array[i];
+    }
+}
+```
+
+#### Макс. значение цикл reduce()
+
+```js
+const array = [1, 2, 3, 4, 5];
+const max = array.reduce((total, item) => Math.max(item));
+```
+
 
 ---
 ---

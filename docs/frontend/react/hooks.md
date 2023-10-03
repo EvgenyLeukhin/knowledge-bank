@@ -79,6 +79,24 @@ const onButtonClick = () => {
 <button onClick={onButtonClick}>Change count</button>
 ```
 
+```tsx
+setGameState: React.Dispatch<React.SetStateAction<TPandaGameState>>;
+...
+
+setGameState((prevState: TPandaGameState) => {
+  return {
+    ...prevState,
+    gameStatus: 'take-cards',
+  };
+});
+
+// короткая запись
+setGameState((prevState: TPandaGameState) => ({
+  ...prevState,
+  gameStatus: 'take-cards',
+}));
+```
+
 ---
 
 ### Множественный state
