@@ -337,3 +337,22 @@ const SomeComp = () => {
 
 export default SomeComp;
 ```
+
+```tsx
+interface TParentProps {
+  children: React.ReactNode;
+}
+const Parent = (props: TParentProps) => <div>{props.children}</div>;
+
+// Child
+interface TChildProps {
+  children: React.ReactNode;
+}
+const Child: React.FC<TChildProps> = ({ children }) => <div>{children}</div>;
+
+Parent.Child = Child;
+
+export default Parent;
+```
+
+
