@@ -23,6 +23,25 @@ Redux лучше понять на примере с банком.
 ***
 
 ## Redux toolkit
+
+### RTK reducers actions
+
+```ts
+reducers: {
+  // short
+  setSidebarModals(state, { payload }: PayloadAction<TModalType>) {
+    state.sidebarModals = payload;
+  },
+
+  // full
+  setInitialRoomState: (state, action: PayloadAction) => {
+    return {
+      ...state,
+      ...initialState,
+    };
+  },
+}
+```
 ### Install redux-toolkit
 
 `yarn add @reduxjs/toolkit react-redux`

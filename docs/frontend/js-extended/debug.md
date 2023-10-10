@@ -20,3 +20,18 @@ debugger; // ---> Dev tool "Sources"
 ```jsx
 <pre>{JSON.stringify(user, null, 2)}</pre>
 ```
+
+## JS Doc style
+
+```js
+/**
+ * Возвращает разницу между датой и интервалом с учетом часового пояса
+ * @param {string} date - дата в формате YYYY-MM-DD
+ * @param {string} interval - интервал в формате HH:MM - HH:MM
+ * @param {number} hubTimezone - часовой пояс
+ * @return {{
+ *     startIntervalDiff: number;
+ *     endIntervalDiff: number;
+ * }}
+ */
+```
