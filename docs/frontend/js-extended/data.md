@@ -633,3 +633,38 @@ const b = [
   ],
 ];
 ```
+
+### Сравнение массивов
+
+```js
+const slots = [['cardId1'], ['cardId2'], ['cardId3', 'cardId4', 'cardId5']];
+
+const cards = [
+  { cardId: 'cardId1' },
+  { cardId: 'cardId2' },
+  { cardId: 'cardId3' },
+  { cardId: 'cardId4' },
+  { cardId: 'cardId5' },
+  { cardId: 'cardId6' },
+];
+
+<slot1>
+  <card1 />
+</slot1>
+
+<slot2>
+  <card2 />
+</slot2>
+
+<slot3>
+  <card3 />
+  <card4 />
+  <card5 />
+</slot3>
+
+const a = slots.map((slot, index) => {
+  return cards.filter((card) => slot.includes(card.cardId));
+});
+
+console.log('a', a);
+```
