@@ -637,6 +637,10 @@ const b = [
 ### Сравнение массивов
 
 ```js
+// слоты (session.slots): [ ['cardId'], ['cardId'], ..., ['cardId', 'cardId'] ]
+// список карт (session.cards): [{ card1 }, { card2 }, ..., { cardN }]
+// слоты с картами (slotsWithCards) [ [{ card1 }], [{ card2 }], ..., [{ cardN }, { cardM }] ]
+
 const slots = [['cardId1'], ['cardId2'], ['cardId3', 'cardId4', 'cardId5']];
 
 const cards = [
