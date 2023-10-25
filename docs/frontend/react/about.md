@@ -1,6 +1,6 @@
 ---
 title: О React
-sidebar_position: 0
+sidebar_position: 5
 ---
 
 [React official docs](https://react.dev) - ru.reactjs.org

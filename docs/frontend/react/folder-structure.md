@@ -1,6 +1,6 @@
 ---
 title: Структура папок и файлов
-sidebar_position: 3
+sidebar_position: 8
 ---
 
 ## Config files
