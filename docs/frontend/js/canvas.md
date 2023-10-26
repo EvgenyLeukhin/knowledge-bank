@@ -1,6 +1,6 @@
 ---
 title: Canvas
-sidebar_position: 111
+sidebar_position: 19
 ---
 
 ## Настройка

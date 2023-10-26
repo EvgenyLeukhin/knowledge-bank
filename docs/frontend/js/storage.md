@@ -1,6 +1,6 @@
 ---
 title: Storage
-sidebar_position: 114
+sidebar_position: 17
 ---
 
 ## Local Storage (локальное хранилище)
