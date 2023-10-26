@@ -1,6 +1,6 @@
 ---
 title: Условия
-sidebar_position: 9
+sidebar_position: 19
 ---
 
 ## Сохранение условия в переменную

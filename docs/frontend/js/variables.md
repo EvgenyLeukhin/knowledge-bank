@@ -1,6 +1,6 @@
 ---
-title: Переменные
-sidebar_position: 8
+title: const / let / var
+sidebar_position: 6
 ---
 
 ## Именование (naming)

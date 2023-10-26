@@ -1,6 +1,6 @@
 ---
-title: Функции ◕
-sidebar_position: 0
+title: function() ◕
+sidebar_position: 10
 ---
 
 ## Колбэк-функция (callback)

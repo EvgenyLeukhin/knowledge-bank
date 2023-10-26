@@ -1,6 +1,6 @@
 ---
 title: Debug
-sidebar_position: 12
+sidebar_position: 112
 ---
 
 ```js

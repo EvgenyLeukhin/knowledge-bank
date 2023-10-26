@@ -1,5 +1,5 @@
 ---
-title: Null и Undefined
+title: null и undefined
 sidebar_position: 5
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: Объекты ◕
-sidebar_position: 0
+title: Object {} ◕
+sidebar_position: 8
 ---
 
 ## get и set

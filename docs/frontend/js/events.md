@@ -1,6 +1,6 @@
 ---
 title: События
-sidebar_position: 13
+sidebar_position: 113
 ---
 
 - [События: от браузерных до пользовательских» от Игоря Зубова](https://www.youtube.com/watch?v=aNMdUUuBFmo)

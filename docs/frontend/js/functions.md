@@ -1,6 +1,6 @@
 ---
-title: Функции
-sidebar_position: 7
+title: function()
+sidebar_position: 9
 ---
 
 В JS функции по сути являются объектами.

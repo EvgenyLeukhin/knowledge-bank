@@ -1,6 +1,6 @@
 ---
-title: Объекты
-sidebar_position: 6
+title: Object {}
+sidebar_position: 7
 ---
 
 ## TypeScript

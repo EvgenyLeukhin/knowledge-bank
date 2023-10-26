@@ -1,5 +1,5 @@
 ---
-title: Script и Браузер
+title: <script>
 sidebar_position: 0
 ---
 
