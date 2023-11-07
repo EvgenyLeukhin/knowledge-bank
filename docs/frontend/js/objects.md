@@ -440,6 +440,7 @@ person.sister.age; // Uncaught TypeError: Cannot read properties of undefined (r
 
 // c optional chaining
 person.sister?.age; // undefined
+person.sister?.[age]; // undefined
 ```
 
 ---
