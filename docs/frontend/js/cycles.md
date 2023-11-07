@@ -1,5 +1,5 @@
 ---
-title: Cycles
+title: Циклы
 sidebar_position: 15
 ---
 

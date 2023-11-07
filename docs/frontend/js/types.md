@@ -1,5 +1,5 @@
 ---
-title: typeof
+title: Типы данных
 sidebar_position: 1
 ---
 

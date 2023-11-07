@@ -1,5 +1,5 @@
 ---
-title: Date
+title: Дата и время
 sidebar_position: 20
 ---
 

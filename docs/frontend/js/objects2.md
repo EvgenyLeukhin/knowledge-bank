@@ -1,5 +1,5 @@
 ---
-title: Object {} ◕
+title: Объекты ◕
 sidebar_position: 8
 ---
 

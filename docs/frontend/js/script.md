@@ -1,5 +1,5 @@
 ---
-title: <script>
+title: Скрипты
 sidebar_position: 0
 ---
 

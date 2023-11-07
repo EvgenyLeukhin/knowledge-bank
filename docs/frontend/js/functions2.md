@@ -1,5 +1,5 @@
 ---
-title: function() ◕
+title: Функции ◕
 sidebar_position: 10
 ---
 

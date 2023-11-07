@@ -1,5 +1,5 @@
 ---
-title: import / export
+title: Import / export
 sidebar_position: 13
 ---
 

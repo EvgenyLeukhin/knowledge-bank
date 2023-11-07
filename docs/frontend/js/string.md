@@ -1,5 +1,5 @@
 ---
-title: string и Symbol
+title: String и Symbol
 sidebar_position: 2
 ---
 

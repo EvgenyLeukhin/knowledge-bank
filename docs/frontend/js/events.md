@@ -1,5 +1,5 @@
 ---
-title: Events
+title: События
 sidebar_position: 16
 ---
 

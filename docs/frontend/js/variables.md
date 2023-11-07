@@ -1,5 +1,5 @@
 ---
-title: const / let / var
+title: Переменные
 sidebar_position: 6
 ---
 

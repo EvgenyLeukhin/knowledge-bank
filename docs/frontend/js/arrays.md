@@ -1,5 +1,5 @@
 ---
-title: Array [ ]
+title: Массивы
 sidebar_position: 11
 ---
 
