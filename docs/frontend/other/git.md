@@ -14,8 +14,8 @@ export const CODE = ({children}) => (
 ## Настройка
 
 - <CODE>git config --list</CODE> - Показывает список конфигураций
-- <CODE>git config --global user.name "Username"</CODE> - Установить глобальное имя пользователя
-- <CODE>git config --global user.email "user@email.com"</CODE> - Установить глобально адрес почты пользователя
+- <CODE>git config --global user.name "Evgeny Leukhin"</CODE> - Установить глобальное имя пользователя
+- <CODE>git config --global user.email "EvgenyLeukhin@yandex.ru"</CODE> - Установить глобально адрес почты пользователя
 - <CODE>git config --global push.default simple</CODE> - Настройка команды git push. Будет пушить только в текущую ветку
 - <CODE>git help &lt;git_command&gt;</CODE> - Справочник для отдельных гит-команд
 

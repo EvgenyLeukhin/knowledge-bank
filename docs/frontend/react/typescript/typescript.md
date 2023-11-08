@@ -296,6 +296,7 @@ export enum DrugstoreView {
   LINK_REJECT = 'Отказ от подключения',
 }
 
+// как любой объект 
 const drugstoreViews = Object.values(DrugstoreView);
 ```
 
