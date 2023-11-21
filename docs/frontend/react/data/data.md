@@ -672,3 +672,16 @@ const a = slots.map((slot, index) => {
 
 console.log('a', a);
 ```
+
+---
+
+### Насыщение масива объектами
+
+```tsx
+  // слоты (session.slots): [ ['cardId'], ['cardId'], ..., ['cardId', 'cardId'] ]
+  // список карт (session.cards): [{ card1 }, { card2 }, ..., { cardN }]
+  // слоты с картами (slotsWithCards) [ [{ card1 }], [{ card2 }], ..., [{ cardN }, { cardM }] ]
+  const slotsWithCards: TableCard[][] = session.slots.map((slot) => {
+    return session.cards.filter((card) => slot.includes(card.cardId));
+  });
+```
