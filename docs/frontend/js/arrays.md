@@ -128,66 +128,67 @@ console.log(someArray); // [3, 0, 1, 2]
 
 ---
 
-### Удалить элемент (delete, pop, shift)
+### Удалить элемент
 
-Черех **delete** элемент удаляется, но его место остаётся (будет undefined)
+#### shift() - удалить первый элемент
+
+Изменяет исходный массив. Удалить элемент в **начале** массива (shift)
 
 ```js
-const someArray = [0, 1, 2];
+const someArray = [0, 1, 2, 3, 4, 5];
+
+// удалить первый элемент
+someArray.shift(); // const a = someArray.shift(); // будет хранить удаленный элемент
+
+console.log(someArray); // [1, 2, 3, 4, 5];
+```
+
+---
+
+#### pop() - удалить последний элемент
+
+Изменяет исходный массив. Удалить элемент в **конце** массива (pop). Удаляет, меняет массив и возвращает удаленный элемент.
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5];
+
+// удалить последний элемент
+someArray.pop(); // const a = someArray.pop(); // будет хранить удаленный элемент
+
+console.log(someArray); // [0, 1, 2, 3, 4]
+```
+
+---
+
+#### delete()
+
+Через **delete** элемент удаляется, но его место остаётся (будет undefined)
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5];
+
+// опустошить элемент с индексом
 delete someArray[0];
-console.log(someArray); // [empty, 1, 2] - lenght не меняется
-```
 
-Удалить элемент в **конце** массива (pop). Удаляет, меняет массив и возвращает удаленный элемент.
-
-```js
-const someArray = [0, 1, 2];
-
-someArray.pop();
-console.log(someArray); // [0, 1]
-```
-
-Удалить элемент в **начале** массива (shift)
-
-```js
-const someArray = [0, 1, 2];
-
-someArray.shift();
-console.log(someArray); // [1, 2]
-```
-
-### Удалить определенный элемент из массива через .splice()
-
-```js
-const d = ['a', 'b', 'c'];
-d.splice('a', 1);
-
-d; // ['b', 'c'];
+console.log(someArray); // [empty, 1, 2, 3, 4, 5] - lenght не меняется
 ```
 
 ---
 
-### Преобразовать в объект
+### Удалить определенный элемент
 
 ```js
-const a = [ 1, 2, 3 ];
-const b = { ...a }; 
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
+const index = array.indexOf(5);
 
+if (index > -1) { // only splice array when item is found
+  array.splice(index, 1); // 2nd parameter means remove one item only
+}
+
+console.log(array); // [1, 2, 3, 4, 6, 7, 8];
 ```
 
----
 
-### Убрать дубликаты из массива
-
-```js
-const a = [ 1, 2, 3, 1, 2, 4 ];
-const aWithOutDublicates = Array.from(new Set(a));
-
-// с помощью lodash
-// [{ index: 1, value: 'a' }, { index: 2, value: 'b' }, { index: 1, value: 'c' }] --> [{ index: 1, value: 'a' }, { index: 2, value: 'b' }]
-_.uniqWith(array, (arrVal, othVal) => arrVal.index === othVal.index)
-
-```
 
 ---
 
@@ -456,4 +457,28 @@ console.log(someArray.includes('g')); // false
 console.log(someArray.includes('a', 1)); // false
 ```
 
+---
 
+### Преобразовать в объект
+
+```js
+const a = [ 1, 2, 3 ];
+const b = { ...a }; 
+
+```
+
+---
+
+### Убрать дубликаты из массива
+
+```js
+const a = [ 1, 2, 3, 1, 2, 4 ];
+const aWithOutDublicates = Array.from(new Set(a));
+
+// с помощью lodash
+// [{ index: 1, value: 'a' }, { index: 2, value: 'b' }, { index: 1, value: 'c' }] --> [{ index: 1, value: 'a' }, { index: 2, value: 'b' }]
+_.uniqWith(array, (arrVal, othVal) => arrVal.index === othVal.index)
+
+```
+
+---
