@@ -1,6 +1,6 @@
 ---
-title: React-cтэк
-sidebar_position: 6
+title: React-экосистема
+sidebar_position: 4
 ---
 
 ### Стилизация

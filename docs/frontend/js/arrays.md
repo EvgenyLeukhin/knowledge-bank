@@ -410,6 +410,14 @@ console.log(b); // 2
 console.log(c); // 3
 ```
 
+```js
+const colors = ["red", "green", "blue"];
+
+// с присваиванием значений по умолчанию:
+const [first, second, third, fourth = 'black'] = colors;
+console.log(fourth) // black
+```
+
 ---
 
 ## Многомерные

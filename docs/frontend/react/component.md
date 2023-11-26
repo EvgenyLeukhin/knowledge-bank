@@ -1,11 +1,12 @@
 ---
-title: Самописный компонент
-sidebar_position: 12
+title: Под капотом компонента
+sidebar_position: 9
 ---
 
 - [Акцессоры;](https://learn.javascript.ru/property-accessors)
 - [Библиотека MobX.](https://mobx.js.org/README.html)
 - [Примеры Array.prototype.flat.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+
 
 ## Передать event по клику
 
@@ -20,7 +21,7 @@ const onTableCellClick = (e: React.MouseEvent) => {
 <div onClick={(e) => onTableCellClick(e)}>Some jsx-element</div>
 ```
 
-## Реактивный компонент
+## Самописный реактивный компонент
 
 ### Представление
 

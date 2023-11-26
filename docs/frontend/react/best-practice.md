@@ -1,6 +1,6 @@
 ---
 title: Лучшие практики
-sidebar_position: 7
+sidebar_position: 3
 ---
 
 ## Atomic design-концепция:

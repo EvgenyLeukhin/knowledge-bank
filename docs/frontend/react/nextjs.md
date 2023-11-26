@@ -1,6 +1,6 @@
 ---
 title: NextJS
-sidebar_position: 10
+sidebar_position: 8
 ---
 
 бертка над React, что-то типо GatsbyJS в плане билдинга. На выходе получается не чистый Virtual DOM, а смесь react и статичного html.
