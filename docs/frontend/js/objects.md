@@ -380,6 +380,17 @@ const someObj2 = {
 someObj === someObj2; // false
 ```
 
+```js
+let originalObject = {name: "John", age: 30, size: "XL"};
+
+// в переменную rest - запишутся все остальные свойства (rest = { size: 'XL' })
+// rest - остальное
+let {name, age, ...rest} = originalObject;
+let newObject = {name, age, gender: "male", ...rest};
+
+console.log(newObject); // Выведет в консоль {name: "John", age: 30, gender: "male", size: "XL"}
+```
+
 ---
 
 ## JSON
