@@ -1,0 +1,42 @@
+---
+title: SPA
+sidebar_position: 0
+---
+
+## Основыные понятия
+
+- SPA и модульность
+- Virtual DOM, точка входа и рендеринг
+- Компоненты, пропсы, хуки
+- Lifecycle компонентов
+- UI-элементы и обработка данных
+
+```tsx
+// index.html <div id="root"></div>
+const containerElement = document.getElementById('root');
+
+// главный компонент
+function App() {
+  return (
+    <h1>Hello, React!</h1>
+  )
+}
+
+// создание точки входа
+const root = ReactDOM.createRoot(containerElement);
+root.render(<App />);
+```
+
+---
+
+## Слои React-приложения
+
+1. Сам **React** (архитектура, компоненты, хуки, эвенты, стилизация, статические данные, HTML/CSS/JS)
+2. Типизация React-приложения (**TypeScript**)
+3. Стейт-менеджер (**Redux** toolkit)
+4. Взаимодействие с **API** и **обработка данных** (URL, axios, апи-сервисы, логин, CRUD, localStorage, cookies, динамические данные и т.д.)
+5. **Сборка и экосистема** (create-react-app, react-script, NextJS, Webpack, Parcel, npm-пакеты, env, линтеры, форматтеры, тестеры и т.д.)
+---
+6. **UI-фреймворк** для React (Material UI, bootstrap и т.д.) - опционально
+7. **Backend** для React-приложения (сервер, бекенд-код, DB и т.д.) --> backend-разработчик
+8. **Деплой** приложения на тестовый и продакшн-серверы --> DevOps-разработчик
