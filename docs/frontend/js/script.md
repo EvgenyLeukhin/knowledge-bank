@@ -3,24 +3,6 @@ title: Скрипты
 sidebar_position: 0
 ---
 
-- [shortcode.dev](https://shortcode.dev/javascript-cheatsheet#javascript-cheatsheet) — JS-cheatsheet
-- [www.w3schools.com](https://www.w3schools.com/js/default.asp) — JS Tutorial
-- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — learn.javascript.ru;
-- [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript) - Mozilla Development Network;
-- [Sorax](https://www.youtube.com/watch?v=H6G63NKRSi8&list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem) - видео-курс "Основы JS - Javascript-джедай" (2014)
-- [Фрилансер по жизни](https://www.youtube.com/watch?v=yJcCKuxfb2o&list=PLM6XATa8CAG7DDIBjNVd78Fv5Ueo930IV) - План развития фронтенд-разработчика (2020)
-- [Bogdan Stashchuk](https://www.youtube.com/watch?v=CxgOKJh4zWE&t=2425s) - Полный Курс JavaScript Для Начинающих (2022)
-- [«Вы не знаете JS»](https://github.com/azat-io/you-dont-know-js-ru) — сборник книг для виртуозного владения JavaScript.
----
-- [Презентация «Яндекс.Практикума»](https://disk.yandex.ru/i/ekqxfARcwTqkwg): «Бегло по ES6 для старта»;
-- [JavaScript Weekly](https://javascriptweekly.com/) — каждую неделю на почту будут падать интересные статьи;
-- [Видео и материалы с ШАДа](https://www.youtube.com/playlist?list=PLJOzdkh8T5koEPv-R5W0ovmL_T2BjB1HX) -  по алгоритмам и структурам данных;
-- [Шпаргалка по сложности алгоритмов](https://habr.com/ru/post/188010/)
-- [Первый взгляд на записи и кортежи в JavaScript](https://habr.com/ru/post/504092/)
-- [Оценка сложности алгоритмов](https://habr.com/ru/post/173821/)
-- [Справочник JS wm-school](https://wm-school.ru/js/index.php)
-- [Справочник JS wisdomweb](https://www.wisdomweb.ru/JS/javascript-first.php)
-
 ```html
 <!-- inline js-code -->
 <script>
@@ -128,3 +110,25 @@ sidebar_position: 0
 - Нельзя создавать новые процессы или запускать программы.
 
 NodeJS из «коробки» позволяет обойти некоторые из этих ограничений.
+
+---
+
+## Полезные ссылки
+
+- [shortcode.dev](https://shortcode.dev/javascript-cheatsheet#javascript-cheatsheet) — JS-cheatsheet
+- [www.w3schools.com](https://www.w3schools.com/js/default.asp) — JS Tutorial
+- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — learn.javascript.ru;
+- [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript) - Mozilla Development Network;
+- [Sorax](https://www.youtube.com/watch?v=H6G63NKRSi8&list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem) - видео-курс "Основы JS - Javascript-джедай" (2014)
+- [Фрилансер по жизни](https://www.youtube.com/watch?v=yJcCKuxfb2o&list=PLM6XATa8CAG7DDIBjNVd78Fv5Ueo930IV) - План развития фронтенд-разработчика (2020)
+- [Bogdan Stashchuk](https://www.youtube.com/watch?v=CxgOKJh4zWE&t=2425s) - Полный Курс JavaScript Для Начинающих (2022)
+- [«Вы не знаете JS»](https://github.com/azat-io/you-dont-know-js-ru) — сборник книг для виртуозного владения JavaScript.
+---
+- [Презентация «Яндекс.Практикума»](https://disk.yandex.ru/i/ekqxfARcwTqkwg): «Бегло по ES6 для старта»;
+- [JavaScript Weekly](https://javascriptweekly.com/) — каждую неделю на почту будут падать интересные статьи;
+- [Видео и материалы с ШАДа](https://www.youtube.com/playlist?list=PLJOzdkh8T5koEPv-R5W0ovmL_T2BjB1HX) -  по алгоритмам и структурам данных;
+- [Шпаргалка по сложности алгоритмов](https://habr.com/ru/post/188010/)
+- [Первый взгляд на записи и кортежи в JavaScript](https://habr.com/ru/post/504092/)
+- [Оценка сложности алгоритмов](https://habr.com/ru/post/173821/)
+- [Справочник JS wm-school](https://wm-school.ru/js/index.php)
+- [Справочник JS wisdomweb](https://www.wisdomweb.ru/JS/javascript-first.php)

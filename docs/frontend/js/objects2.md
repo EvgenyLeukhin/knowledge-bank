@@ -1,5 +1,5 @@
 ---
-title: Объекты ◕
+title: Объекты II
 sidebar_position: 8
 ---
 
