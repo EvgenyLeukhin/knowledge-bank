@@ -317,7 +317,9 @@ btn.addEventListener('click', function(event) {
 
 ## Список событий
 
-<table class="ws-table-all notranslate">
+TODO
+
+<!-- <table class="ws-table-all notranslate">
 <tbody><tr>
     <th>Event</th>
     <th>Occurs When</th>
@@ -757,4 +759,4 @@ moves to a different point in the media)</td>
 <td>The mouse wheel rolls up or down over an element</td>
 <td><a href="obj_wheelevent.asp">WheelEvent</a></td>
 </tr>
-</tbody></table>
+</tbody></table> -->

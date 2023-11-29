@@ -1,5 +1,5 @@
 ---
-title: SPA
+title: SPA ✓
 sidebar_position: 0
 ---
 

@@ -3,6 +3,8 @@ title: Debug
 sidebar_position: 18
 ---
 
+## Console
+
 ```js
 // output data to Dev tool console by console method
 console.log('some string', someValue);
@@ -21,6 +23,8 @@ debugger; // ---> Dev tool "Sources"
 <pre>{JSON.stringify(user, null, 2)}</pre>
 ```
 
+---
+
 ## JS Doc style
 
 ```js
@@ -35,3 +39,9 @@ debugger; // ---> Dev tool "Sources"
  * }}
  */
 ```
+
+---
+
+## Debug with VS Code
+
+TODO

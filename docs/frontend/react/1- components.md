@@ -1,5 +1,5 @@
 ---
-title: Компоненты
+title: Компоненты ✓
 sidebar_position: 1
 ---
 
@@ -25,13 +25,21 @@ const SomeComponent: FC<TProps> = ({ title, action }) => {
   // вызов хука useState
   const [count, setCount] = useState<number>(0);
 
+  const someLocalAction = () => {
+    console.log('Do something');
+  }
+
   return (
     <div className={styles.SomeComponent}>
       <h2>{title}</h2>
+
       <span>{count}</span>
+
       <button onClick={() => setCount(count + 1)}>+1</button>
 
       <button onClick={() => action()}>Click me</button>
+
+      <button onClick={someLocalAction}>Click me</button>
     </div>
   )
 }
