@@ -1,5 +1,5 @@
 ---
-title: Экосистема
+title: Экосистема ✓
 sidebar_position: 2
 ---
 
