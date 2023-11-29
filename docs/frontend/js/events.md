@@ -312,3 +312,449 @@ btn.addEventListener('click', function(event) {
 После того, как отлавливает события, то записывает их в СТЕК(очередь) ЗАДАЧ.
 
 Задачи выполняются АСИНХРОННО, это означает, что если какая-либо задача выполняется, то Event loop не прекращается свою работу, а будет улавливать все события постоянно.
+
+---
+
+## Список событий
+
+<table class="ws-table-all notranslate">
+<tbody><tr>
+    <th>Event</th>
+    <th>Occurs When</th>
+    <th>Belongs To</th>
+</tr>
+<tr>
+<td><a href="event_onabort_media.asp">abort</a></td>
+<td>The loading of a media is aborted</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, <a href="obj_event.asp">Event</a></td></tr>
+<tr>
+<td><a href="event_onafterprint.asp">afterprint</a></td>
+<td>A page has started printing</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_animationend.asp">animationend</a></td>
+<td>A CSS animation has completed</td>
+<td><a href="obj_animationevent.asp">AnimationEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_animationiteration.asp">animationiteration</a></td>
+<td>A CSS animation is repeated</td>
+<td><a href="obj_animationevent.asp">AnimationEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_animationstart.asp">animationstart</a></td>
+<td>A CSS animation has started</td>
+<td><a href="obj_animationevent.asp">AnimationEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onbeforeprint.asp">beforeprint</a></td>
+<td>A page is about to be printed</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onbeforeunload.asp">beforeunload</a></td>
+<td>Before a document is about to be unloaded</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, 
+  <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onblur.asp">blur</a></td>
+<td>An element loses focus</td>
+<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_oncanplay.asp">canplay</a></td>
+<td>The browser can start playing a media (has buffered enough to begin)</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_oncanplaythrough.asp">canplaythrough</a></td>
+<td>The browser can play through a media without stopping for buffering</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onchange.asp">change</a></td>
+<td>The content of a form element has changed</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onclick.asp">click</a></td>
+<td>An element is clicked on</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_oncontextmenu.asp">contextmenu</a></td>
+<td>An element is right-clicked to open a context menu</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_oncopy.asp">copy</a></td>
+<td>The content of an element is copied</td>
+<td><a href="obj_clipboardevent.asp">ClipboardEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_oncut.asp">cut</a></td>
+<td>The content of an element is cut</td>
+<td><a href="obj_clipboardevent.asp">ClipboardEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondblclick.asp">dblclick</a></td>
+<td>An element is double-clicked</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondrag.asp">drag</a></td>
+<td>An element is being dragged</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondragend.asp">dragend</a></td>
+<td>Dragging of an element has ended</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondragenter.asp">dragenter</a></td>
+<td>A dragged element enters the drop target</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondragleave.asp">dragleave</a></td>
+<td>A dragged element leaves the drop target</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondragover.asp">dragover</a></td>
+<td>A dragged element is over the drop target</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondragstart.asp">dragstart</a></td>
+<td>Dragging of an element has started</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondrop.asp">drop</a></td>
+<td>A dragged element is dropped on the target</td>
+<td><a href="obj_dragevent.asp">DragEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_ondurationchange.asp">durationchange</a></td>
+<td>The duration of a media is changed</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onended.asp">ended</a></td>
+<td>A media has reach the end ("thanks for listening")</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onerror.asp">error</a></td>
+<td>An error has occurred while loading a file </td>
+<td><a href="obj_progressevent.asp">ProgressEvent</a>, 
+  <a href="obj_uievent.asp">UiEvent</a>, <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onfocus.asp">focus</a></td>
+<td>An element gets focus</td>
+<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onfocusin.asp">focusin</a></td>
+<td>An element is about to get focus</td>
+<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onfocusout.asp">focusout</a></td>
+<td>An element is about to lose focus</td>
+<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_fullscreenchange.asp">fullscreenchange</a></td>
+<td>An element is displayed in fullscreen mode</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_fullscreenerror.asp">fullscreenerror</a></td>
+<td>An element can not be displayed in fullscreen mode</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onhashchange.asp">hashchange</a></td>
+<td>There has been changes to the anchor part of a URL</td>
+<td><a href="obj_hashchangeevent.asp">HashChangeEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_oninput.asp">input</a></td>
+<td>An element gets user input</td>
+<td><a href="obj_inputevent.asp">InputEvent</a>, 
+  <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_oninvalid.asp">invalid</a></td>
+<td>An element is invalid</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onkeydown.asp">keydown</a></td>
+<td>A key is down</td>
+<td><a href="obj_keyboardevent.asp">KeyboardEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onkeypress.asp">keypress</a></td>
+<td>A key is pressed</td>
+<td><a href="obj_keyboardevent.asp">KeyboardEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onkeyup.asp">keyup</a></td>
+<td>A key is released</td>
+<td><a href="obj_keyboardevent.asp">KeyboardEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onload.asp">load</a></td>
+<td>An object has loaded</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, 
+  <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onloadeddata.asp">loadeddata</a></td>
+<td>Media data is loaded</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onloadedmetadata.asp">loadedmetadata</a></td>
+<td>Meta data (like dimensions and duration) are loaded</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onloadstart.asp">loadstart</a></td>
+<td>The browser starts looking for the specified media</td>
+<td><a href="obj_progressevent.asp">ProgressEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmessage_sse.asp">message</a></td>
+<td>A message is received through the event source</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onmousedown.asp">mousedown</a></td>
+<td>The mouse button is pressed over an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmouseenter.asp">mouseenter</a></td>
+<td>The pointer is moved onto an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmouseleave.asp">mouseleave</a></td>
+<td>The pointer is moved out of an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmousemove.asp">mousemove</a></td>
+<td>The pointer is moved over an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmouseover.asp">mouseover</a></td>
+<td>The pointer is moved onto an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmouseout.asp">mouseout</a></td>
+<td>The pointer is moved out of an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onmouseup.asp">mouseup</a></td>
+<td>A user releases a mouse button over an element</td>
+<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+</tr>
+<tr>
+<td>mousewheel</td>
+<td><span class="deprecated">Deprecated.</span> Use the 
+  <a href="event_onwheel.asp">wheel</a> event instead</td>
+<td><a href="obj_wheelevent.asp">WheelEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onoffline.asp">offline</a></td>
+<td>The browser starts working offline</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_ononline.asp">online</a></td>
+<td>The browser starts working online</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onopen_sse.asp">open</a></td>
+<td>A connection with the event source is opened</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onpagehide.asp">pagehide</a></td>
+<td>User navigates away from a webpage</td>
+<td><a href="obj_pagetransitionevent.asp">PageTransitionEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onpageshow.asp">pageshow</a></td>
+<td>User navigates to a webpage</td>
+<td><a href="obj_pagetransitionevent.asp">PageTransitionEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onpaste.asp">paste</a></td>
+<td>Some content is pasted in an element</td>
+<td><a href="obj_clipboardevent.asp">ClipboardEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onpause.asp">pause</a></td>
+<td>A media is paused</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onplay.asp">play</a></td>
+<td>The media has started or is no longer paused</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onplaying.asp">playing</a></td>
+<td>The media is playing after being paused or buffered</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td>popstate</td>
+<td>The window's history changes</td>
+<td><a href="obj_popstateevent.asp">PopStateEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onprogress.asp">progress</a></td>
+<td>The browser is downloading media data</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onratechange.asp">ratechange</a></td>
+<td>The playing speed of a media is changed</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onresize.asp">resize</a></td>
+<td>The document view is resized</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, 
+  <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onreset.asp">reset</a></td>
+<td>A form is reset</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onscroll.asp">scroll</a></td>
+<td>An scrollbar is being scrolled</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, 
+  <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onsearch.asp">search</a></td>
+<td>Something is written in a search field</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onseeked.asp">seeked</a></td>
+<td>Skipping to a media position is finished</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onseeking.asp">seeking</a></td>
+<td>Skipping to a media position is started</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onselect.asp">select</a></td>
+<td>User selects some&nbsp;text</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, 
+  <a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onshow.asp">show</a></td>
+<td>A &lt;menu&gt; element is shown as a context menu</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onstalled.asp">stalled</a></td>
+<td>The browser is trying to get unavailable media data</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td>storage</td>
+<td>A Web Storage area is updated</td>
+<td><a href="obj_storageevent.asp">StorageEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onsubmit.asp">submit</a></td>
+<td>A form is submitted</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onsuspend.asp">suspend</a></td>
+<td>The browser is intentionally not getting media data</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_ontimeupdate.asp">timeupdate</a></td>
+<td>The playing position has changed (the user 
+moves to a different point in the media)</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_ontoggle.asp">toggle</a></td>
+<td>The user opens or closes the &lt;details&gt; element</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_touchcancel.asp">touchcancel</a></td>
+<td>The touch is interrupted</td>
+<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_touchend.asp">touchend</a></td>
+<td>A finger is removed from a touch screen</td>
+<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_touchmove.asp">touchmove</a></td>
+<td>A finger is dragged across the screen</td>
+<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_touchstart.asp">touchstart</a></td>
+<td>A finger is placed on a touch screen</td>
+<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_transitionend.asp">transitionend</a></td>
+<td>A CSS transition has completed</td>
+<td><a href="obj_transitionevent.asp">TransitionEvent</a></td>
+</tr>
+<tr>
+<td><a href="event_onunload.asp">unload</a></td>
+<td>A page has unloaded</td>
+<td><a href="obj_uievent.asp">UiEvent</a>, 
+<a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onvolumechange.asp">volumechange</a></td>
+<td>The volume of a media is changed (includes muting)</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onwaiting.asp">waiting</a></td>
+<td>A media is paused but is expected to resume (e.g. buffering)</td>
+<td><a href="obj_event.asp">Event</a></td>
+</tr>
+<tr>
+<td><a href="event_onwheel.asp">wheel</a></td>
+<td>The mouse wheel rolls up or down over an element</td>
+<td><a href="obj_wheelevent.asp">WheelEvent</a></td>
+</tr>
+</tbody></table>
