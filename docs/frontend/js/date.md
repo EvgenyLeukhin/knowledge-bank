@@ -305,3 +305,26 @@ const routePoints: IOrderInRouteWithPointId[][] = routePointIds.map((id) => {
     return ordersWithPointId.filter((order) => order.pointId === id);
 });
 ```
+
+## Timezones
+
+```tsx
+// высчитываем при загрузке текущее время хаба c учетом разницы в таймзонах
+useEffect(() => {
+    // timezones
+    const userGtmTimezone: number = CURRENT_GTM_TIMEZONE;
+    const selectedHubGtmTimezone: number = hub?.timezone as number;
+    const timezoneDiff: number = userGtmTimezone - selectedHubGtmTimezone;
+
+    // current user time
+    const currentUserTime: string = format(new Date(), 'HH-mm');
+    const currentUserHours: number = Number(currentUserTime.split('-')[0]);
+    const currentUserMinutes: number = Number(currentUserTime.split('-')[1]);
+
+    // hub time
+    const selectedHubHours = currentUserHours - timezoneDiff;
+    const selectedHubMinutes = currentUserMinutes;
+
+    setHubCurrentTime(`${selectedHubHours}:${selectedHubMinutes}`);
+}, []);
+```
