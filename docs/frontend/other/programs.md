@@ -150,7 +150,15 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 ```sudo apt-get install gxneur```
 
+#### FortiClient
+
+1. Update Ubuntu 20.04 package lists: `sudo apt update`
+2. Install FortiClient on Ubuntu 20.04: `sudo apt install forticlient`
+
+Uninstall: `sudo apt autoremove --purge forticlient`
+
 ***
+
 ## Chrome plugins
 
 * [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - наслоение для макета
