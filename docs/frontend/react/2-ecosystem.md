@@ -64,6 +64,7 @@ sidebar_position: 2
 - [gzip-compression](https://www.npmjs.com/package/compression)
 - [compression](https://www.npmjs.com/package/compression)
 - [compression-webpack-plugin](https://www.npmjs.com/package/compression-webpack-plugin)
+- [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
 ---
 
@@ -81,20 +82,23 @@ sidebar_position: 2
 - [react-datepicker](https://www.npmjs.com/package/react-datepicker) - Datapicker
 - [react-input-range](https://www.npmjs.com/package/react-input-range) - Rannge
 - [react-quill](https://www.npmjs.com/package/react-quill) - Rich text editor
-- [react-alert](https://www.npmjs.com/package/react-alert) - Алерт
-- [react-alert-template-basic](https://www.npmjs.com/package/react-alert-template-basic) - Алерт
+- [react-toastify](https://www.npmjs.com/package/react-toastify) - Алерт
+- [react-alert](https://www.npmjs.com/package/react-alert) - Алерт 2
+- [react-alert-template-basic](https://www.npmjs.com/package/react-alert-template-basic) - Алерт 3
+- [swiper](https://www.npmjs.com/package/swiper) - Слайдер
 
 ---
 
 ### Utils
 
-- [react-share](https://www.npmjs.com/package/react-share)
-- [react-device-detect](https://www.npmjs.com/package/react-device-detect)
+- [react-share](https://www.npmjs.com/package/react-share) - Шаринг
+- [react-device-detect](https://www.npmjs.com/package/react-device-detect) - Определение устройств
 - [console-log-colors](https://www.npmjs.com/package/console-log-colors)
-- [lodash](https://www.npmjs.com/package/lodash)
-- [date-fns](https://www.npmjs.com/package/date-fns)
-- [cross-env](https://www.npmjs.com/package/cross-env)
-- [env-cmd](https://www.npmjs.com/package/env-cmd)
+- [lodash](https://www.npmjs.com/package/lodash) - Библиотека хэлперов
+- [date-fns](https://www.npmjs.com/package/date-fns) - Библиотека хэлперов с датами
+- [cross-env](https://www.npmjs.com/package/cross-env) - Запуск скриптов с выбранным режимом (dev или prod)
+- [env-cmd](https://www.npmjs.com/package/env-cmd)  - Использование env-файлов внутри скриптов
+- [uuid](https://www.npmjs.com/package/uuid) - Генерация id
 
 ---
 
