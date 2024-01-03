@@ -1,5 +1,5 @@
 ---
-title: Type
+title: Enum
 sidebar_position: 6
 ---
 
