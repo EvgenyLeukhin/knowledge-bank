@@ -120,3 +120,31 @@ sidebar_position: 2
 
 ---
 
+### Анимации
+
+- [Animate.css](https://animate.style/)
+- [react-awesome-reveal](https://www.npmjs.com/package/react-awesome-reveal)
+
+---
+
+### Шаринг
+
+- [react-share](https://www.npmjs.com/package/react-share)
+
+---
+
+### Карты
+
+- [yandex-map](https://www.npmjs.com/package/react-yandex-maps)
+- [google-maps](https://www.npmjs.com/package/react-google-maps)
+- [2gis](https://www.npmjs.com/package/@2gis/mapgl)
+
+---
+
+### Графика
+
+- [react-gsap](https://www.npmjs.com/package/react-gsap)
+- [react-scrollmagic](https://www.npmjs.com/package/react-scrollmagic)
+- [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax)
+
+---
