@@ -181,7 +181,7 @@ interface TSla {
 
 // новый interface из 4-ех свойств типа TSla
 interface IPlainSla extends Omit<TSla, 'id' | 'name' | 'color' | 'selected'> {
-  date: string;
+  date: Date;
 }
 
 // эквивалентно
@@ -190,6 +190,6 @@ interface IPlainSla {
   transportCompany: boolean;
   updatedAt: string;
   createdAt: string;
-  date: string;
+  date: Date;
 }
 ```
