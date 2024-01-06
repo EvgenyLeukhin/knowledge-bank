@@ -83,13 +83,14 @@ const person = {
   age: 25,
 };
 
-type TPerson = {
+type TGeneratedPerson = typeof person;
+
+// эквивалентно
+type TGeneratedPerson = {
   name: string;
   surname: string;
   age: number;
 }
-
-type TGeneratedPerson = typeof person; // аналог TPerson
 ```
 
 ---
