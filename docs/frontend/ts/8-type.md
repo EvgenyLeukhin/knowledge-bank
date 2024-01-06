@@ -1,6 +1,6 @@
 ---
 title: Type ✓
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 - Типизация объектных типов данных
@@ -13,13 +13,13 @@ sidebar_position: 7
 ## Опциональные поля
 
 ```ts
-export type MassEditData = {
+type MassEditData = {
   additionalStatusId: number | undefined;
   hasOnlinePayment: boolean | undefined;
 }
 
 // можно записать так:
-export type MassEditData = {
+type MassEditData = {
   additionalStatusId?: number;
   hasOnlinePayment?: boolean;
 }
@@ -61,6 +61,15 @@ const a: Record<TLikeButtonKeys, string> = {
 }
 ```
 
+## keyof with Pick
+
+```ts
+export type T2gisSchedulePicked = keyof Pick<
+  T2gisSchedule,
+  'Mon' | 'Tue' | 'Wed' | 'Thu' | 'Fri' | 'Sat' | 'Sun'
+>;
+```
+
 ---
 
 ## typeof
@@ -99,4 +108,28 @@ const person = {
 type TPersonKeys = 'name' | 'surname' | 'age';
 
 type TGeneratedPersonKeys = keyof typeof person; // аналог TPersonKeys (ключи типа или интерфейса)
+```
+
+---
+
+## Pick
+
+Создание нового типа из "вырезания" свойств другого типа.
+
+```ts
+type TSla = {
+  id: number;
+  name: string;
+  color: string;
+  selected: boolean;
+  editing: boolean;
+  intervals: ISlaInterval[];
+  transportCompany: boolean;
+  user: User | null;
+  updatedAt: string;
+  createdAt: string;
+}
+
+// новый тип из 4-ех свойств типа TSla
+type PlainSla = Pick<TSla, 'id' | 'name' | 'color' | 'selected'>;
 ```

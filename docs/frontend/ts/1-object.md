@@ -59,7 +59,7 @@ const settings: ISettings = {
 
 ## Record
 
-- Для объектов с заранее неизвестным набором полей
+Для объектов с заранее неизвестным набором полей
 
 ```ts
 export type TRecord = Record<string, number>;

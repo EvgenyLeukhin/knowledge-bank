@@ -1,6 +1,6 @@
 ---
 title: Enum ✓
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 ## enum
@@ -24,7 +24,7 @@ const langArray = Object.values(LangType); // ['ru', 'en']
 
 ## conts enum
 
-А вот const enum не сгенерирует новый код, будет просто подставлено значение.
+А вот const enum не сгенерирует новый код, будет просто подставлено значение. Нельзя создавать массив через Object.keys.
 
 ```ts
 const enum Modes { 
@@ -34,6 +34,25 @@ const enum Modes {
 
 let modeName: string = Modes.Show;
 console.log(modeName) // 'show'
+```
+
+---
+
+## enum inside Record
+
+```ts
+// enum как ключи объекта
+enum LikeButtonProps {
+  CLASSNAME = 'className',
+  COUNT = 'count',
+  SIZE = 'size',
+}
+
+// enum для keys напрямую
+const a: Record<LikeButtonProps, string> = {
+  className: 'some',
+  count: 'some',
+}
 ```
 
 ---
@@ -59,23 +78,4 @@ const directions: Record<Directions, number> = {
   right: 270,
   down: 0,
 };
-```
-
----
-
-## keyof 
-
-```ts
-// enum как ключи объекта
-enum LikeButtonProps {
-  CLASSNAME = 'className',
-  COUNT = 'count',
-  SIZE = 'size',
-}
-
-// enum для keys напрямую
-const a: Record<LikeButtonProps, string> = {
-  className: 'some',
-  count: 'some',
-}
 ```
