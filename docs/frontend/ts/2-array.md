@@ -1,9 +1,9 @@
 ---
-title: Массив ✓
+title: Массивы ✓
 sidebar_position: 2
 ---
 
-## I способ
+## I способ (with [ ])
 
 ```tsx
 const a: number[] = [1,2,3];

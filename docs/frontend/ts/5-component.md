@@ -1,5 +1,5 @@
 ---
-title: Компонент
+title: React.FC
 sidebar_position: 5
 ---
 

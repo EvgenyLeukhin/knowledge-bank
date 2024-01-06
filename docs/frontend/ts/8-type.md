@@ -54,7 +54,7 @@ type TLikeButtonProps = {
 // ключи типа
 type TLikeButtonKeys = keyof TLikeButtonProps; // 'className', 'count', 'size'
 
-
+// применение
 const a: Record<TLikeButtonKeys, string> = {
   className: 'some',
   count: 'some',
@@ -64,10 +64,13 @@ const a: Record<TLikeButtonKeys, string> = {
 ## keyof with Pick
 
 ```ts
-export type T2gisSchedulePicked = keyof Pick<
+type T2gisSchedulePicked = keyof Pick<
   T2gisSchedule,
   'Mon' | 'Tue' | 'Wed' | 'Thu' | 'Fri' | 'Sat' | 'Sun'
 >;
+
+// эквивалентно
+type T2gisSchedulePicked = 'Mon' | 'Tue' | 'Wed' | 'Thu' | 'Fri' | 'Sat' | 'Sun';
 ```
 
 ---
