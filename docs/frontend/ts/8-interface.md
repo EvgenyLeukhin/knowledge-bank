@@ -25,6 +25,8 @@ export interface MassEditData {
 }
 ```
 
+---
+
 ## keyof 
 
 Ключи объекта. Можно использовать для типизации объектов с type и interface.
@@ -48,10 +50,20 @@ const a: Record<TLikeButtonKeys, string> = {
 
 ---
 
----
-
 ## Extend
+
+TODO
+
+---
 
 ## Omit
 
+TODO
+
+---
+
 ## Pick
+
+TODO
+
+---
