@@ -6,7 +6,7 @@ sidebar_position: 2
 ## I способ (with [ ])
 
 ```tsx
-const a: number[] = [1,2,3];
+const a: number[] = [1, 2, 3];
 ```
 
 ---
@@ -23,23 +23,26 @@ const a: Array<number> = [1, 2, 3];
 
 ```ts
 // type
-type TSomeType = {
+type TSomeObj = {
   id: number;
   name: string;
 }
 
 // or interface
-interface ISomeInterface {
+interface ISomeObj {
   id: number;
   name: string;
 }
 
-const a: TSomeType[] = [{...}, {...}, ];
+const a: TSomeObj[] = [{...}, {...}, ];
+const b: ISomeObj[] = [{...}, {...}, ];
 ```
 
 ---
 
 ## Кортеж
+
+Это массив с определенным количеством элементов.
 
 ```ts
 // КОТРЕЖ, когда известно точное кол-во элементов
