@@ -73,5 +73,3 @@ const a: TRecord = {
   c: 3,
 }
 ```
-
----

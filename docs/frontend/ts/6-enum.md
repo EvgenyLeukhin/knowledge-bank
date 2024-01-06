@@ -60,3 +60,24 @@ const directions: Record<Directions, number> = {
   down: 0,
 };
 ```
+
+---
+
+## keyof 
+
+Ключи объекта. Можно использовать для типизации объектов с type и interface.
+
+```ts
+
+enum LikeButtonProps {
+  CLASSNAME = 'className',
+  COUNT = 'count',
+  SIZE = 'size',
+}
+
+// enum для keys напрямую
+const a: Record<LikeButtonProps, string> = {
+  className: 'some',
+  count: 'some',
+}
+```
