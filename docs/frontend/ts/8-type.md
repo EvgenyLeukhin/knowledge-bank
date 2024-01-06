@@ -123,13 +123,49 @@ type TSla = {
   color: string;
   selected: boolean;
   editing: boolean;
-  intervals: ISlaInterval[];
   transportCompany: boolean;
-  user: User | null;
   updatedAt: string;
   createdAt: string;
 }
 
 // новый тип из 4-ех свойств типа TSla
 type PlainSla = Pick<TSla, 'id' | 'name' | 'color' | 'selected'>;
+
+// эквивалентно
+type PlainSla = {
+  id: number;
+  name: string;
+  color: string;
+  selected: boolean;
+}
+```
+
+---
+
+## Omit
+
+Создание нового типа из "пропускания" свойств другого типа. Обратное Pick.
+
+```ts
+type TSla = {
+  id: number;
+  name: string;
+  color: string;
+  selected: boolean;
+  editing: boolean;
+  transportCompany: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+
+// новый тип из 4-ех свойств типа TSla
+type TPlainSla = Omit<TSla, 'id' | 'name' | 'color' | 'selected'>;
+
+// эквивалентно
+type TPlainSla = {
+  editing: boolean;
+  transportCompany: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
 ```

@@ -134,4 +134,62 @@ interface IDragDropHandler {
 
 ## Omit
 
-TODO
+Создание нового интерфейса из "пропускания" свойств другого интерфейса. Обратное Pick.
+
+```ts
+interface TSla {
+  id: number;
+  name: string;
+  color: string;
+  selected: boolean;
+  editing: boolean;
+  transportCompany: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+
+// новый interface из 4-ех свойств типа TSla (без расширения)
+interface IPlainSla extends Omit<TSla, 'id' | 'name' | 'color' | 'selected'> {
+}
+
+// эквивалентно
+interface IPlainSla {
+  editing: boolean;
+  transportCompany: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+```
+
+---
+
+## Omit with extends
+
+Создание нового интерфейса из "пропускания" свойств другого интерфейса. Обратное Pick.
+
+```ts
+interface TSla {
+  id: number;
+  name: string;
+  color: string;
+  selected: boolean;
+  editing: boolean;
+  transportCompany: boolean;
+  updatedAt: string;
+  createdAt: string;
+}
+
+// новый interface из 4-ех свойств типа TSla
+interface IPlainSla extends Omit<TSla, 'id' | 'name' | 'color' | 'selected'> {
+  date: string;
+}
+
+// эквивалентно
+interface IPlainSla {
+  editing: boolean;
+  transportCompany: boolean;
+  updatedAt: string;
+  createdAt: string;
+  date: string;
+}
+```
