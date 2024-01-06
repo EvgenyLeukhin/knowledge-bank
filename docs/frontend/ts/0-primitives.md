@@ -5,39 +5,16 @@ sidebar_position: 0
 
 Типизация переменных с примитивнымим типами данных.
 
-## String
-
 ```ts
-const a: string = 'Some string';
-```
+let a: string = 'Some string';  // string
+let b: number = 123;            // number
+let c: boolean = true;          // boolean
+let d: null =  null;            // null
+let e: undefined =  undefined;  // undefined
 
-## Number
-
-```ts
-const a: number = 123;
-```
-
-## Boolean
-
-```ts
-const a: boolean = true;
-```
-
-## Null и undefined
-
-```ts
-const a: null =  null;
-const b: undefined =  undefined;
-```
-
----
-
-## Несколько типов (оператор ИЛИ)
-
-```ts
-const a: string | number = '123';
-const b: null | undefined = null;
-const c?: null = null; // null | undefined 
+// mix types
+let f: string | number = '123';
+let g: null | undefined = null;
 ```
 
 
