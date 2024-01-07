@@ -104,6 +104,24 @@ const a: ISomeObj<string> = {
 };
 ```
 
+```ts
+// несколько параметров
+interface ISomeObj<T1, T2> {
+  className: string;
+  count: number;
+  data1: T1;
+  data2: T2;
+}
+
+// применение
+const a: ISomeObj<string, number> = {
+  className: 'abc',
+  count: 10,
+  data1: 'Some',
+  data2: 123,
+};
+```
+
 ---
 
 ## Pick
