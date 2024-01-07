@@ -1,6 +1,6 @@
 ---
-title: Enum ✓
-sidebar_position: 7
+title: Enum
+sidebar_position: 6
 ---
 
 ## enum

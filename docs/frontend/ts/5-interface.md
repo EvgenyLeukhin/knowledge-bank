@@ -1,6 +1,6 @@
 ---
-title: Interface ✓
-sidebar_position: 9
+title: Interface
+sidebar_position: 5
 ---
 
 - Типизация объектных типов данных

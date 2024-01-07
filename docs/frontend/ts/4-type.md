@@ -1,6 +1,6 @@
 ---
-title: Type ✓
-sidebar_position: 8
+title: Type
+sidebar_position: 4
 ---
 
 - Типизация объектных типов данных

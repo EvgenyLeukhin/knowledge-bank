@@ -1,5 +1,5 @@
 ---
-title: Типизация ✓
+title: Типизация
 sidebar_position: 0
 ---
 
