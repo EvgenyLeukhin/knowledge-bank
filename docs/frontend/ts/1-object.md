@@ -50,7 +50,7 @@ interface ISettings {
 const settings: ISettings = {
   color: '#F00',
   delay: 2000,
-  retry: false
+  retry: false,
 };
 
 ```
@@ -73,3 +73,20 @@ const a: TRecord = {
   c: 3,
 }
 ```
+---
+
+## Вложенные объекты
+
+```ts
+interface IField {
+  name: string;
+  actual: boolean;
+
+  // вложенный объект
+  hubs?: {
+    [key: number]: boolean
+  };
+  
+}
+```
+

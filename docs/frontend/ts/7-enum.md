@@ -57,7 +57,7 @@ const a: Record<LikeButtonProps, string> = {
 
 ---
 
-## Пример
+## Пример enum как key
 
 ```ts
 // через enum

@@ -13,13 +13,19 @@ sidebar_position: 9
 ## Опциональные поля
 
 ```ts
-interface MassEditData {
+interface IMassEditData {
   additionalStatusId: number | undefined;
   hasOnlinePayment: boolean | undefined;
 }
 
 // можно записать так:
-interface MassEditData {
+interface IMassEditData {
+  additionalStatusId?: number;
+  hasOnlinePayment?: boolean;
+}
+
+// можно экспортировать
+export interface IMassEditData {
   additionalStatusId?: number;
   hasOnlinePayment?: boolean;
 }
@@ -38,9 +44,8 @@ interface ILikeButtonProps {
   size: number;
 }
 
-// ключи интерфейса
-type TLikeButtonKeys = keyof ILikeButtonProps; // 'className', 'count', 'size'
-
+// ключи интерфейса'className' | 'count' | 'size'
+type TLikeButtonKeys = keyof ILikeButtonProps;
 
 const a: Record<TLikeButtonKeys, string> = {
   className: 'some',
@@ -72,6 +77,31 @@ interface IChild {
   d: number[];
   e: string;
 }
+```
+
+Multi extends. Будет схлопывание интерфейсов в один
+
+```ts
+interface AuthStateType extends IAuth, ILoading, IMessage {}
+```
+
+---
+
+## With params
+
+```ts
+interface ISomeObj<T> {
+  className: string;
+  count: number;
+  data: T;
+}
+
+// применение
+const a: ISomeObj<string> = {
+  className: 'abc',
+  count: 10,
+  data: 'Some',
+};
 ```
 
 ---
@@ -193,3 +223,9 @@ interface IPlainSla {
   date: Date;
 }
 ```
+
+---
+
+## Namespace
+
+TODO

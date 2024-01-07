@@ -13,13 +13,19 @@ sidebar_position: 8
 ## Опциональные поля
 
 ```ts
-type MassEditData = {
+type TMassEditData = {
   additionalStatusId: number | undefined;
   hasOnlinePayment: boolean | undefined;
 }
 
 // можно записать так:
-type MassEditData = {
+type TMassEditData = {
+  additionalStatusId?: number;
+  hasOnlinePayment?: boolean;
+}
+
+// можно экспортировать
+export type TMassEditData = {
   additionalStatusId?: number;
   hasOnlinePayment?: boolean;
 }
@@ -51,8 +57,8 @@ type TLikeButtonProps = {
   size: number;
 }
 
-// ключи типа
-type TLikeButtonKeys = keyof TLikeButtonProps; // 'className', 'count', 'size'
+// ключи типа 'className' | 'count' | 'size'
+type TLikeButtonKeys = keyof TLikeButtonProps; 
 
 // применение
 const a: Record<TLikeButtonKeys, string> = {
@@ -60,6 +66,8 @@ const a: Record<TLikeButtonKeys, string> = {
   count: 'some',
 }
 ```
+
+---
 
 ## keyof with Pick
 
@@ -111,14 +119,15 @@ const person = {
 
 type TPersonKeys = 'name' | 'surname' | 'age';
 
-type TGeneratedPersonKeys = keyof typeof person; // аналог TPersonKeys (ключи типа или интерфейса)
+// аналог TPersonKeys (ключи типа)
+type TGeneratedPersonKeys = keyof typeof person; 
 ```
 
 ---
 
 ## Pick
 
-Создание нового типа из "вырезания" свойств другого типа.
+Создание нового типа из "копирования" свойств другого типа.
 
 ```ts
 type TSla = {
@@ -148,7 +157,7 @@ type PlainSla = {
 
 ## Omit
 
-Создание нового типа из "пропускания" свойств другого типа. Обратное Pick.
+Создание нового типа из "удаления" свойств другого типа. Обратное Pick.
 
 ```ts
 type TSla = {
