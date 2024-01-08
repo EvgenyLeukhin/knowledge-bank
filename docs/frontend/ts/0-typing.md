@@ -13,6 +13,7 @@ const d: null =  null;            // null
 const e: undefined =  undefined;  // undefined
 const f: Date = new Date();       // дата
 const g: symbol;                  // символ
+const z: Error = new Error();                  // символ
 ```
 
 ---
@@ -60,5 +61,30 @@ const b: 'a' | 'b' = 'a';
 const a = b.c;
 ```
 
+---
 
+## as const
 
+```ts
+const routes = {
+  home: '/',
+  about: '/about',
+  help: '/help',
+};
+
+// can change
+routes.faq = '/faq';
+```
+
+```ts
+const routes = {
+  home: '/',
+  about: '/about',
+  help: '/help',
+} as const;
+
+// can not change!
+routes.faq = '/faq'; // TS ERROR
+```
+
+---

@@ -1,6 +1,6 @@
 ---
 title: React-компонент
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 ## Props (I вариант)

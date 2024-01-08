@@ -46,6 +46,25 @@ type TProps = {
 
 ---
 
+## With params
+
+```ts
+type TSomeObj<T> = {
+  className: string;
+  count: number;
+  data: T;
+}
+
+// применение
+const a: TSomeObj<string> = {
+  className: 'abc',
+  count: 10,
+  data: 'Some',
+};
+```
+
+---
+
 ## keyof 
 
 Ключи объекта. Можно использовать для типизации объектов с type и interface.
