@@ -3,7 +3,7 @@ title: Эвенты
 sidebar_position: 9
 ---
 
-### HTMLInputElement / ChangeEvent
+### ChangeEvent
 
 ```tsx
 const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,7 +14,7 @@ const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
 ---
 
-### HTMLInputElement / FocusEvent
+### FocusEvent
 
 ```tsx
 const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
@@ -25,7 +25,7 @@ const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
 
 ---
 
-### HTMLInputElement / FormEvent
+### FormEvent
 
 ```tsx
 const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -39,7 +39,7 @@ const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
 
 ---
 
-### HTMLDivElement / MouseEvent
+### MouseEvent
 
 ```tsx
 const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -48,7 +48,9 @@ const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
 }
 ```
 
-### Автоподстановка event
+---
+
+### Автоподстановка объекта event
 
 ```tsx
 <UiRemoveIcon

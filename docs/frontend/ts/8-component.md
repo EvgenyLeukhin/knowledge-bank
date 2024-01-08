@@ -41,7 +41,7 @@ const SomeComp = ({ prop1, prop2 }: TProps) => {
 
 ---
 
-## Children type
+## Children and style type
 
 ```ts
 type TProps = {
