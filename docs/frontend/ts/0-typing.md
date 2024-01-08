@@ -18,15 +18,33 @@ const z: Error = new Error();                  // символ
 
 ---
 
-## Операторы
+## Операторы & и |
 
 ```ts
+type A = {
+  name: string;
+  age: number;
+}
+
+type B = {
+  city: string;
+  index: number;
+}
+
 // ИЛИ
-const f: string | number = '123';
-const g: null | undefined = null;
+const a: A | B = {
+  name: 'John',
+  age: 35,
+}
+
 
 // И
-TODO
+const ab: A & B = {
+  name: 'John',
+  age: 35,
+  city: 'NY',
+  index: 10001,
+}
 ```
 
 ---
