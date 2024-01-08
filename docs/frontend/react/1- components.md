@@ -3,7 +3,7 @@ title: Компоненты ✓
 sidebar_position: 1
 ---
 
-## Пример компонента
+## Пример функционального компонента
 
 ```tsx
 import { FC, useState } from 'react';
