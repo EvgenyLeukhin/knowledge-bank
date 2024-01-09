@@ -13,7 +13,7 @@ const d: null =  null;            // null
 const e: undefined =  undefined;  // undefined
 const f: Date = new Date();       // дата
 const g: symbol;                  // символ
-const z: Error = new Error();                  // символ
+const z: Error = new Error();     // Error
 ```
 
 ---

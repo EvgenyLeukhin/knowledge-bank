@@ -75,7 +75,7 @@ sidebar_position: 2
 
 ---
 
-### UI
+## UI
 
 - [react-select](https://react-select.com/home) - Select
 - [rc-tooltip](https://www.npmjs.com/package/rc-tooltip) - Tooltip
@@ -89,7 +89,7 @@ sidebar_position: 2
 
 ---
 
-### Utils
+## Utils
 
 - [react-share](https://www.npmjs.com/package/react-share) - Шаринг
 - [react-device-detect](https://www.npmjs.com/package/react-device-detect) - Определение устройств
@@ -102,7 +102,7 @@ sidebar_position: 2
 
 ---
 
-### Линтеры, форматтеры
+## Линтеры, форматтеры
 
 - [EditorConfig](https://editorconfig.org/)
 - [ESLint](https://eslint.org/)
@@ -114,26 +114,26 @@ sidebar_position: 2
 
 ---
 
-### Тестирование
+## Тестирование
 
 - [jest](https://jestjs.io/ru/)
 
 ---
 
-### Анимации
+## Анимации
 
 - [Animate.css](https://animate.style/)
 - [react-awesome-reveal](https://www.npmjs.com/package/react-awesome-reveal)
 
 ---
 
-### Шаринг
+## Шаринг
 
 - [react-share](https://www.npmjs.com/package/react-share)
 
 ---
 
-### Карты
+## Карты
 
 - [yandex-map](https://www.npmjs.com/package/react-yandex-maps)
 - [google-maps](https://www.npmjs.com/package/react-google-maps)
@@ -141,7 +141,7 @@ sidebar_position: 2
 
 ---
 
-### Графика
+## Графика
 
 - [react-gsap](https://www.npmjs.com/package/react-gsap)
 - [react-scrollmagic](https://www.npmjs.com/package/react-scrollmagic)
