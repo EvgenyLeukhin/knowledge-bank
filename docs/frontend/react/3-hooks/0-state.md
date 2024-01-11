@@ -71,4 +71,44 @@ type TProps = {
 }
 ```
 
+---
+
+## Использование общего state-объекта
+
+- Вместо большого количества одиночных можно использовать объект состояний, на подобие как было в классовых компонентах;
+
+- `initialState` может принимать даже функцию, которая возвращает значение;
+
+```tsx
+import { useState } from 'react';
+
+// типизация state
+type TState = {
+  value1: number;
+  value2: boolean;
+  value3: string[];
+};
+
+const initialState: TState = {
+  value1: 1,
+  value2: false,
+  value3: ['a', 'b', 'c'],
+}
+
+const [state, setState] = useState<TState>(initialState);
+
+...
+
+const onButtonClick = () => {
+  setState({
+    // or need to add all prev state values
+    ...state, 
+
+    value1: 2,
+    value2: true,
+    value3: ['a'],
+  });
+};
+...
+
 
