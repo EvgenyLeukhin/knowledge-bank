@@ -72,19 +72,37 @@ root.render(<App />);
 
 ### Components
 
-TODO
+```
+components/
+  icons/
+  layout/
+  ui/
+```
+
 
 ---
 
 
 ### Store
 
-TODO
+```
+store/
+  effects/
+  slices/
+  reducer.ts
+  store.ts
+```
 
 ---
 
 ### API
 
-TODO
+```
+api/
+  methods/
+  mocks/
+  services/
+  httpClient.ts
+```
 
 ---
