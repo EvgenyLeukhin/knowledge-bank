@@ -197,3 +197,27 @@ $mobile: 767px;  // MOBILE  [0 - 767]     --> 414 макет
   }
 }
 ```
+
+---
+
+#### customScrollBar
+
+```scss
+@mixin customScrollBar($color) {
+  // scrollbar track width
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  // scrollbar track background (полоска)
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  // scrollbar thumb (бегунок)
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 8px;
+  }
+}
+```

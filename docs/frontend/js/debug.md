@@ -11,10 +11,19 @@ console.log('some string', someValue);
 console.info('some string', someValue);
 console.warn('some string', someValue);
 console.error('some string', someValue);
+```
 
+```js
+console.time('value', value);
+console.timeEnd('value', value);
+```
+
+```js
 // how to look js-code on this break line
 debugger; // ---> Dev tool "Sources"
+```
 
+```js
 // show state info as text data inside html
 {JSON.stringify(state)}
 ```
