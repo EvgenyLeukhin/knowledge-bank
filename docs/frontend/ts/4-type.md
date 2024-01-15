@@ -202,3 +202,9 @@ type TPlainSla = {
   createdAt: string;
 }
 ```
+
+---
+
+```ts
+let timeout: ReturnType<typeof setTimeout>;
+```
