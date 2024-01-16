@@ -49,6 +49,42 @@ export default SomeComponent;
 
 ---
 
+## Props
+
+В props можно передавать любой тип данных и другие компоненты.
+
+```tsx
+// nипизация пропсов
+type TProps = {
+  prop1: number;
+  prop2: string;
+  prop3: boolean;
+  prop4: TSomeObj;
+  prop5: TSomeObj[];
+  prop6: (val: TSomeObj) => void;
+  prop7?: ReactElement<any, any>; // реакт-компонент как property
+}
+
+...
+
+<SomeComponent 
+  prop1={10}
+  prop2="Some string"
+  prop3={true}
+  prop4={{ name: 'John Smith', age: 35 }}
+  prop5={[{ name: 'John Smith1', age: 35 }, { name: 'John Smith2', age: 35 }, { name: 'John Smith3', age: 35 }]}
+  prop6={setState}
+  prop7={
+    <div>
+      <p>Some Layout</p>
+    </div>
+  }
+>
+
+```
+
+---
+
 ## Стилизация
 
 ### Аттрибут style
