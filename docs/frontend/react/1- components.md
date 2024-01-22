@@ -1,5 +1,5 @@
 ---
-title: Компоненты ✓
+title: Компоненты и стили ✓
 sidebar_position: 1
 ---
 

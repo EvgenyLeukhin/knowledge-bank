@@ -1,5 +1,5 @@
 ---
-title: ref ✓
+title: ref
 sidebar_position: 2
 ---
 

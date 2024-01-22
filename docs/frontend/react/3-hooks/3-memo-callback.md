@@ -1,5 +1,5 @@
 ---
-title: memo & callback ✓
+title: memo & callback
 sidebar_position: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: state ✓
+title: state
 sidebar_position: 0
 ---
 

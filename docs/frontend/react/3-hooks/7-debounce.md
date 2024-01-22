@@ -1,5 +1,5 @@
 ---
-title: debounce, throttle ✓
+title: debounce, throttle
 sidebar_position: 7
 ---
 

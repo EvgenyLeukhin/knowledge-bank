@@ -1,5 +1,5 @@
 ---
-title: history, params ✓
+title: history, params
 sidebar_position: 5
 ---
 

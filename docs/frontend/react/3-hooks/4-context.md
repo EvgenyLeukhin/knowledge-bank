@@ -1,5 +1,5 @@
 ---
-title: context ✓
+title: context
 sidebar_position: 4
 ---
 

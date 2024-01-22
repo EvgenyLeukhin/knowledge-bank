@@ -1,5 +1,5 @@
 ---
-title: effect ✓
+title: effect
 sidebar_position: 1
 ---
 

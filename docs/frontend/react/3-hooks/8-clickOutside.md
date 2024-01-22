@@ -1,5 +1,5 @@
 ---
-title: clickOutside ✓
+title: clickOutside
 sidebar_position: 8
 ---
 
