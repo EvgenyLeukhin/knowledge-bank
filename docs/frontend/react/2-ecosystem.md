@@ -18,10 +18,13 @@ sidebar_position: 2
 
 ### Готовые сборщики (билдеры)
 
-- [NextJS](https://nextjs.org/)
 - [create-reaact-app](https://create-react-app.dev/)
-- [webpack](https://webpack.js.org/)
-- [parcel](https://parceljs.org/)
+- [NextJS](https://nextjs.org/) - Фреймворк
+- [Vite](https://vitejs.dev/guide/) - Набирает популярность
+- [Gatsbyjs](https://www.gatsbyjs.com/) - React to HTML
+- [docusaurus](https://docusaurus.io/) - Для документации (отпачковался от Gatsby)
+- [webpack](https://webpack.js.org/) - Классический (для кастомных сборок)
+- [parcel](https://parceljs.org/) - Альтернатива Webpack
 
 ---
 
