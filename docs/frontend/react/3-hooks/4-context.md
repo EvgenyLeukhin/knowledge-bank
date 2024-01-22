@@ -1,6 +1,6 @@
 ---
 title: context ✓
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 - Позволяет передавать `state` на любой уровень, что-то вроде встроенного `redux` в `react`
