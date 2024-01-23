@@ -131,3 +131,26 @@ const SomeComp = ({ prop1, prop2, prop3 }) => {
 
 export default React.memo(SomeComp);
 ```
+
+---
+
+## React.memo + useCallback
+
+Часто для оптимизации ре-рендеров ```React.memo``` используется в паре с ```useCallback()```.
+
+```tsx
+// чтобы у родителя не было перерендеров от обновления пропсов, если в них не было изменений оборачиваем его в React.memo
+const SomeComp = React.memo((props) => {
+
+  // чтобы у родителя не было перерендеров от перевычислений констант для экшенов, оборачиваем их в useCallback()
+  const someAction = useCallback(() => {
+    ...
+  }, []);
+
+  return (
+    <div>
+      <ChildComp someAction={someAction} />
+    </div>
+  )
+});
+```

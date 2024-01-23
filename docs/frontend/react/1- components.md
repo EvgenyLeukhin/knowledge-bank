@@ -12,6 +12,7 @@ import styles from './SomeComponent.module.scss';
 type TProps = {
   title: string;
   action: () => void;
+  children: React.ReactNode;
 }
 
 // запись через функцию
