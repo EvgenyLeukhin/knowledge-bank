@@ -154,3 +154,26 @@ const SomeComp = React.memo((props) => {
   )
 });
 ```
+
+---
+
+## useEffect + useCallback
+
+Если у useEffect есть какая-то
+
+```tsx
+// чтобы у родителя не было перерендеров от обновления пропсов, если в них не было изменений оборачиваем его в React.memo
+const SomeComp = React.memo((props) => {
+
+  // чтобы у родителя не было перерендеров от перевычислений констант для экшенов, оборачиваем их в useCallback()
+  const someAction = useCallback(() => {
+    ...
+  }, []);
+
+  return (
+    <div>
+      <ChildComp someAction={someAction} />
+    </div>
+  )
+});
+```
