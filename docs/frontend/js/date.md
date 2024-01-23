@@ -349,5 +349,5 @@ export const addDaysToDate = (date: Date, days: number = 0, formatView: string =
 // использование
 const TODAY = addDaysToDate(new Date());
 const TODAY_PLUS_7DAYS = addDaysToDate(new Date(), 6); // +6 дней включительно = интервал в 7 дней
-const TODAY_PLUS_8DAYS = addDaysToDate(new Date(), 7, 'dd.MM.yyyy'); // тут "на 8-й день"
+const TODAY_PLUS_8DAYS_FORMATED = addDaysToDate(new Date(), 7, 'dd.MM.yyyy'); // тут "на 8-й день"
 ```
