@@ -328,3 +328,26 @@ useEffect(() => {
     setHubCurrentTime(`${selectedHubHours}:${selectedHubMinutes}`);
 }, []);
 ```
+
+---
+
+## addDayToDate
+
+```tsx
+import format from 'date-fns/format';
+
+// добавляет дни к переданной дате с форматированием
+export const addDaysToDate = (date: Date, days: number = 0, formatView: string = 'yyyy-MM-dd'): string =>
+    format(
+        // создание новой даты с добавлением кол-ва дней
+        new Date(date.getFullYear(), date.getMonth(), date.getDate() + days),
+
+        // форматирование этой даты в date-fns format
+        formatView
+    );
+
+// использование
+const TODAY = addDaysToDate(new Date());
+const TODAY_PLUS_7DAYS = addDaysToDate(new Date(), 6); // +6 дней включительно = интервал в 7 дней
+const TODAY_PLUS_8DAYS = addDaysToDate(new Date(), 7, 'dd.MM.yyyy'); // тут "на 8-й день"
+```
