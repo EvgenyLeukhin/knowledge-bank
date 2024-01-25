@@ -252,3 +252,26 @@ render(
 ### PostCSS
 
 [Post CSS plugins](https://www.postcss.parts/)
+
+--- 
+
+### classnames
+
+```yarn add classnames```
+
+```tsx
+import cn from 'classnames';
+import styles from 'SomeComponent.module.scss';
+
+...
+
+<div
+  className={cn(styles.ActiveDate, {
+    // класс по условию
+    [styles.ActiveDate__lowActive]: user.activeDate < TODAY_MINUS_2WEEKS,
+  })}
+>
+  {user.activeDate || 'Нет данных'}
+</div>
+
+```
