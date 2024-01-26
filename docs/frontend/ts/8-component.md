@@ -61,13 +61,16 @@ export type MixProps<P = {}> = P & {
 };
 
 // props компонента
-interface Props {
+interface IProps {
   onClick?: () => void;
   disabled?: boolean;
 }
 
+// className и style - общие пропсы из MixProps
+// onClick и disabled - кастомные пропсы компонента
+
 // использоание MixProps
-const GameButton: React.FC<MixProps<Props>> = ({ className, onClick, style, children, disabled }) => {
+const GameButton: React.FC<MixProps<IProps>> = ({ className, onClick, style, children, disabled }) => {
   return (
     <button onClick={onClick} style={style} disabled={disabled}>
       {children}
@@ -77,3 +80,9 @@ const GameButton: React.FC<MixProps<Props>> = ({ className, onClick, style, chil
 
 export { GameButton };
 ```
+
+---
+
+## Передача всех пропсов одного компонента в другой (расширение)
+
+TODO
