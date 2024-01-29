@@ -36,6 +36,7 @@ import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
 
 // в главыный reducer стора вкладываются все reducer-ы слайсов приложения
 export const store = configureStore({
+  // root reducer
   reducer: {
     slice1: slice1.reducer,
     slice2: slice2.reducer,
@@ -47,10 +48,10 @@ export const store = configureStore({
 // типизация всего стейта
 export type RootState = ReturnType<typeof storeToolkit2.getState>;
 
-// хук, которвый возвращает весь store
+// хук, которвый возвращает весь store (можно использовать внутри компонентов)
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-// хук, которвый хранит все синхронные экшены
+// хук, которвый хранит все синхронные экшены (можно использовать внутри компонентов)
 export const useSyncActions = () => {
   const dispatch = useDispatch();
 
@@ -58,7 +59,7 @@ export const useSyncActions = () => {
     // импорт всех экшенов и редьюсеров
     ...slice1.actions,
     ...slice2.actions,
-    ...
+    ...,
     ...sliceN.actions,
     }, dispatch);
 };
