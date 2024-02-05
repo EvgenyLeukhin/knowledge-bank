@@ -3,6 +3,11 @@ title: websocket
 sidebar_position: 2
 ---
 
+- Протокол непрерывного канала связи браузера с сервером.
+- wws://...
+- чаты, стримы, онлайн игры
+- приложения для совместной работы
+
 ```ts
 // подключение к WebSocket
 socket.current = new WebSocket('wss://comit-backend-main.review.eapteka.ru/api/v1/naumen?logintest=test');
