@@ -212,6 +212,55 @@ Globaly: ```npm list --save-dev --depth 0```
 
 ---
 
+## More commands
+
+[yarnpkg.com](https://classic.yarnpkg.com/)
+
+- ```yarn add```
+- ```yarn audit```
+- ```yarn autoclean```
+- ```yarn bin```
+- ```yarn cache```
+- ```yarn check```
+- ```yarn config```
+- ```yarn create```
+- ```yarn dedupe```
+- ```yarn generate-lock-entry```
+- ```yarn global```
+- ```yarn help```
+- ```yarn import```
+- ```yarn info```
+- ```yarn init```
+- ```yarn install```
+- ```yarn licenses```
+- ```yarn link```
+- ```yarn list```
+- ```yarn lockfile```
+- ```yarn login```
+- ```yarn logout```
+- ```yarn outdated```
+- ```yarn owner```
+- ```yarn pack```
+- ```yarn policies```
+- ```yarn prune```
+- ```yarn publish```
+- ```yarn remove```
+- ```yarn run```
+- ```yarn self-update```
+- ```yarn tag```
+- ```yarn team```
+- ```yarn test```
+- ```yarn unlink```
+- ```yarn upgrade```
+- ```yarn upgrade-interactive```
+- ```yarn version```
+- ```yarn versions```
+- ```yarn why```
+- ```yarn workspace```
+- ```yarn workspaces```
+
+---
+
 ## package.json
 
 Package.json --> Initialize new project --> package.json will be create automaticly.
@@ -317,3 +366,4 @@ In package.json
 ```json
   "adaptive-test": "browser-sync start -s dist",
 ```
+
