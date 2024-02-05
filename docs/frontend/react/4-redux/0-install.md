@@ -3,19 +3,18 @@ title: Установка ✓
 sidebar_position: 0
 ---
 
-## with yarn
+[Official Docs](https://redux-toolkit.js.org/)
 
-- ```yarn add @reduxjs/toolkit``` - установка RTK
-- ```yarn add react-redux @types/react-redux``` - установка react-redux
-- ```yarn add redux``` - установка redux (нужно по необходимости)
+## Install packages
+
+- ```yarn add @reduxjs/toolkit react-redux``` - with yarn
+- ```npm install @reduxjs/toolkit react-redux``` - with npm
 
 ---
 
-## with npm
+## Install template
 
-- ```npm install @reduxjs/toolkit``` - установка RTK
-- ```npm install react-redux @types/react-redux``` - установка react-redux
-- ```npm install redux``` - установка redux (нужно по необходимости)
+- ```npx create-next-app --example with-redux my-app```
 
 ---
 

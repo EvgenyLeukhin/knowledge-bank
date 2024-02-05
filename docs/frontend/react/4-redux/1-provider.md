@@ -30,6 +30,8 @@ render(
 
 ## Store
 
+Точка входа всех редьюсеров.
+
 ```tsx
 import { configureStore, bindActionCreators } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
