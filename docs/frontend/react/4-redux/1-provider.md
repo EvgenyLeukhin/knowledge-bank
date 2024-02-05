@@ -35,6 +35,7 @@ render(
 ```tsx
 import { configureStore, bindActionCreators } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useSelector, useDispatch } from 'react-redux';
+import { api } from './api/api';
 
 // в главыный reducer стора вкладываются все reducer-ы слайсов приложения
 export const store = configureStore({
@@ -44,6 +45,9 @@ export const store = configureStore({
     slice2: slice2.reducer,
     ...,
     sliceN: sliceN.reducer,
+
+    // create api slice
+    [api.reducerPath]: api.reducer,
   },
 });
 
@@ -69,4 +73,31 @@ export const useSyncActions = () => {
 // доп. типизация 
 // export type AppStore = ReturnType<typeof store> as any;
 // export type AppDispatch = AppStore['dispatch'];
+```
+
+Использование в компоненте
+
+```tsx
+import { useSyncActions, useAppSelector } from '@/store';
+
+...
+  // get state from store by useAppSelector
+  const {
+    counterStore: { counter },
+    usersStore: { users, isLoading, isError, errorMessage },
+  } = useAppSelector(state => state);
+
+  // get actions
+  const {
+    changeCounter,
+    clearCounter,
+    dicrementCounter,
+    incrementCounter,
+    addRandomUser2,
+    clearUsers,
+    deleteUser,
+    deleteLastUser,
+    fetchUsersThunk,
+  } = useSyncActions();
+
 ```
