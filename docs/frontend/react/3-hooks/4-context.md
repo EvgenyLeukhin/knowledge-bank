@@ -88,7 +88,7 @@ export default function SomeComp() {
 Передача методов и состояний по всему приложению.
 
 ```tsx
-import React, { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren, useContext } from 'react';
 
 // типизируем контекст
 interface IContextValue {
