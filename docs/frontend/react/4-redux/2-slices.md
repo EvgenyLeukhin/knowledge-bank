@@ -28,17 +28,17 @@ const someSlice = createSlice({
   name: 'some-slice',
   initialState,
   reducers: {
-    // setLoading - короткая запись (в RTK state мутабильный)
-    setLoading(state, { payload }: PayloadAction<boolean>) {
-      state.isLoading = payload;
-    },
-
-    // setLoading2 - полная запись
-    setLoading2: (state, { payload }: PayloadAction<boolean>) => {
+    // setLoading - полная запись
+    setLoading: (state, { payload }: PayloadAction<boolean>) => {
       return {
         ...state,
         isLoading: payload,
       };
+    },
+
+    // setLoading - короткая запись (в RTK state мутабильный)
+    setLoading(state, { payload }: PayloadAction<boolean>) {
+      state.isLoading = payload;
     },
 
     // setSuccess

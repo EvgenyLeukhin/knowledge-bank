@@ -70,4 +70,19 @@ export default SomeComp;
 
 ## Примеры синхронных экшенов
 
-TODO
+```ts
+import { PayloadAction } from '@reduxjs/toolkit';
+
+// setLoading - полная запись
+setLoading: (state, { payload }: PayloadAction<boolean>) => {
+  return {
+    ...state,
+    isLoading: payload,
+  };
+},
+
+// setLoading - короткая запись (в RTK state мутабильный)
+setLoading(state, { payload }: PayloadAction<boolean>) {
+  state.isLoading = payload;
+},
+```

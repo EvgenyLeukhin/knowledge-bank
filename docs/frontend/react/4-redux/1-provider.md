@@ -75,29 +75,75 @@ export const useSyncActions = () => {
 // export type AppDispatch = AppStore['dispatch'];
 ```
 
-Использование в компоненте
+---
+
+## Persist
+
+```ts
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
+
+// reducers
+import reducer1 from '@store/reducer1';
+import reducer2 from '@store/reducer2';
+...
+import reducerN from '@store/reducerN';
+
+
+const reducers = combineReducers({
+  reducer1,
+  reducer2,
+  ...
+  reducerN,
+});
+
+const persistConfig = {
+  key: 'root',
+  timeout: 2000,
+  version: 1,
+
+  // список редьюсеров, которые нужно сохранять
+  whitelist: ['reducer1', 'reducer2'],
+  storage
+};
+
+const persistedReducer = persistReducer(persistConfig, reducers);
+
+const store = configureStore({
+  reducer: persistedReducer,
+  devTools: process.env.NODE_ENV !== 'production',
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: false
+    })
+});
+```
+
+---
+
+## Persist Provider
 
 ```tsx
-import { useSyncActions, useAppSelector } from '@/store';
+import React, { FC, ReactElement } from "react";
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore } from 'redux-persist';
+import store from '@store/index';
+import { Provider } from 'react-redux';
+import { Preloader } from "@npm-registry/eapteka-ui";
 
-...
-  // get state from store by useAppSelector
-  const {
-    counterStore: { counter },
-    usersStore: { users, isLoading, isError, errorMessage },
-  } = useAppSelector(state => state);
-
-  // get actions
-  const {
-    changeCounter,
-    clearCounter,
-    dicrementCounter,
-    incrementCounter,
-    addRandomUser2,
-    clearUsers,
-    deleteUser,
-    deleteLastUser,
-    fetchUsersThunk,
-  } = useSyncActions();
-
+export const AppReduxProvider: FC<{
+  children: ReactElement;
+}> = ({ children }) => {
+  return (
+    <Provider store={store}>
+      <PersistGate
+        loading={<Preloader position='center' size='l'/> }
+        persistor={persistStore(store)}
+      >
+        {children}
+      </PersistGate>
+    </Provider>
+  );
+};
 ```
