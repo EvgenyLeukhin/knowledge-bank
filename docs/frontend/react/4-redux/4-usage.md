@@ -1,5 +1,5 @@
 ---
-title: Поключение
+title: Поключение ✓
 sidebar_position: 4
 ---
 
@@ -80,4 +80,27 @@ useEffect(() => {
 }, []);
 
 
+```
+
+---
+
+## Импорт селекторы
+
+Можно экспортировать обработанные селекторы
+
+```ts
+import { RootState } from '..';
+import { INotificationTemplate, INotificationTemplatesState } from './types';
+
+// full state
+export const selectNotificationTemplatesState = (globalState: RootState): INotificationTemplatesState =>
+  globalState.notificationTemplates;
+
+// templates
+export const selectNotificationTemplates = (globalState: RootState): INotificationTemplate[] =>
+  globalState.notificationTemplates.templates;
+
+// selectedTemplate
+export const selectSelectedNotificationTemplate = (globalState: RootState): INotificationTemplate | null =>
+  globalState.notificationTemplates.selectedTemplate;
 ```

@@ -1,9 +1,11 @@
 ---
-title: Экшены
+title: Thunks ✓
 sidebar_position: 3
 ---
 
-Асинхронный экшен. Thunk. Effect.
+## Асинхронный экшен
+
+Thunk. Effect. В них можно обрабатывать ответы с сервера и обогащать данные дополнительными полями.
 
 ```tsx
 import axios from 'axios';
@@ -43,7 +45,9 @@ export const usersThunks = {
 };
 ```
 
-Использование в компаненте.
+---
+
+## Использование в компоненте
 
 ```tsx
 import { useDispatch, useSelector } from 'react-redux';
@@ -68,21 +72,29 @@ export default SomeComp;
 
 ---
 
-## Примеры синхронных экшенов
+## Пример thunk
 
 ```ts
-import { PayloadAction } from '@reduxjs/toolkit';
+import { Dispatch } from 'redux';
+import { store } from '../store/store';
+import routesService from '../api/services/routes-service';
+import { setLoadingAction } from '../slices/orders';
 
-// setLoading - полная запись
-setLoading: (state, { payload }: PayloadAction<boolean>) => {
-  return {
-    ...state,
-    isLoading: payload,
-  };
-},
+export const attachReturnsToPickups = (routeIds: number[]) => {
+    return async function (dispatch: Dispatch<any>) {
+        dispatch(setLoadingAction(true));
 
-// setLoading - короткая запись (в RTK state мутабильный)
-setLoading(state, { payload }: PayloadAction<boolean>) {
-  state.isLoading = payload;
-},
+        const data = await routesService.attachReturnsToPickups(routeIds);
+        if (data) {
+            // доступ к стору
+            const filters = store.getState().orders.filters;
+            store.dispatch(getAllRoutes());
+            store.dispatch(getAllOrders());
+            dispatch(messageAction(messageHandler('Партнёрские возвраты успешно обработаны', MessageType.SUCCESS)));
+        } else {
+            dispatch(setLoadingAction(false));
+            dispatch(messageAction(messageHandler('Не удалось обработать партнёрские возвраты')));
+        }
+    };
+};
 ```
