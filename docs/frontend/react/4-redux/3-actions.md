@@ -101,6 +101,47 @@ export const attachReturnsToPickups = (routeIds: number[]) => {
 
 ---
 
+## Примеры синхронных экшенов
+
+```ts
+// обновление данных в массиве
+setDrugstoreTypeFilter(state, { payload }: PayloadAction<DrugstoreType>) {
+  const { drugstoreType } = state.filter;
+
+  const isInclude = drugstoreType.includes(payload);
+
+  if (isInclude) {
+    state.filter.drugstoreType = drugstoreType.filter(
+      type => type !== payload,
+    );
+  } else {
+    state.filter.drugstoreType = [...drugstoreType, payload];
+  }
+},
+
+// обновление данных в массиве, если payload тоже массив
+setOwnDrugstoreTypeFilter(state, { payload }: PayloadAction<PickUpType[]>) {
+  const { ownDrugstoreType } = state.filter;
+
+  payload.map(type => {
+    const isExist = ownDrugstoreType.some(
+      currentType => currentType === type,
+    );
+
+    if (isExist) {
+      // удалить фильтр
+      const index = ownDrugstoreType.indexOf(type);
+      ownDrugstoreType.splice(index, 1);
+    } else {
+      // добавить фильтр
+      ownDrugstoreType.push(type);
+    }
+  });
+},
+```
+
+---
+
 ## Утилиты
 
 ```ts
