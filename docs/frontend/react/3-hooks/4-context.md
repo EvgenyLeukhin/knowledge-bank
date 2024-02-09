@@ -228,3 +228,160 @@ import { useSocket } from '@pages/Telephony/WebSocketProvider';
 const { userState } = useSocket();
 ...
 ```
+
+---
+
+## Пример сомописного provider из Fun chat
+
+```ts
+// useGuessMeProvider
+import { IRoomPlayer, PLAYER_STATE } from '@store/room/roomSlice';
+import { useAppSelector } from '@app/hooks';
+import { defaultGameState, initialMapState } from './guessMe.types';
+import { PLAYER_STATUS } from '@src/common/constants/system';
+import { selectRoomPlayers } from '@store/room/roomSlice';
+import { selectPlayerId } from '@store/reducers/player.reducer';
+import { useState, useEffect } from 'react';
+import { GuessMeState } from '@src/shared/gameInterfaces/guessMe.socket';
+import { simpleMerge } from '@src/common/generics';
+import WSClient from '@src/sockets';
+import { CLIENT_EVENTS, SERVER_EVENTS } from '@src/shared/socketEvents/eventTypes';
+
+interface GuessMeData {
+  data: {
+    guessMe: GuessMeState;
+  };
+}
+
+export const useGuessMeProvider = (roomId: string) => {
+  const [state, setState] = useState<GuessMeState>(defaultGameState);
+  const players = useAppSelector(selectRoomPlayers);
+  const playerId = useAppSelector(selectPlayerId);
+  const isActivePlayer = playerId === state.activePlayerId;
+  const currentPlayer = players.find((player) => player.playerId === playerId) || ({} as IRoomPlayer);
+  const isSpectator = currentPlayer ? currentPlayer.state !== PLAYER_STATE.GAME : true;
+  const stateMatcher = { ...initialMapState, [state.gameState]: true };
+
+  useEffect(() => {
+    const updateState = ({ data }: GuessMeData) => setState(simpleMerge(state, data.guessMe));
+
+    WSClient.on(SERVER_EVENTS.ROOM_STATE_UPDATED, updateState);
+    WSClient.on(SERVER_EVENTS.GAME_STATE_UPDATED, updateState);
+
+    WSClient.emit(CLIENT_EVENTS.GAME_STATE_REQUESTED, { roomId });
+
+    return () => {
+      WSClient.off(SERVER_EVENTS.GAME_STATE_UPDATED, updateState);
+      WSClient.off(SERVER_EVENTS.ROOM_STATE_UPDATED, updateState);
+    };
+  }, []);
+
+  const setVote = (answerIndex: number) => setState(simpleMerge(state, {}));
+  const setReady = () => setState(simpleMerge(state, {}));
+  const setPreVote = (answerIndex: number) => setState(simpleMerge(state, {}));
+
+  return [
+    stateMatcher,
+    { ...state, state: stateMatcher },
+    playerId,
+    players,
+    { setVote, setReady, setPreVote },
+    isActivePlayer,
+    isSpectator,
+  ] as const;
+};
+```
+
+```ts
+// useGameHook
+import { GameTypes } from '@src/common/constants/common';
+import WSClient from '@src/sockets';
+import { useEffect } from 'react';
+import { useGuessMeProvider } from './guessMeProvider';
+// import { setVotedFor, setReadyNextRound } from '@store/reducers/guessMe';
+import { useDispatch } from 'react-redux';
+import { CLIENT_EVENTS } from '@shared/socketEvents/eventTypes';
+import { PlayerStatus, PLAYER_STATUS } from '@src/common/constants/system';
+import { updatePlayerState } from '@store/room/roomSlice';
+import { updateGuessMeLabelsThunk } from './guessMe.labels';
+import { sendRoundStarted } from '@services/analyticsThunk';
+import { endGameEvent } from '@src/common/sendEvents';
+import { useAppDispatch } from '@src/app/hooks';
+
+const useGameHook = (roomId: string) => {
+  const dispatch = useAppDispatch();
+  const [state, game, playerId, players, storeActions, isActivePlayer, isSpectator] = useGuessMeProvider(roomId);
+
+  useEffect(() => {
+    dispatch(updateGuessMeLabelsThunk(game));
+  }, [game]);
+
+  useEffect(() => {
+    if (state.READY_START_ROUND) {
+      dispatch(sendRoundStarted(game.roundNumber.toString()));
+    }
+  }, [state.READY_START_ROUND]);
+
+  return {
+    state,
+    game,
+    playerId,
+    players,
+    isActivePlayer,
+    isSpectator,
+    actions: {
+      onSpin: () => {
+        WSClient.emit(CLIENT_EVENTS.ROUND_STARTED, {
+          roomId,
+          activeGameId: game.activeGameId,
+          gameType: GameTypes.GUESS_ME,
+        });
+      },
+
+      onPreVote: (value: number) => {
+        storeActions.setPreVote(value);
+        WSClient.emit(CLIENT_EVENTS.PLAYER_PRE_VOTED, {
+          roomId,
+          activeGameId: game.activeGameId,
+          playerId,
+          value,
+        });
+      },
+
+      onVote: (value: number) => {
+        storeActions.setVote(value);
+        WSClient.emit(CLIENT_EVENTS.PLAYER_VOTED, {
+          roomId,
+          activeGameId: game.activeGameId,
+          playerId,
+          value,
+        });
+      },
+
+      onNext: () => {
+        storeActions.setReady();
+        WSClient.emit(CLIENT_EVENTS.PLAYER_READY, {
+          roomId,
+          activeGameId: game.activeGameId,
+          playerId,
+        });
+      },
+
+      onGameQuit: () => {
+        // dispatch(updatePlayerState(playerId, PLAYER_STATUS.READY_TO_QUIT_GAME as PlayerStatus));
+        endGameEvent(roomId, playerId, GameTypes.GUESS_ME);
+      },
+    },
+  };
+};
+
+export { useGameHook };
+```
+
+```tsx
+// использование в компоненте 
+import { useGameHook } from './guessMe.hook';
+...
+const { state, game, playerId, actions, players, isActivePlayer, isSpectator } = useGameHook(roomId);
+const { onSpin, onPreVote, onVote, onNext, onGameQuit } = actions;
+```

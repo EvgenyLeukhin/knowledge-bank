@@ -98,3 +98,60 @@ export const attachReturnsToPickups = (routeIds: number[]) => {
     };
 };
 ```
+
+---
+
+## Утилиты
+
+```ts
+import { PayloadAction } from '@reduxjs/toolkit';
+export type ObjectType = Record<string, unknown>;
+
+// simpleMerge
+export const simpleMerge = <State, Payload>(state: State, action: PayloadAction<Payload>): State => ({
+  ...state,
+  ...action.payload,
+});
+
+// simpleMergeThunk
+export const simpleMergeThunk = <State, Payload>() => (state: State, action: PayloadAction<Payload>): State => ({
+  ...state,
+  ...action.payload,
+});
+
+// createPayload
+export const createPayload = <Payload extends ObjectType>(payload: Payload) => ({
+  payload: payload,
+});
+
+// createSimpleReducer
+export const createSimpleReducer = <State, K extends keyof State>(key: K) => (
+  state: State,
+  action: PayloadAction<State[K]>
+) => ({
+  ...state,
+  [key]: action.payload,
+});
+
+// createSimpleDraftReducer
+export const createSimpleDraftReducer = <State, K extends keyof State>(key: K) => (
+  state: State,
+  action: PayloadAction<State[K]>
+) => {
+  state[key] = action.payload;
+};
+
+// createMergeReducer
+export const createMergeReducer = <State>() => simpleMergeThunk<State, Partial<State>>();
+
+// createMergeDraftReducer
+export const createMergeDraftReducer = <State, K extends keyof State>(key: K) => (
+  state: State,
+  action: PayloadAction<State[K]>
+) => {
+  state[key] = {
+    ...state[key],
+    ...action.payload,
+  };
+};
+``

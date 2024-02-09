@@ -454,7 +454,7 @@ console.log(someArray.indexOf('a', 1)); // -1 - индекс не найден
 
 ### Includes
 
-Поиск элемента
+Содержит ли массив элемент.  Работает только с примитивами.
 
 ```js
 const someArray = ['a', 'b', 'c', 'd'];
@@ -463,6 +463,10 @@ console.log(someArray.includes('g')); // false
 
 // начиная с 1-го индекса
 console.log(someArray.includes('a', 1)); // false
+
+// с оператором ИЛИ
+[1, 2, 3].includes(4) || [1, 2, 3].includes(2); // true
+[1, 2, 3].includes(5) || [1, 2, 3].includes(6); // false
 ```
 
 ---
