@@ -7,6 +7,8 @@ sidebar_position: 3
 
 Thunk. Effect. В них можно обрабатывать ответы с сервера и обогащать данные дополнительными полями.
 
+dispatch indise component --> thunk --> get API data --> modified data --> save data to store
+
 ```tsx
 import axios from 'axios';
 import { TUser } from './users.types';
