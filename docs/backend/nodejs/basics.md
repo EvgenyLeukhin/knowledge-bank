@@ -259,6 +259,8 @@ Globaly: ```npm list --save-dev --depth 0```
 - ```yarn workspace```
 - ```yarn workspaces```
 
+Update pacages: ```yarn upgrade-interactive --latest```
+
 ---
 
 ## package.json
