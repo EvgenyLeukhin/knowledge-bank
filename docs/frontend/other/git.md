@@ -72,6 +72,10 @@ export const CODE = ({children}) => (
 - <CODE>git reset &lt;commit_hash&gt; (--hard)</CODE> - Сбросить историю до указанного коммита (принудительно)
 - <CODE>git clean -f -d</CODE> - Удалить лишние файлы
 
+---
+
+- <CODE>git revert comit_hash</CODE> - Удалить изменеия комита в текущей ветке
+
 ***
 
 ## Отправка / Принятие
