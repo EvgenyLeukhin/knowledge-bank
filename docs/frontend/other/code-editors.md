@@ -235,13 +235,13 @@ Configure Language в консоли - смена языка на англ (en)
 
 ```json
 {
-  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+  "color_scheme": "Mariana.sublime-color-scheme",
   "default_line_ending": "unix",
   "draw_white_space": "all",
   "font_face": "Consolas",
-  "line_padding_top": 3,
-  "line_padding_bottom": 3,
-  "font_size": 12,
+  "line_padding_top": 1,
+  "line_padding_bottom": 1,
+  "font_size": 13,
   "margin": -3,
   "tab_size": 2,
   "theme": "Default.sublime-theme",
