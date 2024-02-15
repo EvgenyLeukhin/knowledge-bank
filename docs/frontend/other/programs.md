@@ -38,13 +38,18 @@ sidebar_position: 5
 
 Пакетный менеджер для MacOS.
 
-```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"```
+https://brew.sh --> ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""```
+
+Add Brew to PATH: 
+
+- ```(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/evgenyleukhin/.zprofile```
+- ```eval "$(/opt/homebrew/bin/brew shellenv)"```
 
 * Git: ```brew install git```
 * Wget: ```brew install wget```
 * nodejs: ```brew install node```
 * yarn: ```brew install yarn```
-* oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"```
+* oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
 
 #### Настройки
 

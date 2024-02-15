@@ -5,6 +5,8 @@ sidebar_position: 0
 
 [Download Nodejs](https://nodejs.org/en/download/)
 
+```https://nodejs.org/en/download --> macOs Installer```
+
 NodeJS — интерпретатор JavaScript, основанный на движке V8. Тот же движок работает в браузерах на базе Chromium — он транслирует JavaScript в машинный код. Однако NodeJS исполняет код вне браузера, например на сервере. Так JavaScript из специализированного языка для сайтов превращается в универсальный язык программирования.
 NodeJS добавляет возможность работать с устройствами ввода-вывода через свой API (написанный на C++) и подключать библиотеки, написанные на разных языках, обеспечивая вызовы к ним из JavaScript-кода.
 
@@ -33,7 +35,7 @@ registry=https://npm.yandex.net/
 
 [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
-- Install script: ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash```
+- Install script: ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash```
 
 ---
 
@@ -173,7 +175,7 @@ Globaly: ```npm list --save-dev --depth 0```
 
 ### Install: 
 
-```npm i -g yarn```
+```npm install --global yarn``` || ```npm i -g yarn```
 ```yarn -v```
 
 ---

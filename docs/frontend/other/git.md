@@ -11,6 +11,10 @@ export const CODE = ({children}) => (
 
 **Version Control System**. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с ```master``` на ```main```.
 
+## Install
+
+MacOS: ```brew install git```
+
 ## Настройка
 
 - <CODE>git config --list</CODE> - Показывает список конфигураций
