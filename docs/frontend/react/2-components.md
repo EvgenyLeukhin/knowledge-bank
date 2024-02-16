@@ -6,7 +6,7 @@ sidebar_position: 2
 ## Пример функционального компонента
 
 ```tsx
-import { FC, useState } from 'react';
+import { FC, useState, PropsWithChildren } from 'react';
 import styles from './SomeComponent.module.scss';
 
 type TProps = {
@@ -20,6 +20,9 @@ type TProps = {
 
 // типизация через типизацию объекта пропсов
 // const SomeComponent = ({ title, action }: TProps) => {
+
+// типизация с children 
+// const SomeComponent: React.FC<PropsWithChildren<TProps>> = ...
 
 // типизация через дженерик реакт функ. компонента
 const SomeComponent: FC<TProps> = ({ title, action }) => {
