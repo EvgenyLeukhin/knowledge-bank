@@ -47,6 +47,7 @@ Install:
 
 * Git: ```brew install git```
 * Wget: ```brew install wget```
+* MC: ```brew install mc``` (Ctrl + O)
 * nodejs: ```brew install node```
 * yarn: ```brew install yarn```
 * oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
