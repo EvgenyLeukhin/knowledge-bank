@@ -13,7 +13,8 @@ export const CODE = ({children}) => (
 
 ## Install
 
-MacOS: ```brew install git```
+MacOS git install: ```brew install git```
+MacOS openssh install: ```brew install openssh```
 
 ## Настройка
 

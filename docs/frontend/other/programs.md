@@ -38,9 +38,9 @@ sidebar_position: 5
 
 Пакетный менеджер для MacOS.
 
-https://brew.sh --> ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""```
-
-Add Brew to PATH: 
+Install: 
+1. https://brew.sh --> ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""```
+2. Add Brew to PATH: 
 
 - ```(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/evgenyleukhin/.zprofile```
 - ```eval "$(/opt/homebrew/bin/brew shellenv)"```
@@ -99,6 +99,7 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 ### Через консоль
 
 #### git
+
 ```sudo apt install git```
 
 ```git --version```
@@ -107,6 +108,7 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 
 #### Kdiff
+
 ```sudo apt install kdiff3```
 
 ```kdiff3 --version```

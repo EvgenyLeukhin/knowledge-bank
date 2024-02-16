@@ -5,7 +5,7 @@ sidebar_position: 0
 
 [Download Nodejs](https://nodejs.org/en/download/)
 
-```https://nodejs.org/en/download --> macOs Installer```
+Install MacOS: ```https://nodejs.org/en/download --> macOs Installer```
 
 NodeJS — интерпретатор JavaScript, основанный на движке V8. Тот же движок работает в браузерах на базе Chromium — он транслирует JavaScript в машинный код. Однако NodeJS исполняет код вне браузера, например на сервере. Так JavaScript из специализированного языка для сайтов превращается в универсальный язык программирования.
 NodeJS добавляет возможность работать с устройствами ввода-вывода через свой API (написанный на C++) и подключать библиотеки, написанные на разных языках, обеспечивая вызовы к ним из JavaScript-кода.
