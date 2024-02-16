@@ -1,6 +1,6 @@
 ---
-title: Экосистема ✓
-sidebar_position: 2
+title: Экосистема
+sidebar_position: 1
 ---
 
 ### Стилизация
@@ -25,6 +25,14 @@ sidebar_position: 2
 - [docusaurus](https://docusaurus.io/) - Для документации (отпачковался от Gatsby)
 - [webpack](https://webpack.js.org/) - Классический (для кастомных сборок)
 - [parcel](https://parceljs.org/) - Альтернатива Webpack
+
+---
+
+## Вспомогательные пакеты
+
+- [react-dom](https://www.npmjs.com/package/react-dom) - Рендеринг приложения
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) - Роутинг
+- [react-helmet](https://www.npmjs.com/package/react-helmet) - Head-теги
 
 ---
 
@@ -102,6 +110,8 @@ sidebar_position: 2
 - [cross-env](https://www.npmjs.com/package/cross-env) - Запуск скриптов с выбранным режимом (dev или prod)
 - [env-cmd](https://www.npmjs.com/package/env-cmd)  - Использование env-файлов внутри скриптов
 - [uuid](https://www.npmjs.com/package/uuid) - Генерация id
+- [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd) - Drag and drop
+- [react-virtualized](https://www.npmjs.com/package/react-virtualized) - Виртуальный список
 
 ---
 

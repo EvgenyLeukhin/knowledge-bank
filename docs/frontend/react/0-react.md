@@ -1,5 +1,5 @@
 ---
-title: React ✓
+title: React
 sidebar_position: 0
 ---
 
