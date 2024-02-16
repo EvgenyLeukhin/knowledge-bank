@@ -50,7 +50,7 @@ Install:
 * MC: ```brew install mc``` (Ctrl + O)
 * nodejs: ```brew install node```
 * yarn: ```brew install yarn```
-* oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+* oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``` (Настройки ~/.zshrc)
 
 #### Настройки
 
