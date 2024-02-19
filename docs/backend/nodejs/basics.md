@@ -178,6 +178,10 @@ Globaly: ```npm list --save-dev --depth 0```
 ```npm install --global yarn``` || ```npm i -g yarn```
 ```yarn -v```
 
+
+Обновление пакетов: ```yarn upgrade-interactive --latest```
+Очистка кэша: ```yarn cache clean --force```
+
 ---
 
 ### Add package
