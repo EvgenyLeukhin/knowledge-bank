@@ -80,6 +80,7 @@ MacOS openssh install: ```brew install openssh```
 ---
 
 - <CODE>git revert comit_hash</CODE> - Удалить изменеия комита в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)
+- <CODE>git revert comit_hash1 comit_hash2 comit_hash3</CODE> - Удалить изменеия комитов в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)
 
 ***
 
