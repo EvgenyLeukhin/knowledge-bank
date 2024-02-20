@@ -78,6 +78,8 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git clean -f -d</CODE> - Удалить лишние файлы
 
 ---
+- <CODE>git checkout -b new-branch-name &lt;new-branch-name&gt;</CODE> - Удалить лишние файлы
+---
 
 - <CODE>git revert comit_hash</CODE> - Удалить изменеия комита в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)
 - <CODE>git revert comit_hash1 comit_hash2 comit_hash3</CODE> - Удалить изменеия комитов в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)
