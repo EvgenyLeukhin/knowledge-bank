@@ -266,6 +266,7 @@ Globaly: ```npm list --save-dev --depth 0```
 - ```yarn workspaces```
 
 Update pacages: ```yarn upgrade-interactive --latest```
+Clear cache: ```yarn cache clean --force```
 
 ---
 
