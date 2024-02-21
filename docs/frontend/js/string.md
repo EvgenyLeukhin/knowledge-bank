@@ -167,7 +167,7 @@ let str2 = "Hello World!\tThis is my string";
 
 ***
 
-### Вырезать подстроку
+### Вырезать / обрезать подстроку
 ```js
 'string'.slice(1, 3); // 'tr'
 'String'.slice(-2); // 'ng' (вырезать с конца)
