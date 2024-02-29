@@ -378,6 +378,7 @@ console.log(newArray); // [0, 1, 2, 3, 4, 5]
 const someArray1 = [0, 1, 2];
 const someArray2 = [3, 4, 5]
 const newArray = [...someArray1, ...someArray2];
+const newArrayWithNewItem = [...someArray1, newItem];
 console.log(newArray); // [0, 1, 2, 3, 4, 5]
 ```
 

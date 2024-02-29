@@ -1,6 +1,6 @@
 ---
 title: reduce()
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ## Преобразование массива в объект
