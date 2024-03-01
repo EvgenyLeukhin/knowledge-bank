@@ -84,6 +84,37 @@ type TProps = {
     </div>
   }
 >
+```
+
+Передача параметров в prop-action
+
+```tsx
+type TProps = {
+  isMapPage?: boolean;
+  updateCommentAction?: (value: string) => void;
+};
+
+...
+// использование prop-action
+const updateComment = () => {
+  updateCommentAction && updateCommentAction(value);
+}
+
+...
+
+// передача параметра
+<EditDrugstoreCommentModal
+  isMapPage={false}
+  updateCommentAction={(val: string) => console.log(val)}
+
+  // или так
+  updateCommentAction={updateComment}
+/>
+
+const updateComment = (value: string) => {
+  console.log(value);
+};
+
 
 ```
 
