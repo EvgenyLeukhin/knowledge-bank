@@ -1,5 +1,5 @@
 ---
-title: Роутинг -
+title: Роутинг
 sidebar_position: 3
 ---
 
@@ -11,7 +11,22 @@ sidebar_position: 3
 
 ## react-router-dom v. 5
 
-### Router
+### App - create router
+
+```tsx
+import { BrowserRouter as Router } from 'react-router-dom';
+import Routes from 'routes';
+
+...
+  <Router>
+      <Routes />
+  </Router>
+...
+```
+
+---
+
+### Router - routes
 
 ```tsx
 import { matchPath, Redirect, Route, Switch } from 'react-router-dom';
@@ -205,7 +220,7 @@ export default PermissionsRoute;
 
 ```
 
-### history
+### history - redirects
 
 ```tsx
 import { useHistory } from 'react-router-dom';
@@ -217,7 +232,18 @@ const history = useHistory();
 ...
 
 history.push('/some-page');
+```
 
+---
+
+### NavLink
+
+```tsx
+...
+<NavLink to={`/administration/routes?query=${someConts}`} target='_blank'>
+    Link to new page
+</NavLink>
+...
 ```
 
 ---
@@ -225,4 +251,112 @@ history.push('/some-page');
 
 ## react-router-dom v. 6
 
-TODO
+### App
+
+```tsx
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
+```
+
+---
+
+### Router
+
+```tsx
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+
+    // not-found
+    errorElement: <NotFoundPage />,
+
+    // sub-routes
+    children: [
+      {
+        path: "contacts/:contactId",
+        element: <Contact />,
+      },
+    ],
+
+    loader: someLoader,
+    action: someAction, // import action
+  },
+]);
+```
+
+---
+
+### NavLink
+
+```tsx
+import { NavLink } from "react-router-dom";
+
+...
+
+<ul>
+  {contacts.map((contact) => (
+    <li key={contact.id}>
+      <NavLink
+        to={`contacts/${contact.id}`}
+        className={({ isActive, isPending }) =>
+          isActive
+            ? "active"
+            : isPending
+            ? "pending"
+            : ""
+        }
+      >
+        {/* other code */}
+      </NavLink>
+    </li>
+  ))}
+</ul>
+```
+
+---
+
+### Navigation
+
+```tsx
+import { useNavigation } from "react-router-dom";
+
+...
+
+const navigation = useNavigation();
+
+
+...
+
+<div
+  id="detail"
+  className={navigation.state === "loading" ? "loading" : ""}
+>
+  Some content
+</div>
+
+...
+onClick={() => {
+  navigation(-1);
+  navigation('/redirect-page');
+}}
+
+
+```
