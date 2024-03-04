@@ -5,7 +5,8 @@ sidebar_position: 7
 
 ## useDebounce
 
-![debounce.png](http://xandeadx.ru/sites/default/files/public/usergen/old/images/part-6/20190626170317.png)
+<img src="../../../../../img/react/debounce.png" alt="debounce.png" width="600" />
+
 
 **Debounce** — выполнение дейсвия тогда, когда после последней попытки вызова прошло определённое время
 
@@ -63,7 +64,7 @@ export default function Component() {
 
 ## useThrottle
 
-![throttle.png](http://xandeadx.ru/sites/default/files/public/usergen/old/images/part-6/20190626171329.png)
+<img src="../../../../../img/react/throttle.png" alt="debounce.png" width="600" />
 
 **Throttling** — функция будет выполняться не чаще одного раза в указанный период, даже если она будет вызвана много раз в течение этого периода
 
