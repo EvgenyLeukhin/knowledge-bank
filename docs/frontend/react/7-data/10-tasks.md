@@ -284,3 +284,30 @@ export function findSkippedDaysInIntervals(intervals: CourierDeliveryInterval[])
 }
 
 ```
+
+---
+
+## Сравнение частей интервала
+
+```ts
+// проверка на большой интервал
+export const IS_BIG_INTERVAL_MINUTES_DIFF = 300;
+export const checkBigInterval = (interval: string): boolean => {
+    if (!interval) return false;
+
+    // start interval
+    const startIntervalArray = interval.split(' - ')[0].split(':');
+    const startIntervalHoursToMinutes = Number(startIntervalArray[0]) * 60;
+    const startIntervalMinutes = Number(startIntervalArray[1]);
+    const startIntervalMinutesSum = startIntervalHoursToMinutes + startIntervalMinutes;
+
+    // end interval
+    const endIntervalArray = interval.split(' - ')[1].split(':');
+    const endIntervalHoursToMinutes = Number(endIntervalArray[0]) * 60;
+    const endIntervalMinutes = Number(endIntervalArray[1]);
+    const endIntervalMinutesSum = endIntervalHoursToMinutes + endIntervalMinutes;
+
+    // возвращаем условие
+    return endIntervalMinutesSum - startIntervalMinutesSum >= IS_BIG_INTERVAL_MINUTES_DIFF;
+};
+```
