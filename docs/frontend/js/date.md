@@ -344,3 +344,34 @@ const TODAY = addDaysToDate(new Date());
 const TODAY_PLUS_7DAYS = addDaysToDate(new Date(), 6); // +6 дней включительно = интервал в 7 дней
 const TODAY_PLUS_8DAYS_FORMATED = addDaysToDate(new Date(), 7, 'dd.MM.yyyy'); // тут "на 8-й день"
 ```
+
+---
+
+## Проверка интервала
+
+```ts
+// '10:00 - 18:00' --> true - если интервал более 5 часов
+// '10:00 - 12:00' --> false 
+
+// проверка на большой интервал
+export const IS_BIG_INTERVAL_MINUTES_DIFF = 300;
+
+export const checkBigInterval = (interval: string): boolean => {
+    if (!interval) return false;
+
+    // start interval
+    const startIntervalArray = interval.split(' - ')[0].split(':');
+    const startIntervalHoursToMinutes = Number(startIntervalArray[0]) * 60;
+    const startIntervalMinutes = Number(startIntervalArray[1]);
+    const startIntervalMinutesSum = startIntervalHoursToMinutes + startIntervalMinutes;
+
+    // end interval
+    const endIntervalArray = interval.split(' - ')[1].split(':');
+    const endIntervalHoursToMinutes = Number(endIntervalArray[0]) * 60;
+    const endIntervalMinutes = Number(endIntervalArray[1]);
+    const endIntervalMinutesSum = endIntervalHoursToMinutes + endIntervalMinutes;
+
+    // возвращаем условие
+    return endIntervalMinutesSum - startIntervalMinutesSum >= IS_BIG_INTERVAL_MINUTES_DIFF;
+};
+```
