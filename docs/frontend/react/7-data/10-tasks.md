@@ -311,3 +311,77 @@ export const checkBigInterval = (interval: string): boolean => {
     return endIntervalMinutesSum - startIntervalMinutesSum >= IS_BIG_INTERVAL_MINUTES_DIFF;
 };
 ```
+
+## Нахождения минут до конца и начала интервала от текущего времени
+
+```ts
+/**
+ * Возвращает разницу между датой и интервалом с учетом часового пояса
+ * @param {string} date - дата в формате YYYY-MM-DD
+ * @param {string} interval - интервал в формате HH:MM - HH:MM
+ * @param {number} hubTimezone - часовой пояс хаба
+ * @return {{
+ *     startIntervalDiff: number;
+ *     endIntervalDiff: number;
+ * }}
+ */
+export const returnIntervalDiff = (
+    date: string,
+    interval: string,
+    hubTimezone: number
+): {
+    startIntervalDiff: number;
+    endIntervalDiff: number;
+} => {
+    // filter date
+    const filterDate = date.split('-');
+    const filterDateYear = Number(filterDate[0]);
+    const filterDateMonth = Number(filterDate[1]) - 1;
+    const filterDateDay = Number(filterDate[2]);
+
+    // interval start
+    const startOfInterval = interval.split(' - ')[0].split(':');
+    const startIntervalHours = Number(startOfInterval[0]);
+    const startIntervalMinutes = Number(startOfInterval[1]);
+
+    const startIntervalToCurrentLocalTime = new Date(
+        // date
+        filterDateYear,
+        filterDateMonth,
+        filterDateDay,
+
+        // end of interval
+        startIntervalHours + (hubTimezone ? CURRENT_GTM_TIMEZONE - hubTimezone : 0),
+        startIntervalMinutes
+    );
+
+    // interval end
+    const endOfInterval = interval.split(' - ')[1].split(':');
+    const endIntervalHours = Number(endOfInterval[0]);
+    const endIntervalMinutes = Number(endOfInterval[1]);
+
+    const endIntervalToCurrentLocalTime = new Date(
+        // date
+        filterDateYear,
+        filterDateMonth,
+        filterDateDay,
+
+        // end of interval
+        endIntervalHours + (hubTimezone ? CURRENT_GTM_TIMEZONE - hubTimezone : 0),
+        endIntervalMinutes
+    );
+
+    if (endIntervalToCurrentLocalTime < startIntervalToCurrentLocalTime) {
+        endIntervalToCurrentLocalTime.setDate(endIntervalToCurrentLocalTime.getDate() + 1);
+    }
+
+    // current date
+    const LOCAL_DATE = new Date();
+
+    const startIntervalDiff = Math.round((startIntervalToCurrentLocalTime.getTime() - LOCAL_DATE.getTime()) / 60000);
+
+    const endIntervalDiff = Math.round((endIntervalToCurrentLocalTime.getTime() - LOCAL_DATE.getTime()) / 60000);
+
+    return { startIntervalDiff, endIntervalDiff };
+};
+```
