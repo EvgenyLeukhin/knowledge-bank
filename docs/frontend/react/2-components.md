@@ -15,6 +15,9 @@ type TProps = {
   children: React.ReactNode;
 }
 
+// функция, возвращающая JSX
+// function Main(): JSX.Element {
+
 // запись через функцию
 // function SomeComponent({ title, action }: TProps) {
 
