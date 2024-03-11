@@ -1,6 +1,6 @@
 ---
 title: websocket
-sidebar_position: 2
+sidebar_position: 8
 ---
 
 - Протокол непрерывного канала связи браузера с сервером.
