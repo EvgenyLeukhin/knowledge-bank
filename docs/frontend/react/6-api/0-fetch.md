@@ -145,7 +145,7 @@ async function loadPosts() {
 
 ---
 
-## fetch & TypeScript
+## fetch & TypeScript - TODO
 
 ```ts
 fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис
