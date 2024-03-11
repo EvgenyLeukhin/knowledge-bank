@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ## Тестовые API
 
-- [Swapi](https://swapi.dev/) - ```https://swapi.dev/api```
+- [Swapi](https://swapi.py4e.com/) - ```https://swapi.py4e.com```
 - [REQRES](https://reqres.in/) - ```https://reqres.in/```
 - [Список университетов](http://universities.hipolabs.com/) - ```http://universities.hipolabs.com/search?name=middle&country=Turkey```
 - [GraphQL and REST API for Testing and Prototyping](https://gorest.co.in/) - ```https://gorest.co.in/public/v2/users```

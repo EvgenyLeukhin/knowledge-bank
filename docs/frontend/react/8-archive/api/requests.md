@@ -85,7 +85,7 @@ fetch('https://example.com/profile', {
 
 ```js
 // fetch пример (GET)
-fetch('https://swapi.co/api/people/')
+fetch('https://swapi.py4e.com/api/people/')
   .then(response => response.json())
   .then(data => console.log(data.results));
 ```

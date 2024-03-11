@@ -3,6 +3,24 @@ title: fetch
 sidebar_position: 0
 ---
 
+```js
+fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис
+ // обработка ответа промиса
+  .then(res => res.json())
+
+   // вывод ответа
+  .then(json => console.log(json))
+
+  // обработка ошибки
+  .catch(error => console.error('error', error)) 
+```
+
+```js
+fetch('https://swapi.py4e.com/api/people/')
+  .then(response => response.json())
+  .then(data => console.log(data.results));
+```
+
 Одно из преимуществ JS, что он может делать запросы к серверу в реальном времени без перезагрузки страницы, этот процесс асихронный, так как результат такого запроса заранее неизвестный.
 Различные причины могут влиять на процесс ответа от сервера:
 
@@ -14,10 +32,35 @@ sidebar_position: 0
 
 Поэтому важно учитывать все эти факторы.
 
+---
 
-## Fetch (then-catch)
+## Параметры
 
-Встроенный js-метод реализующий запросы 
+```js
+method: "POST", // *GET, POST, PUT, DELETE, etc.
+
+mode: "cors", // no-cors, *cors, same-origin
+
+cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+
+credentials: "same-origin", // include, *same-origin, omit
+
+headers: {
+    "Content-Type": "application/json",
+    // 'список заголовков
+},
+redirect: "follow", // manual, *follow, error
+
+referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+
+body: JSON.stringify(data), // body data type must match "Content-Type" header
+```
+
+---
+
+## Fetch пример с then-catch
+
+Так как fetch возвращает промис, то можно использовать цепочку then-catch.
 
 ```js
 // data example
@@ -59,7 +102,50 @@ fetch('https://jsonplaceholder.typicode.com/posts', { // метод get по у�
   })
 ```
 
-## TypeScripts
+---
+
+## Fetch пример с async-await и try-catch-finally
+
+Если fetch c then() можно вызывать сразу, то для async-await нужна функция. Это синтаксический сахар, который упрощает написание запросов, избавляет от длинных цепочек колбэков then-catch.
+
+```js
+async function loadPosts() {
+  // переменная response будет ждать выполнение fetch
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const movies = await response.json();
+  console.log(movies);
+}
+
+loadPosts(); // --> return movies in console
+```
+
+Можно добавить try-catch для обработки ошибок.
+
+```ts
+async function loadPosts() {
+  // успешное выполнение запроса
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const movies = await response.json();
+    console.log(movies);
+
+    // обработчик ошибок
+  } catch(e) {
+    console.error(e);
+
+    // или 
+    throw new Error("Network response was not OK");
+
+    // завершение: сработает в любом случае (и при try, и при catch)
+  } finally {
+    alert('Do smth');
+  }
+}
+```
+
+---
+
+## fetch & TypeScript
 
 ```ts
 fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис
@@ -73,14 +159,24 @@ fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис
   .catch(error => console.error('error', error)) 
 ```
 
----
-
-## Fetch (with async-await)
-
-TODO
+```ts
+async function fetchPokemon(name: string): Promise<PokemonData, Error> {}
+```
 
 ---
 
-### try-catch
+## Методы обрабоктки response после fetch
 
-TODO
+- `res.json()` – декодирует ответ в формате JSON
+- `res.blob()` – возвращает объект как Blob (для файлов)
+- `res.text()` – возвращает ответ как обычный текст
+- `res.formData()` – возвращает ответ как объект FormData
+
+---
+
+## Параметры response после fetch
+
+- `res.status` – HTTP-код ответа
+- `res.ok` – если статус ответа в диапазоне 200-299
+- `res.headers` – объект с HTTP-заголовкам
+
