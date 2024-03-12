@@ -1,6 +1,6 @@
 ---
-title: Запросы ++-
-sidebar_position: 5
+title: Разное (-)
+sidebar_position: 9
 ---
 
 - [Методы HTTP запроса](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods)
