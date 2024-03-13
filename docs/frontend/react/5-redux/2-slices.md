@@ -1,5 +1,5 @@
 ---
-title: Слайсы ✓
+title: Слайсы
 sidebar_position: 2
 ---
 

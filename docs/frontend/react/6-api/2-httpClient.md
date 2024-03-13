@@ -1,7 +1,9 @@
 ---
-title: http-клиент
+title: http-клиент (-)
 sidebar_position: 2
 ---
+
+## На основе axios
 
 Можно создать свой httpClient на основе axios, в котором можно разместить все общие параметры и подключить перехватчики.
 
@@ -9,7 +11,6 @@ sidebar_position: 2
 import axios from 'axios';
 import { API_URL } from 'apiUrl';
 
-// 
 const httpClient = axios.create({
     baseURL: API_URL,
     headers: {
@@ -77,12 +78,6 @@ const getConnectionErrorInterceptor = (error: AxiosError) => {
 }
 ```
 
-***
-
-## Services
-
-TODO
-
 ---
 
 ## API_URL & env
@@ -137,4 +132,10 @@ export const returnEnv = (): EnvList => {
 export const isDev = returnEnv() === DEVELOPMENT;
 export const isProd = returnEnv() === PRODUCTION;
 ```
+
+---
+
+## На основе ...
+
+TODO
 

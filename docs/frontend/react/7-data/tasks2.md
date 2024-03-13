@@ -1,5 +1,5 @@
 ---
-title: Задачи по JS (-)
+title: Задачи (-)
 sidebar_position: 13
 ---
 

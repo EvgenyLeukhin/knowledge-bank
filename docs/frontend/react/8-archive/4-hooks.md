@@ -1,6 +1,6 @@
 ---
 title: Хуки
-sidebar_position: 6
+sidebar_position: 4
 ---
 
 export const MARK = ({ children }) => {

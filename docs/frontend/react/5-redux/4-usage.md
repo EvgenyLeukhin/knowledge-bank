@@ -1,5 +1,5 @@
 ---
-title: Поключение ✓
+title: Поключение
 sidebar_position: 4
 ---
 

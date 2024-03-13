@@ -1,5 +1,5 @@
 ---
-title: Thunks ✓
+title: Thunks
 sidebar_position: 3
 ---
 
