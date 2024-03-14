@@ -19,3 +19,14 @@ sidebar_position: 2
 ```ts
 import { getFile } from './usersService/createUser';
 ```
+
+## Lazy loading 
+
+```tsx
+const LazyComp1 = React.lazy(() => import('./Component1'));
+const LazyComp2 = React.lazy(() => import('./Component2'));
+```
+
+Images, fonts, libs, components, reducers, 
+
+---

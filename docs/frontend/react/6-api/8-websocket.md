@@ -3,6 +3,8 @@ title: websocket
 sidebar_position: 8
 ---
 
+- [WebSocket](https://learn.javascript.ru/websocket)
+
 - Протокол непрерывного канала связи браузера с сервером.
 - wws://...
 - чаты, стримы, онлайн игры
