@@ -1,6 +1,6 @@
 ---
 title: api-services (-)
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 - [Идентификация, аутентификация, авторизация — в чем разница?](https://it-uroki.ru/uroki/bezopasnost/identifikaciya-autentifikaciya-avtorizaciya.html)

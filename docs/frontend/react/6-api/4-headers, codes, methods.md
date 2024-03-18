@@ -1,9 +1,45 @@
 ---
-title: codes
-sidebar_position: 5
+title: Headers, Codes, Methods
+sidebar_position: 4
 ---
 
-Коды ответа HTTP - [https://developer.mozilla.org/ru/docs/Web/HTTP/Status](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
+- [Методы HTTP запроса](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods)
+- [Коды ответа HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP/Status)
+- [Методы HTTP запроса](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods)
+
+---
+
+## Headers
+
+```js
+headers: {
+  'Content-type': 'application/json; charset=UTF-8',
+  'Accept-Charset, Accept-Encoding': '...',
+  'Access-Control-Request-Headers': '...',
+  'Access-Control-Request-Method': '...',
+  'Connection': '...',
+  'Content-Length': '...',
+  'Cookie, Cookie2': '...',
+  'Date': '...',
+  'DNT': '...',
+  'Expect': '...',
+  'Host': '...',
+  'Keep-Alive': '...',
+  'Origin': '...',
+  'Referer': '...',
+  'TE': '...',
+  'Trailer': '...',
+  'Transfer-Encoding': '...',
+  'Upgrade': '...',
+  'Via': '...',
+  'Proxy-*': '...',
+  'Sec-*': '...',
+},
+```
+
+---
+
+## Codes
 
 <ol>
   <li><a href="#">Информационные ответы</a> (<code>100</code> – <code>199</code>)</li>
@@ -106,3 +142,23 @@ sidebar_position: 5
 <li><a href="#">524 A Timeout Occurred</a> («время ожидания истекло»);</li>
 <li><a href="#">525 SSL Handshake Failed</a> («квитирование SSL не удалось»);</li>
 <li><a href="#">526 Invalid SSL Certificate</a> («недействительный сертификат SSL»).</li></ul></li></ul>
+
+---
+
+## Methods
+
+- <a href="#">GET</a>. Метод GET запрашивает представление ресурса. Запросы с использованием этого метода могут только извлекать данные.
+- <a href="#">POST</a>. POST используется для отправки сущностей к определённому ресурсу. Часто вызывает изменение состояния или какие-то побочные эффекты на сервере.
+- <a href="#">DELETE</a>. DELETE удаляет указанный ресурс.
+
+---
+
+- <a href="#">PATCH</a>. PATCH используется для частичного изменения ресурса.
+- <a href="#">OPTIONS</a>. OPTIONS используется для описания параметров соединения с ресурсом.
+- <a href="#">PUT</a>. PUT заменяет все текущие представления ресурса данными запроса.
+
+---
+
+- <a href="#">HEAD</a>. HEAD запрашивает ресурс так же, как и метод GET, но без тела ответа.
+- <a href="#">CONNECT</a>. CONNECT устанавливает "туннель" к серверу, определённому по ресурсу.
+- <a href="#">TRACE</a>. TRACE выполняет вызов возвращаемого тестового сообщения с ресурса.

@@ -1,6 +1,6 @@
 ---
 title: websocket
-sidebar_position: 8
+sidebar_position: 7
 ---
 
 - [WebSocket](https://learn.javascript.ru/websocket)

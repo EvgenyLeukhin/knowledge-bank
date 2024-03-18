@@ -1,11 +1,9 @@
 ---
-title: fetch (-)
+title: fetch
 sidebar_position: 0
 ---
 
-- [Методы HTTP запроса](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods)
 
----
 
 - Продвинутый вариант вместо устаревшего XMLHttpRequest. Выполняет асинхронные запросы. Возвращает промис.
 - Можно работать с такмими методами как get, post, запрашивать данные или файлы.
@@ -261,20 +259,43 @@ postData("https://example.com/answer", { answer: 42 }).then((data) => {
 
 ## TypeScript
 
-TODO
+Обычно fetch используется внутри асинхронной функции, что позволяет типизовать `response` и `error`.
 
 ```ts
-fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис
- // обработка ответа промиса
-  .then(res => res.json())
+// типизациия пришедших данных
+type TPokemonData = {
+  id: string
+  number: string
+  name: string
+  image: string
+  fetchedAt: string
+  attacks: {
+    special: Array<{
+      name: string
+      type: string
+      damage: number
+    }>
+  }
+}
 
-   // вывод ответа
-  .then(json => console.log(json))
+// типизация ошибки
+type TError = Array<{message: string}>
 
-  // обработка ошибки
-  .catch(error => console.error('error', error)) 
-```
+// типизация ответа
+type JSONResponse = {
+  data?: {
+    pokemon: Omit<PokemonData, 'fetchedAt'>
+  }
+  errors?: Array<{message: string}>
+}
 
-```ts
-async function fetchPokemon(name: string): Promise<PokemonData, Error> {}
+async function fetchPokemon(name: string): Promise<TPokemonData, TError> {
+  const response = await fetch(url, { options });
+
+  // типизируем ответ
+  const { data, errors }: JSONResponse = await response.json();
+
+  // возвращаем данные
+  return { data, errors };
+}
 ```
