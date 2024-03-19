@@ -15,6 +15,12 @@ sidebar_position: 5
 
 ## MacOS
 
+### Shortcuts
+
+<kdb>Cmd + Shift + .</kdb> - показать скрытые файлы
+
+---
+
 * **DEVELOPMENT:**
   MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm, XCode, Android Studio, Charles, Insomnia
 * **INTERNET:**

@@ -5,12 +5,16 @@ sidebar_position: 1
 
 Библиотека-надстройка над `fetch()`. Axios — модифицированный и более сложный аналог Fetch API. Кто-то предпочитает метод fetch, кто-то axios. Некоторые заново пишут обёртки над XHR, чтобы не тащить библиотеку. Интересное сравнение fetch и axios. В проекте нельзя будет использовать ни Fetch API, ни axios. Вы сами реализуете в тренажёре аналог fetch используя XMLHttpRequest и будете использовать свою реализацию.
 
-
 - Fetch-based js-library.
 - Promise based HTTP client for the browser and node.js
 
-`yarn add axios`
-Axios может обходиться без метода json() как в fetch:
+Axios может обходиться без метода json() как в fetch.
+
+Установка:
+
+```bash
+$ yarn add axios
+```
 
 ```js
 axios.get('https://swapi.co/api/people/').then(response => console.log(response));
