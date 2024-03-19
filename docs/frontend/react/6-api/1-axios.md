@@ -1,5 +1,5 @@
 ---
-title: axios (-)
+title: axios
 sidebar_position: 1
 ---
 
@@ -18,6 +18,32 @@ $ yarn add axios
 
 ```js
 axios.get('https://swapi.co/api/people/').then(response => console.log(response));
+```
+
+Опции:
+
+```js
+{
+  // `data` is the response from the server
+  data: {},
+
+  // `status` is the HTTP status code from the server response
+  status: 200,
+
+  // `statusText` is the HTTP status message from the server response
+  statusText: 'OK',
+
+  // `headers` the HTTP headers that the server responded with
+  // All header names are lowercase and can be accessed using the bracket notation.
+  // Example: `response.headers['content-type']`
+  headers: {},
+
+  // `config` is the config that was provided to `axios` for the request
+  config: {},
+
+  // `request` is the request that generated this response
+  request: {}
+}
 ```
 
 ---
@@ -226,6 +252,75 @@ export default getJobs;
 
 ---
 
+## Обработчик ошибок (isAxiosError)
+
+```ts
+catch (error) {
+  if (axios.isAxiosError(error)) {
+    console.log('error message: ', error.message);
+    return error.message;
+  } else {
+    console.log('unexpected error: ', error);
+    return 'An unexpected error occurred';
+  }
+}
+```
+
+---
+
 ## TypeScript
 
-TODO
+Можно типизировать axios через дженерик-тип после метода.
+
+```ts
+type GetUsersResponse = {
+  data: SomeItem[]; // типизируем данные
+};
+
+axios.get<GetUsersResponse>('some-url', {
+  options,
+})
+```
+
+---
+
+### Пример асинхронной функции с axios
+
+```ts
+import axios from 'axios';
+
+type UpdateUserResponse = {
+  name: string;
+  job: string;
+  updatedAt: string;
+};
+
+async function updateUser() {
+  try {
+    // 👇️ const data: UpdateUserResponse
+    const { data } = await axios.put<UpdateUserResponse>(
+      'https://reqres.in/api/users/2',
+      { name: 'John Smith', job: 'manager' },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      },
+    );
+
+    console.log(JSON.stringify(data, null, 4));
+
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.log('error message: ', error.message);
+      // 👇️ error: AxiosError<any, any>
+      return error.message;
+    } else {
+      console.log('unexpected error: ', error);
+      return 'An unexpected error occurred';
+    }
+  }
+}
+```
