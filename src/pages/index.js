@@ -68,6 +68,15 @@ export default function Home() {
         </div>
         {/* <HomepageFeatures /> */}
 
+        <h2>TODO list:</h2>
+
+        <ul>
+            <li>try-catch вне асинхронных функций</li>
+            <li>new Map()</li>
+            <li>new Set()</li>
+            <li>ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --> Микросервис, svelte</li>
+        </ul>  
+
       </main>
     </Layout>
   );
