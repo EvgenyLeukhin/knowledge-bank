@@ -1,5 +1,5 @@
 ---
-title: Headers, Codes, Methods
+title: headers, сodes, methods
 sidebar_position: 4
 ---
 
