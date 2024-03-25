@@ -20,7 +20,9 @@ $ yarn add axios
 axios.get('https://swapi.co/api/people/').then(response => console.log(response));
 ```
 
-Опции:
+## Response Schema
+
+Ответ через `axios` будет возвращен с определенным уже структурированным форматом данных - это преимущество над `fetch`
 
 ```js
 {
