@@ -3,6 +3,86 @@ title: Задачки по JS
 sidebar_position: 10
 ---
 
+## Задачи для собеседования
+
+### Вывод в консоль с задержкой
+
+Требуется написать тело функции func так, чтобы оно выводило в лог числа начинающиеся с переданного значения x до нуля уменьшаясь каждый раз на единицу, с интервалов в 1 секунду, пока не достигнет ноля
+
+```js
+function someFunc(x) {
+  let a = x;
+
+  // сохраняем асинхронную переменную
+  const returnAsyncConsole = setInterval(() => {
+    // очищаем асинхрон если a = -1
+    if (a === -1) {
+      return clearInterval(returnAsyncConsole);
+    }
+
+    console.log('x: ', a);
+
+    a--;
+  }, 1000)
+}
+
+someFunc(15);
+```
+
+---
+
+### asddsf
+
+TODO: Даны массивы чисел с разделителями в виде строки "D". Требуется написать тело функции sorter так, чтобы она возвращала массив чисел, отсортированных по возрастанию, при этом сохраняя разделители на своих местах в массиве.
+
+```js
+const list1 = [4, 2, 7, "D", 12, 8, 5, "D", 23]; // [4, 2, 7, "D", 12, 8, 5, "D", 23] --> [2, 4, 5, "|", 7, 8, 12, "|", 23]
+const list2 = [5, 7, "D", 12, "D", 5, "D", 23];  // [5, 7, "D", 12, "D", 5, "D", 23]  --> [5, 5, "|", 7, "|", 12, "|", 23]
+
+
+const sorter = (list) => {
+  // find div indexes and numbers sorting
+  const reducedList = list.reduce((total, el, index) => {
+    // const divIndexes = [];
+    // const numbers = [];
+
+    if (typeof el === 'string') {
+      total.divs.push(index);
+      // divIndexes.push(index);
+    } else {
+      total.numbers.push(el);
+    }
+
+    total.numbers.sort((a, b) => a - b);
+
+    return total;
+  }, {
+    divs: [],
+    numbers: [],
+  });
+
+  // create array by list length
+  const iNITIAL_LIST_INDEXES = [...Array(list.length).keys()];
+
+  return iNITIAL_LIST_INDEXES.map(index => {
+    const { divs, numbers } = reducedList;
+
+    if (divs.includes(index)) {
+      // добавление 'D' в массив number по этому индексу
+      numbers.splice(index, 0, 'D');
+      return 'D';
+    }
+
+    return numbers[index];
+  });
+};
+
+console.log(sorter(list1));
+```
+
+---
+
+
 ## 100 дверей
 
 TODO

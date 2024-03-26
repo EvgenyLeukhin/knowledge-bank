@@ -50,6 +50,8 @@ const a = new Array(5).fill('some-value');
 const b = [...Array(100).keys()]; // [0, 1, 2, 3, 4, ..., 100]
 ```
 
+---
+
 ### Длина (length)
 
 Это по сути индекс последнего элемента минус один.
@@ -160,7 +162,7 @@ console.log(someArray); // [0, 1, 2, 3, 4]
 
 ---
 
-#### delete()
+#### delete() - удаление элемента без изменения длины массива
 
 Через **delete** элемент удаляется, но его место остаётся (будет undefined)
 
@@ -175,26 +177,7 @@ console.log(someArray); // [empty, 1, 2, 3, 4, 5] - lenght не меняется
 
 ---
 
-### Удалить определенный элемент
-
-```js
-const array = [1, 2, 3, 4, 5, 6, 7, 8];
-const index = array.indexOf(5);
-
-if (index > -1) { // only splice array when item is found
-  array.splice(index, 1); // 2nd parameter means remove one item only
-}
-
-console.log(array); // [1, 2, 3, 4, 6, 7, 8];
-```
-
-
-
----
-
-### Обрезать массив (slice, splice, lenght)
-
-#### Slice
+#### slice() -  удаление нескольких элементов с начала или с конца
 
 **1-й способ** через **slice**. Не изменяет исходный массив. Удаляет, меняет массив и возвращает удаленный элемент.
 
@@ -210,97 +193,17 @@ someArray.slice(-3); // [5, 6, 7]
 
 ---
 
-#### Splice
-
-**2-й способ** через **splice**. Работает аналогично slice, только меняет исходный массив и можно добавлять второй и третий параметр.
-
-- Более гибкое вырезание.
-- Можно обрезать или изменять элементы
-
-
-Оставить только первые 3 элемента (splice(3))
-
-```js
-const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-
-// оставить только первые 3 элемента
-const removed = someArray.splice(3); // хранит удаленные элементы
-
-console.log('removed:', removed); // [3, 4, 5, 6, 7]
-console.log('array:', someArray); // [0, 1, 2] - исходный массив изменился
-```
-
----
-
-Удалить последние 3 элемента (splice(-3))
-
-```js
-const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-const removed = someArray.splice(-3); // хранит удаленные элементы
-
-console.log('removed:', removed); // [5, 6, 7]
-console.log('array:', someArray); // [0, 1, 2, 3, 4]- исходный массив изменился
-```
-
----
-
-Удалить 2 элемента, начиная с 3-его индекса (splice(3, 2))
-
-```js
-const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-const removed = someArray.splice(3, 2); // хранит удаленные элементы
-
-console.log('removed:', removed); // [3, 4]
-console.log('array:', someArray); // [0, 1, 2, 5, 6, 7] - исходный массив изменился
-```
-
----
-
-Удалить 2 элемента, начиная с 3-его индекса с конца (splice(-3, 2))
-
-```js
-const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-const removed = someArray.splice(-3, 2); // хранит удаленные элементы
-
-console.log('removed:', removed); // [5, 6]
-console.log('array:', someArray); // [0, 1, 2, 3, 4, 7] - исходный массив изменился
-```
-
----
-
-#### length
+#### Удаление элементов через присвоение length
 
 **3-й способ** через **length**. Но это плохая практика!
 
 ```js
 const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-someArray.length = 5; // обрежет массив сначала до присвоенного индекса
-console.log(someArray); // [1, 2, 3, 4]
+someArray.length = 3; // оставит массив сначала до присвоенного индекса
+
+console.log(someArray); // [0, 1, 2]
 ```
 
-### Замена элементов (splice)
-
-Удалить 2 элемента, начиная с 3-его индекса и вставить туда новые элементы (splice(3, 2, 'a', 'b'))
-
-```js
-const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-const removed = someArray.splice(3, 2, 'a', 'b'); // хранит удаленные элементы
-
-console.log('removed:', removed); // [3, 4]
-console.log('array:', someArray); // [0, 1, 2, 'a', 'b', 'c', 5, 6, 7] - исходный массив изменился
-```
-
----
-
-Удалить 2 элемента, начиная с 3-его индекса c конца и вставить туда новые элементы (splice(-3, 2, 'a', 'b'))
-
-```js
-const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
-const removed = someArray.splice(-3, 2, 'a', 'b'); // хранит удаленные элементы
-
-console.log('removed:', removed); // [5, 6]
-console.log('array:', someArray); // [0, 1, 2, 3, 4, 'a', 'b', 7] - исходный массив изменился
-```
 
 ---
 
@@ -325,10 +228,10 @@ console.log(someArray); // [2, 1, 0]
 const someArray = [3, 2, 1, 0, 4];
 const someArray2 = ['c', 'b', 'a', 'd', 0, 2, 1];
 
-someArray.sort();
-someArray2.sort();
-console.log(someArray); // [0, 1, 2, 3, 4]
-console.log(someArray2); // [0, 1, 2, 'a', 'b', 'c', 'd']
+someArray.sort();  // [0, 1, 2, 3, 4]
+someArray2.sort(); // [0, 1, 2, 'a', 'b', 'c', 'd']
+[1, 2, 3, 4].sort((a, b) => a - b); // [1, 2, 3, 4]
+[1, 2, 3, 4].sort((a, b) => b - a); // [4, 3, 2, 1]
 ```
 
 ---
@@ -477,7 +380,6 @@ console.log(someArray.includes('a', 1)); // false
 ```js
 const a = [ 1, 2, 3 ];
 const b = { ...a }; 
-
 ```
 
 ---
@@ -495,3 +397,115 @@ _.uniqWith(array, (arrVal, othVal) => arrVal.index === othVal.index)
 ```
 
 ---
+
+## Splice
+
+Самый мощный и гибкий метод по обрезанию, изменению и добавлению новых элементов.
+Работает аналогично slice, только меняет исходный массив и можно добавлять второй и третий параметр.
+
+
+### Оставить начало массива по кол-ву индексов
+
+Оставить только первые 3 элемента (splice(3))
+
+```js
+const someArray = [0, 1, 2, 3*, 4*, 5*, 6*, 7*];
+
+// оставить только первые 3 элемента
+const removed = someArray.splice(3); // [3, 4, 5, 6, 7] хранит удаленные элементы
+someArray; // [0, 1, 2] 
+```
+
+Удалить 2 элемента, начиная с 3-его индекса (splice(3, 2))
+
+```js
+const someArray = [0, 1, 2, 3*, 4*, 5, 6, 7];
+const removed = someArray.splice(3, 2); // [3, 4]
+
+someArray; // [0, 1, 2, 5, 6, 7]
+```
+
+---
+
+### Удаление элементов сконца
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5*, 6*, 7*];
+const removed = someArray.splice(-3); // [5, 6, 7]
+
+someArray; // [0, 1, 2, 3, 4]
+```
+
+Удалить 2 элемента, начиная с 3-его индекса с конца (splice(-3, 2))
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5*, 6*, 7];
+const removed = someArray.splice(-3, 2); // [5, 6]
+
+someArray; // [0, 1, 2, 3, 4, 7]
+```
+
+---
+
+### Удалить определенный элемент по индексу с изменением длины массива
+
+```js
+const array = [1, 2, 3, 4, 5*, 6, 7, 8];
+const elementIndex = array.indexOf(5);
+
+if (elementIndex > -1) { // only splice array when item is found
+  array.splice(elementIndex, 1); // 2nd parameter means remove one item only
+}
+
+console.log(array); // [1, 2, 3, 4, 6, 7, 8];
+```
+
+---
+
+### Замена элементов
+
+Заменить 2 элемента, начиная с индекса и вставить туда новые элементы 
+
+```js
+// [3] - индекс
+// [2] - кол-во элементов для замены
+// 'a', 'b' - на какие элементы меняем
+const someArray = [0, 1, 2, 3*, 4*, 5, 6, 7];
+const removed = someArray.splice(3, 2, 'a', 'b'); // [3, 4] хранит удаленные элементы
+
+someArray; // [0, 1, 2, 'a', 'b', 5, 6, 7]
+```
+
+---
+
+Заменить 2 элемента, начиная с 3-его индекса c конца и вставить туда новые элементы (splice(-3, 2, 'a', 'b'))
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5*, 6*, 7];
+const removed = someArray.splice(-3, 2, 'a', 'b'); // [5, 6] хранит удаленные элементы
+
+someArray; // [0, 1, 2, 3, 4, 'a', 'b', 7] - исходный массив изменился
+```
+
+---
+
+### Добавление элементов в середину массива
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
+const added = someArray.splice(3, 0, 'a', 'b');
+
+someArray; // [0, 1, 2, 'a', 'b', 3, 4, 5, 6, 7]
+```
+
+
+```js
+const someArray = [0, 1, 2, 3, 4, 5, 6, 7];
+const added = someArray.splice(-3, 0, 'a', 'b');
+
+someArray; // [0, 1, 2, 3, 4, 'a', 'b', 5, 6, 7]
+```
+
+Сначала операция удаления, потом - вставка. Кол-во удаляемых и вставляемых элементов может не совпадать, тогда по разному будет производиться замена и удаление исходного массива.
+
+
