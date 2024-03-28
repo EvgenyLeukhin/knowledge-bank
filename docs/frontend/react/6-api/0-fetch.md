@@ -24,7 +24,7 @@ sidebar_position: 0
 ### GET-пример
 
 ```js
-fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис
+fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис (метод GET по умолчанию)
  // обработка ответа промиса
   .then(res => res.json())
 
@@ -42,6 +42,8 @@ fetch('https://swapi.py4e.com/api/people/')
 ```
 
 ### POST-пример
+
+Можно передавать body (HEAD, POST, PUT запросы). В GET нельзя.
 
 ```js
 fetch('https://example.com/profile', {

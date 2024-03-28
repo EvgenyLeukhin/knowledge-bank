@@ -35,6 +35,13 @@ headers: {
   'Proxy-*': '...',
   'Sec-*': '...',
 },
+
+// Авторизация
+headers = {
+  "Authorization": "Bearer {token}",
+  "Content-Type": "application/json",
+  "Accept-Language": "en-US"   
+}
 ```
 
 ---

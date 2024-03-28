@@ -68,15 +68,23 @@ export default function Home() {
         </div>
         {/* <HomepageFeatures /> */}
 
-        <h2>TODO list:</h2>
+        <hr />
 
-        <ul>
-            <li>try-catch вне асинхронных функций</li>
-            <li>new Map()</li>
-            <li>new Set()</li>
-            <li>ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --> Микросервис, svelte</li>
-        </ul>  
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h2>TODO list:</h2>
 
+          <ul>
+              <li>try-catch вне асинхронных функций</li>
+              <li>setInterval, setTimeout</li>
+              <li>Фильтрация через query params</li>
+              <li>new Map(), new Set()</li>
+              <li>enum как поле объекта</li>
+              <li>Дженерик в TypeScript</li>
+              <li>Расширение props компонента, надстройка над библиотечным компонентом</li>
+              <li>TypeGuard (as - для параметра), (is - для возврата)</li>
+              <li>Технологии: ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --&gt; Микросервис, svelte, Flux</li>
+          </ul> 
+        </div>  
       </main>
     </Layout>
   );
