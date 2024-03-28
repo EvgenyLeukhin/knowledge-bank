@@ -39,7 +39,32 @@ fetch(`https://example.com?foo=value&bar=2`)
 
 ---
 
-## Фильтрация, сортировка, пагинация
+## Фильтрация
+
+```js
+// фильтрация по region_id
+GET /v1/drugstores?filter=region_id|in|132
+
+// фильтрация по названию address
+GET v1/drugstores?filter=address|like|Нефтезаводская, д. 31
+
+```
+
+---
+
+## Сортировка
+
+TODO
+
+---
+
+## Пагинация
+
+TODO
+
+---
+
+## Примеры
 
 ```js
 // диапозоны цены
