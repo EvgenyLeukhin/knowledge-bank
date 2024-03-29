@@ -80,7 +80,7 @@ export default function Home() {
               <li>new Map(), new Set()</li>
               <li><strike>enum как поле объекта</strike></li>
               <li>Дженерик в TypeScript</li>
-              <li>Расширение props компонента, надстройка над библиотечным компонентом</li>
+              <li><strike>Расширение props компонента, надстройка над библиотечным компонентом</strike></li>
               <li>TypeGuard (as - для параметра), (is - для возврата)</li>
               <li>Технологии: ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --&gt; Микросервис, svelte, Flux</li>
           </ul> 

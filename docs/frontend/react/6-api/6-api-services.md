@@ -367,3 +367,25 @@ export const getRegionExternalDrugstores =
     }
 };
 ```
+
+---
+
+### try-catch вне асинхронных функций
+
+```ts
+function isErrorInAvailability(): boolean {
+    let hasError = false;
+
+    try {
+        slaInWork.intervals[index].values.forEach((value) => {
+            if (hasError) return hasError;
+
+            hasError = isErrorAvailability(value);
+        });
+    } catch (e) {
+        return true;
+    }
+
+    return hasError;
+}
+```
