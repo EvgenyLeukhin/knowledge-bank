@@ -74,14 +74,15 @@ export default function Home() {
           <h2>TODO list:</h2>
 
           <ul>
-              <li>try-catch вне асинхронных функций</li>
+              <li><strike>try-catch вне асинхронных функций</strike></li>
               <li><strike>setInterval, setTimeout</strike></li>
               <li><strike>Фильтрация через query params</strike></li>
-              <li>new Map(), new Set()</li>
               <li><strike>enum как поле объекта</strike></li>
-              <li>Дженерик в TypeScript</li>
               <li><strike>Расширение props компонента, надстройка над библиотечным компонентом</strike></li>
+              <li>new Map(), new Set()</li>
+              <li>Дженерик в TypeScript</li>
               <li>TypeGuard (as - для параметра), (is - для возврата)</li>
+              <li>---</li>
               <li>Технологии: ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --&gt; Микросервис, svelte, Flux</li>
           </ul> 
         </div>  
