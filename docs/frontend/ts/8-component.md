@@ -85,4 +85,56 @@ export { GameButton };
 
 ## Передача всех пропсов одного компонента в другой (расширение)
 
-TODO
+```tsx
+import React from 'react';
+
+// mui
+import { TextField } from '@mui/material';
+import { TextFieldProps } from '@mui/material/TextField/TextField';
+
+// utils
+import { generatedFormError } from 'utils/formError';
+
+// styles
+import cn from 'classnames';
+import styles from './index.module.scss';
+
+// кастомные пропсы
+interface IInputProps {
+  uiError?: generatedFormError | undefined | boolean;
+  className?: string;
+  showErrorMessage?: boolean;
+}
+
+// расширение пропсов
+const UiInput: React.FC<TextFieldProps & IInputProps> = ({
+  label,
+  uiError,
+  className,
+  showErrorMessage = true,
+  ...props
+}) => {
+  const hasError = (typeof uiError === 'object' && uiError.error) || (typeof uiError === 'boolean' && uiError);
+
+  return (
+    <div className={`tms-input ${styles.formControl}`}>
+      {label && <label>{label}</label>}
+
+      <TextField
+        className={cn(styles.input, className, {
+          [styles.error]: hasError,
+        })}
+        variant="outlined"
+        {...props} // передача всех встроенных props
+      />
+
+      {!!uiError && typeof uiError === 'object' && uiError.helperText && showErrorMessage && (
+        <div className={styles.errorText}>{uiError.helperText}</div>
+      )}
+    </div>
+  );
+};
+
+export default UiInput;
+
+```

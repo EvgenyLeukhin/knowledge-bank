@@ -75,10 +75,10 @@ export default function Home() {
 
           <ul>
               <li>try-catch вне асинхронных функций</li>
-              <li>setInterval, setTimeout</li>
-              <li>Фильтрация через query params +++</li>
+              <li><strike>setInterval, setTimeout</strike></li>
+              <li><strike>Фильтрация через query params</strike></li>
               <li>new Map(), new Set()</li>
-              <li>enum как поле объекта  +++</li>
+              <li><strike>enum как поле объекта</strike></li>
               <li>Дженерик в TypeScript</li>
               <li>Расширение props компонента, надстройка над библиотечным компонентом</li>
               <li>TypeGuard (as - для параметра), (is - для возврата)</li>
