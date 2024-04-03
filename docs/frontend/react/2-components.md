@@ -312,3 +312,56 @@ import styles from 'SomeComponent.module.scss';
 </div>
 
 ```
+
+--- 
+
+## Импорты
+
+Импорты можно группировать по смыслу
+
+```tsx
+import { useEffect, useState } from 'react';
+import { useAlert } from 'react-alert';
+
+// redux
+import { TStore } from 'redux/store/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { isRouteTransferMode } from 'redux/interfaces/Routes';
+import { editRoute, exportedEditRoute, getAllRoutes } from 'redux/effect/Routes';
+import { deselectAllRoutesAction, setOtherRoutes, setViewMode } from 'redux/slices/routes';
+import { routeColumnSettings, routeOrdersColumnSettings } from 'redux/slices/fieldSettings/mainRouteFields';
+
+// utils
+import storage from 'utils/storage';
+
+// components
+import { Dropdown } from 'components';
+import Loader from 'components/Loader';
+import { Option } from 'components/Dropdown';
+
+// modals
+import { AutoRouteModal, TransferRoutesModal } from './modals';
+
+// parts
+import NoRoutes from './NoRoutes';
+import ExportERP from './ExportERP';
+import RoutesList from './routesList/routesList';
+import RoutesListERP from './routesList/routesListERP';
+import ColumnSettingsDialog from 'components/columnSettings';
+import createNameAbbreviation from 'utils/createNameAbbreviation';
+import { Alert, FormControlLabel, Switch, Tooltip } from '@mui/material';
+import DeleteSelectedRoutes from './deleteSelectedRoutes/deleteSelectedRoutes';
+import { DeleteSelectedOrders } from './deleteSelectedOrders/deleteSelectedOrders';
+import { RoutesInfoSelectedSummary, RoutesInfoSummary, RoutesInfoTransferSummary } from './routesInfo';
+
+// styles
+import cn from 'classnames';
+import styles from './routes.module.scss';
+import exportStyles from './ExportERP/export.module.scss';
+
+...
+
+return (
+  // tsx code
+);
+```

@@ -179,8 +179,9 @@ Globaly: ```npm list --save-dev --depth 0```
 ```yarn -v```
 
 
-Обновление пакетов: ```yarn upgrade-interactive --latest```
-Очистка кэша: ```yarn cache clean --force```
+- Обновление пакетов: ```yarn upgrade-interactive --latest```
+
+- Очистка кэша: ```yarn cache clean --force```
 
 ---
 
