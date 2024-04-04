@@ -315,7 +315,22 @@ import styles from 'SomeComponent.module.scss';
 
 --- 
 
-## Импорты
+## Импорты и разбивка
+
+```
+SomeComponent/
+  parts/
+    SomePart1/
+    SomePart2/
+    index.ts
+
+  utils | helpers/
+    utilName1.ts
+    utilName2.ts
+
+  SomeComponent.module.scss
+  SomeComponent.tsx
+```
 
 Импорты можно группировать по смыслу
 
@@ -331,7 +346,7 @@ import { editRoute, exportedEditRoute, getAllRoutes } from 'redux/effect/Routes'
 import { deselectAllRoutesAction, setOtherRoutes, setViewMode } from 'redux/slices/routes';
 import { routeColumnSettings, routeOrdersColumnSettings } from 'redux/slices/fieldSettings/mainRouteFields';
 
-// utils
+// utils | helpers
 import storage from 'utils/storage';
 
 // components
