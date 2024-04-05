@@ -323,6 +323,8 @@ SomeComponent/
     SomePart1/
     SomePart2/
     index.ts
+  
+  modals/
 
   utils | helpers/
     utilName1.ts
