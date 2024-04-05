@@ -197,4 +197,20 @@ export const createMergeDraftReducer = <State, K extends keyof State>(key: K) =>
     ...action.payload,
   };
 };
-``
+```
+
+---
+
+## Обработка ответа после dispatch
+
+```tsx
+  const syncGoTemplatesHandler = async () => {
+    const result = (await dispatch(syncGoTemplates())) as unknown as boolean;
+
+    if (result) {
+      setSuccess('Успешно');
+    } else {
+      setSuccess('Произошла ошибка');
+    }
+  };
+```
