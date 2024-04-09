@@ -317,446 +317,444 @@ btn.addEventListener('click', function(event) {
 
 ## Список событий
 
-TODO
-
-<!-- <table class="ws-table-all notranslate">
+<table>
 <tbody><tr>
     <th>Event</th>
     <th>Occurs When</th>
     <th>Belongs To</th>
 </tr>
 <tr>
-<td><a href="event_onabort_media.asp">abort</a></td>
+<td><a href="#">abort</a></td>
 <td>The loading of a media is aborted</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, <a href="obj_event.asp">Event</a></td></tr>
+<td><a href="#">UiEvent</a>, <a href="#">Event</a></td></tr>
 <tr>
-<td><a href="event_onafterprint.asp">afterprint</a></td>
+<td><a href="#">afterprint</a></td>
 <td>A page has started printing</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_animationend.asp">animationend</a></td>
+<td><a href="#">animationend</a></td>
 <td>A CSS animation has completed</td>
-<td><a href="obj_animationevent.asp">AnimationEvent</a></td>
+<td><a href="#">AnimationEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_animationiteration.asp">animationiteration</a></td>
+<td><a href="#">animationiteration</a></td>
 <td>A CSS animation is repeated</td>
-<td><a href="obj_animationevent.asp">AnimationEvent</a></td>
+<td><a href="#">AnimationEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_animationstart.asp">animationstart</a></td>
+<td><a href="#">animationstart</a></td>
 <td>A CSS animation has started</td>
-<td><a href="obj_animationevent.asp">AnimationEvent</a></td>
+<td><a href="#">AnimationEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onbeforeprint.asp">beforeprint</a></td>
+<td><a href="#">beforeprint</a></td>
 <td>A page is about to be printed</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onbeforeunload.asp">beforeunload</a></td>
+<td><a href="#">beforeunload</a></td>
 <td>Before a document is about to be unloaded</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, 
-  <a href="obj_event.asp">Event</a></td>
+<td><a href="#">UiEvent</a>, 
+  <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onblur.asp">blur</a></td>
+<td><a href="#">blur</a></td>
 <td>An element loses focus</td>
-<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+<td><a href="#">FocusEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_oncanplay.asp">canplay</a></td>
+<td><a href="#">canplay</a></td>
 <td>The browser can start playing a media (has buffered enough to begin)</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_oncanplaythrough.asp">canplaythrough</a></td>
+<td><a href="#">canplaythrough</a></td>
 <td>The browser can play through a media without stopping for buffering</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onchange.asp">change</a></td>
+<td><a href="#">change</a></td>
 <td>The content of a form element has changed</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onclick.asp">click</a></td>
+<td><a href="#">click</a></td>
 <td>An element is clicked on</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_oncontextmenu.asp">contextmenu</a></td>
-<td>An element is right-clicked to open a context menu</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">contextmenu</a></td>
+<td>ПКМ: An element is right-clicked to open a context menu</td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_oncopy.asp">copy</a></td>
+<td><a href="#">copy</a></td>
 <td>The content of an element is copied</td>
-<td><a href="obj_clipboardevent.asp">ClipboardEvent</a></td>
+<td><a href="#">ClipboardEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_oncut.asp">cut</a></td>
+<td><a href="#">cut</a></td>
 <td>The content of an element is cut</td>
-<td><a href="obj_clipboardevent.asp">ClipboardEvent</a></td>
+<td><a href="#">ClipboardEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondblclick.asp">dblclick</a></td>
+<td><a href="#">dblclick</a></td>
 <td>An element is double-clicked</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondrag.asp">drag</a></td>
+<td><a href="#">drag</a></td>
 <td>An element is being dragged</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondragend.asp">dragend</a></td>
+<td><a href="#">dragend</a></td>
 <td>Dragging of an element has ended</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondragenter.asp">dragenter</a></td>
+<td><a href="#">dragenter</a></td>
 <td>A dragged element enters the drop target</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondragleave.asp">dragleave</a></td>
+<td><a href="#">dragleave</a></td>
 <td>A dragged element leaves the drop target</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondragover.asp">dragover</a></td>
+<td><a href="#">dragover</a></td>
 <td>A dragged element is over the drop target</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondragstart.asp">dragstart</a></td>
+<td><a href="#">dragstart</a></td>
 <td>Dragging of an element has started</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondrop.asp">drop</a></td>
+<td><a href="#">drop</a></td>
 <td>A dragged element is dropped on the target</td>
-<td><a href="obj_dragevent.asp">DragEvent</a></td>
+<td><a href="#">DragEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_ondurationchange.asp">durationchange</a></td>
+<td><a href="#">durationchange</a></td>
 <td>The duration of a media is changed</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onended.asp">ended</a></td>
+<td><a href="#">ended</a></td>
 <td>A media has reach the end ("thanks for listening")</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onerror.asp">error</a></td>
+<td><a href="#">error</a></td>
 <td>An error has occurred while loading a file </td>
-<td><a href="obj_progressevent.asp">ProgressEvent</a>, 
-  <a href="obj_uievent.asp">UiEvent</a>, <a href="obj_event.asp">Event</a></td>
+<td><a href="#">ProgressEvent</a>, 
+  <a href="#">UiEvent</a>, <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onfocus.asp">focus</a></td>
+<td><a href="#">focus</a></td>
 <td>An element gets focus</td>
-<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+<td><a href="#">FocusEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onfocusin.asp">focusin</a></td>
+<td><a href="#">focusin</a></td>
 <td>An element is about to get focus</td>
-<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+<td><a href="#">FocusEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onfocusout.asp">focusout</a></td>
+<td><a href="#">focusout</a></td>
 <td>An element is about to lose focus</td>
-<td><a href="obj_focusevent.asp">FocusEvent</a></td>
+<td><a href="#">FocusEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_fullscreenchange.asp">fullscreenchange</a></td>
+<td><a href="#">fullscreenchange</a></td>
 <td>An element is displayed in fullscreen mode</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_fullscreenerror.asp">fullscreenerror</a></td>
+<td><a href="#">fullscreenerror</a></td>
 <td>An element can not be displayed in fullscreen mode</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onhashchange.asp">hashchange</a></td>
+<td><a href="#">hashchange</a></td>
 <td>There has been changes to the anchor part of a URL</td>
-<td><a href="obj_hashchangeevent.asp">HashChangeEvent</a></td>
+<td><a href="#">HashChangeEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_oninput.asp">input</a></td>
+<td><a href="#">input</a></td>
 <td>An element gets user input</td>
-<td><a href="obj_inputevent.asp">InputEvent</a>, 
-  <a href="obj_event.asp">Event</a></td>
+<td><a href="#">InputEvent</a>, 
+  <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_oninvalid.asp">invalid</a></td>
+<td><a href="#">invalid</a></td>
 <td>An element is invalid</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onkeydown.asp">keydown</a></td>
+<td><a href="#">keydown</a></td>
 <td>A key is down</td>
-<td><a href="obj_keyboardevent.asp">KeyboardEvent</a></td>
+<td><a href="#">KeyboardEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onkeypress.asp">keypress</a></td>
+<td><a href="#">keypress</a></td>
 <td>A key is pressed</td>
-<td><a href="obj_keyboardevent.asp">KeyboardEvent</a></td>
+<td><a href="#">KeyboardEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onkeyup.asp">keyup</a></td>
+<td><a href="#">keyup</a></td>
 <td>A key is released</td>
-<td><a href="obj_keyboardevent.asp">KeyboardEvent</a></td>
+<td><a href="#">KeyboardEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onload.asp">load</a></td>
+<td><a href="#">load</a></td>
 <td>An object has loaded</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, 
-  <a href="obj_event.asp">Event</a></td>
+<td><a href="#">UiEvent</a>, 
+  <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onloadeddata.asp">loadeddata</a></td>
+<td><a href="#">loadeddata</a></td>
 <td>Media data is loaded</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onloadedmetadata.asp">loadedmetadata</a></td>
+<td><a href="#">loadedmetadata</a></td>
 <td>Meta data (like dimensions and duration) are loaded</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onloadstart.asp">loadstart</a></td>
+<td><a href="#">loadstart</a></td>
 <td>The browser starts looking for the specified media</td>
-<td><a href="obj_progressevent.asp">ProgressEvent</a></td>
+<td><a href="#">ProgressEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmessage_sse.asp">message</a></td>
+<td><a href="#">message</a></td>
 <td>A message is received through the event source</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onmousedown.asp">mousedown</a></td>
+<td><a href="#">mousedown</a></td>
 <td>The mouse button is pressed over an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmouseenter.asp">mouseenter</a></td>
+<td><a href="#">mouseenter</a></td>
 <td>The pointer is moved onto an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmouseleave.asp">mouseleave</a></td>
+<td><a href="#">mouseleave</a></td>
 <td>The pointer is moved out of an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmousemove.asp">mousemove</a></td>
+<td><a href="#">mousemove</a></td>
 <td>The pointer is moved over an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmouseover.asp">mouseover</a></td>
+<td><a href="#">mouseover</a></td>
 <td>The pointer is moved onto an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmouseout.asp">mouseout</a></td>
+<td><a href="#">mouseout</a></td>
 <td>The pointer is moved out of an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onmouseup.asp">mouseup</a></td>
+<td><a href="#">mouseup</a></td>
 <td>A user releases a mouse button over an element</td>
-<td><a href="obj_mouseevent.asp">MouseEvent</a></td>
+<td><a href="#">MouseEvent</a></td>
 </tr>
 <tr>
 <td>mousewheel</td>
 <td><span class="deprecated">Deprecated.</span> Use the 
-  <a href="event_onwheel.asp">wheel</a> event instead</td>
-<td><a href="obj_wheelevent.asp">WheelEvent</a></td>
+  <a href="#">wheel</a> event instead</td>
+<td><a href="#">WheelEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onoffline.asp">offline</a></td>
+<td><a href="#">offline</a></td>
 <td>The browser starts working offline</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_ononline.asp">online</a></td>
+<td><a href="#">online</a></td>
 <td>The browser starts working online</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onopen_sse.asp">open</a></td>
+<td><a href="#">open</a></td>
 <td>A connection with the event source is opened</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onpagehide.asp">pagehide</a></td>
+<td><a href="#">pagehide</a></td>
 <td>User navigates away from a webpage</td>
-<td><a href="obj_pagetransitionevent.asp">PageTransitionEvent</a></td>
+<td><a href="#">PageTransitionEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onpageshow.asp">pageshow</a></td>
+<td><a href="#">pageshow</a></td>
 <td>User navigates to a webpage</td>
-<td><a href="obj_pagetransitionevent.asp">PageTransitionEvent</a></td>
+<td><a href="#">PageTransitionEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onpaste.asp">paste</a></td>
+<td><a href="#">paste</a></td>
 <td>Some content is pasted in an element</td>
-<td><a href="obj_clipboardevent.asp">ClipboardEvent</a></td>
+<td><a href="#">ClipboardEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onpause.asp">pause</a></td>
+<td><a href="#">pause</a></td>
 <td>A media is paused</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onplay.asp">play</a></td>
+<td><a href="#">play</a></td>
 <td>The media has started or is no longer paused</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onplaying.asp">playing</a></td>
+<td><a href="#">playing</a></td>
 <td>The media is playing after being paused or buffered</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
 <td>popstate</td>
 <td>The window's history changes</td>
-<td><a href="obj_popstateevent.asp">PopStateEvent</a></td>
+<td><a href="#">PopStateEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onprogress.asp">progress</a></td>
+<td><a href="#">progress</a></td>
 <td>The browser is downloading media data</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onratechange.asp">ratechange</a></td>
+<td><a href="#">ratechange</a></td>
 <td>The playing speed of a media is changed</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onresize.asp">resize</a></td>
+<td><a href="#">resize</a></td>
 <td>The document view is resized</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, 
-  <a href="obj_event.asp">Event</a></td>
+<td><a href="#">UiEvent</a>, 
+  <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onreset.asp">reset</a></td>
+<td><a href="#">reset</a></td>
 <td>A form is reset</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onscroll.asp">scroll</a></td>
+<td><a href="#">scroll</a></td>
 <td>An scrollbar is being scrolled</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, 
-  <a href="obj_event.asp">Event</a></td>
+<td><a href="#">UiEvent</a>, 
+  <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onsearch.asp">search</a></td>
+<td><a href="#">search</a></td>
 <td>Something is written in a search field</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onseeked.asp">seeked</a></td>
+<td><a href="#">seeked</a></td>
 <td>Skipping to a media position is finished</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onseeking.asp">seeking</a></td>
+<td><a href="#">seeking</a></td>
 <td>Skipping to a media position is started</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onselect.asp">select</a></td>
+<td><a href="#">select</a></td>
 <td>User selects some&nbsp;text</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, 
-  <a href="obj_event.asp">Event</a></td>
+<td><a href="#">UiEvent</a>, 
+  <a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onshow.asp">show</a></td>
+<td><a href="#">show</a></td>
 <td>A &lt;menu&gt; element is shown as a context menu</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onstalled.asp">stalled</a></td>
+<td><a href="#">stalled</a></td>
 <td>The browser is trying to get unavailable media data</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
 <td>storage</td>
 <td>A Web Storage area is updated</td>
-<td><a href="obj_storageevent.asp">StorageEvent</a></td>
+<td><a href="#">StorageEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onsubmit.asp">submit</a></td>
+<td><a href="#">submit</a></td>
 <td>A form is submitted</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onsuspend.asp">suspend</a></td>
+<td><a href="#">suspend</a></td>
 <td>The browser is intentionally not getting media data</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_ontimeupdate.asp">timeupdate</a></td>
+<td><a href="#">timeupdate</a></td>
 <td>The playing position has changed (the user 
 moves to a different point in the media)</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_ontoggle.asp">toggle</a></td>
+<td><a href="#">toggle</a></td>
 <td>The user opens or closes the &lt;details&gt; element</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_touchcancel.asp">touchcancel</a></td>
+<td><a href="#">touchcancel</a></td>
 <td>The touch is interrupted</td>
-<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+<td><a href="#">TouchEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_touchend.asp">touchend</a></td>
+<td><a href="#">touchend</a></td>
 <td>A finger is removed from a touch screen</td>
-<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+<td><a href="#">TouchEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_touchmove.asp">touchmove</a></td>
+<td><a href="#">touchmove</a></td>
 <td>A finger is dragged across the screen</td>
-<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+<td><a href="#">TouchEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_touchstart.asp">touchstart</a></td>
+<td><a href="#">touchstart</a></td>
 <td>A finger is placed on a touch screen</td>
-<td><a href="obj_touchevent.asp">TouchEvent</a></td>
+<td><a href="#">TouchEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_transitionend.asp">transitionend</a></td>
+<td><a href="#">transitionend</a></td>
 <td>A CSS transition has completed</td>
-<td><a href="obj_transitionevent.asp">TransitionEvent</a></td>
+<td><a href="#">TransitionEvent</a></td>
 </tr>
 <tr>
-<td><a href="event_onunload.asp">unload</a></td>
+<td><a href="#">unload</a></td>
 <td>A page has unloaded</td>
-<td><a href="obj_uievent.asp">UiEvent</a>, 
-<a href="obj_event.asp">Event</a></td>
+<td><a href="#">UiEvent</a>, 
+<a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onvolumechange.asp">volumechange</a></td>
+<td><a href="#">volumechange</a></td>
 <td>The volume of a media is changed (includes muting)</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onwaiting.asp">waiting</a></td>
+<td><a href="#">waiting</a></td>
 <td>A media is paused but is expected to resume (e.g. buffering)</td>
-<td><a href="obj_event.asp">Event</a></td>
+<td><a href="#">Event</a></td>
 </tr>
 <tr>
-<td><a href="event_onwheel.asp">wheel</a></td>
+<td><a href="#">wheel</a></td>
 <td>The mouse wheel rolls up or down over an element</td>
-<td><a href="obj_wheelevent.asp">WheelEvent</a></td>
+<td><a href="#">WheelEvent</a></td>
 </tr>
-</tbody></table> -->
+</tbody></table>
