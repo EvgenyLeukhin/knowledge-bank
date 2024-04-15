@@ -215,6 +215,7 @@ let str2 = "Hello World!\tThis is my string";
 
 ```js
 '   String   '.trim(); // "String"
+'   String   '.replace(/\s/g, ''); // "String"
 ```
 
 ***

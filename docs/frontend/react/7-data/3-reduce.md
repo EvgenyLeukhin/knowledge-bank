@@ -52,3 +52,16 @@ const zonesByDrugstoresObj = drugstores.reduce<Record<string, string[]>>((total,
 }, {});
 
 ```
+
+---
+
+Нужно найти макс. или мин. значение в массиве массивов
+
+```js
+// [[1, 10], [2, 9], [3, 8], [4, 7]]
+const value = dayWorktimeArray.reduce<number>((total, item) => {
+  total = mode === 'find-max-open' ? Math.max(item[0]) : Math.min(item[1]);
+
+  return total;
+}, 0);
+```
