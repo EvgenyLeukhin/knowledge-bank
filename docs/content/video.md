@@ -5,7 +5,9 @@ sidebar_position: 3
 
 ## Final Cut Pro
 
-TODO
+Share icon --> Export file (default)
+
+Будет создат .mov формат, который можно загрузить на YouTube и VK
 
 ## Vegas Pro
 
