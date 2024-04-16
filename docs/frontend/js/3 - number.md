@@ -196,3 +196,14 @@ Math.LOG10E;  // 0.434
 typeof 1234567890123456789012345678901234567890n; // BigInt
 typeof 10n; // BigInt
 ```
+
+---
+
+## Локализация
+
+```ts
+// '100000000000 --> 100 млрд'
+new Intl.NumberFormat('ru', {
+  notation: 'compact',
+}).format(100000000000);
+```

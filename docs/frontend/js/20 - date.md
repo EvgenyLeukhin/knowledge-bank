@@ -375,3 +375,10 @@ export const checkBigInterval = (interval: string): boolean => {
     return endIntervalMinutesSum - startIntervalMinutesSum >= IS_BIG_INTERVAL_MINUTES_DIFF;
 };
 ```
+
+## Локализация
+
+```ts
+// Tue Apr 16 2024 17:43:19 GMT+0600 (Омск, стандартное время) --> '16.04.2024'
+new Date().toLocaleDateString();
+```

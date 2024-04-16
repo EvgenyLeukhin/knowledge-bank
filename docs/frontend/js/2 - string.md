@@ -309,3 +309,12 @@ console.log(person[Symbol.for('password-open')]); // 'John321'
 ```js
 console.log(Object.getOwnPropertySymbols(person)); // (2) [Symbol(password-closed), Symbol(password-open)]
 ```
+
+---
+
+## Локализация
+
+```ts
+// ['Вася, Петя, Маша'] --> 'Вася, Петя и Маша'
+new Intl.ListFormat('ru').format(['Вася, Петя, Маша'])
+```

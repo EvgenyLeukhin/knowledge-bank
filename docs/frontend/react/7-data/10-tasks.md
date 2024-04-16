@@ -5,6 +5,19 @@ sidebar_position: 10
 
 ## Задачи для собеседования
 
+- [https://codepen.io/sk-iv/pen/ZERVGvL](https://codepen.io/sk-iv/pen/ZERVGvL)
+- [https://codepen.io/Inpulsar/pen/MWRobRz?editors=0010](https://codepen.io/Inpulsar/pen/MWRobRz?editors=0010)
+- [https://codepen.io/Inpulsar/pen/xxerRmv?editors=0010](https://codepen.io/Inpulsar/pen/xxerRmv?editors=0010)
+
+---
+
+- [https://codesandbox.io/s/zadacha-no-1-taymer-xfyilm](https://codesandbox.io/s/zadacha-no-1-taymer-xfyilm)
+- [https://codesandbox.io/s/zadacha-no2-intervaly-i-diapazony-g1stxg](https://codesandbox.io/s/zadacha-no2-intervaly-i-diapazony-g1stxg)
+- [https://codesandbox.io/s/zadacha-no-3-perenos-vybrannogo-v-sleduyushchee-sostoyanie-bm78w1](https://codesandbox.io/s/zadacha-no-3-perenos-vybrannogo-v-sleduyushchee-sostoyanie-bm78w1)
+- [https://codesandbox.io/s/zadacha-no-4-pravilnyy-kod-f7mfux](https://codesandbox.io/s/zadacha-no-4-pravilnyy-kod-f7mfux)
+- [https://codesandbox.io/s/zadacha-no-5-sortirovka-s-razdelitelem-hr3xm4](https://codesandbox.io/s/zadacha-no-5-sortirovka-s-razdelitelem-hr3xm4)
+- [https://codepen.io/sk-iv/pen/ZERVGvL](https://codepen.io/sk-iv/pen/ZERVGvL)
+
 ### Вывод в консоль с задержкой
 
 Требуется написать тело функции func так, чтобы оно выводило в лог числа начинающиеся с переданного значения x до нуля уменьшаясь каждый раз на единицу, с интервалов в 1 секунду, пока не достигнет ноля
@@ -27,6 +40,36 @@ function someFunc(x) {
 }
 
 someFunc(15);
+```
+
+Еще решение
+
+```js
+const func = (value) => {
+  let i = value;
+  const intervalValue = setInterval(() => {
+    console.log('i = ', i);
+    i--;
+
+    if (i < 0) {
+      console.log('clearInterval');
+      clearInterval(intervalValue);
+    }
+  }, 1000)
+}
+
+func(10);
+```
+
+Через рекурсию в 2 строки
+
+```js
+const func = (value) => {
+  console.log(value);
+  if (value > 0) setTimeout(() => func(value - 1), 1000);
+};
+
+func(10);
 ```
 
 ---
