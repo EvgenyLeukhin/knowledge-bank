@@ -121,6 +121,12 @@ const sorter = (list) => {
 };
 
 console.log(sorter(list1));
+
+// for (let i = 0; i < list.length; i++) {
+//   if (list[i] === "D") {
+//     nubers.splice(i, 0, "D");
+//   }
+// }
 ```
 
 ---
