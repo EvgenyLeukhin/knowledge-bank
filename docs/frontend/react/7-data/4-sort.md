@@ -3,6 +3,35 @@ title: sort()
 sidebar_position: 4
 ---
 
+## Сортировка
+
+`[3, 2, 0, 1] --> [0, 1, 2, 3]`
+
+Возвращает отсортированный массив. 
+
+```ts
+const a = [
+  { id: 3, name: 'Не указан' },
+  { id: 2, name: 'Тестовый статус' },
+  { id: 0, name: 'Старый тестовый статус' },
+  { id: 1, name: 'Что то происходит' },
+];
+
+// straight sorting
+const sortedA = a.sort((nextEl, curEl) => nextEl.id - curEl.id); // 0, 1, 2, 3
+
+// reversed sorting
+const sortedAReversed = a.sort((nextEl, curEl) => curEl.id - nextEl.id); // 3, 2, 1, 0
+
+// sort by name property
+a.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+
+// сортировка по алфавиту
+a.sort((a, b) => a.name.localeCompare(b.name));
+```
+
+---
+
 ## Сортировка дат
 
 ```js
