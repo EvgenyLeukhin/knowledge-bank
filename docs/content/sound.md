@@ -138,7 +138,7 @@ export const H3 = ({children}) => (
 Определение темпа: Audio FX -> Metring -> BTM Counter
 ```
 
-***
+---
 
 <H3>Флекс</H3>
 
