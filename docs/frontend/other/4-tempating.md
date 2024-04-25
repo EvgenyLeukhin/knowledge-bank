@@ -1,5 +1,5 @@
 ---
-title: Шаблонизаторы
+title: HTML-шаблонизаторы
 sidebar_position: 4
 ---
 
