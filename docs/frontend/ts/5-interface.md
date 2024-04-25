@@ -205,6 +205,30 @@ interface IDragDropHandler {
 Создание нового интерфейса из "удаления" свойств другого интерфейса. Обратное Pick.
 
 ```ts
+export interface IRawZone {
+  id: number;
+  name: string;
+  uuid: IUuid;
+  slaId: number | null;
+  hubs: {
+    id: number;
+    ordinalNumber: number;
+  }[];
+  expressTemplateUuid: string | null;
+  active: boolean;
+  tagId: number | null;
+  userGroupIds: number[];
+  coordinates: IZoneCoordinates[];
+}
+
+// через тип
+export type IZoneFromServer = Omit<IRawZone, 'coordinates'>;
+
+// через интерфейс
+export interface IZoneFromServer extends Omit<IRawZone, 'coordinates'> {};
+```
+
+```ts
 interface TSla {
   id: number;
   name: string;
