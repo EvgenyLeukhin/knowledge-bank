@@ -46,7 +46,9 @@ export default App;
 
 ## Install
 
-### Запуск dev-сборки с помощью Expo Go Quickstart
+### 1 вариант: Запуск dev-сборки с помощью Expo Go Quickstart (recommended)
+
+Нельзя интегрировать нативный код
 
 ```bash
 # with npm
@@ -64,7 +66,9 @@ yarn expo start
 
 ---
 
-### Запуск dev-сборки с помощью React Native CLI on MacOS
+### 2 вариант: Запуск dev-сборки с помощью React Native CLI on MacOS
+
+Можно интегрировать нативный код, более продвинутый вариант для опытных разработчиков, нужно писать конфиги.
 
 ```bash
 # install dev tools
@@ -85,4 +89,47 @@ npm uninstall -g react-native-cli @react-native-community/cli
 npx react-native@latest init AwesomeProject
 
 npx react-native@X.XX.X init AwesomeProject --version X.XX.X
+```
+
+---
+
+### 3 вариант: Expo CLI  --> deprecated
+
+[https://expo.dev/](https://expo.dev/) - Expo CLI docs
+
+npm-пакет для экспортирования сборок на android и ios платформы.
+
+```bash
+# install
+sudo npm install -g expo-cli
+
+# uninstall
+sudo npm uninstall -g expo-cli
+
+# check it
+expo
+```
+
+### Инициализация проекта by Expo CLI --> deprecated
+
+```bash
+# deprecated
+expo init test-react-native;
+
+❯   blank               a minimal app as clean as an empty canvas
+    blank (TypeScript)  same as blank but with TypeScript configuration
+    tabs (TypeScript)   several example screens and tabs using react-navigation and TypeScript
+    ----- Bare workflow -----
+    minimal             bare and minimal, just the essentials to get you started
+```
+
+---
+
+## Create new project
+
+```bash
+sudo yarn create expo-app AwesomeProject
+
+cd AwesomeProject
+yarn expo start
 ```
