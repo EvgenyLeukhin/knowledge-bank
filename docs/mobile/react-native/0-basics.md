@@ -44,7 +44,9 @@ export default App;
 
 ---
 
-## Запуск dev-сборки с помощью Expo Go Quickstart
+## Install
+
+### Запуск dev-сборки с помощью Expo Go Quickstart
 
 ```bash
 # with npm
@@ -62,7 +64,7 @@ yarn expo start
 
 ---
 
-## Запуск dev-сборки с помощью React Native CLI on MacOS
+### Запуск dev-сборки с помощью React Native CLI on MacOS
 
 ```bash
 # install dev tools
