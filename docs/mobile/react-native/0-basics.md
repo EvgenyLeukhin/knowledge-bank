@@ -35,13 +35,52 @@ export default App;
 
 В отличие от ui-компонентов, логический код не компилируется в нативный, а преобразуется в js-код, который используется внутри приложения. Для того, чтобы мобилиная платформа понимала js, нужен так называемый **translation bridge**.
 
-```jsx
-
-```
-
 ---
 
 ## Языки программирования
 
 - **Android**: Java, Kotlin --> Android Studio
 - **iOS**: Objective-C, Swift --> XCode
+
+---
+
+## Запуск dev-сборки с помощью Expo Go Quickstart
+
+```bash
+# with npm
+npx create-expo-app AwesomeProject
+
+cd AwesomeProject
+npx expo start
+
+# with yarn
+yarn create expo-app AwesomeProject
+
+cd AwesomeProject
+yarn expo start
+```
+
+---
+
+## Запуск dev-сборки с помощью React Native CLI on MacOS
+
+```bash
+# install dev tools
+brew install node
+brew install watchman
+
+# install android environment
+brew install --cask zulu@17
+
+# Get path to where cask was installed to double-click installer
+brew info --cask zulu@17
+```
+
+```bash
+# install react-native cli
+npm uninstall -g react-native-cli @react-native-community/cli
+
+npx react-native@latest init AwesomeProject
+
+npx react-native@X.XX.X init AwesomeProject --version X.XX.X
+```
