@@ -81,3 +81,29 @@ const removeHandle = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     }
 }
 ```
+
+---
+
+## Select event
+
+```tsx
+const handleStatusChange = (e: SelectChangeEvent) => {
+  console.log('e', e);
+};
+
+...
+
+<TableCell>
+  <Select
+    fullWidth
+    className={styles.statusSelect}
+    value={item.status}
+    onChange={handleStatusChange}
+  >
+    <MenuItem value={'Создан'}>Создан</MenuItem>
+    <MenuItem value={'В черновиках'}>В черновиках</MenuItem>
+    <MenuItem value={'В ожидании ЕРП'}>В ожидании ЕРП</MenuItem>
+    <MenuItem value={'Экспортирован'}>Экспортирован</MenuItem>
+  </Select>
+</TableCell>
+```
