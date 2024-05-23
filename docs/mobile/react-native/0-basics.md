@@ -3,7 +3,9 @@ title: Basics
 sidebar_position: 0
 ---
 
-[reactnative.dev](https://reactnative.dev/) - Official docs.
+- [reactnative.dev](https://reactnative.dev/) - React Native docs.
+- [EXPO](https://reactnative.dev/docs/environment-setup) - Expo install
+- [EXPO](https://expo.dev/) - Expo docs.
 
 - **React Native** использует обычный React, но без `react-dom`.
 - **React** (without React Dom) + **React Native** (react-components --> mobile native components) --> **Mobile App**
@@ -40,9 +42,55 @@ export default App;
 
 ## Create new React Native project
 
+### 1. Install Expo
+
+`npx create-expo-app@latest`
+
+Пакет create-expo-app установиться автоматически, если его нет.
+
+```yarn start``` - запуск старта разработки
+
+```
+› Web is waiting on http://localhost:8081
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press i │ open iOS simulator
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+
+```
+
+---
+
+### 2. Start development
+
 TODO
 
 ---
+
+### 3. Expo scripts
+
+- `yarn android` - Запуск на Android
+- `yarn ios` - Запуск на iOS
+- `yarn web` - Запуск на Web
+
+---
+---
+---
+---
+---
+---
+---
+
 
 ## Install
 
