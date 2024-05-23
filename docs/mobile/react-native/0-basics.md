@@ -38,10 +38,16 @@ export default App;
 
 ---
 
-## Языки программирования
+## Языки программирования в мобильных платформах
 
 - **Android**: Java, Kotlin --> Android Studio
 - **iOS**: Objective-C, Swift --> XCode
+
+---
+
+## Create new React Native project
+
+TODO
 
 ---
 
