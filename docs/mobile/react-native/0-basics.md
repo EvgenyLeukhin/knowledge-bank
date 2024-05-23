@@ -10,7 +10,7 @@ sidebar_position: 0
 - **React Native** использует обычный React, но без `react-dom`.
 - **React** (without React Dom) + **React Native** (react-components --> mobile native components) --> **Mobile App**
 - **React Native** что-то наподобие `react-dom` только не для браузеров, а для мобильных платформ.
-- **React Native** это не обертка для web-приложения (как Electron), нельзя просто взять и обернууть web-приложение на React и создать мобильное приложение, для мобильных платформ нужно отдельно разрабатывать на **React Native**. Если уже есть web-приложение на React, то можно частично с него переиспользовать разметку и структуру компонентов. 
+- **React Native** это не обертка для web-приложения (как Electron), нельзя просто взять и обернууть web-приложение на React и создать мобильное приложение, для мобильных платформ нужно отдельно разрабатывать на **React Native**. Если уже есть web-приложение на React, то можно частично с него переиспользовать разметку и структуру компонентов, но в обратную сторону работает, то есть если вы сразу разарабатываете приложение на React Native, то можно сделать и web-версию тоже.
 
 ---
 
@@ -44,10 +44,18 @@ export default App;
 
 ### 1. Install Expo
 
-- `npx create-expo-app@latest your-app-name` - установка сборки React Native
-- `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript
-
 Пакет create-expo-app установиться через npx автоматически, если его нет.
+
+- `npx create-expo-app@latest your-app-name` - установка сборки React Native
+
+---
+
+- `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript - не работает hot-reload
+
+Нужно доустановить пакеты для web: `npx expo install react-native-web react-dom @expo/metro-runtime`
+
+Кастомизация конфига TypeScript: `npx expo customize tsconfig.json`
+
 
 ### 2. Start Expo
 
