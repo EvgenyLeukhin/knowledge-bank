@@ -38,13 +38,6 @@ export default App;
 
 ---
 
-## Языки программирования в мобильных платформах
-
-- **Android**: Java, Kotlin --> Android Studio
-- **iOS**: Objective-C, Swift --> XCode
-
----
-
 ## Create new React Native project
 
 TODO
@@ -140,3 +133,10 @@ sudo yarn create expo-app AwesomeProject
 cd AwesomeProject
 yarn expo start
 ```
+
+## Языки программирования в мобильных платформах
+
+- **Android**: Java, Kotlin --> Android Studio
+- **iOS**: Objective-C, Swift --> XCode
+
+---
