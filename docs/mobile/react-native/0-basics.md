@@ -3,11 +3,12 @@ title: Basics
 sidebar_position: 0
 ---
 
-[reactnative.dev](https://reactnative.dev/) - Official docs
+[reactnative.dev](https://reactnative.dev/) - Official docs.
 
-**React** (without React Dom) + **React Native** (react-components --> mobile native components) --> **Mobile App**
-
-**React Native** что-то наподобие React Dom только не для браузеров, а для мобильных платформ.
+- **React Native** использует обычный React, но без `react-dom`.
+- **React** (without React Dom) + **React Native** (react-components --> mobile native components) --> **Mobile App**
+- **React Native** что-то наподобие `react-dom` только не для браузеров, а для мобильных платформ.
+- **React Native** это не обертка для web-приложения (как Electron), нельзя просто взять и обернууть web-приложение на React и создать мобильное приложение, для мобильных платформ нужно отдельно разрабатывать на **React Native**. Если уже есть web-приложение на React, то можно частично с него переиспользовать разметку и структуру компонентов. 
 
 ---
 

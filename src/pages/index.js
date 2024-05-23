@@ -63,8 +63,13 @@ export default function Home() {
             </Link>
           </div>
           {/* <a href="https://docusaurus.io/" target="_blank">Docusaurus guide</a> */}
-        <br />
-        На будущее: React Native, Backend on Nodejs, Desktop express app, PWA, Swelte
+          <br />
+
+          <div style={{ textAlign: 'left' }}>
+              - <b>MOBILE</b>: React Native, Expo, ReactQuery, Async Storage <br />
+              - <b>BACKEND</b>: Nodejs, Express, Nest.js, Prisma, Loopback ???, MongoDB, PostgreSQL<br />
+              - <b>DESKTOP</b>: Electron app, PWA<br />
+          </div>
         </div>
         {/* <HomepageFeatures /> */}
 
