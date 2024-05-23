@@ -66,7 +66,7 @@ export default function Home() {
           <br />
 
           <div style={{ textAlign: 'left' }}>
-              - <b>MOBILE</b>: React Native, Expo, ReactQuery, Async Storage <br />
+              - <b>MOBILE</b>: React Native, Expo, ReactQuery, Async Storage, Tailwind (позволяет кастомизировать стили комронентов) <br />
               - <b>BACKEND</b>: Nodejs, Express, Nest.js, Prisma, Loopback ???, MongoDB, PostgreSQL<br />
               - <b>DESKTOP</b>: Electron app, PWA<br />
           </div>

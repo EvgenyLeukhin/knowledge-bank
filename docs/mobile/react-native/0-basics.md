@@ -44,10 +44,10 @@ export default App;
 
 ### 1. Install Expo
 
-`npx create-expo-app@latest`
+- `npx create-expo-app@latest your-app-name` - установка сборки React Native
+- `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript
 
-Пакет create-expo-app установиться автоматически, если его нет.
-
+Пакет create-expo-app установиться через npx автоматически, если его нет.
 
 ### 2. Start Expo
 
