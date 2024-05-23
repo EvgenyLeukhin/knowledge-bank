@@ -48,7 +48,14 @@ export default App;
 
 Пакет create-expo-app установиться автоматически, если его нет.
 
-```yarn start``` - запуск старта разработки
+
+### 2. Start Expo
+
+```yarn start``` - запуск старта разработки, по умолчанию запускается в режиме `web`.
+
+- `yarn android` - Запуск на Android Studio - нужны конфиги (сканировать QR-code)
+- `yarn ios` - Запуск на XCode - нужны конфиги (сканировать QR-code)
+- `yarn web` - Запуск на Web
 
 ```
 › Web is waiting on http://localhost:8081
@@ -69,9 +76,13 @@ export default App;
 
 ```
 
+### 3. Connect Android Studio to project
+
+TODO
+
 ---
 
-### 2. Start development
+### 4. Connect XCode to project
 
 TODO
 
@@ -79,9 +90,7 @@ TODO
 
 ### 3. Expo scripts
 
-- `yarn android` - Запуск на Android
-- `yarn ios` - Запуск на iOS
-- `yarn web` - Запуск на Web
+
 
 ---
 ---
