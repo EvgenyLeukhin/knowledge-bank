@@ -42,7 +42,7 @@ export default App;
 
 ## Create new React Native project
 
-### 1. Install Expo
+### 1. Install Create Expo and react-native bolierplate
 
 Пакет create-expo-app установиться через npx автоматически, если его нет.
 
@@ -50,14 +50,32 @@ export default App;
 
 ---
 
+### Если нужен TypeScript
+
 - `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript - не работает hot-reload
+- Кастомизация конфига TypeScript: `npx expo customize tsconfig.json`
+
+---
+
+- Создать файл-декоратор: `app.d.ts`
+
+---
+
+### Tailwind CSS
+
+- `yarn add tailwindcss` - установка
+- `tailwind.config.js` - конфиг
+- Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`.
+
+---
+
+### Если нужет web
 
 Нужно доустановить пакеты для web: `npx expo install react-native-web react-dom @expo/metro-runtime`
 
-Кастомизация конфига TypeScript: `npx expo customize tsconfig.json`
+---
 
-
-### 2. Start Expo
+### 2. Expo scripts
 
 ```yarn start``` - запуск старта разработки, по умолчанию запускается в режиме `web`.
 
