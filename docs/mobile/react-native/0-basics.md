@@ -153,30 +153,31 @@ export default function App() {
 
 ```
 
-## Connect to real devices by Expo Go app
+## Запуск на устройствах
+
+### 1 вариант - через мобильное приложение "Expo GO" для iOS и Android
 
 - install "Expo Go" app in AppStore and Google Play
 - Scan QR-code
 
 ---
 
-## Connect to simmulators
+### 2 вариант - через симулятор iOS в XCode и симмулятор Android в Android Studio
 
-### Android Studio
-
-TODO
-
----
-
-### XCode
+#### XCode
 
 `brew install node` - уже есть
 `brew install watchman` - что это ???
 
 ---
 
-### 3. Expo scripts
+#### Android Studio
 
+TODO
+
+---
+
+---
 
 
 ---
