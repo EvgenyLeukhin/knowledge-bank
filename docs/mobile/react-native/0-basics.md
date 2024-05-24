@@ -60,9 +60,62 @@ export default App;
 
 ### Tailwind CSS
 
-- `yarn add tailwindcss` - установка
+- `yarn add nativewind` - установка nativewind (чтобы транспайлер понимал синтаксис и компилировал его)
+- `yarn add -D tailwindcss` - установка tailwindcss
 - `npx tailwind init` --> `tailwind.config.js` - конфиг
 - Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`.
+
+
+```js title="babel.config.js"
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ["nativewind/babel"],
+  };
+};
+```
+
+```js title="tailwind.config.js"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./App.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Что делает tailwindcss - упрощение в написании css-мультиклассов
+
+[Docs - nativewind](https://www.nativewind.dev/quick-starts/expo)
+
+```tsx
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+- import { StyleSheet, Text, View } from 'react-native';
++ import { Text, View } from 'react-native';
+
+export default function App() {
+  return (
+-   <View style={styles.container}>
++   <View className="flex-1 items-center justify-center bg-white">
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+- const styles = StyleSheet.create({
+-   container: {
+-     flex: 1,
+-     backgroundColor: '#fff',
+-     alignItems: 'center',
+-     justifyContent: 'center',
+-   },
+- });
+```
 
 ---
 
