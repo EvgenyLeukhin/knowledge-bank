@@ -131,6 +131,7 @@ export default function App() {
 
 - `yarn android` - Запуск на Android Studio - нужны конфиги (сканировать QR-code)
 - `yarn ios` - Запуск на XCode - нужны конфиги (сканировать QR-code)
+- `"ios-dev": "expo start -c --ios",` - флаг `-c` нужен для очистки кеша
 - `yarn web` - Запуск на Web
 
 ```
@@ -152,15 +153,25 @@ export default function App() {
 
 ```
 
-### 3. Connect Android Studio to project
+## Connect to real devices by Expo Go app
+
+- install "Expo Go" app in AppStore and Google Play
+- Scan QR-code
+
+---
+
+## Connect to simmulators
+
+### Android Studio
 
 TODO
 
 ---
 
-### 4. Connect XCode to project
+### XCode
 
-TODO
+`brew install node` - уже есть
+`brew install watchman` - что это ???
 
 ---
 
