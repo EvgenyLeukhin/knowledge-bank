@@ -166,14 +166,20 @@ export default function App() {
 
 #### XCode
 
-`brew install node` - уже есть
-`brew install watchman` - что это ???
+Открываем XCode --> Cmd + , --> Locations --> Command Line Tools --> Select Tools
+
+<!-- `brew install watchman` -  ??? -->
+
+Finder --> Applications --> XCode --> ПКМ --> Show Package Contents --> Deleloper --> Applications --> Simulator --> Move to the Applications folder to create startup icon
+
 
 ---
 
 #### Android Studio
 
-TODO
+- Открываем Android Studio --> Три точки (More actions) --> Virtual Device Manager --> Play
+- В терминале при запущенном скрипте `yarn start` нажимаем `a`. 
+- После этого должно запуститься приложение на виртуальном устройстве.
 
 ---
 
