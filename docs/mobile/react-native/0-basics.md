@@ -50,7 +50,7 @@ export default App;
 
 ---
 
-### Если нужен TypeScript
+### TypeScript
 
 - `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript - не работает hot-reload
 - Кастомизация конфига TypeScript: `npx expo customize tsconfig.json`
@@ -66,7 +66,7 @@ export default App;
 
 ---
 
-### Если нужет web
+### Добавляем поддержку web
 
 Нужно доустановить пакеты для web: `npx expo install react-native-web react-dom @expo/metro-runtime`
 
