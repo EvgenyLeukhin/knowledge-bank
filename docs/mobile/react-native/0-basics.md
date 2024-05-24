@@ -54,9 +54,6 @@ export default App;
 
 - `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript - не работает hot-reload
 - Кастомизация конфига TypeScript: `npx expo customize tsconfig.json`
-
----
-
 - Создать файл-декоратор: `app.d.ts`
 
 ---
@@ -64,7 +61,7 @@ export default App;
 ### Tailwind CSS
 
 - `yarn add tailwindcss` - установка
-- `tailwind.config.js` - конфиг
+- `npx tailwind init` --> `tailwind.config.js` - конфиг
 - Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`.
 
 ---
