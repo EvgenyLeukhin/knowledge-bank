@@ -168,10 +168,11 @@ export default function App() {
 
 Открываем XCode --> Cmd + , --> Locations --> Command Line Tools --> Select Tools
 
-<!-- `brew install watchman` -  ??? -->
+Попробовать создать новый iOS проект, установить какой-ниб виртуальный iPhone.
 
-Finder --> Applications --> XCode --> ПКМ --> Show Package Contents --> Deleloper --> Applications --> Simulator --> Move to the Applications folder to create startup icon
-
+- Finder --> Applications --> XCode --> ПКМ --> Show Package Contents --> Deleloper --> Applications --> Simulator --> Move to the Applications folder to create startup icon
+- В терминале при запущенном скрипте `yarn start` нажимаем `i`. На виртуальный iPhone автоматически установиться приложение Expo Go.
+- После этого должно запуститься приложение на виртуальном устройстве.
 
 ---
 
