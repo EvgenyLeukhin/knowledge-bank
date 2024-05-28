@@ -45,9 +45,9 @@ sidebar_position: 2
 
 #### XCode
 
-Открываем XCode --> Cmd + , --> Locations --> Command Line Tools --> Select Tools
+Открываем XCode --> Cmd + , --> Locations --> Command Line Tools --> Select Tools (нужно выбрать чтобы работало cli)
 
-Попробовать создать новый iOS проект, установить какой-ниб виртуальный iPhone.
+Попробовать создать новый iOS проект, установить какой-ниб виртуальный iPhone, предоставить все права.
 
 - Finder --> Applications --> XCode --> ПКМ --> Show Package Contents --> Deleloper --> Applications --> Simulator --> Move to the Applications folder to create startup icon
 - В терминале при запущенном скрипте `yarn start` нажимаем `i`. На виртуальный iPhone автоматически установиться приложение Expo Go.
