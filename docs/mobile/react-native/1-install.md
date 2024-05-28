@@ -50,7 +50,7 @@ sidebar_position: 1
 
 ---
 
-### Поддержка web
+#### Поддержка web
 
 Чтобы можно было запускать и разрабатывать веб-версию в браузере.
 
@@ -58,14 +58,14 @@ sidebar_position: 1
 
 ---
 
-### Tailwind CSS
+#### Tailwind CSS
 
 [Docs - nativewind](https://www.nativewind.dev/quick-starts/expo)
 
 - `yarn add nativewind` - установка nativewind (чтобы транспайлер понимал синтаксис и компилировал его)
 - `yarn add -D tailwindcss` - установка tailwindcss
 - `npx tailwind init` --> `tailwind.config.js` - конфиг
-- Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`.
+<!-- - Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`. -->
 
 
 ```js title="babel.config.js"
