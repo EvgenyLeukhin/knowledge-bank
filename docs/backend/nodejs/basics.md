@@ -193,6 +193,10 @@ Globaly: ```npm list --save-dev --depth 0```
 
 ```yarn remove <package-name>```
 
+### See all global packages
+
+`npm ls -g`
+
 ---
 
 ## Remove nodejs, nvm, npm 

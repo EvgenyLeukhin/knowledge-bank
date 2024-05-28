@@ -8,11 +8,13 @@ sidebar_position: 1
 
 ## Install
 
-### Базовая сборка
+### Базовая сборка (create-expo-app)
 
 Пакет create-expo-app установиться через npx автоматически, если его нет.
 
+- `npx i -g expo` - установка expo
 - `npx create-expo-app@latest your-app-name` - установка сборки React Native
+- `suod ...` - возможно потребуются права суперпользователя
 
 ---
 
