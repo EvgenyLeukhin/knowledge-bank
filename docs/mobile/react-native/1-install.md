@@ -6,10 +6,9 @@ sidebar_position: 1
 - [Install expo app](https://reactnative.dev/docs/environment-setup) - Expo install
 - [Expo docs](https://expo.dev/) - Expo docs.
 
-## Install
+## Установка на Mac OS
 
 ### Предоставление прав доступа
-
 
 - `brew install watchman` - установка watchman + нужно предоставить права доступа для watchman
 - `sudo chown -R 501:20 "/Users/evgenyleukhin/.npm"` - возможно потребуются дать права доступа к ~/.npm
@@ -25,7 +24,7 @@ sidebar_position: 1
 
 ---
 
-### Java
+### Java для Android
 
 - Install Java for Android: `brew install --cask zulu@17`
 - Get path to where cask was installed to double-click installer: `brew info --cask zulu@17`
@@ -37,10 +36,10 @@ sidebar_position: 1
 - `sudo ...` - возможно потребуются права суперпользователя
 - Предоставить права watchman (появиться в окне при первом запуске)
 - Предоставить права терминалу открывать браузер (появиться в окне при первом запуске)
+- Приложение watchman: Основные --> Объекты ввода --> Watchman --> On
 
-
-Приложение watchman: Основные --> Объекты ввода --> Watchman --> On
-
+---
+---
 ---
 
 ### TypeScript 
