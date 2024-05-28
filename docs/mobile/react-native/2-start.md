@@ -41,7 +41,7 @@ sidebar_position: 2
 
 ---
 
-### 2 вариант - на симуляторе в XCode и симмуляторе в Android Studio
+### 2 вариант - на симуляторе в XCode и Android Studio
 
 #### XCode
 
