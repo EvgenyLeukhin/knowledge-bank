@@ -8,13 +8,38 @@ sidebar_position: 1
 
 ## Install
 
+### Предоставление прав доступа
+
+
+- `brew install watchman` - установка watchman + нужно предоставить права доступа для watchman
+- `sudo chown -R 501:20 "/Users/evgenyleukhin/.npm"` - возможно потребуются дать права доступа к ~/.npm
+- `sudo chown -R 501:20 "/Users/evgenyleukhin/.expo"` - возможно потребуются дать права доступа к ~/.expo
+
+---
+
 ### Базовая сборка (create-expo-app)
 
 Пакет create-expo-app установиться через npx автоматически, если его нет.
 
-- `npx i -g expo` - установка expo
-- `npx create-expo-app@latest your-app-name` - установка сборки React Native
-- `suod ...` - возможно потребуются права суперпользователя
+- `npx create-expo-app@latest your-app-name` - установка сборки React Native (в процессе установки могут всплывать окна о предоставлении прав доступа, нужно предоставить права)
+
+---
+
+### Java
+
+- Install Java for Android: `brew install --cask zulu@17`
+- Get path to where cask was installed to double-click installer: `brew info --cask zulu@17`
+
+---
+
+### Возможные проблемы
+
+- `sudo ...` - возможно потребуются права суперпользователя
+- Предоставить права watchman (появиться в окне при первом запуске)
+- Предоставить права терминалу открывать браузер (появиться в окне при первом запуске)
+
+
+Приложение watchman: Основные --> Объекты ввода --> Watchman --> On
 
 ---
 

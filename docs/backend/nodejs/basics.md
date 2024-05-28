@@ -197,6 +197,10 @@ Globaly: ```npm list --save-dev --depth 0```
 
 `npm ls -g`
 
+## Fix access to npm error
+
+`sudo chown -R 501:20 "/Users/evgenyleukhin/.npm"`
+
 ---
 
 ## Remove nodejs, nvm, npm 
