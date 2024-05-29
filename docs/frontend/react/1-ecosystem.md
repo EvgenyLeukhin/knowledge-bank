@@ -5,6 +5,7 @@ sidebar_position: 1
 
 ### Стилизация
 
+- [clsx](https://www.npmjs.com/package/clsx) - бывшая classnames
 - [SCSS-препроцесор](https://www.npmjs.com/package/sass)
 - [SCSS/CSS-modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
 - [classnames](https://www.npmjs.com/package/classnames)
@@ -18,9 +19,9 @@ sidebar_position: 1
 
 ### Готовые сборщики (билдеры)
 
+- [Vite](https://vitejs.dev/guide/) - Набирает популярность
 - [create-reaact-app](https://create-react-app.dev/)
 - [NextJS](https://nextjs.org/) - Фреймворк
-- [Vite](https://vitejs.dev/guide/) - Набирает популярность
 - [Gatsbyjs](https://www.gatsbyjs.com/) - React to HTML
 - [docusaurus](https://docusaurus.io/) - Для документации (отпачковался от Gatsby)
 - [webpack](https://webpack.js.org/) - Классический (для кастомных сборок)
@@ -55,6 +56,7 @@ sidebar_position: 1
 
 ### Формы
 
+- [react-hook-form](https://react-hook-form.com/)
 - [formik](https://formik.org/)
 - [yup](https://github.com/jquense/yup)
 - [react-input-mask](https://www.npmjs.com/package/react-input-mask)
@@ -130,6 +132,8 @@ sidebar_position: 1
 ## Тестирование
 
 - [jest](https://jestjs.io/ru/)
+- [@testing-library/react](https://www.npmjs.com/package/@testing-library/react)
+- [cypress](https://www.npmjs.com/package/cypress)
 
 ---
 
@@ -158,6 +162,12 @@ sidebar_position: 1
 
 - [react-gsap](https://www.npmjs.com/package/react-gsap)
 - [react-scrollmagic](https://www.npmjs.com/package/react-scrollmagic)
+- [react-unity-webgl](https://react-unity-webgl.dev/)
 - [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax)
 
 ---
+
+## Nodejs
+
+- [nodejs](https://nodejs.org/en/download/)
+- [nestjs](https://nestjs.com/)
