@@ -19,13 +19,17 @@ sidebar_position: 1
 
 ### Готовые сборщики (билдеры)
 
-- [Vite](https://vitejs.dev/guide/) - Набирает популярность
 - [create-reaact-app](https://create-react-app.dev/)
-- [NextJS](https://nextjs.org/) - Фреймворк
-- [Gatsbyjs](https://www.gatsbyjs.com/) - React to HTML
+- [Gatsbyjs](https://www.gatsbyjs.com/) - Static HTML generator
+- [remix](https://remix.run/) - Static HTML generator
 - [docusaurus](https://docusaurus.io/) - Для документации (отпачковался от Gatsby)
+- [NextJS](https://nextjs.org/) - React-фреймворк 
+
+---
+
+- [Vite](https://vitejs.dev/guide/) - Набирает популярность, есть готовые шаблоны
 - [webpack](https://webpack.js.org/) - Классический (для кастомных сборок)
-- [parcel](https://parceljs.org/) - Альтернатива Webpack
+- [parcel](https://parceljs.org/) - Минималистичная альтернатива Webpack
 
 ---
 
