@@ -54,7 +54,6 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - **SFTP** (FTP-доступ к серверу прямо из редактора)
 - **Docker** (поддержка Docker)
 - **Database client** (редактирование БД из редактора)
-- **GitHub Copilot** (AI)
 - **TailWind CSS IntelliSense** (Css IntelliSence)
 - **Live Share** (шеринг кода)
 - **REST Client** (аналог Thunder Client)
@@ -64,6 +63,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - **Auto open markdown preview** (md-превью)
 - **markdownlint** (md-линтер)
 - **Template Generator** (генерирует сниппеты кода)
+- **GitHub Copilot** (AI - не работает в РФ)
 
 ### Shortcuts
 
