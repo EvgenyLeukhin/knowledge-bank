@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="docusaurus-pages">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/docs/docusaurus-pages.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
