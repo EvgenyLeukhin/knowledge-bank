@@ -214,3 +214,95 @@ export const createMergeDraftReducer = <State, K extends keyof State>(key: K) =>
     }
   };
 ```
+
+---
+
+##  Обработка ответа после dispatch 2
+
+```ts
+// thunk, который возвращает данные
+export const setSlaInterval = (slaId: number, intervalData: ISlaInterval) => {
+  return async function (dispatch: Dispatch<any>): Promise<FormError[] | ISlaInterval | undefined> {
+    dispatch(setLoadingAction(true));
+    const response = !intervalData.id
+      ? await slaService.createInterval(slaId, intervalData)
+      : await slaService.editInterval(slaId, intervalData);
+    if (response.success) {
+      await dispatch(setLoadingAction(false));
+      return response.data;
+    } else {
+      await dispatch(
+        setMessageAction(messageHandler('Возникла ошибка при попытке сохранить интервал', MessageType.ERROR))
+      );
+      await dispatch(setLoadingAction(false));
+      if (response.errors) {
+        return response.errors;
+      }
+    }
+  };
+};
+
+...
+
+// экшен с обработкой ответа внутри компонента
+  const saveInterval = async (
+    slaInWork: ISla,
+    intervalInWork: ISlaInterval,
+    setSlaInWork: (data: ISla) => void,
+    originalSla: ISla,
+    setOriginalSla: (data: ISla) => void
+  ) => {
+    const responseInterval = (await dispatch(setSlaInterval(slaInWork.id, intervalInWork))) as unknown as
+      | FormError[]
+      | ISlaInterval
+      | undefined;
+
+    if (responseInterval) {
+      const data = responseInterval as ISlaInterval;
+
+      if (data.id) {
+        const iId = intervalInWork.id;
+
+        setSlaInWork({
+          ...slaInWork,
+          intervals: slaInWork.intervals.map((interval) => {
+            return interval.uniqId !== intervalInWork.uniqId
+              ? interval
+              : {
+                  ...data,
+                  uniqId: intervalInWork.uniqId,
+                };
+          }),
+        });
+
+        setOriginalSla({
+          ...originalSla,
+          intervals: !iId
+            ? [
+                ...originalSla.intervals,
+                {
+                  ...data,
+                  uniqId: intervalInWork.uniqId,
+                },
+              ]
+            : [
+                ...originalSla.intervals.map((interval) => {
+                  return interval.uniqId !== intervalInWork.uniqId
+                    ? interval
+                    : {
+                        ...data,
+                        uniqId: intervalInWork.uniqId,
+                      };
+                }),
+              ],
+        });
+
+        setErrors([]);
+      }
+
+      if (Array.isArray(responseInterval)) {
+        setErrors(responseInterval);
+      }
+    }
+  };
+```
