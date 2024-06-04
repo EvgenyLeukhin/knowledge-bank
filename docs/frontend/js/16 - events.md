@@ -758,3 +758,24 @@ moves to a different point in the media)</td>
 <td><a href="#">WheelEvent</a></td>
 </tr>
 </tbody></table>
+
+---
+
+### Scroll, прокрутка до элемента
+
+```tsx
+import { useEffect, useRef } from 'react';
+
+const ref = useRef<HTMLDivElement>(null);
+
+// Скроллинг до этого элемента, если он был последний просмотренный
+useEffect(() => {
+  if (isLastEdited && ref.current) {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  }
+}, [isLastEdited]);
+
+<div ref={ref}>
+  ...
+</div>
+```
