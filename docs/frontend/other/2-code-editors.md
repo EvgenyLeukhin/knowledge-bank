@@ -48,6 +48,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - **JavaScript and TypeScript Nightly** (Enables typescript@next)
 - **SVG** (svg syntax)
 - **Svg Preview** (svg-превью)
+- **TODO Tree** (показывает список всех TODO в проекте)
 
 ### Plugins (optional)
 
