@@ -233,6 +233,8 @@ const { userState } = useSocket();
 
 ## Пример сомописного provider из Fun chat
 
+1. Создаем провайдер `useGuessMeProvider`, который будет что-то возвращать при какие-либо данные.
+
 ```ts
 // useGuessMeProvider
 import { IRoomPlayer, PLAYER_STATE } from '@store/room/roomSlice';
@@ -291,6 +293,8 @@ export const useGuessMeProvider = (roomId: string) => {
   ] as const;
 };
 ```
+
+2. Создаем хук, который забирает данные с провайдера и дальше возвращает их в объекте.
 
 ```ts
 // useGameHook
@@ -377,6 +381,8 @@ const useGameHook = (roomId: string) => {
 
 export { useGameHook };
 ```
+
+3. Забираем все эти данные при вызове этого кастомного хука в любом компоненте.
 
 ```tsx
 // использование в компоненте 
