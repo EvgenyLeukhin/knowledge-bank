@@ -299,6 +299,28 @@ package-lock.json
 
 `yarn add -D prettier @types/prettier`
 
+```json title=".prettierrc"
+{
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "arrowParens": "avoid",
+  "importorder": [
+  "<THIRD_PARTY_MODULES>" ,
+  "^@/components/（.*）$"
+  "^@/hooks/ (.*)$"
+  "^@/services/（.*）$"，
+  "^@/assets/（.*）$"，
+  "^@/providers/（.*）$"，
+  "^@/providers/（.*）$"，
+  "^ ../(.*)$",
+  "^./(.*)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
+```
+
 ***
 
 ### 5. Npm-скрипты
