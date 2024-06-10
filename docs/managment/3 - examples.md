@@ -1,6 +1,6 @@
 ---
 title: Типовые проекты
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 ## 1. Вёрстка email-рассылок
