@@ -306,3 +306,19 @@ export const setSlaInterval = (slaId: number, intervalData: ISlaInterval) => {
     }
   };
 ```
+
+---
+
+## Обработка ответа после dispatch 3
+
+```js
+const handleSuspend = async () => {
+  const newErrors = (await dispatch(hubSuspend(time, search))) as unknown as FormError[];
+
+  if (!newErrors) {
+    close();
+  } else {
+    setErrors(newErrors || []);
+  }
+};
+```
