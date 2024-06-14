@@ -18,7 +18,13 @@ sidebar_position: 2
 - Мнемонический символ ```&copy;``` - &copy;
 - HTML-код (десятичный)```&#xa9;``` - &#xa9;
 - Юникод (hex)```&#x00A9;``` - <span>&#x00A9;</span>
-- CSS-код ```\00A9;``` - <span style="content: '\00A9'"></span>
+- CSS content-код ```\00A9;``` - <span className="css-content"></span>
+
+```css
+.css-content::after {
+  content: '\00A9';
+}
+```
 
 Нужно в случаях, когда нужно показать именно эти символы как символы, чтобы они не воспринимался браузером как html-код (например символы &lt;&gt;).
 
