@@ -11,9 +11,17 @@ File --> Share --> File
 
 ## Final Cut Pro
 
+### Export 
+
 Share icon --> Export file (default)
 
-Будет создат .mov формат, который можно загрузить на YouTube и VK
+Будет создат .mov формат, который можно загрузить на YouTube и VK.
+
+
+### Effects
+
+Иконка перевернутой песочницы --> Самый ходовой эффект "Fade to color"
+
 
 ---
 
