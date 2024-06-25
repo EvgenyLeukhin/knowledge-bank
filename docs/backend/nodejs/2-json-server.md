@@ -1,4 +1,4 @@
 ---
 title: json-server ---
-# sidebar_position: 7
+sidebar_position: 2
 ---
