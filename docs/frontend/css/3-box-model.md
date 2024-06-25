@@ -1,6 +1,6 @@
 ---
 title: Блочная модель
-sidebar_position: 02
+sidebar_position: 3
 ---
 
 - [normalize.css](https://necolas.github.io/normalize.css/)

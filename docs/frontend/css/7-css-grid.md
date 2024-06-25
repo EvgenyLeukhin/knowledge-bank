@@ -1,6 +1,6 @@
 ---
 title: CSS-Grid
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 export const GridParent = ({ style, children }) => (

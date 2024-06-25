@@ -1,6 +1,6 @@
 ---
 title: Фон / Границы / Тени
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 ## Фоновый цвет и изображения

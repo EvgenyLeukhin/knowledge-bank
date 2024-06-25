@@ -1,6 +1,6 @@
 ---
 title: Float / Gum
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 ## Float-вёрстка
