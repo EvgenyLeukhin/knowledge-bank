@@ -90,6 +90,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - <kbd>Cmd + \</kbd>&nbsp;&ndash;&nbsp;Divide window
 - <kbd>Option + Z</kbd>&nbsp;&ndash;&nbsp;Переносы строк
 - <kbd>Option + H</kbd>&nbsp;&ndash;&nbsp;Открыть список коммитов (git log)
+- <kbd>Option + Esc</kbd>&nbsp;&ndash;&nbsp;Открыть suggestions menu
 
 #### Файлы
 
