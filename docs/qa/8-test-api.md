@@ -128,6 +128,12 @@ pm.test("Ошибок 'Нет подходящих интервалов для �
 
 ---
 
+### Token
+
+[How to automatically set a Bearer Token for your Postman requests?](https://community.postman.com/t/how-to-automatically-set-a-bearer-token-for-your-postman-requests/10126/8)
+
+---
+
 ## Установка Postman CLI
 
 
