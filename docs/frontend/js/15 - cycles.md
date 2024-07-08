@@ -69,6 +69,7 @@ const a = [
   { id: 5, name: 'Name 5' },
 ];
 
+// или for (const item of a)
 for (item of a) {
   console.log('item', item);
 }
