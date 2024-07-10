@@ -319,6 +319,8 @@ NEXT_PUBLIC_URL=https://stage1.producthired.com/api/api
 NEXT_PUBLIC_URL=https://proe.producthired.com/api/api
 ```
 
+Запуск с конкретной переменной:
+
 ```json
 "scripts": {
   "dev": "cross-env NODE_ENV=development env-cmd -f ./api/.env.development next dev",
@@ -353,6 +355,12 @@ export const returnEnv = (): EnvList => {
 export const isDev = returnEnv() === DEVELOPMENT;
 export const isProd = returnEnv() === PRODUCTION;
 ```
+
+---
+
+### Naming
+
+В `create-react-app` или `react-scripts` все кастомные env-переменные дожны иметь префикс `REACT_APP_` иначе они будут игнорироваться.
 
 ---
 
