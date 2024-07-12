@@ -341,6 +341,9 @@ const { DEVELOPMENT, PRODUCTION } = EnvList;
 
 export const API_URL = process.env.NEXT_PUBLIC_URL;
 
+// можно сохранять в отдельную переменную
+// const ENV = process.env;
+
 export const returnEnv = (): EnvList => {
   switch (process.env.NODE_ENV) {
     case 'development':
@@ -361,6 +364,7 @@ export const isProd = returnEnv() === PRODUCTION;
 ### Naming
 
 В `create-react-app` или `react-scripts` все кастомные env-переменные дожны иметь префикс `REACT_APP_` иначе они будут игнорироваться.
+
 
 ---
 
