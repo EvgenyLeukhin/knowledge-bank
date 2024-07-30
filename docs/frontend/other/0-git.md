@@ -267,5 +267,11 @@ gh auth login
 
 # clone repo
 gh repo clone EvgenyLeukhin/product-hired-admin
+
+# show readme
+gh repo view
+
+# Релиз
+gh release create 1.0
 ```
 
