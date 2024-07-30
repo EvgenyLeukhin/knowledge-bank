@@ -253,3 +253,19 @@ IdentityFile ~/.ssh/id_rsa
 5. Делаем форсированный пуш
 
 - - <CODE>git push -f</CODE> - пушим с форсом
+
+---
+
+## GitHub CLI (https://cli.github.com/)
+
+```sh
+# install github cli
+brew install gh
+
+# authorization --> Пройти авторизацию через браузер
+gh auth login
+
+# clone repo
+gh repo clone EvgenyLeukhin/product-hired-admin
+```
+
