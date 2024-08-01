@@ -176,6 +176,8 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
   "javascript.implicitProjectConfig.experimentalDecorators": true,
 
   "window.zoomLevel": 0,
+
+    // local theme
   "workbench.colorTheme": "Monokai",
   "workbench.statusBar.visible": true,
   "files.insertFinalNewline": true
