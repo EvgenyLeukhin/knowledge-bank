@@ -98,7 +98,61 @@ export const MAP = ({children}) => (
 </picture>
 ```
 
-***
+---
+
+## Новый формат AVIF как image
+
+```html
+<picture>
+    <source type="image/avif" srcset="images/cat@1x.avif 1x, images/cat@2x.avif 2x">
+    <source type="image/webp" srcset="images/cat@1x.webp 1x, images/cat@2x.webp 2x">
+    <img class="picture" width="500" height="500"
+        src="images/cat@1x.jpeg"
+        srcset="images/cat@2x.jpeg 2x"
+        alt="Рыжий кот нюхает штанину.">
+</picture>
+```
+
+---
+
+## Новый формат AVIF как background-image
+
+```css
+.feature {
+    position: relative;
+    display: grid;
+    align-items: end;
+    /* Для Chrome и Safari */
+    background-image:
+        linear-gradient(
+            to top,
+            black,
+            transparent 70%
+        ),
+        -webkit-image-set(
+            url('images/cat@2x.jpeg') 2x,
+            url('images/cat@1x.jpeg') 1x
+        );
+    /* Для Firefox */
+    background-image:
+        linear-gradient(
+            to top,
+            black,
+            transparent 70%
+        ),
+        image-set(
+            url('images/cat@2x.avif') type('image/avif') 2x,
+            url('images/cat@1x.avif') type('image/avif') 1x,
+            url('images/cat@2x.webp') type('image/webp') 2x,
+            url('images/cat@1x.webp') type('image/webp') 1x,
+            url('images/cat@2x.jpeg') 2x,
+            url('images/cat@1x.jpeg') 1x
+        );
+    background-size: cover;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+}
+```
 
 ## ```<figure>```
 

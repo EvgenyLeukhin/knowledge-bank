@@ -3,10 +3,6 @@ title: Адаптивность
 sidebar_position: 10
 ---
 
-## Viewport
-
-Вьюпорт браузера отличается (может отличаться) от физ. размера разрешения дисплея устройства, так как на дисплее может присутствовать ретина (2-x или 3-x слойная), которая как бы разбивает пиксели вьюпорта и повышается качество воспринимаемого контента (pixel is not a pixel on viewport).
-
 ## Медиа-запросы
 
 ```css
@@ -33,24 +29,24 @@ sidebar_position: 10
 
 <img src="../../../../img/css/breakpoints.webp" alt="breakpoints.webp" />
 
-### TV / Cinema
+### Desktop (1980 - 3840px)
 
-- **10240px** - 10К
-- **7680px** - 8К
-- **5120px** - 5К
-- **3840px** - 4К
-
-### Desktop
-
-- **2560px** - 2К-мониттор / TV
+- **3840px** - 4К-мониттор
+- **2560px** - 2,5К-мониттор
 - **1920px** - FullHD-монитор
 
-### Laptop
+### Laptop 
+
+#### Macbook Pro - Retina 2x
 
 - **1728px** - Macbook Pro 16"
 - **1512px** - Macbook Pro 14"
 - **1440px** - Macbook Pro 15"
-- **1280px** - Macbook Air 13"
+
+#### Macbook Air - Retina 2x
+
+- **1280px** - Macbook Air 13.3"
+- **1404px** - Macbook Air 15.3"
 
 ### Tablet (481px  —  768px)
 
@@ -115,6 +111,26 @@ sidebar_position: 10
   }
 }
 ```
+---
+
+### Плотность пикселей, пикселей на дюйм (PPI)
+
+```PPI = Кол-во пикселей (Разрешение) / Ширина дисплея```
+
+- FullHD Монитор 23.8" (1920 х 1020, 16:9). Дисплей 23.8", 20.74" (Ш) x 11.99" (В)
+
+```PPI = 1920 / 20.74 = 92.6```
+
+---
+
+- Macbook Pro 14.2" M3 Pro (3024 × 1964, 14:9) Дисплей 14.2", 11.9" (Ш), 7.7" (В) 
+
+```PPI = 3024 / 11.9 = 254```
+
+Плотность пикселей 14" Macbook Pro почти в 3 раза выше чем у 24" FullHd монитора
+
+---
+
 ### Mobile first
 
 Эта концепция в веб вроде как применяется редко в РФ (у нас особо не заморачиваются, просто делают адаптивные сайты). Обычно всегда Desktop first.
@@ -187,6 +203,10 @@ sidebar_position: 10
 @import url(css/small.css) (max-width: 480px);
 ```
 
+## Viewport
+
+Вьюпорт браузера отличается (может отличаться) от физ. размера разрешения дисплея устройства, так как на дисплее может присутствовать ретина (2-x или 3-x слойная), которая как бы разбивает пиксели вьюпорта и повышается качество воспринимаемого контента (pixel is not a pixel on viewport).
+
 ```html
 <!-- базовый мета-тег для viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -247,6 +267,37 @@ $mobile: 767px; //  MOBILE  [0 - 767]     --> 414  дизайн-макет
   // only mobile styles (<=767px)
   @include mobile {
     color: blue;
+  }
+}
+```
+
+---
+
+## Доп. возможности
+
+### Соотношение сторон
+
+Если размеры div будут принимать выбранные соотношения сторон
+
+```css
+/* Minimum aspect ratio */
+@media (min-aspect-ratio: 8/5) {
+  div {
+    background: #9af; /* blue */
+  }
+}
+
+/* Maximum aspect ratio */
+@media (max-aspect-ratio: 3/2) {
+  div {
+    background: #9ff; /* cyan */
+  }
+}
+
+/* Exact aspect ratio, put it at the bottom to avoid override*/
+@media (aspect-ratio: 1/1) {
+  div {
+    background: #f9a; /* red */
   }
 }
 ```
