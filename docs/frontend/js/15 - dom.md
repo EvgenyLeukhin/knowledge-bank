@@ -91,6 +91,19 @@ el.contains(someElement2); // return bool
 
 ---
 
+### Задача от Яндекс
+
+Какая из функций будет возвращать коллекцию DOM-узлов на основании переданного селектора в виде Array, а не NodeList?
+
+```js
+// document.querySelectorAll возвращает NodeList, а c помощью оператора spread можно сделать из NodeList Array.
+function getArray(selector) {
+  return Array.from(document.querySelectorAll(selector));
+} 
+```
+
+---
+
 ## Поиск потомка внутри родителя
 
 ```ts
