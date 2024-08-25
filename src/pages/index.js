@@ -89,6 +89,11 @@ export default function Home() {
               <li>TypeGuard (as - для параметра), (is - для возврата)</li>
               <li>---</li>
               <li>Технологии: ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --&gt; Микросервис, svelte, Flux</li>
+              <li>---</li>
+              <li>emails design several variants</li>
+              <li>websites design several variants</li>
+              <li>CV personal website</li>
+              <li>Personal website</li>
           </ul> 
         </div>  
       </main>
