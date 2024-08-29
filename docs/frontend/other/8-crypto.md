@@ -8,6 +8,8 @@ sidebar_position: 8
 - [bybit.com](https://www.bybit.com/ru-RU/) - крипто-биржа bybit
 - [Metamask](https://metamask.io/) - Metamask-кошелек
 - [Trust Wallet](https://trustwallet.com/ru) - Trustwallet-кошелек
+- [Telegram wallet](https://t.me/wallet) - Telegram-wallet
+
 
 ---
 
