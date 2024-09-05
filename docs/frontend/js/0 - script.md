@@ -3,6 +3,8 @@ title: Скрипты
 sidebar_position: 0
 ---
 
+- [Справочник по Web-разработке](https://doka.guide/)
+
 ```html
 <!-- inline js-code -->
 <script>
