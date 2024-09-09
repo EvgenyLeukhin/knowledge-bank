@@ -382,3 +382,43 @@ export const checkBigInterval = (interval: string): boolean => {
 // Tue Apr 16 2024 17:43:19 GMT+0600 (Омск, стандартное время) --> '16.04.2024'
 new Date().toLocaleDateString();
 ```
+
+---
+
+## Добавление дней к сегодняшней дате
+
+```js
+const formatDate = (addDays = 0) => {
+    // вытаскиваем значения с текущей даты с добавление дней
+    let year = new Date().getFullYear();
+    let month = new Date().getMonth();
+    let date = new Date().getDate() + addDays;
+
+    // конвертируем обратоно в Date-строку (чтобы случился перескок на другой месяц, если кол-во дней будет больше 30-31 или меньше 0)
+    const newDate = new Date(year, month, date);
+
+    // вытаскиваем значения даты уже с новой даты
+    year = newDate.getFullYear();
+    month = newDate.getMonth() + 1; // так так отсчет месяцев в JS начинается с 0
+    date = newDate.getDate();
+
+    // подставляем 0
+    const monthFormated = month < 10 ? `0${month}`: month;
+    const dateFormated = date < 10 ? `0${date}`: date;
+
+    // сохранение даты в валидном формате для бэкенда (YYYY-mm-DD)
+    const fullDateFormated = `${year}-${monthFormated}-${dateFormated}`;
+
+    return fullDateFormated;
+}
+
+// без добавления дней вернется отформатированная текущая дата
+// const today = formatDate();
+
+const todayMinus10Days = formatDate(-10);
+const todayPlus10Days = formatDate(10);
+
+// сохраняем полученные значения в переменную
+ pm.environment.set("TODAY_MINUS_10_DAYS", todayMinus10Days);
+ pm.environment.set("TODAY_PLUS_10_DAYS", todayPlus10Days);
+```
