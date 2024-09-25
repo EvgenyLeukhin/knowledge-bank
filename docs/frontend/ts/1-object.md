@@ -90,3 +90,40 @@ interface IField {
 }
 ```
 
+---
+
+## Поля объекта как enum
+
+```ts
+export enum DrugstoreType {
+  PARTNER = 1,
+  OWN = 2,
+  EXTERNAL = 3,
+}
+
+export enum ColorList {
+  // font
+  FONT_PRIMARY = '#333f48',
+  FONT_SECONDARY = '#9199a3',
+
+  ...
+}
+
+export const drugstoreType: Record<DrugstoreType, string> = {
+  [DrugstoreType.PARTNER]: 'Партнерская',
+  [DrugstoreType.OWN]: 'Собственная',
+  [DrugstoreType.EXTERNAL]: 'Неподключенная',
+};
+```
+
+---
+
+## Поля и значения объекта как enum
+
+```ts
+export const drugstoreTypeColor: Record<DrugstoreType, ColorList> = {
+  [DrugstoreType.PARTNER]: ColorList.GREEN,
+  [DrugstoreType.OWN]: ColorList.BLUE,
+  [DrugstoreType.EXTERNAL]: ColorList.GRAY,
+};
+```
