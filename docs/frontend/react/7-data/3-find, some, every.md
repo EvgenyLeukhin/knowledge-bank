@@ -127,5 +127,29 @@ const a = [
 
 a.every((el, index, array) => el.id >= 0); // true
 a.every((el, index, array) => el.id > 0); // false
+```
 
+---
+
+```ts
+import { EPermission } from 'interfaces/auth';
+import { useSelector } from 'react-redux';
+import { TStore } from 'store/store';
+
+const useAccess = (permissions: EPermission[]): boolean => {
+  const userPermissions = useSelector(
+    (store: TStore) => store.auth.permissions,
+  );
+
+  return permissions.every(permission => userPermissions.includes(permission));
+};
+
+export default useAccess;
+```
+
+```js
+const big = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+[1, 2, 3].every(item => big.includes(item)); // true
+[0, 1, 2, 3].every(item => big.includes(item)); // false
 ```
