@@ -3,6 +3,11 @@ title: Idioms
 sidebar_position: 5
 ---
 
+- Make yourself comfortable
+- I'm all ears!
+- It is what it is.
+- Yeah, course!
+
 ## Погода
 
 ```
