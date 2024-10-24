@@ -23,10 +23,15 @@ const sortedA = a.sort((nextEl, curEl) => nextEl.id - curEl.id); // 0, 1, 2, 3
 // reversed sorting
 const sortedAReversed = a.sort((nextEl, curEl) => curEl.id - nextEl.id); // 3, 2, 1, 0
 
-// sort by name property
+// sort by name - 1 способ через сравнение строк
 a.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
 
-// сортировка по алфавиту
+// sort by name - 2 способ через codePointAt()
+a.sort((next, curr) => {
+  return next.name.codePointAt() - curr.name.codePointAt();
+});
+
+// sort by name - 3 способ через localeCompare()
 a.sort((a, b) => a.name.localeCompare(b.name));
 ```
 
