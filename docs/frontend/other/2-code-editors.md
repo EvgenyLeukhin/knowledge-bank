@@ -32,39 +32,46 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 
 [VS Code marketplace](https://marketplace.visualstudio.com/)
 
-- **Thunder Client** (тестирование API)
+### Most wanted plugins
+
+- **JavaScript and TypeScript Nightly**  - поддержка версий JavaScript and TypeScript grammar
+- **ESLint** - поддержка ESLint (JS/TS линтер)
+- **ES7+ React/Redux/React-Native snippets** - JS сниппеты
+- **Auto Rename Tag** - одновременное исправление парных тегов
+- **EditorConfig for VS Code** - конфиг базовых настроек редактора
+- **Prettier - Code formatter** - форматирование кода
+- **npm Intellisense** - поддержка импортов npm-пакетов
+- **Mithril Emmet** - сниппеты для быстрого разворачивание HTML, CSS, JSX
+- **Tabnine: AI Chat & Autocomplete** - AI чат в редакторе
+- **Import Cost** (показывает размеры пакетов или файлов)
+- **Live server** (открытие html-файлов в браузере, dev-server)
+
+### Helpful
+
 - **Git History** (Git-client)
 - **GitLens** (расширение для Git)
-- **vscode-pdf** (поддержка pdf)
-- **Auto Rename Tag** (одновременное исправление парных тегов)
-- **Colonize** (добавление точки с запятой *Shift/Alt + Enter*)
-- **ES7+ React/Redux/React-Native snippets** (JS сниппеты)
-- **ESLint** (JS линтер)
-- **npm Intellisense** (npm расширение)
 - **NPM Scripts** (запуск npm-скриптов)
-- **Prettier - Code formatter** (форматирование кода)
-- **EditorConfig for VS Code** (конфиг редактора)
-- **Import Cost** (показывает размеры пакетов или файлов)
-- **JavaScript and TypeScript Nightly** (Enables typescript@next)
-- **SVG** (svg syntax)
-- **Svg Preview** (svg-превью)
 - **TODO Tree** (показывает список всех TODO в проекте)
+- **Live Share** (шеринг кода)
+- **Docker** (поддержка Docker)
+- **markdownlint** (md-линтер)
 
 ### Plugins (optional)
 
+- **Thunder Client** (тестирование API)
+- **REST Client** (аналог Thunder Client)
+- **Svg Preview** (svg-превью)
 - **SFTP** (FTP-доступ к серверу прямо из редактора)
-- **Docker** (поддержка Docker)
+- **vscode-pdf** (поддержка pdf)
+- **SVG** (svg syntax)
 - **Database client** (редактирование БД из редактора)
 - **TailWind CSS IntelliSense** (Css IntelliSence)
-- **Live Share** (шеринг кода)
-- **REST Client** (аналог Thunder Client)
 - **MJML** (поддерка mjml файлов)
-- **Live server** (открытие html-файлов в браузере, dev-server)
 - **Sublime Text Keymap and Settings Importer** (шорткаты как в Sublime Text 3)
 - **Auto open markdown preview** (md-превью)
-- **markdownlint** (md-линтер)
 - **Template Generator** (генерирует сниппеты кода)
 - **GitHub Copilot** (AI - не работает в РФ)
+- **Colonize** (добавление точки с запятой *Shift/Alt + Enter*)
 
 ### Shortcuts
 
