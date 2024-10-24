@@ -34,6 +34,11 @@ debugger; // ---> Dev tool "Sources"
 
 ```jsx
 <pre>{JSON.stringify(user, null, 2)}</pre>
+
+// красивый вывод json
+{response && <div>
+  <pre>{JSON.stringify(response, null, 2)}</pre>
+</div>}
 ```
 
 ---
