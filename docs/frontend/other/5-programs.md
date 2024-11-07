@@ -198,6 +198,7 @@ Uninstall: `sudo apt autoremove --purge forticlient`
 * [Fake filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo) - заполнение форм
 * [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Узнать тех. стек сайта
 * [Fonts ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Узнать какие шрифты на сайте
+* [CORS Unblock](https://chromewebstore.google.com/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino) - Плагин, который убирает защиту CORS
 
 ## Firefox plugins
 
