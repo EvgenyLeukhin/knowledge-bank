@@ -1,5 +1,5 @@
 ---
-title: Обработка массивов
+title: Схема методов
 sidebar_position: 0
 ---
 
