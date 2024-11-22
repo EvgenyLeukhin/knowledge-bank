@@ -13,7 +13,7 @@ export const CODE = ({children}) => (
 
 <CODE>new Date()</CODE> – Tue Apr 04 2023 13:00:33 GMT+0600 (Омск, стандартное время)
 
-***
+---
 
 ## Конструктор даты
 
@@ -48,67 +48,67 @@ new Date(
 
 <CODE>new Date().getFullYear()</CODE> – 2023
 
-***
+---
 
 ## Получить текущий месяц (нумерация с нуля):
 
 <CODE>new Date().getMonth()</CODE> – 4
 
-***
+---
 
 ## Получить текущий день:
 
 <CODE>new Date().getMonth()</CODE> – 4
 
-***
+---
 
 ## Получить день недели (0 - вс, 1 - пн, ...):
 
 <CODE>new Date().getDay()</CODE> – 2
 
-***
+---
 
 ## Получить часы в 24-часовом формате:
 
 <CODE>new Date().getHours()</CODE> – 13
 
-***
+---
 
 ## Получить минуты:
 
 <CODE>new Date().getMinutes()</CODE> – 0
 
-***
+---
 
 ## Получить секунды:
 
 <CODE>new Date().getSeconds()</CODE> – 33
 
-***
+---
 
 ## Получить милисекунды:
 
 <CODE>new Date().getTime()</CODE> – 108
 
-***
+---
 
 ## Дата отчета в JS:
 
 <CODE>new Date(0)</CODE> – Thu Jan 01 1970 06:00:00 GMT+0600 (Омск, стандартное время)
 
-***
+---
 
 ## Количество пройденных мс от даты отчета:
 
 <CODE>new Date().getTime()</CODE> – 1680591633108
 
-***
+---
 
 ## Подставить определенную дату без времени (время подставляется автоматичеси).
 
 Форматы: <CODE>yyyy-MM-dd, MM-dd-yyyy</CODE>
 
-***
+---
 
 ## Разделители: точки, тире, пробелы и слэши.
 
@@ -122,7 +122,7 @@ new Date(
 
 - <CODE>new Date("01-26-2017")</CODE> – Thu Jan 26 2017 00:00:00 GMT+0600 (Омск, стандартное время)
 
-***
+---
 
 ## Извлечь дату из полной строки даты со временем:
 
@@ -133,6 +133,29 @@ new Date(
 или
 
 ```date```.<CODE>toISOString()..slice(0, 10)</CODE> – 2023-03-17
+
+---
+
+## Локализация
+
+```js
+const day = new Date().toLocaleDateString('ru-RU', {
+    // weekday: 'short',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+});
+
+const time = new Date().toLocaleTimeString('ru-RU', {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+});
+
+day; // '22.11.2024'
+
+time; // '10:47:45'
+```
 
 ---
 
@@ -181,7 +204,7 @@ const isPastDate2 = isPast(new Date()); // false
 ### Утилита для даты
 
 ```ts
-/***
+/---
  * Форматирует дату в формате HH:MM DD:MM:YYYY
  * @Date date
  */
