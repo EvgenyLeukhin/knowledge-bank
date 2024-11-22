@@ -11,15 +11,29 @@ File --> Share --> File
 
 ## Final Cut Pro
 
-### Export
+### Export - Best Quality
 
 Share icon --> Export file (default)
 
 Будет создат .mov формат, который можно загрузить на YouTube и VK.
 
-### Effects
+---
+
+### Export - For social sharing
+
+Share icon --> Social platforms
+
+---
+
+### Transitions
 
 Иконка перевернутой песочницы --> Самый ходовой эффект "Fade to color"
+
+---
+
+### Titles
+
+Слева сверху иконка Т
 
 ---
 
