@@ -3,7 +3,8 @@ title: Basics
 sidebar_position: 0
 ---
 
-[Download Nodejs](https://nodejs.org/en/download/)
+- [Download Nodejs](https://nodejs.org/en/download/)
+- [package-json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json)
 
 Install MacOS: ```https://nodejs.org/en/download --> macOs Installer```
 
@@ -37,7 +38,7 @@ registry=https://npm.yandex.net/
 
 ***
 
-### nvm 
+### nvm
 
 [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
@@ -145,6 +146,8 @@ Npm install with node automaticly.
 ### Install
 
 ```npm i -g package-name```
+```npm i -g package-name@1.1.1``` - версия 1.1.1
+```npm i -g package-name@latest``` - последняя опубликованная версия
 ```npm i --save-dev package-name```
 
 ### Remove
@@ -209,7 +212,7 @@ Globaly: ```npm list --save-dev --depth 0```
 
 ---
 
-## Remove nodejs, nvm, npm 
+## Remove nodejs, nvm, npm
 
 [link stackoverflow](https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x)
 
@@ -279,6 +282,31 @@ Globaly: ```npm list --save-dev --depth 0```
 - ```yarn why```
 - ```yarn workspace```
 - ```yarn workspaces```
+
+---
+
+## Версии пакетов
+
+- `"react": "18.2.0"` - точное совпадение версии
+- `"react": ">18.2.0"` - версия выше указанной
+- `"react": ">=18.2.0"` - версия выше или равная указанной
+- `"react": "<18.2.0"` - версия ниже указанной
+- `"react": "<=18.2.0"` - версия ниже или равная указанной
+- `"react": "~18.2.0"` - эквивалентная версии
+- `"react": "^18.2.0"` - совмесимая с версией
+- `"react": "<18.2.0 : 18.1.1, 18.1.1"` - исключать версии
+- `"react": ">=18.0.0 || <=18.2.0"` - диапазон версий
+
+<ul dir="auto">
+  <li><code>&lt;</code> Less than</li>
+  <li><code>&lt;=</code> Less than or equal to</li>
+  <li><code>&gt;</code> Greater than</li>
+  <li><code>&gt;=</code> Greater than or equal to</li>
+  <li><code>=</code> Equal.  If no operator is specified, then equality is assumed,
+  so this operator is optional but MAY be included.</li>
+</ul>
+
+---
 
 Update pacages: ```yarn upgrade-interactive --latest```
 Clear cache: ```yarn cache clean --force```
