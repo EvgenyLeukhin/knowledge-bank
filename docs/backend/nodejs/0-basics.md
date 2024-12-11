@@ -5,6 +5,7 @@ sidebar_position: 0
 
 - [Download Nodejs](https://nodejs.org/en/download/)
 - [package-json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json)
+- [npm SemVer Calculator](https://semver.npmjs.com/)
 
 Install MacOS: ```https://nodejs.org/en/download --> macOs Installer```
 
@@ -189,6 +190,8 @@ Globaly: ```npm list --save-dev --depth 0```
 
 
 - Обновление пакетов: ```yarn upgrade-interactive --latest```
+
+- Проверка совместимости версий: ```yarn audit --fix```
 
 - Очистка кэша: ```yarn cache clean --force```
 
