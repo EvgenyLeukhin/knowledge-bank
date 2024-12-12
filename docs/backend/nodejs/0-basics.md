@@ -193,6 +193,8 @@ Globaly: ```npm list --save-dev --depth 0```
 
 - Обновление списка браузеров: ```npx update-browserslist-db@latest```
 
+- Просмотреть просроченные пакеты: ```npm outdated```
+
 - Проверка совместимости версий: ```yarn audit --fix```
 
 - Очистка кэша: ```yarn cache clean --force```
