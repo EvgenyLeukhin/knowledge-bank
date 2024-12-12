@@ -191,6 +191,10 @@ Globaly: ```npm list --save-dev --depth 0```
 
 - Обновление пакетов: ```yarn upgrade-interactive --latest```
 
+- Обновление пакетов: ```npm update```
+
+- Обновление конкретных пакетов: ```npm update express```
+
 - Обновление списка браузеров: ```npx update-browserslist-db@latest```
 
 - Просмотреть просроченные пакеты: ```npm outdated```
