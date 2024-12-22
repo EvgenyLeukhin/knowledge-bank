@@ -1,9 +1,9 @@
 ---
-title: Программы
+title: Программы и ОС
 sidebar_position: 5
 ---
 
-## Кроссплатформенные 
+## Кроссплатформенные
 
 - Google Chrome, Mozilla Firefox
 - VS Code, Sublime Text 3
@@ -17,7 +17,19 @@ sidebar_position: 5
 
 ### Shortcuts
 
-<kdb>Cmd + Shift + .</kdb> - показать скрытые файлы
+- `Cmd + Shift + .` - показать скрытые файлы
+- `Cmd + Ctrl + A` - создать ярлык
+- `Cmd + Ctrl + Q` - спящий режим
+- `Fn` или `Ctrl + Space` - переключение языка
+- `Control - Command - F` - fullscreen mode
+- `Command - H` - Hide the windows of the front app
+- `Command - M` - Minimize the front window to the Dock
+- `Command - Tab` - Switch active window
+- `Command - Shift - 3` - All fullscreenshots
+- `Command - Shift - 4` - save screenshot area
+- `Command - Shift - 5` - save video screen
+- `Command - Shift - N` - new folder
+- `Command - ,` - Preferences / Settings
 
 ---
 
@@ -66,7 +78,6 @@ Install:
 - Клавиатура -> Источники ввода -> поменять местами, чтобы не было глюка с переключением раскладки
 - Клавиатура -> Сочетание клавиш -> Выбрать следующий источник в меню ввода (сделать Cmd + Пробел, а Spotlight поменять на Option + Пробел)
 
-
 #### Автозапуск
 
 Apple  > «Системные настройки», нажмите «Основные»  в боковом меню, затем нажмите «Объекты входа»
@@ -101,7 +112,6 @@ Apple  > «Системные настройки», нажмите «Осно
 ***
 
 ## Linux
-
 
 ### Через пакетный менеджер или браузер
 
