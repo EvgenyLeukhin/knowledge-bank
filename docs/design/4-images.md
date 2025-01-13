@@ -3,14 +3,14 @@ title: Изображения
 sidebar_position: 4
 ---
 
-### Бесплатные
+### Бесплатные фотостоки
 
 - [unsplash.com](https://unsplash.com/)
 - [pixabay.com](https://pixabay.com/ru/)
 - [freepik.com](https://ru.freepik.com/)
 - [freeimages.com](https://www.freeimages.com/)
 
-***
+---
 
 - [splitshire.com](https://www.splitshire.com/)
 - [flickr.com](https://www.flickr.com/)
@@ -21,6 +21,7 @@ sidebar_position: 4
 - [Google - Картинки](https://www.google.ru/search?newwindow=1&hl=ru&tbm=isch&sxsrf=ALeKk03GSVoF3-EZKXmw3cVhrRF1VVfdCA%3A1611212714741&source=hp&biw=1920&bih=969&ei=qicJYNmSK8TeasO7gYAI&q=planet&oq=planet&gs_lcp=CgNpbWcQAzICCAAyAggAMgIIADIICAAQsQMQgwEyAggAMgQIABADMgIIADICCAAyAggAMgIIADoHCCMQ6gIQJzoECCMQJzoFCAAQsQNQpVdYooEBYJWCAWgFcAB4AIABW4gB0AaSAQIxMJgBAKABAaoBC2d3cy13aXotaW1nsAEK&sclient=img&ved=0ahUKEwjZj5KMu6zuAhVErxoKHcNdAIAQ4dUDCAc&uact=5)
 - [Яндекс - Картинки](https://yandex.ru/images/search?text=planet)
 
+---
 
 ### Платные
 
@@ -30,22 +31,33 @@ sidebar_position: 4
 - [ru.123rf.com](https://ru.123rf.com/)
 - [storyblocks.com](https://www.storyblocks.com/images)
 
-### Фоны
+---
+
+### Фоны, паттерны, градиенты
 
 - [toptal.com](https://www.toptal.com/designers/subtlepatterns/) - Текстуры
 - [projects.verou.me](https://projects.verou.me/css3patterns/) - CSS-текстуры
 - [olorzilla.com](https://www.colorzilla.com/gradient-editor/) - Градиенты
 - [uigradients.com](https://uigradients.com/#SublimeVivid) - Градиенты 2
 
-### Оптимизация
+---
+
+### Оптимизация изображений
 
 - [tinypng.com](https://tinypng.com/) - Уменьшить вес картинок
 - [compresspng.com](https://compresspng.com/) - Уменьшить вес картинок 2
 - [cloudconvert.com](https://cloudconvert.com/png-converter) - images converter
 - [base64](https://www.base64-image.de/) - Конвертёр img --> base64
 
+---
 
-***
+### Гифки
+
+[giphy.com](https://giphy.com) - Бесплатный хостинг гифок
+
+Скачать гифку: кликнуть на гифку --> Share -> Copy Gif Link -> Отккрыть ссылку в браузере --> ПКМ --> Сохранить изображение как
+
+---
 
 ## Правильное расположение изображений
 
