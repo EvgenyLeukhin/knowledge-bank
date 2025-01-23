@@ -463,3 +463,13 @@ console.log(VAR); // 'VAR'
 console.log(LET); // LET is not defined
 console.log(CONST); // CONST is not defined
 ```
+
+
+## Стили наименования переменных
+
+```
+ - `kebab-case` — составные части переменной разделяются дефисом. Например: my-super-var.
+- `snake_case` — для разделения используется подчеркивание. Например: my_super_var.
+- `CamelCase` — каждое слово в переменной пишется с заглавной буквы. Например: MySuperVar.
+- `lowerCamelCase` - стандарт в JS
+```
