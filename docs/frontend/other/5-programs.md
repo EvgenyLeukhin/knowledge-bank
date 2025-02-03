@@ -88,6 +88,29 @@ Apple  > «Системные настройки», нажмите «Осно
 
 ---
 
+#### HP Printer
+
+В 5-ой команде исправляем минимальныую версию ОС с 12-ой на требуемую. В примере стоит 13-я, можно поменять на 15.2
+
+[link](https://forums.macrumors.com/threads/monterrey-and-hp-printers.2319676/?post=30525559#post-30525559)
+
+```bash
+curl -o ~/Downloads/hpdrivers.dmg https://updates.cdn-apple.com/2020/macos/001-41745-20201210-DBC9B46B-88B2-4032-87D9-449AF1D20804/HewlettPackardPrinterDrivers.dmg
+
+hdiutil attach ~/Downloads/hpdrivers.dmg
+
+pkgutil --expand /Volumes/HP_PrinterSupportManual/HewlettPackardPrinterDrivers.pkg ~/Downloads/hp-expand
+
+hdiutil eject /Volumes/HP_PrinterSupportManual
+
+sed -i '' 's/12.0/13.0/' ~/Downloads/hp-expand/Distribution
+
+pkgutil --flatten ~/Downloads/hp-expand ~/Downloads/HP_Drivers_12.pkg
+
+rm -R ~/Downloads/hp-expand
+```
+---
+
 ## Windows
 
 * **DESIGN:**
