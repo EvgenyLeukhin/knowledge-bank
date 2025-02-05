@@ -109,6 +109,13 @@ pkgutil --flatten ~/Downloads/hp-expand ~/Downloads/HP_Drivers_12.pkg
 
 rm -R ~/Downloads/hp-expand
 ```
+
+---
+
+#### iMazing
+
+iMazing --> Инструменты --> Управление приложениями --> Медиатека (загруженные приложения на компьютер) --> Выбор приложения --> Установить
+
 ---
 
 ## Windows
