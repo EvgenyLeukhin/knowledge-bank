@@ -1,5 +1,5 @@
 ---
-title: Console
+title: CLI
 sidebar_position: 1
 ---
 
@@ -40,6 +40,7 @@ export const CODE = ({children}) => (
 - <CODE>del</CODE> - удалить
 - <CODE>move</CODE> - переместить
 - <CODE>rename</CODE> - переименовать
+- <CODE>mv filename newFilename</CODE> - переименовать
 - <CODE>copy</CODE> - копировать
 - <CODE>xcopy</CODE> - копировать файлы в папке
 - <CODE>color</CODE> - цвет
@@ -48,6 +49,21 @@ export const CODE = ({children}) => (
 - <CODE>ipconfig</CODE> - сеть
 - <CODE>help</CODE> - помощь
 - <CODE>echo</CODE> - редактирование
+
+
+```bash
+# создать директорию
+mkdir public/
+
+# создать файл
+touch README.md
+
+# создать файл сразу с контентом
+echo 'Hello, World!' > README.md
+
+# переименовать файл
+mv README.md READ.md
+```
 
 ### Архивация файлов
 

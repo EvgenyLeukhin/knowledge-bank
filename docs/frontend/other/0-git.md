@@ -9,7 +9,16 @@ export const CODE = ({children}) => (
   </code>
 );
 
-**Version Control System**. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с ```master``` на ```main```.
+- **Version Control System**. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с ```master``` на ```main```.
+
+Система контроля версий, которая позволяет осуществлять:
+- Возврат к любой прошлой версии кода
+- Просмотр истории изменений
+- Восстановление любых данных.
+- Совместная работа без риска потерять данные или перезаписать чужую работу.
+- Можно пользоваться как через CLI, так и помощью спец. программ git-клиентов
+
+---
 
 ## Install
 
@@ -24,7 +33,7 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git config --global push.default simple</CODE> - Настройка команды git push. Будет пушить только в текущую ветку
 - <CODE>git help &lt;git_command&gt;</CODE> - Справочник для отдельных гит-команд
 
-***
+---
 
 ## Репозиторий
 
@@ -54,8 +63,10 @@ MacOS openssh install: ```brew install openssh```
 
 - <CODE>git status</CODE> - Статус файлов
 - <CODE>git commit -am "commit message"</CODE> - Добавление измененных файлов в коммит и коммит (одновременно)
-- <CODE>git add &lt;filename&gt; &lt;filename2&gt;</CODE> - Добавить указанные измененные файлы к коммиту
-- <CODE>git add .</CODE> || <CODE>git add -A (--all)</CODE> - Добавить все указанные измененные файлы к коммиту
+- <CODE>git add &lt;filename&gt; &lt;filename2&gt;</CODE> - Добавить указанные измененные файлы в индекс
+- <CODE>git add .</CODE> || <CODE>git add -A (--all)</CODE> - Добавить все указанные измененные в индекс
+- <CODE>git restore  &lt;filename1&gt; &lt;filename1</CODE> - Восстановить удаленный файл
+- <CODE>git restore --staged &lt;filename1&gt; &lt;filename1</CODE> - Убрать файлы из индекса
 - <CODE>git checkout &lt;filename&gt; &lt;filename2&gt;</CODE> - Убрать указанные измененные файлы из коммита
 - <CODE>git checkout &lt;filename&gt; &lt;commit_hash&gt;</CODE> - Вернуть состояние файла, какое оно было в указанном коммите
 - <CODE>git checkout -- .</CODE> - Убрать измененния во всех файлах
@@ -69,13 +80,17 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git log (-3)</CODE> - Получить список коммитов до текущего (последних трёх)
 - <CODE>git log --oneline</CODE> - Получить список коммитов до текущего в одну строку
 - <CODE>git log --all</CODE> - Получить всю историю (не только до текущего)
+- <CODE>git log -p -3</CODE> - ... с выводом диффа по каждому коммиту
 - <CODE>git log --oneline --all --graph</CODE> - Получить всю историю (с графиком)
-- <CODE>git show &lt;commit_hash&gt;</CODE> - Посмотреть какие были изменения в этом коммите
 - <CODE>git cat-file -p &lt;commit_hash&gt;</CODE> - Посмотреть информацию о коммите
 - <CODE>git checkout &lt;commit_hash&gt;</CODE> - Переключиться в указанный коммит
 - <CODE>git checkout &lt;branch_name&gt;</CODE> - Переключиться в последний коммит указанной ветки
 - <CODE>git reset &lt;commit_hash&gt; (--hard)</CODE> - Сбросить историю до указанного коммита (принудительно)
 - <CODE>git clean -f -d</CODE> - Удалить лишние файлы
+- ---
+- <CODE>git show &lt;commit_hash&gt;</CODE> - Посмотреть дифф в этом коммите
+- <CODE>git blame filename</CODE> - Посмотреть историю изменений файла
+- <CODE>git grep import</CODE> - Показать список файлов, где есть строка "import"
 
 ---
 - <CODE>git checkout -b new-branch-name &lt;new-branch-name&gt;</CODE> - Удалить лишние файлы
