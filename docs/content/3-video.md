@@ -13,19 +13,28 @@ File --> Share --> File
 
 ### Export - Best Quality
 
+Лучшее качество, будет очень тяжелый файл.
+
 Share icon --> Export file (default)
 
-Будет создат .mov формат, который можно загрузить на YouTube и VK.
+Settings --> Video Codec
+
+- Uncompressed 10-bit 4:2:2 - самый тяжелый (без компрессии)
+- Uncompressed 8-bit 4:2:2 (без компрессии)
+- H.264 (как на iPhone, сжатие без потери качества)
+- Apple ProRes (422 Proxy, 422 LT, 422, 422 HQ, 4444, 4444 XQ) - ProRes-кодек с различными вариациями
 
 ---
 
-### Export - For social sharing
+### Export - Social Platforms
 
-Share icon --> Social platforms
+Оптимизированный файл для загрузки в соц. сети.
+
+Будет создан не сильно объёмный .mov формат, который можно загрузить на YouTube и VK.
 
 ---
 
-### Transitions
+### Transitions and Effects
 
 Иконка перевернутой песочницы --> Самый ходовой эффект "Fade to color"
 
@@ -34,6 +43,12 @@ Share icon --> Social platforms
 ### Titles
 
 Слева сверху иконка Т
+
+---
+
+### Кадрирование
+
+Слева сверху пункт Transform, где можно двигать ползунки и кадрировать и масштабировать.
 
 ---
 
