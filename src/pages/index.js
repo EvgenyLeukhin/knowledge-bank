@@ -107,6 +107,7 @@ export default function Home() {
             <h2>PRACTICE</h2>
 
             <ol>
+              <li style={{ color: 'lightgreen'}}>CODEWARS --&gt;</li>
               <li style={{ color: 'lightgreen'}}>Emails --&gt;</li>
               <li style={{ color: 'lightgreen'}}>Websites and landing pages (old-school) --&gt;</li>
               <li style={{ color: 'lightgreen'}}>Websites and landing pages (Gatsby, NextJS) --&gt;</li>
