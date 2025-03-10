@@ -75,6 +75,16 @@ export default function Home() {
 
         <hr />
 
+        {/* https://www.mindmeister.com/app/map/3644672321?source=template */}
+        <p  style={{ textAlign: 'center' }}>
+          <a
+            href="https://www.mindmeister.com/app/map/3644672321?source=template"
+            target='_blank'
+          >
+            Mind map - Mindmeister
+          </a>
+        </p>
+
         <div style={{ display: 'flex', justifyContent: 'center' }}>
 
           {/* LEARN */}
