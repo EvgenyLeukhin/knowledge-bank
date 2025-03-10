@@ -75,26 +75,37 @@ export default function Home() {
 
         <hr />
 
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <h2>TODO list:</h2>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-          <ul>
-              <li><strike>try-catch вне асинхронных функций</strike></li>
-              <li><strike>setInterval, setTimeout</strike></li>
-              <li><strike>Фильтрация через query params</strike></li>
-              <li><strike>enum как поле объекта</strike></li>
-              <li><strike>Расширение props компонента, надстройка над библиотечным компонентом</strike></li>
-              <li>new Map(), new Set()</li>
-              <li>Дженерик в TypeScript</li>
-              <li>TypeGuard (as - для параметра), (is - для возврата)</li>
-              <li>---</li>
-              <li>Технологии: ERP, Kafka, RabbitMQ, Amazon S3, Микрофронтенд - single-spa, BFF, Монолит --&gt; Микросервис, svelte, Flux</li>
-              <li>---</li>
-              <li>emails design several variants</li>
-              <li>websites design several variants</li>
-              <li>CV personal website</li>
-              <li>Personal website</li>
-          </ul> 
+          {/* LEARN */}
+          <div style={{ padding: 20, marginRight: 20 }}>
+            <h2>LEARN RELOAD</h2>
+            <ol>
+              <li style={{ color: 'lightgreen'}}>JS - basics</li>
+              <li style={{ color: 'lightgreen'}}>JS - progressive</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Redux + RTK-Query</li>
+              <li style={{ color: 'deeppink'}}>React Native</li>
+              <li style={{ color: 'deeppink'}}>nodejs</li>
+            </ol> 
+          </div>
+
+          {/* PRACTICE */}
+          <div  style={{ padding: 20 }}>
+            <h2>PRACTICE</h2>
+
+            <ol>
+              <li style={{ color: 'lightgreen'}}>Emails --&gt;</li>
+              <li style={{ color: 'lightgreen'}}>Websites and landing pages (old-school) --&gt;</li>
+              <li style={{ color: 'lightgreen'}}>Websites and landing pages (Gatsby, NextJS) --&gt;</li>
+              <li>Websites by CMS</li>
+              <li style={{ color: 'lightgreen'}}>React apps. --&gt;</li>
+              <li>React StoryBook with custom components</li>
+              <li style={{ color: 'deeppink'}}>Mobile app.</li>
+              <li style={{ color: 'deeppink'}}>Backend app.</li>
+            </ol> 
+          </div>
         </div>  
       </main>
     </Layout>
