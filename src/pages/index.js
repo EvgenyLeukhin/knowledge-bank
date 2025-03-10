@@ -129,6 +129,7 @@ export default function Home() {
               <li>Retina-test 2.0</li>
               <li>Gift-boxes</li>
               <li>Antistress-animation</li>
+              <li>Гимнастика для глаз</li>
             </ol> 
           </div>
         </div>  
