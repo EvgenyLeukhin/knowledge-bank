@@ -101,17 +101,6 @@ export default function Home() {
             </ol> 
           </div>
 
-          <div style={{ padding: 20, marginRight: 20 }}>
-            <h2>SOFT-SKILLS</h2>
-            <ol>
-              <li>English</li>
-              <li>Коммуникация</li>
-              <li>Демо, публичные выступления</li>
-              <li>Психология</li>
-              <li>Саморазвитие</li>
-            </ol> 
-          </div>
-
           {/* PRACTICE */}
           <div  style={{ padding: 20, marginRight: 20 }}>
             <h2>PRACTICE</h2>
@@ -140,6 +129,18 @@ export default function Home() {
               <li>Gift-boxes</li>
               <li>Antistress-animation</li>
               <li>Гимнастика для глаз</li>
+            </ol> 
+          </div>
+
+          {/* SOFT-SKILLS */}
+          <div style={{ padding: 20, marginRight: 20 }}>
+            <h2>SOFT-SKILLS</h2>
+            <ol>
+              <li>English</li>
+              <li>Коммуникация</li>
+              <li>Демо, публичные выступления</li>
+              <li>Психология</li>
+              <li>Саморазвитие</li>
             </ol> 
           </div>
         </div>  
