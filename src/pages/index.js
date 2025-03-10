@@ -57,7 +57,7 @@ export default function Home() {
           <div className={styles.buttons}>
             <Link
               className="button button--primary button--lg"
-              to="/docs/frontend/react/react/"
+              to="/docs/frontend/html/basics/"
             >
               Начать читать
             </Link>
