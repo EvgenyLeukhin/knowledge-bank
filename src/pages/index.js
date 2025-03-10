@@ -79,7 +79,7 @@ export default function Home() {
 
           {/* LEARN */}
           <div style={{ padding: 20, marginRight: 20 }}>
-            <h2>LEARN RELOAD</h2>
+            <h2>HARD-SKILLS (RELOAD)</h2>
             <ol>
               <li style={{ color: 'lightgreen'}}>JS - basics</li>
               <li style={{ color: 'lightgreen'}}>JS - progressive</li>
@@ -91,8 +91,19 @@ export default function Home() {
             </ol> 
           </div>
 
+          <div style={{ padding: 20, marginRight: 20 }}>
+            <h2>SOFT-SKILLS</h2>
+            <ol>
+              <li>English</li>
+              <li>Коммуникация</li>
+              <li>Демо, публичные выступления</li>
+              <li>Психология</li>
+              <li>Саморазвитие</li>
+            </ol> 
+          </div>
+
           {/* PRACTICE */}
-          <div  style={{ padding: 20 }}>
+          <div  style={{ padding: 20, marginRight: 20 }}>
             <h2>PRACTICE</h2>
 
             <ol>
@@ -104,6 +115,19 @@ export default function Home() {
               <li>React StoryBook with custom components</li>
               <li style={{ color: 'deeppink'}}>Mobile app.</li>
               <li style={{ color: 'deeppink'}}>Backend app.</li>
+            </ol> 
+          </div>
+
+          {/* PET-PROJECTS */}
+          <div  style={{ padding: 20, marginRight: 20 }}>
+            <h2>PET-PROJECTS</h2>
+
+            <ol>
+              <li>Personal website with CV and portfolio</li>
+              <li>Randomizer</li>
+              <li>Retina-test 2.0</li>
+              <li>Gift-boxes</li>
+              <li>Antistress-animation</li>
             </ol> 
           </div>
         </div>  
