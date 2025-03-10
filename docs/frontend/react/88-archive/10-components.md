@@ -1,6 +1,6 @@
 ---
 title: Компоненты и стили
-sidebar_position: 2
+sidebar_position: 10
 ---
 
 ## Пример функционального компонента

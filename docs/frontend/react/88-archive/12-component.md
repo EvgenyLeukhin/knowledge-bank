@@ -1,6 +1,6 @@
 ---
 title: Самописный компонент
-sidebar_position: 9
+sidebar_position: 12
 ---
 
 - [Акцессоры;](https://learn.javascript.ru/property-accessors)

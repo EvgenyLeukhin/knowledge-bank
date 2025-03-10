@@ -1,6 +1,6 @@
 ---
 title: Роутинг
-sidebar_position: 3
+sidebar_position: 9
 ---
 
 ## react-router-dom

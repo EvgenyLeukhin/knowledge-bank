@@ -1,6 +1,6 @@
 ---
 title: React
-sidebar_position: 0
+sidebar_position: 6
 ---
 
 ## Основыные понятия React

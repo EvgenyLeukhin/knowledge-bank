@@ -1,6 +1,6 @@
 ---
 title: XMLHttpReqest и fetch от Я
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 - [XMLHttpRequest - MDN](https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)

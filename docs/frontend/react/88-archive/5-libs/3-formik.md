@@ -1,6 +1,6 @@
 ---
 title: Formik и uip
-sidebar_position: 5
+sidebar_position: 55
 ---
 
 ## Formik + yup example

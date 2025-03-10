@@ -1,6 +1,6 @@
 ---
 title: Оптимизация
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 - No many npm packages

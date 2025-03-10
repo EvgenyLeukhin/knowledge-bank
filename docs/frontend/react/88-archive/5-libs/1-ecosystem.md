@@ -1,6 +1,6 @@
 ---
 title: Экосистема
-sidebar_position: 1
+sidebar_position: 7
 ---
 
 ### Стилизация
