@@ -81,9 +81,11 @@ sidebar_position: 3
 
 - С осторожностью пользуйтесь белым текстом. Белый текст на черном или темно- синем фоне может быть поразительным — его очень трудно читать. Практическое правило гласит: избегайте его, если не стремитесь создать футуристический, нетрадиционный и сумрачный облик вашего Web-сайта. (Даже если вы попадаете в одну из этих категорий, можно добиться большего эффекта с помощью белого фона и нескольких хорошо подобранных графических изображений с эффектными волнующими цветами.)
 
-### Тёплые цвета
+---
 
-### <span style={{ color: 'red'}}>КРАСНЫЙ</span>
+## Тёплые цвета
+
+<h3 style={{ color: 'red'}}>КРАСНЫЙ</h3>
 
 <img src="../../../img/design/red.jpg" width="450" alt="red.jpg" />
 
@@ -105,7 +107,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'orange'}}>ОРАНЖЕВЫЙ</span>
+<h3 style={{ color: 'orange'}}>ОРАНЖЕВЫЙ</h3>
 
 <img src="../../../img/design/orange.jpg" width="450" alt="orange.jpg" />
 
@@ -119,7 +121,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'yellow'}}>ЖЁЛТЫЙ</span>
+<h3 style={{ color: 'yellow'}}>ЖЁЛТЫЙ</h3>
 
 <img src="../../../img/design/yellow.jpg" width="450" alt="yellow.jpg" />
 
@@ -135,9 +137,9 @@ sidebar_position: 3
 - Спорт
 - Детство
 
-### Холодные цвета
+## Холодные цвета
 
-### <span style={{ color: 'green'}}>ЗЕЛЁНЫЙ</span>
+<h3 style={{ color: 'green'}}>ЗЕЛЁНЫЙ</h3>
 
 <img src="../../../img/design/green.webp" width="450" alt="green.webp" />
 
@@ -155,7 +157,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'blue'}}>СИНИЙ</span>
+<h3 style={{ color: 'blue'}}>СИНИЙ</h3>
 
 <img src="../../../img/design/blue.jpg" width="450" alt="blue.jpg" />
 
@@ -173,7 +175,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'violet'}}>ФИОЛЕТОВЫЙ</span>
+<h3 style={{ color: 'violet'}}>ФИОЛЕТОВЫЙ</h3>
 
 <img src="../../../img/design/violet.jpg" width="450" alt="violet.jpg" />
 
@@ -185,11 +187,11 @@ sidebar_position: 3
 - Творческий
 - В тренде 2018-го
 
-### Нейтральные цвета
+## Нейтральные цвета
 
 Можно использовать черно-белый дизайн без дополнительных цетов вообще (тренд 2021 года, colorless Web-design), цвета будут в изображениях, либо их не будет вовсе.
 
-### <span style={{ color: 'white', background: 'black' }}>БЕЛЫЙ</span>
+<h3 style={{ color: 'white', background: 'black' }}>БЕЛЫЙ</h3>
 
 <img src="../../../img/design/white.jpg" width="450" alt="white.jpg" />
 
@@ -202,7 +204,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'black', background: 'white' }}>ЧЁРНЫЙ</span>
+<h3 style={{ color: 'black', background: 'white' }}>ЧЁРНЫЙ</h3>
 
 <img src="../../../img/design/black.png" width="450" alt="black.png" />
 
@@ -215,7 +217,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'gray' }}>СЕРЫЙ</span>
+<h3 style={{ color: 'gray' }}>СЕРЫЙ</h3>
 
 <img src="../../../img/design/gray.webp" width="450" alt="gray.webp" />
 
@@ -227,7 +229,7 @@ sidebar_position: 3
 
 ---
 
-### <span style={{ color: 'brown' }}>КОРИЧНЕВЫЙ</span>
+<h3 style={{ color: 'brown' }}>КОРИЧНЕВЫЙ</h3>
 
 <img src="../../../img/design/brown.webp" width="450" alt="brown.webp" />
 
