@@ -65,5 +65,6 @@
   "ul-style": {
     "style": "dash"
   },
+  "MD040": false,
   "no-inline-html": false
 }
