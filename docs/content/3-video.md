@@ -46,7 +46,9 @@ Settings --> Video Codec
 
 ---
 
-### Кадрирование
+### Transform
+
+Position, Rotations, Scale, Anchor
 
 Слева сверху пункт Transform, где можно двигать ползунки и кадрировать и масштабировать.
 
