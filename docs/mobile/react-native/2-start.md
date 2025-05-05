@@ -60,7 +60,7 @@ sidebar_position: 2
 [Add Android path to bash or zzh](https://docs.expo.dev/workflow/android-studio-emulator/)
 
 - Открываем Android Studio --> Три точки (More actions) --> Virtual Device Manager --> Play
-- В терминале при запущенном скрипте `yarn start` нажимаем `a`. 
+- В терминале при запущенном скрипте `yarn start` нажимаем `a`.
 - После этого должно запуститься приложение на виртуальном устройстве.
 
 ---
