@@ -1,6 +1,6 @@
 ---
 title: Коммуникация
-sidebar_position: 0
+sidebar_position: 5
 ---
 
 ## Для хорошей коммуникации в колективе

@@ -1,6 +1,6 @@
 ---
 title: Резюме
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 Curriculum Vitae (CV - “ход жизни”)

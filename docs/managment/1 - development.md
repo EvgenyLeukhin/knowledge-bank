@@ -1,6 +1,6 @@
 ---
 title: Методики разработки
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 ## Software Development Lifecycle
