@@ -32,7 +32,7 @@ sidebar_position: 4
 
 ### Вопросы для Frontend собеса
 
-TODO
+🚩 TODO
 
 ---
 

@@ -42,7 +42,7 @@ sidebar_position: 1
 ---
 ---
 
-### TypeScript 
+### TypeScript
 
 - `npx create-expo-app@latest -t expo-template-blank-typescript` - ... c TypeScript - не работает hot-reload
 - Кастомизация конфига TypeScript: `npx expo customize tsconfig.json`
@@ -66,7 +66,6 @@ sidebar_position: 1
 - `yarn add -D tailwindcss` - установка tailwindcss
 - `npx tailwind init` --> `tailwind.config.js` - конфиг
 <!-- - Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`. -->
-
 
 ```js title="babel.config.js"
 module.exports = function(api) {
@@ -174,7 +173,7 @@ npx react-native@X.XX.X init AwesomeProject --version X.XX.X
 
 ### 3 вариант: Expo CLI
 
-[https://expo.dev/](https://expo.dev/) - Expo CLI docs
+<https://expo.dev/> - Expo CLI docs
 
 npm-пакет для экспортирования сборок на android и ios платформы.
 
