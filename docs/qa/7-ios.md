@@ -8,7 +8,6 @@ sidebar_position: 7
 - [Скачать XCode](https://developer.apple.com/xcode/) - Основной сайт iOS-разработки (гайдлайны, XCode)
 - [mixpanel.co](https://mixpanel.com/trends) - Статистика iOS
 
-
 ## Гайдлайны iOS
 
 1. Не должно быть глобальных рамок/обводок, приложение должно использовать весь экран

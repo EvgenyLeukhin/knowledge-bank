@@ -3,7 +3,7 @@ title: Android
 sidebar_position: 6
 ---
 
-## Технологии для создания Android-приложений:
+## Технологии для создания Android-приложений
 
 - Java и Kotlin
 - Pyton, Flutter, React Native, HTML & CSS
@@ -16,7 +16,7 @@ sidebar_position: 6
 - [genymotion](https://www.genymotion.com/) - Онлайн эмулятор Android
 - Android Debug, Fiddler
 
-***
+---
 
 ## Статистика Android (РФ 2022 - statcounter)
 
@@ -34,6 +34,8 @@ sidebar_position: 6
 - **Samsung** - 35%
 - **Xiaomi** - 17%
 - **Остальные** - 11%
+
+---
 
 ## Android studio
 
@@ -65,13 +67,12 @@ Device manager --> Virtual --> Create device --> Phone --> Pixel 6 Pro --> Syste
 
 ### Подключение реального устройства (Physical)
 
-1. **Включить режим разработчика на андройд-смартфоне**: 
+1 - **Включить режим разработчика на андройд-смартфоне**:
 
-  Настройки --> Об устройстве --> Версия --> Номер сборки (зажать)
+Настройки --> Об устройстве --> Версия --> Номер сборки (зажать)
 
-  Настройки --> Системные настройки --> Для разработчиков --> Откладка по USB (нужно включить)
+Настройки --> Системные настройки --> Для разработчиков --> Откладка по USB (нужно включить)
 
-2. **Подключить смартфон по usb**
+2 - **Подключить смартфон по usb**
 
-3. Device manager --> Physical --> Запустить проект
-
+3 - **Device manager** → **Physical** → **Run Project**
