@@ -116,21 +116,6 @@ sidebar_position: 9
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-```
-
-```json title="manifest.json"
-{
-  "name": "Sitemane",
-  "description": "Site description",
-  "background_color": "#fff",
-  "theme_color": "#fff",
-  "icons": [
-    { "src": "img/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "img/icon-512.png", "type": "image/png", "sizes": "512x512" },
-  ]
-}
-```
-
 ---
 
 ## &lt;base&gt;
@@ -181,4 +166,49 @@ sidebar_position: 9
   <div itemprop="spouse">Бегунова Инна</div>
   ...
 </div>
+```
+
+---
+
+## manifest.json example
+
+```json
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+```
+
+```json title="manifest.json"
+{
+  "name": "Sitemane",
+  "description": "Site description",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    { "src": "img/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "img/icon-512.png", "type": "image/png", "sizes": "512x512" },
+  ]
+}
 ```

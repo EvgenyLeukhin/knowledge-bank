@@ -86,6 +86,33 @@ sidebar_position: 11
 - Должна быть хорошая ссылочная масса.
 - Без грамматических ошибок.
 
+---
+
+## Robots.tsx
+
+[Docs](https://www.robotstxt.org/robotstxt.html)
+
+Создаётся в корневой директории.
+
+Чтобы поисковики не могли отслеживать, нужно указать:
+
+```
+User-agent: *
+Disallow: /
+```
+
+Чтобы могли отслеживать:
+
+```
+User-agent: *
+Allow: /
+
+# optional - не отслеживать эти директории внутри сайта
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+```
+
 <!-- - [Google Ads](https://ads.google.com/aw/campaigns/new/express?ocid=1082361030&cmpnInfo=%7B%228%22%3A%2278922292-d7a2-4266-b5df-6973325481a9%22%7D&subid=ru-ww-et-g-aw-a-tools-awhp%21o2&step=cbss&authuser=0&uscid=1082361030&__c=6898664470&euid=669671666&__u=2701374434&mode=signup)
 - [Google-Marketing Platform](https://marketingplatform.google.com/about/)
 - [Яндекс-Webmaster](https://webmaster.yandex.ru/) - Добавить сайт
