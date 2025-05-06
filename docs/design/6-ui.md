@@ -15,6 +15,12 @@ sidebar_position: 6
 - [fontawesome](https://fontawesome.com/icons)
 - [materialdesignicons](https://materialdesignicons.com/)
 
+---
+
+- <https://emojipedia.org/> - символьные иконки
+- [emojio.ru](https://emojio.ru/) | [getemoji.com](https://getemoji.com/) | [freecodecamp.org](https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/) - Emoji (текстовые символьные иконки)
+- [W3schools](https://www.w3schools.com/charsets/ref_utf_symbols.asp) | [Unicode-table](https://unicode-table.com/ru/html-entities/) | [Html5book](https://html5book.ru/specsimvoly-html) - Символы
+
 ### Sharing
 
 - [Блок поделится от Яндекса](https://yandex.ru/dev/share/)
