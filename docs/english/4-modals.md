@@ -12,7 +12,6 @@ sidebar_position: 4
 - **should** — мочь, мог бы
 - **ought to** — мочь, мог бы
 
-
 ## Примеры использования
 
 - **I can’t do it.** — Я не могу этого сделать.
@@ -42,4 +41,3 @@ sidebar_position: 4
 - **You don’t have to go to the shop.** — Тебе можно не идти в магазин.
 
 - **They shouldn’t lie to him — he’ll find out about it anyway.** — Им не стоит ему лгать, он все равно узнает об этом.
-

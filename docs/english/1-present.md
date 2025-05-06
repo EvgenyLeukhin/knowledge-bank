@@ -16,7 +16,7 @@ sidebar_position: 1
 
 Формула: ```Подлежащее + to be(am/are/is)```
 
-<img src="../../../img/english/i-speak.jpg" width="300" alt="i-speak.jpg" /> 
+<img src="../../../img/english/i-speak.jpg" width="300" alt="i-speak.jpg" />
 &nbsp;&nbsp;
 <img src="../../../img/english/he-speaks.jpg" width="300" alt="he-speaks.jpg" />
 &nbsp;&nbsp;
@@ -25,7 +25,6 @@ sidebar_position: 1
 <img src="../../../img/english/do-not.png" width="300" alt="do-not.png" />
 
 <img src="../../../img/english/present-simple.jpg" width="560" alt="present-simple.jpg" />
-
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6Qd1xAikoQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -55,8 +54,7 @@ Mat doesn’t like to cook.
 |You/We/They go|You/We/They do not(don’t) go|Do You/We/They go?|
 |He/She/It goes|He/She/It does not(doesn’t) go|Does He/She/It go?|
 
-***
-***
+---
 
 ## <mark>PRESENT CONTINUOUS</mark> (I am doing)
 
@@ -82,7 +80,7 @@ Mat doesn’t like to cook.
 
 |+|-|?|
 | ----------- | ----------- | ----------- |
-|I’m going to buy smth| 	I’m not going to buy smth| 	Am I going to buy smth?|
+|I’m going to buy smth| I’m not going to buy smth| Am I going to buy smth?|
 
 #### Going to - past
 
@@ -91,12 +89,11 @@ Mat doesn’t like to cook.
 |I/He/She/It was going to buy smth|I/He/She/It was not(wasn’t) going to buy smth||
 |You/WeThey were going to buy smth|You/We/They were not(wasn’t) going to buy smth||
 
-***
-***
+---
 
 ## <mark>PRESENT PERFECT</mark> (I have done)
 
-Действие, которое произошло в прошлом, но связано с НАСТОЯЩИМ моментом. ПОКАЗЫВАЕТ РЕЗУЛЬТАТ ДЕЙСТВИЯ. 
+Действие, которое произошло в прошлом, но связано с НАСТОЯЩИМ моментом. ПОКАЗЫВАЕТ РЕЗУЛЬТАТ ДЕЙСТВИЯ.
 
 Показывает сам факт результата СЕЙЧАС на какое-либо действвие в ПРОШЛОМ, причем когда именно в прошлом это произошло неважно.
 
@@ -104,8 +101,7 @@ Mat doesn’t like to cook.
 - ```I can't find my earphones, somebody has taken it```
 - ```Kate is having a party tonight, she has invited a lot of people```
 
-
-**Present Perfect** (Present Perfect Simple) – настоящее совершенное время. Ему нет соответствий в русском языке. Нам может быть трудно понять Present Perfect, потому что англоговорящие люди иначе воспринимают понятие времени. С точки зрения русского языка действие в настоящем времени не может закончиться, на то оно и настоящее. Если действие завершилось (прошло), значит, время должно быть прошедшее. Английский язык придерживается другой логики: в нем действие в настоящем может закончиться, и пример этому – Present Perfect. 
+**Present Perfect** (Present Perfect Simple) – настоящее совершенное время. Ему нет соответствий в русском языке. Нам может быть трудно понять Present Perfect, потому что англоговорящие люди иначе воспринимают понятие времени. С точки зрения русского языка действие в настоящем времени не может закончиться, на то оно и настоящее. Если действие завершилось (прошло), значит, время должно быть прошедшее. Английский язык придерживается другой логики: в нем действие в настоящем может закончиться, и пример этому – Present Perfect.
 
 - Повторяющиеся действия (```I have been in France 3 times```)
 - События, которые никогда не происходили (```She has never been in England```)
@@ -117,7 +113,6 @@ Mat doesn’t like to cook.
 - ```I have lived in England for 5 years (До сих пор живу)```
 - ```I lived in England for 5 years (Past Simple, уже не живу)```
 
-
 Формула: ```Подлежащее + have/has + глагол в 3 форме или + ed```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DInKEo2hiVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -127,8 +122,7 @@ Mat doesn’t like to cook.
 |I/You/We/They have done this work|I/You/We/They have not(haven’t) done this work|Have I/You/We/They done this work?|
 |He/She/It has done this work|He/She/It has not(hasn’t) done this work|Has He/She/It done this work?|
 
-***
-***
+---
 
 ## <mark>PRESENT PERFECT CONTINUOUS</mark> (I have been doing)
 
@@ -145,7 +139,7 @@ Mat doesn’t like to cook.
 
 ### Отличие от Present Perfect
 
-- ```My hands are very dirty. I have been reparing my bike.``` - дейстие уже закончено, я починил велосипед, но еще виден результат от этого действия - грязные руки 
+- ```My hands are very dirty. I have been reparing my bike.``` - дейстие уже закончено, я починил велосипед, но еще виден результат от этого действия - грязные руки
 - ```My bike is ok now. I have reparied it.``` (Present Perfect, Дейстие уже закончено, я починил велосипед)
 
 |+|-|?|

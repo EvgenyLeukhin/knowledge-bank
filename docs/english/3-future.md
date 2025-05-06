@@ -10,7 +10,7 @@ sidebar_position: 3
 - Простые события в будущем
 - Прогнозы, предсказания
 - Обещания
-- Сиеминутные решения 
+- Сиеминутные решения
 
 Формула: ```Подлежащее (Subject) + will + V1``` (Я изволю отправиться завтра в деревню)
 
@@ -34,8 +34,8 @@ I will not (won't) be here tomorrow.
 
 ```The plain arives at the airport at 3 p.m.```
 
-***
-***
+---
+
 ## <mark>FUTURE CONTINUOUS</mark>
 
 - Действие, которое будет в процессе в будущем времени.
@@ -54,8 +54,7 @@ I will be waiting for you
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d258vuhKXSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-***
-***
+---
 
 ## <mark>FUTURE PERFECT</mark>
 
@@ -73,8 +72,7 @@ How many sweets will you eaten by the evening?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bs0OjpMkEVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-***
-***
+---
 
 ## <mark>FUTURE PERFECT CONTINUOUS</mark>
 

@@ -41,8 +41,7 @@ Study -> Studied
 
 ```She went to the store this afternoon.```
 
-***
-***
+---
 
 ## <mark>PAST CONTINUOUS</mark> (I was doing)
 
@@ -51,9 +50,9 @@ Study -> Studied
 - В какой-то определенный момент, либо совершалось какое-либо другое действие, может прерывать первое, часто в Past Simple.
 - Временная ситуация в прошлом и этот период озвучен. (```In summer, yesterday, …```)
 - Несколько действий в прошлом, которые длились одновременно. (and, while)
-- Marker words: ```When, while, all night, all morning, all day, from Monday to Wednesday, as ```
+- Marker words: ```When, while, all night, all morning, all day, from Monday to Wednesday, as```
 
-Формула: Подлежащее + (was/were + V-ing) + Past Simple 
+Формула: Подлежащее + (was/were + V-ing) + Past Simple
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5X4RyylTILI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -64,13 +63,12 @@ Study -> Studied
 - When you called I was taking a shower.
 ```
 
-|+ (was/were + V-ing)| 	- (was/were not, wasn’t/weren’t)|?|
+|+ (was/were + V-ing)| - (was/were not, wasn’t/weren’t)|?|
 | ----------- | ----------- | ----------- |
 |I/He/She/It was working in the garden|I/He/She/It was not(wasn’t) working in the garden|Was I/He/She/It working in the garden?|
 |You/We/They were working in the garden|You/We/They were not(weren’t) working in the garden|Were You/We/They working in the garden?|
 
-***
-***
+---
 
 ## <mark>PAST PERFECT</mark> (I had done)
 
@@ -97,9 +95,9 @@ They were not at home (Past Simple). They HAD gone shoping (Past Perfect).
 
 ### Отличие от Present perfect
 
-Похоже на Present Perfect, только в Present Perfect говориться о результате действия в прошлом на настоящий момент, а в Past Perfect говориться о результате действия в прошлом на прошлый момент, который был позже. 
+Похоже на Present Perfect, только в Present Perfect говориться о результате действия в прошлом на настоящий момент, а в Past Perfect говориться о результате действия в прошлом на прошлый момент, который был позже.
 
-!!! Past Perfect сейчас все чаще заменяют на Past Simple!!! 
+!!! Past Perfect сейчас все чаще заменяют на Past Simple!!!
 
 Если последовательность контекста понятно с помощью вспомогательных слов (after, before, first, …), то можно в Past Simple.
 
@@ -107,8 +105,7 @@ They were not at home (Past Simple). They HAD gone shoping (Past Perfect).
 
 Сложно-составные предложения о событиях в прошлом. Действие, выраженное в Past Perfect стало причиной того, что случилось в Past Simple.
 
-***
-***
+---
 
 ## <mark>PAST PERFECT CONTINUOUS</mark> (I had been doing)
 
@@ -130,5 +127,3 @@ No, I had not been eating the pie!
 Я готовил яблочный пирог в то время как мой друг пришёл.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zh2gDNf_dZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
