@@ -15,7 +15,7 @@ NodeJS добавляет возможность работать с устро�
 ## npm
 
 **npm** — это пакетный менеджер JavaScript. Аналоги в других ЯП / системах — pip, apt. Этот менеджер по умолчанию устанавливается вместе с NodeJS.
-Как и с любым другим пакетным менеджером — можно устанавливать пакеты из глобального хранилища. 
+Как и с любым другим пакетным менеджером — можно устанавливать пакеты из глобального хранилища.
 
 Инициализация проекта.
 
@@ -29,7 +29,7 @@ npm init -y
 npm install -g npm@latest
 ```
 
-Пакетный менеджер может быть не только глобальным, но и локальным внутри компании. По умолчанию пакеты скачиваются из ```--registry=https://registry.npmjs.org/```. 
+Пакетный менеджер может быть не только глобальным, но и локальным внутри компании. По умолчанию пакеты скачиваются из ```--registry=https://registry.npmjs.org/```.
 
 Если npm в компании локальный, в корне проекта можно найти файл .npmrc, где описаны разные параметры, в том числе и registry:
 
@@ -37,11 +37,11 @@ npm install -g npm@latest
 registry=https://npm.yandex.net/ 
 ```
 
-***
+---
 
 ### nvm
 
-[https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+<https://github.com/nvm-sh/nvm>
 
 - Install script: ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash```
 
@@ -52,7 +52,7 @@ registry=https://npm.yandex.net/
 
 ---
 
-- Intall version: 
+- Intall version:
   ```nvm install 20```
   ```nvm install stable (last stable version)```
   ```nvm install/uninstall 10.15.0 (install exact version)```
@@ -65,7 +65,7 @@ registry=https://npm.yandex.net/
 - Use installed version: ```nvm use 10.15.0```
 - Use alisas: ```nvm alias default 10.15.0```
 
-***
+---
 
 ## Импорты в nodejs
 
@@ -140,7 +140,7 @@ app.listen(3000, function () {
 
 ---
 
-## npm 
+## npm cli
 
 Npm install with node automaticly.
 
@@ -156,18 +156,15 @@ Npm install with node automaticly.
 ```npm remove -g package-name```
 ```npm remove --save-dev package-name```
 
-
 ### Update
 
 ```npm update -g <package_name>```
 ```npm update --save-dev <package_name>```
 
-
 ### Update all packages
 
 ```npm update -g```
 ```npm update --save-dev```
-
 
 ### Rebuild
 
@@ -183,11 +180,10 @@ Globaly: ```npm list --save-dev --depth 0```
 
 ## Yarn
 
-### Install: 
+### Install
 
 ```npm install --global yarn``` || ```npm i -g yarn```
 ```yarn -v```
-
 
 - Обновление пакетов: ```yarn upgrade-interactive --latest```
 
@@ -230,7 +226,7 @@ Globaly: ```npm list --save-dev --depth 0```
 ```sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,node*,man1/node*}```
 ```sudo rm -rf /usr/local/bin/npm /usr/local/share/man/man1/node* /usr/local/lib/dtrace/node.d ~/.npm ~/.node-gyp```
 
-### To completely uninstall node + npm is to do the following:
+### To completely uninstall node + npm is to do the following
 
 - go to ```/usr/local/lib``` and delete any node and node_modules
 - go to ```/usr/local/include``` and delete any node and node_modules directory
@@ -352,6 +348,7 @@ List of packeges with versions, which installed with --save-dev flag
 ```json
 "devDependencies": {}
 ```
+
 ### Example
 
 ```json
@@ -429,4 +426,3 @@ In package.json
 ```json
   "adaptive-test": "browser-sync start -s dist",
 ```
-

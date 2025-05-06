@@ -5,9 +5,9 @@ sidebar_position: 1
 
 Express — это инструмент, который позволяет написать веб-сервер любой сложности. Даже некоторые высоконагруженные приложения работают, используя NodeJS и Express.
 
-- Установить пакет: ```npm i express --save-dev ```
+- Установить пакет: ```npm i express --save-dev```
 
-- Запуск сервера: ```node ./server.js ```
+- Запуск сервера: ```node ./server.js```
 
 ## Базовый конфиг
 
@@ -65,7 +65,7 @@ app.get(`${API_PREFIX}/text`, (req, res) => {
 
 // хэндлер put-запроса
 app.put(`${API_PREFIX}/json`, (req, res) => {
-	res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Type', 'application/json');
   res.status(201).send({data: {items: [1,2,3]}});
 });
 

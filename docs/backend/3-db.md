@@ -3,7 +3,7 @@ title: Database
 sidebar_position: 3
 ---
 
-**База данных** - набор данных, хранящихся некоторым упорядоченным способом 
+**База данных** - набор данных, хранящихся некоторым упорядоченным способом
 
 ## Виды БД
 
@@ -11,7 +11,7 @@ sidebar_position: 3
 - **Иерархические** - много файлов-хранилищ со взаимосвязями. Древовидная структура
 - **Сетевые** - сложная иерархия, более одного родителя.
 
-***
+---
 
 ## Типы БД
 
@@ -24,12 +24,11 @@ sidebar_position: 3
 
 **SQL** - Structure query language. Язык структурированных запросов. Появился ещё в 70-х. Язык запросов (язык общения с реляционной БД).
 
-https://proglib.io/p/sql-for-20-minutes
-https://www.w3schools.com/html/default.asp
-https://www.w3schools.com/sql/exercise.asp - Тренажер SQL
+<https://proglib.io/p/sql-for-20-minutes>
+<https://www.w3schools.com/html/default.asp>
+<https://www.w3schools.com/sql/exercise.asp> - Тренажер SQL
 
-
-***
+---
 
 ### NoSQL или Not only SQL
 
@@ -40,17 +39,17 @@ https://www.w3schools.com/sql/exercise.asp - Тренажер SQL
 - **Документоориентированные** (MongoDB)
 - **Графовые** (neo4j)
 
-Нетрадиционные нереляционные БД. Более современные и прогрессивные. Хранят данные отличные от таблиц. Not only SQL. 
+Нетрадиционные нереляционные БД. Более современные и прогрессивные. Хранят данные отличные от таблиц. Not only SQL.
 
 Гибкость схем и моделей БД. Маштабируемость. Производительность. Функциональность.
 
-***
+---
 
 ### Иерархические
 
 <img src="../../../img/backend/structure.png" width="350" alt="structure.png" />
 
-***
+---
 
 - **Сетевые**
 
@@ -59,7 +58,7 @@ https://www.w3schools.com/sql/exercise.asp - Тренажер SQL
 - **ООП БД**
 - Которая поддерживает концепцию ООП.
 
-***
+---
 
 ## СУБД
 
@@ -77,4 +76,3 @@ https://www.w3schools.com/sql/exercise.asp - Тренажер SQL
 ### PostgreSQL
 
 **PostgreSQL** - самая соверженная СУБД, которая поддерживает и реляционную модель, и ООП.
-
