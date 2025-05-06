@@ -12,6 +12,7 @@ export const CODE = ({children}) => (
 - **Version Control System**. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с ```master``` на ```main```.
 
 Система контроля версий, которая позволяет осуществлять:
+
 - Возврат к любой прошлой версии кода
 - Просмотр истории изменений
 - Восстановление любых данных.
@@ -43,7 +44,7 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git remote rm &lt;rep_name&gt;</CODE> - Отвязать удаленный репозиторий
 - <CODE>git remote -v</CODE> - Посмотреть привязанные репозитории
 
-***
+---
 
 ## Ветки
 
@@ -57,7 +58,7 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git merge &lt;branch_name&gt;</CODE> (--ff-only) - Сделать слияние указанной ветки с текущей (принудительно)
 - <CODE>git merge --abort </CODE>- Отменить слияние
 
-***
+---
 
 ## Изменения
 
@@ -87,26 +88,30 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git checkout &lt;branch_name&gt;</CODE> - Переключиться в последний коммит указанной ветки
 - <CODE>git reset &lt;commit_hash&gt; (--hard)</CODE> - Сбросить историю до указанного коммита (принудительно)
 - <CODE>git clean -f -d</CODE> - Удалить лишние файлы
-- ---
+
+---
+
 - <CODE>git show &lt;commit_hash&gt;</CODE> - Посмотреть дифф в этом коммите
 - <CODE>git blame filename</CODE> - Посмотреть историю изменений файла
 - <CODE>git grep import</CODE> - Показать список файлов, где есть строка "import"
 
 ---
+
 - <CODE>git checkout -b new-branch-name &lt;new-branch-name&gt;</CODE> - Удалить лишние файлы
+
 ---
 
 - <CODE>git revert comit_hash</CODE> - Удалить изменеия комита в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)
 - <CODE>git revert comit_hash1 comit_hash2 comit_hash3</CODE> - Удалить изменеия комитов в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)
 
-***
+---
 
 ## Отправка / Принятие
 
 - <CODE>git pull &lt;remote_name&gt; &lt;branch_name&gt;</CODE> - Принять изменения
 - <CODE>git push &lt;remote_name&gt; &lt;branch_name&gt;:&lt;remote_branch_name&gt; (-f)</CODE> - Отправить изменения (принудительно)
 
-***
+---
 
 ## Rebase
 
@@ -135,10 +140,10 @@ MacOS openssh install: ```brew install openssh```
 7. Если все конфликты решены и перебазирование закончено, то можно форсированно пушить изменения дочерней ветки
 <CODE>git push origin -f</CODE>
 
-8. Cвязываем ветку с origin и пушим её на сервер 
-<CODE>git push -u origin deploy</CODE> 
+8. Cвязываем ветку с origin и пушим её на сервер
+<CODE>git push -u origin deploy</CODE>
 
-***
+---
 
 ## Squash commits
 
@@ -146,7 +151,7 @@ MacOS openssh install: ```brew install openssh```
 
 Актуально, когда мы имеем много непонятных коммитов в процессе разработки и хотим оставить один понятный, когда работа по созданию нового функционала уже закончена, и при этом в истории останется один понятый коммит.
 
-1. Делаем ребейз ветки (интелектуальный), возможны моменты, описанные выше.
+I. Делаем ребейз ветки (интелектуальный), возможны моменты, описанные выше.
 
 <CODE>git rebase -i &lt;parent_brunch_name&gt;</CODE> <br /><br />
 
@@ -158,27 +163,27 @@ MacOS openssh install: ```brew install openssh```
 10. pick -&gt; s
 ```
 
-2. Меняем в vim pick -&gt; s (или squash), кроме первого коммита
+II. Меняем в vim pick -&gt; s (или squash), кроме первого коммита
 
-3. Пишем финальный commit-message
+III. Пишем финальный commit-message
 "Add new feature"
 
-4. Форсированно пушим эти изменения
+IV. Форсированно пушим эти изменения
 <CODE>git push origin -f</CODE>
 
-***
+---
 
 ## Cherry pick
 
 <CODE>git cherry-pick &lt;commit-hash&gt;</CODE> - Влить изменения определенного коммита в текущую ветку
 
-***
+---
 
 ## Git clone + SSH
 
-1. Во время установки Git устанавливаем OpenSSH-клиент
-2. В директории пользователя ОС создаём папку .ssh
-3. В этой директоии создаём файл config без разрешения, в котором будет находиться список хостов.
+I. Во время установки Git устанавливаем OpenSSH-клиент
+II. В директории пользователя ОС создаём папку .ssh
+III. В этой директоии создаём файл config без разрешения, в котором будет находиться список хостов.
 
 ```
 # github.com
@@ -219,9 +224,9 @@ RSAAuthentication yes
 IdentityFile ~/.ssh/id_rsa
 ```
 
-4. Пишем команду в этой директории для гинерации ключей ```ssh-keygen -C "Jenya@FERMA21"```
-5. Добавляем содержимое сгенерированого публичного ключа ```id_rsa.pub``` в конец строки файла ```.ssh/autorized_keys``` на сервере
-6. Можно заходить на сервер командой ```ssh some_server``` и пользоваться гитом
+IV. Пишем команду в этой директории для гинерации ключей ```ssh-keygen -C "Jenya@FERMA21"```
+V. Добавляем содержимое сгенерированого публичного ключа ```id_rsa.pub``` в конец строки файла ```.ssh/autorized_keys``` на сервере
+VI. Можно заходить на сервер командой ```ssh some_server``` и пользоваться гитом
 
 ---
 
@@ -239,17 +244,17 @@ IdentityFile ~/.ssh/id_rsa
 - <CODE>git commit --amend -m "New message"</CODE> - Создать (только для истории, без файлов)
 - <CODE>git push -f</CODE> - Форсированный пуш в репо
 
-В логе коммитов не останется старого коммита, новый отредактированный перезатрет старый при форс пуше. 
+В логе коммитов не останется старого коммита, новый отредактированный перезатрет старый при форс пуше.
 
 ---
 
 ## Редактирование коммитов (изменение истории)
 
-1. Начинаем rebase, указываем кол-во коммитов в HEAD
+I. Начинаем rebase, указываем кол-во коммитов в HEAD
 
 <CODE>git rebase -i HEAD~10</CODE> - Запустить интерактивный ребейс текущей ветки 10 коммитов
 
-2. Редактируем 
+II. Редактируем
 
 - Попадаем в VIM, нажимаем на **i** для редактирования
 - Снизу свежие, наверху старые
@@ -261,17 +266,17 @@ IdentityFile ~/.ssh/id_rsa
   - s(squash) - Склейка коммита
   - d(drop) - Удалить коммит
 
-3. После редактирования нажимаем `Ctrl + C`, `:wq` + Enter - сохраняем
+III. После редактирования нажимаем `Ctrl + C`, `:wq` + Enter - сохраняем
 
-4. Пишем новый коммит-мессадж, `Ctrl + C`, `:wq` + Enter - сохраняем
+IV. Пишем новый коммит-мессадж, `Ctrl + C`, `:wq` + Enter - сохраняем
 
-5. Делаем форсированный пуш
+V. Делаем форсированный пуш
 
 - - <CODE>git push -f</CODE> - пушим с форсом
 
 ---
 
-## GitHub CLI (https://cli.github.com/)
+## GitHub CLI (<https://cli.github.com/>)
 
 ```sh
 # install github cli
@@ -289,4 +294,3 @@ gh repo view
 # Релиз
 gh release create 1.0
 ```
-

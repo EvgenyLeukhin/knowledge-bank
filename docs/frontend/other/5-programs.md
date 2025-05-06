@@ -11,7 +11,7 @@ sidebar_position: 5
 - Steam, Figma, PuntoSwitcher
 - node + npm + nvm
 
-***
+---
 
 ## MacOS
 
@@ -33,42 +33,43 @@ sidebar_position: 5
 
 ---
 
-* **DEVELOPMENT:**
+- **DEVELOPMENT:**
   MAMP PRO, Insomnia, VS Code, Sublime Text 3, ResponsivelyApp, iTerm, XCode, Android Studio, Charles, Insomnia
-* **INTERNET:**
+- **INTERNET:**
   Chrome, Firefox, Edge, Yandex
-* **DESIGN:**
+- **DESIGN:**
   Pixelmator Pro, Photoshop, Figma, Zeplin
-* **SOUND:**
+- **SOUND:**
   Logic Pro X, Garage Band, MainStage, Abelton Live, Guitar Pro, Universal Control, Focusrite control,
-* **VIDEO:**
+- **VIDEO:**
   Final Cut Pro, Downie 4, ScreenFlow, Movavi Screen Recorder, VLC, He3
-* **PHOTO:**
+- **PHOTO:**
   Luminar 4, Luminar AI, Luminar Neo, Anamorphic, VLC
-* **MESSANGERS:** 
+- **MESSANGERS:**
   Telegram, Slack, Skype, Zoom, Yandex.Telemost, Discord, WhatsApp
-* **UTILITES:** 
+- **UTILITES:**
   CleanMyMac X, Memory Clean 3, Commander One Pro, DisplayLink Manager, PuntoSwitcher, Transmission, DeepL
-* **OFFICE:** 
+- **OFFICE:**
   Pages, Numbers, PDF Reader Pro, Keynote
 
-### [Homebrew](https://brew.sh/) 
+### [Homebrew](https://brew.sh/)
 
 Пакетный менеджер для MacOS.
 
-Install: 
-1. https://brew.sh --> ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""```
-2. Add Brew to PATH: 
+Install:
+
+1. <https://brew.sh> --> ```/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""```
+2. Add Brew to PATH:
 
 - ```(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/evgenyleukhin/.zprofile```
 - ```eval "$(/opt/homebrew/bin/brew shellenv)"```
 
-* Git: ```brew install git```
-* Wget: ```brew install wget```
-* MC: ```brew install mc``` (Ctrl + O)
-* nodejs: ```brew install node```
-* yarn: ```brew install yarn```
-* oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``` (Настройки ~/.zshrc)
+- Git: ```brew install git```
+- Wget: ```brew install wget```
+- MC: ```brew install mc``` (Ctrl + O)
+- nodejs: ```brew install node```
+- yarn: ```brew install yarn```
+- oh-my-zsh: ```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"``` (Настройки ~/.zshrc)
 
 #### Настройки
 
@@ -120,26 +121,26 @@ iMazing --> Инструменты --> Управление приложения
 
 ## Windows
 
-* **DESIGN:**
+- **DESIGN:**
   Adobe Illustrator 2020, Adobe Photoshop 2020, Figma, Miro,
-* **DEVELOPMENT:** 
+- **DEVELOPMENT:**
   Filezilla, Git Bash, GitHub Desktop, Insomnia, Notepad3, Open Server x64, Sublime Text 3, Visual Studio Code, WebStorm 2021.2.2, Windows PowerShell, Android Studio, Insomnia
-* **INTERNET:** 
+- **INTERNET:**
   Discord, Firefox, Google Chrome, Google Docs, Google Drive, Google Sheets, Google Slides, Microsoft Edge, qBittorrent, Slack, Telegram, TikTok, Yandex, Zoom, Яндекс.Диск, Яндекс.Телемост,
-* **OFFICE:** 
+- **OFFICE:**
   Adobe Acrobat DC, Adobe Acrobat Distiller DC, LibreOffice, Lightshot, TeamViewer, WordPad, Блокнот, Калькулятор
-* **PHOTO & VIDEO**: 
+- **PHOTO & VIDEO**:
   Adobe Lightroom Classic, EOS Utility, Luminar AI, Lutcurve/Lutcurve, mpv, Picasa 3, Vegas Pro 13.0 (64-bit), VEGAS Pro 15.0, Windows Media Player
-* **SOUND**: 
+- **SOUND**:
   Ableton Live 11 Lite, Adobe Audition 2020, Capture 3, Guitar Pro 7, Focusrite Control, REAPER (x64), Studio One 5, Universal Control, ASIO4ALL
-* **TEST**: 
+- **TEST**:
   AIDA64, Cinebench, CrystalDiskMark 8, FurMark, Novabench, WizTree
-* **UTILITES:** 
+- **UTILITES:**
   Armoury crate, CCleaner, DAEMON Tools Lite, Double Comander, Lively Wallpaper, Punto Switcher, UltraISO, Your Uninstaller! PRO
-* **GAMES:** 
+- **GAMES:**
   Xbox, Steam, Oculus, AMD Software Adrenalin Edition
 
-***
+---
 
 ## Linux
 
@@ -155,8 +156,7 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 ```git --version```
 
-***
-
+---
 
 #### Kdiff
 
@@ -164,19 +164,19 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 ```kdiff3 --version```
 
-***
+---
 
 #### SSH
 
 ```sudo apt-get install openssh-server -y```
 
-***
+---
 
 #### Midnight Commander
 
 ```sudo apt install mc```
 
-***
+---
 
 #### Node.js
 
@@ -184,7 +184,7 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 ```sudo apt-get install -y nodejs```
 
-***
+---
 
 #### nvm
 
@@ -194,7 +194,7 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 Установить версию: ```nvm install v10.15.1```
 
-***
+---
 
 #### Кракозябры в Linux
 
@@ -202,7 +202,7 @@ Sublime Text 3, Chromium, Opera, Mozilla Firefox, Mozilla Thunderbird, Filezilla
 
 ```dconf -> org -> x -> editor -> plugins -> preferences -> encoding -> auto-detected -> add WINDOWS-1251 (вторым параметром)```
 
-***
+---
 
 #### Xneur (аналог Punto Switcher)
 
@@ -224,30 +224,30 @@ Uninstall: `sudo apt autoremove --purge forticlient`
 3. Обновить: `sudo apt update`
 4. Установить Dislplay Link: `sudo apt install displaylink-driver`
 
-***
+---
 
 ## Chrome plugins
 
-* [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - наслоение для макета
-* [Measure-it](https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna) - линейка
-* [Page ruler](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff) - ещё линейка
-* [NoMiner - Block Coin Miners](https://chrome.google.com/webstore/detail/nominer-block-coin-miners/jfnangjojcioomickmmnfmiadkfhcdmd) - блокировка "майнинга"
-* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) - React
-* [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ru) - Redux
-* [Fake data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - заполнение форм
-* [Fake filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo) - заполнение форм
-* [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Узнать тех. стек сайта
-* [Fonts ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Узнать какие шрифты на сайте
-* [CORS Unblock](https://chromewebstore.google.com/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino) - Плагин, который убирает защиту CORS
+- [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - наслоение для макета
+- [Measure-it](https://chrome.google.com/webstore/detail/measure-it/jocbgkoackihphodedlefohapackjmna) - линейка
+- [Page ruler](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff) - ещё линейка
+- [NoMiner - Block Coin Miners](https://chrome.google.com/webstore/detail/nominer-block-coin-miners/jfnangjojcioomickmmnfmiadkfhcdmd) - блокировка "майнинга"
+- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) - React
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=ru) - Redux
+- [Fake data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - заполнение форм
+- [Fake filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo) - заполнение форм
+- [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Узнать тех. стек сайта
+- [Fonts ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Узнать какие шрифты на сайте
+- [CORS Unblock](https://chromewebstore.google.com/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino) - Плагин, который убирает защиту CORS
 
 ## Firefox plugins
 
-* [No coin](https://addons.mozilla.org/ru/firefox/addon/no-coin/) - антимайнер
-* [uBlock origin](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) - блокиратор рекламы
-* [Browsec VPN](https://addons.mozilla.org/ru/firefox/addon/browsec/) - VPN ("подмена" IP-адреса)
-* [Скачать музыку с ВК | VKD](https://addons.mozilla.org/ru/firefox/addon/%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D1%83-%D1%81-%D0%B2%D0%BA-vkd/) - cкачать музыку с VK
+- [No coin](https://addons.mozilla.org/ru/firefox/addon/no-coin/) - антимайнер
+- [uBlock origin](https://addons.mozilla.org/ru/firefox/addon/ublock-origin/) - блокиратор рекламы
+- [Browsec VPN](https://addons.mozilla.org/ru/firefox/addon/browsec/) - VPN ("подмена" IP-адреса)
+- [Скачать музыку с ВК | VKD](https://addons.mozilla.org/ru/firefox/addon/%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%BC%D1%83%D0%B7%D1%8B%D0%BA%D1%83-%D1%81-%D0%B2%D0%BA-vkd/) - cкачать музыку с VK
 
-***
+---
 
 ## Про Linux
 
@@ -256,13 +256,13 @@ MacOS или любой дистрибутив Linux — операционны�
 Если используете Windows, вам повезло заняться веб-разработкой именно сейчас — в последние годы Microsoft стала дружелюбнее к UNIX. Теперь необязательно переходить на MacOS или Linux.
 В то же время мы всё-таки рекомендуем поставить себе подсистему с Ubuntu (или другой UNIX-подобной системой) и обращаться к её утилитам и терминалу. Умение пользоваться UNIX-подобными системами — очень важная часть жизни разработчика. Речь не только о терминале, но и понимании файловой системы, ролевой модели и других особенностей. В большинстве компаний фронтенд и бэкенд разворачивают не на Windows. Также в UNIX-подобных операционных системах гораздо проще работать, поскольку сообщество разработчиков в UNIX больше и многие команды, которые вы будете видеть в README, описаны под UNIX-подобные системы. Для установки подсистемы Ubuntu следуйте инструкции на официальном сайте Microsoft.
 Также можно установить дистрибутив Linux второй операционной системой. Сделать это помогут туториалы, такие как этот. Важно: если ни разу этого не делали, советуем скопировать критичные данные на внешний жёсткий диск или в облако (например Яндекс.Диск).
-Третий вариант — использовать виртуальную машину. Это наиболее простой способ и вы точно не рискуете данными на вашем жёстком диске. Для этого можно использовать, например, VirtualBox или его аналоги. 
+Третий вариант — использовать виртуальную машину. Это наиболее простой способ и вы точно не рискуете данными на вашем жёстком диске. Для этого можно использовать, например, VirtualBox или его аналоги.
 
 ### Дистрибутивы Linux
 
 Существует огромное количество дистрибутивов Linux, которые эволюционируют годами. На Github есть репозиторий, куда юзеры сабмитят новые дистрибутивы, которые появляются на этой известной в Linux сообществе таймлайн карте.
 Дистрибутив Linux — это операционная система. Она создана из приложений, основанных на ядре Linux, и чаще всего у неё есть пакетный менеджер. Типичный дистрибутив Linux состоит из пакетов и утилит GNU, дополнительного софта, использует ядро Linux, имеет документацию и комьюнити. В десктоп дистрибутивах дополнительно поставляется среда для рабочего стола (самая популярная — GNOME).
-Если хотите быстро научиться работать с UNIX-подобной системой, а именно с Ubuntu, и ближе познакомиться с командной строкой, вам поможет, например, текстовая версия курса “Complete intro to Linux and the CLI” от Брайана Хольта (на английском). 
+Если хотите быстро научиться работать с UNIX-подобной системой, а именно с Ubuntu, и ближе познакомиться с командной строкой, вам поможет, например, текстовая версия курса “Complete intro to Linux and the CLI” от Брайана Хольта (на английском).
 Дистрибутивов Linux очень много. Ниже коротко расскажем о самых популярных. Важно помнить, что популярный не значит идеальный. Тема выбора дистрибутива по количеству холиваров не уступает вопросу «Какой JS-фреймворк лучше?».
 
 Лучше ставить LTS-версию (Long Term Support), чтобы получить большую стабильность и регулярные обновления.

@@ -19,7 +19,6 @@ document.body.appendChild(p);
 
 Это программируемые куски html-кода, которые могут инжектится в DOM-дерево через JS. Они упрощают создание разметки через JS, чтобы не городить большой js-код c помощью функции ```document.createElement()```
 
-
 ```hbs
 <div class="{{ wrapperClassName }}">
   <div class="chat__button">

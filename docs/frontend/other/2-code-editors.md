@@ -68,7 +68,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - **TailWind CSS IntelliSense** (Css IntelliSence)
 - **MJML** (поддерка mjml файлов)
 - **Sublime Text Keymap and Settings Importer** (шорткаты как в Sublime Text 3)
-- **Auto open markdown preview** (md-превью)
+- **Auto open Markdown preview** (md-превью)
 - **Template Generator** (генерирует сниппеты кода)
 - **GitHub Copilot** (AI - не работает в РФ)
 - **Colonize** (добавление точки с запятой *Shift/Alt + Enter*)
@@ -129,7 +129,6 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - <kbd>Cmd + Shift + L</kbd>&nbsp;&ndash;&nbsp;Выделить одинаковые
 - <kbd>Ctrl + G</kbd>&nbsp;&ndash;&nbsp;На строку
 - <kbd>Option + Shift + F</kbd>&nbsp;&ndash;&nbsp;Автоформатирование
-
 
 ### Settings
 
@@ -193,7 +192,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 
 Configure Language в консоли - смена языка на англ (en)
 
-***
+---
 
 ## Sublime Text 3
 
@@ -203,17 +202,16 @@ Configure Language в консоли - смена языка на англ (en)
 
 [Shortcuts for Sublime](https://shortcuts.design/tools/toolspage-sublimetext/)
 
-
-- <kbd>Ctrl + `</kbd>	- Открыть консоль
-- <kbd>Ctrl + Shift + P</kbd>	- Командная строка
-- <kbd>Ctrl + P</kbd>	- Перейти к файлу
-- <kbd>Ctrl + Shift + N</kbd>	- Новое окно
-- <kbd>Ctrl + B</kbd>	- Сайдбар
-- <kbd>Alt + ↑↓</kbd>	- Переместить строку
+- <kbd>Ctrl + `</kbd> - Открыть консоль
+- <kbd>Ctrl + Shift + P</kbd> - Командная строка
+- <kbd>Ctrl + P</kbd> - Перейти к файлу
+- <kbd>Ctrl + Shift + N</kbd> - Новое окно
+- <kbd>Ctrl + B</kbd> - Сайдбар
+- <kbd>Alt + ↑↓</kbd> - Переместить строку
 - <kbd>F11</kbd> - Полноэкранный режим
 - <kbd>Ctrl + \</kbd> - Разделение окна
 
-### Package control:
+### Package control
 
 1. Открыть консоль в Sublime text 3 (View - Show console)
 2. <kbd>Ctrl + Shift + P</kbd> - Install Package control
@@ -261,7 +259,7 @@ Configure Language в консоли - смена языка на англ (en)
 }
 ```
 
-***
+---
 
 ## Webstorm
 
@@ -279,7 +277,7 @@ Configure Language в консоли - смена языка на англ (en)
 - <kbd>Ctrl + ~</kbd> - Меню настроек оформления
 - <kbd>Shift + Shift</kbd> - Поиск везде
 
-***
+---
 
 ### .editorconfig
 
