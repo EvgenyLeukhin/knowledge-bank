@@ -3,10 +3,10 @@ title: Web
 sidebar_position: 4
 ---
 
-## Web-продукты 
+## Web-продукты
 
 - Web-приложения (React, Vue, Angular)
-- Web-cайты, интернет-магазины, CMS 
+- Web-cайты, интернет-магазины, CMS
 - Desktop-приложения на Electron
 - Email-рассылки
 
@@ -85,48 +85,47 @@ Google тестирует новые данные про скорость заг
 - если скорость загрузки замедлить с 1 до 6 секунд, то показатель вырастет на 106%;
 - страницы, помеченные как медленные, могут быть понижены в поиске Google.
 
-***
+---
 
 ## Тестирование адаптивности
 
-* [Responsively](https://responsively.app/download) - Программа по тестированию адаптивности
-* [DevTools](https://developer.chrome.com/docs/devtools/) - Тестирование через эмулятор устройств в инструментах разработчика
+- [Responsively](https://responsively.app/download) - Программа по тестированию адаптивности
+- [DevTools](https://developer.chrome.com/docs/devtools/) - Тестирование через эмулятор устройств в инструментах разработчика
 
 - **Responsive** design - Реализация резинового/гибкого дизайна, который автоматически подстраивается под размер экрана (без скачков)
 - **Adaptive** design - Реализация адаптивного дизайна через явные брейкпоинты (видны скачки размеров основных контейнеров по ширине при ресайзе страницы)
 
 ## Онлайн-сервисы для тестирования web-приложений
 
-* [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
-* [PageSpeed Insights](https://pagespeed.web.dev/) - Оптимизация/скорость загрузки
-* [Webpagetest](https://www.webpagetest.org/) - Оптимизация
-* [dynatrace](https://www.dynatrace.com/) - Оптимизация
-* [Caniuse](https://caniuse.com/) - Актуальность html/css
-* [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
-* [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - Скорость загрузки на Mobile
-* [yesviz](https://yesviz.com/) - Экраны/viewport устройств
-* [temp-email](https://temp-mail.org/ru/) - Временная почта
-* [PlaceIMG](https://placeimg.com/) - Генератор картинок
-* [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
-* [Test UFO](https://www.testufo.com/) - Тест частоты дисплея
-
+- [validator.w3.org](https://validator.w3.org/nu/) - Валидатор HTML
+- [PageSpeed Insights](https://pagespeed.web.dev/) - Оптимизация/скорость загрузки
+- [Webpagetest](https://www.webpagetest.org/) - Оптимизация
+- [dynatrace](https://www.dynatrace.com/) - Оптимизация
+- [Caniuse](https://caniuse.com/) - Актуальность html/css
+- [Statcounter](https://gs.statcounter.com/) - Статистика браузеров и ОС
+- [thinkwithgoogle](https://www.thinkwithgoogle.com/feature/testmysite/) - Скорость загрузки на Mobile
+- [yesviz](https://yesviz.com/) - Экраны/viewport устройств
+- [temp-email](https://temp-mail.org/ru/) - Временная почта
+- [PlaceIMG](https://placeimg.com/) - Генератор картинок
+- [What is My Ip](https://bestvpn.org/whats-my-ip/) - Узнать свой IP
+- [Test UFO](https://www.testufo.com/) - Тест частоты дисплея
 
 ## Плагины для браузеров
 
 ### Chrome
 
-* [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Мониторинг технологий
-* [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
-* [Font Ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Мониторинг шрифтов
-* [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - Тестирование дизайна
-* [Fake Filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo/related) - Заполнитель форм
-* [Fake Data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - Заполнитель форм
+- [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=ru) - Мониторинг технологий
+- [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln?hl=en-GB) - Тестирование GraphQL
+- [Font Ninja](https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh) - Мониторинг шрифтов
+- [Pix to pix](https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ru) - Тестирование дизайна
+- [Fake Filler](https://chrome.google.com/webstore/detail/fake-filler/bnjjngeaknajbdcgpfkgnonkmififhfo/related) - Заполнитель форм
+- [Fake Data](https://chrome.google.com/webstore/detail/fake-data-a-form-filler-y/gchcfdihakkhjgfmokemfeembfokkajj) - Заполнитель форм
 
 ### Firefox
 
-* [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
+- [Easy XSS](https://addons.mozilla.org/ru/firefox/addon/easy-xss/) - Проверка безопасности
 
-***
+---
 
 ## Cтатистика (statcounter - РФ 2022)
 
@@ -152,7 +151,6 @@ Google тестирует новые данные про скорость заг
 - **Safari** - 19%
 - **Yandex** - 12%
 - **Opera** - 3%
-
 
 ### Mobile Browsers
 
