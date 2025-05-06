@@ -61,7 +61,7 @@ input[type="checkbox"]:disabled {
 
 ## Стилизация инпутов/селектов
 
-### Placeholder 
+### Placeholder
 
 ```scss
 // инпут в фокусе (набираемый текст)

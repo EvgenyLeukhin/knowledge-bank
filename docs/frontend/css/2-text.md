@@ -58,7 +58,7 @@ sidebar_position: 2
 }
 ```
 
-Варианты свойства **font-display** (Отображение шрифта при загрузке): 
+Варианты свойства **font-display** (Отображение шрифта при загрузке):
 
 - **auto** — поведение браузера по умолчанию, обычно это то же самое, что и block.
 - **block** — ожидание шрифта в течение трёх секунд и бесконечный период для замены на подгружаемый шрифт.
@@ -66,7 +66,7 @@ sidebar_position: 2
 - **fallback** — почти мнговенная отрисовка подменного шрифта (задержка около 100 мс) и короткий период для замены на подгружаемый шрифт (около трёх секунд).
 - **optional** — почти мнговенная отрисовка подменного шрифта (задержка около 100 мс) и нулевой период для замены на подгружаемый шрифт.
 
-***
+---
 
 ### Системные шрифты (Fonts reboot)
 
@@ -103,7 +103,7 @@ body {
 }
 ```
 
-***
+---
 
 ### Google Fonts (Веб-шрифт)
 
@@ -124,7 +124,7 @@ body {
 p { font-family: 'Roboto', sans-serif; }
 ```
 
-***
+---
 
 ## Свойства для текста
 
@@ -172,7 +172,7 @@ p {
 }
 ```
 
-***
+---
 
 ### Выравнивание и направление
 
@@ -196,10 +196,9 @@ p {
 }
 ```
 
-***
+---
 
 ### Переносы и переполнение
-
 
 ```css
 p {
@@ -222,11 +221,11 @@ p {
 }
 ```
 
-***
+---
 
 ### Пример text-overflow
 
-Можно сделать только при условии, что текст будет в одну строку без переносов. 
+Можно сделать только при условии, что текст будет в одну строку без переносов.
 
 ```css
 p {
@@ -236,29 +235,29 @@ p {
 }
 ```
 
-<p 
-  style={{ 
-    textOverflow: 'ellipsis', 
+<p
+  style={{
+    textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     border: '1px solid green',
   }}
 >
-  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </p>
 
-***
+---
 
 ### Текст градиентом
 
-<p 
-  style={{ 
-    color: 'transparent', 
+<p
+  style={{
+    color: 'transparent',
     '-webkit-background-clip': 'text',
     backgroundImage: 'linear-gradient(to bottom, #f68a12, #eff20c)',
   }}
 >
-  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </p>
 
 ```css
@@ -271,14 +270,14 @@ p {
 
 ### Текст колонками
 
-<p 
-  style={{ 
-    columnCount: 3, 
+<p
+  style={{
+    columnCount: 3,
     columnWidth: '200px',
     columnGap: '15px',
   }}
 >
-  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </p>
 
 ```css
@@ -294,7 +293,7 @@ p {
 }
 ```
 
-***
+---
 
 ## Вариации font-weight
 
@@ -329,11 +328,11 @@ p {
 }
 ```
 
-***
+---
 
 ## Вариации font-size
 
-Используется редко 
+Используется редко
 
 ```css
 p {
@@ -349,7 +348,7 @@ p {
 }
 ```
 
-***
+---
 
 ## Высота строки
 

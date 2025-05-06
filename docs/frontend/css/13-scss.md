@@ -12,7 +12,7 @@ sidebar_position: 13
   --my-custom-size: 16px;
 }
 
-/* Применение */	
+/* Применение */ 
 .some-class {
   color: var(--my-custom-color);
   font-size: var(--my-custom-size);
@@ -31,7 +31,7 @@ sidebar_position: 13
 }
 ```
 
-***
+---
 
 ## SCSS
 

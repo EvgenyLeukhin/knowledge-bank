@@ -88,7 +88,7 @@ animation:
 }
 ```
 
-***
+---
 
 ## Трансформации (transform)
 
@@ -105,7 +105,7 @@ animation:
   transform: translateY(50px);
   transform: translate(100px, 50px);
 
-  // МАСШТАБИРОВАНИЕ	
+  // МАСШТАБИРОВАНИЕ 
   transform: scaleX(2);
   transform: scaleY(2);
   transform: scale(2);
@@ -168,9 +168,9 @@ animation:
 - x - смещение по X
 - y - смещение по Y
 
-***
+---
 
-***
+---
 
 ## 3D-трансформации
 
@@ -178,10 +178,9 @@ animation:
 
 16 параметров
 
-***
+---
 
 ### translate3d, scale3d, rotare3d (x, y, z)
-
 
 ```scss
 .some {
@@ -197,7 +196,7 @@ animation:
 }
 ```
 
-***
+---
 
 ### perspective, perspective-origin
 
@@ -223,8 +222,7 @@ animation:
 
 TODO
 
-***
-
+---
 
 ```scss
 .some-element {
@@ -237,7 +235,7 @@ TODO
 }
 ```
 
-***
+---
 
 ## Центровка с помощью transform
 
@@ -252,7 +250,7 @@ TODO
 }
 ```
 
-***
+---
 
 ## Плавные переходы (transition)
 
@@ -312,4 +310,3 @@ transition:
   translate: 30px 10px;
 }
 ```
-

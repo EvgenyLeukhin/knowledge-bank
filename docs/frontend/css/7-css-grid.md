@@ -71,13 +71,14 @@ export const GridChild = ({ style, children }) => (
 
 По умолчанию только при ```display: grid``` у родителя все дочерние элементы будут располагаться друг по другом и равномерно занимать всю высоту контейнера.
 
-***
+---
 
 ### grid-auto-flow
 
 Управление грид-потоком. Как будут отображаться грид-потомки изначально? Как строки* или как колонки. Аналог flex-direction, только смысл здесь обратный, у flex - это направлление оси как row, а у grid - это распределение потомков в качестве колонок.
 
 Визаульно это выглядит так (вообще запутать хотят):
+
 ```css
 flex-direction: column === grid-auto-flow: row
 flex-direction: row === grid-auto-flow: column
@@ -111,7 +112,7 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
 ## Колонки
 
@@ -137,7 +138,7 @@ flex-column === grid-row
   <GridChild>8</GridChild>
 </GridParent>
 
-***
+---
 
 Можно использовать новую относительную grid-единицу - фракцию (fr). Аналог коэф. flex-grow. Её ввели, чтобы не записывать проценты с дробями.
 
@@ -159,7 +160,7 @@ flex-column === grid-row
   <GridChild>8</GridChild>
 </GridParent>
 
-***
+---
 
 ```scss
 .grid-container {
@@ -180,11 +181,10 @@ flex-column === grid-row
   <GridChild>9</GridChild>
 </GridParent>
 
-***
+---
 
 Если нужны одинаковые колонки или ряды, то можно воспользоваться функцией **repeat()**. Будет создано 3 колонки по 250 пикселей.
 Фиксированные размеры колонок неадаптивны (Можно проверить ресайзом).
-
 
 ```scss
 .grid-container {
@@ -210,7 +210,7 @@ flex-column === grid-row
   <GridChild>9</GridChild>
 </GridParent>
 
-***
+---
 
 Лучше использовать адаптивные значения в фракциях.
 
@@ -233,7 +233,7 @@ flex-column === grid-row
   <GridChild>9</GridChild>
 </GridParent>
 
-***
+---
 
 ### grid-auto-columns
 
@@ -263,7 +263,7 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
 ## Строки
 
@@ -295,7 +295,7 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
 ```scss
 .grid-container {
@@ -321,7 +321,7 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
 ### grid-auto-rows
 
@@ -353,7 +353,7 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
 ## Отступы
 
@@ -388,7 +388,7 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
 ## Выравнивание грид-потомков
 
@@ -412,9 +412,9 @@ flex-column === grid-row
   <GridChild>4</GridChild>
 </GridParent>
 
-***
+---
 
-### justify-content 
+### justify-content
 
 Выравнивание контента по оси X относительно род. контейнера (актуально при наличие свободного места в контейнере)
 
@@ -440,9 +440,9 @@ flex-column === grid-row
   <GridChild>10</GridChild>
 </GridParent>
 
-***
+---
 
-### place-content 
+### place-content
 
 Шорткат (align-content justify-content).
 
@@ -462,9 +462,9 @@ flex-column === grid-row
   <GridChild>4</GridChild>
 </GridParent>
 
-***
+---
 
-### align-items 
+### align-items
 
 Выравнивание контента внутри grid-ячеек по оси Y. Будет ужиматься по контенту, если явно не задана высота, при этом незримая разлиновка grid-ячеек будет оставаться неизменной, а позиционироваться будет только внутренний контент этих ячеек.
 
@@ -489,8 +489,7 @@ flex-column === grid-row
   <GridChild>9</GridChild>
 </GridParent>
 
-
-***
+---
 
 ### justify-items
 
@@ -517,7 +516,7 @@ flex-column === grid-row
   <GridChild>9</GridChild>
 </GridParent>
 
-***
+---
 
 ### place-items
 
@@ -541,7 +540,7 @@ flex-column === grid-row
   <GridChild>9</GridChild>
 </GridParent>
 
-***
+---
 
 ## Выравнивание отдельного грид-потомка
 
@@ -574,7 +573,7 @@ flex-column === grid-row
   <GridChild style={{ background: 'deeppink', alignSelf: 'center' }}>9</GridChild>
 </GridParent>
 
-***
+---
 
 ### justify-self
 
@@ -605,7 +604,7 @@ flex-column === grid-row
   <GridChild style={{ background: 'deeppink', justifySelf: 'center' }}>9</GridChild>
 </GridParent>
 
-***
+---
 
 ### place-self
 
@@ -634,7 +633,7 @@ flex-column === grid-row
   <GridChild style={{ background: 'deeppink', placeSelf: 'end end' }}>9</GridChild>
 </GridParent>
 
-***
+---
 
 ## Позиционирование grid-потомков
 
@@ -667,7 +666,7 @@ flex-column === grid-row
   <GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridColumn: '1 / 4' }}>7</GridChild>
 </GridParent>
 
-***
+---
 
 ### grid-row
 
@@ -694,7 +693,7 @@ flex-column === grid-row
   <GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridRow: '1 / 4' }}>7</GridChild>
 </GridParent>
 
-***
+---
 
 ### grid-area
 
@@ -725,14 +724,13 @@ flex-column === grid-row
   <GridChild style={{ background: 'deeppink', gridArea: '2 / 1 / 3 / 4' }}>7</GridChild>
 </GridParent>
 
-***
+---
 
 ### grid-template-areas
 
 Можно каждому грид-потомку указывать в ```grid-area``` не значения start и end, а указывать шаблон. На этих шаблонах можно строить сетки.
 
 '.' - в шаблоне пустое место.
-
 
 ```scss
 .grid-container {
@@ -759,4 +757,3 @@ flex-column === grid-row
   <GridChild style={{ background: 'lightblue', color: 'black', gridArea: 'content' }}>CONTENT</GridChild>
   <GridChild style={{ background: 'lightgray', color: 'black', gridArea: 'footer' }}>FOOTER</GridChild>
 </GridParent>
-
