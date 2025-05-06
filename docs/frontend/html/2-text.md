@@ -3,7 +3,7 @@ title: Текст
 sidebar_position: 2
 ---
 
-- [https://emojipedia.org/](https://emojipedia.org/)
+- <https://emojipedia.org/>
 - [emojio.ru](https://emojio.ru/) | [getemoji.com](https://getemoji.com/) | [freecodecamp.org](https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/) - Emoji (текстовые символьные иконки)
 - [W3schools](https://www.w3schools.com/charsets/ref_utf_symbols.asp) | [Unicode-table](https://unicode-table.com/ru/html-entities/) | [Html5book](https://html5book.ru/specsimvoly-html) - Символы
 
@@ -41,7 +41,7 @@ sidebar_position: 2
 
 ```\u00A0``` - JS-Юникод можно вставлять в строку (js, ts или json)
 
-***
+---
 
 ## Простое форматирование
 
@@ -93,7 +93,7 @@ Some text<sup>Some text</sup>
 Some text<sup>будет сверху</sup>&nbsp;
 Some text<sub>будет снизу</sub>&nbsp;
 
-***
+---
 
 ## Смысловое форматирование
 

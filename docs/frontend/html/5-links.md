@@ -5,9 +5,9 @@ sidebar_position: 5
 
 Тэг строчный, но им можно оборачивать любые элементы, для того чтобы они были кликабельны.
 
-* ```download``` - Скачать
-* ```rel``` - relationship
-* ```target``` - управление вкладкой (_self и _blank)
+- ```download``` - Скачать
+- ```rel``` - relationship
+- ```target``` - управление вкладкой (_self и_blank)
 
 ```html
 <!-- Простая ссылка на сторонний ресурс в новой вкладке -->
@@ -39,10 +39,10 @@ sidebar_position: 5
 <a href="https://t.me/eleukhin">eleukhin</a>
 ```
 
-* <a href="http://ya.ru"  target="_blank" rel="nofollow" title="Click me!">Ссылка на сайт Яндекс</a>
-* <a href="/knowledge-bank/docs/frontend/html/images/">Ссылка на внутреннюю страницу "Изображения"</a>
-* <a href="#списки">Якорная ссылка</a>
-* <a href="https://tourpass.ru/docs/politic-person-data.pdf" download>Ссылка на pdf-файл</a>
-* <a href="mailto:someone@example.com">Send email</a>
-* <a href="tel:+4733378901">+47 333 78 901</a>
-* <a href="https://t.me/eleukhin">eleukhin Telegram</a>
+- <a href="http://ya.ru"  target="_blank" rel="nofollow" title="Click me!">Ссылка на сайт Яндекс</a>
+- <a href="/knowledge-bank/docs/frontend/html/images/">Ссылка на внутреннюю страницу "Изображения"</a>
+- <a href="#списки">Якорная ссылка</a>
+- <a href="https://tourpass.ru/docs/politic-person-data.pdf" download>Ссылка на pdf-файл</a>
+- <a href="mailto:someone@example.com">Send email</a>
+- <a href="tel:+4733378901">+47 333 78 901</a>
+- <a href="https://t.me/eleukhin">eleukhin Telegram</a>

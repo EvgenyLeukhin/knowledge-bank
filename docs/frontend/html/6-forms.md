@@ -64,7 +64,7 @@ sidebar_position: 6
   <button type="submit">Отправить</button>
 </form>
 
-***
+---
 
 ## Текстовые поля
 
@@ -94,7 +94,7 @@ sidebar_position: 6
 <input type="file" />&nbsp;<br /><br />
 <textarea rows="10" cols="45" placeholder="Введите комментарий"></textarea>
 
-***
+---
 
 ## Списки
 
@@ -124,12 +124,12 @@ sidebar_position: 6
     <option>1981 год</option>
     <option>1982 год</option>
     <option>1983 год</option>
-  </optgroup> 
+  </optgroup>
   <optgroup label="90-е">
     <option>1991 год</option>
     <option>1992 год</option>
     <option>1993 год</option>
-  </optgroup> 
+  </optgroup>
 </select>
 
 ### datalist
@@ -164,7 +164,7 @@ sidebar_position: 6
   <option value="Высшее(магистр)" />
 </datalist>
 
-***
+---
 
 ## Checkbox и radio
 
@@ -217,7 +217,7 @@ sidebar_position: 6
   <span>более 60 (disabled)</span>
 </label>
 
-***
+---
 
 ## Дата и время
 
@@ -231,7 +231,7 @@ sidebar_position: 6
 <input type="month" />&nbsp;
 <input type="week" />&nbsp;
 
-***
+---
 
 ## Кнопки
 
@@ -264,8 +264,7 @@ sidebar_position: 6
 <input type="submit" value="Отправить" />
 <input type="reset" value="Сбросить" />
 
-***
-
+---
 
 ## Range, &lt;meter&gt; и &lt;progress&gt;
 
@@ -278,7 +277,6 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
 ```<meter>``` - используется для вывода значения в некотором известном диапазоне. Применяется преимущественно для отображения числовых значений (например, количества результатов поиска, объёма жидкости, давления и др).
 
 ```<progress>``` - показывает прогресс состояния (например, загрузка фото).
-
 
 ```html
 <h3>Range</h3>
@@ -304,7 +302,7 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
 <input id="range_id" type="range" value="10" step="0.1" /><br />
 
 <h3>Температура воды</h3>
-<meter value="0" max="100" low="10" high="60">Низкая</meter>&nbsp; 
+<meter value="0" max="100" low="10" high="60">Низкая</meter>&nbsp;
 <meter value="30" max="100" low="10" high="60">Нормальная</meter>&nbsp;
 <meter value="80" max="100" low="10" high="60">Горячая</meter>&nbsp;
 <meter value="100" max="100">Кипяток</meter>&nbsp;
@@ -316,15 +314,15 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
   Загружено на <span id="value">25</span>%
 </progress>
 
-***
+---
 
 ## JS-атрибуты
 
-* ```onclick``` - клик
-* ```onsubmit``` - отправка формы
-* ```oninput``` - ввод значения
+- ```onclick``` - клик
+- ```onsubmit``` - отправка формы
+- ```oninput``` - ввод значения
 
-***
+---
 
 ## Pattern
 

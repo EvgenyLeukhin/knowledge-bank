@@ -27,6 +27,7 @@ sidebar_position: 11
 Посетители, кот. заходят на сайт. **Лиды** - активные посетители сайта, кот. выполняют какие-либо действия (заполняют формы, подписываются и т.д.). Хостинг - максимально близко к ЦА.
 
 Трафик бывает:
+
 - По прямым визитам (по url-сайта);
 - По ссыкам с других сайтов (доноры);
 - Рекламный (рекламные баннеры), как правило, платный;
@@ -70,7 +71,6 @@ sidebar_position: 11
 - [Яндекс-Вебмастер](https://webmaster.yandex.ru/)
 - [Google-Аналитика](https://analytics.google.com/)
 
-
 ### Реклама
 
 - [Яндекс-Директ](https://direct.yandex.ru/) - Реклама в Яндекс
@@ -86,9 +86,7 @@ sidebar_position: 11
 - Должна быть хорошая ссылочная масса.
 - Без грамматических ошибок.
 
-
 <!-- - [Google Ads](https://ads.google.com/aw/campaigns/new/express?ocid=1082361030&cmpnInfo=%7B%228%22%3A%2278922292-d7a2-4266-b5df-6973325481a9%22%7D&subid=ru-ww-et-g-aw-a-tools-awhp%21o2&step=cbss&authuser=0&uscid=1082361030&__c=6898664470&euid=669671666&__u=2701374434&mode=signup)
 - [Google-Marketing Platform](https://marketingplatform.google.com/about/)
 - [Яндекс-Webmaster](https://webmaster.yandex.ru/) - Добавить сайт
 - [SMM]()	Продвижение в соц. сетях -->
-
