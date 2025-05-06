@@ -9,11 +9,9 @@ export const H3 = ({children}) => (
   </h3>
 );
 
-
 ## Logic Pro X
 
 <a href="https://evgenyleukhin.github.io/knowledge-bank/pdf/logic-pro-user-guide.pdf" target="_blank">logic-pro-user-guide.pdf</a>
-
 
 <H3>Настойки программы (Ctrl + ,) - Preferences</H3>
 
@@ -25,7 +23,7 @@ export const H3 = ({children}) => (
 - Расширенные настройки: Cmd + , -> Advanced -> Show advanced tools -> Audio 
 ```
 
-***
+---
 
 <H3>Создание проекта (Cmd + N)</H3>
 
@@ -34,7 +32,7 @@ export const H3 = ({children}) => (
 - Hip-hop, Electronic, Songwriter, Orchestral, Multi-track, Music for picture or from scratch 
 ```
 
-***
+---
 
 <H3>Создание дорожки (Cmd + Alt + N)</H3>
 
@@ -50,7 +48,7 @@ export const H3 = ({children}) => (
 - External MIDI - ???
 ```
 
-***
+---
 
 <H3>Верхняя панель управления (Topbar)</H3>
 
@@ -79,7 +77,7 @@ export const H3 = ({children}) => (
   - ПРОВОДНИК ФАЙЛОВ в ОС (F)
 ```
 
-***
+---
 
 <H3>Верхняя суб-панель управления (Toolbar)</H3>
 
@@ -90,7 +88,7 @@ export const H3 = ({children}) => (
 - Остальные пока ???
 ```
 
-***
+---
 
 <H3>Заголовки дорожек (Tracks headers)</H3>
 
@@ -112,21 +110,21 @@ export const H3 = ({children}) => (
 - Balance pan
 ```
 
-***
+---
 
 <H3>Рабочая область, где записываются дорожки (Workspace)</H3>
 
-***
+---
 
 <H3>Библиотека (Sound Library) (Y)</H3>
 
 ```Logic Pro X -> Sound Library -> Open Sound Library Manager```
 
-***
+---
 
 <H3>Инспектор (I)</H3>
 
-***
+---
 
 <H3>Эффекты, Audio FX</H3>
 
@@ -142,11 +140,11 @@ export const H3 = ({children}) => (
 
 <H3>Флекс</H3>
 
-#### Флекс волны (для голоса)
+### Флекс волны (для голоса)
 
 ```Выбираем трек голоса -> Включаем режим Flex -> Flex pitch (Выбор алгоритма) -> E -> Track```
 
-#### Параметры для регулирования (Ручной тюнинг голоса):
+### Параметры для регулирования (Ручной тюнинг голоса)
 
 ```
 ПКМ -> Set to perfect pitch
@@ -159,19 +157,19 @@ export const H3 = ({children}) => (
   6. Снизу-справа: Shift - Сдвиг волны вверх-вниз
 ```
 
-#### Флекс ритма
+### Флекс ритма
 
 ```Flex -> Flex pitch```
 
-***
+---
 
 <H3>Автоматизация (A)</H3>
 
-***
+---
 
 <H3>Библиотека лупов (O)</H3>
 
-***
+---
 
 <H3>Запись аудио с ОС</H3>
 
@@ -181,7 +179,7 @@ export const H3 = ({children}) => (
 - Play system audio signal -> You can hear it from System playback on your output device
 ```
 
-***
+---
 
 <H3>Миксдаун проекта, сведение (Bounce)</H3>
 
@@ -193,7 +191,7 @@ Project or Section ->
 PCM (.AIFF or .WAV), MP3 -> OK 
 ```
 
-***
+---
 
 <H3>Горячие клавиши</H3>
 
@@ -203,7 +201,7 @@ PCM (.AIFF or .WAV), MP3 -> OK
 |R|Record|
 |K|Метроном вкл/выкл|
 
-***
+---
 
 |TRACK|(Дорожка)|
 |---|---|
@@ -216,7 +214,7 @@ PCM (.AIFF or .WAV), MP3 -> OK
 |H|Hide, Hidden track, спрятать дорожку|
 |L|Loop copy, вставить копии до конца трека|
 
-***
+---
 
 |SCALE|(Масштабирование)|
 |---|---|
@@ -224,7 +222,7 @@ PCM (.AIFF or .WAV), MP3 -> OK
 |Cmd + Up, Dowm, Left, Right|Масштабировать вручную|
 |Zoom touchpad|Масштабировать вручную|
 
-***
+---
 
 |ОКНА|(Windows)|
 |---|---|
@@ -248,9 +246,9 @@ PCM (.AIFF or .WAV), MP3 -> OK
 1. Открыть **Focusrite Control**
 2. Замьютить все микрофонные входы (optional)
 3. Loopback unmute, choose **Playback 1-2** или **Custom Mix 1-2**
-3. Открыть **Logic Pro**
-4. Выбрать **Audio track** --> **Input 5 + 6**
-5. **Замьютить** этот трек
-6. **Запустить звук** на компьютере и **Нажать на запись** 
+4. Открыть **Logic Pro**
+5. Выбрать **Audio track** --> **Input 5 + 6**
+6. **Замьютить** этот трек
+7. **Запустить звук** на компьютере и **Нажать на запись**
 
 ---
