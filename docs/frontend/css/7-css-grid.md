@@ -5,7 +5,7 @@ sidebar_position: 7
 
 export const GridParent = ({ style, children }) => (<div style={{padding: 10,minHeight: '30vh',border: '1px solid gray',margin: '0 auto',display: 'grid',...style,}}>{children}</div>);
 
-export const GridChild = ({ style, children }) => (<divstyle={{display: 'inline-flex',alignItems: 'center',justifyContent: 'center',backgroundColor: 'maroon',border: '1px solid #ccc',color: 'white',fontSize: 16,...style,}}>{children}</divstyle=>);
+export const GridChild = ({ style, children }) => (<div style={{display: 'inline-flex',alignItems: 'center',justifyContent: 'center',backgroundColor: 'maroon',border: '1px solid #ccc',color: 'white',fontSize: 16,...style,}}>{children}</div>);
 
 [CCS-Grid guide](https://doka.guide/css/grid-guide/)
 
