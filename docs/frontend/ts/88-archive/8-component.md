@@ -11,13 +11,11 @@ Generic type.
 type TProps = {
   prop1: string;
   prop2: number;
-}
+};
 
 const SomeComp: React.FC<TProps> = ({ prop1, prop2, style }) => {
-  return (
-    <div>SomeComp</div> 
-  )
-}
+  return <div>SomeComp</div>;
+};
 ```
 
 ---
@@ -30,13 +28,11 @@ const SomeComp: React.FC<TProps> = ({ prop1, prop2, style }) => {
 type TProps = {
   prop1: string;
   prop2: number;
-}
+};
 
 const SomeComp = ({ prop1, prop2 }: TProps) => {
-  return (
-    <div>SomeComp</div> 
-  )
-}
+  return <div>SomeComp</div>;
+};
 ```
 
 ---
@@ -47,7 +43,7 @@ const SomeComp = ({ prop1, prop2 }: TProps) => {
 type TProps = {
   children: React.ReactNode;
   style?: React.CSSProperties;
-}
+};
 ```
 
 ---
@@ -70,7 +66,13 @@ interface IProps {
 // onClick и disabled - кастомные пропсы компонента
 
 // использоание MixProps
-const GameButton: React.FC<MixProps<IProps>> = ({ className, onClick, style, children, disabled }) => {
+const GameButton: React.FC<MixProps<IProps>> = ({
+  className,
+  onClick,
+  style,
+  children,
+  disabled,
+}) => {
   return (
     <button onClick={onClick} style={style} disabled={disabled}>
       {children}
@@ -114,7 +116,9 @@ const UiInput: React.FC<TextFieldProps & IInputProps> = ({
   showErrorMessage = true,
   ...props
 }) => {
-  const hasError = (typeof uiError === 'object' && uiError.error) || (typeof uiError === 'boolean' && uiError);
+  const hasError =
+    (typeof uiError === 'object' && uiError.error) ||
+    (typeof uiError === 'boolean' && uiError);
 
   return (
     <div className={`tms-input ${styles.formControl}`}>
@@ -124,17 +128,19 @@ const UiInput: React.FC<TextFieldProps & IInputProps> = ({
         className={cn(styles.input, className, {
           [styles.error]: hasError,
         })}
-        variant="outlined"
+        variant='outlined'
         {...props} // передача всех встроенных props
       />
 
-      {!!uiError && typeof uiError === 'object' && uiError.helperText && showErrorMessage && (
-        <div className={styles.errorText}>{uiError.helperText}</div>
-      )}
+      {!!uiError &&
+        typeof uiError === 'object' &&
+        uiError.helperText &&
+        showErrorMessage && (
+          <div className={styles.errorText}>{uiError.helperText}</div>
+        )}
     </div>
   );
 };
 
 export default UiInput;
-
 ```

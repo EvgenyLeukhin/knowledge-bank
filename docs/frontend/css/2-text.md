@@ -16,45 +16,53 @@ sidebar_position: 2
 ```css
 /* Inter-400 */
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: 
      /* Поиск локальных шрифтов в ОС */
-    local("Inter Regular"), local("Inter-Regular"), local("Inter_Regular"),
-    url("/fonts/inter/inter-regular.woff2") format("woff2"),
-    url("/fonts/inter/inter-regular.woff") format("woff"),
-    url("/fonts/inter/inter-regular.ttf") format("truetype");
+    local('Inter Regular'),
+    local('Inter-Regular'),
+    local('Inter_Regular'),
+    url('/fonts/inter/inter-regular.woff2') format('woff2'),
+    url('/fonts/inter/inter-regular.woff') format('woff'),
+    url('/fonts/inter/inter-regular.ttf') format('truetype');
 }
 
 /* Inter-700-i */
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-display: swap;
   font-style: italic;
   font-weight: 700;
   src: 
    /* Поиск локальных шрифтов в ОС */
-    local("Inter Bold Italic"), local("Inter-Bold-Italic"), local("Inter_Bold_Italic"),
-    url("/fonts/inter/inter-bold-i.woff2") format("woff2"),
-    url("/fonts/inter/inter-bold-i.woff") format("woff"),
-    url("/fonts/inter/inter-bold-i.ttf") format("truetype");
+    local('Inter Bold Italic'),
+    local('Inter-Bold-Italic'),
+    local('Inter_Bold_Italic'),
+    url('/fonts/inter/inter-bold-i.woff2') format('woff2'),
+    url('/fonts/inter/inter-bold-i.woff') format('woff'),
+    url('/fonts/inter/inter-bold-i.ttf') format('truetype');
 }
 
 /* maven-pro-800 */
 @font-face {
-  font-family: "Maven Pro";
+  font-family: 'Maven Pro';
   font-display: swap;
   font-style: normal;
   font-weight: 800;
   /* Поиск локальных шрифтов в ОС */
-  src: local("Maven Pro ExtraBold"), local("Maven-Pro-ExtraBold"),
-    local("Maven_Pro_ExtraBold"), local("Maven Pro Extra Bold"),
-    local("Maven-Pro-Extra-Bold"), local("Maven_Pro_Extra_Bold"),
-    url("/fonts/maven-pro/800/maven-pro-800.woff2") format("woff2"),
-    url("/fonts/maven-pro/800/maven-pro-800.woff") format("woff"),
-    url("/fonts/maven-pro/800/maven-pro-800.ttf") format("truetype");
+  src:
+    local('Maven Pro ExtraBold'),
+    local('Maven-Pro-ExtraBold'),
+    local('Maven_Pro_ExtraBold'),
+    local('Maven Pro Extra Bold'),
+    local('Maven-Pro-Extra-Bold'),
+    local('Maven_Pro_Extra_Bold'),
+    url('/fonts/maven-pro/800/maven-pro-800.woff2') format('woff2'),
+    url('/fonts/maven-pro/800/maven-pro-800.woff') format('woff'),
+    url('/fonts/maven-pro/800/maven-pro-800.ttf') format('truetype');
 }
 ```
 
@@ -75,31 +83,18 @@ body {
   font-family: 
     /* Cross-platform generic font family (default user interface font) */
     system-ui,
-
-    /* Safari for macOS and iOS (San Francisco) */
-    -apple-system,
-
-    /* Windows */
-    "Segoe UI",
-
-    /* Android */
-    Roboto,
-
-    /* Basic web fallback */
-    "Helvetica Neue", Arial,
-
-    /* Linux */
-    "Noto Sans",
-    "Liberation Sans",
-
-    /* Sans serif fallback */
-    sans-serif,
-
-    /* Emoji fonts */
-    "Apple Color Emoji", 
-    "Segoe UI Emoji", 
-    "Segoe UI Symbol", 
-    "Noto Color Emoji";
+    /* Safari for macOS and iOS (San Francisco) */ -apple-system,
+    /* Windows */ 'Segoe UI',
+    /* Android */ Roboto,
+    /* Basic web fallback */ 'Helvetica Neue',
+    Arial,
+    /* Linux */ 'Noto Sans',
+    'Liberation Sans',
+    /* Sans serif fallback */ sans-serif,
+    /* Emoji fonts */ 'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
 }
 ```
 
@@ -109,9 +104,12 @@ body {
 
 ```html
 <!-- 1 вариант - Подключение внутри тега <head> -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- 2 вариант - Подключение внутри css -->
 <style>
@@ -121,7 +119,9 @@ body {
 
 ```css
 /* Использование */
-p { font-family: 'Roboto', sans-serif; }
+p {
+  font-family: 'Roboto', sans-serif;
+}
 ```
 
 ---
@@ -133,7 +133,7 @@ p { font-family: 'Roboto', sans-serif; }
 ```css
 p {
   /* Цвет */
-  color: black | #000000 | rgb(0,0,0) | hsl(0, 50%, 50%);
+  color: black | #000000 | rgb(0, 0, 0) | hsl(0, 50%, 50%);
 
   /* Размер */
   font-size: 16px | 2em | 200% | 1rem | 10vw;
@@ -142,13 +142,15 @@ p {
   line-height: 22px | 2.5em | 1.5rem | 120% | 1.3;
 
   /* Семейство шрифтов */
-  font-family: 'Inter', sans-serif | serif | monospace; 
+  font-family:
+    'Inter',
+    sans-serif | serif | monospace;
 
   /* Стиль шрифта */
   font-style: normal | italic;
 
   /* Толщина начертания (жирность, вес) */
-  font-weight: normal | bold | 100 ... 900 | lighter | bolder;
+  font-weight: normal | bold | 100... 900 | lighter | bolder;
 
   /* Подчеркивание, зачеркивание, цвет подчеркивания*/
   text-decoration: underline | line-through | overline | none;

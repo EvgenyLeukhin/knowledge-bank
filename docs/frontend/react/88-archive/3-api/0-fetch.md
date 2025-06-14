@@ -3,8 +3,6 @@ title: fetch
 sidebar_position: 0
 ---
 
-
-
 - Продвинутый вариант вместо устаревшего XMLHttpRequest. Выполняет асинхронные запросы. Возвращает промис.
 - Можно работать с такмими методами как get, post, запрашивать данные или файлы.
 - Ответы с fetch, чтобы получить данные, сперва нужно передать их в метод json():
@@ -25,14 +23,14 @@ sidebar_position: 0
 
 ```js
 fetch('https://jsonplaceholder.typicode.com/todos') // вернет промис (метод GET по умолчанию)
- // обработка ответа промиса
+  // обработка ответа промиса
   .then(res => res.json())
 
-   // вывод ответа
+  // вывод ответа
   .then(json => console.log(json))
 
   // обработка ошибки
-  .catch(error => console.error('error', error)) 
+  .catch(error => console.error('error', error));
 ```
 
 ```js
@@ -59,19 +57,18 @@ fetch('https://example.com/profile', {
     password: '123',
   }),
 })
+  // json convert
+  .then(response => response.json())
 
-// json convert
-.then(response => response.json())
+  // Success
+  .then(data => {
+    console.log('Success:', data);
+  })
 
-// Success
-.then(data => {
-  console.log('Success:', data);
-})
-
-// error
-.catch(error => {
-  console.error('Error:', error);
-});
+  // error
+  .catch(error => {
+    console.error('Error:', error);
+  });
 ```
 
 ### Пример с обработкой
@@ -93,7 +90,7 @@ fetch(endpoint, { method: 'GET' })
       return response.json();
     }
 
-  // NOT OK - неуспешный запрос
+    // NOT OK - неуспешный запрос
     else {
       console.log('error');
     }
@@ -104,7 +101,7 @@ fetch(endpoint, { method: 'GET' })
     console.log('all data: ', data);
 
     return data.map((item, index) => console.log(`item-${index}: `, item));
-  })
+  });
 ```
 
 ---
@@ -143,9 +140,10 @@ const newPost = {
   title: 'foo',
   body: 'bar',
   userId: 1,
-}
+};
 
-fetch('https://jsonplaceholder.typicode.com/posts', { // метод get по умолчанию
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  // метод get по умолчанию
   // или указываем URL в опциях
   url: 'https://jsonplaceholder.typicode.com/posts',
 
@@ -161,10 +159,10 @@ fetch('https://jsonplaceholder.typicode.com/posts', { // метод get по у�
   },
 })
   // ОБРАБОТКА - в fetch возвращенные данные нужно обработать методон json()
-  .then((response) => response.json())
+  .then(response => response.json())
 
   // далее уже можно получить доступ к обработанным данным и что-ниб с ними делать
-  .then((data) => {
+  .then(data => {
     console.log(data);
 
     // к примеру загрузить их в стейт
@@ -172,9 +170,9 @@ fetch('https://jsonplaceholder.typicode.com/posts', { // метод get по у�
   })
 
   // ОБРАБОТЧИК ОШИБОК
-  .catch((err) => {
+  .catch(err => {
     console.log(err);
-  })
+  });
 ```
 
 ---
@@ -186,7 +184,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', { // метод get по у�
 ```js
 async function loadPosts() {
   // переменная response будет ждать выполнение fetch
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const movies = await response.json();
   console.log(movies);
 }
@@ -201,7 +199,7 @@ loadPosts(); // --> return movies in console
 async function loadPosts() {
   // успешное выполнение запроса
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const movies = await response.json();
 
     console.log('movies', movies);
@@ -209,11 +207,11 @@ async function loadPosts() {
     return movies;
 
     // обработчик ошибок
-  } catch(e) {
-    console.error("Error:", error);
+  } catch (e) {
+    console.error('Error:', error);
 
-    // или 
-    throw new Error("Network response was not OK");
+    // или
+    throw new Error('Network response was not OK');
 
     // завершение: сработает в любом случае (и при try, и при catch)
   } finally {
@@ -222,12 +220,12 @@ async function loadPosts() {
 }
 
 // POST-запрос
-async function postData(url = "", data = {}) {
+async function postData(url = '', data = {}) {
   // Default options are marked with *
   const response = await fetch(url, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
   });
@@ -235,7 +233,7 @@ async function postData(url = "", data = {}) {
   return response.json();
 }
 
-postData("https://example.com/answer", { answer: 42 }).then((data) => {
+postData('https://example.com/answer', { answer: 42 }).then(data => {
   console.log(data);
 });
 ```
@@ -266,30 +264,30 @@ postData("https://example.com/answer", { answer: 42 }).then((data) => {
 ```ts
 // типизациия пришедших данных
 type TPokemonData = {
-  id: string
-  number: string
-  name: string
-  image: string
-  fetchedAt: string
+  id: string;
+  number: string;
+  name: string;
+  image: string;
+  fetchedAt: string;
   attacks: {
     special: Array<{
-      name: string
-      type: string
-      damage: number
-    }>
-  }
-}
+      name: string;
+      type: string;
+      damage: number;
+    }>;
+  };
+};
 
 // типизация ошибки
-type TError = Array<{message: string}>
+type TError = Array<{ message: string }>;
 
 // типизация ответа
 type JSONResponse = {
   data?: {
-    pokemon: Omit<PokemonData, 'fetchedAt'>
-  }
-  errors?: Array<{message: string}>
-}
+    pokemon: Omit<PokemonData, 'fetchedAt'>;
+  };
+  errors?: Array<{ message: string }>;
+};
 
 async function fetchPokemon(name: string): Promise<TPokemonData, TError> {
   const response = await fetch(url, { options });

@@ -6,7 +6,10 @@ sidebar_position: 8
 ```tsx
 import { useEffect } from 'react';
 
-const useClickOutside = (ref: React.RefObject<HTMLDivElement>, action: () => void): void => {
+const useClickOutside = (
+  ref: React.RefObject<HTMLDivElement>,
+  action: () => void,
+): void => {
   useEffect(() => {
     function handleClickOutside(event: Event) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -40,7 +43,7 @@ const wrapperRef = useRef<HTMLDivElement>(null);
 // клик outside, чтобы dropdown закрывался (нужно передать ref)
 useClickOutside(wrapperRef, () => setDropdownOpen(false));
 
-... 
+...
 
 <div ref={wrapperRef} className={styles.CustomSelect__wrapper}>
 ...

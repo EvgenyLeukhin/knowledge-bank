@@ -75,11 +75,13 @@ sidebar_position: 10
 ### Ширины контейнеров (Desktop First)
 
 - **Ноутбуки, мониторы** (1920 - 1280px)
+
   - **1170px** (padding слева-справа 15-20px)
-  - **1106px - ВК**  (c padding 0 15px)
+  - **1106px - ВК** (c padding 0 15px)
   - **960px** (padding слева-справа 15-20px)
 
 - **Планшеты, перевернутые телефоны** (1279 - 768px)
+
   - ширина контейнера **720px** (padding слева-справа 15-20px)
 
 - **Телефоны** (767 - 360px)
@@ -96,9 +98,11 @@ sidebar_position: 10
   margin: 0 auto;
 }
 
-// tablet (1279px - 768px) 
+// tablet (1279px - 768px)
 @media screen and (max-width: 1279px) {
-  .container { width: 720px; }
+  .container {
+    width: 720px;
+  }
 }
 
 // mobile (767px - min)
@@ -110,7 +114,7 @@ sidebar_position: 10
     padding: 0 15px;
 
     // Можно добавлять макс. ширину, чтобы сильно не растягивалось
-    max-width: 480px; 
+    max-width: 480px;
   }
 }
 ```
@@ -119,7 +123,7 @@ sidebar_position: 10
 
 ### Плотность пикселей, пикселей на дюйм (PPI)
 
-```PPI = Кол-во пикселей (Разрешение) / Ширина дисплея (в дюймах)```
+`PPI = Кол-во пикселей (Разрешение) / Ширина дисплея (в дюймах)`
 
 Считается, что на дисплей должен иметь минимум **90-100 PPI**, чтобы нормально воспринимать контент (не замечать пиксели).
 
@@ -131,7 +135,7 @@ sidebar_position: 10
 
 - FullHD Монитор 23.8" (1920 х 1020, 16:9). Дисплей 23.8", 20.918" (Ш) x 11.77" (В)
 
-```PPI = 1920 / 20.918 = 91,78```
+`PPI = 1920 / 20.918 = 91,78`
 
 Стандарт для FullHD мониторов. Подойдет для офиса и для гейминга. Самый распространенный вариант.
 
@@ -141,7 +145,7 @@ sidebar_position: 10
 
 - QHD Монитор 24" (2560 х 1440, 16:9). Дисплей 24", 20.918" (Ш) x 11.77" (В)
 
-```PPI = 2560 / 20.918 = 122,38```
+`PPI = 2560 / 20.918 = 122,38`
 
 Плотность пикселей большая, и на экране объекты будут выглядеть меньше. Больше подходит для работы, не подходит для гейминга, так как мелкие детали будут слабо заметны (особенно в шутерах).
 
@@ -151,7 +155,7 @@ sidebar_position: 10
 
 - FullHD Монитор 27" (1920 х 1020, 16:9). Дисплей 27", 23,533" (Ш) x 13,237" (В)
 
-```PPI = 1920 / 23.533 = 81,57```
+`PPI = 1920 / 23.533 = 81,57`
 
 Такой вариант лучше не использовать, так как значение PPI меньше 90 и пиксели будут заметны.
 
@@ -161,7 +165,7 @@ sidebar_position: 10
 
 - QHD Монитор 27" (2560 х 1440, 16:9). Дисплей 27", 23,533" (Ш) x 13,237 (В)
 
-```PPI = 2560 / 23,533 = 108,78```
+`PPI = 2560 / 23,533 = 108,78`
 
 Стандарт для QHD мониторов. Только стоит дороже и требует более мощного железа и большего пространства на рабочем / игровом месте, чтобы поставить монитор подальше от уровня глаз.
 
@@ -177,7 +181,7 @@ sidebar_position: 10
 
 - Macbook Pro 14.2" M3 Pro (3024 × 1964, 14:9) Дисплей 14.2", 11.9" (Ш), 7.7" (В)
 
-```PPI = 3024 / 11.9 = 254```
+`PPI = 3024 / 11.9 = 254`
 
 Плотность пикселей 14" Macbook Pro почти в 3 раза выше чем у 24" FullHd монитора.
 
@@ -244,14 +248,18 @@ sidebar_position: 10
 ### Подключение адаптивных стилей
 
 ```html
-<link href="css/desktop.css" rel="stylesheet" media="(min-width:768px)">
-<link href="css/tablet.css" rel="stylesheet" media="(min-width:481px) and (max-width:767px)">
-<link href="css/mobile.css" rel="stylesheet" media="(max-width:480px)">
+<link href="css/desktop.css" rel="stylesheet" media="(min-width:768px)" />
+<link
+  href="css/tablet.css"
+  rel="stylesheet"
+  media="(min-width:481px) and (max-width:767px)"
+/>
+<link href="css/mobile.css" rel="stylesheet" media="(max-width:480px)" />
 ```
 
 ```css
 @import url(css/base.css); /* без медиазапроса, для всех */
-@import url(css/medium.css) (min-width:481px) and (max-width:768px);
+@import url(css/medium.css) (min-width: 481px) and (max-width: 768px);
 @import url(css/small.css) (max-width: 480px);
 ```
 
@@ -261,10 +269,13 @@ sidebar_position: 10
 
 ```html
 <!-- базовый мета-тег для viewport -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- запрет на зум -->
-<meta name="viewport" content="minimum-scale=1, maximum-scale=1, user-scalable=0">
+<meta
+  name="viewport"
+  content="minimum-scale=1, maximum-scale=1, user-scalable=0"
+/>
 ```
 
 ---

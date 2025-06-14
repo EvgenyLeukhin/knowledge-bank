@@ -19,7 +19,7 @@ const someString3: 'Some1' | 'Some2' = 'Some1';
 
 ```js
 'some string';
-"some string";
+'some string';
 `some string`;
 ```
 
@@ -40,14 +40,14 @@ const someVarialbe = 'SOME TEXT';
 Даже функции
 
 ```js
-function summ (a, b) {
+function summ(a, b) {
   return a + b;
 }
 
 console.log(`Сумма: ${summ(2, 3)}`); // 'Сумма: 5'
 ```
 
-***
+---
 
 ### Конкатинация
 
@@ -68,20 +68,22 @@ const c = a + b;
 console.log(c); // '123123'
 ```
 
-***
+---
 
 ### Спец. символы
 
 ```js
 // пробелы после "+" не будут учитываться (поэтому можно красиво отфармотировать)
-let longString1 = "This is a very long string which needs " +
-                "to wrap across multiple lines because " +
-                "otherwise my code is unreadable.";
+let longString1 =
+  'This is a very long string which needs ' +
+  'to wrap across multiple lines because ' +
+  'otherwise my code is unreadable.';
 
 // пробелы будут учитываться (поэтому нужно переносить на начало новой строки)
-let longString2 = "This is a very long string which needs \
+let longString2 =
+  'This is a very long string which needs \
 to wrap across multiple lines because \
-otherwise my code is unreadable.";
+otherwise my code is unreadable.';
 
 // пробелы будут учитываться (поэтому нужно переносить на начало новой строки)
 let longString3 = `This is a very long string which needs
@@ -99,16 +101,16 @@ otherwise my code is unreadable.`;
 'abc \\ abc'; // 'abc \ abc'
 
 // Перенос строки (\n)
-let str1 = "Hello World!\nThis is my string";
+let str1 = 'Hello World!\nThis is my string';
 
-// Табуляция (\t) 
-let str2 = "Hello World!\tThis is my string";
+// Табуляция (\t)
+let str2 = 'Hello World!\tThis is my string';
 
 // unicode (\uXXXX ) - кодировка UTF-16
 `\u00E9`; // 'é'
 ```
 
-***
+---
 
 ### Длина строки и индекс символов
 
@@ -127,18 +129,19 @@ let str2 = "Hello World!\tThis is my string";
 Спец. сиволы на length не влияют
 
 ```js
-'I\'m the JS!'[1]; // "'"
+"I'm the JS!"[1]; // "'"
 ```
 
-***
+---
 
 ### Преобразование в массив и обратно
 
 ```js
 'String'.split(''); // ["S", "t", "r", "i", "n", "g"]
-["S", "t", "r", "i", "n", "g"].join(''); // 'String'
+['S', 't', 'r', 'i', 'n', 'g'].join(''); // 'String'
 ```
-***
+
+---
 
 ### Регистр
 
@@ -146,9 +149,10 @@ let str2 = "Hello World!\tThis is my string";
 'String'.toLowerCase(); // 'string'
 'String'.toUpperCase(); // 'STRING'
 ```
-***
 
-### Поиск подстроки 
+---
+
+### Поиск подстроки
 
 Поиск с начала
 
@@ -164,10 +168,10 @@ let str2 = "Hello World!\tThis is my string";
 'String'.lastIndexOf('g'); // 5
 ```
 
-
-***
+---
 
 ### Вырезать / обрезать подстроку
+
 ```js
 'string'.slice(1, 3); // 'tr'
 'String'.slice(-2); // 'ng' (вырезать с конца)
@@ -175,7 +179,7 @@ let str2 = "Hello World!\tThis is my string";
 'String'.substr(0, 1); // 'S' (выерзать 1 символ, начиная с 0 индекса)
 ```
 
-***
+---
 
 ### Заменить символ
 
@@ -183,7 +187,7 @@ let str2 = "Hello World!\tThis is my string";
 'Ztring'.replace('Z', 'S'); // "String"
 ```
 
-***
+---
 
 ### Поиск совпадений
 
@@ -201,7 +205,7 @@ let str2 = "Hello World!\tThis is my string";
 'String'.includes('S', 1); // false (начиная с 1-го индекса)
 ```
 
-***
+---
 
 ### Дублирование
 
@@ -209,7 +213,7 @@ let str2 = "Hello World!\tThis is my string";
 'String'.repeat(2); // "StringString"
 ```
 
-***
+---
 
 ### Удаление пробелов
 
@@ -218,7 +222,7 @@ let str2 = "Hello World!\tThis is my string";
 '   String   '.replace(/\s/g, ''); // "String"
 ```
 
-***
+---
 
 ### Пробежаться циклом по строке
 
@@ -230,7 +234,7 @@ for (const char of someString) {
 }
 ```
 
-***
+---
 
 ### Сравнение строк
 
@@ -252,14 +256,15 @@ for (const char of someString) {
 ```
 
 Локальное сравнение
+
 ```js
 'Россия'.localeCompare('USA', 'ru'); // -1 (т.к. ru)
 'Россия'.localeCompare('USA', 'en'); // 1 (т.к. en)
 ```
 
-***
+---
 
-### Конвертация числа в строку 
+### Конвертация числа в строку
 
 ```js
 const a = 123;
@@ -269,22 +274,24 @@ a + ''; // '123'
 `${a}`; // '123'
 ```
 
-***
+---
 
 ## Symbol
 
 Используется редко. Используются для присвоинии уникальных имен для свойств объектов или идентификаторов.
 
 Создание и нестрогое сравнение символов.
+
 ```js
 const symbol = Symbol('mySymbol');
 const symbol2 = Symbol('mySymbol');
-typeof(symbol); // 'symbol'
+typeof symbol; // 'symbol'
 
 console.log(symbol === symbol2); // false
 ```
 
 Создание и нестрогое сравнение символов.
+
 ```js
 const symbol = Symbol.for('mySymbol');
 const symbol2 = Symbol.for('mySymbol');
@@ -293,19 +300,21 @@ console.log(symbol === symbol2); // true
 ```
 
 Создание пароля
+
 ```js
 let person = {
   name: 'John',
   age: 20,
   [Symbol('password-closed')]: 'John123',
   [Symbol.for('password-open')]: 'John321',
-}
+};
 
 console.log(person[Symbol.for('password-closed')]); // undefined
 console.log(person[Symbol.for('password-open')]); // 'John321'
 ```
 
 Посмотреть все сиволы, которые есть в объекте
+
 ```js
 console.log(Object.getOwnPropertySymbols(person)); // (2) [Symbol(password-closed), Symbol(password-open)]
 ```
@@ -316,5 +325,5 @@ console.log(Object.getOwnPropertySymbols(person)); // (2) [Symbol(password-clos
 
 ```ts
 // ['Вася, Петя, Маша'] --> 'Вася, Петя и Маша'
-new Intl.ListFormat('ru').format(['Вася, Петя, Маша'])
+new Intl.ListFormat('ru').format(['Вася, Петя, Маша']);
 ```

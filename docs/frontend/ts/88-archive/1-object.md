@@ -13,7 +13,7 @@ const settings: {
 } = {
   color: '#F00',
   delay: 2000,
-  retry: false
+  retry: false,
 };
 ```
 
@@ -21,18 +21,17 @@ const settings: {
 
 ## II способ (type)
 
-
 ```ts
 type TSettings = {
   color: string;
   delay: number;
   retry: boolean;
-}
+};
 
 const settings: TSettings = {
   color: '#F00',
   delay: 2000,
-  retry: false
+  retry: false,
 };
 ```
 
@@ -52,7 +51,6 @@ const settings: ISettings = {
   delay: 2000,
   retry: false,
 };
-
 ```
 
 ---
@@ -71,8 +69,9 @@ const a: TRecord = {
   a: 1,
   b: 2,
   c: 3,
-}
+};
 ```
+
 ---
 
 ## Вложенные объекты
@@ -84,9 +83,8 @@ interface IField {
 
   // вложенный объект
   hubs?: {
-    [key: number]: boolean
+    [key: number]: boolean;
   };
-  
 }
 ```
 

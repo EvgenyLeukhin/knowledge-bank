@@ -22,7 +22,7 @@ render(
     <App />
   </Provider>,
 
-  rootElement
+  rootElement,
 );
 ```
 
@@ -70,7 +70,7 @@ export const useSyncActions = () => {
     }, dispatch);
 };
 
-// доп. типизация 
+// доп. типизация
 // export type AppStore = ReturnType<typeof store> as any;
 // export type AppDispatch = AppStore['dispatch'];
 ```
@@ -125,12 +125,12 @@ const store = configureStore({
 ## Persist Provider
 
 ```tsx
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement } from 'react';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 import store from '@store/index';
 import { Provider } from 'react-redux';
-import { Preloader } from "@npm-registry/eapteka-ui";
+import { Preloader } from '@npm-registry/eapteka-ui';
 
 export const AppReduxProvider: FC<{
   children: ReactElement;
@@ -138,7 +138,7 @@ export const AppReduxProvider: FC<{
   return (
     <Provider store={store}>
       <PersistGate
-        loading={<Preloader position='center' size='l'/> }
+        loading={<Preloader position='center' size='l' />}
         persistor={persistStore(store)}
       >
         {children}
@@ -194,7 +194,6 @@ export const useSyncActions = () => {
 export type TCounterState = {
   counter: number;
 };
-
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TCounterState } from './counter.types';
@@ -259,7 +258,6 @@ export type TUsersState = {
   isError: boolean;
   errorMessage: string;
 };
-
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TUser, TUsersState } from './users.types';
@@ -367,7 +365,6 @@ export const usersSlice = createSlice({
     },
   },
 });
-
 ```
 
 ### Users thunks
@@ -407,7 +404,6 @@ const fetchUsersThunk = () => async (dispatch: Dispatch) => {
 export const usersThunks = {
   fetchUsersThunk,
 };
-
 ```
 
 ### Use inside component
@@ -445,7 +441,6 @@ const ReduxToolkit2 = () => {
       {/* count */}
       <div>
         <b>count</b>: {counter}
-
         <button onClick={() => changeCounter(-100)}>-100</button>
         <button onClick={() => changeCounter(-10)}>-10</button>
         <button onClick={() => dicrementCounter()}>-1</button>
@@ -473,7 +468,6 @@ const ReduxToolkit2 = () => {
                 return (
                   <li key={id}>
                     <b>{`${id}`}</b>
-
                     <span>{name}</span>
                     &nbsp;(<a href={`mailto:${email}`}>{email}</a>) &nbsp;
                     <b
@@ -487,12 +481,9 @@ const ReduxToolkit2 = () => {
               })
             : 'No data'}
         </ul>
-
         {/* buttons */}
         {/* thunks нужно продиспачивать */}
-        <button onClick={() => fetchUsersThunk()}>
-          Fetch users
-        </button>
+        <button onClick={() => fetchUsersThunk()}>Fetch users</button>
         <button onClick={() => addRandomUser2()}>Add random user</button>
         <button onClick={() => clearUsers()}>Clear users</button>
         <button onClick={() => deleteLastUser()}>Delete last</button>
@@ -503,5 +494,4 @@ const ReduxToolkit2 = () => {
 };
 
 export default ReduxToolkit2;
-
 ```

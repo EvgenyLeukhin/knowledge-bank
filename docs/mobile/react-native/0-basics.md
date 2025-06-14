@@ -23,7 +23,7 @@ const App = props => {
       <Text>Hello, World!</Text>
     </View>
   );
-}
+};
 
 export default App;
 ```

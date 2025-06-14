@@ -17,10 +17,10 @@ const a = [
   { id: 1, name: 'Что то происходит' },
 ];
 
-// поиск по совпадению 
+// поиск по совпадению
 const b = a.find((el, index, thisArray) => el.id === 3); // { 3 }
 
-// поиск по несовпадению 
+// поиск по несовпадению
 const с = a.find((el, index, thisArray) => el.id !== 3); // { 2 } - вернется первый элемент
 ```
 
@@ -70,7 +70,7 @@ const a = [
 // вернет индекс массива по совпадению
 const index = a.findIndex((el, index, thisArray) => {
   return el.name === 'Что то происходит'; // 3
-}); 
+});
 ```
 
 ---
@@ -92,10 +92,11 @@ const a = [
 a.some((el, index, array) => el.id === 3); // true
 a.some((el, index, array) => el.id === 33); // false
 
-
 // example
 const onSelectDeck = (clickedDeck: TDeckObj) => {
-  const isAlreadyExists = selectedDecks.some((deck) => deck.id === clickedDeck.id);
+  const isAlreadyExists = selectedDecks.some(
+    deck => deck.id === clickedDeck.id,
+  );
 
   if (!isAlreadyExists) {
     // add selected deck
@@ -104,7 +105,7 @@ const onSelectDeck = (clickedDeck: TDeckObj) => {
     }
   } else {
     // remove deck if already exists
-    setSelectedDecks(selectedDecks.filter((deck) => deck.id !== clickedDeck.id));
+    setSelectedDecks(selectedDecks.filter(deck => deck.id !== clickedDeck.id));
   }
 };
 ```

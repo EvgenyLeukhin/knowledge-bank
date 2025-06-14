@@ -40,7 +40,7 @@ headers: {
 headers = {
   "Authorization": "Bearer {token}",
   "Content-Type": "application/json",
-  "Accept-Language": "en-US"   
+  "Accept-Language": "en-US"
 }
 ```
 

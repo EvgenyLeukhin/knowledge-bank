@@ -3,7 +3,6 @@ title: Дизайн-макет
 sidebar_position: 9
 ---
 
-
 - [Колонки для Photoshop - 960.gs](https://960.gs/)
 - [Макеты - HTML-templates](https://html-templates.info/all-templates)
 - [Макеты - All-PSD](https://all-psd.ru/)

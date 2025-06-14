@@ -3,7 +3,7 @@ title: Null и undefined
 sidebar_position: 5
 ---
 
-## TypeScript 
+## TypeScript
 
 ```ts
 const some1: null = null;
@@ -21,11 +21,11 @@ const some3: null | undefined = undefined;
 let a = null;
 ```
 
-***
+---
 
 ## Undefined
 
-Когда создаём переменную, но не присваиваем значение. Работает только с ```var``` и ```let```, с ```const```будет ошибка, так как ей нужно сразу что-ниб присваивать.
+Когда создаём переменную, но не присваиваем значение. Работает только с `var` и `let`, с `const`будет ошибка, так как ей нужно сразу что-ниб присваивать.
 
 ```js
 let a;

@@ -200,7 +200,10 @@ export const getWorklogsMultiply = (
 ```ts
 // НОВАЯ РУЧКА (`v2/auto-routing/couriers${params}`) - с расписанием и пагинацией
 // пагинация используются для рекурсивных запросов, так как по одному запросу долго грузятся (как в примере выше)
-export const getAutoRoutingCouriersRecursive = (limit: number = 10, offset: number = 0) => {
+export const getAutoRoutingCouriersRecursive = (
+  limit: number = 10,
+  offset: number = 0,
+) => {
   return async function (dispatch: Dispatch<any>) {
     dispatch(setCouriersLoading(true));
 
@@ -225,7 +228,10 @@ export const getAutoRoutingCouriersRecursive = (limit: number = 10, offset: numb
       // success
       if (items) {
         dispatch(setCouriersLoading(false));
-        const routes = [...store.getState().routes.routes, ...store.getState().routes.exportedRoutes];
+        const routes = [
+          ...store.getState().routes.routes,
+          ...store.getState().routes.exportedRoutes,
+        ];
 
         // сохраняем курьеров [...state.couriers, ...payload];
         dispatch(getCouriersByRecursive(fillWithStops(items, routes)));

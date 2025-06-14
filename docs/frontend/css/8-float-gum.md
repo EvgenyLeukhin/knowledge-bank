@@ -13,7 +13,7 @@ sidebar_position: 8
 - float используется для выравнивания блоков по сторонам
 - float-ы выпадают из потока и блочные элементы их НЕ ВИДЯТ, а текст обтекает их со свободной стороны
 - Чтобы другие блочные элементы "видели" флоатнутые, их либо нужно тоже зафлоатить или применить свойство clear со значениями left, rigth или both. Оно запрещает обтекание и переносит элемент на новую строку.
-clear: none; разрешает обтекание
+  clear: none; разрешает обтекание
 
 ```html
 <div class="container">
@@ -30,13 +30,19 @@ clear: none; разрешает обтекание
 }
 
 // будет слева
-.box-left { float: left; }
+.box-left {
+  float: left;
+}
 
 // будет справа
-.box-right { float: right; }
+.box-right {
+  float: right;
+}
 
 // будет с новой строки
-.box-new-row { clear: both; }
+.box-new-row {
+  clear: both;
+}
 ```
 
 ---
@@ -56,14 +62,14 @@ clear: none; разрешает обтекание
 ```scss
 // html-распорка
 .clearfix {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
 
 // распорка на псевдо-элементе - эффект тот же
 .container::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -87,7 +93,8 @@ Sidebar зафлоачен влево с фиксированной ширино
 ```
 
 ```css
-.header, .footer {
+.header,
+.footer {
   min-height: 50px;
   background-color: pink;
   border: 3px dotted black;
@@ -96,7 +103,7 @@ Sidebar зафлоачен влево с фиксированной ширино
 }
 
 .clearfix::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -152,7 +159,7 @@ Sidebar зафлоачен влево с фиксированной ширино
 
 /* Распорка у родителя */
 .gum-parent::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -164,5 +171,7 @@ Sidebar зафлоачен влево с фиксированной ширино
   margin-right: 4%;
 }
 
-.gum-child:last-child { margin-right: 0; }
+.gum-child:last-child {
+  margin-right: 0;
+}
 ```

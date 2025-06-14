@@ -6,14 +6,14 @@ sidebar_position: 0
 ## Типизация переменных с примитивнымим типами данных.
 
 ```ts
-const a: string = 'Some string';  // string
-const b: number = 123;            // number
-const c: boolean = true;          // boolean
-const d: null =  null;            // null
-const e: undefined =  undefined;  // undefined
-const f: Date = new Date();       // дата
-const g: symbol;                  // символ
-const z: Error = new Error();     // Error
+const a: string = 'Some string'; // string
+const b: number = 123; // number
+const c: boolean = true; // boolean
+const d: null = null; // null
+const e: undefined = undefined; // undefined
+const f: Date = new Date(); // дата
+const g: symbol; // символ
+const z: Error = new Error(); // Error
 ```
 
 ---
@@ -24,19 +24,18 @@ const z: Error = new Error();     // Error
 type A = {
   name: string;
   age: number;
-}
+};
 
 type B = {
   city: string;
   index: number;
-}
+};
 
 // ИЛИ
 const a: A | B = {
   name: 'John',
   age: 35,
-}
-
+};
 
 // И
 const ab: A & B = {
@@ -44,7 +43,7 @@ const ab: A & B = {
   age: 35,
   city: 'NY',
   index: 10001,
-}
+};
 ```
 
 ---
@@ -52,10 +51,10 @@ const ab: A & B = {
 ## Специальные значения
 
 ```ts
-const a: any;         // любой тип
-const b: unknown;     // неизвестный тип
-const c: () => any;   // функция, которая может вернуть любой тип
-const d: () => void;  // функция, которая ничего не возвращает
+const a: any; // любой тип
+const b: unknown; // неизвестный тип
+const c: () => any; // функция, которая может вернуть любой тип
+const d: () => void; // функция, которая ничего не возвращает
 const e: () => never; // функция может никогда не закончиться и не вернуть результат
 ```
 

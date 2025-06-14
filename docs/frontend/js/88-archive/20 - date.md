@@ -4,9 +4,9 @@ sidebar_position: 20
 ---
 
 export const CODE = ({children}) => (
-  <code style={{ color: 'cyan' }}>
-    {children}
-  </code>
+<code style={{ color: 'cyan' }}>
+{children}
+</code>
 );
 
 ## Получить полную текущую дату:
@@ -41,7 +41,7 @@ new Date(
 
   // секунды
   10,
-)
+);
 ```
 
 ## Получить текущий год:
@@ -126,13 +126,13 @@ new Date(
 
 ## Извлечь дату из полной строки даты со временем:
 
-```const date = ```<CODE>new Date("Fri Mar 17 2023 17:47:37 GMT+0600 (Омск, стандартное время)")</CODE>
+`const date = `<CODE>new Date("Fri Mar 17 2023 17:47:37 GMT+0600 (Омск, стандартное время)")</CODE>
 
-```date```.<CODE>toISOString().split("T")[0]</CODE> – 2023-03-17
+`date`.<CODE>toISOString().split("T")[0]</CODE> – 2023-03-17
 
 или
 
-```date```.<CODE>toISOString()..slice(0, 10)</CODE> – 2023-03-17
+`date`.<CODE>toISOString()..slice(0, 10)</CODE> – 2023-03-17
 
 ---
 
@@ -140,16 +140,16 @@ new Date(
 
 ```js
 const day = new Date().toLocaleDateString('ru-RU', {
-    // weekday: 'short',
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
+  // weekday: 'short',
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
 });
 
 const time = new Date().toLocaleTimeString('ru-RU', {
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
 });
 
 day; // '22.11.2024'
@@ -224,7 +224,7 @@ export const formatDate = (date: Date, showSeconds = false) =>
         .reduce((msg, el) => msg + ('0' + el[0]).slice(+el[1]), '');
 ```
 
-### Конвертация при неуказанной таймзоне 
+### Конвертация при неуказанной таймзоне
 
 Приходит поле courierStatusDate с бэка (строка даты)
 '2023-09-08T13:41:23+00:00' без указания часавого пояса
@@ -266,55 +266,58 @@ export const convertISODateStringFromServer = (isoDate: string): string => {
 Либо нужно обрезать этот кусок '+00:00' у строки:
 
 ```js
-{format(
-    new Date(courierStatusDate.split('+')[0]),
-    'dd.MM.yyyy, hh:mm',
-)}
+{
+  format(new Date(courierStatusDate.split('+')[0]), 'dd.MM.yyyy, hh:mm');
+}
 ```
 
 ## Сравнение дат
 
 ```tsx
-export const returnIsOntimePointTimeDeliveryStatus = (pointsArray: IOrderInRouteWithPointId[]): boolean => {
-    return pointsArray.some((order) => {
-        if (order.courierStatus === сourierStatusEnum.DELIVERED) {
-            const deliveryDateArray = order.deliveryDate.split('-');
+export const returnIsOntimePointTimeDeliveryStatus = (
+  pointsArray: IOrderInRouteWithPointId[],
+): boolean => {
+  return pointsArray.some(order => {
+    if (order.courierStatus === сourierStatusEnum.DELIVERED) {
+      const deliveryDateArray = order.deliveryDate.split('-');
 
-            // '17:00:00' (конец интервала в заказе)
-            const deliveryEndInterval = `${order.interval.split('-')[1]}:00`;
+      // '17:00:00' (конец интервала в заказе)
+      const deliveryEndInterval = `${order.interval.split('-')[1]}:00`;
 
-            // '13:40:01' (время, когда курьер доставил заказ клиенту)
-            const courierDeliveryTime = order.courierStatusDate.split('T')[1].substring(0, 8);
+      // '13:40:01' (время, когда курьер доставил заказ клиенту)
+      const courierDeliveryTime = order.courierStatusDate
+        .split('T')[1]
+        .substring(0, 8);
 
-            // даты для сравления (берем с поля deliveryDate)
-            const deliveryEndIntervalDateForCompare = new Date(
-                // date
-                Number(deliveryDateArray[0]),
-                Number(deliveryDateArray[1]) - 1,
-                Number(deliveryDateArray[2]),
+      // даты для сравления (берем с поля deliveryDate)
+      const deliveryEndIntervalDateForCompare = new Date(
+        // date
+        Number(deliveryDateArray[0]),
+        Number(deliveryDateArray[1]) - 1,
+        Number(deliveryDateArray[2]),
 
-                // end of interval time
-                Number(deliveryEndInterval.split(':')[0]),
-                Number(deliveryEndInterval.split(':')[1]),
-                Number(deliveryEndInterval.split(':')[2])
-            );
+        // end of interval time
+        Number(deliveryEndInterval.split(':')[0]),
+        Number(deliveryEndInterval.split(':')[1]),
+        Number(deliveryEndInterval.split(':')[2]),
+      );
 
-            const courierDeliveryDateForCompare = new Date(
-                // date
-                Number(deliveryDateArray[0]),
-                Number(deliveryDateArray[1]) - 1,
-                Number(deliveryDateArray[2]),
+      const courierDeliveryDateForCompare = new Date(
+        // date
+        Number(deliveryDateArray[0]),
+        Number(deliveryDateArray[1]) - 1,
+        Number(deliveryDateArray[2]),
 
-                // time
-                Number(courierDeliveryTime.split(':')[0]),
-                Number(courierDeliveryTime.split(':')[1]),
-                Number(courierDeliveryTime.split(':')[2])
-            );
+        // time
+        Number(courierDeliveryTime.split(':')[0]),
+        Number(courierDeliveryTime.split(':')[1]),
+        Number(courierDeliveryTime.split(':')[2]),
+      );
 
-            // сравниваем даты
-            return deliveryEndIntervalDateForCompare >= courierDeliveryDateForCompare;
-        }
-    });
+      // сравниваем даты
+      return deliveryEndIntervalDateForCompare >= courierDeliveryDateForCompare;
+    }
+  });
 };
 ```
 
@@ -327,21 +330,21 @@ const CURRENT_GTM_TIMEZONE = Math.abs(new Date().getTimezoneOffset() / 60);
 
 // высчитываем при загрузке текущее время хаба c учетом разницы в таймзонах
 useEffect(() => {
-    // timezones
-    const userGtmTimezone: number = CURRENT_GTM_TIMEZONE;
-    const selectedHubGtmTimezone: number = hub?.timezone as number;
-    const timezoneDiff: number = userGtmTimezone - selectedHubGtmTimezone;
+  // timezones
+  const userGtmTimezone: number = CURRENT_GTM_TIMEZONE;
+  const selectedHubGtmTimezone: number = hub?.timezone as number;
+  const timezoneDiff: number = userGtmTimezone - selectedHubGtmTimezone;
 
-    // current user time
-    const currentUserTime: string = format(new Date(), 'HH-mm');
-    const currentUserHours: number = Number(currentUserTime.split('-')[0]);
-    const currentUserMinutes: number = Number(currentUserTime.split('-')[1]);
+  // current user time
+  const currentUserTime: string = format(new Date(), 'HH-mm');
+  const currentUserHours: number = Number(currentUserTime.split('-')[0]);
+  const currentUserMinutes: number = Number(currentUserTime.split('-')[1]);
 
-    // hub time
-    const selectedHubHours = currentUserHours - timezoneDiff;
-    const selectedHubMinutes = currentUserMinutes;
+  // hub time
+  const selectedHubHours = currentUserHours - timezoneDiff;
+  const selectedHubMinutes = currentUserMinutes;
 
-    setHubCurrentTime(`${selectedHubHours}:${selectedHubMinutes}`);
+  setHubCurrentTime(`${selectedHubHours}:${selectedHubMinutes}`);
 }, []);
 ```
 
@@ -353,14 +356,18 @@ useEffect(() => {
 import format from 'date-fns/format';
 
 // добавляет дни к переданной дате с форматированием
-export const addDaysToDate = (date: Date, days: number = 0, formatView: string = 'yyyy-MM-dd'): string =>
-    format(
-        // создание новой даты с добавлением кол-ва дней
-        new Date(date.getFullYear(), date.getMonth(), date.getDate() + days),
+export const addDaysToDate = (
+  date: Date,
+  days: number = 0,
+  formatView: string = 'yyyy-MM-dd',
+): string =>
+  format(
+    // создание новой даты с добавлением кол-ва дней
+    new Date(date.getFullYear(), date.getMonth(), date.getDate() + days),
 
-        // форматирование этой даты в date-fns format
-        formatView
-    );
+    // форматирование этой даты в date-fns format
+    formatView,
+  );
 
 // использование
 const TODAY = addDaysToDate(new Date());
@@ -374,28 +381,32 @@ const TODAY_PLUS_8DAYS_FORMATED = addDaysToDate(new Date(), 7, 'dd.MM.yyyy'); //
 
 ```ts
 // '10:00 - 18:00' --> true - если интервал более 5 часов
-// '10:00 - 12:00' --> false 
+// '10:00 - 12:00' --> false
 
 // проверка на большой интервал
 export const IS_BIG_INTERVAL_MINUTES_DIFF = 300;
 
 export const checkBigInterval = (interval: string): boolean => {
-    if (!interval) return false;
+  if (!interval) return false;
 
-    // start interval
-    const startIntervalArray = interval.split(' - ')[0].split(':');
-    const startIntervalHoursToMinutes = Number(startIntervalArray[0]) * 60;
-    const startIntervalMinutes = Number(startIntervalArray[1]);
-    const startIntervalMinutesSum = startIntervalHoursToMinutes + startIntervalMinutes;
+  // start interval
+  const startIntervalArray = interval.split(' - ')[0].split(':');
+  const startIntervalHoursToMinutes = Number(startIntervalArray[0]) * 60;
+  const startIntervalMinutes = Number(startIntervalArray[1]);
+  const startIntervalMinutesSum =
+    startIntervalHoursToMinutes + startIntervalMinutes;
 
-    // end interval
-    const endIntervalArray = interval.split(' - ')[1].split(':');
-    const endIntervalHoursToMinutes = Number(endIntervalArray[0]) * 60;
-    const endIntervalMinutes = Number(endIntervalArray[1]);
-    const endIntervalMinutesSum = endIntervalHoursToMinutes + endIntervalMinutes;
+  // end interval
+  const endIntervalArray = interval.split(' - ')[1].split(':');
+  const endIntervalHoursToMinutes = Number(endIntervalArray[0]) * 60;
+  const endIntervalMinutes = Number(endIntervalArray[1]);
+  const endIntervalMinutesSum = endIntervalHoursToMinutes + endIntervalMinutes;
 
-    // возвращаем условие
-    return endIntervalMinutesSum - startIntervalMinutesSum >= IS_BIG_INTERVAL_MINUTES_DIFF;
+  // возвращаем условие
+  return (
+    endIntervalMinutesSum - startIntervalMinutesSum >=
+    IS_BIG_INTERVAL_MINUTES_DIFF
+  );
 };
 ```
 
@@ -412,28 +423,28 @@ new Date().toLocaleDateString();
 
 ```js
 const formatDate = (addDays = 0) => {
-    // вытаскиваем значения с текущей даты с добавление дней
-    let year = new Date().getFullYear();
-    let month = new Date().getMonth();
-    let date = new Date().getDate() + addDays;
+  // вытаскиваем значения с текущей даты с добавление дней
+  let year = new Date().getFullYear();
+  let month = new Date().getMonth();
+  let date = new Date().getDate() + addDays;
 
-    // конвертируем обратоно в Date-строку (чтобы случился перескок на другой месяц, если кол-во дней будет больше 30-31 или меньше 0)
-    const newDate = new Date(year, month, date);
+  // конвертируем обратоно в Date-строку (чтобы случился перескок на другой месяц, если кол-во дней будет больше 30-31 или меньше 0)
+  const newDate = new Date(year, month, date);
 
-    // вытаскиваем значения даты уже с новой даты
-    year = newDate.getFullYear();
-    month = newDate.getMonth() + 1; // так так отсчет месяцев в JS начинается с 0
-    date = newDate.getDate();
+  // вытаскиваем значения даты уже с новой даты
+  year = newDate.getFullYear();
+  month = newDate.getMonth() + 1; // так так отсчет месяцев в JS начинается с 0
+  date = newDate.getDate();
 
-    // подставляем 0
-    const monthFormated = month < 10 ? `0${month}`: month;
-    const dateFormated = date < 10 ? `0${date}`: date;
+  // подставляем 0
+  const monthFormated = month < 10 ? `0${month}` : month;
+  const dateFormated = date < 10 ? `0${date}` : date;
 
-    // сохранение даты в валидном формате для бэкенда (YYYY-mm-DD)
-    const fullDateFormated = `${year}-${monthFormated}-${dateFormated}`;
+  // сохранение даты в валидном формате для бэкенда (YYYY-mm-DD)
+  const fullDateFormated = `${year}-${monthFormated}-${dateFormated}`;
 
-    return fullDateFormated;
-}
+  return fullDateFormated;
+};
 
 // без добавления дней вернется отформатированная текущая дата
 // const today = formatDate();
@@ -442,6 +453,6 @@ const todayMinus10Days = formatDate(-10);
 const todayPlus10Days = formatDate(10);
 
 // сохраняем полученные значения в переменную
- pm.environment.set("TODAY_MINUS_10_DAYS", todayMinus10Days);
- pm.environment.set("TODAY_PLUS_10_DAYS", todayPlus10Days);
+pm.environment.set('TODAY_MINUS_10_DAYS', todayMinus10Days);
+pm.environment.set('TODAY_PLUS_10_DAYS', todayPlus10Days);
 ```

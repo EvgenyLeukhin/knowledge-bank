@@ -95,7 +95,7 @@ sidebar_position: 8
 
 ### Staible coins
 
-![Staible coins mem](https://leonardo.osnova.io/ebd91e37-e2f8-512c-8afb-c86ac73c5b7c/-/preview/1184x/-/format/webp "Staible coins mem")
+![Staible coins mem](https://leonardo.osnova.io/ebd91e37-e2f8-512c-8afb-c86ac73c5b7c/-/preview/1184x/-/format/webp 'Staible coins mem')
 
 **USDC/USDT/EUR** - это токены со стабильной волатильностью, так как эти токены привязаны к реальной валюте. Удобно хранить сбережения на длительные сроки, соврешать платежи и принимать\совершать переводы.
 

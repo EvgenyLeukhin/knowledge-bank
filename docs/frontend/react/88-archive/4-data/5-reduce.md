@@ -26,7 +26,7 @@ const a = [1, 2, 3, 4, 5, 6, 7, 8];
 // summ = 36
 const summ = a.reduce((prev, item, index) => {
   return prev + item;
-})
+});
 ```
 
 ```ts
@@ -45,7 +45,7 @@ a.reduce((preVal, nextVal, iteratiions, sourceArray) => iteratiions); // 4 (1+2,
 a.reduce((preVal, nextVal, iteratiions, sourceArray) => sourceArray); // [1, 2, 3, 4, 5]
 
 // arguments naming
-a.reduce((preVal, nextVal, iteratiions, sourceArray))
+a.reduce((preVal, nextVal, iteratiions, sourceArray));
 
 // sum
 const sum = a.reduce((preVal, nextVal) => preVal + nextVal);
@@ -79,7 +79,7 @@ for (i = 0; i < array.length; i++) {
 ```js
 const array = [1, 2, 3, 4, 5];
 
-const summOfArray = array.reduce((total, item) => total += item);
+const summOfArray = array.reduce((total, item) => (total += item));
 ```
 
 ```js
@@ -112,9 +112,9 @@ const array = [1, 2, 3, 4, 5];
 let max = array[0];
 
 for (let i = 0; i < array.length; i++) {
-    if (array[i] > max) {
-        max = array[i];
-    }
+  if (array[i] > max) {
+    max = array[i];
+  }
 }
 ```
 

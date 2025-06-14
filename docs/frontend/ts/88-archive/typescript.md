@@ -65,7 +65,7 @@ type TObj = {
   readonly someNumber: number; // неизменяемое
   someBoolean: boolean;
   someUnknown: null | undefined;
-}
+};
 
 // 1 вариант
 const someObj: TObj = {
@@ -73,7 +73,7 @@ const someObj: TObj = {
   someNumber: 123,
   someBoolean: false,
   someUnknown: null,
-}
+};
 
 // 2 вариант
 const someObj: {
@@ -86,7 +86,7 @@ const someObj: {
   someNumber: 123,
   someBoolean: false,
   someUnknown: null,
-}
+};
 
 // 3 вариант (объект или null)
 const courier: {
@@ -110,7 +110,7 @@ const someUnknownObj: Record<string, number> = {
   someField2: 2,
   someField3: 3,
   someField4: 4,
-}
+};
 
 // 2 вариант (key)
 const someUnknownObj: { [key: string]: number } = {
@@ -118,7 +118,7 @@ const someUnknownObj: { [key: string]: number } = {
   someField2: 2,
   someField3: 3,
   someField4: 4,
-}
+};
 ```
 
 ---
@@ -135,7 +135,7 @@ interface LikeButtonProps {
 type LikeButtonKeys = keyof LikeButtonProps; // 'className', 'count', 'size'
 ```
 
-## typeof 
+## typeof
 
 ```ts
 const props = {
@@ -161,7 +161,7 @@ const props = {
 } as LikeButtonProps;
 ```
 
-```export type TStore = ReturnType<typeof store.getState>;```
+`export type TStore = ReturnType<typeof store.getState>;`
 
 ## Типизация полей объекта
 
@@ -190,24 +190,24 @@ type Values = (typeof props)[Keys];
 
 ```tsx
 interface IUsageDates {
-    showDates: boolean;
-    startDate: Date | null;
-    endDate: Date | null;
+  showDates: boolean;
+  startDate: Date | null;
+  endDate: Date | null;
 }
 
 // usageDates
 const [usageDates, setUsageDates] = useState<IUsageDates>({
-    showDates: false,
-    startDate: null,
-    endDate: null,
+  showDates: false,
+  startDate: null,
+  endDate: null,
 });
 
-  const changeUsageDates = (
-      fieldName: keyof IUsageDates, 
-      payload: (typeof usageDates)[keyof typeof usageDates],
-  ) => {
-      setUsageDates({  ...usageDates, [fieldName]: payload });
-  }
+const changeUsageDates = (
+  fieldName: keyof IUsageDates,
+  payload: (typeof usageDates)[keyof typeof usageDates],
+) => {
+  setUsageDates({ ...usageDates, [fieldName]: payload });
+};
 ```
 
 ---
@@ -223,12 +223,22 @@ const someArray: Array<number> = [1, 2, 3, 4];
 const someArray: Array<string> = ['asdf', 'cxvzx', 'rerer', 'fadsf'];
 
 // КОТРЕЖ, когда известно точное кол-во элементов
-const someArray: [string, string, string, string] = ['asdf', 'cxvzx', 'rerer', 'fadsf'];
+const someArray: [string, string, string, string] = [
+  'asdf',
+  'cxvzx',
+  'rerer',
+  'fadsf',
+];
 
 // только для чтения
 const someArray: readonly string[] = ['asdf', 'cxvzx', 'rerer', 'fadsf'];
 const someArray: ReadonlyArray<string> = ['asdf', 'cxvzx', 'rerer', 'fadsf'];
-const someArray: readonly [string, string, string, string] = ['asdf', 'cxvzx', 'rerer', 'fadsf'];
+const someArray: readonly [string, string, string, string] = [
+  'asdf',
+  'cxvzx',
+  'rerer',
+  'fadsf',
+];
 ```
 
 Дженерик - тип, который зависит от других типов.
@@ -237,10 +247,10 @@ const someArray: readonly [string, string, string, string] = ['asdf', 'cxvzx', '
 
 ### Any, void, unknown, never
 
-```any``` - игнорирование типизации;
-```void``` - функция ничего не возвращает;
-```unknown``` - неизвестный тип, может включать все типы одновременно
-```never``` - тип, который не имеет значения в js
+`any` - игнорирование типизации;
+`void` - функция ничего не возвращает;
+`unknown` - неизвестный тип, может включать все типы одновременно
+`never` - тип, который не имеет значения в js
 
 ## Функции
 
@@ -270,6 +280,7 @@ const square: (n: number) => number = n => n * n;
 // любые аргументы
 (...args: any[]) => any;
 ```
+
 ---
 
 ## Enum
@@ -278,12 +289,13 @@ const square: (n: number) => number = n => n * n;
 
 ```ts
 enum Size {
-  S, 
-  M, 
+  S,
+  M,
   L,
   XL,
 }
 ```
+
 Convert enum to array for maping
 
 ```ts
@@ -296,7 +308,7 @@ export enum DrugstoreView {
   LINK_REJECT = 'Отказ от подключения',
 }
 
-// как любой объект 
+// как любой объект
 const drugstoreViews = Object.values(DrugstoreView);
 ```
 
@@ -307,8 +319,8 @@ const drugstoreViews = Object.values(DrugstoreView);
 ```ts
 // children type
 type TProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 ```
 
 ---
@@ -350,9 +362,9 @@ const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 
   if (email && password) {
-    let errors = await dispatch(login(email, password)) as unknown as boolean;
+    let errors = (await dispatch(login(email, password))) as unknown as boolean;
   }
-}
+};
 ```
 
 ---
@@ -363,39 +375,39 @@ const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
 const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
   const value = event.target.value;
   console.log(value);
-}
+};
 ```
 
 ### Автоподстановка event
 
 ```tsx
 <UiRemoveIcon
-    title='Удалить'
-    width={15.75}
-    height={18.38}
-    color={hasAccess ? 'primary' : 'secondary'}
-
-    // полная запись
-    onClick={(e: React.MouseEvent<HTMLSpanElement>) => removeHandle(е)}
-
-    // можно записывать коротко без e
-    onClick={removeHandle} 
-/>
+  title='Удалить'
+  width={15.75}
+  height={18.38}
+  color={hasAccess ? 'primary' : 'secondary'}
+  // полная запись
+  onClick={(e: React.MouseEvent<HTMLSpanElement>) => removeHandle(е)}
+  // можно записывать коротко без e
+  onClick={removeHandle}
+/>;
 
 // метод-обработчик
 const removeHandle = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.stopPropagation();
+  e.stopPropagation();
 
-    if (hasAccess) {
-        dispatch(setConfirmationOpen({
-            dialogType: 'positive',
-            dialogText: `Вы действительно хотите удалить шаблон ${data.name}?`,
-            confirmationFunction: () => {
-                dispatch(deleteExpressIntervalTemplateByUuid(data.uuid));
-            }
-        }))
-    }
-}
+  if (hasAccess) {
+    dispatch(
+      setConfirmationOpen({
+        dialogType: 'positive',
+        dialogText: `Вы действительно хотите удалить шаблон ${data.name}?`,
+        confirmationFunction: () => {
+          dispatch(deleteExpressIntervalTemplateByUuid(data.uuid));
+        },
+      }),
+    );
+  }
+};
 ```
 
 ---
@@ -428,43 +440,45 @@ interface LikeButtonProps extends CssProps {
 }
 
 // 2 вариант - через type
-type LikeButtonProps = CssProps & { count: number; }
+type LikeButtonProps = CssProps & { count: number };
 ```
 
 ### Пример extends
 
 ```tsx
-import { Tooltip }               from '@material-ui/core';
-import { useSelector }           from 'react-redux';
+import { Tooltip } from '@material-ui/core';
+import { useSelector } from 'react-redux';
 
- // импортируем готовые пропсы из либы
+// импортируем готовые пропсы из либы
 import { NavLink, NavLinkProps } from 'react-router-dom';
-import { TStore }                from 'redux/store/store';
+import { TStore } from 'redux/store/store';
 
 // примешиваем свои кастомные пропсы
 interface NavLinkWithHashProps extends NavLinkProps {
-    title?: string;
+  title?: string;
 }
 
 // передаем в свой компонент-обертку все пропсы (существующие и кастомные)
-const NavLinkWithHash: React.FC<NavLinkWithHashProps> = ({ title, ...props }) => {
-    const { hubId } = useSelector((state: TStore) => (
-        { hubId: state.orders.filters.hubIds[0] }
-    ));
+const NavLinkWithHash: React.FC<NavLinkWithHashProps> = ({
+  title,
+  ...props
+}) => {
+  const { hubId } = useSelector((state: TStore) => ({
+    hubId: state.orders.filters.hubIds[0],
+  }));
 
-    const newHref = `${props.to}#ordersFilterHubId=${hubId};`
+  const newHref = `${props.to}#ordersFilterHubId=${hubId};`;
 
-    return (
-        <Tooltip title={title || ''}>
-            <NavLink {...props} to={newHref}>
-                {props.children}
-            </NavLink>
-        </Tooltip>
-    );
-}
+  return (
+    <Tooltip title={title || ''}>
+      <NavLink {...props} to={newHref}>
+        {props.children}
+      </NavLink>
+    </Tooltip>
+  );
+};
 
 export default NavLinkWithHash;
-
 ```
 
 ---
@@ -526,6 +540,5 @@ const a = (
 type TProps = {
   update: (pagination: Partial<IPagination>) => void;
   params: Partial<IArrowParams>;
-}
-
+};
 ```

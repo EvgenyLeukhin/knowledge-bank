@@ -56,7 +56,7 @@ console.log(b); // [2, 4]
 
 ---
 
-## for of 
+## for of
 
 Упрощенная форма записи
 
@@ -100,10 +100,9 @@ const a = [
 
 const b = [];
 
- // счетчик внутри
+// счетчик внутри
 for (let i = 0; i < a.length; i++) {
   b.push(a[i].id);
-  
 }
 
 console.log(b); // [1, 2, 3, 4, 5]
@@ -151,7 +150,9 @@ for (; i < a.length;) {
 
 ```js
 for (let i = 0; i < 100; i++) {
-  if (i % 15 == 0) { break; }
+  if (i % 15 == 0) {
+    break;
+  }
   console.log(i);
 }
 ```
@@ -164,7 +165,9 @@ for (let i = 0; i < 100; i++) {
 
 ```js
 for (let i = 0; i < 100; i++) {
-  if (i %2 == 0) { continue; }
+  if (i % 2 == 0) {
+    continue;
+  }
   console.log(i);
 }
 ```
@@ -251,7 +254,7 @@ do {
 
 ```js
 const obj = {
-  name: "John",
+  name: 'John',
   surname: 'Smith',
   age: 35,
 };
@@ -259,21 +262,21 @@ const obj = {
 // выведет названия полей
 for (let key in obj) {
   console.log(key);
-};
+}
 
 // выведет значения полей
 for (let key in obj) {
   console.log(obj[key]);
-};
+}
 
 // можно также использовать for of
 // нужно обернуть в Object.keys
 for (let key of Object.keys(obj)) {
   console.log(obj[key]);
-};
+}
 
 // вывод и полей и значений
 for (const [key, value] of Object.entries(obj)) {
   console.log(`${key}: ${value}`);
-};
+}
 ```

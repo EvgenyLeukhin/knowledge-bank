@@ -83,6 +83,7 @@ export default connect((state: RootState) => ({
 ```
 
 ---
+
 ## Мапинг
 
 ### Обычный мапинг
@@ -174,13 +175,20 @@ return (
 
 ```tsx
 const { hubs } = useSelector((state: TStore) => ({
-    hubs: state.hubs.hubs.filter(hub => { 
-        return state.auth.hubIds?.includes(hub.id) && (!!hub.timezone && !!hub.timeFrom && !!hub.timeTo);
+  hubs: state.hubs.hubs
+    .filter(hub => {
+      return (
+        state.auth.hubIds?.includes(hub.id) &&
+        !!hub.timezone &&
+        !!hub.timeFrom &&
+        !!hub.timeTo
+      );
     })
     .map(({ name, id, code }) => ({
-        name: code ? `${name} (${code})` : name,
-        value: id,
-    })).sort((a, b) => a.name.localeCompare(b.name))
+      name: code ? `${name} (${code})` : name,
+      value: id,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name)),
 }));
 ```
 
@@ -199,8 +207,8 @@ options={
         ),
 
         // список хабов
-        ...hubs.map(hub => ({ 
-            value: hub.id, 
+        ...hubs.map(hub => ({
+            value: hub.id,
             name: hub.code ? `${hub.name} (${hub.code})` : hub.name,
         }))
     ].sort((a, b) => +a.value - +b.value)
@@ -217,19 +225,19 @@ options={
 // 2 !permission || permission.reduce<boolean> - лучше в отдельной переменной
 // 3 (t, c) => t && !!haveAccess(c), true - нечитаемый код
 
-const isAllowed = (permission?: EPermission[][]): boolean => !permission || permission.reduce<boolean>(
-    (t, c) => t && !!haveAccess(c), true
-);
+const isAllowed = (permission?: EPermission[][]): boolean =>
+  !permission ||
+  permission.reduce<boolean>((t, c) => t && !!haveAccess(c), true);
 
 // хорошо
 // 1 - используем одинарный массив permission
 // 2 - понятное условие
 // 3 - используем every вместо reduce
-const checkForAllowed = (permission?: EPermission[]):boolean => {
-    if (permission) {
-        return permission.every(permission => haveAccess(permission));
-    }
+const checkForAllowed = (permission?: EPermission[]): boolean => {
+  if (permission) {
+    return permission.every(permission => haveAccess(permission));
+  }
 
-    return true;
-}
+  return true;
+};
 ```

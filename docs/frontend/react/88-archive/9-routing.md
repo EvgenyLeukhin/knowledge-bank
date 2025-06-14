@@ -5,7 +5,7 @@ sidebar_position: 9
 
 ## react-router-dom
 
-Установка пакетов: ```yarn add react-router-dom @types/react-router-dom```
+Установка пакетов: `yarn add react-router-dom @types/react-router-dom`
 
 ---
 
@@ -217,7 +217,6 @@ const PermissionsRoute = ({
 };
 
 export default PermissionsRoute;
-
 ```
 
 ### history - redirects
@@ -248,30 +247,26 @@ history.push('/some-page');
 
 ---
 
-
 ## react-router-dom v. 6
 
 ### App
 
 ```tsx
-import * as React from "react";
-import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <div>Hello world!</div>,
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -282,7 +277,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 ```tsx
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <div>Hello world!</div>,
 
     // not-found
@@ -291,7 +286,7 @@ const router = createBrowserRouter([
     // sub-routes
     children: [
       {
-        path: "contacts/:contactId",
+        path: 'contacts/:contactId',
         element: <Contact />,
       },
     ],

@@ -12,7 +12,9 @@ sidebar_position: 4
     <col width="150" />
   </colgroup>
 
-  <caption>Заголовок таблицы</caption>
+  <caption>
+    Заголовок таблицы
+  </caption>
 
   <thead>
     <tr>

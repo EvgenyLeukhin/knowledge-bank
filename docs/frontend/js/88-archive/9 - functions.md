@@ -79,7 +79,7 @@ summ(1, 2); // 3
 
 ### Стрелочная запись (ES6 - Arrow function)
 
-- Упрощенный синтаксис ES6 без ключевого слова function. 
+- Упрощенный синтаксис ES6 без ключевого слова function.
 - Если запись идет в одну строчку, то ключевое слово return можно опустить
 - Если параметр только один, то круглые скобки можно не вставлять
 - Вызывать нужно только после объявления
@@ -105,9 +105,9 @@ greeting('John'); // 'Hello, John!'
 Также результат выполнения функции можно сохранять в переменные.
 
 ```js
-const greeting = (name) => {
+const greeting = name => {
   console.log(`Hello, ${name}!`);
-}
+};
 
 const a = greeting('John');
 const b = greeting;
@@ -121,24 +121,23 @@ b('Jack'); // 'Hello, Jack!'
 
 ### Возвращение объекта
 
-
 ```js
 // function statament
 function obj1() {
   return {
     a: 1,
     b: 2,
-  }
+  };
 }
 ```
 
 ```js
 // function expression
-const obj2 = function() {
+const obj2 = function () {
   return {
     a: 1,
     b: 2,
-  }
+  };
 };
 ```
 
@@ -146,7 +145,7 @@ const obj2 = function() {
 // arrow function
 const obj6 = () => {
   return { a: 1, b: 2 };
-}
+};
 ```
 
 ### Сокращенная запись
@@ -161,8 +160,8 @@ const obj3 = () => { a: 1, b: 2 };
 const obj4 = () => ({ a: 1, b: 2 });
 
 // Можно даже делать такую запись на несколько строк
-const obj5 = () => ({ 
-  a: 1, 
+const obj5 = () => ({
+  a: 1,
   b: 2,
 });
 ```
@@ -174,13 +173,13 @@ const obj5 = () => ({
 ```js
 // function statament
 function arr1() {
-  return [ 1, 2 ];
+  return [1, 2];
 }
 ```
 
 ```js
 // function expression
-const arr2 = function() {
+const arr2 = function () {
   return [1, 2];
 };
 ```
@@ -189,11 +188,10 @@ const arr2 = function() {
 // arrow function
 const arr3 = () => {
   return [1, 2];
-}
+};
 
 // ТАК МОЖНО, так как [] уже воспринимаются как массив
-const arr4 = () => [ 1, 2 ];
-
+const arr4 = () => [1, 2];
 ```
 
 ### Добавление условий в шорткат запись
@@ -203,12 +201,13 @@ const arr4 = () => [ 1, 2 ];
 Если условие трушное будет возвращаться правая часть, если нетрушное, то false.
 
 ```js
-const cond1 = () => true && ({ 
-  a: 1, 
-  b: 2,
-});
+const cond1 = () =>
+  true && {
+    a: 1,
+    b: 2,
+  };
 
-const cond2 = () => false && [ 1, 2 ];
+const cond2 = () => false && [1, 2];
 ```
 
 ---
@@ -241,6 +240,7 @@ function returnConsole() {
 
 returnConsole(); // 'Something'
 ```
+
 ---
 
 ### Параметры по умолчанию
@@ -249,9 +249,9 @@ returnConsole(); // 'Something'
 - В стрелочной записи с одним параметром нужны круглые скобки, если есть параметр по умолчанию.
 
 ```js
-const greeting = (name = "User") => {
+const greeting = (name = 'User') => {
   console.log(`Hello, ${name}!`);
-}
+};
 
 greeting(); // 'Hello, User!'
 ```
@@ -262,14 +262,15 @@ greeting(); // 'Hello, User!'
 - **arguments** не работает со стрелочными функциями.
 
 ```js
-const greeting = function (name = "User") {
+const greeting = function (name = 'User') {
   console.log('Hello ' + name);
   console.log(arguments);
-}
+};
 
 greeting('Jack', 'Jack2', 'Jack3'); // 'Hello, User!'
 // Arguments(3) ['Jack', 'Jack2', 'Jack3', callee: (...), Symbol(Symbol.iterator): ƒ]
 ```
+
 ---
 
 ## return
@@ -292,15 +293,15 @@ function summ(a, b) {
 Внутри объявленных функций можно создавать фложенные служебные функции для каких-либо операций
 
 ```js
-const someFunc = (someString) => {
-  const stringToUpperCase = (string) => string.toUpperCase();
+const someFunc = someString => {
+  const stringToUpperCase = string => string.toUpperCase();
 
   if (typeof someString === 'string') {
     return console.log(stringToUpperCase(someString));
   } else {
     console.log('Передаётся не строка');
   }
-}
+};
 
 someFunc('Hello, world!'); // 'HELLO, WORLD!'
 someFunc(123); // 'Передаётся не строка'
@@ -319,8 +320,8 @@ function someFunc(name) {
   return function () {
     return function () {
       console.log(name);
-    }
-  }
+    };
+  };
 }
 
 someFunc('Jack')()(); // 'Jack'
@@ -331,8 +332,8 @@ function someFunc(name) {
   return function (name) {
     return function () {
       console.log(name);
-    }
-  }
+    };
+  };
 }
 
 // Так как есть одноименный параметр у внутренней функции

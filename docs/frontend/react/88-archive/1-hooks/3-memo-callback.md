@@ -21,25 +21,22 @@ const SomeComp = ({ prop1, prop2, prop3, prop4 }) => {
     setState(`${prop2}` + 'lorem ipsum dolar');
   };
 
-  return (
-    <div>SomeComp</div>
-  )
-}
+  return <div>SomeComp</div>;
+};
 ```
 
 ---
 
 ## useMemo и useCallback
 
-- **Кэширование** и **оптимизация вычислений** при ререндерах. 
-- Это своего рода ```useEffect()```, который возвращает значение или функцию. 
+- **Кэширование** и **оптимизация вычислений** при ререндерах.
+- Это своего рода `useEffect()`, который возвращает значение или функцию.
 - В зависимостях указываются в основном или state или prop.
-- ```useMemo``` для вычисляемых значений, ```useCallback``` для экшенов, эвентов.
+- `useMemo` для вычисляемых значений, `useCallback` для экшенов, эвентов.
 - Если зависимость не изменилась, то сразу вернется результат вычислений предыдущего рендера и парсер не будет проходить по всем строчкам кода.
 - Если есть тяжелые вычисления, то useMemo сэкономит производительность, для небольших вычислений и функций использовать не нужно.
 - Управление поведением пересоздания и перевычисления переменных внутри компонента.
 - useMemo и useCallback занимают область памяти, поэтому нужно использовать их с умом
-
 
 ```jsx
 const SomeComp = ({ prop1, prop2, prop3, prop4 }) => {
@@ -59,13 +56,11 @@ const SomeComp = ({ prop1, prop2, prop3, prop4 }) => {
   const b2 = useMemo(() => {
     return () => {
       setState(`${prop2}` + 'lorem ipsum dolar');
-    }
-  }, [prop2])
+    };
+  }, [prop2]);
 
-  return (
-    <div>SomeComp</div>
-  )
-}
+  return <div>SomeComp</div>;
+};
 ```
 
 ---
@@ -87,7 +82,7 @@ const SomeComp = () => {
   return (
     <div>
       <Comp1 prop={props} prop={onClick} />
-    <div> 
+    <div>
   );
 }
 ```
@@ -109,8 +104,8 @@ const SomeComp = ({ prop1, prop2, prop3 }) => {
       <Comp4 props={props} />
       <Comp4 props={props} />
     </>
-  )
-}
+  );
+};
 
 export default SomeComp;
 ```
@@ -130,8 +125,8 @@ const SomeComp = ({ prop1, prop2, prop3 }) => {
       <Comp4 props={props} />
       <Comp4 props={props} />
     </>
-  )
-}
+  );
+};
 
 export default React.memo(SomeComp);
 ```
@@ -140,7 +135,7 @@ export default React.memo(SomeComp);
 
 ## React.memo + useCallback
 
-Часто для оптимизации ре-рендеров ```React.memo``` используется в паре с ```useCallback()```.
+Часто для оптимизации ре-рендеров `React.memo` используется в паре с `useCallback()`.
 
 ```tsx
 // чтобы у родителя не было перерендеров от обновления пропсов, если в них не было изменений оборачиваем его в React.memo

@@ -5,7 +5,7 @@ sidebar_position: 5
 
 ## 5 version
 
-Встроенные хуки в бибилиотеку ```react-router-dom```.
+Встроенные хуки в бибилиотеку `react-router-dom`.
 
 ```tsx
 import { useHistory, useParams } from 'react-router-dom';
@@ -18,7 +18,7 @@ const params = useParams(); // query-параметры
 history.push('/path');
 ```
 
---- 
+---
 
 ## 6 version
 

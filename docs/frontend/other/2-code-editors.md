@@ -4,9 +4,9 @@ sidebar_position: 2
 ---
 
 export const CODE = ({children}) => (
-  <code style={{ color: 'cyan' }}>
-    {children}
-  </code>
+<code style={{ color: 'cyan' }}>
+{children}
+</code>
 );
 
 ## Visual Studio Code (VS Code)
@@ -34,7 +34,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 
 ### Most wanted plugins
 
-- **JavaScript and TypeScript Nightly**  - поддержка версий JavaScript and TypeScript grammar
+- **JavaScript and TypeScript Nightly** - поддержка версий JavaScript and TypeScript grammar
 - **ESLint** - поддержка ESLint (JS/TS линтер)
 - **ES7+ React/Redux/React-Native snippets** - JS сниппеты
 - **Auto Rename Tag** - одновременное исправление парных тегов
@@ -71,7 +71,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - **Auto open Markdown preview** (md-превью)
 - **Template Generator** (генерирует сниппеты кода)
 - **GitHub Copilot** (AI - не работает в РФ)
-- **Colonize** (добавление точки с запятой *Shift/Alt + Enter*)
+- **Colonize** (добавление точки с запятой _Shift/Alt + Enter_)
 
 ### Shortcuts
 

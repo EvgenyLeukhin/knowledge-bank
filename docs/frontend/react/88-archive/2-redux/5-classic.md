@@ -62,7 +62,6 @@ export const useActions = () => {
     dispatch,
   );
 };
-
 ```
 
 ### store/app/app.reducer.ts
@@ -226,7 +225,6 @@ export const setAlertMessage = (
 export const deleteAlertMessage = (): TDeleteAlertMessageAction => ({
   type: AppActionTypes.DELETE_ALERT_MESSAGE,
 });
-
 ```
 
 ### store/login/login.reducer.ts
@@ -266,7 +264,6 @@ export const loginReducer = (
       return state;
   }
 };
-
 ```
 
 ### store/login/login.types.ts
@@ -311,7 +308,6 @@ export type TLoginActions =
   | TLoginSuccessAction
   | TLoginErrorAction
   | TLoginResetAction;
-
 ```
 
 ### store/login/login.actionCreators.ts
@@ -492,7 +488,6 @@ export function loginThunk2(loginData: TLoginValues) {
     }
   };
 }
-
 ```
 
 ### httpClient
@@ -512,7 +507,6 @@ const httpClient = axios.create({
 });
 
 export default httpClient;
-
 ```
 
 ### ../loginService
@@ -533,7 +527,8 @@ export const loginService = {
     const { username, password } = loginValues;
 
     return (
-      httpClient.post(`auth/login`, { username, password })
+      httpClient
+        .post(`auth/login`, { username, password })
 
         // login success
         .then(res => {

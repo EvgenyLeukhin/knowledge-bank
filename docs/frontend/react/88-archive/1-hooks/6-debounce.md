@@ -7,7 +7,6 @@ sidebar_position: 7
 
 <img src="../../../../../img/react/debounce.png" alt="debounce.png" width="600" />
 
-
 **Debounce** — выполнение дейсвия тогда, когда после последней попытки вызова прошло определённое время
 
 ```tsx
@@ -31,32 +30,32 @@ export function useDebounce<T>(value: T, delay?: number): T {
 Применение. Чаще всего такие значения помещают в зависимость useEffect, внутри которого содержиться обработчикполя формы. Чтобы запросы происходили не на каждый onChange этого поля формы, а только после полного ввода поискового запроса.
 
 ```tsx
-import { ChangeEvent, useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react';
 
-import { useDebounce } from 'usehooks-ts'
+import { useDebounce } from 'usehooks-ts';
 
 export default function Component() {
-  const [value, setValue] = useState<string>('')
-  const debouncedValue = useDebounce<string>(value, 500)
+  const [value, setValue] = useState<string>('');
+  const debouncedValue = useDebounce<string>(value, 500);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value)
-  }
+    setValue(event.target.value);
+  };
 
   // Fetch API (optional)
   useEffect(() => {
     // Do fetch here...
     // Triggers when "debouncedValue" changes
-  }, [debouncedValue])
+  }, [debouncedValue]);
 
   return (
     <div>
       <p>Value real-time: {value}</p>
       <p>Debounced value: {debouncedValue}</p>
 
-      <input type="text" value={value} onChange={handleChange} />
+      <input type='text' value={value} onChange={handleChange} />
     </div>
-  )
+  );
 }
 ```
 
@@ -96,20 +95,21 @@ export function useThrottle<T>(value: T, interval = 500): T {
 Применение.
 
 ```tsx
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-import { useThrottle } from './useThrottle'
+import { useThrottle } from './useThrottle';
 
 export default function App() {
-  const [value, setValue] = useState('hello')
-  const throttledValue = useThrottle(value)
+  const [value, setValue] = useState('hello');
+  const throttledValue = useThrottle(value);
 
-  useEffect(() => console.log(`throttledValue changed: ${throttledValue}`), [
-    throttledValue,
-  ])
+  useEffect(
+    () => console.log(`throttledValue changed: ${throttledValue}`),
+    [throttledValue],
+  );
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
-    setValue(event.target.value)
+    setValue(event.target.value);
   }
 
   return (
@@ -117,8 +117,6 @@ export default function App() {
       Input: <input value={value} onChange={onChange} />
       <p>Throttled value: {throttledValue}</p>
     </div>
-  )
+  );
 }
 ```
-
-

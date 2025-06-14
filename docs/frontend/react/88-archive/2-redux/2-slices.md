@@ -13,7 +13,7 @@ type TState = {
   isSuccess: boolean;
   errorMessage: boolean;
   data: TDataItem[];
-}
+};
 
 // initialState
 const initialState: TState = {
@@ -60,12 +60,8 @@ const someSlice = createSlice({
 
 // imports
 export const someReducer = someSlice.reducer;
-export const {
-  setLoading,
-  setSuccess,
-  resetErrorMessage,
-  setData,
-} = someSlice.actions;
+export const { setLoading, setSuccess, resetErrorMessage, setData } =
+  someSlice.actions;
 ```
 
 ---
@@ -145,9 +141,12 @@ import { defaultNetworkErrorMsg } from '@constants/errorMessages';
 import {
   INotificationTemplatesArgs,
   INotificationTemplatesResponse,
-  getNotificationTemplates
+  getNotificationTemplates,
 } from '@api/methods/getNotificationTemplates';
-import { EMPTY_RESULT_DISPLAY_MESSAGE, NOTIFICATION_TEMPLATES_INITIAL_STATE } from './consts';
+import {
+  EMPTY_RESULT_DISPLAY_MESSAGE,
+  NOTIFICATION_TEMPLATES_INITIAL_STATE,
+} from './consts';
 import { INotificationTemplate } from './types';
 
 // get template list
@@ -155,21 +154,31 @@ export const fetchNotificationTemplates = createAsyncThunk<
   INotificationTemplatesResponse,
   INotificationTemplatesArgs,
   { rejectValue: string }
->('notificationTemplates/fetchTemplates', async (args, { getState, requestId, rejectWithValue }) => {
-  const { currentRequestId, isLoading } = (getState() as RootState).notificationTemplates;
+>(
+  'notificationTemplates/fetchTemplates',
+  async (args, { getState, requestId, rejectWithValue }) => {
+    const { currentRequestId, isLoading } = (getState() as RootState)
+      .notificationTemplates;
 
-  if (!isLoading || requestId !== currentRequestId) {
-    return rejectWithValue('Запрос уже выполняется');
-  }
+    if (!isLoading || requestId !== currentRequestId) {
+      return rejectWithValue('Запрос уже выполняется');
+    }
 
-  const result: INotificationTemplatesResponse = await getNotificationTemplates(args);
+    const result: INotificationTemplatesResponse =
+      await getNotificationTemplates(args);
 
-  if (!result.ok) {
-    toast.error(`Невозможно выполнить запрос шаблонов нотификаций ${result.error?.validation}`);
-    return rejectWithValue(result.error?.message_code || 'Невозможно выполнить запрос шаблонов нотификаций');
-  }
-  return result;
-});
+    if (!result.ok) {
+      toast.error(
+        `Невозможно выполнить запрос шаблонов нотификаций ${result.error?.validation}`,
+      );
+      return rejectWithValue(
+        result.error?.message_code ||
+          'Невозможно выполнить запрос шаблонов нотификаций',
+      );
+    }
+    return result;
+  },
+);
 
 export const notificationTemplatesSlice = createSlice({
   name: 'notificationTemplates',
@@ -190,7 +199,10 @@ export const notificationTemplatesSlice = createSlice({
     },
 
     // select template
-    setSelectedTemplate(state, { payload }: PayloadAction<INotificationTemplate | null>) {
+    setSelectedTemplate(
+      state,
+      { payload }: PayloadAction<INotificationTemplate | null>,
+    ) {
       state.selectedTemplate = payload;
     },
 
@@ -202,7 +214,7 @@ export const notificationTemplatesSlice = createSlice({
     // search string
     setSearchSuggestions(state, { payload }: PayloadAction<string[]>) {
       state.searchSuggestions = payload;
-    }
+    },
   },
 
   extraReducers: builder => {
@@ -213,38 +225,60 @@ export const notificationTemplatesSlice = createSlice({
         currentRequestId: meta.requestId,
         isLoading: true,
         error: null,
-        emptyResultDisplayMessage: null
+        emptyResultDisplayMessage: null,
       };
     }),
       // fetchNotificationTemplates - isSuccess
-      builder.addCase(fetchNotificationTemplates.fulfilled, (state, { payload, meta }) => {
-        if (meta.requestId !== state.currentRequestId) return state;
+      builder.addCase(
+        fetchNotificationTemplates.fulfilled,
+        (state, { payload, meta }) => {
+          if (meta.requestId !== state.currentRequestId) return state;
 
-        return {
-          ...state,
-          currentRequestId: null,
-          isLoading: false,
-          error: null,
-          templates: payload.data?.notification_template || [],
-          emptyResultDisplayMessage: !payload.data?.notification_template.length ? EMPTY_RESULT_DISPLAY_MESSAGE : null
-        };
-      }),
+          return {
+            ...state,
+            currentRequestId: null,
+            isLoading: false,
+            error: null,
+            templates: payload.data?.notification_template || [],
+            emptyResultDisplayMessage: !payload.data?.notification_template
+              .length
+              ? EMPTY_RESULT_DISPLAY_MESSAGE
+              : null,
+          };
+        },
+      ),
       // fetchNotificationTemplates - isError
-      builder.addCase(fetchNotificationTemplates.rejected, (state, { payload, error }) => {
-        return {
-          ...state,
-          currentRequestId: null,
-          isLoading: false,
-          error: payload || error.message || defaultNetworkErrorMsg
-        };
-      });
-  }
+      builder.addCase(
+        fetchNotificationTemplates.rejected,
+        (state, { payload, error }) => {
+          return {
+            ...state,
+            currentRequestId: null,
+            isLoading: false,
+            error: payload || error.message || defaultNetworkErrorMsg,
+          };
+        },
+      );
+  },
 });
 
 // export actions
-const { setLoading, setError, setTemplates, setSelectedTemplate, setSearchString, setSearchSuggestions } =
-  notificationTemplatesSlice.actions;
-export { setLoading, setError, setTemplates, setSelectedTemplate, setSearchString, setSearchSuggestions };
+const {
+  setLoading,
+  setError,
+  setTemplates,
+  setSelectedTemplate,
+  setSearchString,
+  setSearchSuggestions,
+} = notificationTemplatesSlice.actions;
+export {
+  setLoading,
+  setError,
+  setTemplates,
+  setSelectedTemplate,
+  setSearchString,
+  setSearchSuggestions,
+};
 
 // export reducer
 export default notificationTemplatesSlice.reducer;

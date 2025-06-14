@@ -7,7 +7,7 @@ sidebar_position: 55
 
 ### 1. Install packages
 
-```yarn add formik yup```
+`yarn add formik yup`
 
 ---
 
@@ -31,7 +31,7 @@ const [formValues, setFormValues] = useState<TFormNativeValues>(
 // loading state
 const [formLoading, setFormLoading] = useState<boolean>(true);
 
-  // request immitation
+// request immitation
 useEffect(() => {
   setTimeout(() => {
     setFormValues(formNativeServerValues);
@@ -39,66 +39,63 @@ useEffect(() => {
   }, 1000);
 }, []);
 
-  const formik = useFormik({
-    // enableReinitialize
-    enableReinitialize: true,
+const formik = useFormik({
+  // enableReinitialize
+  enableReinitialize: true,
 
-    // initial values
-    initialValues: formValues,
+  // initial values
+  initialValues: formValues,
 
-    // validationSchema
-    validationSchema: Yup.object({
-      // name
-      name: Yup.string()
-        .min(6, 'must be min 6 characters')
-        .max(20, 'must be max 20 characters')
-        .required('name is required'),
+  // validationSchema
+  validationSchema: Yup.object({
+    // name
+    name: Yup.string()
+      .min(6, 'must be min 6 characters')
+      .max(20, 'must be max 20 characters')
+      .required('name is required'),
 
-      // password
-      password: Yup.string()
-        .min(6, 'must be min 6 characters')
-        .max(15, 'must be max 15 characters')
-        .required('password is required'),
-    }),
+    // password
+    password: Yup.string()
+      .min(6, 'must be min 6 characters')
+      .max(15, 'must be max 15 characters')
+      .required('password is required'),
+  }),
 
-    // formik handleSubmit
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
-    },
+  // formik handleSubmit
+  onSubmit: values => {
+    alert(JSON.stringify(values, null, 2));
+  },
+});
+
+const {
+  handleSubmit,
+  handleBlur,
+  handleChange,
+  resetForm,
+  // setFieldValue,
+  values: { name, password },
+} = formik;
+
+// onResetForm
+const onResetForm = () => {
+  resetForm({
+    values: formNativeEmptyValues,
+    touched: {},
+    errors: {},
   });
+};
 
-  const {
-    handleSubmit,
-    handleBlur,
-    handleChange,
-    resetForm,
-    // setFieldValue,
-    values: {
-      name,
-      password,
-    },
-  } = formik;
-
-  // onResetForm
-  const onResetForm = () => {
-    resetForm({
-      values: formNativeEmptyValues,
-      touched: {},
-      errors: {},
-    });
-  };
-
-  // validation errors
-  const notValid: Record<keyof TFormNativeValues, string | boolean | undefined
-  > = {
+// validation errors
+const notValid: Record<keyof TFormNativeValues, string | boolean | undefined> =
+  {
     name: formik.touched.name && formik.errors.name,
     password: formik.touched.password && formik.errors.password,
   };
 
-  const valid: Record<keyof TFormNativeValues, string | boolean | undefined> = {
-    name: formik.touched.name && !formik.errors.name,
-    password: formik.touched.password && !formik.errors.password,
-  };
+const valid: Record<keyof TFormNativeValues, string | boolean | undefined> = {
+  name: formik.touched.name && !formik.errors.name,
+  password: formik.touched.password && !formik.errors.password,
+};
 
 <form method='post' onSubmit={handleSubmit}>
   {/* name */}
@@ -129,9 +126,10 @@ useEffect(() => {
   {/* password validation message */}
   {notValid.password ? <p>{formik.errors.password}</p> : null}
 
-
   {/* buttons */}
   <button type='submit'>Send</button>
-  <button type='reset' onClick={onResetForm}>Reset</button>
-</form>
+  <button type='reset' onClick={onResetForm}>
+    Reset
+  </button>
+</form>;
 ```

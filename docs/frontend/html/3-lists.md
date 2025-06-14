@@ -56,7 +56,7 @@ sidebar_position: 3
       <li>Пункт №3.2</li>
       <li>
         Пункт №3.3
-        <ol type='a'>
+        <ol type="a">
           <li>Пункт №3.3.1</li>
           <li>Пункт №3.3.2</li>
         </ol>
@@ -117,7 +117,7 @@ sidebar_position: 3
 
 ```html
 <details>
-  <summary>Раскройте список </summary>
+  <summary>Раскройте список</summary>
   <p>текст №1</p>
   <p>текст №2</p>
   <p>текст №3</p>

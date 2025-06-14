@@ -5,10 +5,10 @@ sidebar_position: 1
 
 ## Тестовые API
 
-- [Swapi](https://swapi.py4e.com/) - ```https://swapi.py4e.com```
-- [REQRES](https://reqres.in/) - ```https://reqres.in/```
-- [Список университетов](http://universities.hipolabs.com/) - ```http://universities.hipolabs.com/search?name=middle&country=Turkey```
-- [GraphQL and REST API for Testing and Prototyping](https://gorest.co.in/) - ```https://gorest.co.in/public/v2/users```
+- [Swapi](https://swapi.py4e.com/) - `https://swapi.py4e.com`
+- [REQRES](https://reqres.in/) - `https://reqres.in/`
+- [Список университетов](http://universities.hipolabs.com/) - `http://universities.hipolabs.com/search?name=middle&country=Turkey`
+- [GraphQL and REST API for Testing and Prototyping](https://gorest.co.in/) - `https://gorest.co.in/public/v2/users`
 - [fakestoreapi.com/](https://fakestoreapi.com/) - для e-commerce приложений
 - [jsonplaceholder api](https://jsonplaceholder.typicode.com/)
 - [json-to-typescript](https://transform.tools/json-to-typescript)
@@ -78,7 +78,7 @@ sidebar_position: 1
 
 ## Коллекции (эндпоинты)
 
-Списки данных коллекций  API.
+Списки данных коллекций API.
 
 ## Админ-панель
 

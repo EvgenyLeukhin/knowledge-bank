@@ -7,7 +7,7 @@ sidebar_position: 4
 
 `[3, 2, 0, 1] --> [0, 1, 2, 3]`
 
-Возвращает отсортированный массив. 
+Возвращает отсортированный массив.
 
 ```ts
 const a = [
@@ -24,7 +24,7 @@ const sortedA = a.sort((nextEl, curEl) => nextEl.id - curEl.id); // 0, 1, 2, 3
 const sortedAReversed = a.sort((nextEl, curEl) => curEl.id - nextEl.id); // 3, 2, 1, 0
 
 // sort by name - 1 способ через сравнение строк
-a.sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+a.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
 
 // sort by name - 2 способ через codePointAt()
 a.sort((next, curr) => {
@@ -40,7 +40,13 @@ a.sort((a, b) => a.name.localeCompare(b.name));
 ## Сортировка дат
 
 ```js
-const a = ['06.01.2024', '01.01.2024', '04.01.2024', '02.01.2024', '12.01.2024'];
+const a = [
+  '06.01.2024',
+  '01.01.2024',
+  '04.01.2024',
+  '02.01.2024',
+  '12.01.2024',
+];
 
 const b = a.sort((nextItem, item) => {
   const day = new Date(item);

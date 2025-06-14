@@ -10,14 +10,14 @@ sidebar_position: 15
 
 ```js
 document;
-document.documentElement;    // всё, что лежит в <html>
-document.body;               // всё, что лежит в <body>
-document.all;                // все элементы (*)
-document.forms;              // все формы
-document.images;             // все изображения
-document.links;              // все ссылки
-document.scripts;            // все скрипты
-document.stylesheets;        // все стили
+document.documentElement; // всё, что лежит в <html>
+document.body; // всё, что лежит в <body>
+document.all; // все элементы (*)
+document.forms; // все формы
+document.images; // все изображения
+document.links; // все ссылки
+document.scripts; // все скрипты
+document.stylesheets; // все стили
 
 // most used
 document.querySelector('.some-class');
@@ -47,13 +47,13 @@ el.classList.contains('some-class');
 
 ```js
 el.setAttribute('style', 'color: red;');
-el.hasAttribute('style');    // check, return bool
-el.getAttribute('style');    // get value of this attribute
+el.hasAttribute('style'); // check, return bool
+el.getAttribute('style'); // get value of this attribute
 el.removeAttribute('style'); // remove attribute
-el.className('some-class');  // add class
-el.title('title text');      // create title attribute
-el.hidden = true;            // add hidden attribute
-el.dataset.filter = 'some';  // change some data attribute
+el.className('some-class'); // add class
+el.title('title text'); // create title attribute
+el.hidden = true; // add hidden attribute
+el.dataset.filter = 'some'; // change some data attribute
 
 // style
 el.style.color = 'red';
@@ -71,7 +71,7 @@ DOM-collection - перебираемый объект-псевдомассив 
 
 ```js
 // parent
-el.parentNode || el.parentElement;  // equal
+el.parentNode || el.parentElement; // equal
 
 // sublinks
 el.previousSibling;
@@ -79,12 +79,12 @@ el.nextSibling;
 
 // children
 el.childNodes; // NodeList :(
-el.children;   // HTML-Collection )
+el.children; // HTML-Collection )
 el.children[0] || el.childNodes[0]; // equal
 el.firstElementChild;
 el.lastElementChild;
 
-el.matches('p');           // check selector, return bool
+el.matches('p'); // check selector, return bool
 el.closest('.some-class'); // find nearest element
 el.contains(someElement2); // return bool
 ```
@@ -99,7 +99,7 @@ el.contains(someElement2); // return bool
 // document.querySelectorAll возвращает NodeList, а c помощью оператора spread можно сделать из NodeList Array.
 function getArray(selector) {
   return Array.from(document.querySelectorAll(selector));
-} 
+}
 ```
 
 ---
@@ -123,16 +123,16 @@ const parentOffset = parentElement?.offsetTop || 0;
 const childOffset = childElement?.offsetTop || 0;
 
 // добавление паддинга
-const PADDING_SIZE = 25
+const PADDING_SIZE = 25;
 
 // величина скролла
-const scrollHeight = (targetOffset - listOffset) - PADDING_SIZE;
+const scrollHeight = targetOffset - listOffset - PADDING_SIZE;
 
 // скролим родителя до потомка
 parentElement?.scroll({
-    top: scrollHeight,
-    left: 0,
-    behavior: "smooth",
+  top: scrollHeight,
+  left: 0,
+  behavior: 'smooth',
 });
 ```
 
@@ -151,7 +151,9 @@ el.innerHTML = '<b>New text</b>';
 
 ```ts
 const listElement = listRef?.current;
-const lastEditedSlaElement = listElement?.querySelector(`#sla-item-${sla.lastEditedSlaId}`) as HTMLElement;
+const lastEditedSlaElement = listElement?.querySelector(
+  `#sla-item-${sla.lastEditedSlaId}`,
+) as HTMLElement;
 
 // созаем временный элемент для индикации
 const tempElement = document.createElement('i');
@@ -159,8 +161,8 @@ tempElement.innerHTML = 'Недавнее редактирование';
 lastEditedSlaElement?.appendChild(tempElement);
 
 setTimeout(() => {
-    // удаляем временный элемент
-    tempElement.remove();
+  // удаляем временный элемент
+  tempElement.remove();
 }, 5000);
 ```
 
@@ -215,15 +217,15 @@ Browser object model
 Window is a root of everything. По умолчанию стоит у методов alert, prompt, confi
 
 ```js
-window
-console.log()                // info, warn, error
-alert(), prompt(), confirm() // window methods
-screen
-location                     // .href
-history
-cokkies
-localStorage
-Date, time
+window;
+console.log(); // info, warn, error
+alert(), prompt(), confirm(); // window methods
+screen;
+location; // .href
+history;
+cokkies;
+localStorage;
+Date, time;
 ```
 
 ---
@@ -231,7 +233,9 @@ Date, time
 ## Обработка контента элементов
 
 ```js
-document.querySelector('.total__button').addEventListener('click', applyDiscount);
+document
+  .querySelector('.total__button')
+  .addEventListener('click', applyDiscount);
 
 let discont = false;
 
@@ -243,20 +247,19 @@ function applyDiscount() {
     });
 
     const totalPriceEl = document.querySelector('.total-price-value');
-    totalPriceEl.innerHTML = totalPriceEl.innerHTML * 0.85;   
-  }   
+    totalPriceEl.innerHTML = totalPriceEl.innerHTML * 0.85;
+  }
 }
 ```
 
 ---
 
-
 ## Convert NodeList to array
 
 ```js
-  const elements = document.querySelectorAll(selector);
-  
-  return Array.from(elements);
+const elements = document.querySelectorAll(selector);
+
+return Array.from(elements);
 ```
 
 ---
@@ -280,7 +283,8 @@ function findNearestFactorial(value) {
   }
   let currentValue = 1;
 
-  for (var i = 1; currentValue * i <= value; i++) { // c let будет ошибка
+  for (var i = 1; currentValue * i <= value; i++) {
+    // c let будет ошибка
     currentValue *= i;
   }
   return i - 1;
@@ -298,11 +302,12 @@ form.addEventListener('submit', evt => {
   // Do something
 });
 ```
+
 ---
 
 ## Глобальные объекты
 
-- ```window``` - корневой объект
-- ```document``` - DOM-элементы сайта
-- ```navigator``` - браузер, локализация, девайс
-- ```performance``` - для тестирования производительности
+- `window` - корневой объект
+- `document` - DOM-элементы сайта
+- `navigator` - браузер, локализация, девайс
+- `performance` - для тестирования производительности

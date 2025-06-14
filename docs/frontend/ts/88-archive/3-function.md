@@ -9,7 +9,7 @@ sidebar_position: 3
 // expression
 const someFunction = (val1: number, val2: number): number => {
   return Number(val1) + Number(val2);
-}
+};
 ```
 
 ```ts
@@ -19,10 +19,9 @@ function someFunction(val1: number, val2: number): number {
 }
 ```
 
-
 ```ts
 // пример с void - функция ничего не возвращает
 const onClickButton = (): void => {
   setState(!state);
-}
+};
 ```

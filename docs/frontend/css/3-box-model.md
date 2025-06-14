@@ -9,7 +9,7 @@ sidebar_position: 3
 
 <img src="../../../../img/css/box-model.png" width="250px" alt="box-model.png" />
 
-```Размеры элемента = размеры вложенного контента + padding + border```
+`Размеры элемента = размеры вложенного контента + padding + border`
 
 Также на расположение элемента в потоке влияют внешние отступы (margin) и позиционирование.
 
@@ -115,17 +115,24 @@ border-top: 1px solid transparent;
 По ум. стоит content-box (width и height не включает padding и border). Но это можно изменить
 
 ```css
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 ```
 
 ---
+
 ---
 
 ## Блочные элементы
 
 ```html
 <!-- Универсальный блочный контейнер -->
-<div>BLOCK-1</div> <div>BLOCK-2</div> <div>BLOCK-3</div>
+<div>BLOCK-1</div>
+<div>BLOCK-2</div>
+<div>BLOCK-3</div>
 ```
 
 <div style={{
@@ -157,7 +164,7 @@ border-top: 1px solid transparent;
 ```css
 .box {
   display: block; /*по ум.*/
-  height: 50px;
+    height: 50px;
   padding: 5px;
   margin: 5px;
 }
@@ -173,6 +180,7 @@ border-top: 1px solid transparent;
 - Контейнеры
 
 ---
+
 ---
 
 ## Строчные
@@ -190,20 +198,20 @@ border-top: 1px solid transparent;
 
 ```css
 .string {
-  display: inline; /* по ум. */
-  height: 50px; /* не реагируют */
+    display: inline; /* по ум. */
+    height: 50px; /* не реагируют */
   width: 50px; /* не реагируют */
-  background-color: maroon; /* действует */
-  border: 1px solid orange; /* действует */
-  margin-top: 5px; /* не реагируют */
-  margin-bottom: 5px; /* не реагируют */
-  margin-left: 5px; /* действует + пробелы учитываются */
-  margin-right: 5px; /* действует + пробелы учитываются */
-  padding-left: 10px; /* действует */
-  padding-right: 10px; /* действует */
-  padding-top: 10px; /* фон увеличивается, но контент не отодвигает */
-  padding-bottom: 10px; /* фон увеличивается, но контент не отодвигает */
-} 
+    background-color: maroon; /* действует */
+    border: 1px solid orange; /* действует */
+    margin-top: 5px; /* не реагируют */
+    margin-bottom: 5px; /* не реагируют */
+    margin-left: 5px; /* действует + пробелы учитываются */
+    margin-right: 5px; /* действует + пробелы учитываются */
+    padding-left: 10px; /* действует */
+    padding-right: 10px; /* действует */
+    padding-top: 10px; /* фон увеличивается, но контент не отодвигает */
+    padding-bottom: 10px; /* фон увеличивается, но контент не отодвигает */
+}
 ```
 
 1. До и после строчного элемента отсутствуют переносы строки;
@@ -223,6 +231,7 @@ border-top: 1px solid transparent;
 - Контейнеры для небольших текстовых фраз
 
 ---
+
 ---
 
 ## Инлайн-блоки
@@ -237,9 +246,15 @@ border-top: 1px solid transparent;
 
 ```html
 <div style="tex-alight: right">
-  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK-1</div>
-  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK-2</div>
-  <div style="display: inline-block; vertical-align: middle">INLINE-BLOCK-3</div>
+  <div style="display: inline-block; vertical-align: middle">
+    INLINE-BLOCK-1
+  </div>
+  <div style="display: inline-block; vertical-align: middle">
+    INLINE-BLOCK-2
+  </div>
+  <div style="display: inline-block; vertical-align: middle">
+    INLINE-BLOCK-3
+  </div>
 </div>
 ```
 
@@ -259,7 +274,7 @@ border-top: 1px solid transparent;
 
 - Если инлайн-блок один, то он вертикально выравнивается по своей height относительно line-height родительского контейнера, причём line-height родителя должно быть больше чем height инлайн-блока.
 - Если их несколько, то они выравниваются относительно большей height отдельного инлайн-блока.
-- ```vertical-align``` выравнивает не только по высоте контейнера. Это свойство выравнивает инлайн-блоки между собой, относительно самого высокого элемента СТРОЧНО
+- `vertical-align` выравнивает не только по высоте контейнера. Это свойство выравнивает инлайн-блоки между собой, относительно самого высокого элемента СТРОЧНО
 - Выравнивание inline-блоков без margin-right(3n) (Обернуть в блок и задать ему маргин-слева -20px, а у каждого инлайн-блок поставить маргин-слева 20px)
 
 ### Инлайн-блоки применяют
@@ -269,6 +284,7 @@ border-top: 1px solid transparent;
 - Контейнеры карточек товаров и прочего
 
 ---
+
 ---
 
 ## Display
@@ -304,6 +320,7 @@ div {
 ```
 
 ---
+
 ---
 
 ## Скролл / Overflow
@@ -341,13 +358,13 @@ overscroll-behavior: auto* | contain | none | auto contain;
 .example::-webkit-scrollbar {
   width: 0;
   display: none;
-  background: 'transparent',
+  background: 'transparent';
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 ```
 

@@ -4,12 +4,12 @@ sidebar_position: 0
 ---
 
 export const CODE = ({children}) => (
-  <code style={{ color: 'cyan' }}>
-    {children}
-  </code>
+<code style={{ color: 'cyan' }}>
+{children}
+</code>
 );
 
-- **Version Control System**. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с ```master``` на ```main```.
+- **Version Control System**. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с `master` на `main`.
 
 Система контроля версий, которая позволяет осуществлять:
 
@@ -23,8 +23,8 @@ export const CODE = ({children}) => (
 
 ## Install
 
-MacOS git install: ```brew install git```
-MacOS openssh install: ```brew install openssh```
+MacOS git install: `brew install git`
+MacOS openssh install: `brew install openssh`
 
 ## Настройка
 
@@ -66,7 +66,7 @@ MacOS openssh install: ```brew install openssh```
 - <CODE>git commit -am "commit message"</CODE> - Добавление измененных файлов в коммит и коммит (одновременно)
 - <CODE>git add &lt;filename&gt; &lt;filename2&gt;</CODE> - Добавить указанные измененные файлы в индекс
 - <CODE>git add .</CODE> || <CODE>git add -A (--all)</CODE> - Добавить все указанные измененные в индекс
-- <CODE>git restore  &lt;filename1&gt; &lt;filename1</CODE> - Восстановить удаленный файл
+- <CODE>git restore &lt;filename1&gt; &lt;filename1</CODE> - Восстановить удаленный файл
 - <CODE>git restore --staged &lt;filename1&gt; &lt;filename1</CODE> - Убрать файлы из индекса
 - <CODE>git checkout &lt;filename&gt; &lt;filename2&gt;</CODE> - Убрать указанные измененные файлы из коммита
 - <CODE>git checkout &lt;filename&gt; &lt;commit_hash&gt;</CODE> - Вернуть состояние файла, какое оно было в указанном коммите
@@ -120,28 +120,28 @@ MacOS openssh install: ```brew install openssh```
 Актуально, когда родительская ветка наполниласть новыми коммитами после создания дочерней ветки и при этом перебазировании можно заблаговременно исправить все конфликты, находясь в дочерней ветке.
 
 1. Переключаемся в родительскую ветку
-<CODE>git checkout &lt;parent_brunch_name&gt;</CODE>
+   <CODE>git checkout &lt;parent_brunch_name&gt;</CODE>
 
 2. Забираем все новые коммиты
-<CODE>git pull origin &lt;parent_brunch_name&gt;</CODE>
+   <CODE>git pull origin &lt;parent_brunch_name&gt;</CODE>
 
 3. Переключаемся в дочернюю ветку
-<CODE>git checkout &lt;child_brunch_name&gt;</CODE>
+   <CODE>git checkout &lt;child_brunch_name&gt;</CODE>
 
 4. Перебазируемся в родительскую ветку. При этом могут возникать конфликты, которые нужно разрешать
-<CODE>git rebase &lt;parent_brunch_name&gt;</CODE>
+   <CODE>git rebase &lt;parent_brunch_name&gt;</CODE>
 
 5. Разрешаем конфликты, сохраняем, добавляем разрешенные файлы в отслеживание
-<CODE>git add &lt;conflict_file_name&gt;</CODE>
+   <CODE>git add &lt;conflict_file_name&gt;</CODE>
 
 6. Продолжаем перебазирование (5 и 6 пункты могут повторяться несколько раз)
-<CODE>git rebase --continue</CODE>
+   <CODE>git rebase --continue</CODE>
 
 7. Если все конфликты решены и перебазирование закончено, то можно форсированно пушить изменения дочерней ветки
-<CODE>git push origin -f</CODE>
+   <CODE>git push origin -f</CODE>
 
 8. Cвязываем ветку с origin и пушим её на сервер
-<CODE>git push -u origin deploy</CODE>
+   <CODE>git push -u origin deploy</CODE>
 
 ---
 
@@ -224,9 +224,9 @@ RSAAuthentication yes
 IdentityFile ~/.ssh/id_rsa
 ```
 
-IV. Пишем команду в этой директории для гинерации ключей ```ssh-keygen -C "Jenya@FERMA21"```
-V. Добавляем содержимое сгенерированого публичного ключа ```id_rsa.pub``` в конец строки файла ```.ssh/autorized_keys``` на сервере
-VI. Можно заходить на сервер командой ```ssh some_server``` и пользоваться гитом
+IV. Пишем команду в этой директории для гинерации ключей `ssh-keygen -C "Jenya@FERMA21"`
+V. Добавляем содержимое сгенерированого публичного ключа `id_rsa.pub` в конец строки файла `.ssh/autorized_keys` на сервере
+VI. Можно заходить на сервер командой `ssh some_server` и пользоваться гитом
 
 ---
 
@@ -260,6 +260,7 @@ II. Редактируем
 - Снизу свежие, наверху старые
 
   Команды:
+
   - p(pick) - Остается без изменения (по умолчанию)
   - r(reword) - Изменить коммит-месседж
   - f(fixup) - Склейка коммита (приклеиваются к первому) без коммит-мессаджа

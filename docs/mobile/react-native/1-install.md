@@ -39,7 +39,9 @@ sidebar_position: 1
 - Приложение watchman: Основные --> Объекты ввода --> Watchman --> On
 
 ---
+
 ---
+
 ---
 
 ### TypeScript
@@ -68,11 +70,11 @@ sidebar_position: 1
 <!-- - Возможно потребуется установить пакет `nativewind`, если typescript будет ругаться на `tailwindcss`. -->
 
 ```js title="babel.config.js"
-module.exports = function(api) {
+module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
-    plugins: ["nativewind/babel"],
+    plugins: ['nativewind/babel'],
   };
 };
 ```
@@ -80,12 +82,12 @@ module.exports = function(api) {
 ```js title="tailwind.config.js"
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./App.{js,jsx,ts,tsx}", "./app/**/*.{js,jsx,ts,tsx}"],
+  content: ['./App.{js,jsx,ts,tsx}', './app/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 Что делает tailwindcss - упрощение в написании css классов.
@@ -117,7 +119,9 @@ export default function App() {
 ```
 
 ---
+
 ---
+
 ---
 
 ## Старые варианты установок (сейчас уже deprecated)

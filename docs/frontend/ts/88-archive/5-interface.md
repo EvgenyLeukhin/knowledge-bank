@@ -35,7 +35,7 @@ export interface IMassEditData {
 
 ---
 
-## keyof 
+## keyof
 
 Ключи объекта. Можно использовать для типизации объектов с type и interface.
 
@@ -52,7 +52,7 @@ type TLikeButtonKeys = keyof ILikeButtonProps;
 const a: Record<TLikeButtonKeys, string> = {
   className: 'some',
   count: 'some',
-}
+};
 ```
 
 ---
@@ -175,27 +175,24 @@ interface IPlainSla extends Pick<ISla, 'id' | 'name' | 'color' | 'selected'> {}
 
 ```ts
 interface IDragDropObject {
-  state: string
+  state: string;
   available: boolean;
   result: number;
   provided: boolean;
   message: string;
 }
 
-interface IDragDropHandler extends Pick<
-  IDragDropObject, 
-  'result' | 'provided',
-> {
-  handler: string,
+interface IDragDropHandler
+  extends Pick<IDragDropObject, 'result' | 'provided'> {
+  handler: string;
 }
 
 // эквивалентно этому
 interface IDragDropHandler {
   result: number;
   provided: boolean;
-  handler: string,
+  handler: string;
 }
-
 ```
 
 ---
@@ -225,7 +222,7 @@ export interface IRawZone {
 export type IZoneFromServer = Omit<IRawZone, 'coordinates'>;
 
 // через интерфейс
-export interface IZoneFromServer extends Omit<IRawZone, 'coordinates'> {};
+export interface IZoneFromServer extends Omit<IRawZone, 'coordinates'> {}
 ```
 
 ```ts
@@ -241,8 +238,7 @@ interface TSla {
 }
 
 // новый interface из 4-ех свойств типа TSla (без расширения)
-interface IPlainSla extends Omit<TSla, 'id' | 'name' | 'color' | 'selected'> {
-}
+interface IPlainSla extends Omit<TSla, 'id' | 'name' | 'color' | 'selected'> {}
 
 // эквивалентно
 interface IPlainSla {

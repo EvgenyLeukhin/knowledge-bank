@@ -55,13 +55,13 @@ const langArray = Object.values(LangType); // ['ru', 'en']
 А вот const enum не сгенерирует новый код, будет просто подставлено значение. Нельзя создавать массив через Object.keys.
 
 ```ts
-const enum Modes { 
-  Show = 'show', 
+const enum Modes {
+  Show = 'show',
   Edit = 'edit',
 }
 
 let modeName: string = Modes.Show;
-console.log(modeName) // 'show'
+console.log(modeName); // 'show'
 ```
 
 ---
@@ -80,7 +80,7 @@ enum LikeButtonProps {
 const a: Record<LikeButtonProps, string> = {
   className: 'some',
   count: 'some',
-}
+};
 ```
 
 ---

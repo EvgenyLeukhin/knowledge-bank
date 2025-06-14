@@ -31,7 +31,6 @@ const {
 
 ---
 
-
 ## Хуки для redux
 
 ```tsx
@@ -59,7 +58,7 @@ const { users, products, calculated } = useSelector((store: TStore) => ({
 
 // можно засовывать много логики внутри useSelector
 const { hubs } = useSelector((state: TStore) => ({
-    hubs: state.hubs.hubs.filter(hub => { 
+    hubs: state.hubs.hubs.filter(hub => {
         return state.auth.hubIds?.includes(hub.id) && (!!hub.timezone && !!hub.timeFrom && !!hub.timeTo);
     })
     .map(({ name, id, code }) => ({
@@ -93,15 +92,19 @@ import { RootState } from '..';
 import { INotificationTemplate, INotificationTemplatesState } from './types';
 
 // full state
-export const selectNotificationTemplatesState = (globalState: RootState): INotificationTemplatesState =>
-  globalState.notificationTemplates;
+export const selectNotificationTemplatesState = (
+  globalState: RootState,
+): INotificationTemplatesState => globalState.notificationTemplates;
 
 // templates
-export const selectNotificationTemplates = (globalState: RootState): INotificationTemplate[] =>
-  globalState.notificationTemplates.templates;
+export const selectNotificationTemplates = (
+  globalState: RootState,
+): INotificationTemplate[] => globalState.notificationTemplates.templates;
 
 // selectedTemplate
-export const selectSelectedNotificationTemplate = (globalState: RootState): INotificationTemplate | null =>
+export const selectSelectedNotificationTemplate = (
+  globalState: RootState,
+): INotificationTemplate | null =>
   globalState.notificationTemplates.selectedTemplate;
 ```
 
@@ -114,49 +117,60 @@ export const selectSelectedNotificationTemplate = (globalState: RootState): INot
 ```tsx
 import { useSelector } from 'react-redux';
 
-// сохраняем список users в переменную users, couriers в переменную couriers 
+// сохраняем список users в переменную users, couriers в переменную couriers
 const users = useSelector(store => store.users);
 const couriers = useSelector(store => store.couriers);
 
 // destructuring - возвращение объекта из функиции и его деструктуризация
-const { orders, deliveryTypes, routes, loading, forcing } = useSelector((state: TStore) => ({
+const { orders, deliveryTypes, routes, loading, forcing } = useSelector(
+  (state: TStore) => ({
     forcing: state.orders.forcing,
     orders: state.orders.orders,
     loading: state.orders.loading,
     routes: state.routes.routes,
     deliveryTypes: state.dictionaries.deliveryTypes,
-}));
+  }),
+);
 
 // возврат объекта с обработанными полями с последующей деструктуризацией
 const { selectedRoutes, editingRoute } = useSelector((state: TStore) => ({
-    selectedRoutes: state.routes.routes.filter(route => route.selected),
-    editingRoute: state.routes.routes.find(route => route.editing)  || state.routes.exportedRoutes.find(route => route.editing)
+  selectedRoutes: state.routes.routes.filter(route => route.selected),
+  editingRoute:
+    state.routes.routes.find(route => route.editing) ||
+    state.routes.exportedRoutes.find(route => route.editing),
 }));
 
 // двойная деструктуризация
 const {
-    hubs,
-    zones,
-    auth,
-    dictionaries: { paymentTypes, deliveryTypes, additionalTypes }
+  hubs,
+  zones,
+  auth,
+  dictionaries: { paymentTypes, deliveryTypes, additionalTypes },
 } = useSelector((state: TStore) => ({
-    hubs: state.hubs.hubs,
-    zones: state.zones.zones,
-    auth: state.auth,
-    dictionaries: state.dictionaries,
+  hubs: state.hubs.hubs,
+  zones: state.zones.zones,
+  auth: state.auth,
+  dictionaries: state.dictionaries,
 }));
 ```
 
 ```tsx
 // много логики внутри useSelector
 const { hubs } = useSelector((state: TStore) => ({
-    hubs: state.hubs.hubs.filter(hub => { 
-        return state.auth.hubIds?.includes(hub.id) && (!!hub.timezone && !!hub.timeFrom && !!hub.timeTo);
+  hubs: state.hubs.hubs
+    .filter(hub => {
+      return (
+        state.auth.hubIds?.includes(hub.id) &&
+        !!hub.timezone &&
+        !!hub.timeFrom &&
+        !!hub.timeTo
+      );
     })
     .map(({ name, id, code }) => ({
-        name: code ? `${name} (${code})` : name,
-        value: id,
-    })).sort((a, b) => a.name.localeCompare(b.name))
+      name: code ? `${name} (${code})` : name,
+      value: id,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name)),
 }));
 ```
 

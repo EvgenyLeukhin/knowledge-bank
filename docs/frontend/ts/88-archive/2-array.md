@@ -46,7 +46,10 @@ const b: ISomeObj[] = [{...}, {...}, ];
 
 ```ts
 // КОТРЕЖ, когда известно точное кол-во элементов
-const someArray: [
-  string, string,  string, string,
-] = [ 'asdf', 'cxvzx', 'rerer', 'fadsf' ];
+const someArray: [string, string, string, string] = [
+  'asdf',
+  'cxvzx',
+  'rerer',
+  'fadsf',
+];
 ```

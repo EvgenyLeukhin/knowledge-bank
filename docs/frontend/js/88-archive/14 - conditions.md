@@ -29,7 +29,7 @@ if (a) {
 
 // nesting - bad practice
 if (a) {
-  if (a > 0)  {
+  if (a > 0) {
     console.log('a is positive');
   } else {
     console.log('a is negative');
@@ -46,13 +46,13 @@ if (a) {
 ```js
 const a = true;
 
-const returnA = (param) => {
+const returnA = param => {
   if (param > 0) {
     console.log('a is positive');
   }
 
   console.log('a is negative');
-}
+};
 ```
 
 ---
@@ -71,19 +71,36 @@ default - аналог else, если не выбирется ни один case
 let A = 5;
 
 // check A
-switch(A) { 
-  case 0: console.log('A = 0'); break;
-  case 1: console.log('A = 1'); break;
-  case 2: console.log('A = 2'); break;
-  case 3: console.log('A = 3'); break;
-  case 4: console.log('A = 4'); break;
-  case 5: console.log('A = 5'); break;
-  case 6: console.log('A = 6'); break;
-  case 7: console.log('A = 7'); break;
+switch (A) {
+  case 0:
+    console.log('A = 0');
+    break;
+  case 1:
+    console.log('A = 1');
+    break;
+  case 2:
+    console.log('A = 2');
+    break;
+  case 3:
+    console.log('A = 3');
+    break;
+  case 4:
+    console.log('A = 4');
+    break;
+  case 5:
+    console.log('A = 5');
+    break;
+  case 6:
+    console.log('A = 6');
+    break;
+  case 7:
+    console.log('A = 7');
+    break;
 
   // default case
-  default: console.log('A are not inside 0-7 range');
-};
+  default:
+    console.log('A are not inside 0-7 range');
+}
 ```
 
 Можно также менять переприсваивать переменные

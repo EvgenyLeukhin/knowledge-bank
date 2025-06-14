@@ -13,22 +13,22 @@ sidebar_position: 4
 Как создавать разметку с помощью js.
 
 ```js
-const p = document.createElement("p");
+const p = document.createElement('p');
 document.body.appendChild(p);
 ```
 
-Это программируемые куски html-кода, которые могут инжектится в DOM-дерево через JS. Они упрощают создание разметки через JS, чтобы не городить большой js-код c помощью функции ```document.createElement()```
+Это программируемые куски html-кода, которые могут инжектится в DOM-дерево через JS. Они упрощают создание разметки через JS, чтобы не городить большой js-код c помощью функции `document.createElement()`
 
 ```hbs
-<div class="{{ wrapperClassName }}">
-  <div class="chat__button">
-    <button class="button">
-      <span>{{ buttonText }}</span>
+<div class='{{wrapperClassName}}'>
+  <div class='chat__button'>
+    <button class='button'>
+      <span>{{buttonText}}</span>
     </button>
   </div>
 
-  <ul class="{{ chatListClassName }}">
-    {{ chatListItems }}
+  <ul class='{{chatListClassName}}'>
+    {{chatListItems}}
   </ul>
 </div>
 ```

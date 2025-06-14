@@ -39,7 +39,7 @@ function someFunc(x) {
     console.log('x: ', a);
 
     a--;
-  }, 1000)
+  }, 1000);
 }
 
 someFunc(15);
@@ -48,7 +48,7 @@ someFunc(15);
 Еще решение
 
 ```js
-const func = (value) => {
+const func = value => {
   let i = value;
   const intervalValue = setInterval(() => {
     console.log('i = ', i);
@@ -58,8 +58,8 @@ const func = (value) => {
       console.log('clearInterval');
       clearInterval(intervalValue);
     }
-  }, 1000)
-}
+  }, 1000);
+};
 
 func(10);
 ```
@@ -67,7 +67,7 @@ func(10);
 Через рекурсию в 2 строки
 
 ```js
-const func = (value) => {
+const func = value => {
   console.log(value);
   if (value > 0) setTimeout(() => func(value - 1), 1000);
 };
@@ -83,30 +83,32 @@ func(10);
 TODO: Даны массивы чисел с разделителями в виде строки "D". Требуется написать тело функции sorter так, чтобы она возвращала массив чисел, отсортированных по возрастанию, при этом сохраняя разделители на своих местах в массиве.
 
 ```js
-const list1 = [4, 2, 7, "D", 12, 8, 5, "D", 23]; // [4, 2, 7, "D", 12, 8, 5, "D", 23] --> [2, 4, 5, "|", 7, 8, 12, "|", 23]
-const list2 = [5, 7, "D", 12, "D", 5, "D", 23];  // [5, 7, "D", 12, "D", 5, "D", 23]  --> [5, 5, "|", 7, "|", 12, "|", 23]
+const list1 = [4, 2, 7, 'D', 12, 8, 5, 'D', 23]; // [4, 2, 7, "D", 12, 8, 5, "D", 23] --> [2, 4, 5, "|", 7, 8, 12, "|", 23]
+const list2 = [5, 7, 'D', 12, 'D', 5, 'D', 23]; // [5, 7, "D", 12, "D", 5, "D", 23]  --> [5, 5, "|", 7, "|", 12, "|", 23]
 
-
-const sorter = (list) => {
+const sorter = list => {
   // find div indexes and numbers sorting
-  const reducedList = list.reduce((total, el, index) => {
-    // const divIndexes = [];
-    // const numbers = [];
+  const reducedList = list.reduce(
+    (total, el, index) => {
+      // const divIndexes = [];
+      // const numbers = [];
 
-    if (typeof el === 'string') {
-      total.divs.push(index);
-      // divIndexes.push(index);
-    } else {
-      total.numbers.push(el);
-    }
+      if (typeof el === 'string') {
+        total.divs.push(index);
+        // divIndexes.push(index);
+      } else {
+        total.numbers.push(el);
+      }
 
-    total.numbers.sort((a, b) => a - b);
+      total.numbers.sort((a, b) => a - b);
 
-    return total;
-  }, {
-    divs: [],
-    numbers: [],
-  });
+      return total;
+    },
+    {
+      divs: [],
+      numbers: [],
+    },
+  );
 
   // create array by list length
   const iNITIAL_LIST_INDEXES = [...Array(list.length).keys()];
@@ -154,7 +156,7 @@ const yearDays = {
   9: 30,
   10: 31,
   11: 30,
-  12: 31
+  12: 31,
 };
 
 // моки для проверки дней в одном месяце
@@ -165,78 +167,78 @@ export const daysInOneMonth: CourierDeliveryInterval[] = [
     price: 17900,
     price_interval: [],
     start: '01.01.2024 13:00',
-    stop: '01.01.2024 17:00'
+    stop: '01.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '01.01.2024 18:00',
-    stop: '01.01.2024 21:00'
+    stop: '01.01.2024 21:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '02.01.2024 13:00',
-    stop: '02.01.2024 17:00'
+    stop: '02.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '04.01.2024 13:00',
-    stop: '04.01.2024 17:00'
+    stop: '04.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '06.01.2024 13:00',
-    stop: '06.01.2024 17:00'
+    stop: '06.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '08.01.2024 13:00',
-    stop: '08.01.2024 17:00'
+    stop: '08.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '11.01.2024 13:00',
-    stop: '11.01.2024 17:00'
+    stop: '11.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '12.01.2024 13:00',
-    stop: '12.01.2024 17:00'
+    stop: '12.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '14.01.2024 13:00',
-    stop: '14.01.2024 17:00'
+    stop: '14.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '17.01.2024 13:00',
-    stop: '17.01.2024 17:00'
+    stop: '17.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '17.01.2024 18:00',
-    stop: '17.01.2024 21:00'
-  }
+    stop: '17.01.2024 21:00',
+  },
 ];
 
 // моки для проверки дней в разных месяцах
@@ -247,43 +249,43 @@ export const daysInTwoMonths: CourierDeliveryInterval[] = [
     price: 17900,
     price_interval: [],
     start: '29.01.2024 13:00',
-    stop: '29.01.2024 17:00'
+    stop: '29.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '29.01.2024 18:00',
-    stop: '29.01.2024 21:00'
+    stop: '29.01.2024 21:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '02.02.2024 13:00',
-    stop: '02.02.2024 17:00'
+    stop: '02.02.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '03.02.2024 13:00',
-    stop: '03.02.2024 17:00'
+    stop: '03.02.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '06.02.2024 13:00',
-    stop: '06.02.2024 17:00'
+    stop: '06.02.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '06.02.2024 18:00',
-    stop: '06.02.2024 21:00'
-  }
+    stop: '06.02.2024 21:00',
+  },
 ];
 
 // моки для проверки дней в разных годах
@@ -294,43 +296,43 @@ export const daysInTwoYears: CourierDeliveryInterval[] = [
     price: 17900,
     price_interval: [],
     start: '28.12.2023 13:00',
-    stop: '28.12.2023 17:00'
+    stop: '28.12.2023 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '28.12.2023 18:00',
-    stop: '28.12.2023 21:00'
+    stop: '28.12.2023 21:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '30.12.2023 13:00',
-    stop: '30.12.2023 17:00'
+    stop: '30.12.2023 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '03.01.2024 13:00',
-    stop: '03.01.2024 17:00'
+    stop: '03.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '05.01.2024 13:00',
-    stop: '05.01.2024 17:00'
+    stop: '05.01.2024 17:00',
   },
   {
     delivery_type: 'own_delivery',
     price: 17900,
     price_interval: [],
     start: '05.01.2024 18:00',
-    stop: '05.01.2024 21:00'
-  }
+    stop: '05.01.2024 21:00',
+  },
 ];
 
 export type TSkippedDay = {
@@ -339,15 +341,23 @@ export type TSkippedDay = {
   day: number;
 };
 
-function pushSkippedDayToTotal(total: TSkippedDay[], index: number, day: number, month: number, year: number): void {
+function pushSkippedDayToTotal(
+  total: TSkippedDay[],
+  index: number,
+  day: number,
+  month: number,
+  year: number,
+): void {
   total.push({
     year,
     monthIndex: month - 1,
-    day: day + index + 1
+    day: day + index + 1,
   });
 }
 
-export function findSkippedDaysInIntervals(intervals: CourierDeliveryInterval[]): TSkippedDay[] {
+export function findSkippedDaysInIntervals(
+  intervals: CourierDeliveryInterval[],
+): TSkippedDay[] {
   // проверка что массив не пустой и не undefined
   if (!intervals.length || !intervals) return [];
 
@@ -356,60 +366,64 @@ export function findSkippedDaysInIntervals(intervals: CourierDeliveryInterval[])
     return interval.start.slice(0, 10);
   });
 
-  return intervalsToStartDays.reduce<TSkippedDay[]>((total, item, index, array) => {
-    // index day
-    const splitedIndexItem = item.split('.');
-    const day = +splitedIndexItem[0];
-    const month = +splitedIndexItem[1];
-    const year = +splitedIndexItem[2];
+  return intervalsToStartDays.reduce<TSkippedDay[]>(
+    (total, item, index, array) => {
+      // index day
+      const splitedIndexItem = item.split('.');
+      const day = +splitedIndexItem[0];
+      const month = +splitedIndexItem[1];
+      const year = +splitedIndexItem[2];
 
-    // next day (index + 1)
-    const splitedNextItem = array[index + 1] ? array[index + 1].split('.') : '';
-    const nextDay = +splitedNextItem[0];
-    const nextMonth = +splitedNextItem[1];
-    const nextYear = +splitedNextItem[2];
+      // next day (index + 1)
+      const splitedNextItem = array[index + 1]
+        ? array[index + 1].split('.')
+        : '';
+      const nextDay = +splitedNextItem[0];
+      const nextMonth = +splitedNextItem[1];
+      const nextYear = +splitedNextItem[2];
 
-    // проверка, что в цикле оба дня присутствуют, splitedIndexItem будет полюбому
-    // и соседние интервалы с разными днями
-    if (!splitedNextItem.length || day === nextDay) {
+      // проверка, что в цикле оба дня присутствуют, splitedIndexItem будет полюбому
+      // и соседние интервалы с разными днями
+      if (!splitedNextItem.length || day === nextDay) {
+        return total;
+      }
+
+      // в одном месяце
+      if (month === nextMonth) {
+        const missedDaysArray = [...Array(nextDay - day - 1).keys()];
+        missedDaysArray.length &&
+          missedDaysArray.forEach(index => {
+            return pushSkippedDayToTotal(total, index, day, month, year);
+          });
+        // перескок через месяц (случай интервала в разрезе месяца, когда у соседних значений разный месяц, не будет работать есть месяцы не соседние)
+      } else {
+        // если первая дата - это последний день месяца, а вторая первый день, то пропускаем
+        if (day === yearDays[month] && nextDay === 1) return total;
+
+        // массив с кол-вом элементов равным числу пропущенных дней из первого месяца (кол-во дней в месяце - текущий день)
+        const missedDaysInFirstMonth = [...Array(yearDays[month] - day).keys()];
+
+        // массив с кол-вом элементов равным числу пропущенных дней из второго месяца (текущий день - 1)
+        const missedDaysInSecondMonth = [...Array(nextDay - 1).keys()];
+
+        // вставляем пропущенные даты в разрезе первого месяца
+        missedDaysInFirstMonth.length &&
+          missedDaysInFirstMonth.forEach(index => {
+            return pushSkippedDayToTotal(total, index, day, month, year);
+          });
+
+        // вставляем пропущенные даты в разрезе второго месяца
+        missedDaysInSecondMonth.length &&
+          missedDaysInSecondMonth.forEach(index => {
+            return pushSkippedDayToTotal(total, index, 0, nextMonth, nextYear);
+          });
+      }
+
       return total;
-    }
-
-    // в одном месяце
-    if (month === nextMonth) {
-      const missedDaysArray = [...Array(nextDay - day - 1).keys()];
-      missedDaysArray.length &&
-        missedDaysArray.forEach(index => {
-          return pushSkippedDayToTotal(total, index, day, month, year);
-        });
-      // перескок через месяц (случай интервала в разрезе месяца, когда у соседних значений разный месяц, не будет работать есть месяцы не соседние)
-    } else {
-      // если первая дата - это последний день месяца, а вторая первый день, то пропускаем
-      if (day === yearDays[month] && nextDay === 1) return total;
-
-      // массив с кол-вом элементов равным числу пропущенных дней из первого месяца (кол-во дней в месяце - текущий день)
-      const missedDaysInFirstMonth = [...Array(yearDays[month] - day).keys()];
-
-      // массив с кол-вом элементов равным числу пропущенных дней из второго месяца (текущий день - 1)
-      const missedDaysInSecondMonth = [...Array(nextDay - 1).keys()];
-
-      // вставляем пропущенные даты в разрезе первого месяца
-      missedDaysInFirstMonth.length &&
-        missedDaysInFirstMonth.forEach(index => {
-          return pushSkippedDayToTotal(total, index, day, month, year);
-        });
-
-      // вставляем пропущенные даты в разрезе второго месяца
-      missedDaysInSecondMonth.length &&
-        missedDaysInSecondMonth.forEach(index => {
-          return pushSkippedDayToTotal(total, index, 0, nextMonth, nextYear);
-        });
-    }
-
-    return total;
-  }, []);
+    },
+    [],
+  );
 }
-
 ```
 
 <br />
@@ -421,22 +435,26 @@ export function findSkippedDaysInIntervals(intervals: CourierDeliveryInterval[])
 // проверка на большой интервал
 export const IS_BIG_INTERVAL_MINUTES_DIFF = 300;
 export const checkBigInterval = (interval: string): boolean => {
-    if (!interval) return false;
+  if (!interval) return false;
 
-    // start interval
-    const startIntervalArray = interval.split(' - ')[0].split(':');
-    const startIntervalHoursToMinutes = Number(startIntervalArray[0]) * 60;
-    const startIntervalMinutes = Number(startIntervalArray[1]);
-    const startIntervalMinutesSum = startIntervalHoursToMinutes + startIntervalMinutes;
+  // start interval
+  const startIntervalArray = interval.split(' - ')[0].split(':');
+  const startIntervalHoursToMinutes = Number(startIntervalArray[0]) * 60;
+  const startIntervalMinutes = Number(startIntervalArray[1]);
+  const startIntervalMinutesSum =
+    startIntervalHoursToMinutes + startIntervalMinutes;
 
-    // end interval
-    const endIntervalArray = interval.split(' - ')[1].split(':');
-    const endIntervalHoursToMinutes = Number(endIntervalArray[0]) * 60;
-    const endIntervalMinutes = Number(endIntervalArray[1]);
-    const endIntervalMinutesSum = endIntervalHoursToMinutes + endIntervalMinutes;
+  // end interval
+  const endIntervalArray = interval.split(' - ')[1].split(':');
+  const endIntervalHoursToMinutes = Number(endIntervalArray[0]) * 60;
+  const endIntervalMinutes = Number(endIntervalArray[1]);
+  const endIntervalMinutesSum = endIntervalHoursToMinutes + endIntervalMinutes;
 
-    // возвращаем условие
-    return endIntervalMinutesSum - startIntervalMinutesSum >= IS_BIG_INTERVAL_MINUTES_DIFF;
+  // возвращаем условие
+  return (
+    endIntervalMinutesSum - startIntervalMinutesSum >=
+    IS_BIG_INTERVAL_MINUTES_DIFF
+  );
 };
 ```
 
@@ -457,63 +475,69 @@ export const checkBigInterval = (interval: string): boolean => {
  * }}
  */
 export const returnIntervalDiff = (
-    date: string,
-    interval: string,
-    hubTimezone: number
+  date: string,
+  interval: string,
+  hubTimezone: number,
 ): {
-    startIntervalDiff: number;
-    endIntervalDiff: number;
+  startIntervalDiff: number;
+  endIntervalDiff: number;
 } => {
-    // filter date
-    const filterDate = date.split('-');
-    const filterDateYear = Number(filterDate[0]);
-    const filterDateMonth = Number(filterDate[1]) - 1;
-    const filterDateDay = Number(filterDate[2]);
+  // filter date
+  const filterDate = date.split('-');
+  const filterDateYear = Number(filterDate[0]);
+  const filterDateMonth = Number(filterDate[1]) - 1;
+  const filterDateDay = Number(filterDate[2]);
 
-    // interval start
-    const startOfInterval = interval.split(' - ')[0].split(':');
-    const startIntervalHours = Number(startOfInterval[0]);
-    const startIntervalMinutes = Number(startOfInterval[1]);
+  // interval start
+  const startOfInterval = interval.split(' - ')[0].split(':');
+  const startIntervalHours = Number(startOfInterval[0]);
+  const startIntervalMinutes = Number(startOfInterval[1]);
 
-    const startIntervalToCurrentLocalTime = new Date(
-        // date
-        filterDateYear,
-        filterDateMonth,
-        filterDateDay,
+  const startIntervalToCurrentLocalTime = new Date(
+    // date
+    filterDateYear,
+    filterDateMonth,
+    filterDateDay,
 
-        // end of interval
-        startIntervalHours + (hubTimezone ? CURRENT_GTM_TIMEZONE - hubTimezone : 0),
-        startIntervalMinutes
+    // end of interval
+    startIntervalHours + (hubTimezone ? CURRENT_GTM_TIMEZONE - hubTimezone : 0),
+    startIntervalMinutes,
+  );
+
+  // interval end
+  const endOfInterval = interval.split(' - ')[1].split(':');
+  const endIntervalHours = Number(endOfInterval[0]);
+  const endIntervalMinutes = Number(endOfInterval[1]);
+
+  const endIntervalToCurrentLocalTime = new Date(
+    // date
+    filterDateYear,
+    filterDateMonth,
+    filterDateDay,
+
+    // end of interval
+    endIntervalHours + (hubTimezone ? CURRENT_GTM_TIMEZONE - hubTimezone : 0),
+    endIntervalMinutes,
+  );
+
+  if (endIntervalToCurrentLocalTime < startIntervalToCurrentLocalTime) {
+    endIntervalToCurrentLocalTime.setDate(
+      endIntervalToCurrentLocalTime.getDate() + 1,
     );
+  }
 
-    // interval end
-    const endOfInterval = interval.split(' - ')[1].split(':');
-    const endIntervalHours = Number(endOfInterval[0]);
-    const endIntervalMinutes = Number(endOfInterval[1]);
+  // current date
+  const LOCAL_DATE = new Date();
 
-    const endIntervalToCurrentLocalTime = new Date(
-        // date
-        filterDateYear,
-        filterDateMonth,
-        filterDateDay,
+  const startIntervalDiff = Math.round(
+    (startIntervalToCurrentLocalTime.getTime() - LOCAL_DATE.getTime()) / 60000,
+  );
 
-        // end of interval
-        endIntervalHours + (hubTimezone ? CURRENT_GTM_TIMEZONE - hubTimezone : 0),
-        endIntervalMinutes
-    );
+  const endIntervalDiff = Math.round(
+    (endIntervalToCurrentLocalTime.getTime() - LOCAL_DATE.getTime()) / 60000,
+  );
 
-    if (endIntervalToCurrentLocalTime < startIntervalToCurrentLocalTime) {
-        endIntervalToCurrentLocalTime.setDate(endIntervalToCurrentLocalTime.getDate() + 1);
-    }
-
-    // current date
-    const LOCAL_DATE = new Date();
-
-    const startIntervalDiff = Math.round((startIntervalToCurrentLocalTime.getTime() - LOCAL_DATE.getTime()) / 60000);
-
-    const endIntervalDiff = Math.round((endIntervalToCurrentLocalTime.getTime() - LOCAL_DATE.getTime()) / 60000);
-
-    return { startIntervalDiff, endIntervalDiff };
+  return { startIntervalDiff, endIntervalDiff };
 };
 ```
 
@@ -522,19 +546,20 @@ export const returnIntervalDiff = (
 ```html
 <section class="search">
   <form class="search__form">
-    <input type="text" name="title" class="search__textfield" placeholder="Искать в GitHub" id="search" />
-    <button type="submit" class="search__button">
-      Найти
-    </button>
+    <input
+      type="text"
+      name="title"
+      class="search__textfield"
+      placeholder="Искать в GitHub"
+      id="search"
+    />
+    <button type="submit" class="search__button">Найти</button>
   </form>
   <div class="search__result">
-    <h2 class="search__findings">
-    </h2>
-    <ul class="search__findings-list">
-    </ul>
+    <h2 class="search__findings"></h2>
+    <ul class="search__findings-list"></ul>
   </div>
-  <div class="search__error">
-  </div>
+  <div class="search__error"></div>
 </section>
 ```
 
@@ -574,7 +599,7 @@ const renderEmptyResults = () => {
 const renderCount = count => {
   countContainer.innerHTML = `
       Найдено <span class="search__findings-amount">${count.toLocaleString(
-        'ru-RU'
+        'ru-RU',
       )}</span> результатов
   `;
 };
@@ -585,7 +610,6 @@ const onSubmitStart = () => {
   resultsContainer.innerHTML = '';
   errorContainer.innerHTML = '';
 };
-
 
 // Найденные результаты
 function template(item) {
@@ -599,15 +623,15 @@ function template(item) {
   return newElement;
 }
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
-  onSubmit(event)
-})
+  onSubmit(event);
+});
 
 async function onSubmit(event) {
   // ваш код
   event.preventDefault();
-  onSubmitStart()
+  onSubmitStart();
 
   await fetch(`https://api.nomoreparties.co/github-search?q=${input.value}`)
     .then(res => res.json())
@@ -631,18 +655,17 @@ async function onSubmit(event) {
     .catch(error => {
       console.log('error: ', error);
       renderError();
-    })
+    });
 }
 ```
 
-
-Напишите функцию, которая умеет превращать строки вроде "a.b.c" в объекты. Результатом для строки-примера будет "a": {"b": {"c": {}}}. 
+Напишите функцию, которая умеет превращать строки вроде "a.b.c" в объекты. Результатом для строки-примера будет "a": {"b": {"c": {}}}.
 
 ```ts
 const namespace = (str: string): object =>
-  str.split(".").reduceRight((acc, key) => ({ [key]: acc }), {});
+  str.split('.').reduceRight((acc, key) => ({ [key]: acc }), {});
 
-namespace('a.b.c.d.e') // "{"a":{"b":{"c":{"d":{"e":{}}}}}}"
+namespace('a.b.c.d.e'); // "{"a":{"b":{"c":{"d":{"e":{}}}}}}"
 ```
 
 <br />
@@ -653,67 +676,67 @@ namespace('a.b.c.d.e') // "{"a":{"b":{"c":{"d":{"e":{}}}}}}"
 ```ts
 input.addEventListener('keyup', (event: KeyboardEvent) => {
   text.innerText = event.target.value;
-  console.log(event.target.value)
-})
+  console.log(event.target.value);
+});
 ```
 
 ```ts
 type Nullable<T> = T | null;
 
 const text: Nullable<HTMLDivElement> = document.getElementById(
-  "text"
+  'text',
 ) as HTMLDivElement;
 const input: Nullable<HTMLInputElement> = document.getElementById(
-  "input"
+  'input',
 ) as HTMLInputElement;
 
 if (!text || !input) {
-  throw new Error("нет полей");
+  throw new Error('нет полей');
 }
 
 const data = {
-  title: ""
+  title: '',
 };
 
 Object.defineProperty(data, 'title', {});
 
 input.addEventListener('keyup', (event: KeyboardEvent) => {
   text.innerText = event.target.value;
-  console.log(event.target.value)
-})
+  console.log(event.target.value);
+});
 
-export default Nullable
+export default Nullable;
 ```
 
 ```ts
 type Nullable<T> = T | null;
 
 const text: Nullable<HTMLDivElement> = document.getElementById(
-  "text"
+  'text',
 ) as HTMLDivElement;
 const input: Nullable<HTMLInputElement> = document.getElementById(
-  "input"
+  'input',
 ) as HTMLInputElement;
 
 if (!text || !input) {
-  throw new Error("нет полей");
+  throw new Error('нет полей');
 }
 
 const data = {
-  title: ""
+  title: '',
 };
 
-Object.defineProperty(data, "title", {
+Object.defineProperty(data, 'title', {
   set: (value: string) => {
     text.textContent = value;
-  }
+  },
 });
 
-input.addEventListener("keyup", event => {
+input.addEventListener('keyup', event => {
   data.title = event.target.value;
 });
 
-export default Nullable
+export default Nullable;
 ```
 
 <br />
@@ -724,142 +747,130 @@ export default Nullable
 ```ts
 // объект-заготовка для хранения "умных" маршрутов
 const iSmartRoutes: {
-    [key: number]: IOrderInRoute[][];
+  [key: number]: IOrderInRoute[][];
 } = {};
 
 // прогоняем коллекцию маршрутов
 data.forEach(routeData => {
-    // объект-заготовка для хранения уникальных атрибутов
-    const uniqueOrderAttributes: IUniqueOrderAttributes = {};
+  // объект-заготовка для хранения уникальных атрибутов
+  const uniqueOrderAttributes: IUniqueOrderAttributes = {};
 
-    // массив массивов-заготовка для группировки заказов в точки
-    const dots: IOrderInRoute[][] = [];
+  // массив массивов-заготовка для группировки заказов в точки
+  const dots: IOrderInRoute[][] = [];
 
-    // проходим по заказам внутри маршрута
-    for (let i = 0; i < routeData.orders.length; i++) {
-        // массив-заготовка для группировки заказов текущего маршрута
-        // [] curentDots, будем пушить в [] dots (массив массивов)
-        const curentDots = [];
+  // проходим по заказам внутри маршрута
+  for (let i = 0; i < routeData.orders.length; i++) {
+    // массив-заготовка для группировки заказов текущего маршрута
+    // [] curentDots, будем пушить в [] dots (массив массивов)
+    const curentDots = [];
 
-        // данные текущего заказа
-        const currentOrder = routeData.orders[i];
+    // данные текущего заказа
+    const currentOrder = routeData.orders[i];
 
-        // сбрасываем уникальный аттрибут
-        let uniqueAttr = '';
+    // сбрасываем уникальный аттрибут
+    let uniqueAttr = '';
 
-        // поиск и присвоение уникального аттрибута
-        if (currentOrder.originalInterval) {
-            uniqueAttr = currentOrder.address;
-        } else if (
-            currentOrder.deliveryType ===
-                OrderDeliveryTypeEnum.PARTNER_PICKUP ||
-            currentOrder.deliveryType ===
-                OrderDeliveryTypeEnum.PARTNER_RETURN
-        ) {
-            uniqueAttr = currentOrder.pickUpPointErpId
-                ? `${currentOrder.pickUpPointErpId}-partner`
-                : `${currentOrder.longitude},${currentOrder.latitude}`;
-        } else if (
-            currentOrder.deliveryType ===
-                OrderDeliveryTypeEnum.OWN_DELIVERY ||
-            currentOrder.deliveryType ===
-                OrderDeliveryTypeEnum.CUSTOMER_RETURN
-        ) {
-            uniqueAttr =
-                currentOrder.client ||
-                `${currentOrder.longitude},${currentOrder.latitude}`;
-        } else if (
-            currentOrder.deliveryType ===
-            OrderDeliveryTypeEnum.OWN_PICKUP
-        ) {
-            uniqueAttr = currentOrder.pickUpPointErpId
-                ? `${currentOrder.pickUpPointErpId}-own`
-                : `${currentOrder.longitude},${currentOrder.latitude}`;
-        } else {
-            uniqueAttr = `${currentOrder.longitude},${currentOrder.latitude}`;
-        }
-
-        // уникальные аттрибуты заказов записываются как поля объекта uniqueOrderAttributes,
-        // если у заказа уникальный аттрибут совпадает с уже сохраненным в uniqueOrderAttributes
-        // то он записан не будет
-        // кол-во полей в uniqueOrderAttributes = кол-во точек внутри маршрута
-        if (!uniqueOrderAttributes.hasOwnProperty(uniqueAttr)) {
-            uniqueOrderAttributes[uniqueAttr] = true;
-        }
-
-        // пушим заказ в curentDots
-        curentDots.push(currentOrder);
-
-        // на каждую итерацию заказа также пробегаемся по всем заказам для сравнения заказа с заказом
-        for (let j = 0; j < routeData.orders.length - i; j++) {
-            // сравниваемый заказ
-            const compareOrder = routeData.orders[j];
-
-            // исключаем сравнение одинаковых заказов
-            if (currentOrder.id !== compareOrder.id) {
-                // сбрасываем уникальный аттрибут 2
-                let uniqueAttr2 = '';
-
-                // поиск и присвоение уникального аттрибута 2
-                if (compareOrder.originalInterval) {
-                    uniqueAttr2 = compareOrder.address;
-                } else if (
-                    compareOrder.deliveryType ===
-                        OrderDeliveryTypeEnum.PARTNER_PICKUP ||
-                    compareOrder.deliveryType ===
-                        OrderDeliveryTypeEnum.PARTNER_RETURN
-                ) {
-                    uniqueAttr2 = compareOrder.pickUpPointErpId
-                        ? `${compareOrder.pickUpPointErpId}-partner`
-                        : `${compareOrder.longitude},${compareOrder.latitude}`;
-                } else if (
-                    compareOrder.deliveryType ===
-                        OrderDeliveryTypeEnum.OWN_DELIVERY ||
-                    compareOrder.deliveryType ===
-                        OrderDeliveryTypeEnum.CUSTOMER_RETURN
-                ) {
-                    uniqueAttr2 =
-                        compareOrder.client ||
-                        `${compareOrder.longitude},${compareOrder.latitude}`;
-                } else if (
-                    compareOrder.deliveryType ===
-                    OrderDeliveryTypeEnum.OWN_PICKUP
-                ) {
-                    uniqueAttr2 = compareOrder.pickUpPointErpId
-                        ? `${compareOrder.pickUpPointErpId}-own`
-                        : `${compareOrder.longitude},${compareOrder.latitude}`;
-                } else {
-                    uniqueAttr2 = `${compareOrder.longitude},${compareOrder.latitude}`;
-                }
-
-                // если уникальный аттрибуты неодинакового сравниваемого заказа совпадает с текущим
-                // то пушим этот заказ тоже в curentDots
-                if (uniqueAttr2 === uniqueAttr) {
-                    curentDots.push(currentOrder);
-
-                    // удаляем этот заказ из массива внутри j-цикла
-                    routeData.orders.splice(j, 1);
-                    j--;
-                }
-            }
-        }
-
-        // console.log('curentDots', curentDots);
-        // пушим массив
-        dots.push(curentDots);
-
-        // после вычислений удаляем заказ из массива внутри i-цикла
-        routeData.orders.splice(i, 1);
-
-        // так как мы удалили обработанный заказ
-        // можно обнулить счетчик i-го массива, если в нем еще остались заказы
-        if (routeData.orders.length > 0) {
-            i = 0;
-        }
-
-        // записываем "умные заказы" внутрь iSmartRoutes
-        iSmartRoutes[routeData.id] = dots;
+    // поиск и присвоение уникального аттрибута
+    if (currentOrder.originalInterval) {
+      uniqueAttr = currentOrder.address;
+    } else if (
+      currentOrder.deliveryType === OrderDeliveryTypeEnum.PARTNER_PICKUP ||
+      currentOrder.deliveryType === OrderDeliveryTypeEnum.PARTNER_RETURN
+    ) {
+      uniqueAttr = currentOrder.pickUpPointErpId
+        ? `${currentOrder.pickUpPointErpId}-partner`
+        : `${currentOrder.longitude},${currentOrder.latitude}`;
+    } else if (
+      currentOrder.deliveryType === OrderDeliveryTypeEnum.OWN_DELIVERY ||
+      currentOrder.deliveryType === OrderDeliveryTypeEnum.CUSTOMER_RETURN
+    ) {
+      uniqueAttr =
+        currentOrder.client ||
+        `${currentOrder.longitude},${currentOrder.latitude}`;
+    } else if (currentOrder.deliveryType === OrderDeliveryTypeEnum.OWN_PICKUP) {
+      uniqueAttr = currentOrder.pickUpPointErpId
+        ? `${currentOrder.pickUpPointErpId}-own`
+        : `${currentOrder.longitude},${currentOrder.latitude}`;
+    } else {
+      uniqueAttr = `${currentOrder.longitude},${currentOrder.latitude}`;
     }
+
+    // уникальные аттрибуты заказов записываются как поля объекта uniqueOrderAttributes,
+    // если у заказа уникальный аттрибут совпадает с уже сохраненным в uniqueOrderAttributes
+    // то он записан не будет
+    // кол-во полей в uniqueOrderAttributes = кол-во точек внутри маршрута
+    if (!uniqueOrderAttributes.hasOwnProperty(uniqueAttr)) {
+      uniqueOrderAttributes[uniqueAttr] = true;
+    }
+
+    // пушим заказ в curentDots
+    curentDots.push(currentOrder);
+
+    // на каждую итерацию заказа также пробегаемся по всем заказам для сравнения заказа с заказом
+    for (let j = 0; j < routeData.orders.length - i; j++) {
+      // сравниваемый заказ
+      const compareOrder = routeData.orders[j];
+
+      // исключаем сравнение одинаковых заказов
+      if (currentOrder.id !== compareOrder.id) {
+        // сбрасываем уникальный аттрибут 2
+        let uniqueAttr2 = '';
+
+        // поиск и присвоение уникального аттрибута 2
+        if (compareOrder.originalInterval) {
+          uniqueAttr2 = compareOrder.address;
+        } else if (
+          compareOrder.deliveryType === OrderDeliveryTypeEnum.PARTNER_PICKUP ||
+          compareOrder.deliveryType === OrderDeliveryTypeEnum.PARTNER_RETURN
+        ) {
+          uniqueAttr2 = compareOrder.pickUpPointErpId
+            ? `${compareOrder.pickUpPointErpId}-partner`
+            : `${compareOrder.longitude},${compareOrder.latitude}`;
+        } else if (
+          compareOrder.deliveryType === OrderDeliveryTypeEnum.OWN_DELIVERY ||
+          compareOrder.deliveryType === OrderDeliveryTypeEnum.CUSTOMER_RETURN
+        ) {
+          uniqueAttr2 =
+            compareOrder.client ||
+            `${compareOrder.longitude},${compareOrder.latitude}`;
+        } else if (
+          compareOrder.deliveryType === OrderDeliveryTypeEnum.OWN_PICKUP
+        ) {
+          uniqueAttr2 = compareOrder.pickUpPointErpId
+            ? `${compareOrder.pickUpPointErpId}-own`
+            : `${compareOrder.longitude},${compareOrder.latitude}`;
+        } else {
+          uniqueAttr2 = `${compareOrder.longitude},${compareOrder.latitude}`;
+        }
+
+        // если уникальный аттрибуты неодинакового сравниваемого заказа совпадает с текущим
+        // то пушим этот заказ тоже в curentDots
+        if (uniqueAttr2 === uniqueAttr) {
+          curentDots.push(currentOrder);
+
+          // удаляем этот заказ из массива внутри j-цикла
+          routeData.orders.splice(j, 1);
+          j--;
+        }
+      }
+    }
+
+    // console.log('curentDots', curentDots);
+    // пушим массив
+    dots.push(curentDots);
+
+    // после вычислений удаляем заказ из массива внутри i-цикла
+    routeData.orders.splice(i, 1);
+
+    // так как мы удалили обработанный заказ
+    // можно обнулить счетчик i-го массива, если в нем еще остались заказы
+    if (routeData.orders.length > 0) {
+      i = 0;
+    }
+
+    // записываем "умные заказы" внутрь iSmartRoutes
+    iSmartRoutes[routeData.id] = dots;
+  }
 });
 ```
 
@@ -870,7 +881,7 @@ data.forEach(routeData => {
 
 ```ts
 const colorList: string[] = [
-  'rgba(233, 30, 99, 0.25)', // 0 % 19 = 0, 19 % 19 = 0, 
+  'rgba(233, 30, 99, 0.25)', // 0 % 19 = 0, 19 % 19 = 0,
   'rgba(156, 39, 176, 0.25)', // 1 % 19 = 1, 20 % 19 = 1
   'rgba(103, 58, 183, 0.25)', // 2 % 19 = 2
   'rgba(63, 81, 181, 0.25)', // 3 % 19 = 3
@@ -950,7 +961,9 @@ const paramList = [
 const someParam = { id: 1, param: 'param1' };
 
 // сравнение по id
-const isParamListIncludesParam = paramList.some(param => param.id === someParam.id); // true
+const isParamListIncludesParam = paramList.some(
+  param => param.id === someParam.id,
+); // true
 ```
 
 <br />
@@ -993,8 +1006,8 @@ const someParam = { id: 1, param: 'param1' };
 const isFillteredArray = paramList.find(param => param.id === someParam.id); // [ {id: 1, param: 'param1'} ]
 
 // условие может быть комбинированным (вернется массив объектов) [{ id: 1, ..}, { id: 3, ...}]
-const isParamListIncludesParam = paramList.filter(param => { 
-  return param.id === someParam.id ||  param.id === 3; 
+const isParamListIncludesParam = paramList.filter(param => {
+  return param.id === someParam.id || param.id === 3;
 });
 ```
 
@@ -1030,7 +1043,6 @@ const check = b.map(i => {
   // вернется boolean массив
   return isChecked; // [true, false]
 });
-
 ```
 
 ## Объект вместо вызова функции
@@ -1048,12 +1060,17 @@ type TProps = {
 const Arrow = ({ direction = 'down' }: TProps) => {
   const returnDirection = (directionName: TDirection) => {
     switch (directionName) {
-      case 'left': return 90;
-      case 'up': return 180;
-      case 'right': return 270;
-      case 'down': return 0;
+      case 'left':
+        return 90;
+      case 'up':
+        return 180;
+      case 'right':
+        return 270;
+      case 'down':
+        return 0;
 
-      default: return 0;
+      default:
+        return 0;
     }
   };
 
@@ -1144,8 +1161,8 @@ const a = [
 ];
 
 // a --> b
-const b = a.map((pointsArray) => {
-  return pointsArray.filter((order) => order.status === 'Delivered');
+const b = a.map(pointsArray => {
+  return pointsArray.filter(order => order.status === 'Delivered');
 });
 
 // result
@@ -1218,13 +1235,13 @@ const a = [1, 2, 3, 4, 5, 6, 7];
 const b = [1, 2, 8];
 
 b.map((el, index) => {
-  const isExist = a.some((a) => a === el);
+  const isExist = a.some(a => a === el);
 
   console.log(index, isExist);
 
   if (isExist) {
     a.shift(el); // удаляет элемент из исходного массива
-  } else { 
+  } else {
     a.push(el); // добавляет элемент
   }
 });
@@ -1247,7 +1264,7 @@ const a = [1, 2, 3, 4, 5, 6, 7];
 const b = [1, 2, 8];
 
 b.map((el, index) => {
-  const isExist = a.some((a) => a === el);
+  const isExist = a.some(a => a === el);
 
   // если элемент массива b существует в массиве a
   if (isExist) {
@@ -1267,12 +1284,12 @@ console.log('a', a); // [3, 4, 5, 6, 7, 8]
 ## Насыщение масива объектами
 
 ```tsx
-  // слоты (session.slots): [ ['cardId'], ['cardId'], ..., ['cardId', 'cardId'] ]
-  // список карт (session.cards): [{ card1 }, { card2 }, ..., { cardN }]
-  // слоты с картами (slotsWithCards) [ [{ card1 }], [{ card2 }], ..., [{ cardN }, { cardM }] ]
-  const slotsWithCards: TableCard[][] = session.slots.map((slot) => {
-    return session.cards.filter((card) => slot.includes(card.cardId));
-  });
+// слоты (session.slots): [ ['cardId'], ['cardId'], ..., ['cardId', 'cardId'] ]
+// список карт (session.cards): [{ card1 }, { card2 }, ..., { cardN }]
+// слоты с картами (slotsWithCards) [ [{ card1 }], [{ card2 }], ..., [{ cardN }, { cardM }] ]
+const slotsWithCards: TableCard[][] = session.slots.map(slot => {
+  return session.cards.filter(card => slot.includes(card.cardId));
+});
 ```
 
 <br />

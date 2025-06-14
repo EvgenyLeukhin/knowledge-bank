@@ -7,7 +7,6 @@ sidebar_position: 12
 - [Библиотека MobX.](https://mobx.js.org/README.html)
 - [Примеры Array.prototype.flat.](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
-
 ## Передать event по клику
 
 ```tsx
@@ -43,22 +42,22 @@ const onTableCellClick = (e: React.MouseEvent) => {
 - скрытие из DOM,
 - удаление из DOM.
 
-***
+---
 
 ### EventBus
 
 Чтобы реализовать Event Bus, вспомним о свойствах функций в JavaScript. Функции относятся к не примитивным типам данных и на самом деле являются объектами. Единственное отличие — функции могут быть вызваны. Так как функции — это объекты, доступ к ним обеспечивается по ссылке. Эти ссылки мы можем сохранять в переменные, сравнивать и, например, искать в массиве. Эту особенность мы и будем использовать при реализации Event Bus.
 
 ```js
-function a() {};
+function a() {}
 
 const b = a;
 
 console.log(a === b); // true
-console.log([b].includes(a)); // true 
+console.log([b].includes(a)); // true
 ```
 
-Для начала определим сигнатуры методов. Нам нужны методы для подписки, отписки и оповещения подписчиков: ```on```, ```off``` и ```emit```.
+Для начала определим сигнатуры методов. Нам нужны методы для подписки, отписки и оповещения подписчиков: `on`, `off` и `emit`.
 
 ```js
 class EventBus {
@@ -70,21 +69,20 @@ class EventBus {
 
   //
   emit(event, ...args) {}
-} 
+}
 ```
 
-Методы ```on``` и ```off``` принимают название события, на которое необходимо подписаться, а также функцию-обработчик, которая будет вызвана, когда придёт оповещение о событии. В переменной ```callback``` как раз и будет содержаться ссылка на функцию-обработчик, которую мы можем сохранить в свойство ```EventBus```.
+Методы `on` и `off` принимают название события, на которое необходимо подписаться, а также функцию-обработчик, которая будет вызвана, когда придёт оповещение о событии. В переменной `callback` как раз и будет содержаться ссылка на функцию-обработчик, которую мы можем сохранить в свойство `EventBus`.
 
 #### on и off
 
 ```js
 class EventBus {
   constructor() {
-    // создаем поле, которое будет хранить события и подписчиков на эти события 
+    // создаем поле, которое будет хранить события и подписчиков на эти события
     // { onClick: ['fn addEventListener to button-1', 'fn addEventListener to button-2', 'fn addEventListener to button-3', ... ]}
     // { onChange: ['fn addEventListener to input-1', 'fn addEventListener to input-2', 'addEventListener to input-3', ... ]}
     this.listeners = {};
-
   }
 
   // добавление к listeners
@@ -105,16 +103,15 @@ class EventBus {
       throw new Error(`Нет события: ${event}`);
     }
 
-
     // удаляем этот обработчик из listeners, если он есть в listeners
     this.listeners[event] = this.listeners[event].filter(
-      listener => listener !== callback
+      listener => listener !== callback,
     );
   }
-}   
+}
 ```
 
-В конструкторе класса запишем в свойство ```listeners``` пустой объект. Ключами в нём будут имена событий, а значениями массивы с обработчиками этих событий. 
+В конструкторе класса запишем в свойство `listeners` пустой объект. Ключами в нём будут имена событий, а значениями массивы с обработчиками этих событий.
 
 ```js
 // создаем экземпляр
@@ -123,7 +120,7 @@ const eventBus = new EventBus();
 // функция-обработчик
 const callback = (...args) => {
   console.log('Event emitted', args);
-}
+};
 
 // добавляем функция-обработчик к эвенту myEvent
 eventBus.on('myEvent', callback);
@@ -134,7 +131,7 @@ console.log(eventBus.listeners);
 
 #### emit
 
-Теперь реализуем метод ```emit``` (метод-оповещатель-проверятель):
+Теперь реализуем метод `emit` (метод-оповещатель-проверятель):
 
 ```js
 class EventBus {
@@ -155,10 +152,10 @@ class EventBus {
     this.listeners[event].forEach(listener => {
       listener(...args);
     });
-} 
+}
 ```
 
-Этот метод принимает название события, о котором нужно оповестить подписчиков, а также дополнительные данные. Если события не существует (то есть никто ещё на него не подписывался), выбросим ошибку. Если у события есть подписчики, пробежимся по ним и вызовем каждый, передав данные. На этом этапе ```EventBus``` уже можно использовать.
+Этот метод принимает название события, о котором нужно оповестить подписчиков, а также дополнительные данные. Если события не существует (то есть никто ещё на него не подписывался), выбросим ошибку. Если у события есть подписчики, пробежимся по ним и вызовем каждый, передав данные. На этом этапе `EventBus` уже можно использовать.
 
 ```js
 class EventBus {
@@ -177,12 +174,12 @@ class EventBus {
   off(event, callback) {
     if (!this.listeners[event]) {
       throw new Error(`Нет события: ${event}`);
-  }
+    }
 
-  this.listeners[event] = this.listeners[event].filter(
-    listener => listener !== callback
-  );
-}
+    this.listeners[event] = this.listeners[event].filter(
+      listener => listener !== callback,
+    );
+  }
 
   emit(event, ...args) {
     if (!this.listeners[event]) {
@@ -193,10 +190,10 @@ class EventBus {
       listener(...args);
     });
   }
-} 
+}
 ```
 
-Здесь и воспользуемся тем, что функции передаются по ссылке (методы класса), — отфильтруем массив обработчиков, просто сравнив каждый из них с переменной ```callback```. То есть, чтобы отписать обработчик от события, нужно передать в метод ```off``` ту же самую ссылку.
+Здесь и воспользуемся тем, что функции передаются по ссылке (методы класса), — отфильтруем массив обработчиков, просто сравнив каждый из них с переменной `callback`. То есть, чтобы отписать обработчик от события, нужно передать в метод `off` ту же самую ссылку.
 
 ```js
 // создаем экземпляр класса
@@ -205,16 +202,18 @@ const eventBus = new EventBus();
 // Создаем колбек-обработчик
 const callback = () => {
   console.log('Event emitted');
-}
+};
 
 // Добавляем эвенты
 eventBus.on('myEvent', callback);
 
 // Так как мы передаём новую функцию (а значит, новую ссылку), оригинальный обработчик не будет отписан
-eventBus.off('myEvent', () => { console.log('Event emitted'); });
+eventBus.off('myEvent', () => {
+  console.log('Event emitted');
+});
 
 // Теперь передаём правильную ссылку, обработчик будет отписан
-eventBus.off('myEvent', callback); 
+eventBus.off('myEvent', callback);
 ```
 
 Обратите внимание, что при такой реализации мы можем добавить один и тот же обработчик несколько раз. Но вызвав для него метод off, удалятся сразу все дубликаты.
@@ -224,7 +223,7 @@ const eventBus = new EventBus();
 
 const callback = () => {
   console.count('Event emitted');
-}
+};
 
 // будут дубликаты
 eventBus.on('myEvent', callback);
@@ -233,18 +232,18 @@ eventBus.on('myEvent', callback);
 
 eventBus.emit('myEvent'); // обработчик будет вызван 3 раза
 
-eventBus.off('myEvent', callback); // удалятся все три копии обработчика 
+eventBus.off('myEvent', callback); // удалятся все три копии обработчика
 ```
 
-Готовый ```EventBus``` можно использовать как отдельно, так и наследовать от него другие классы. Названия возможных событий лучше описывать в отдельном объекте или использовать enum в TypeScript.
+Готовый `EventBus` можно использовать как отдельно, так и наследовать от него другие классы. Названия возможных событий лучше описывать в отдельном объекте или использовать enum в TypeScript.
 
-***
+---
 
 ### Триггеры
 
-Вы уже знаете, как подписываться на изменения. Так запускают и обрабатывают триггеры. Но когда и кто запускает триггеры? Одно дело подписаться на них, но хотелось бы, чтобы триггеры запускались без нашего явного присутствия. 
+Вы уже знаете, как подписываться на изменения. Так запускают и обрабатывают триггеры. Но когда и кто запускает триггеры? Одно дело подписаться на них, но хотелось бы, чтобы триггеры запускались без нашего явного присутствия.
 
-Например, есть кнопка с текстом и классом. В ходе исполнения программы решили поменять имя класса с ```visible``` на ```hide```, который меняет видимость кнопки в интерфейсе. Для этого не нужно удалять кнопку из DOM и заново создавать её с новым классом. Достаточно поменять параметры кнопки, чтобы после этого она сама перерисовалась:
+Например, есть кнопка с текстом и классом. В ходе исполнения программы решили поменять имя класса с `visible` на `hide`, который меняет видимость кнопки в интерфейсе. Для этого не нужно удалять кнопку из DOM и заново создавать её с новым классом. Достаточно поменять параметры кнопки, чтобы после этого она сама перерисовалась:
 
 ```js
 const button = new Button({
@@ -258,7 +257,7 @@ renderToDom(button);
 // реактивная смена класса
 button.setProps({
   className: 'hide',
-}); 
+});
 ```
 
 Незачем делать лишние действия вроде:
@@ -268,26 +267,26 @@ button.setProps({
   className: 'hide',
 });
 
-button.reRender(); 
+button.reRender();
 ```
 
-Такой подход сложный и неправильный. Он добавляет дополнительную логику, заставляет думать когда обновлять, и каждый раз делать это «руками». 
+Такой подход сложный и неправильный. Он добавляет дополнительную логику, заставляет думать когда обновлять, и каждый раз делать это «руками».
 
 Правильный подход: после изменения параметров-пропсов — стриггерить прогон жизненного цикла от обновления компонента до перерендера. Необходимо автоматизировать всё что можно и не заставлять пользователей интерфейса помнить о текущем статусе. Поэтому система подписок и триггеров позволит сделать интерфейс более простым.
 
 Способы реализации подобного:
 
-1. Вручную после ```setProps``` вызывать ```reRender()``` — вариант всё также некорректно триггерит и завязан с другими методами. Мы снова приходим к тесной связности.
+1. Вручную после `setProps` вызывать `reRender()` — вариант всё также некорректно триггерит и завязан с другими методами. Мы снова приходим к тесной связности.
 
 2. Proxy-объект. Применение данного инструмента поможет использовать Event Bus, убрать какую-либо тесную связность между методами и подписываться только на события.
 
 Первый вариант рассматривать не будем, покажем, как можно применять Proxy-объекты. Этот способ поможет сделать простую цепочку из событий без прерываний. Например:
 
-- метод ```init``` дёргает ```emit('componentDidMount')``` у Event Bus;
-- дальше ```componentDidMount``` после вызова дёргает ```emit('render')```;
-- ```render``` в свою очередь дёргает другие события.
+- метод `init` дёргает `emit('componentDidMount')` у Event Bus;
+- дальше `componentDidMount` после вызова дёргает `emit('render')`;
+- `render` в свою очередь дёргает другие события.
 
-При изменении свойств компонента хотелось бы вызвать ```emit('componentDidUpdate')```, который в свою очередь отрисует новые данные.
+При изменении свойств компонента хотелось бы вызвать `emit('componentDidUpdate')`, который в свою очередь отрисует новые данные.
 
 Целиком реализовывать механизм компонента не будем, но покажем, как можно сделать такое с помощью прокси. Смело используйте его в проекте.
 
@@ -298,13 +297,12 @@ button.reRender();
 ```js
 const data = {
   test: 1,
-  
 };
 const proxyData = new Proxy(data, {
   get(target, prop) {
     const value = target[prop];
-    console.log("get data: ", value);
-    return typeof value === "function" ? value.bind(target) : value;
+    console.log('get data: ', value);
+    return typeof value === 'function' ? value.bind(target) : value;
   },
   set(target, prop, value) {
     target[prop] = value;
@@ -314,7 +312,7 @@ const proxyData = new Proxy(data, {
 });
 
 proxyData.test; // 'get data: 1'
-proxyData.newProp = 'string'; // 'newProp: string' 
+proxyData.newProp = 'string'; // 'newProp: string'
 ```
 
 Благодаря Proxy-объектам можно добавить любую логику на изменение, получение и даже удаление.
@@ -328,20 +326,20 @@ class Animal {
   _privateMethod() {}
 
   publicMethod() {}
-} 
+}
 ```
 
-***
+---
 
 ### Block
 
 ```js
 class Block {
   static EVENTS = {
-    INIT: "init",
-    FLOW_CDM: "flow:component-did-mount",
-    FLOW_CDU: "flow:component-did-update",
-    FLOW_RENDER: "flow:render"
+    INIT: 'init',
+    FLOW_CDM: 'flow:component-did-mount',
+    FLOW_CDU: 'flow:component-did-update',
+    FLOW_RENDER: 'flow:render',
   };
 
   _element = null;
@@ -353,11 +351,11 @@ class Block {
    *
    * @returns {void}
    */
-  constructor(tagName = "div", props = {}) {
+  constructor(tagName = 'div', props = {}) {
     const eventBus = new EventBus();
     this._meta = {
       tagName,
-      props
+      props,
     };
 
     this.props = this._makePropsProxy(props);
@@ -392,9 +390,9 @@ class Block {
 
   componentDidMount(oldProps) {}
 
-	dispatchComponentDidMount() {
-		this.eventBus().emit(Block.EVENTS.FLOW_CDM);
-	}
+  dispatchComponentDidMount() {
+    this.eventBus().emit(Block.EVENTS.FLOW_CDM);
+  }
 
   _componentDidUpdate(oldProps, newProps) {
     const response = this.componentDidUpdate(oldProps, newProps);
@@ -443,19 +441,19 @@ class Block {
     return new Proxy(props, {
       get(target, prop) {
         const value = target[prop];
-        return typeof value === "function" ? value.bind(target) : value;
+        return typeof value === 'function' ? value.bind(target) : value;
       },
       set(target, prop, value) {
         target[prop] = value;
-        
+
         // Запускаем обновление компоненты
         // Плохой cloneDeep, в следующей итерации нужно заставлять добавлять cloneDeep им самим
-        self.eventBus().emit(Block.EVENTS.FLOW_CDU, {...target}, target);
+        self.eventBus().emit(Block.EVENTS.FLOW_CDU, { ...target }, target);
         return true;
       },
       deleteProperty() {
-        throw new Error("Нет доступа");
-      }
+        throw new Error('Нет доступа');
+      },
     });
   }
 
@@ -465,11 +463,11 @@ class Block {
   }
 
   show() {
-    this.getContent().style.display = "block";
+    this.getContent().style.display = 'block';
   }
 
   hide() {
-    this.getContent().style.display = "none";
+    this.getContent().style.display = 'none';
   }
 }
 ```

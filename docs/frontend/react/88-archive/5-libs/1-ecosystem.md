@@ -23,7 +23,7 @@ sidebar_position: 7
 - [Gatsbyjs](https://www.gatsbyjs.com/) - Static HTML generator
 - [remix](https://remix.run/) - Static HTML generator
 - [docusaurus](https://docusaurus.io/) - Для документации (отпачковался от Gatsby)
-- [NextJS](https://nextjs.org/) - React-фреймворк 
+- [NextJS](https://nextjs.org/) - React-фреймворк
 
 ---
 
@@ -114,7 +114,7 @@ sidebar_position: 7
 - [lodash](https://www.npmjs.com/package/lodash) - Библиотека хэлперов
 - [date-fns](https://www.npmjs.com/package/date-fns) - Библиотека хэлперов с датами
 - [cross-env](https://www.npmjs.com/package/cross-env) - Запуск скриптов с выбранным режимом (dev или prod)
-- [env-cmd](https://www.npmjs.com/package/env-cmd)  - Использование env-файлов внутри скриптов
+- [env-cmd](https://www.npmjs.com/package/env-cmd) - Использование env-файлов внутри скриптов
 - [uuid](https://www.npmjs.com/package/uuid) - Генерация id
 - [react-beautiful-dnd](https://www.npmjs.com/package/react-beautiful-dnd) - Drag and drop
 - [react-virtualized](https://www.npmjs.com/package/react-virtualized) - Виртуальный список
@@ -129,7 +129,6 @@ sidebar_position: 7
 - [pre-commit](https://pre-commit.com/)
 - [husky](https://www.npmjs.com/package/husky)
 - [lint-staged](https://www.npmjs.com/package/lint-staged)
-
 
 ---
 
@@ -181,15 +180,16 @@ sidebar_position: 7
 ## Storybook
 
 - [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/) - фреймворк для работы с компонентами
+
   - Создание собственной библиотеки компонентов
   - Динамический справочник этих компонентов
   - Компоненты в изоляции от прочих зависимостей и бизнес-логики
   - Тестирование этих компонентов в песочнице
-  - 
+  -
 
-  ```npx storybook init | npx sb init``` - инициализация Storybook
-  ```npm rub test-storybook``` - тестирование компонентов
-  ```Alert.stories.jsx``` - файл-история, описывающий компонент
-  ```Alert.stories.mdx``` - справочное описание компонента
+  `npx storybook init | npx sb init` - инициализация Storybook
+  `npm rub test-storybook` - тестирование компонентов
+  `Alert.stories.jsx` - файл-история, описывающий компонент
+  `Alert.stories.mdx` - справочное описание компонента
 
 - [consta - старый Storybook Gazprom](https://uikit.consta.design/libs/uikit/about-start)

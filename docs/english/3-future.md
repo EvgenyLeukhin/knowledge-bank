@@ -12,7 +12,7 @@ sidebar_position: 3
 - Обещания
 - Сиеминутные решения
 
-Формула: ```Подлежащее (Subject) + will + V1``` (Я изволю отправиться завтра в деревню)
+Формула: `Подлежащее (Subject) + will + V1` (Я изволю отправиться завтра в деревню)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Wz_Dc7Q3CNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -32,7 +32,7 @@ I will not (won't) be here tomorrow.
 
 Будущие события, которые происходят по расписанию или по четкому плану можно описывать через Present Simple (постоянно, регулярно)
 
-```The plain arives at the airport at 3 p.m.```
+`The plain arives at the airport at 3 p.m.`
 
 ---
 
@@ -50,7 +50,7 @@ At 8 o'clock tomorrow she will be in her office. She will be working.
 I will be waiting for you
 ```
 
-Формула: ```Подлежащее (Subject) + will be + V-ing```
+Формула: `Подлежащее (Subject) + will be + V-ing`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/d258vuhKXSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -68,7 +68,7 @@ How many sweets will you eaten by the evening?
 Сколько конфет ты собираешься съесть вечером?
 ```
 
-Формула: ```Подлежащее (Subject) + will have + V3```
+Формула: `Подлежащее (Subject) + will have + V3`
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bs0OjpMkEVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -80,7 +80,7 @@ How many sweets will you eaten by the evening?
 - В будущем какое-то действие будет длиться, находится в процессе.
 - Утверждения связанные с определенными датами/временами.
 
-Формула: ```Подлежащее (Subject) + will have been + V-ing```
+Формула: `Подлежащее (Subject) + will have been + V-ing`
 
 ```
 By this summer I will have been learning English for 3 years.

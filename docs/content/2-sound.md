@@ -4,6 +4,7 @@ sidebar_position: 2
 ---
 
 export const H3 = ({children}) => (
+
   <h3 style={{ color: '#65BAAF' }}>
     {children}
   </h3>
@@ -20,7 +21,7 @@ export const H3 = ({children}) => (
 - Изменение цифровой задержки: I/O Buffer size (64, 128, 256)
 - Recording (Формат файла записи): .AIFF или .WAV
 - My info: Редактирование пользователя
-- Расширенные настройки: Cmd + , -> Advanced -> Show advanced tools -> Audio 
+- Расширенные настройки: Cmd + , -> Advanced -> Show advanced tools -> Audio
 ```
 
 ---
@@ -29,7 +30,7 @@ export const H3 = ({children}) => (
 
 ```
 - File -> New from Template
-- Hip-hop, Electronic, Songwriter, Orchestral, Multi-track, Music for picture or from scratch 
+- Hip-hop, Electronic, Songwriter, Orchestral, Multi-track, Music for picture or from scratch
 ```
 
 ---
@@ -118,7 +119,7 @@ export const H3 = ({children}) => (
 
 <H3>Библиотека (Sound Library) (Y)</H3>
 
-```Logic Pro X -> Sound Library -> Open Sound Library Manager```
+`Logic Pro X -> Sound Library -> Open Sound Library Manager`
 
 ---
 
@@ -142,7 +143,7 @@ export const H3 = ({children}) => (
 
 ### Флекс волны (для голоса)
 
-```Выбираем трек голоса -> Включаем режим Flex -> Flex pitch (Выбор алгоритма) -> E -> Track```
+`Выбираем трек голоса -> Включаем режим Flex -> Flex pitch (Выбор алгоритма) -> E -> Track`
 
 ### Параметры для регулирования (Ручной тюнинг голоса)
 
@@ -159,7 +160,7 @@ export const H3 = ({children}) => (
 
 ### Флекс ритма
 
-```Flex -> Flex pitch```
+`Flex -> Flex pitch`
 
 ---
 
@@ -184,59 +185,59 @@ export const H3 = ({children}) => (
 <H3>Миксдаун проекта, сведение (Bounce)</H3>
 
 ```
-Ctrl + A (или выделить нужные дорожки/фрагменты) -> 
-File -> 
-Bounce -> 
-Project or Section -> 
-PCM (.AIFF or .WAV), MP3 -> OK 
+Ctrl + A (или выделить нужные дорожки/фрагменты) ->
+File ->
+Bounce ->
+Project or Section ->
+PCM (.AIFF or .WAV), MP3 -> OK
 ```
 
 ---
 
 <H3>Горячие клавиши</H3>
 
-|ACTIONS |(Действия)|
-|---|---|
-|SPACE|Play, stop (Play from last locate position)|
-|R|Record|
-|K|Метроном вкл/выкл|
+| ACTIONS | (Действия)                                  |
+| ------- | ------------------------------------------- |
+| SPACE   | Play, stop (Play from last locate position) |
+| R       | Record                                      |
+| K       | Метроном вкл/выкл                           |
 
 ---
 
-|TRACK|(Дорожка)|
-|---|---|
-|S|Solo|
-|M|Mute|
-|ENTER|To start track, к началу трека|
-|E|Editor, Редактирование|
-|Backspace|Удалить|
-|Alt + ЛКМ|Перетаскивание копии трека на другую дорожку|
-|H|Hide, Hidden track, спрятать дорожку|
-|L|Loop copy, вставить копии до конца трека|
+| TRACK     | (Дорожка)                                    |
+| --------- | -------------------------------------------- |
+| S         | Solo                                         |
+| M         | Mute                                         |
+| ENTER     | To start track, к началу трека               |
+| E         | Editor, Редактирование                       |
+| Backspace | Удалить                                      |
+| Alt + ЛКМ | Перетаскивание копии трека на другую дорожку |
+| H         | Hide, Hidden track, спрятать дорожку         |
+| L         | Loop copy, вставить копии до конца трека     |
 
 ---
 
-|SCALE|(Масштабирование)|
-|---|---|
-|Z|Увеличить трек|
-|Cmd + Up, Dowm, Left, Right|Масштабировать вручную|
-|Zoom touchpad|Масштабировать вручную|
+| SCALE                       | (Масштабирование)      |
+| --------------------------- | ---------------------- |
+| Z                           | Увеличить трек         |
+| Cmd + Up, Dowm, Left, Right | Масштабировать вручную |
+| Zoom touchpad               | Масштабировать вручную |
 
 ---
 
-|ОКНА|(Windows)|
-|---|---|
-|X|Mixer|
-|I|Inspector|
-|Cmd + 1|Main screen|
-|Cmd + 2|Mixer|
-|Cmd + 3|Instrument controls|
-|Cmd + 4|MIDI edit screen|
-|Cmd + 5|Notes edit screen|
-|Cmd + 6|Wave graph screen|
-|Cmd + 7|Event list|
-|Cmd + 8|Project info|
-|Cmd + K|Inspector|
+| ОКНА    | (Windows)           |
+| ------- | ------------------- |
+| X       | Mixer               |
+| I       | Inspector           |
+| Cmd + 1 | Main screen         |
+| Cmd + 2 | Mixer               |
+| Cmd + 3 | Instrument controls |
+| Cmd + 4 | MIDI edit screen    |
+| Cmd + 5 | Notes edit screen   |
+| Cmd + 6 | Wave graph screen   |
+| Cmd + 7 | Event list          |
+| Cmd + 8 | Project info        |
+| Cmd + K | Inspector           |
 
 ---
 

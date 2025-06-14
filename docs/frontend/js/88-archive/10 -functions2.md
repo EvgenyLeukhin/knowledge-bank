@@ -17,7 +17,7 @@ function doHomework(subject, callback) {
   callback();
 }
 
-doHomework('math', function() {
+doHomework('math', function () {
   alert('Finished my homework');
 });
 ```
@@ -27,13 +27,13 @@ doHomework('math', function() {
 В данном примере alert будет являться колбеком.
 
 ```js
-const someFunc = function(value, cb) {
+const someFunc = function (value, cb) {
   console.log(value);
 
   if (value > 0) {
     cb();
   }
-}
+};
 
 someFunc(5, () => alert('value > 0'));
 someFunc(-5, () => alert('value < 0'));
@@ -42,22 +42,23 @@ someFunc(-5, () => alert('value < 0'));
 ### Колбек с параметром
 
 ```js
-const someFunc = function(value, cb) {
+const someFunc = function (value, cb) {
   if (value > 0) {
     cb(value);
   }
-}
+};
 
-someFunc(5, function(value) {
+someFunc(5, function (value) {
   alert('value > 0');
   console.log(value);
 });
 ```
-***
+
+---
 
 ## Анонимные самовызывающиеся функции
 
-Паттерн **IIFE** — анонимные изолированные самовызывающиеся функции. 
+Паттерн **IIFE** — анонимные изолированные самовызывающиеся функции.
 
 - Не нужно именовать
 - Будет выполняться при загрузке.
@@ -69,28 +70,28 @@ someFunc(5, function(value) {
 
 ```js
 // Этот код сразу выполнится
-(function() {
+(function () {
   console.log('Hello');
-}());
+})();
 
 // Можно передавать параметры
-(function(value) {
+(function (value) {
   console.log(value);
-}('Hello'));
+})('Hello');
 ```
 
 ```js
 // Сохраняем результат в переменную
-const greeting = (function(name) {
+const greeting = (function (name) {
   return `Hello, ${name}`;
-}('Sorax'));
+})('Sorax');
 
 console.log(greeting); // Hello, Sorax
 
 // Так тоже будет работать (без скобок) - но обычно АСФ указывают в скобках
-const greeting = function(name) {
+const greeting = (function (name) {
   return `Hello, ${name}`;
-}('Sorax');
+})('Sorax');
 ```
 
 ### Еще примеры
@@ -112,17 +113,17 @@ const greeting = function(name) {
 let a = 1;
 var b = 2;
 
-const result = (function() {
+const result = (function () {
   let a = 3;
   console.log(a, b); // 3 2
   return a;
 })();
 
-console.log(a, b, result); // 1 2 3 
+console.log(a, b, result); // 1 2 3
 ```
 
 ```js
-(function() {
+(function () {
   console.log('Something');
 })();
 
@@ -130,22 +131,21 @@ console.log(a, b, result); // 1 2 3
 (() => console.log('Something!'))();
 
 // with params
-(function(text) {
+(function (text) {
   console.log(text);
 })('Something');
 
 // param of another function
-setTimeout(function() { 
-  console.log('Test') },
-  1000
-);
+setTimeout(function () {
+  console.log('Test');
+}, 1000);
 
 setTimeout(() => {
   console.log('Test');
 }, 2000);
 ```
 
-***
+---
 
 ## Замыкания (closures)
 
@@ -158,7 +158,7 @@ function someParentFunc(a) {
   return function someChildrenFunc(b) {
     // a - род. параметр, b - локальный
     return console.log(a + b);
-  }
+  };
 }
 
 // ЗАПИСЬ 1
@@ -167,13 +167,14 @@ someParentFunc(1)(2); // 3
 
 // ЗАПИСЬ 2
 // сначала сохраняем в переменную вызов род. фукции с параметром 1
-const a = someParentFunc(1); 
+const a = someParentFunc(1);
 
 // потом вызываем вложенную функцию с параметром 2
 a(2); // 3
 ```
 
 И этот сохраненный вызов можно так же вызывать с разными параметрами.
+
 ```js
 a(3); // 4
 a(14); // 15
@@ -185,7 +186,7 @@ a(14); // 15
 
 ```js
 // меньше гибкости
-function(a, b) { ... } 
+function(a, b) { ... }
 
 // VS
 
@@ -195,8 +196,8 @@ function(a) {
 }
 ```
 
-***
+---
 
 ## Рекурсия ---
 
-***
+---

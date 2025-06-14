@@ -17,19 +17,19 @@ sidebar_position: 4
 type TMassEditData = {
   additionalStatusId: number | undefined;
   hasOnlinePayment: boolean | undefined;
-}
+};
 
 // можно записать так:
 type TMassEditData = {
   additionalStatusId?: number;
   hasOnlinePayment?: boolean;
-}
+};
 
 // можно экспортировать
 export type TMassEditData = {
   additionalStatusId?: number;
   hasOnlinePayment?: boolean;
-}
+};
 ```
 
 ---
@@ -54,7 +54,7 @@ type TSomeObj<T> = {
   className: string;
   count: number;
   data: T;
-}
+};
 
 // применение
 const a: TSomeObj<string> = {
@@ -66,7 +66,7 @@ const a: TSomeObj<string> = {
 
 ---
 
-## keyof 
+## keyof
 
 Ключи объекта. Можно использовать для типизации объектов с type и interface.
 
@@ -75,16 +75,16 @@ type TLikeButtonProps = {
   className: string;
   count: number;
   size: number;
-}
+};
 
 // ключи типа 'className' | 'count' | 'size'
-type TLikeButtonKeys = keyof TLikeButtonProps; 
+type TLikeButtonKeys = keyof TLikeButtonProps;
 
 // применение
 const a: Record<TLikeButtonKeys, string> = {
   className: 'some',
   count: 'some',
-}
+};
 ```
 
 ---
@@ -98,7 +98,14 @@ type T2gisSchedulePicked = keyof Pick<
 >;
 
 // эквивалентно
-type T2gisSchedulePicked = 'Mon' | 'Tue' | 'Wed' | 'Thu' | 'Fri' | 'Sat' | 'Sun';
+type T2gisSchedulePicked =
+  | 'Mon'
+  | 'Tue'
+  | 'Wed'
+  | 'Thu'
+  | 'Fri'
+  | 'Sat'
+  | 'Sun';
 ```
 
 ---
@@ -121,7 +128,7 @@ type TGeneratedPerson = {
   name: string;
   surname: string;
   age: number;
-}
+};
 ```
 
 ---
@@ -140,7 +147,7 @@ const person = {
 type TPersonKeys = 'name' | 'surname' | 'age';
 
 // аналог TPersonKeys (ключи типа)
-type TGeneratedPersonKeys = keyof typeof person; 
+type TGeneratedPersonKeys = keyof typeof person;
 ```
 
 ---
@@ -159,7 +166,7 @@ type TSla = {
   transportCompany: boolean;
   updatedAt: string;
   createdAt: string;
-}
+};
 
 // новый тип из 4-ех свойств типа TSla
 type PlainSla = Pick<TSla, 'id' | 'name' | 'color' | 'selected'>;
@@ -170,7 +177,7 @@ type PlainSla = {
   name: string;
   color: string;
   selected: boolean;
-}
+};
 ```
 
 ---
@@ -189,7 +196,7 @@ type TSla = {
   transportCompany: boolean;
   updatedAt: string;
   createdAt: string;
-}
+};
 
 // новый тип из 4-ех свойств типа TSla
 type TPlainSla = Omit<TSla, 'id' | 'name' | 'color' | 'selected'>;
@@ -200,7 +207,7 @@ type TPlainSla = {
   transportCompany: boolean;
   updatedAt: string;
   createdAt: string;
-}
+};
 ```
 
 ---

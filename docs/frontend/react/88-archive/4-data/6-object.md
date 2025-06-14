@@ -20,7 +20,7 @@ const Arrow = ({
   stroke = ColorList.FONT_SECONDARY,
   direction = 'down',
 }: TProps) => {
-// сохраняем варианты в значение полей
+  // сохраняем варианты в значение полей
   const directions: Record<TDirection, number> = {
     left: 90,
     up: 180,
@@ -53,7 +53,7 @@ const Arrow = ({
 export default Arrow;
 ```
 
---- 
+---
 
 ## Преобразование массива в объект
 
@@ -70,8 +70,8 @@ const zonesObj = zones.reduce<Record<string, string>>((total, item) => {
   return total;
 }, {});
 
-zonesObj; 
-// { 
+zonesObj;
+// {
 //   zoneId: zoneName,
 //   zoneId: zoneName,
 //   zoneId: zoneName,
@@ -85,7 +85,7 @@ zonesObj;
 ## Создание объекта из хэшей
 
 ```ts
-// [{drugstore1}, {drugstore2}, ..., {drugstoreN}] --> 
+// [{drugstore1}, {drugstore2}, ..., {drugstoreN}] -->
 
 // На выходе получаем объект с полями равными id зоны со значением массивом аптек в этой зоне
 // {
@@ -95,14 +95,16 @@ zonesObj;
 //   zoneN: [{drugstore1}, {drugstore2}, ...]
 // }
 
-const zonesByDrugstoresObj = drugstores.reduce<Record<string, string[]>>((total, drugstore) => {
-  const zoneHash = drugstore.zoneUuid;
+const zonesByDrugstoresObj = drugstores.reduce<Record<string, string[]>>(
+  (total, drugstore) => {
+    const zoneHash = drugstore.zoneUuid;
 
-  total[zoneHash] = [...(total[zoneHash] || []), drugstore];
+    total[zoneHash] = [...(total[zoneHash] || []), drugstore];
 
-  return total;
-}, {});
-
+    return total;
+  },
+  {},
+);
 ```
 
 ---
@@ -111,11 +113,15 @@ const zonesByDrugstoresObj = drugstores.reduce<Record<string, string[]>>((total,
 
 ```js
 // [[1, 10], [2, 9], [3, 8], [4, 7]]
-const value = dayWorktimeArray.reduce<number>((total, item) => {
-  total = mode === 'find-max-open' ? Math.max(item[0]) : Math.min(item[1]);
+const value =
+  dayWorktimeArray.reduce <
+  number >
+  ((total, item) => {
+    total = mode === 'find-max-open' ? Math.max(item[0]) : Math.min(item[1]);
 
-  return total;
-}, 0);
+    return total;
+  },
+  0);
 ```
 
 ---

@@ -15,10 +15,10 @@ const somePromise = new Promise((resolve, reject) => {
 });
 
 somePromise
-  .then((value) => {
+  .then(value => {
     // do something
   })
-  .catch((error) => {
+  .catch(error => {
     // do something
   });
 ```
@@ -47,7 +47,7 @@ delay(1000).then(resolve => console.log(resolve));
 
 ```js
 function loadScript(src) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     let script = document.createElement('script');
     script.src = src;
 
@@ -58,14 +58,17 @@ function loadScript(src) {
   });
 }
 ```
+
 Вызов функции. В параметре передаем src.
 
 ```js
-let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
+let promise = loadScript(
+  'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js',
+);
 
 promise.then(
   script => alert(`${script.src} загружен!`),
-  error => alert(`Ошибка: ${error.message}`)
+  error => alert(`Ошибка: ${error.message}`),
 );
 
 promise.then(script => alert('Ещё один обработчик...'));
@@ -74,10 +77,10 @@ promise.then(script => alert('Ещё один обработчик...'));
 Можно было записать короче:
 
 ```js
-loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js")
+loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js')
   .then(
     script => alert(`${script.src} загружен!`),
-    error => alert(`Ошибка: ${error.message}`)
+    error => alert(`Ошибка: ${error.message}`),
   )
   .then(script => alert('Ещё один обработчик...'));
 ```
@@ -123,7 +126,7 @@ setDictionary: (
 // redux-thunk
 export const getDictionaries = () => {
   return async function (dispatch: Dispatch<any>) {
-    // множественные запросы 
+    // множественные запросы
     await Promise.all([
       dictionaryService.getDictionary<IBrand>(`${root}brand`),
       dictionaryService.getDictionary<IRegion>(`${root}region`),

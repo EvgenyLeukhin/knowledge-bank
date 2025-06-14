@@ -18,13 +18,26 @@ sidebar_position: 6
       <label for="field-1">Field-1 title</label>
 
       <!-- само поле -->
-      <input id='field-1' type="text" name="field-1" placeholder="Something1" tabindex="1" required />
+      <input
+        id="field-1"
+        type="text"
+        name="field-1"
+        placeholder="Something1"
+        tabindex="1"
+        required
+      />
     </div>
 
     <!-- Контейнер поля-2 -->
     <div class="form-group">
       <label for="field-2">Field-2 title</label>
-      <input id='field-2' type="text" name="field-2" placeholder="Something2" tabindex="2" />
+      <input
+        id="field-2"
+        type="text"
+        name="field-2"
+        placeholder="Something2"
+        tabindex="2"
+      />
     </div>
   </fieldset>
 
@@ -44,7 +57,6 @@ sidebar_position: 6
   <button type="reset">Сбросить</button>
   <button type="submit">Отправить</button>
 </form>
-
 ```
 
 <form action="https://some-url.ru" method="post" autocomplete>
@@ -60,26 +72,28 @@ sidebar_position: 6
     </div>
   </fieldset>
 
-  <button type="reset">Сбросить</button>
-  <button type="submit">Отправить</button>
+<button type="reset">Сбросить</button>
+<button type="submit">Отправить</button>
+
 </form>
 
 ---
 
 ## Текстовые поля
 
-При отправки будет отрабатывать встроенная браузерная валидация. Ей можно управлять используя атрибут ```pattern```, в котором нужно записывать регулярные выражения.
+При отправки будет отрабатывать встроенная браузерная валидация. Ей можно управлять используя атрибут `pattern`, в котором нужно записывать регулярные выражения.
 
 ```html
-<input type="text" patern="[А-Яа-яЁё]"/> - Простое текстовое поле
-<input type="number" /> - Цифровое поле
-<input type="password" /> - Поле пароля
-<input type="email" /> - Поле email
-<input type="url" /> - Поле url
-<input type="tel" placeholder="+7-XXX-XXX-XXXX" patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"/> - Поле телефона
-<input type="search" /> - Поле поиска
-<input type="color" /> - Цвет
-<input type="file" /> - Загрузить файл в браузер
+<input type="text" patern="[А-Яа-яЁё]" /> - Простое текстовое поле
+<input type="number" /> - Цифровое поле <input type="password" /> - Поле пароля
+<input type="email" /> - Поле email <input type="url" /> - Поле url
+<input
+  type="tel"
+  placeholder="+7-XXX-XXX-XXXX"
+  patern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+/>
+- Поле телефона <input type="search" /> - Поле поиска <input type="color" /> -
+Цвет <input type="file" /> - Загрузить файл в браузер
 <textarea rows="10" cols="45"></textarea> - Текстовое поле
 ```
 
@@ -106,20 +120,22 @@ sidebar_position: 6
 <select name="year" id="year-id" value="1981">
   <!-- optgroup - Группировка опшинов -->
   <optgroup label="80-е">
-    <option value="1981">1981 год</option> <!-- default checked equal to select value -->
+    <option value="1981">1981 год</option>
+    <!-- default checked equal to select value -->
     <option value="1982">1982 год</option>
     <option value="1983">1983 год</option>
-  </optgroup> 
+  </optgroup>
   <optgroup label="90-е">
     <option value="1991">1991 год</option>
     <option value="1992">1992 год</option>
     <option value="1993">1993 год</option>
-  </optgroup> 
+  </optgroup>
 </select>
 ```
 
 <label for="year-id">Год рождения:</label>&nbsp;
 <select name="year" id="year-id">
+
   <optgroup label="80-е">
     <option>1981 год</option>
     <option>1982 год</option>
@@ -142,19 +158,20 @@ sidebar_position: 6
 
 <!-- Связь через id -->
 <datalist id="education">
-  <option value="Среднее неполное">
-  <option value="Среднее">
-  <option value="Средне-специальное">
-  <option value="Высшее неполное">
-  <option value="Высшее(бакалавр)">
-  <option value="Высшее" selected="selected">
-  <option value="Высшее(магистр)">
+  <option value="Среднее неполное"></option>
+  <option value="Среднее"></option>
+  <option value="Средне-специальное"></option>
+  <option value="Высшее неполное"></option>
+  <option value="Высшее(бакалавр)"></option>
+  <option value="Высшее" selected="selected"></option>
+  <option value="Высшее(магистр)"></option>
 </datalist>
 ```
 
 <label for="education-input">Ваше образование</label>&nbsp;
 <input type="text" list="education" name="education" id="education-input" />
 <datalist id="education">
+
   <option value="Среднее неполное" />
   <option value="Среднее" />
   <option value="Средне-специальное" />
@@ -170,7 +187,7 @@ sidebar_position: 6
 
 ```html
 <!-- Checkbox -->
-<input type="checkbox" name="moscow" id="moscow-id" value="1">
+<input type="checkbox" name="moscow" id="moscow-id" value="1" />
 <label for="moscow-id">Я являюсь гражданином РФ</label>
 
 <!-- Radio -->
@@ -222,9 +239,9 @@ sidebar_position: 6
 ## Дата и время
 
 ```html
-<input type="date" min="1980-01-01" max="2145-01-08" value="2022-01-01" /> - Полная дата
-<input type="month" /> - Выбор месяца
-<input type="week" /> - Выбор недели
+<input type="date" min="1980-01-01" max="2145-01-08" value="2022-01-01" /> -
+Полная дата <input type="month" /> - Выбор месяца <input type="week" /> - Выбор
+недели
 ```
 
 <input type="date" min="1980-01-01" max="2145-01-08" value="2022-01-01" />&nbsp;
@@ -242,9 +259,8 @@ sidebar_position: 6
 
 <!-- Преимущество, что button может иметь вложенный контент -->
 <button type="submit">
-  <img src="../pict/phone.png" width="35" alt="button-img">
+  <img src="../pict/phone.png" width="35" alt="button-img" />
 </button>
-
 
 <!-- Можно использовать input с type -->
 <input type="submit" value="Отправить" />
@@ -272,11 +288,11 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
 
 Используется для отображения прогресса завершённости задачи. Изменение значения происходит через JavaScript.
 
-```range``` - интерактивный ползунок, можно задавать значение.
+`range` - интерактивный ползунок, можно задавать значение.
 
-```<meter>``` - используется для вывода значения в некотором известном диапазоне. Применяется преимущественно для отображения числовых значений (например, количества результатов поиска, объёма жидкости, давления и др).
+`<meter>` - используется для вывода значения в некотором известном диапазоне. Применяется преимущественно для отображения числовых значений (например, количества результатов поиска, объёма жидкости, давления и др).
 
-```<progress>``` - показывает прогресс состояния (например, загрузка фото).
+`<progress>` - показывает прогресс состояния (например, загрузка фото).
 
 ```html
 <h3>Range</h3>
@@ -285,9 +301,8 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
 <!-- Вывод значений (через JS) -->
 <output name="result" for="range_id">0</output>
 
-
 <h3>Температура воды</h3>
-<meter value="0" max="100" low="10" high="60">Низкая</meter> 
+<meter value="0" max="100" low="10" high="60">Низкая</meter>
 <meter value="30" max="100" low="10" high="60">Нормальная</meter>
 <meter value="80" max="100" low="10" high="60">Горячая</meter>
 <meter value="100" max="100">Кипяток</meter>
@@ -318,9 +333,9 @@ range, &lt;meter&gt; и &lt;progress&gt; похожие по смыслу тэг
 
 ## JS-атрибуты
 
-- ```onclick``` - клик
-- ```onsubmit``` - отправка формы
-- ```oninput``` - ввод значения
+- `onclick` - клик
+- `onsubmit` - отправка формы
+- `oninput` - ввод значения
 
 ---
 

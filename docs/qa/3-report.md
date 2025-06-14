@@ -40,9 +40,9 @@ sidebar_position: 3
 
 ### Пример баг-репорта
 
-|ID|Title|Severity|Priority|Author|Enviroment|Precondition|Steps|Expected result|Observed result|Atachments|Comments|
-|---|---|---|---|---|---|---|---|---|---|---|---|
-|B1|Отсутствуют паддинги в карточке товара|S3/Значительный||E.Leukhin|PC, Windows 11, Chrome 105|Открыть каталог товаров|Сравнить дизайн карточек|Дизайн соответствует|Дизайн не соответствует|Some files|Some comments|
+| ID  | Title                                  | Severity        | Priority | Author    | Enviroment                 | Precondition            | Steps                    | Expected result      | Observed result         | Atachments | Comments      |
+| --- | -------------------------------------- | --------------- | -------- | --------- | -------------------------- | ----------------------- | ------------------------ | -------------------- | ----------------------- | ---------- | ------------- |
+| B1  | Отсутствуют паддинги в карточке товара | S3/Значительный |          | E.Leukhin | PC, Windows 11, Chrome 105 | Открыть каталог товаров | Сравнить дизайн карточек | Дизайн соответствует | Дизайн не соответствует | Some files | Some comments |
 
 ### Примерные колонки в баг-репорте
 

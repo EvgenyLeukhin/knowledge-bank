@@ -55,11 +55,11 @@ div {
 Текст фоном.
 
 ```css
-.parent { 
+.parent {
   background-image: url(https://www.w3schools.com/css/img_lights.jpg);
 }
 
-.child { 
+.child {
   background-color: black;
   mix-blend-mode: multiply;
 }
@@ -95,37 +95,36 @@ div {
 
     /* Направление названием - to left | to top | to right | to bottom* */
     linear-gradient(to bottom, yellow, deeppink),
-
-    /* Направление в градусах */
-    linear-gradient(45deg, white, black),
-
+    /* Направление в градусах */ linear-gradient(45deg, white, black),
     /* многоцветный градиент */
-    /* По умолчанию все цвета равномерно распределяются по ширине */
-    linear-gradient(to right, red, green, blue),
-
+      /* По умолчанию все цвета равномерно распределяются по ширине */
+      linear-gradient(to right, red, green, blue),
     /* колорстопы в % */
-    /* Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,  */
-    /* то самого градиента не будет, будут только эти цвета в чистом виде */
-    linear-gradient(45deg, green 30%, yellow 70%),
+      /* Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,  */
+      /* то самого градиента не будет, будут только эти цвета в чистом виде */
+      linear-gradient(45deg, green 30%, yellow 70%),
     linear-gradient(45deg, green 0, green 50%, yellow 50%, yellow 100%),
-
     /* колорстопы в px */
-    linear-gradient(
-      to right,
-      red 0, red 15px,
-      green 15px, green 30px,
-      blue 30px, blue 45px
-    ),
-
+      linear-gradient(
+        to right,
+        red 0,
+        red 15px,
+        green 15px,
+        green 30px,
+        blue 30px,
+        blue 45px
+      ),
     /* повторяющийся градиент */
-    repeating-linear-gradient(
-      to right,
-      red 0, red 15px,
-      green 15px, green 30px,
-      blue 30px, blue 45px
-    );
+      repeating-linear-gradient(
+        to right,
+        red 0,
+        red 15px,
+        green 15px,
+        green 30px,
+        blue 30px,
+        blue 45px
+      );
 }
-
 ```
 
 ---
@@ -138,38 +137,35 @@ div {
 
 ```css
 div {
-  background-image: 
+  background-image:
     radial-gradient(ellipse, yellow, deeppink),
-
-    /* многоцветный градиент */
-    radial-gradient(red, green, blue),
-
+    /* многоцветный градиент */ radial-gradient(red, green, blue),
     /* колорстопы в % */
-    radial-gradient(
-      red 0, red 15%,
-      green 15%, green 30%,
-      blue 30%, blue 45%
-    ),
-
+      radial-gradient(red 0, red 15%, green 15%, green 30%, blue 30%, blue 45%),
     /* колорстопы в px */
-    radial-gradient(
-      red 0, red 15px,
-      green 15px, green 30px,
-      blue 30px, blue 45px
-    ),
-
+      radial-gradient(
+        red 0,
+        red 15px,
+        green 15px,
+        green 30px,
+        blue 30px,
+        blue 45px
+      ),
     /* повторяющийся градиент */
-    repeating-radial-gradient(
-      red 0, red 15px,
-      green 15px, green 30px,
-      blue 30px, blue 45px
-    ),
+      repeating-radial-gradient(
+        red 0,
+        red 15px,
+        green 15px,
+        green 30px,
+        blue 30px,
+        blue 45px
+      );
 }
 ```
 
 #### Формы радиального градиента
 
-- **ellipse** - эллипс (по ум*);
+- **ellipse** - эллипс (по ум\*);
 - **circle** - круг;
 - **30% 40%** - координаты центра;
 - **closest-side** - предписывает браузеру создать градиент, распространяющийся из центра только до ближайшей к центру стороне элемента;
@@ -208,23 +204,24 @@ div {
   border-width: 1px;
 
   /* Стиль границы */
-  border-style: solid | dotted | dashed | double | groove | ridge | inset | outset;
+  border-style: solid | dotted | dashed | double | groove | ridge | inset |
+    outset;
 
   /* Цвет границы */
   border-color: red | currentColor;
 
   /* Отдельная граница */
   border-left: 1px solid red;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: red;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: red;
 
   /* Радиус скругления границ */
   border-radius: 10px | 50% | 10px 20px | 10px 20px 30px 40px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
 
   /* Горизонтальные и вертикальные радиусы (можно искривлять фигуры) */
   border-radius: 30px / 15px;
@@ -242,14 +239,14 @@ div {
 div {
   border-image: url(../css_border-image-2.png) 30% repeat;
 
-    /* Изображение */
-    border-image-source: url(../css_border-image-2.png);
+  /* Изображение */
+  border-image-source: url(../css_border-image-2.png);
 
-    /* Нарезка изображения рамки */
-    border-image-slice: 30%;
+  /* Нарезка изображения рамки */
+  border-image-slice: 30%;
 
-    /* Повтор изображения рамки */
-    border-image-repeat: repeat | round | stretch;
+  /* Повтор изображения рамки */
+  border-image-repeat: repeat | round | stretch;
 
   /* Ширина изображения рамки */
   border-image-width: 50px | 50px 10px 20px 5px;
@@ -291,9 +288,9 @@ div {
 div {
   /* Внешняя рамка */
   outline: 1px solid red;
-    outline-width: 1px;
-    outline-style: solid;
-    outline-color: red;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: red;
 }
 ```
 
@@ -430,7 +427,7 @@ header {
 
 ```css
 img {
-  object-fit: none* | fill | cover | contain;
+  object-fit: none * | fill | cover | contain;
   object-position: 50% 50%;
 }
 ```

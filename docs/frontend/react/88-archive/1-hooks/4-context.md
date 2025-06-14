@@ -53,8 +53,8 @@ const App = () => {
 
       <SomeComponent />
     </UserContext.Provider>
-  )
-}
+  );
+};
 ```
 
 ### 3 шаг - используем контекст внутри вложенных компонентов в провайдер
@@ -81,7 +81,7 @@ export default function SomeComp() {
 }
 ```
 
---- 
+---
 
 ## Контекст сбольшим кол-вом данных с children
 
@@ -247,7 +247,10 @@ import { useState, useEffect } from 'react';
 import { GuessMeState } from '@src/shared/gameInterfaces/guessMe.socket';
 import { simpleMerge } from '@src/common/generics';
 import WSClient from '@src/sockets';
-import { CLIENT_EVENTS, SERVER_EVENTS } from '@src/shared/socketEvents/eventTypes';
+import {
+  CLIENT_EVENTS,
+  SERVER_EVENTS,
+} from '@src/shared/socketEvents/eventTypes';
 
 interface GuessMeData {
   data: {
@@ -260,12 +263,16 @@ export const useGuessMeProvider = (roomId: string) => {
   const players = useAppSelector(selectRoomPlayers);
   const playerId = useAppSelector(selectPlayerId);
   const isActivePlayer = playerId === state.activePlayerId;
-  const currentPlayer = players.find((player) => player.playerId === playerId) || ({} as IRoomPlayer);
-  const isSpectator = currentPlayer ? currentPlayer.state !== PLAYER_STATE.GAME : true;
+  const currentPlayer =
+    players.find(player => player.playerId === playerId) || ({} as IRoomPlayer);
+  const isSpectator = currentPlayer
+    ? currentPlayer.state !== PLAYER_STATE.GAME
+    : true;
   const stateMatcher = { ...initialMapState, [state.gameState]: true };
 
   useEffect(() => {
-    const updateState = ({ data }: GuessMeData) => setState(simpleMerge(state, data.guessMe));
+    const updateState = ({ data }: GuessMeData) =>
+      setState(simpleMerge(state, data.guessMe));
 
     WSClient.on(SERVER_EVENTS.ROOM_STATE_UPDATED, updateState);
     WSClient.on(SERVER_EVENTS.GAME_STATE_UPDATED, updateState);
@@ -314,7 +321,15 @@ import { useAppDispatch } from '@src/app/hooks';
 
 const useGameHook = (roomId: string) => {
   const dispatch = useAppDispatch();
-  const [state, game, playerId, players, storeActions, isActivePlayer, isSpectator] = useGuessMeProvider(roomId);
+  const [
+    state,
+    game,
+    playerId,
+    players,
+    storeActions,
+    isActivePlayer,
+    isSpectator,
+  ] = useGuessMeProvider(roomId);
 
   useEffect(() => {
     dispatch(updateGuessMeLabelsThunk(game));
@@ -385,7 +400,7 @@ export { useGameHook };
 3. Забираем все эти данные при вызове этого кастомного хука в любом компоненте.
 
 ```tsx
-// использование в компоненте 
+// использование в компоненте
 import { useGameHook } from './guessMe.hook';
 ...
 const { state, game, playerId, actions, players, isActivePlayer, isSpectator } = useGameHook(roomId);

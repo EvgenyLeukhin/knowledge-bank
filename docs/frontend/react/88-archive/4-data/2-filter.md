@@ -17,15 +17,15 @@ const a = [
   { id: 1, name: 'Что то происходит' },
 ];
 
-// фильтрация по совпадению 
+// фильтрация по совпадению
 const b = a.filter((el, index, thisArray) => el.id === 3); // [{ 3 }]
 
-// фильтрация по несовпадению 
+// фильтрация по несовпадению
 const с = a.filter((el, index, thisArray) => el.id !== 3); // [{ 0, 1, 2 }]
 
 // example
 const deleteDeckFromSelected = (id: number) => {
-  setSelectedDecks(selectedDecks.filter((deck) => deck.id !== id));
+  setSelectedDecks(selectedDecks.filter(deck => deck.id !== id));
 };
 ```
 
@@ -33,10 +33,9 @@ const deleteDeckFromSelected = (id: number) => {
 
 Возвращает отфильтрованный массив, фильтру нужно условие если оно вернет true, то элемент проходит, если false, то нет.
 
-
 ## Сравнение массивов
 
-Есть два однотипных массива объектов, первый - полный исходный, второй часть от первого. 
+Есть два однотипных массива объектов, первый - полный исходный, второй часть от первого.
 Задача: нужно получить третий массив, который является разницей общего и второго.
 
 ```js
@@ -50,7 +49,9 @@ const anotherPartOfFullArray = fullArray - partOfFullArray; /// ???
 // делаем фильтрацию полного массива
 const anotherPartOfFullArray = fullArray.filter((itemOfFull, index) => {
   // на каждую итерацию проверяем есть ли этот элемент в полном массиве, если есть то вернется этот объект, если нет, то undefined
-  const matchedElement = partOfFullArray.find(itemOfPart => itemOfPart.id === itemOfFull.id);
+  const matchedElement = partOfFullArray.find(
+    itemOfPart => itemOfPart.id === itemOfFull.id,
+  );
 
   // совпаденный объект - будет false, а undefined превратиться в true
   return !Boolean(matchedElement);

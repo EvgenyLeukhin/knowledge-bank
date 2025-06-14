@@ -8,19 +8,19 @@ sidebar_position: 11
 ```html
 <!--1. Связываем чекбокс с лейблом через id-->
 <div class="form-group">
-  <input type="checkbox" name="remember-me" id="remember-me-id">
+  <input type="checkbox" name="remember-me" id="remember-me-id" />
   <label for="remember-me-id">Запомни меня</label>
 </div>
 ```
 
 ```css
 /* 2. Скрываем системный чекбокс */
-.form-group input[type="checkbox"] {
+.form-group input[type='checkbox'] {
   display: none;
 }
 
 /* 3. Готовим поле для псевдоэлемента лейбла */
-.form-group input[type="checkbox"] + label {
+.form-group input[type='checkbox'] + label {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -28,13 +28,13 @@ sidebar_position: 11
 }
 
 /* 4. Лейбл при наведении */
-.form-group input[type="checkbox"] + label:hover {
+.form-group input[type='checkbox'] + label:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 /* 5. Стилизуем лейбл под чекбокс на поз. псевдоэлементе */
-.form-group input[type="checkbox"] + label::before {
+.form-group input[type='checkbox'] + label::before {
   content: '';
   position: absolute;
   height: 20px;
@@ -44,7 +44,7 @@ sidebar_position: 11
 }
 
 /* 6. Крестик появляется, если лейбл отмечен */
-.form-group input[type="checkbox"]:checked + label::before {
+.form-group input[type='checkbox']:checked + label::before {
   background: url(../img/icon-checkbox.png) no-repeat 50%;
 }
 ```
@@ -52,9 +52,9 @@ sidebar_position: 11
 ### Стилизация состояний
 
 ```css
-input[type="checkbox"]:checked, 
-input[type="checkbox"]:enabled, 
-input[type="checkbox"]:disabled {
+input[type='checkbox']:checked,
+input[type='checkbox']:enabled,
+input[type='checkbox']:disabled {
   /* Стилизация состояний */
 }
 ```
@@ -65,14 +65,22 @@ input[type="checkbox"]:disabled {
 
 ```scss
 // инпут в фокусе (набираемый текст)
-input:focus { color: red; }
+input:focus {
+  color: red;
+}
 
 // Набранный текст (вне фокуса)
-input { color: black; }
+input {
+  color: black;
+}
 
 // инпут не в фокусе (ОТОБРАЖАЕТСЯ ЗНАЧЕНИЕ АТРИБУТА placeholder)
-input:placeholder { color: gray; }
+input:placeholder {
+  color: gray;
+}
 
 // инпут вне фокуса (С НАБРАННЫМ ТЕКСТОМ)
-input[placeholder] { color: blue; }
+input[placeholder] {
+  color: blue;
+}
 ```

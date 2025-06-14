@@ -12,18 +12,21 @@ const queryParams = new URLSearchParams({ foo: 'value', bar: 2 });
 ## Добавление к fetch
 
 ```js
-fetch('https://example.com?' + new URLSearchParams({
-    foo: 'value',
-    bar: 2,
-}))
+fetch(
+  'https://example.com?' +
+    new URLSearchParams({
+      foo: 'value',
+      bar: 2,
+    }),
+);
 ```
 
 или так:
 
 ```js
 const queryParams = new URLSearchParams({
-    foo: 'value',
-    bar: 2,
+  foo: 'value',
+  bar: 2,
 });
 
 fetch(`https://example.com?${queryParams}`);
@@ -34,7 +37,7 @@ fetch(`https://example.com?${queryParams}`);
 Кириллицу нужно кодировать
 
 ```js
-fetch(`https://example.com?foo=value&bar=2`)
+fetch(`https://example.com?foo=value&bar=2`);
 ```
 
 ---
@@ -92,7 +95,7 @@ GET /products?price=>10&price=<50
 // по автору и году издания
 GET /books?author=Jane_Austen&year>=1800
 
-// сортировка 
+// сортировка
 GET /products?sort=price&order=asc
 GET /songs?sort=length&order=desc
 https://api.example.com/products?sort=desc&category=clothing

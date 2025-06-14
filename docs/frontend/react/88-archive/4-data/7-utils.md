@@ -8,7 +8,7 @@ sidebar_position: 11
 Утилиты обычно применяют для обработки каких-либо данных, чтобы получить результат
 
 ```js
-data => newData
+data => newData;
 ```
 
 ## isEmpty
@@ -40,18 +40,29 @@ function checkForObject(value) {
 
   // check for array and object
   if (value.length || Object.keys(value).length) {
-    return false
+    return false;
   } else return true;
 }
 
 function isEmpty(value) {
   switch (typeof value) {
-    case 'boolean': return true; break;
-    case 'number': return true; break;
-    case 'undefined': return true; break;
-    case 'string': return !Boolean(value); break;
-    case 'object': return checkForObject(value); break;
-    default: return false;
+    case 'boolean':
+      return true;
+      break;
+    case 'number':
+      return true;
+      break;
+    case 'undefined':
+      return true;
+      break;
+    case 'string':
+      return !Boolean(value);
+      break;
+    case 'object':
+      return checkForObject(value);
+      break;
+    default:
+      return false;
   }
 }
 ```
@@ -60,7 +71,7 @@ function isEmpty(value) {
 // Решение 2
 function isLength(value) {
   return (
-    typeof value === "number" &&
+    typeof value === 'number' &&
     value > -1 &&
     value % 1 === 0 &&
     value <= Number.MAX_SAFE_INTEGER
@@ -72,16 +83,16 @@ function isNil(value) {
 }
 
 function isArrayLike(value) {
-  return !isNil(value) && typeof value !== "function" && isLength(value.length);
+  return !isNil(value) && typeof value !== 'function' && isLength(value.length);
 }
 
 function isObjectLike(value) {
-  return typeof value === "object" && value !== null;
+  return typeof value === 'object' && value !== null;
 }
 
 function getTag(value) {
   if (value === null) {
-    return value === undefined ? "[object Undefined]" : "[object Null]";
+    return value === undefined ? '[object Undefined]' : '[object Null]';
   }
   return toString.call(value);
 }
@@ -90,7 +101,7 @@ const objectProto = Object.prototype;
 
 function isPrototype(value) {
   const ctor = value && value.constructor;
-  const proto = (typeof ctor === "function" && ctor.prototype) || objectProto;
+  const proto = (typeof ctor === 'function' && ctor.prototype) || objectProto;
 
   return value === proto;
 }
@@ -99,12 +110,12 @@ function isPrototype(value) {
 ```js
 // Решение 3
 function isArguments(value) {
-  return isObjectLike(value) && getTag(value) === "[object Arguments]";
+  return isObjectLike(value) && getTag(value) === '[object Arguments]';
 }
 
 function isLength(value) {
   return (
-    typeof value === "number" &&
+    typeof value === 'number' &&
     value > -1 &&
     value % 1 === 0 &&
     value <= Number.MAX_SAFE_INTEGER
@@ -116,16 +127,16 @@ function isNil(value) {
 }
 
 function isArrayLike(value) {
-  return !isNil(value) && typeof value !== "function" && isLength(value.length);
+  return !isNil(value) && typeof value !== 'function' && isLength(value.length);
 }
 
 function isObjectLike(value) {
-  return typeof value === "object" && value !== null;
+  return typeof value === 'object' && value !== null;
 }
 
 function getTag(value) {
   if (value === null) {
-    return value === undefined ? "[object Undefined]" : "[object Null]";
+    return value === undefined ? '[object Undefined]' : '[object Null]';
   }
   return toString.call(value);
 }
@@ -133,13 +144,13 @@ function getTag(value) {
 const objectProto = Object.prototype;
 function isPrototype(value) {
   const ctor = value && value.constructor;
-  const proto = (typeof ctor === "function" && ctor.prototype) || objectProto;
+  const proto = (typeof ctor === 'function' && ctor.prototype) || objectProto;
 
   return value === proto;
 }
 
 function isArguments(value) {
-  return isObjectLike(value) && getTag(value) === "[object Arguments]";
+  return isObjectLike(value) && getTag(value) === '[object Arguments]';
 }
 ```
 
@@ -153,8 +164,8 @@ function isEmpty(value) {
   if (
     isArrayLike(value) &&
     (Array.isArray(value) ||
-      typeof value === "string" ||
-      typeof value.splice === "function" ||
+      typeof value === 'string' ||
+      typeof value.splice === 'function' ||
       isBuffer(value) ||
       isTypedArray(value) ||
       isArguments(value))
@@ -163,7 +174,7 @@ function isEmpty(value) {
   }
 
   const tag = getTag(value);
-  if (tag === "[object Map]" || tag === "[object Set]") {
+  if (tag === '[object Map]' || tag === '[object Set]') {
     return !value.size;
   }
 
@@ -181,15 +192,15 @@ function isEmpty(value) {
 }
 ```
 
-***
+---
 
 ## first(), last()
 
-Задача - реализовать два метода, которые возвратят первый или последний элемент в массиве. 
+Задача - реализовать два метода, которые возвратят первый или последний элемент в массиве.
 
 ```js
 const list = [1, 2, 3];
-arr[list.length - 1]; // 3 
+arr[list.length - 1]; // 3
 
 // утилитw
 first(arr); // 1
@@ -228,7 +239,7 @@ function first(list) {
   if (!Array.isArray(list)) {
     return undefined;
   }
-		
+
   return list.length ? list[0] : undefined;
 }
 
@@ -236,43 +247,43 @@ function last(list) {
   if (!Array.isArray(list)) {
     return undefined;
   }
-		
+
   const length = list.length;
   return length ? list[length - 1] : undefined;
 }
 ```
 
-***
+---
 
 ## Создание массива
 
 Задача - написать методы создания массивов
 
 ```js
-[...new Array(3).keys()]; // [0, 1, 2] 
-[...new Array(5).keys()]; // [0, 1, 2, 3, 4] 
+[...new Array(3).keys()]; // [0, 1, 2]
+[...new Array(5).keys()]; // [0, 1, 2, 3, 4]
 ```
 
-***
+---
 
 ### range
 
 Создаёт массив чисел (положительных или отрицательных), растущих от начальной заданной границы до конечной, не включая её.
 
 ```js
-range(4); // => [0, 1, 2, 3] 
+range(4); // => [0, 1, 2, 3]
 
 range(0, 20, 5); // => [0, 5, 10, 15]
 
 /*
-	* range(4); // => [0, 1, 2, 3] 
-	* range(-4); // => [0, -1, -2, -3]
-	* range(1, 5); // => [1, 2, 3, 4]
-	* range(0, 20, 5); // => [0, 5, 10, 15]
-	* range(0, -4, -1); // => [0, -1, -2, -3]
-	* range(1, 4, 0); // => [1, 1, 1]
-	* range(0); // => []
-*/
+ * range(4); // => [0, 1, 2, 3]
+ * range(-4); // => [0, -1, -2, -3]
+ * range(1, 5); // => [1, 2, 3, 4]
+ * range(0, 20, 5); // => [0, 5, 10, 15]
+ * range(0, -4, -1); // => [0, -1, -2, -3]
+ * range(1, 4, 0); // => [1, 1, 1]
+ * range(0); // => []
+ */
 ```
 
 ```js
@@ -283,20 +294,20 @@ function range(start = 0, end, step = 1) {
 
   // only start
   if (start > 0 && !end) {
-    for (i = 0; i < start; i+=STEP) array.push(i);
+    for (i = 0; i < start; i += STEP) array.push(i);
   }
 
   if (start < 0 && !end) {
-    for (i = 0; i > start; i-=STEP) array.push(i);
-  } 
+    for (i = 0; i > start; i -= STEP) array.push(i);
+  }
 
   // start and end
   if (start < end) {
-    for (i = start; i < end; i+=STEP) array.push(i);
+    for (i = start; i < end; i += STEP) array.push(i);
   }
 
   if (start > end) {
-    for (i = start; i > end; i-=STEP) array.push(i);
+    for (i = start; i > end; i -= STEP) array.push(i);
   }
 
   return array;
@@ -310,10 +321,10 @@ const baseRange = (start, end, step) => {
 
   // вычисляем длину массива
   let length = Math.max(Math.ceil((end - start) / (step || 1)), 0);
-  
+
   // создаем шаблон массива нужной длинны
   const result = new Array(length);
-  
+
   // пока длина массива не стала 0 (отработает столько раз, сколько длина массива)
   while (length--) {
     result[++index] = start; // добавляем индексы в массив
@@ -322,7 +333,7 @@ const baseRange = (start, end, step) => {
 
   // возвращаем полученный массив
   return result;
-}
+};
 
 // Обработка кейсов параметров
 // Проверку на типы данных не добавлял, но студенты должны будут
@@ -341,7 +352,7 @@ const a = range(1, -40);
 console.log(a);
 ```
 
-***
+---
 
 ### rangeRight
 
@@ -360,19 +371,19 @@ console.log(a);
 
 // решение 1
 function rangeRight(start, end, step) {
-	return range(start, end, step, true);
+  return range(start, end, step, true);
 }
 
 function baseRange(start, end, step, isRight) {
   let index = -1;
   let length = Math.max(Math.ceil((end - start) / (step || 1)), 0);
-  
+
   const result = new Array(length);
-  
+
   if (isRight) {
     while (length--) {
       index++;
-      result[(result.length - index) - 1] = start;
+      result[result.length - index - 1] = start;
       start += step;
     }
   } else {
@@ -381,7 +392,7 @@ function baseRange(start, end, step, isRight) {
       start += step;
     }
   }
-  
+
   return result;
 }
 
@@ -397,7 +408,6 @@ function range(start = 0, end, step, isRight) {
 }
 
 rangeRight(0, 10, 1);
-
 ```
 
 ```js
@@ -413,25 +423,25 @@ const baseRange = (start, end, step, isRight) => {
   }
 
   return result;
-}
+};
 
 // Проверку на типы данных не добавлял, но студенты должны будут
 function range(start = 0, end, step, isRight = false) {
-		if (end === undefined) {
-      end = start;
-			start = 0;
-    }
+  if (end === undefined) {
+    end = start;
+    start = 0;
+  }
 
-    step = step === undefined ? (start < end ? 1 : -1) : step;
-    return baseRange(start, end, step, isRight);
+  step = step === undefined ? (start < end ? 1 : -1) : step;
+  return baseRange(start, end, step, isRight);
 }
 
 function rangeRight(start, end, step) {
-		return range(start, end, step, true);
+  return range(start, end, step, true);
 }
 ```
 
-***
+---
 
 ## Четные и нечетные
 
@@ -448,10 +458,11 @@ function separateArray(array) {
   return {
     even: evenArray,
     odd: oddArray,
-  }
+  };
 }
 ```
-***
+
+---
 
 ## Среднее арифметическое
 
@@ -482,16 +493,16 @@ function calcAvgAge(array) {
 }
 ```
 
-***
+---
 
 ## Lodash
 
 [https://lodash.com/](https://lodash.com/)
 
-***
+---
 
 ## Date-fns
 
 [https://date-fns.org/](https://date-fns.org/)
 
-***
+---

@@ -13,7 +13,7 @@ type TProps = {
   title: string;
   action: () => void;
   children: React.ReactNode;
-}
+};
 
 // функция, возвращающая JSX
 // function Main(): JSX.Element {
@@ -24,7 +24,7 @@ type TProps = {
 // типизация через типизацию объекта пропсов
 // const SomeComponent = ({ title, action }: TProps) => {
 
-// типизация с children 
+// типизация с children
 // const SomeComponent: React.FC<PropsWithChildren<TProps>> = ...
 
 // типизация через дженерик реакт функ. компонента
@@ -34,7 +34,7 @@ const SomeComponent: FC<TProps> = ({ title, action }) => {
 
   const someLocalAction = () => {
     console.log('Do something');
-  }
+  };
 
   return (
     <div className={styles.SomeComponent}>
@@ -48,8 +48,8 @@ const SomeComponent: FC<TProps> = ({ title, action }) => {
 
       <button onClick={someLocalAction}>Click me</button>
     </div>
-  )
-}
+  );
+};
 
 export default SomeComponent;
 ```
@@ -74,7 +74,7 @@ type TProps = {
 
 ...
 
-<SomeComponent 
+<SomeComponent
   prop1={10}
   prop2="Some string"
   prop3={true}
@@ -137,14 +137,14 @@ const updateComment = (value: string) => {
 
 // styles object
 const styles = {
-  color: 'white', 
+  color: 'white',
   background: 'blue',
 }
 
 <div style={styles} />
 ```
 
-***
+---
 
 ### Глобальные стили
 
@@ -158,7 +158,7 @@ import './global.css';
 <div className="some-global-class" />
 ```
 
-***
+---
 
 ### CSS/SCSS-модули 👍
 
@@ -169,7 +169,8 @@ import './global.css';
 В CSS-модулях стили становятся JS-объектами, из которых компоненты получают свои имена:
 
 ```css
-.button {}
+.button {
+}
 ```
 
 ```jsx
@@ -194,18 +195,18 @@ import styles from './Button.module.css';
 </button>
 ```
 
-***
+---
 
 ### JSS - css in js
 
-```yarn add react-jss```
+`yarn add react-jss`
 
 [cssinjs.org](https://cssinjs.org/?v=v10.3.0)
 
 ```jsx
-import React from 'react'
-import {render} from 'react-dom'
-import {createUseStyles} from 'react-jss'
+import React from 'react';
+import { render } from 'react-dom';
+import { createUseStyles } from 'react-jss';
 
 // Create your Styles. Remember, since React-JSS uses the default preset,
 // most plugins are available without further configuration needed.
@@ -217,39 +218,39 @@ const useStyles = createUseStyles({
       top: 5, // jss-plugin-default-unit makes this 5px
       right: 0,
       bottom: 0,
-      left: '1rem'
+      left: '1rem',
     },
     '& span': {
       // jss-plugin-nested applies this to a child span
-      fontWeight: 'bold' // jss-plugin-camel-case turns this into 'font-weight'
-    }
+      fontWeight: 'bold', // jss-plugin-camel-case turns this into 'font-weight'
+    },
   },
   myLabel: {
-    fontStyle: 'italic'
-  }
-})
+    fontStyle: 'italic',
+  },
+});
 
 // Define the component using these styles and pass it the 'classes' prop.
 // Use this to assign scoped class names.
-const Button = ({children}) => {
-  const classes = useStyles()
+const Button = ({ children }) => {
+  const classes = useStyles();
   return (
     <button className={classes.myButton}>
       <span className={classes.myLabel}>{children}</span>
     </button>
-  )
-}
+  );
+};
 
-const App = () => <Button>Submit</Button>
+const App = () => <Button>Submit</Button>;
 
-render(<App />, document.getElementById('root'))
+render(<App />, document.getElementById('root'));
 ```
 
-***
+---
 
 ### Styled-component 👎
 
-```yarn add styled-components```
+`yarn add styled-components`
 
 [styled-components](https://styled-components.com/)
 
@@ -265,23 +266,25 @@ const Button = styled.button`
   margin: 0.5em 1em;
   padding: 0.25em 1em;
 
-  ${props => props.primary && css`
-    background: palevioletred;
-    color: white;
-  `}
+  ${props =>
+    props.primary &&
+    css`
+      background: palevioletred;
+      color: white;
+    `}
 `;
 
 // стили компонента <Container />
 const Container = styled.div`
   text-align: center;
-`
+`;
 
 render(
   <Container>
     <Button>Normal Button</Button>
     <Button primary>Primary Button</Button>
-  </Container>
-); 
+  </Container>,
+);
 ```
 
 ---
@@ -290,11 +293,11 @@ render(
 
 [Post CSS plugins](https://www.postcss.parts/)
 
---- 
+---
 
 ### classnames
 
-```yarn add classnames```
+`yarn add classnames`
 
 ```tsx
 import cn from 'classnames';
@@ -313,7 +316,7 @@ import styles from 'SomeComponent.module.scss';
 
 ```
 
---- 
+---
 
 ## Импорты и разбивка
 
@@ -323,7 +326,7 @@ SomeComponent/
     SomePart1/
     SomePart2/
     index.ts
-  
+
   modals/
 
   utils | helpers/

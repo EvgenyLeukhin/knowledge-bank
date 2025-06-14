@@ -4,6 +4,7 @@ sidebar_position: 7
 ---
 
 export const MAP = ({children}) => (
+
   <div
     style={{
       border: '1px dashed deeppink',
@@ -17,11 +18,11 @@ export const MAP = ({children}) => (
 
 По умолчанию изображения отрисовываются по такой ширине и высоте в пикселях как в исходном файле. Атрибутами width и height можно изменять исходный размер.
 
-## ```<img>```
+## `<img>`
 
 Как хак можно испольтзовать исходные изображения по ширине в 2 раза больше, чем оно отрисовываются в браузере, тогда будет поддержка ретины 2х. То есть, исходная картинка по ширине 1000px, а в html/css мы укахываем ей ширину 500px. Но есть недостаток, что на обычных экранах будет грузиться дольше.
 
-Если нужна гибкая настройка с **srcset** и **sizes**, то лучше использовать тэг ```<picture>```.
+Если нужна гибкая настройка с **srcset** и **sizes**, то лучше использовать тэг `<picture>`.
 
 <img src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594" alt="Картинка" />
 
@@ -30,30 +31,56 @@ export const MAP = ({children}) => (
 <img src="../pict/kitty.png" width="250" height="100" alt="kitty.png" />
 
 <!-- Изображение с абсолюиным источником -->
-<img src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594" alt="Картинка" />
+<img
+  src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594"
+  alt="Картинка"
+/>
 
 <!-- Для ретиновых дисплеев будет грузиться файл pict800px.png -->
-<img src="img/pict400px.png" width="400" srcset="img/pict800px.png 2x">
+<img src="img/pict400px.png" width="400" srcset="img/pict800px.png 2x" />
 
 <!-- Можно указывать сразу несколько изображений для двух- и трехслойной ретины -->
-<img src="img/pict400px.png" width="400" srcset="img/pict800px.png 2x, img/pict1200px.png 3x">
+<img
+  src="img/pict400px.png"
+  width="400"
+  srcset="img/pict800px.png 2x, img/pict1200px.png 3x"
+/>
 
 <!-- С картой map для позиционирования ссылок -->
-<img src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594" alt="Картинка" />
+<img
+  src="https://zapovednik96.ru/upload/delight.webpconverter/puppy/images/kitten.png.webp?164509253131594"
+  alt="Картинка"
+/>
 
 <map name="infographic">
-  <area shape="poly" coords="130,147,200,107,254,219,130,228"
-        href="https://developer.mozilla.org/docs/Web/HTML"
-        target="_blank" alt="HTML" />
-  <area shape="poly" coords="130,147,130,228,6,219,59,107"
-        href="https://developer.mozilla.org/docs/Web/CSS"
-        target="_blank" alt="CSS" />
-  <area shape="poly" coords="130,147,200,107,130,4,59,107"
-        href="https://developer.mozilla.org/docs/Web/JavaScript"
-        target="_blank" alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="130,147,200,107,254,219,130,228"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    target="_blank"
+    alt="HTML"
+  />
+  <area
+    shape="poly"
+    coords="130,147,130,228,6,219,59,107"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    target="_blank"
+    alt="CSS"
+  />
+  <area
+    shape="poly"
+    coords="130,147,200,107,130,4,59,107"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    target="_blank"
+    alt="JavaScript"
+  />
 </map>
 
-<img usemap="#infographic" src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info2.png" alt="MDN infographic" />
+<img
+  usemap="#infographic"
+  src="https://interactive-examples.mdn.mozilla.net/media/examples/mdn-info2.png"
+  alt="MDN infographic"
+/>
 ```
 
 <MAP>
@@ -74,28 +101,31 @@ export const MAP = ({children}) => (
 
 ---
 
-## ```<picture>```
+## `<picture>`
 
-Более гибкая настройка тега ```<img>```. Включает медиазапросы и поддержку ретиновых экранов. Вроде бы как сам тэг picture не стилизуется, стили принимает только ```<img>```.
+Более гибкая настройка тега `<img>`. Включает медиазапросы и поддержку ретиновых экранов. Вроде бы как сам тэг picture не стилизуется, стили принимает только `<img>`.
 
 ```html
 <picture>
-  <source 
-    type="image/jpg" 
-    media="(min-width: 0) and (max-width: 600px)" 
+  <source
+    type="image/jpg"
+    media="(min-width: 0) and (max-width: 600px)"
     srcset="images/mobile-375x210-1x.jpg 1x, images/mobile-750x420-2x.jpg 2x"
-  >
-  <source 
-    type="image/jpg" 
-    media="(min-width: 601px) and (max-width: 960px)" 
+  />
+  <source
+    type="image/jpg"
+    media="(min-width: 601px) and (max-width: 960px)"
     srcset="images/tablet-768x430-1x.jpg 1x, images/tablet-1536x860-2x.jpg 2x"
-  >
-  <source 
-    type="image/jpg" 
-    media="(min-width: 961px)" 
-    srcset="images/desktop-1119x840-1x.jpg 1x, images/desktop-2238x1680-2x.jpg 2x"
-  >
-  <img src="images/desktop-1119x840-1x.jpg" alt="plug-image">
+  />
+  <source
+    type="image/jpg"
+    media="(min-width: 961px)"
+    srcset="
+      images/desktop-1119x840-1x.jpg  1x,
+      images/desktop-2238x1680-2x.jpg 2x
+    "
+  />
+  <img src="images/desktop-1119x840-1x.jpg" alt="plug-image" />
 </picture>
 ```
 
@@ -105,12 +135,22 @@ export const MAP = ({children}) => (
 
 ```html
 <picture>
-    <source type="image/avif" srcset="images/cat@1x.avif 1x, images/cat@2x.avif 2x">
-    <source type="image/webp" srcset="images/cat@1x.webp 1x, images/cat@2x.webp 2x">
-    <img class="picture" width="500" height="500"
-        src="images/cat@1x.jpeg"
-        srcset="images/cat@2x.jpeg 2x"
-        alt="Рыжий кот нюхает штанину.">
+  <source
+    type="image/avif"
+    srcset="images/cat@1x.avif 1x, images/cat@2x.avif 2x"
+  />
+  <source
+    type="image/webp"
+    srcset="images/cat@1x.webp 1x, images/cat@2x.webp 2x"
+  />
+  <img
+    class="picture"
+    width="500"
+    height="500"
+    src="images/cat@1x.jpeg"
+    srcset="images/cat@2x.jpeg 2x"
+    alt="Рыжий кот нюхает штанину."
+  />
 </picture>
 ```
 
@@ -120,42 +160,34 @@ export const MAP = ({children}) => (
 
 ```css
 .feature {
-    position: relative;
-    display: grid;
-    align-items: end;
-    /* Для Chrome и Safari */
-    background-image:
-        linear-gradient(
-            to top,
-            black,
-            transparent 70%
-        ),
-        -webkit-image-set(
-            url('images/cat@2x.jpeg') 2x,
-            url('images/cat@1x.jpeg') 1x
-        );
-    /* Для Firefox */
-    background-image:
-        linear-gradient(
-            to top,
-            black,
-            transparent 70%
-        ),
-        image-set(
-            url('images/cat@2x.avif') type('image/avif') 2x,
-            url('images/cat@1x.avif') type('image/avif') 1x,
-            url('images/cat@2x.webp') type('image/webp') 2x,
-            url('images/cat@1x.webp') type('image/webp') 1x,
-            url('images/cat@2x.jpeg') 2x,
-            url('images/cat@1x.jpeg') 1x
-        );
-    background-size: cover;
-    max-width: 500px;
-    aspect-ratio: 1 / 1;
+  position: relative;
+  display: grid;
+  align-items: end;
+  /* Для Chrome и Safari */
+  background-image:
+    linear-gradient(to top, black, transparent 70%),
+    -webkit-image-set(
+        url('images/cat@2x.jpeg') 2x,
+        url('images/cat@1x.jpeg') 1x
+      );
+  /* Для Firefox */
+  background-image:
+    linear-gradient(to top, black, transparent 70%),
+    image-set(
+      url('images/cat@2x.avif') type('image/avif') 2x,
+      url('images/cat@1x.avif') type('image/avif') 1x,
+      url('images/cat@2x.webp') type('image/webp') 2x,
+      url('images/cat@1x.webp') type('image/webp') 1x,
+      url('images/cat@2x.jpeg') 2x,
+      url('images/cat@1x.jpeg') 1x
+    );
+  background-size: cover;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
 }
 ```
 
-## ```<figure>```
+## `<figure>`
 
 Если нужно выделить картинку и добавить ей заголовок. Используется редко. Можно всё сделать стилями.
 
@@ -175,7 +207,7 @@ export const MAP = ({children}) => (
   <img src="../../../../img/html/guitar.jpg" width="350" alt="guitar.jpg" />
 
   **Самый распространнённый формат**, подходящий для ФОТОГРАФИЙ, различных изображений, которым нужна полноцветность, но не нужна прозрачность. Можно иммитировать прозрачность делая цвет фона у JPEG такой же как в контейнере. 1991 г
-  
+
   - Небольшой вес
   - Гибкость в настройке качества (обычно 60-90%)
   - Огромное кол-во цветов (16 млн.)
@@ -184,7 +216,7 @@ export const MAP = ({children}) => (
   - Не подходит для чертежей и схем, где нужна чёткость при маштабировании
   - Всегда прямоугольник
 
-  ---
+  ***
 
 - ### PNG
 
@@ -199,7 +231,7 @@ export const MAP = ({children}) => (
   - Современный формат
   - Большой вес на хорошем качестве
 
-  ---
+  ***
 
 - ### SVG
 
@@ -215,7 +247,7 @@ export const MAP = ({children}) => (
   - Большой вес при большом содержании
   - Сложность разработки и редактирования
 
-  ---
+  ***
 
 - ### GIF
 
@@ -233,22 +265,22 @@ export const MAP = ({children}) => (
   - Не поддерживает полупрозрачность (прозрачность бинарная: пиксель либо прозрачный, либо нет)
   - Сейчас в основном только для анимаций, просто для изображений уже никто не использует
 
-  ---
-  
+  ***
+
 - ### WEBP
 
   <img src="../../../../img/html/guitar.webp" width="250" alt="guitar.webp" />
 
   Разработан Google специально для web. Самый современный формат, небольшой вес. 2010 год
-  
+
   В среднем вес картинок сокращается на 25–35% при аналогичном качестве, если сравнивать с png.
-  
+
   - Поддержка анимации
   - Поддержка уже хорошая, но слабое распространение
   - Непопулярность, но перспективность в будущем
   - Слабая поддержка программами для работы с графикой
 
-  ---
+  ***
 
 - ### PNG-8
 
@@ -263,7 +295,7 @@ export const MAP = ({children}) => (
   - При прозрачности требует обводки
   - Не поддерживает полупрозрачность
 
-  ---
+  ***
 
 - ### BMP
 
@@ -271,7 +303,7 @@ export const MAP = ({children}) => (
 
   Большой вес. В вебе практически не используется, хотя браузеры поддерживают. Разработан Microsoft.
 
-  ---
+  ***
 
 - ### ICO
 
@@ -279,7 +311,7 @@ export const MAP = ({children}) => (
 
   Формат хранения файлов значков в Microsoft Windows. Поддерживаемы размеры 16, 32 и 48 пикселей. Также используются значки с размером 24, 40, 60, 72, 92, 108, 128 пикселей. Раньше использовался для фавиконок.
 
-  ---
+  ***
 
 - ### Base64
 
@@ -293,14 +325,17 @@ export const MAP = ({children}) => (
 
   ```css
   .some_background {
-   background-image: url("data:image/ТИП;base64,КОД");
+    background-image: url('data:image/ТИП;base64,КОД');
   }
   ```
 
   ```html
-  <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
+  <img
+    src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA
     AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO
-    9TXL0Y4OHwAAAABJRU5ErkJggg==" alt="Red dot" />
+    9TXL0Y4OHwAAAABJRU5ErkJggg=="
+    alt="Red dot"
+  />
   ```
 
   Cтандарт кодирования двоичных данных при помощи только 64 символов ASCII. Можно вставлять в html или css код, который будет конвертироваться в изображения. Хорошо подходит для мелкой графики (svg-иконок и небольших изображений). Меньше запросов к серверу.

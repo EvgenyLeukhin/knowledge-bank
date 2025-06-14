@@ -10,16 +10,26 @@ sidebar_position: 9
 ```scss
 // синтаксис
 @keyframes smoothDisplay {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 // в процентах указана раскадровка анимации:
 // 0% - начало, 100% - конец
 @keyframes smoothDisplay {
-  0% { opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 // Применение анимации
@@ -31,10 +41,10 @@ sidebar_position: 9
   animation-duration: 2s | 2000ms;
 
   // кол-во итераций
-  animation-iteration-count: 1 | 2 | ... | infinite;
+  animation-iteration-count: 1 | 2 |... | infinite;
 
   // направление (normal - 0-100%, reverse 100%-0)
-  animation-direction: normal* | reverse;
+  animation-direction: normal * | reverse;
 
   // задержка (задержка перед стартом)
   animation-delay: 1s | 1000ms;
@@ -44,10 +54,10 @@ sidebar_position: 9
   animation-fill-mode: forwards | backwards | both;
 
   // функция изменения анимации по времении
-  animation-timing-function: linear* | ease | ease-in | ease-out | ease-in-out;
+  animation-timing-function: linear * | ease | ease-in | ease-out | ease-in-out;
 
   // режим анимации (можно остиановить через JS)
-  animation-play-state: running* | paused;
+  animation-play-state: running * | paused;
 }
 ```
 
@@ -59,7 +69,7 @@ sidebar_position: 9
 
 ### animation-timing-function
 
-- **linear** - линейная (по ум*);
+- **linear** - линейная (по ум\*);
 - **ease** - парабола;
 - **ease-in** - вогнутая парабола;
 - **ease-out** - выгнутая парабола;
@@ -84,7 +94,9 @@ animation:
   animation: move 3s linear 10;
 
   // Множественная анимация
-  animation: rotate 1s linear 1, spin 3s linear 1;
+  animation:
+    rotate 1s linear 1,
+    spin 3s linear 1;
 }
 ```
 
@@ -98,14 +110,14 @@ animation:
   transform: вид_трансформации(значение);
 
   // длительность трансформации
-  transition-duration:  1s | 1000ms;
+  transition-duration: 1s | 1000ms;
 
   // ПЕРЕМЕЩЕНИЕ
   transform: translateX(100px);
   transform: translateY(50px);
   transform: translate(100px, 50px);
 
-  // МАСШТАБИРОВАНИЕ 
+  // МАСШТАБИРОВАНИЕ
   transform: scaleX(2);
   transform: scaleY(2);
   transform: scale(2);
@@ -120,7 +132,10 @@ animation:
   // УГЛОВОЕ ИСКАЖЕНИЕ
   transform: skewX(45deg);
   transform: skewY(45deg);
-  transform: skew(45deg, 45deg); // На 45 градусов по оси x и y, при этом объект исчезает
+  transform: skew(
+    45deg,
+    45deg
+  ); // На 45 градусов по оси x и y, при этом объект исчезает
   transform: matrix(2, 2, 0, 2, 45, 0); // МАТРИЦА - matrix(a, b, c, d, tx, ty)
 
   // Множественная трансформация
@@ -147,10 +162,10 @@ animation:
   transform-origin: 0% 100%;
 
   // По ум*. Центр
-  transform-origin: 50% 50%; 
+  transform-origin: 50% 50%;
 
   // можно прописывать словами
-  transform-origin: right center; 
+  transform-origin: right center;
 
   // Выбор оси вращения
   transform: rotate(360deg);
@@ -229,7 +244,6 @@ TODO
   // без трансформации
   transform: matrix(1, 0, 0, 1, 0, 0);
 
-
   transfomr: matrix(1, 1, 1, 1, 1, 1);
   transfomr: matrix3d(1, 1, 1, 1, 1, 1);
 }
@@ -268,7 +282,7 @@ TODO
   transition-delay: 2s;
 
   // функция изменения плавности по времении
-  transition-timing-function: linear* | ease | ease-in | ease-out | ease-in-out;
+  transition-timing-function: linear * | ease | ease-in | ease-out | ease-in-out;
 
   &:hover {
     background-color: maroon;
@@ -295,7 +309,7 @@ transition:
   transition-property: width, height, background;
 
   // для всех свойств
-  transition: all .23s;
+  transition: all 0.23s;
 }
 ```
 

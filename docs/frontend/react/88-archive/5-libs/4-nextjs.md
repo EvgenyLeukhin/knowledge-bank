@@ -13,26 +13,26 @@ sidebar_position: 66
 
 ## Install with TypeScript (old):
 
-```yarn create next-app --typescript```
+`yarn create next-app --typescript`
 
 ## Install with TypeScript (new):
 
 now ships with TypeScript by default.
 
-```npx create-next-app@latest project-name```
+`npx create-next-app@latest project-name`
 
 ### Install 1 old (create-next-app)
 
-1. ```npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"```
-2. ```cd nextjs-blog```
-3. ```npm run dev```
+1. `npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"`
+2. `cd nextjs-blog`
+3. `npm run dev`
 
 ### Install 2 old (manual)
 
-1. ```npm init -y```
-2. ```npm i --save react react-dom next```
-3. ```./pages/index.js```
-4. ```package.json```
+1. `npm init -y`
+2. `npm i --save react react-dom next`
+3. `./pages/index.js`
+4. `package.json`
 
 ---
 
@@ -48,20 +48,20 @@ const Index = () => {
       <h1>Hello, Nextjs!!!</h1>
     </div>
   );
-}
+};
 
 export default Index;
 ```
 
-#### _app page
+#### \_app page
 
 ```tsx
 // _app.tsx - обертка
-import '../styles/global-styles.css'
+import '../styles/global-styles.css';
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 ```
 
@@ -70,16 +70,14 @@ export default function MyApp({ Component, pageProps }) {
 ```tsx
 // 404.tsx
 export default function Error() {
-  return (
-    <h1>404 - Page not found</h1>
-  )
+  return <h1>404 - Page not found</h1>;
 }
 ```
 
 ### Dynamic pages
 
-```pages/users/index.tsx``` - users list static page
-```pages/users/[id].tsx``` - users detail dynamic page
+`pages/users/index.tsx` - users list static page
+`pages/users/[id].tsx` - users detail dynamic page
 
 ---
 
@@ -125,16 +123,15 @@ const Index = () => {
 export default Index;
 ```
 
-
-Styling (_app.js)
-Если в pages создать файл _app.js, то он будет оберткой для всего приложения. Можно подключать к нему глобальные стили.
+Styling (\_app.js)
+Если в pages создать файл \_app.js, то он будет оберткой для всего приложения. Можно подключать к нему глобальные стили.
 
 ```tsx
-import '../styles/global-styles.css'
+import '../styles/global-styles.css';
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 ```
 
@@ -185,17 +182,16 @@ import Link from 'next/Link';
 export default function staticRouting() {
   return (
     <>
-      <Link href="/">
+      <Link href='/'>
         <a>Homepage</a>
       </Link>
-      <Link href="/users">
+      <Link href='/users'>
         <a>Users</a>
       </Link>
     </>
-  )
+  );
 }
 ```
-
 
 Dynamic routing
 pages/users/index.jsx || pages/users/[id].jsx
@@ -208,7 +204,7 @@ export default function staticRouting() {
     <Link href={`/users/${user.id}`}>
       <a>{user.name}</a>
     </Link>
-  )
+  );
 }
 ```
 
@@ -230,7 +226,7 @@ export default function userId() {
 
       <div>{`User id: ${id}`}</div>
     </div>
-  )
+  );
 }
 ```
 
@@ -242,10 +238,10 @@ export default function userId() {
 import Head from 'next/head';
 
 <Head>
-  <meta keywords="keyword1, keyword2, keyword3" />
+  <meta keywords='keyword1, keyword2, keyword3' />
   <title>NextJs - Test</title>
-</Head>
-MainContainer.js
+</Head>;
+MainContainer.js;
 import Head from 'next/head';
 import LinkCustom from './LinkCustom';
 
@@ -258,12 +254,12 @@ export default function MainContainer({ children, keywords }) {
       </Head>
 
       <header>
-        <ul className="navbar">
+        <ul className='navbar'>
           <li>
-            <LinkCustom text="Index" href="" />
+            <LinkCustom text='Index' href='' />
           </li>
           <li>
-            <LinkCustom text="Users" href="users" />
+            <LinkCustom text='Users' href='users' />
           </li>
         </ul>
       </header>
@@ -299,8 +295,8 @@ const Index = () => {
         <h1 style={{ color: 'maroon' }}>Hello, Nextjs!!!</h1>
       </div>
     </MainContainer>
-  )
-}
+  );
+};
 
 export default Index;
 ```
@@ -314,8 +310,8 @@ import { NextSeo } from 'next-seo';
 const Page = () => (
   <>
     <NextSeo
-      title="Simple Usage Example"
-      description="A short description goes here."
+      title='Simple Usage Example'
+      description='A short description goes here.'
     />
     <p>Simple Usage</p>
   </>
@@ -340,8 +336,8 @@ export async function getStaticProps(context) {
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
   const users = await response.json();
   return {
-    props: {users}, // will be passed to the page component as props
-  }
+    props: { users }, // will be passed to the page component as props
+  };
 }
 
 export default function users({ users }) {
@@ -362,10 +358,14 @@ export default function users({ users }) {
 
       <h2>Routing</h2>
       <ul>
-        <li><Link href='/'><a>Index</a></Link></li>
+        <li>
+          <Link href='/'>
+            <a>Index</a>
+          </Link>
+        </li>
       </ul>
     </div>
-  )
+  );
 }
 ```
 
@@ -377,12 +377,14 @@ export default function users({ users }) {
 // getServerSideProps - for dynamic pages
 export async function getServerSideProps(context) {
   const { params, query } = context; // params, query можно забирать прямо из контекста этой функции
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`);
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${params.id}`,
+  );
   const userData = await response.json();
 
   return {
-    props: {userData}, // will be passed to the page component as props
-  }
+    props: { userData }, // will be passed to the page component as props
+  };
 }
 
 export default function userId({ userData }) {
@@ -392,13 +394,21 @@ export default function userId({ userData }) {
     <div>
       <h1>User details:</h1>
       <ul>
-        <li><span>Name:</span> <b>{userData.name}</b></li>
-        <li><span>Phone:</span> <b>{userData.phone}</b></li>
-        <li><span>Website:</span> <b>{userData.website}</b></li>
-        <li><span>Id:</span> <b>{userData.id}</b></li>
+        <li>
+          <span>Name:</span> <b>{userData.name}</b>
+        </li>
+        <li>
+          <span>Phone:</span> <b>{userData.phone}</b>
+        </li>
+        <li>
+          <span>Website:</span> <b>{userData.website}</b>
+        </li>
+        <li>
+          <span>Id:</span> <b>{userData.id}</b>
+        </li>
       </ul>
     </div>
-  )
+  );
 }
 ```
 

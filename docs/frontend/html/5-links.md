@@ -5,13 +5,18 @@ sidebar_position: 5
 
 Тэг строчный, но им можно оборачивать любые элементы, для того чтобы они были кликабельны.
 
-- ```download``` - Скачать
-- ```rel``` - relationship
-- ```target``` - управление вкладкой (_self и_blank)
+- `download` - Скачать
+- `rel` - relationship
+- `target` - управление вкладкой (\_self и_blank)
 
 ```html
 <!-- Простая ссылка на сторонний ресурс в новой вкладке -->
-<a href="http://ya.ru"  target="_blank" rel="nofollow noreferrer" title="Click me!">
+<a
+  href="http://ya.ru"
+  target="_blank"
+  rel="nofollow noreferrer"
+  title="Click me!"
+>
   Ссылка на сайт Яндекс
 </a>
 
@@ -22,11 +27,13 @@ sidebar_position: 5
 <a href="#списки">Якорная ссылка</a>
 
 <!-- Ссылка на файл -->
-<a href="https://tourpass.ru/docs/politic-person-data.pdf" target="_blank">Ссылка на pdf-файл</a>
+<a href="https://tourpass.ru/docs/politic-person-data.pdf" target="_blank"
+  >Ссылка на pdf-файл</a
+>
 
 <!-- Ссылка-обёртка -->
 <a href="https://www.w3schools.com">
-  <img border="0" alt="W3Schools" src="logo_w3s.gif" width="100" height="100">
+  <img border="0" alt="W3Schools" src="logo_w3s.gif" width="100" height="100" />
 </a>
 
 <!-- Ссылка на почтовый клиент -->

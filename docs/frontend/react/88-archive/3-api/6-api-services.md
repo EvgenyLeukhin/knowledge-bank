@@ -19,29 +19,11 @@ sidebar_position: 6
 
 ### Базовый сценарий работы с данными
 
-**1. Запрос на получение данных** - асинхронный гет-запрос внутри useEffect() при загрузке компонета или по эвенту
-    - GET-запрос
-    - индикация запроса (лоадер)
-    - обработка ошибок
-    - query-параметры для фильтрации
-    - сортировка
-**2. Визуализация полученных данных или списка данных** - сохранение полученных данных через функцию setState() внутри локального стейта компонета. Также возможна конвертация полученных данных для подставление в ui-компоненты.
-    - json
-    - полученные данные нужно "раскидать" по ui-элементам
-    - списки данных для отображения часто сохраняют в store
-    - данные отдельной сущности (по id) обычно сохраняют в локальный стейт компонента (для возможности редактирования)
-**3. Изменение данных** - изменение локального стейта компонета через функции-обработчики, которая изменяет данные в локальном стейте
-    - изменение данных в стейте компонента
-    - методы onChange изменяют локальный стейт
-    - валидация на фронте
-**4. Отправка измененных данных** - подстановка измененных данных их локального стейта в тело пост-запроса
-    - PUT, PATCH запросы
-    - данные из локального стейта нужно сложить в запрос
-    - валидация на бэке
-    - индикация запроса (лоадер)
-**5. Получение новых данных** - при успешной отправке измененных данных получаем новые данные в гет-запросе с сервера
-    - после успешной отправки запроса после редактирования отдельного элемента показываем новый список с учетом измененного элемента
-
+**1. Запрос на получение данных** - асинхронный гет-запрос внутри useEffect() при загрузке компонета или по эвенту - GET-запрос - индикация запроса (лоадер) - обработка ошибок - query-параметры для фильтрации - сортировка
+**2. Визуализация полученных данных или списка данных** - сохранение полученных данных через функцию setState() внутри локального стейта компонета. Также возможна конвертация полученных данных для подставление в ui-компоненты. - json - полученные данные нужно "раскидать" по ui-элементам - списки данных для отображения часто сохраняют в store - данные отдельной сущности (по id) обычно сохраняют в локальный стейт компонента (для возможности редактирования)
+**3. Изменение данных** - изменение локального стейта компонета через функции-обработчики, которая изменяет данные в локальном стейте - изменение данных в стейте компонента - методы onChange изменяют локальный стейт - валидация на фронте
+**4. Отправка измененных данных** - подстановка измененных данных их локального стейта в тело пост-запроса - PUT, PATCH запросы - данные из локального стейта нужно сложить в запрос - валидация на бэке - индикация запроса (лоадер)
+**5. Получение новых данных** - при успешной отправке измененных данных получаем новые данные в гет-запросе с сервера - после успешной отправки запроса после редактирования отдельного элемента показываем новый список с учетом измененного элемента
 
 ---
 
@@ -83,7 +65,9 @@ const mapService = {
 
   async getRegionZones(regionId: number): Promise<IServerResult> {
     try {
-      const { data, status } = await httpClient.get(`dictionaries/zone/${regionId}`);
+      const { data, status } = await httpClient.get(
+        `dictionaries/zone/${regionId}`,
+      );
 
       return {
         data,
@@ -134,7 +118,8 @@ const mapService = {
   },
 
   async updateExternalDrugstoreStatus(
-    externalDrugstoreId: string, externalDrugstoreStatus: ExternalDrugstoreStatus
+    externalDrugstoreId: string,
+    externalDrugstoreStatus: ExternalDrugstoreStatus,
   ): Promise<IServerResult> {
     try {
       const { data, status } = await httpClient.put(`
@@ -153,7 +138,10 @@ const mapService = {
     }
   },
 
-  async linkDrugstores(drugstoreId: number, externalDrugstoreId: string): Promise<IServerResult> {
+  async linkDrugstores(
+    drugstoreId: number,
+    externalDrugstoreId: string,
+  ): Promise<IServerResult> {
     try {
       const { status } = await httpClient.post(`
         external_drugstores/link/drugstore?drugstore_id=${drugstoreId}&external_drugstore_id=${externalDrugstoreId}
@@ -207,7 +195,10 @@ const mapService = {
   },
 
   // добавление комментария для собственных и партнерских аптек
-  async addDrugstoreStatusComment(id: number, statusComment: string): Promise<IServerResult> {
+  async addDrugstoreStatusComment(
+    id: number,
+    statusComment: string,
+  ): Promise<IServerResult> {
     try {
       const { data, status } = await httpClient.request({
         url: 'drugstores/status_comment',
@@ -231,7 +222,10 @@ const mapService = {
   },
 
   // добавление комментария для неподключенных аптек
-  async addExternalDrugstoreStatusComment(id: string, statusComment: string): Promise<IServerResult> {
+  async addExternalDrugstoreStatusComment(
+    id: string,
+    statusComment: string,
+  ): Promise<IServerResult> {
     try {
       const { data, status } = await httpClient.request({
         url: 'external_drugstores/status_comment',
@@ -315,13 +309,13 @@ export const getRegionDrugstores =
       // pass drugstores data
       dispatch(setDrugstores(extendedData as IDrugstoreOnMap[]));
 
-    // обработка неуспешного ответа
+      // обработка неуспешного ответа
     } else {
       dispatch(setLoading({ drugstores: false }));
       dispatch(setError({ drugstores: `Ошибка загрузки аптек: ${error}` }));
       dispatch(setDrugstores([]));
     }
-};
+  };
 
 // getRegionExternalDrugstores - получение списка аптек из 2гис по региону
 export const getRegionExternalDrugstores =
@@ -355,7 +349,7 @@ export const getRegionExternalDrugstores =
       // pass external drugstores data
       dispatch(setExternalDrugstores(extendedData));
 
-    // обработка неуспешного ответа
+      // обработка неуспешного ответа
     } else {
       dispatch(setLoading({ externalDrugstores: false }));
       dispatch(
@@ -365,7 +359,7 @@ export const getRegionExternalDrugstores =
       );
       dispatch(setExternalDrugstores([]));
     }
-};
+  };
 ```
 
 ---
@@ -374,18 +368,18 @@ export const getRegionExternalDrugstores =
 
 ```ts
 function isErrorInAvailability(): boolean {
-    let hasError = false;
+  let hasError = false;
 
-    try {
-        slaInWork.intervals[index].values.forEach((value) => {
-            if (hasError) return hasError;
+  try {
+    slaInWork.intervals[index].values.forEach(value => {
+      if (hasError) return hasError;
 
-            hasError = isErrorAvailability(value);
-        });
-    } catch (e) {
-        return true;
-    }
+      hasError = isErrorAvailability(value);
+    });
+  } catch (e) {
+    return true;
+  }
 
-    return hasError;
+  return hasError;
 }
 ```

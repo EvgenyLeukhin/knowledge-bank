@@ -4,24 +4,23 @@ sidebar_position: 10
 ---
 
 export const MARK = ({ children }) => {
-  const styles = {
-    background: 'deeppink', 
-    color: 'white', 
-    padding: 10, 
-    borderRadius: 10,
-  };
-  return (
-    <mark style={styles}>
-      {children}
-    </mark>
-  )
+const styles = {
+background: 'deeppink',
+color: 'white',
+padding: 10,
+borderRadius: 10,
+};
+return (
+<mark style={styles}>
+{children}
+</mark>
+)
 };
 
 - Хуки - это функции, которые нужно вызывать для того, чтобы они работали;
 - Хуки используют деструктуризацию массива, чтобы можно было сразу присвоить переменные равные элементам массива;
 - Хуки принято именовать префиксом `use__`;
 - Хуки должны использоваться в FC только на высшем уровне;
-
 
 ```ts
 const arr = ['a', 'b', 'c'];
@@ -31,7 +30,6 @@ const [const1, const2, const3] = arr;
 const1; // 'a'
 const2; // 'b'
 const3; // 'c'
-
 ```
 
 ---
@@ -40,7 +38,6 @@ const3; // 'c'
 
 - Позволяет использовать локальный стейт внутри функциональных React-компонентов, а не только в классовых как было в ранних версиях React;
 - Функции, изменяюшие state принято именовать с помощью префикса `set__`;
-
 
 ```ts
 const [state, setState] = useState(initialState);
@@ -105,7 +102,6 @@ setGameState((prevState: TPandaGameState) => ({
 
 - `initialState` может принимать даже функцию, которая возвращает значение;
 
-
 ```tsx
 import { useState } from 'react';
 
@@ -129,7 +125,7 @@ const [state, setState] = useState<TState>(initialState);
 const onButtonClick = () => {
   setState({
     // or need to add all prev state values
-    ...state, 
+    ...state,
 
     value1: 2,
     value2: true,
@@ -144,11 +140,10 @@ const onButtonClick = () => {
 Если `setState` передается как пропс, то его нужно типизировать
 
 ```ts
-
 type TObj = {
   id: number;
   name: string;
-}
+};
 
 // родитель
 const [state, setState] = useState<number>(0);
@@ -157,18 +152,18 @@ const [obj, setObj] = useState<TObj>({ id: 0, name: '' });
 // потомок
 type TProps = {
   // изменение примитива
-  setState : React.Dispatch<React.SetStateAction<number>>;
+  setState: React.Dispatch<React.SetStateAction<number>>;
 
   // изменение объекта
   setObj: React.Dispatch<TObj>;
-}
+};
 ```
 
 ---
 
 ## <MARK>useEffect()</MARK>
 
-- Если хук `useState` заменил `state` классового компонента, то хук `useEffect` заменил все методы жизненного цикла (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` и т.д.). 
+- Если хук `useState` заменил `state` классового компонента, то хук `useEffect` заменил все методы жизненного цикла (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` и т.д.).
 - Может использоваться несколько раз в одном компоненте.
 - Можно управлять перерендером компонента.
 - Не блокирует отрисовку разметки
@@ -188,7 +183,6 @@ import { useState, useEffect } from 'react';
 const SomeComp = () => {
   const [users, setUsers] = useState<any[]>([]);
 
-
   // ЗАПРОС к API - будет срабатывать при первом рендеринге компонента
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -196,14 +190,8 @@ const SomeComp = () => {
       .then(json => setUsers(json));
   }, []);
 
-  return (
-    <ul>
-      {users?.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+  return <ul>{users?.map(user => <li key={user.id}>{user.name}</li>)}</ul>;
+};
 ```
 
 ---
@@ -221,17 +209,14 @@ import { useState, useEffect } from 'react';
 const SomeComp = () => {
   const [count, setCount] = useState(0);
 
-
   // будет срабатывать при первом ренденре
   // будет срабатывать каждый раз при изменении count
   useEffect(() => {
     console.info('counter value: ', count);
   }, [count]);
 
-  return (
-    <button onClick={() => setCount(count + 1)}>{count}</button>
-  );
-}
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+};
 ```
 
 ---
@@ -250,16 +235,14 @@ const SomeComp = () => {
 
   useEffect(() => {
     // не будет срабатывать при первом рендере!
-    // вернет предыдущее состояние count до изменения 
+    // вернет предыдущее состояние count до изменения
     return () => {
       console.info('previos counter value: ', count);
     };
   }, [count]);
 
-  return (
-    <button onClick={() => setCount(count + 1)}>{count}</button>
-  );
-}
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+};
 ```
 
 ---
@@ -292,10 +275,8 @@ const SomeComp = () => {
     return () => window.removeEventListener('resize', resizeXListener);
   }); // do not add [] - will not working
 
-  return (
-    <div>{count}</div>
-  );
-}
+  return <div>{count}</div>;
+};
 ```
 
 ---
@@ -367,12 +348,14 @@ const SomeComp = ({ count }: TProps) => {
         ref={inputRef}
         type='text'
         value={inputValue}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          setInputValue(e.target.value)
+        }
       />
 
       <button onClick={onButtonClick}>Click me</button>
     </div>
-  )
+  );
 };
 ```
 
@@ -430,8 +413,8 @@ const App = () => {
 
       <SomeComponent />
     </UserContext.Provider>
-  )
-}
+  );
+};
 ```
 
 ### 3 шаг - используем контекст внутри вложенных компонентов в провайдер
@@ -470,8 +453,7 @@ const [activePlayer, setActivePlayer] = useState(null);
 
 useEffect(() => {
   setActivePlayer(players.find(player.id === activePlayerId));
-}, [players])
-
+}, [players]);
 
 // хорошо: используем 1 хук useMemo
 const activePlayer = useMemo(() => {
@@ -480,7 +462,7 @@ const activePlayer = useMemo(() => {
 
 // если никаких зависимостей нет, то (будет создаваться только при загрузке и не будет перерендериваться)
 const activePlayer = useMemo(() => {
-  return // do something
+  return; // do something
 }, []);
 ```
 
@@ -502,7 +484,6 @@ const Test = ({ name, count }: { name: string; count: number }) => {
 
   // BAD: always calls
   const title = returnTitle();
-
 
   // GOOD: запоминает результат и функция будет вызываться только при изменении name
   const title = useMemo(() => returnTitle(), [name]);
@@ -547,7 +528,6 @@ const onClick = useCallback(() => {
 }, []);
 ```
 
-
 - Такой же как `useMemo()` только кэшируется не вычисляемое значение;
 - Если компонент принимает какую-ниб пропс-функцию (например, которая меняет стейт), то при ререндере род. компонента, дочерний компонент также будет перерендеривааться так как ссылка на эту функцию будет обновлена;
 - Чтобы такого не было, нужно использовать `useCallback()`;
@@ -569,14 +549,13 @@ export default function ToDoList() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 ```
 
 ---
 
 ## <MARK>useReducer()</MARK>
-
 
 TODO
 
@@ -593,7 +572,3 @@ TODO
 TODO
 
 ---
-
-
-
-

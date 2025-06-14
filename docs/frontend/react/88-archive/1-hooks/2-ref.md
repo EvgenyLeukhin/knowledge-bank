@@ -25,11 +25,13 @@ const SomeComp = ({ count }: TProps) => {
         ref={inputRef}
         type='text'
         value={inputValue}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) =>
+          setInputValue(e.target.value)
+        }
       />
 
       <button onClick={onButtonClick}>Click me</button>
     </div>
-  )
+  );
 };
 ```

@@ -56,13 +56,19 @@ width: calc(100vw - 300px);
 
   ```css
   /* 1em = 16px */
-  html { font-size: 1em; }
+  html {
+    font-size: 1em;
+  }
 
   /* 2em = 16px (у html font-size 16px) * 2 = 32px */
-  .parent {  font-size: 2em; }
+  .parent {
+    font-size: 2em;
+  }
 
   /* 0.5em = 32px (у .parent font-size 32px) * 0.5 = 16px */
-  .child { font-size: 0.5em; }
+  .child {
+    font-size: 0.5em;
+  }
   ```
 
 - #### rem
@@ -70,13 +76,19 @@ width: calc(100vw - 300px);
   Относительная величина от корневой настройки браузера. Учитывается не прямой родитель как у em, а корневой (html).
 
   ```css
-  html { font-size: 16px; }
+  html {
+    font-size: 16px;
+  }
 
   /* 2rem = 16px (у html font-size 16px) * 2 = 32px */
-  .parent {  font-size: 2rem; }
+  .parent {
+    font-size: 2rem;
+  }
 
   /* 0.5rem = 16px (у html font-size 16px) * 0.5 = 8px */
-  .child { font-size: 0.5rem; }
+  .child {
+    font-size: 0.5rem;
+  }
   ```
 
 ---
@@ -90,6 +102,7 @@ width: calc(100vw - 300px);
 - **vmin**, **vmax** - ???
 
 ---
+
 ---
 
 ## Цвет
@@ -153,7 +166,7 @@ color: hsl(0, 100%, 50%);
 /* 4 канала (+ альфа-канал - прозрачность) */
 color: hsl(0, 100%, 50%, 0.5);
 color: hsl(0, 100%, 50%, 0.75);
-color: hsl(0, 100%, 50%, 1.0);
+color: hsl(0, 100%, 50%, 1);
 ```
 
 ---

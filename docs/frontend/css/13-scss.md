@@ -12,7 +12,7 @@ sidebar_position: 13
   --my-custom-size: 16px;
 }
 
-/* Применение */ 
+/* Применение */
 .some-class {
   color: var(--my-custom-color);
   font-size: var(--my-custom-size);
@@ -27,7 +27,7 @@ sidebar_position: 13
 /* Можно использовать математические операции с цифровыми значениями 
 с помощью функции calc() */
 .some-class {
-  font-size: calc(var(--my-custom-size)*0.5);
+  font-size: calc(var(--my-custom-size) * 0.5);
 }
 ```
 
@@ -60,7 +60,9 @@ sidebar_position: 13
 ```scss
 $navy: #1d365d;
 
-.class { color: $navy; }
+.class {
+  color: $navy;
+}
 ```
 
 ### Вложенность
@@ -72,7 +74,9 @@ $navy: #1d365d;
   a {
     text-decoration: none;
 
-    span { font-size: 1em; }
+    span {
+      font-size: 1em;
+    }
   }
 }
 ```
@@ -144,10 +148,14 @@ div {
 
 ```scss
 /* объявление примеси */
-@mixin white { color: white; }
+@mixin white {
+  color: white;
+}
 
 /* применение примеси */
-.text { @include white; }
+.text {
+  @include white;
+}
 
 // Примесь с параметром
 @mixin margin(@value) {
@@ -175,9 +183,9 @@ div {
 ```scss
 // BREAKPOINTS (useWindowSize - используются тоже эти)
 //                  DESKTOP [1201 - 1920] --> 1920 макет
-$laptop: 1200px; // LAPTOP  [1024 - 1200] --> 1024 макет 
+$laptop: 1200px; // LAPTOP  [1024 - 1200] --> 1024 макет
 $tablet: 1023px; // TABLET  [768 - 1023]  --> 768 макет
-$mobile: 767px;  // MOBILE  [0 - 767]     --> 414 макет
+$mobile: 767px; // MOBILE  [0 - 767]     --> 414 макет
 
 @mixin laptop {
   @media screen and (max-width: $laptop) {

@@ -24,8 +24,8 @@ sidebar_position: 6
 }
 ```
 
-- ```flex``` - шириной 100% (как блочный элемент)
-- ```inline-flex``` - ширина по котенту (как inline-block)
+- `flex` - шириной 100% (как блочный элемент)
+- `inline-flex` - ширина по котенту (как inline-block)
 
 ---
 
@@ -37,7 +37,7 @@ sidebar_position: 6
 
 ```css
 .flex-container {
-  flex-direction: row* | row-reverse | column | column-reverse;
+  flex-direction: row * | row-reverse | column | column-reverse;
 }
 ```
 
@@ -47,14 +47,14 @@ sidebar_position: 6
 
 ПЕРЕНОС flex-потомков.
 
-По ум* не переносятся (nowrap). Если элементы не помещаются, то они всё-равно будут в одну строку, у них будет уменьшаться ширина, даже если её размер был задан.
+По ум\* не переносятся (nowrap). Если элементы не помещаются, то они всё-равно будут в одну строку, у них будет уменьшаться ширина, даже если её размер был задан.
 Для column не имеет смысла.
 
 <img src="../../../../img/css/flex-wrap.png" alt="flex-wrap.png" width="600" />
 
 ```css
 .flex-container {
-  flex-wrap: nowrap* | wrap | wrap-reverse; 
+  flex-wrap: nowrap * | wrap | wrap-reverse;
 }
 ```
 
@@ -80,7 +80,8 @@ sidebar_position: 6
 
 ```css
 .flex-container {
-  justify-content: flex-start* | flex-end | center | space-around | space-between | space-evenly;
+  justify-content: flex-start * | flex-end | center | space-around |
+    space-between | space-evenly;
 }
 ```
 
@@ -88,13 +89,13 @@ sidebar_position: 6
 
 ### align-items
 
-**ВЫРАВНИВАНИЕ** флекс-элементов по **ПОПЕРЕЧНОЙ ЛИНИИ** (противоположной flex-оси).  Актуально, при наличии свободного пространства вдоль поперечной оси, либо когда высота флекс-элементов разная
+**ВЫРАВНИВАНИЕ** флекс-элементов по **ПОПЕРЕЧНОЙ ЛИНИИ** (противоположной flex-оси). Актуально, при наличии свободного пространства вдоль поперечной оси, либо когда высота флекс-элементов разная
 
 <img src="../../../../img/css/align-items.png" alt="align-items.png" width="600" />
 
 ```css
 .flex-container {
-  align-items: stretch* | flex-start | flex-end | center | baseline;
+  align-items: stretch * | flex-start | flex-end | center | baseline;
 }
 ```
 
@@ -102,14 +103,15 @@ sidebar_position: 6
 
 ### align-content
 
-**ВЫРАВНИВАНИЕ РЯДОВ** флекс-потомков вдоль поперечной оси. Актуально, при наличии нескольких рядов flex-потомков (должно стоять свойство ```flex-wrap: wrap```) и наличии свободного пространства по попечерной оси флекс контейнера. Не имеет смысла при ```flex-wrap: nowrap;```
+**ВЫРАВНИВАНИЕ РЯДОВ** флекс-потомков вдоль поперечной оси. Актуально, при наличии нескольких рядов flex-потомков (должно стоять свойство `flex-wrap: wrap`) и наличии свободного пространства по попечерной оси флекс контейнера. Не имеет смысла при `flex-wrap: nowrap;`
 
 <!-- ВЫРАВНИВАНИЕ флекс-элементов вдоль поперечной оси. Работает, когда флексов НЕСКОЛЬКО РЯДОВ, указано свойство flex-wrap и не задана высота каждого флекса -->
 <img src="../../../../img/css/align-content.png" alt="align-content.png" width="600" />
 
 ```css
 .flex-container {
-  align-content: flex-start* | flex-end | center | stretch | space-between | space-around;
+  align-content: flex-start * | flex-end | center | stretch | space-between |
+    space-around;
 }
 ```
 
@@ -129,7 +131,7 @@ sidebar_position: 6
 1. внешние отступы не схлопываются, ни по горизонтали, ни по вертикали;
 2. внешние отступы не выпадают, ни из флекс-контейнера, ни из флекс-элементов;
 3. значение **margin: auto** получило премию журнала Форбс в номинации «Самое влиятельное значение CSS-свойства внутри флекс-контейнера».
-При значении auto свойство justify-content, align-items и align-self ломается.
+   При значении auto свойство justify-content, align-items и align-self ломается.
 4. При row, если задать флекс-потомку margin-left: auto, то он прижмется к правому краю контейнера.
 5. При column, если задать флекс-потомку margin-top: auto, то он прижмется ко дну контейнера.
 
@@ -173,12 +175,12 @@ sidebar_position: 6
 
 ```scss
 .flex-child {
-  flex-basis: auto* | <width>;
+  flex-basis: auto * | <width>;
 }
 ```
 
-```auto``` - ширина по контенту,
-```100px``` - макс. ширина будет 100px, если не переопределен flex-grow
+`auto` - ширина по контенту,
+`100px` - макс. ширина будет 100px, если не переопределен flex-grow
 
 ---
 
@@ -190,7 +192,7 @@ sidebar_position: 6
 
 ```css
 .flex-child {
-  flex-grow: 0* | 1 | <number>;
+  flex-grow: 0 * | 1 | <number>;
 }
 ```
 
@@ -198,7 +200,7 @@ sidebar_position: 6
 
 ### flex-shrink
 
-УЖИМАНИЕ флекс-потомка при уменьшении ширины флекс-контейнера. РАБОТАЕТ ТОЛЬКО с ```flex-wrap: nowrap```.
+УЖИМАНИЕ флекс-потомка при уменьшении ширины флекс-контейнера. РАБОТАЕТ ТОЛЬКО с `flex-wrap: nowrap`.
 
 Свойство flex-shrink принимает неотрицательные числовые значения, его значение по умолчанию 1.
 
@@ -206,7 +208,7 @@ sidebar_position: 6
 
 ```css
 .flex-child {
-  flex-grow: 1* | 0 | <number>;
+  flex-grow: 1 * | 0 | <number>;
 }
 ```
 
@@ -216,17 +218,17 @@ sidebar_position: 6
 
 В некоторых браузерах неполные или особенные значения свойства flex интерпретируются с ошибками. Поэтому лучше задавать все три компоненты в значении этого свойства.
 
-```flex: | flex-grow | flex-shrink | flex-basis |;```
+`flex: | flex-grow | flex-shrink | flex-basis |;`
 
 ```scss
 .flex-child {
-  flex: 1 0 100px ;
+  flex: 1 0 100px;
 
-  flex: initial;    // -> flex: 0 1 auto;
-  flex: auto;       // -> flex: 1 1 auto;
-  flex: none;       // -> flex: 0 0 auto;
-  flex: 1 0;        // -> flex: 1 0 0%;
-  flex: 1;          // -> flex: 1 1 0%;
+  flex: initial; // -> flex: 0 1 auto;
+  flex: auto; // -> flex: 1 1 auto;
+  flex: none; // -> flex: 0 0 auto;
+  flex: 1 0; // -> flex: 1 0 0%;
+  flex: 1; // -> flex: 1 1 0%;
 }
 ```
 
@@ -235,10 +237,10 @@ sidebar_position: 6
 ```scss
 .flex-child {
   // ширина зависит от контента
-  flex-basis: auto; 
+  flex-basis: auto;
 
   // ширина всегда будет 200px
-  flex: 0 0 200px ;
+  flex: 0 0 200px;
 
   // будет растягиваться по свободному пространству, ужиматься до базиса (min-width: 200px)
   flex: 1 0 200px;
@@ -258,7 +260,6 @@ sidebar_position: 6
   justify-content: center;
   align-items: center;
 }
-
 ```
 
 ---

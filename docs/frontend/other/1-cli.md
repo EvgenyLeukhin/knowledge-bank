@@ -4,9 +4,9 @@ sidebar_position: 1
 ---
 
 export const CODE = ({children}) => (
-  <code style={{ color: 'cyan' }}>
-    {children}
-  </code>
+<code style={{ color: 'cyan' }}>
+{children}
+</code>
 );
 
 ### VIM - [Cheat sheet](https://vim.rtorr.com/lang/ru)
@@ -205,7 +205,7 @@ curl http://localhost:4000/
 - <CODE>-o</CODE> - выводить контент страницы в файл;
 - <CODE>-p</CODE> - использовать прокси;
 - <CODE>--proto</CODE> - указать протокол, который нужно использовать;
-- <CODE>-R</CODE> -  сохранять время последнего изменения удаленного файла;
+- <CODE>-R</CODE> - сохранять время последнего изменения удаленного файла;
 - <CODE>-s</CODE> - выводить минимум информации об ошибках;
 - <CODE>-S</CODE> - выводить сообщения об ошибках;
 - <CODE>-T</CODE> - загрузить файл на сервер;

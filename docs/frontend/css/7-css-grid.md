@@ -4,6 +4,7 @@ sidebar_position: 7
 ---
 
 export const GridParent = ({ style, children }) => (
+
   <div
     style={{
       padding: 10,
@@ -18,6 +19,7 @@ export const GridParent = ({ style, children }) => (
 );
 
 export const GridChild = ({ style, children }) => (
+
   <div
     style={{
       display: 'inline-flex',
@@ -69,13 +71,13 @@ export const GridChild = ({ style, children }) => (
   <GridChild>8</GridChild>
 </GridParent>
 
-По умолчанию только при ```display: grid``` у родителя все дочерние элементы будут располагаться друг по другом и равномерно занимать всю высоту контейнера.
+По умолчанию только при `display: grid` у родителя все дочерние элементы будут располагаться друг по другом и равномерно занимать всю высоту контейнера.
 
 ---
 
 ### grid-auto-flow
 
-Управление грид-потоком. Как будут отображаться грид-потомки изначально? Как строки* или как колонки. Аналог flex-direction, только смысл здесь обратный, у flex - это направлление оси как row, а у grid - это распределение потомков в качестве колонок.
+Управление грид-потоком. Как будут отображаться грид-потомки изначально? Как строки\* или как колонки. Аналог flex-direction, только смысл здесь обратный, у flex - это направлление оси как row, а у grid - это распределение потомков в качестве колонок.
 
 Визаульно это выглядит так (вообще запутать хотят):
 
@@ -100,16 +102,16 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridAutoFlow: 'column', gridTemplateColumns: '50px 70px' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
@@ -128,14 +130,14 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: '50% 50%' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
 </GridParent>
 
 ---
@@ -150,14 +152,14 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: '1fr 1fr' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
 </GridParent>
 
 ---
@@ -170,15 +172,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: '2fr 100px 1fr' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
 </GridParent>
 
 ---
@@ -199,15 +201,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 250px' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
 </GridParent>
 
 ---
@@ -222,22 +224,22 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
 </GridParent>
 
 ---
 
 ### grid-auto-columns
 
-При ```grid-auto-flow: column;``` можно упоавлять поведением ширины колонок, которым явно не задана ширина через ```grid-template-columns```.
+При `grid-auto-flow: column;` можно упоавлять поведением ширины колонок, которым явно не задана ширина через `grid-template-columns`.
 
 Если колонки будут занимать не всё пространство внутри грид-контейнера, то будет свободное место, и напротив если будут занимать большее место, то буду выпадать из родителя.
 
@@ -251,16 +253,16 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridAutoFlow: 'column', gridTemplateColumns: '50px 70px', gridAutoColumns: '20px' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
@@ -269,30 +271,30 @@ flex-column === grid-row
 
 ### grid-template-rows
 
-Свойства, задающие размеры и количество рядов. По ум* строки равномерно распределяются по высоте контейнера.
+Свойства, задающие размеры и количество рядов. По ум\* строки равномерно распределяются по высоте контейнера.
 
 ```scss
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  // 1-ая строка будет высотой 50px, 2-ая - 100px, 
+  // 1-ая строка будет высотой 50px, 2-ая - 100px,
   // остальные - равномерно распределяться по ширине контейнера
   grid-template-rows: 50px 100px;
 }
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: '50px 100px' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
@@ -309,23 +311,23 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(3, 20px)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
 
 ### grid-auto-rows
 
-Строкам, которым явно не задана высота через ```grid-template-rows```, можно задавать явную высоту через свойство ```grid-auto-rows```.
+Строкам, которым явно не задана высота через `grid-template-rows`, можно задавать явную высоту через свойство `grid-auto-rows`.
 
 ```scss
 .grid-container {
@@ -341,16 +343,16 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 20px)', gridAutoRows: '40px' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
@@ -376,16 +378,16 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)', gridGap: '30px' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
@@ -406,10 +408,10 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: '150px 200px', alignContent: 'center' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
 </GridParent>
 
 ---
@@ -428,16 +430,16 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: '150px 200px', justifyContent: 'space-around' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
-  <GridChild>10</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
+<GridChild>10</GridChild>
 </GridParent>
 
 ---
@@ -456,10 +458,10 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: '150px 200px', placeContent: 'end center' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
 </GridParent>
 
 ---
@@ -478,15 +480,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)', alignItems: 'start' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
 </GridParent>
 
 ---
@@ -505,15 +507,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)', justifyItems: 'start'  }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
 </GridParent>
 
 ---
@@ -529,15 +531,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)', placeItems: 'start start' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild>9</GridChild>
 </GridParent>
 
 ---
@@ -562,15 +564,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild style={{ background: 'deeppink', alignSelf: 'center' }}>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild style={{ background: 'deeppink', alignSelf: 'center' }}>9</GridChild>
 </GridParent>
 
 ---
@@ -593,22 +595,22 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild style={{ background: 'deeppink', justifySelf: 'center' }}>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild style={{ background: 'deeppink', justifySelf: 'center' }}>9</GridChild>
 </GridParent>
 
 ---
 
 ### place-self
 
-Шорткат для одновременного указания значений свойствам ```justify-self``` и ```align-self```.
+Шорткат для одновременного указания значений свойствам `justify-self` и `align-self`.
 
 ```scss
 .grid-container {
@@ -622,15 +624,15 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild>7</GridChild>
-  <GridChild>8</GridChild>
-  <GridChild style={{ background: 'deeppink', placeSelf: 'end end' }}>9</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild>7</GridChild>
+<GridChild>8</GridChild>
+<GridChild style={{ background: 'deeppink', placeSelf: 'end end' }}>9</GridChild>
 </GridParent>
 
 ---
@@ -651,19 +653,19 @@ flex-column === grid-row
 
 .grid-child {
   // grid-column-start: 1; // колонка стартует на 1-ой линии
-  // grid-column-end: 4; // а заканчивается на 4-ой 
+  // grid-column-end: 4; // а заканчивается на 4-ой
   grid-column: 1 / 4; // shortcut
 }
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridColumn: '1 / 4' }}>7</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridColumn: '1 / 4' }}>7</GridChild>
 </GridParent>
 
 ---
@@ -678,26 +680,26 @@ flex-column === grid-row
 
 .grid-child {
   // grid-row-start: 1; // строка стартует на 1-ой линии
-  // grid-row-end: 4; // а заканчивается на 4-ой 
+  // grid-row-end: 4; // а заканчивается на 4-ой
   grid-row: 1 / 4; // shortcut
 }
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridRow: '1 / 4' }}>7</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild style={{ background: 'deeppink', gridColumnStart: 1, gridRow: '1 / 4' }}>7</GridChild>
 </GridParent>
 
 ---
 
 ### grid-area
 
-Шорткат для ```[grid-row-start / grid-column-start / grid-row-end / grid-column-end]```.
+Шорткат для `[grid-row-start / grid-column-start / grid-row-end / grid-column-end]`.
 
 ```scss
 .grid-container {
@@ -715,20 +717,20 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-  <GridChild>1</GridChild>
-  <GridChild>2</GridChild>
-  <GridChild>3</GridChild>
-  <GridChild>4</GridChild>
-  <GridChild>5</GridChild>
-  <GridChild>6</GridChild>
-  <GridChild style={{ background: 'deeppink', gridArea: '2 / 1 / 3 / 4' }}>7</GridChild>
+<GridChild>1</GridChild>
+<GridChild>2</GridChild>
+<GridChild>3</GridChild>
+<GridChild>4</GridChild>
+<GridChild>5</GridChild>
+<GridChild>6</GridChild>
+<GridChild style={{ background: 'deeppink', gridArea: '2 / 1 / 3 / 4' }}>7</GridChild>
 </GridParent>
 
 ---
 
 ### grid-template-areas
 
-Можно каждому грид-потомку указывать в ```grid-area``` не значения start и end, а указывать шаблон. На этих шаблонах можно строить сетки.
+Можно каждому грид-потомку указывать в `grid-area` не значения start и end, а указывать шаблон. На этих шаблонах можно строить сетки.
 
 '.' - в шаблоне пустое место.
 
@@ -752,8 +754,8 @@ flex-column === grid-row
 ```
 
 <GridParent style={{ minHeight: '40vh', gridTemplateColumns: '200px 1fr', gridGap: 1, gridTemplateRows: '50px 1fr 50px', gridTemplateAreas: '"header header" "aside content" "footer footer"' }}>
-  <GridChild style={{ background: 'pink', color: 'black', gridArea: 'header' }}>HEADER</GridChild>
-  <GridChild style={{ background: 'lightgreen', color: 'black', gridArea: 'aside' }}>ASIDE</GridChild>
-  <GridChild style={{ background: 'lightblue', color: 'black', gridArea: 'content' }}>CONTENT</GridChild>
-  <GridChild style={{ background: 'lightgray', color: 'black', gridArea: 'footer' }}>FOOTER</GridChild>
+<GridChild style={{ background: 'pink', color: 'black', gridArea: 'header' }}>HEADER</GridChild>
+<GridChild style={{ background: 'lightgreen', color: 'black', gridArea: 'aside' }}>ASIDE</GridChild>
+<GridChild style={{ background: 'lightblue', color: 'black', gridArea: 'content' }}>CONTENT</GridChild>
+<GridChild style={{ background: 'lightgray', color: 'black', gridArea: 'footer' }}>FOOTER</GridChild>
 </GridParent>

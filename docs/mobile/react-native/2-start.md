@@ -5,7 +5,7 @@ sidebar_position: 2
 
 ## Expo scripts
 
-```yarn start``` - запуск старта разработки, по умолчанию запускается в режиме `web`.
+`yarn start` - запуск старта разработки, по умолчанию запускается в режиме `web`.
 
 - `yarn android` - Запуск на Android Studio - нужны конфиги (сканировать QR-code)
 - `yarn ios` - Запуск на XCode - нужны конфиги (сканировать QR-code)

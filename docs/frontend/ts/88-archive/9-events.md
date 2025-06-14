@@ -32,9 +32,9 @@ const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault();
 
   if (email && password) {
-    let errors = await dispatch(login(email, password)) as unknown as boolean;
+    let errors = (await dispatch(login(email, password))) as unknown as boolean;
   }
-}
+};
 ```
 
 ---
@@ -45,7 +45,7 @@ const onLoginHandler = async (event: React.FormEvent<HTMLFormElement>) => {
 const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
   const value = event.target.value;
   console.log(value);
-}
+};
 ```
 
 ---
@@ -54,32 +54,32 @@ const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
 
 ```tsx
 <UiRemoveIcon
-    title='Удалить'
-    width={15.75}
-    height={18.38}
-    color={hasAccess ? 'primary' : 'secondary'}
-
-    // полная запись
-    onClick={(e: React.MouseEvent<HTMLSpanElement>) => removeHandle(е)}
-
-    // можно записывать коротко без e
-    onClick={removeHandle} 
-/>
+  title='Удалить'
+  width={15.75}
+  height={18.38}
+  color={hasAccess ? 'primary' : 'secondary'}
+  // полная запись
+  onClick={(e: React.MouseEvent<HTMLSpanElement>) => removeHandle(е)}
+  // можно записывать коротко без e
+  onClick={removeHandle}
+/>;
 
 // метод-обработчик
 const removeHandle = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.stopPropagation();
+  e.stopPropagation();
 
-    if (hasAccess) {
-        dispatch(setConfirmationOpen({
-            dialogType: 'positive',
-            dialogText: `Вы действительно хотите удалить шаблон ${data.name}?`,
-            confirmationFunction: () => {
-                dispatch(deleteExpressIntervalTemplateByUuid(data.uuid));
-            }
-        }))
-    }
-}
+  if (hasAccess) {
+    dispatch(
+      setConfirmationOpen({
+        dialogType: 'positive',
+        dialogText: `Вы действительно хотите удалить шаблон ${data.name}?`,
+        confirmationFunction: () => {
+          dispatch(deleteExpressIntervalTemplateByUuid(data.uuid));
+        },
+      }),
+    );
+  }
+};
 ```
 
 ---

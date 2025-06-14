@@ -17,7 +17,9 @@ $ yarn add axios
 ```
 
 ```js
-axios.get('https://swapi.co/api/people/').then(response => console.log(response));
+axios
+  .get('https://swapi.co/api/people/')
+  .then(response => console.log(response));
 ```
 
 ## Response Schema
@@ -61,12 +63,9 @@ import { API_URL, subUrl } from './api/apiUrl';
 const getCampaing = id => {
   const token = JSON.parse(localStorage.getItem('ph-admin-user-data')).id;
 
-  return axios.get(
-    `${API_URL}/${subUrl}/vacancies/${id}`,
-    {
-      headers: { Authorization: token }
-    }
-  )
+  return axios.get(`${API_URL}/${subUrl}/vacancies/${id}`, {
+    headers: { Authorization: token },
+  });
 };
 
 export default getCampaing;
@@ -81,12 +80,9 @@ import { API_URL, subUrl } from './api/apiUrl';
 const deleteCampaing = id => {
   const token = JSON.parse(localStorage.getItem('ph-admin-user-data')).id;
 
-  return axios.delete(
-    `${API_URL}/${subUrl}/vacancies/${id}`,
-    {
-      headers: { Authorization: token }
-    }
-  )
+  return axios.delete(`${API_URL}/${subUrl}/vacancies/${id}`, {
+    headers: { Authorization: token },
+  });
 };
 
 export default deleteCampaing;
@@ -101,14 +97,11 @@ import axios from 'axios';
 import { API_URL, subUrl } from './api/apiUrl';
 
 const login = (name, password) => {
-  return axios.post(
-    `${API_URL}/${subUrl}/login`,
-    { 
-      name, 
-      password,
-    },
-  );
-}
+  return axios.post(`${API_URL}/${subUrl}/login`, {
+    name,
+    password,
+  });
+};
 
 export default login;
 ```
@@ -124,28 +117,25 @@ import { API_URL, subUrl } from './api/apiUrl';
 const getCompanies = inputValue => {
   const token = JSON.parse(localStorage.getItem('ph-admin-user-data')).id;
 
-  return axios.get(
-    `${API_URL}/${subUrl}/companies`,
-    {
-      params: {
-        filter: {
-          // поиск по name, surname, email
-          where: {
-            or: [
-              { name:    { like: `%${inputValue}%`} },
-              { surname: { like: `%${inputValue}%`} },
-              { email:   { like: `%${inputValue}%`} }
-            ],
-          },
-          limit: 10,
-          offset: 50,
-          order: 'id DESC',
-        }
+  return axios.get(`${API_URL}/${subUrl}/companies`, {
+    params: {
+      filter: {
+        // поиск по name, surname, email
+        where: {
+          or: [
+            { name: { like: `%${inputValue}%` } },
+            { surname: { like: `%${inputValue}%` } },
+            { email: { like: `%${inputValue}%` } },
+          ],
+        },
+        limit: 10,
+        offset: 50,
+        order: 'id DESC',
       },
-      headers: { Authorization: token }
-    }
-  );
-}
+    },
+    headers: { Authorization: token },
+  });
+};
 
 export default getCompanies;
 ```
@@ -170,7 +160,7 @@ const getJobs = state => {
     where: {},
     limit: pageSize,
     skip: page * pageSize,
-    order: 'id DESC'
+    order: 'id DESC',
   };
 
   // inject where to filter
@@ -179,19 +169,19 @@ const getJobs = state => {
     if (i.id === 'id') {
       filter.where[i.id] = i.value;
 
-    // Job column // +
+      // Job column // +
     } else if (i.id === 'name') {
-      filter.where[i.id] = { 'like': '%' + i.value + '%' };
+      filter.where[i.id] = { like: '%' + i.value + '%' };
 
-    // Locations column // +
+      // Locations column // +
     } else if (i.id === 'locations') {
       if (i.value) {
-        filter.where.locations = { 'inq': i.value.map(i => i.id) };
+        filter.where.locations = { inq: i.value.map(i => i.id) };
       } else {
         filter.where.locations = {};
       }
 
-    // User column // +
+      // User column // +
     } else if (i.id === 'employer') {
       if (i.value) {
         filter.where.employer_id = i.value.id;
@@ -199,54 +189,52 @@ const getJobs = state => {
         filter.where.employer_id = null;
       }
 
-    // Company column // +
+      // Company column // +
     } else if (i.id === 'company') {
       console.log(i.value);
       if (i.value) {
-        filter.where.companies = { 'inq': i.value.map(i => i.id) };
+        filter.where.companies = { inq: i.value.map(i => i.id) };
       } else {
         filter.where.companies = {};
       }
 
-    // Status column // +
+      // Status column // +
     } else if (i.id === 'status') {
       filter.where[i.id] = i.value;
 
-    // Plan column // +
+      // Plan column // +
     } else if (i.id === 'plan_id') {
-
       if (i.value === 5) {
-        filter.where[i.id] = { gt: 1 }
+        filter.where[i.id] = { gt: 1 };
       } else {
         filter.where[i.id] = i.value;
       }
 
-    // Created // +
+      // Created // +
     } else if (i.id === 'created') {
       const createdDate = i.value && format(i.value, 'yyyy-MM-dd');
-      filter.where.created = { 'gt': createdDate };
+      filter.where.created = { gt: createdDate };
       filter.order = i.value ? 'created DESC' : 'id DESC';
 
-    // Published // +
+      // Published // +
     } else if (i.id === 'published') {
       const publisheddDate = i.value && format(i.value, 'yyyy-MM-dd');
-      filter.where.published = { 'gt': publisheddDate };
+      filter.where.published = { gt: publisheddDate };
       // filter.order = i.value ? 'created DESC' : 'published DESC';
     }
   });
 
-
   // inject order to filter
   sorted.forEach(i => {
-    const desc = i.desc ? 'DESC' : 'ASC'
-      filter.order = `${i.id} ${desc}`;
+    const desc = i.desc ? 'DESC' : 'ASC';
+    filter.order = `${i.id} ${desc}`;
   });
 
   // get-request for data
   return axios.get(`${API_URL}/${subUrl}/vacancies/searchExtra`, {
     params: { filter },
     headers: { Authorization: token },
-  })
+  });
 };
 
 export default getJobs;
@@ -281,7 +269,7 @@ type GetUsersResponse = {
 
 axios.get<GetUsersResponse>('some-url', {
   options,
-})
+});
 ```
 
 ---

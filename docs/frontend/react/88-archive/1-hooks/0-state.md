@@ -17,7 +17,7 @@ const [count, setCount] = useState<number>(0);
 
 ---
 
-## prevState 
+## prevState
 
 Параметр setState, который содержит предыдущий state.
 
@@ -68,7 +68,7 @@ type TProps = {
 
   // с помощью функции
   setGameState: (val: TPandaGameState) => void;
-}
+};
 ```
 
 ---
@@ -102,7 +102,7 @@ const [state, setState] = useState<TState>(initialState);
 const onButtonClick = () => {
   setState({
     // or need to add all prev state values
-    ...state, 
+    ...state,
 
     value1: 2,
     value2: true,
@@ -112,3 +112,4 @@ const onButtonClick = () => {
 ...
 
 
+```

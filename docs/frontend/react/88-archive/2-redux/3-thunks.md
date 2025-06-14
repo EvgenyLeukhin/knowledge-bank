@@ -18,28 +18,29 @@ import { usersSlice } from './users.slice';
 const { usersLoading, usersSuccess, usersError, resetUsersState } =
   usersSlice.actions;
 
-export const fetchUsersThunk = (limit: number) => async (dispatch: Dispatch) => {
-  dispatch(resetUsersState());
-  dispatch(usersLoading(true));
+export const fetchUsersThunk =
+  (limit: number) => async (dispatch: Dispatch) => {
+    dispatch(resetUsersState());
+    dispatch(usersLoading(true));
 
-  try {
-    // response typing
-    const response = await axios.get<TUser[]>(
-      `https://jsonplaceholder.typicode.com/users?limit=${limit}`,
-    );
+    try {
+      // response typing
+      const response = await axios.get<TUser[]>(
+        `https://jsonplaceholder.typicode.com/users?limit=${limit}`,
+      );
 
-    // if success
-    setTimeout(() => {
+      // if success
+      setTimeout(() => {
+        dispatch(usersLoading(false));
+        dispatch(usersSuccess(response.data));
+      }, 1000);
+
+      // if error
+    } catch (e) {
       dispatch(usersLoading(false));
-      dispatch(usersSuccess(response.data));
-    }, 1000);
-
-    // if error
-  } catch (e) {
-    dispatch(usersLoading(false));
-    dispatch(usersError(`${e}`));
-  }
-};
+      dispatch(usersError(`${e}`));
+    }
+  };
 
 // или экспортом в объекте
 export const usersThunks = {
@@ -83,21 +84,32 @@ import routesService from '../api/services/routes-service';
 import { setLoadingAction } from '../slices/orders';
 
 export const attachReturnsToPickups = (routeIds: number[]) => {
-    return async function (dispatch: Dispatch<any>) {
-        dispatch(setLoadingAction(true));
+  return async function (dispatch: Dispatch<any>) {
+    dispatch(setLoadingAction(true));
 
-        const data = await routesService.attachReturnsToPickups(routeIds);
-        if (data) {
-            // доступ к стору
-            const filters = store.getState().orders.filters;
-            store.dispatch(getAllRoutes());
-            store.dispatch(getAllOrders());
-            dispatch(messageAction(messageHandler('Партнёрские возвраты успешно обработаны', MessageType.SUCCESS)));
-        } else {
-            dispatch(setLoadingAction(false));
-            dispatch(messageAction(messageHandler('Не удалось обработать партнёрские возвраты')));
-        }
-    };
+    const data = await routesService.attachReturnsToPickups(routeIds);
+    if (data) {
+      // доступ к стору
+      const filters = store.getState().orders.filters;
+      store.dispatch(getAllRoutes());
+      store.dispatch(getAllOrders());
+      dispatch(
+        messageAction(
+          messageHandler(
+            'Партнёрские возвраты успешно обработаны',
+            MessageType.SUCCESS,
+          ),
+        ),
+      );
+    } else {
+      dispatch(setLoadingAction(false));
+      dispatch(
+        messageAction(
+          messageHandler('Не удалось обработать партнёрские возвраты'),
+        ),
+      );
+    }
+  };
 };
 ```
 
@@ -151,52 +163,57 @@ import { PayloadAction } from '@reduxjs/toolkit';
 export type ObjectType = Record<string, unknown>;
 
 // simpleMerge
-export const simpleMerge = <State, Payload>(state: State, action: PayloadAction<Payload>): State => ({
+export const simpleMerge = <State, Payload>(
+  state: State,
+  action: PayloadAction<Payload>,
+): State => ({
   ...state,
   ...action.payload,
 });
 
 // simpleMergeThunk
-export const simpleMergeThunk = <State, Payload>() => (state: State, action: PayloadAction<Payload>): State => ({
-  ...state,
-  ...action.payload,
-});
+export const simpleMergeThunk =
+  <State, Payload>() =>
+  (state: State, action: PayloadAction<Payload>): State => ({
+    ...state,
+    ...action.payload,
+  });
 
 // createPayload
-export const createPayload = <Payload extends ObjectType>(payload: Payload) => ({
+export const createPayload = <Payload extends ObjectType>(
+  payload: Payload,
+) => ({
   payload: payload,
 });
 
 // createSimpleReducer
-export const createSimpleReducer = <State, K extends keyof State>(key: K) => (
-  state: State,
-  action: PayloadAction<State[K]>
-) => ({
-  ...state,
-  [key]: action.payload,
-});
+export const createSimpleReducer =
+  <State, K extends keyof State>(key: K) =>
+  (state: State, action: PayloadAction<State[K]>) => ({
+    ...state,
+    [key]: action.payload,
+  });
 
 // createSimpleDraftReducer
-export const createSimpleDraftReducer = <State, K extends keyof State>(key: K) => (
-  state: State,
-  action: PayloadAction<State[K]>
-) => {
-  state[key] = action.payload;
-};
+export const createSimpleDraftReducer =
+  <State, K extends keyof State>(key: K) =>
+  (state: State, action: PayloadAction<State[K]>) => {
+    state[key] = action.payload;
+  };
 
 // createMergeReducer
-export const createMergeReducer = <State>() => simpleMergeThunk<State, Partial<State>>();
+export const createMergeReducer = <State>() =>
+  simpleMergeThunk<State, Partial<State>>();
 
 // createMergeDraftReducer
-export const createMergeDraftReducer = <State, K extends keyof State>(key: K) => (
-  state: State,
-  action: PayloadAction<State[K]>
-) => {
-  state[key] = {
-    ...state[key],
-    ...action.payload,
+export const createMergeDraftReducer =
+  <State, K extends keyof State>(key: K) =>
+  (state: State, action: PayloadAction<State[K]>) => {
+    state[key] = {
+      ...state[key],
+      ...action.payload,
+    };
   };
-};
 ```
 
 ---
@@ -204,20 +221,20 @@ export const createMergeDraftReducer = <State, K extends keyof State>(key: K) =>
 ## Обработка ответа после dispatch
 
 ```tsx
-  const syncGoTemplatesHandler = async () => {
-    const result = (await dispatch(syncGoTemplates())) as unknown as boolean;
+const syncGoTemplatesHandler = async () => {
+  const result = (await dispatch(syncGoTemplates())) as unknown as boolean;
 
-    if (result) {
-      setSuccess('Успешно');
-    } else {
-      setSuccess('Произошла ошибка');
-    }
-  };
+  if (result) {
+    setSuccess('Успешно');
+  } else {
+    setSuccess('Произошла ошибка');
+  }
+};
 ```
 
 ---
 
-##  Обработка ответа после dispatch 2
+## Обработка ответа после dispatch 2
 
 ```ts
 // thunk, который возвращает данные

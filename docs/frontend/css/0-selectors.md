@@ -26,10 +26,10 @@ sidebar_position: 0
 [style] { ... }
 
 /* ТЕГОВЫЙ */
-p { ... } 
+p { ... }
 
 /* КЛАССОВЫЙ */
-.some-classname { ... } 
+.some-classname { ... }
 /* <p class="some-classname">...</p> */
 
 /* ID */
@@ -40,13 +40,13 @@ p { ... }
 p a { ... }
 
 /* СОСЕДНИЙ */
-p + a { ... } 
+p + a { ... }
 
 /* ДОЧЕРНИЙ */
-p > a { ... } 
+p > a { ... }
 
 /* ОБЪЕДИНЁННЫЙ (без пробела) */
-.class1.class2 { ... } 
+.class1.class2 { ... }
 
 /* ГРУППОВОЙ (через запятую) */
 .class1, .class2, .class3 { ... }
@@ -56,7 +56,7 @@ p > a { ... }
 
 ```css
 /* ТЭГ с АТТРИБУТОМ */
-input[type="password"] { ... } 
+input[type="password"] { ... }
 
 /* Селектор по НАЧАЛУ названия атрибута */
 div[class^="column-"] { ... }
@@ -99,13 +99,13 @@ div[class|="column"] { ... }
   (3n + 9) - каждый 3-й, начиная с 9-ого;
 
 /* ОТРИЦАЮЩИЙ селектор */
-ul li:not(:last-child) { ... } 
+ul li:not(:last-child) { ... }
 
 /* ПУСТОЙ селектор (если нет текста или других тэгов) */
 ul li:empty { ... }
 
 /* Cелектор ПЕРВОЙ ЛИНИИ */
-p::first-line { ... } 
+p::first-line { ... }
 
 /* Cелектор ПЕРВОЙ БУКВЫ */
 span::first-letter { ... }
@@ -114,17 +114,17 @@ span::first-letter { ... }
 ul li:only-child { ... }
 
 /* Cелектор ДОЧЕРНЕГО ЭЛЕМЕНТА ПО НОМЕРУ С КОНЦА */
-ul li:nth-last-child(2) { ... } 
+ul li:nth-last-child(2) { ... }
 
 /* Cелектор ПЕРВОГО ТИПА */
-ul:first-of-type { ... } 
+ul:first-of-type { ... }
 
 /* Выберет первый список в коде */
 <ul><li>1</li></ul>
 <ul><li>2</li></ul>
 
 /* Cелектор ПОСЛЕДНЕГО ТИПА */
-ul:last-of-type { ... } 
+ul:last-of-type { ... }
 
 /* Cелектор n-ОГО ТИПА */
 /* Выберет 3-й список в коде c начала */
@@ -162,7 +162,7 @@ ul:only-of-type { ... }
 
 /* Для якорных объектов, через id */
 :target { ... }
-/* Если заголовок h2 будет якорем для какой-либо ссылки, 
+/* Если заголовок h2 будет якорем для какой-либо ссылки,
 то по клику на связанную якорную ссылку, он поменяет цвет  */
 
 /* Если нужно сдвинуть скролл по якорю */
@@ -215,7 +215,7 @@ ul:only-of-type { ... }
 /* Стилизация placeholder в состоянии ВВОДА */
 ::placeholder { ... }
 #input-id::placeholder {...}
-#input-id[placeholder] {...} 
+#input-id[placeholder] {...}
 ```
 
 ---
@@ -224,12 +224,14 @@ ul:only-of-type { ... }
 
 ```html
 <!-- I место - Инлайновые стили (Самые приоритетные) -->
-<p style="color: red;">...</p> 
+<p style="color: red;">...</p>
 
 <!-- II место - Внутри тега style -->
 <style>
-  p {color: red;}
-</style> 
+    p {
+    color: red;
+  }
+</style>
 
 <!-- III место - Через id -->
 <p id="name">...</p>
@@ -241,8 +243,7 @@ ul:only-of-type { ... }
 <p>...</p>
 
 <!-- VI место - Порядок в css-коде -->
-p { color: red; }
-p { color: green; }
+p { color: red; } p { color: green; }
 ```
 
 ### Вычисление cпецифичности

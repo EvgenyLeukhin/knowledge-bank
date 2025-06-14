@@ -11,27 +11,27 @@ sidebar_position: 2
 - 2-я форма глагола только в этом времени
 - регулярные или повторявшиеся действия в прошлом
 - перечисление последовавших действий в прошлом
-- Marker-words: ```5 days ago, yesterday, last year, in 1986, on Sunday```
+- Marker-words: `5 days ago, yesterday, last year, in 1986, on Sunday`
 
 Формула: Подлежащее + V2/+ed (Did V1)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qR0yYCf2qxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-|+|-|?|
-| ----------- | ----------- | ----------- |
-|I worked in the garden|I did not(didn’t) work in the garden|Did I work in the garden?|
+| +                      | -                                    | ?                         |
+| ---------------------- | ------------------------------------ | ------------------------- |
+| I worked in the garden | I did not(didn’t) work in the garden | Did I work in the garden? |
 
-|+|- (did not, didn’t)|? (Did)|
-| ----------- | ----------- | ----------- |
-|I built in the garden|I did not(didn’t) build in the garden|Did I build in the garden?|
+| +                     | - (did not, didn’t)                   | ? (Did)                    |
+| --------------------- | ------------------------------------- | -------------------------- |
+| I built in the garden | I did not(didn’t) build in the garden | Did I build in the garden? |
 
 ### Правильные глаголы (regular)
 
 Ecли глагол правильный, то в этой форме нужно добавить к нему окончание “ed”, “d” - если глагол заканчивается на “e” или “ied”, если заканчивается на “y”.
 
 ```
-Work -> Worked, 
-Like -> Liked, 
+Work -> Worked,
+Like -> Liked,
 Study -> Studied
 ```
 
@@ -39,7 +39,7 @@ Study -> Studied
 
 В Past Simple их нужно перевести во 2 форму. В ? и - формах did берет временную нагрузку на себя и глагол остается в первой форме.
 
-```She went to the store this afternoon.```
+`She went to the store this afternoon.`
 
 ---
 
@@ -48,9 +48,9 @@ Study -> Studied
 Длительное, находился в процессе время обозначает какое-либо действие, происходящее в прошлом в течение какого-либо времени или занимавшее продолжительное время.
 
 - В какой-то определенный момент, либо совершалось какое-либо другое действие, может прерывать первое, часто в Past Simple.
-- Временная ситуация в прошлом и этот период озвучен. (```In summer, yesterday, …```)
+- Временная ситуация в прошлом и этот период озвучен. (`In summer, yesterday, …`)
 - Несколько действий в прошлом, которые длились одновременно. (and, while)
-- Marker words: ```When, while, all night, all morning, all day, from Monday to Wednesday, as```
+- Marker words: `When, while, all night, all morning, all day, from Monday to Wednesday, as`
 
 Формула: Подлежащее + (was/were + V-ing) + Past Simple
 
@@ -63,10 +63,10 @@ Study -> Studied
 - When you called I was taking a shower.
 ```
 
-|+ (was/were + V-ing)| - (was/were not, wasn’t/weren’t)|?|
-| ----------- | ----------- | ----------- |
-|I/He/She/It was working in the garden|I/He/She/It was not(wasn’t) working in the garden|Was I/He/She/It working in the garden?|
-|You/We/They were working in the garden|You/We/They were not(weren’t) working in the garden|Were You/We/They working in the garden?|
+| + (was/were + V-ing)                   | - (was/were not, wasn’t/weren’t)                    | ?                                       |
+| -------------------------------------- | --------------------------------------------------- | --------------------------------------- |
+| I/He/She/It was working in the garden  | I/He/She/It was not(wasn’t) working in the garden   | Was I/He/She/It working in the garden?  |
+| You/We/They were working in the garden | You/We/They were not(weren’t) working in the garden | Were You/We/They working in the garden? |
 
 ---
 
@@ -74,7 +74,7 @@ Study -> Studied
 
 - Показывает действие, которое случилось раньше другого действия или определенного момента в прошлом.
 - Одна часть предложения будет в PAST PERFECT (потом это), другая в PAST SIMPLE (сначало это действие)
-- Marker words: ```By, after, before, when, early, first```
+- Marker words: `By, after, before, when, early, first`
 
 ```
 We arrived at the station at 7 o’clock, but the train had left

@@ -14,8 +14,8 @@ const person = Object.create(
     // сюда можно добавлять кастомные методы
     showSomething() {
       console.log('Hello, World!');
-    }
-  }, 
+    },
+  },
   {
     name: {
       value: 'Leonel Messi',
@@ -41,15 +41,14 @@ const person = Object.create(
       set(value) {
         alert(value);
       },
-    }
-  }
+    },
+  },
 );
 ```
 
 ```js
 person.age; // 36
-person.age = 35 ; // --> alert(35)
-
+person.age = 35; // --> alert(35)
 
 for (let key in person) {
   console.log(`${key}:`, person[key]);
@@ -60,7 +59,7 @@ for (let key in person) {
 }
 ```
 
-***
+---
 
 ## Proxy и Reflect
 
@@ -74,8 +73,8 @@ for (let key in person) {
 let proxy = new Proxy(target, handler);
 ```
 
-- ```target``` – это объект, для которого нужно сделать прокси, может быть чем угодно, включая функции.
-- ```handler``` – конфигурация прокси: объект с «ловушками» («traps»): методами, которые перехватывают разные операции, например, ловушка get – для чтения свойства из target, ловушка set – для записи свойства в target и так далее.
+- `target` – это объект, для которого нужно сделать прокси, может быть чем угодно, включая функции.
+- `handler` – конфигурация прокси: объект с «ловушками» («traps»): методами, которые перехватывают разные операции, например, ловушка get – для чтения свойства из target, ловушка set – для записи свойства в target и так далее.
 
 ### Проксирование объектов
 
@@ -85,7 +84,7 @@ const person = {
   name: 'Vladilen',
   age: 25,
   job: 'Fullstack',
-}
+};
 
 // прокси-объект принимает исходный объект
 const objProxy = new Proxy(person, {
@@ -114,12 +113,12 @@ const objProxy = new Proxy(person, {
 
   deleteProperty(target, prop) {
     console.log('deleting ...', prop);
-  }
+  },
 });
 
 person.age; // 25
 objProxy.age; // 26
-objProxy.name = "New name"; // поменяет исходный объект
+objProxy.name = 'New name'; // поменяет исходный объект
 
 // метод has
 'name' in objProxy; // true
@@ -132,7 +131,7 @@ delete objProxy.age; // deleting ... age
 ### Проксирование функций
 
 ```js
-const log = (text) => `Log: ${text}`;
+const log = text => `Log: ${text}`;
 
 const fnProxy = new Proxy(log, {
   apply(target, thisArg, args) {
@@ -143,11 +142,11 @@ const fnProxy = new Proxy(log, {
 
     // как вариант
     return target.apply(thisArg, args).toUpperCase();
-  }
+  },
 });
 
 log('abc'); // 'Log: abc'
-fnProxy('abc'); // 'LOG: ABC' 
+fnProxy('abc'); // 'LOG: ABC'
 ```
 
 ### Проксирование функций-экземпляров-класов
@@ -165,8 +164,7 @@ class Person {
 // проксируем экземпляр этого класса
 const personProxy = new Proxy(Person, {
   // надстройка над constructor()
-  construct(target, args) {
-  }
+  construct(target, args) {},
 });
 ```
 
@@ -175,14 +173,17 @@ const personProxy = new Proxy(Person, {
 ```js
 const withDefaultParams = (target, defaultValue = 0) => {
   return new Proxy(target, {
-    get: (obj, prop) => (prop in obj ? obj[prop] : defaultValue)
-  })
-}
+    get: (obj, prop) => (prop in obj ? obj[prop] : defaultValue),
+  });
+};
 
-const position = withDefaultParams({
-  x: 10,
-  y: 20,
-}, 0);
+const position = withDefaultParams(
+  {
+    x: 10,
+    y: 20,
+  },
+  0,
+);
 
 // Если поля нет в параметре, то будет возвращаться дефолтное значение
 position.x; // 10
@@ -191,19 +192,18 @@ position.z; // 0
 position.i; // 0
 ```
 
-***
+---
 
 ### Пример Проксирование функций - свойства с префиксом
 
 ```js
 const withHiddenProps = (target, prefix = '_') => {
   return new Proxy(target, {
-    has: (obj, prop) => (prop in obj) && (!prop.startWith(prefix)),
-    ownKeys: obj => Reflect.ownKeys(obj).filter((p => !prop.startWith(prefix))), // получение массива изключей
-    get: (obj, prop, reciever) => (prop in reciever ? obj[prop] : void 0)
-,  });
-}
-
+    has: (obj, prop) => prop in obj && !prop.startWith(prefix),
+    ownKeys: obj => Reflect.ownKeys(obj).filter(p => !prop.startWith(prefix)), // получение массива изключей
+    get: (obj, prop, reciever) => (prop in reciever ? obj[prop] : void 0),
+  });
+};
 ```
 
 ### Пример приватных полей
@@ -221,21 +221,21 @@ const props = {
   __privateMethodToo() {},
   _privateProp: 'Нельзя получить просто так',
 };
- 
+
 const checkPrivateProp = prop => prop.startsWith('_');
- 
+
 const proxyProps = new Proxy(props, {
   get(target, prop) {
     if (checkPrivateProp(prop)) {
-      throw new Error("Нет прав");
+      throw new Error('Нет прав');
     } else {
       const value = target[prop];
-      return (typeof value === 'function') ? value.bind(target) : value;
+      return typeof value === 'function' ? value.bind(target) : value;
     }
   },
   set(target, prop, val) {
     if (checkPrivateProp(prop)) {
-      throw new Error("Нет прав");
+      throw new Error('Нет прав');
     } else {
       target[prop] = val;
       return true;
@@ -243,32 +243,32 @@ const proxyProps = new Proxy(props, {
   },
   deleteProperty(target, prop) {
     if (checkPrivateProp(prop)) {
-      throw new Error("Нет прав");
+      throw new Error('Нет прав');
     } else {
       delete target[prop];
       return true;
     }
-  }
+  },
 });
- 
+
 proxyProps.getChat();
 delete proxyProps.chat;
- 
+
 proxyProps.newProp = 2;
 console.log(proxyProps.newProp);
- 
+
 try {
-    proxyProps._newPrivateProp = 'Super game';
+  proxyProps._newPrivateProp = 'Super game';
 } catch (error) {
-    console.log(error);
+  console.log(error);
 }
- 
+
 try {
-    delete proxyProps._privateProp;
+  delete proxyProps._privateProp;
 } catch (error) {
-    console.log(error); // Error: Нет прав
+  console.log(error); // Error: Нет прав
 }
- 
+
 /*
     * Вывод в консоль следующий:
 Нельзя получить просто так

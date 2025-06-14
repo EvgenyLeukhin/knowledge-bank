@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ## useEffect()
 
-- Если хук `useState` заменил `state` классового компонента, то хук `useEffect` заменил все методы жизненного цикла (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` и т.д.). 
+- Если хук `useState` заменил `state` классового компонента, то хук `useEffect` заменил все методы жизненного цикла (`componentDidMount`, `componentDidUpdate`, `componentWillUnmount` и т.д.).
 - Может использоваться несколько раз в одном компоненте.
 - Можно управлять перерендером компонента.
 - Не блокирует отрисовку разметки
@@ -25,7 +25,6 @@ import { useState, useEffect } from 'react';
 const SomeComp = () => {
   const [users, setUsers] = useState<any[]>([]);
 
-
   // ЗАПРОС к API - будет срабатывать при первом рендеринге компонента
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -33,14 +32,8 @@ const SomeComp = () => {
       .then(json => setUsers(json));
   }, []);
 
-  return (
-    <ul>
-      {users?.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+  return <ul>{users?.map(user => <li key={user.id}>{user.name}</li>)}</ul>;
+};
 ```
 
 ---
@@ -58,17 +51,14 @@ import { useState, useEffect } from 'react';
 const SomeComp = () => {
   const [count, setCount] = useState(0);
 
-
   // будет срабатывать при первом ренденре
   // будет срабатывать каждый раз при изменении count
   useEffect(() => {
     console.info('counter value: ', count);
   }, [count]);
 
-  return (
-    <button onClick={() => setCount(count + 1)}>{count}</button>
-  );
-}
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+};
 ```
 
 ---
@@ -87,16 +77,14 @@ const SomeComp = () => {
 
   useEffect(() => {
     // не будет срабатывать при первом рендере!
-    // вернет предыдущее состояние count до изменения 
+    // вернет предыдущее состояние count до изменения
     return () => {
       console.info('previos counter value: ', count);
     };
   }, [count]);
 
-  return (
-    <button onClick={() => setCount(count + 1)}>{count}</button>
-  );
-}
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+};
 ```
 
 ---
@@ -129,10 +117,8 @@ const SomeComp = () => {
     return () => window.removeEventListener('resize', resizeXListener);
   }); // do not add [] - will not working
 
-  return (
-    <div>{count}</div>
-  );
-}
+  return <div>{count}</div>;
+};
 ```
 
 ---

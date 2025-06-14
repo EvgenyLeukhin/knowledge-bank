@@ -16,10 +16,10 @@ sidebar_position: 2
 Каждый шрифтовой символ можно вставить несколькоми способами:
 
 - Просто **печатный символ** © - ©
-- Мнемонический символ ```&copy;``` - &copy;
-- HTML-код (десятичный)```&#xa9;``` - &#xa9;
-- Юникод (hex)```&#x00A9;``` - <span>&#x00A9;</span>
-- CSS content-код ```\00A9;``` - <span className="css-content"></span>
+- Мнемонический символ `&copy;` - &copy;
+- HTML-код (десятичный)`&#xa9;` - &#xa9;
+- Юникод (hex)`&#x00A9;` - <span>&#x00A9;</span>
+- CSS content-код `\00A9;` - <span className="css-content"></span>
 
 ```css
 .css-content::after {
@@ -29,17 +29,17 @@ sidebar_position: 2
 
 Нужно в случаях, когда нужно показать именно эти символы как символы, чтобы они не воспринимался браузером как html-код (например символы &lt;&gt;).
 
-|Символ|Описание|Мнемоника|HTML-код|HTML-Юникод|JS-Юникод|
-|---|---|---|---|---|---|
-||Неразрывный пробел|```&nbsp;```|```&#160;```|```&#x00A0;```|```\u00A0```|
-|**<**|Знак меньше|```&lt;```|```&#60;```|```&#x003C;```|```\u003C```|
-|**>**|Знак больше|```&gt;```|```&#62;```|```&#x003E;```|```\u003E```|
-|**‐**|Дефис|```&hyphen;```|```&#8208;```|```&#x2010;```|```\u2010```|
-|**–**|Среднее тире|```&ndash;```|```&#8211;```|```&#x2013;```|```\u2013```|
-|**—**|Длинное тире|```&mdash;```|```&#8212;```|```&#x2014;```|```\u2014```|
-|**©**|Copyright|```&copy;```|```&#xa9;```|```&#x00A9;```|```\u00A9```|
+| Символ | Описание           | Мнемоника  | HTML-код  | HTML-Юникод | JS-Юникод |
+| ------ | ------------------ | ---------- | --------- | ----------- | --------- |
+|        | Неразрывный пробел | `&nbsp;`   | `&#160;`  | `&#x00A0;`  | `\u00A0`  |
+| **<**  | Знак меньше        | `&lt;`     | `&#60;`   | `&#x003C;`  | `\u003C`  |
+| **>**  | Знак больше        | `&gt;`     | `&#62;`   | `&#x003E;`  | `\u003E`  |
+| **‐**  | Дефис              | `&hyphen;` | `&#8208;` | `&#x2010;`  | `\u2010`  |
+| **–**  | Среднее тире       | `&ndash;`  | `&#8211;` | `&#x2013;`  | `\u2013`  |
+| **—**  | Длинное тире       | `&mdash;`  | `&#8212;` | `&#x2014;`  | `\u2014`  |
+| **©** | Copyright          | `&copy;`   | `&#xa9;`  | `&#x00A9;`  | `\u00A9`  |
 
-```\u00A0``` - JS-Юникод можно вставлять в строку (js, ts или json)
+`\u00A0` - JS-Юникод можно вставлять в строку (js, ts или json)
 
 ---
 
@@ -58,12 +58,22 @@ sidebar_position: 2
 
 ```html
 <!-- Параграф -->
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br /> Perferendis, perspiciatis cumque. Illum sed accusantium suscipit? Distinctio, exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati dolores provident soluta nulla illum vero.</p>
+<p>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br />
+  Perferendis, perspiciatis cumque. Illum sed accusantium suscipit? Distinctio,
+  exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati
+  dolores provident soluta nulla illum vero.
+</p>
 
 <hr />
 
 <!-- Блочная цитата -->
-<blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis cumque. Illum sed accusantium suscipit? Distinctio, exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati dolores provident soluta nulla illum vero.</blockquote>
+<blockquote>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
+  perspiciatis cumque. Illum sed accusantium suscipit? Distinctio,
+  exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati
+  dolores provident soluta nulla illum vero.
+</blockquote>
 ```
 
 ```html
@@ -74,12 +84,18 @@ sidebar_position: 2
 <s>Зачеркнутый</s>
 <cite>Строчная цитата в кавычках</cite>
 <q>Строчная цитата курсивом</q>
-Some text<sub>Some text</sub>
-Some text<sup>Some text</sup>
-<wbr /> - Допустимый перенос длинного слова
-<br /> - Перенос строки
-<hr /> - Горизинтальный разделитель
-<ruby>, <rt>, <rp> - Теги для идеографической письменности вроде китайского языка (используются редко)
+Some text<sub>Some text</sub> Some text<sup>Some text</sup> <wbr /> - Допустимый
+перенос длинного слова <br />
+- Перенос строки
+<hr />
+- Горизинтальный разделитель
+<ruby
+  >, <rt>, </rt
+  ><rp>
+    - Теги для идеографической письменности вроде китайского языка (используются
+    редко)
+  </rp></ruby
+>
 ```
 
 <b>Жирный</b>&nbsp;
@@ -105,12 +121,13 @@ Some text<sub>будет снизу</sub>&nbsp;
 <code>console.log('Какой-то код');</code>
 <samp>Ваш браузер поддерживает JavaScript (вывод текста программой)</samp>
 <pre>Текст будет такой же как в коде, со всеми п  р  о  б  е  л  а  м  и</pre>
-<var>переменная1</var> + <var>переменная2</var>
-<del>Удаленный текст</del> <ins>Новый текст</ins>
+<var>переменная1</var> + <var>переменная2</var> <del>Удаленный текст</del>
+<ins>Новый текст</ins>
 <bdo>Текст справа-налево</bdo>
 
 <!-- Определение -->
-<dfn>Капителью</dfn> в типографике называется текст, набранный прописными буквами уменьшенного размера.
+<dfn>Капителью</dfn> в типографике называется текст, набранный прописными
+буквами уменьшенного размера.
 ```
 
 <address>Россия, Москва, ул. Ленина, д, 1</address>

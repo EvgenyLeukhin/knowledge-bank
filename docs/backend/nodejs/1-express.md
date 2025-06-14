@@ -5,9 +5,9 @@ sidebar_position: 1
 
 Express — это инструмент, который позволяет написать веб-сервер любой сложности. Даже некоторые высоконагруженные приложения работают, используя NodeJS и Express.
 
-- Установить пакет: ```npm i express --save-dev```
+- Установить пакет: `npm i express --save-dev`
 
-- Запуск сервера: ```node ./server.js```
+- Запуск сервера: `node ./server.js`
 
 ## Базовый конфиг
 
@@ -25,9 +25,9 @@ app.listen(PORT, function () {
 });
 ```
 
-Заметим, что, запустив свой сервер, вы можете получить HTML не только в браузере, но и в терминале, используя команду ```curl http://localhost:4000/```, или в Postman, Owasp ZAP и иных подобных инструментах.
+Заметим, что, запустив свой сервер, вы можете получить HTML не только в браузере, но и в терминале, используя команду `curl http://localhost:4000/`, или в Postman, Owasp ZAP и иных подобных инструментах.
 
-### С использованием __dirname
+### С использованием \_\_dirname
 
 ```js title="server.js"
 const path = require('path');
@@ -66,14 +66,13 @@ app.get(`${API_PREFIX}/text`, (req, res) => {
 // хэндлер put-запроса
 app.put(`${API_PREFIX}/json`, (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.status(201).send({data: {items: [1,2,3]}});
+  res.status(201).send({ data: { items: [1, 2, 3] } });
 });
 
 // слушанье сервера
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}`);
 });
-
 ```
 
 Будут возвращаться данные по таким запросам

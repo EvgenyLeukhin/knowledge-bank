@@ -53,14 +53,14 @@ sidebar_position: 12
 /* Аналог тега <col>,
 НУЖНО СОЗДАТЬ ПУСТЫЕ
 ТЕГИ ВНАЧАЛЕ ТАБЛИЦЫ */
-.col  { 
+.col {
   width: 200px;
-  display: table-column; 
+  display: table-column;
 }
 
 /* Строка, аналог тега <tr> */
-.row { 
-  display: table-row; 
+.row {
+  display: table-row;
 
   /* Группировка строк контента, аналог тега <tbody> */
   display: table-row-group;
@@ -73,8 +73,8 @@ header {
 }
 
 /* Аналог тега <tfoot> */
-footer { 
-  display: table-footer-group; 
+footer {
+  display: table-footer-group;
 }
 
 /* Ячейка, аналог тега <td> */

@@ -3,9 +3,9 @@ title: Import / export
 sidebar_position: 13
 ---
 
-***
+---
 
-## Простой и дефолтный 
+## Простой и дефолтный
 
 ```js title="script1.js"
 // простой именованный экспорт
@@ -24,20 +24,20 @@ import b, { a } from './script1';
 ...
 ```
 
-***
+---
 
 ## import as / export as
 
-Дефолтные импорты можно переименовывать сразу при импорте, а простые через ```as```.
+Дефолтные импорты можно переименовывать сразу при импорте, а простые через `as`.
 
 ```js title="script2.js"
 import c, { a as d } from './script1.js';
 ...
 ```
 
-***
+---
 
-Мульти экспорт объектом. Простые экспорты можно также переименовывать через ```as```.
+Мульти экспорт объектом. Простые экспорты можно также переименовывать через `as`.
 
 ```js title="script1.js"
 const a = 1;
@@ -46,12 +46,12 @@ const b = 2;
 export {
   a,
   b as c, // экспорт с переименованием (не работает с default)
-}
+};
 ```
 
-***
+---
 
-## import * as data
+## import \* as data
 
 Импорт всех экспортов файла в объект.
 
@@ -92,12 +92,12 @@ document.body.appendChild(element);
 ```html title="index.html"
 ...
 <script src="file1.js"></script>
-<script src="file2.js"></script> 
+<script src="file2.js"></script>
 ```
 
-Будет возникать ошибка, так как имеются одинаковые названия переменных (const TAG). И при подключении файлов они окажутся в одной области видимости, и интерпритатор выдаст ошибку 
+Будет возникать ошибка, так как имеются одинаковые названия переменных (const TAG). И при подключении файлов они окажутся в одной области видимости, и интерпритатор выдаст ошибку
 
-```Uncaught SyntaxError: Identifier 'TAG' has already been declared```
+`Uncaught SyntaxError: Identifier 'TAG' has already been declared`
 
 Но придумали один хак на замыканиях, можно в каждом файле изолировать область видимости функций с помощью паттерна IIFE — самовызывающиеся функции. Любые переменные внутри IIFE невидимы для внешнего мира:
 
@@ -118,24 +118,24 @@ document.body.appendChild(element);
 'use strict';
 
 (function () {
-    const TAG = 'div';
+  const TAG = 'div';
 
-    const element = document.createElement(TAG);
+  const element = document.createElement(TAG);
 
-    element.textContent = 'Мой второй тег';
-    document.body.appendChild(element);
+  element.textContent = 'Мой второй тег';
+  document.body.appendChild(element);
 })();
 ```
 
 ```html title="index.html"
 ...
-  <script src="file1.js"></script>
-  <script src="file2.js"></script>
+<script src="file1.js"></script>
+<script src="file2.js"></script>
 ```
 
 Теперь все ОК, скрипты выполняют свою задачу
 
-***
+---
 
 ### windw.utils
 
@@ -160,29 +160,29 @@ window.utils = (function () {
 ```
 
 ```js title="file2.js"
-  (function () {
-    // Здесь какая-то суперреализация функций, которые хочется переиспользовать много где в проекте
+(function () {
+  // Здесь какая-то суперреализация функций, которые хочется переиспользовать много где в проекте
 
-    function myOtherSuperFunc1() {
-      window.utils.mySuperFunc1(); // Вызывали сохраненную функцию
-      console.log('otherUtils.myOtherSuperFunc1');
-    }
+  function myOtherSuperFunc1() {
+    window.utils.mySuperFunc1(); // Вызывали сохраненную функцию
+    console.log('otherUtils.myOtherSuperFunc1');
+  }
 
-    function myOtherSuperFunc2() {
-      console.log('otherUtils.myOtherSuperFunc2');
-    }
+  function myOtherSuperFunc2() {
+    console.log('otherUtils.myOtherSuperFunc2');
+  }
 
-    myOtherSuperFunc1();
+  myOtherSuperFunc1();
 
-    // Можно сохранять в кастомные поля window
-    window.otherUtils = {
-      myOtherSuperFunc1,
-      myOtherSuperFunc2,
-    };
+  // Можно сохранять в кастомные поля window
+  window.otherUtils = {
+    myOtherSuperFunc1,
+    myOtherSuperFunc2,
+  };
 
-    // или так
-    window.myOtherSuperFunc1 = myOtherSuperFunc1;
-    window.myOtherSuperFunc2 = myOtherSuperFunc2;
+  // или так
+  window.myOtherSuperFunc1 = myOtherSuperFunc1;
+  window.myOtherSuperFunc2 = myOtherSuperFunc2;
 })();
 ```
 
@@ -206,7 +206,6 @@ window.utils = (function () {
 
 ```js title="render.js"
 (function () {
-
   const TAG = 'p';
 
   function renderDOM(selector, content) {
@@ -221,7 +220,6 @@ window.utils = (function () {
   }
   window._renderDOM = renderDOM;
 })();
-
 ```
 
 ```js title="reverse.js"
@@ -230,7 +228,7 @@ window.utils = (function () {
     return str.split('').reverse().join('');
   }
 
- window._reverse = reverse;
+  window._reverse = reverse;
 })();
 ```
 
@@ -264,7 +262,7 @@ window._reverse = (function () {
 })();
 ```
 
-***
+---
 
 ## Модульные скрипты
 
@@ -279,7 +277,7 @@ window._reverse = (function () {
 </body>
 ```
 
-Модули будут работать только с директивой 'use strict'. ```export``` помечает, какие фрагменты кода должны быть доступны вне модуля;
+Модули будут работать только с директивой 'use strict'. `export` помечает, какие фрагменты кода должны быть доступны вне модуля;
 
 ```js title="script1.js"
 'use strict';
@@ -291,7 +289,7 @@ export const c = 3;
 export default { a, b, c };
 ```
 
-```import``` подключает части модуля, размеченные через export. Дефолтный импорт можно именовать как угодно, именованные должны совпадать, но можно изменять их название через as. 
+`import` подключает части модуля, размеченные через export. Дефолтный импорт можно именовать как угодно, именованные должны совпадать, но можно изменять их название через as.
 
 ```js title="script2.js"
 'use strict';
@@ -309,10 +307,10 @@ console.log('copyOfC', copyOfC); // 3
 ### Ошибка с зацикливанием импортов
 
 ```js title="file1.js"
-import { testFile2 } from "./file1";
+import { testFile2 } from './file1';
 
 export function testFile1() {
-  console. log (testFile2());
+  console.log(testFile2());
   return 42;
 }
 
@@ -320,7 +318,7 @@ testFile1();
 ```
 
 ```js title="file2.js"
-import { testFile1 } from "./file2"
+import { testFile1 } from './file2';
 
 export function testFile2() {
   console.log(testFile1());

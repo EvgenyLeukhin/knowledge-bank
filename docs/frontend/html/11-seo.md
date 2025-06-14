@@ -9,12 +9,15 @@ sidebar_position: 11
 
 ```html
 <!-- мета-тэги для seo -->
-<meta name="keywords" content="ключевое слово1, ключевое слово2, ключевое слово3, ключевое слово4">
-<meta name="description" content="Краткое описание сайта илии приложения">
-<meta name="language" content="RU">
-<meta name="copyright" content="Компания">
-<meta name="robots" content="index, nofollow">
-<meta name="author" content="Name">
+<meta
+  name="keywords"
+  content="ключевое слово1, ключевое слово2, ключевое слово3, ключевое слово4"
+/>
+<meta name="description" content="Краткое описание сайта илии приложения" />
+<meta name="language" content="RU" />
+<meta name="copyright" content="Компания" />
+<meta name="robots" content="index, nofollow" />
+<meta name="author" content="Name" />
 
 <!-- текст для seo -->
 <h1>Главный заголовок</h1>
@@ -54,9 +57,9 @@ sidebar_position: 11
 2. место: 80% траффика;
 3. место: 60-70% траффика;
 4. место: 40-50% траффика;
-...
+   ...
 
-**Семантическое ядро** - Список ключевых фраз. Составляется, как правило, для главной страницы. Составляется после анализа ключевых запросов в Google и Яндекс (```meta keywords```)
+**Семантическое ядро** - Список ключевых фраз. Составляется, как правило, для главной страницы. Составляется после анализа ключевых запросов в Google и Яндекс (`meta keywords`)
 
 ### Инструменты для SEO
 

@@ -38,13 +38,9 @@ sidebar_position: 5
 ### АНТИКВА (serif). Шрифты с засечками
 
 ```css
-font-family: 
-  "Times New Roman", 
-  Times, Georgia, 
-  "Palatino Linotype", 
-  "Hoefler Text", 
-  Garamond, 
-  serif;
+font-family:
+  'Times New Roman', Times, Georgia, 'Palatino Linotype', 'Hoefler Text',
+  Garamond, serif;
 ```
 
 <img src="../../../img/design/serif.jpg" width="350" alt="serif.jpg" />
@@ -70,15 +66,9 @@ font-family:
 ### ГРОТЕСК (sans-serif). Шрифты без засечек
 
 ```css
-font-family: 
-  Arial, Verdana, Tahoma,
-  Helvetica, Geneva,
-  "Lucida Grande",
-  "Gill Sans",
-  "Lucida Grande",
-  "Trebubuchet MS",
-  "Century Gothic", 
-  sans-serif;
+font-family:
+  Arial, Verdana, Tahoma, Helvetica, Geneva, 'Lucida Grande', 'Gill Sans',
+  'Lucida Grande', 'Trebubuchet MS', 'Century Gothic', sans-serif;
 ```
 
 <img src="../../../img/design/sans-serif.jpg" width="350" alt="sans-serif.jpg" />
@@ -90,7 +80,7 @@ font-family:
 - #### Новый стиль (Helvetica)
 
   Минималистичная форма. Высокий строчный знак. Практичность, стандартность, нейтральность.
-  
+
 - #### Геометрический стиль (BARON NEUE)
 
   Близкий геометрическим формам, круг, квадрат, треугольник, прямоугольник. Минимализм, простота, лёгкость, новизна.
@@ -108,15 +98,15 @@ font-family:
 <img src="../../../img/design/monospace.png" width="350" alt="monospace.png" />
 
 ```css
-font-family: 
-  "Courier New",
-  Courier, 
+font-family:
+  'Courier New',
+  Courier,
   Lucida Console,
   Monaco,
-  "Comic Sans MS",
-  "Copperplate Light",
-  "Copperplate Gothic Light",
-  "Market Felt", 
+  'Comic Sans MS',
+  'Copperplate Light',
+  'Copperplate Gothic Light',
+  'Market Felt',
   monospace;
 ```
 
@@ -162,7 +152,7 @@ font-family:
 - Нужно соблюдать типографическую иерархию (расставлять акценты для заголовков, подзаголовков и простого текста);
 - Лучше когда есть сразу несколько начетаний одного шрифта (Regular, Bold и Light);
 - Не стоит для одного проекта использовать большое количество шрифтов (достаточно 1-2, максимум 3);
-- Не нужно использовать цветной текст или текст с тенью поверх картинок, нужно использовать оверлэй c темным цветом и полупрозрачностью ```rgba(0,0,0,0.5)```;
+- Не нужно использовать цветной текст или текст с тенью поверх картинок, нужно использовать оверлэй c темным цветом и полупрозрачностью `rgba(0,0,0,0.5)`;
 - С цветом текста лучше не экспериментировать - если вы используете белый фон, то пишите черным текстом, и наоборот. Не следует использовать яркие цвета больших текстовых блоков.
 
 ### Заголовки
@@ -246,7 +236,7 @@ font-family: sefif, sans-serif, monospace;
 
 ```text
 font-weight: normal | bold | 100-900;
-font-style: normal | italic; 
+font-style: normal | italic;
 ```
 
 ---
