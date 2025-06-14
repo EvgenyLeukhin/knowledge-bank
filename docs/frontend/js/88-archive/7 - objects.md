@@ -161,7 +161,7 @@ person[key]; // 'Evgeny'
   person.height; // unknown property -> return undefined
   ```
 
-  ***
+---
 
 - ### Изменить свойство
 
@@ -169,7 +169,7 @@ person[key]; // 'Evgeny'
   person.age = 37;
   ```
 
-  ***
+---
 
 - ### Добавить новое свойсвто
 
@@ -177,7 +177,7 @@ person[key]; // 'Evgeny'
   person.country = 'Russia';
   ```
 
-  ***
+---
 
 - ### Удалить свойство
 

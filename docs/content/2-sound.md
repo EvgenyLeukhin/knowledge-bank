@@ -3,12 +3,7 @@ title: Звукозапись
 sidebar_position: 2
 ---
 
-export const H3 = ({children}) => (
-
-  <h3 style={{ color: '#65BAAF' }}>
-    {children}
-  </h3>
-);
+export const H3 = ({children}) => (<h3 style={{ color: '#65BAAF' }}>{children}</h3>);
 
 ## Logic Pro X
 
