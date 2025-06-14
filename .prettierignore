@@ -1,0 +1,8 @@
+# Ignore artifacts:
+node_modules
+public
+build
+.next
+.swc
+yarn.lock
+package-lock.json

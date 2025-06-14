@@ -1,53 +1,13 @@
-# Website
+# Knowledge band (Банк знаний)
 
-**GutHub hosting**: [https://evgenyleukhin.github.io/knowledge-bank/]
+Этот открытый pet-проект создан для хранения моей личной выжимки информации по веб-разработке, дизайну, созданию контента и др., чтобы можно было иметь доступ для быстрого вспоминания контекста по той или иной технологии. Доступ открыт по ссылке: <https://evgenyleukhin.github.io/knowledge-bank/>, ссылка на репозиторий: <https://github.com/EvgenyLeukhin/knowledge-bank>.
+Как основа для создания документации используется готовый сборщик [Docusaurus 2](https://docusaurus.io/).
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+---
 
-### Installation
+## Скрипты
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
-
-## TODO 
-
-Сделать разделение на под-категории
-
-- TypeScript
-- Обработка данных
-- Запросы и асихронность
-- Хуки
-- State-managment
+- Версия nodejs: >=16.14
+- Установка: `yarn` или `npm i`
+- Запуск локального dev-сервера: `yarn start` или `npm start`
+- Prod-cборка: `yarn build` или `npm run build`
