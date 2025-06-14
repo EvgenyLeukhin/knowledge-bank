@@ -21,3 +21,75 @@
   align-items: center;
   justify-content: center;
 }
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  height: calc(100vh - 400px);
+  align-items: start;
+}
+
+.list > li {
+  position: relative;
+  display: inline-flex;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.list > li::after {
+  position: absolute;
+  content: '-->';
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  top: 50%;
+  right: -40px;
+  display: inline-flex;
+}
+
+/* isChecked */
+.list > li.isChecked {
+  padding-left: 30px;
+  background-color: var(--ifm-color-primary);
+}
+
+.list > li.isChecked a {
+  color: white;
+}
+
+.list > li.isChecked::before {
+  content: '✅';
+  display: inline-flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: -13px;
+  top: 50%;
+  left: 5px;
+}
+
+/* inProgress */
+.list > li.inProgress {
+  padding-left: 30px;
+  background-color: #ffcb33;
+}
+
+.list > li.inProgress a {
+  color: black;
+}
+
+.list > li.inProgress::before {
+  content: '🔥';
+  display: inline-flex;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-top: -13px;
+  top: 50%;
+  left: 5px;
+}
