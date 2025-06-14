@@ -59,7 +59,7 @@
 }
 
 .list > li.isChecked a {
-  color: white;
+  color: black;
 }
 
 .list > li.isChecked::before {
