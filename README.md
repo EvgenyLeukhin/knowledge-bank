@@ -13,4 +13,5 @@
 - Версия nodejs: >=16.14
 - Установка: `yarn` или `npm i`
 - Запуск локального dev-сервера: `yarn start` или `npm start`
-- Prod-cборка: `yarn build` или `npm run build`
+- Prod-cборка: `yarn build` или `npm run build` (директория /build)
+- Запуск prod-сервера локально из директории /build: `yarn serve` или `npm run serve`
