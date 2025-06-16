@@ -41,6 +41,36 @@ Math.random();
 console.log('Hello, JS!!!');
 ```
 
+```js
+// инструкции отделяются друг от драга semocolon ; statement1; statement2; ...; statementN;
+// JS игнорирует пробелы и переводы строк, поэтому часто инсрукции пишут на новых строках
+// statment1;
+// statment2;
+// statment3;
+
+// блок {} инструкций (составные инструкции)
+// {
+// statment1;
+// statment2;
+// statment3;
+// }
+```
+
+```js
+// можно группировать инструкции в блоки - ошибки не будет
+{
+  console.log('Hello, JS!!! 1');
+  console.log('Hello, JS!!! 2');
+  console.log('Hello, JS!!! 3');
+
+  {
+    console.log('Hello, JS!!! 4');
+    console.log('Hello, JS!!! 5');
+    console.log('Hello, JS!!! 6');
+  }
+}
+```
+
 ---
 
 - **Браузерный язык программирования**
@@ -69,9 +99,9 @@ console.log('Hello, JS!!!');
 - [Справочник по Web-разработке](https://doka.guide/)
 - [shortcode.dev](https://shortcode.dev/javascript-cheatsheet#javascript-cheatsheet) — JS-cheatsheet
 - [www.w3schools.com](https://www.w3schools.com/js/default.asp) — JS Tutorial
-- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — learn.javascript.ru;
+- [«Современный учебник JavaScript»](https://learn.javascript.ru/) — learn.JavaScript.ru;
 - [MDN](https://developer.mozilla.org/ru/docs/Web/JavaScript) - Mozilla Development Network;
-- [Sorax](https://www.youtube.com/watch?v=H6G63NKRSi8&list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem) - видео-курс "Основы JS - Javascript-джедай" (2014)
+- [Sorax](https://www.youtube.com/watch?v=H6G63NKRSi8&list=PL363QX7S8MfSxcHzvkNEqMYbOyhLeWwem) - видео-курс "Основы JS - JavaScript-джедай" (2014)
 - [Фрилансер по жизни](https://www.youtube.com/watch?v=yJcCKuxfb2o&list=PLM6XATa8CAG7DDIBjNVd78Fv5Ueo930IV) - План развития фронтенд-разработчика (2020)
 - [Bogdan Stashchuk](https://www.youtube.com/watch?v=CxgOKJh4zWE&t=2425s) - Полный Курс JavaScript Для Начинающих (2022)
 - [«Вы не знаете JS»](https://github.com/azat-io/you-dont-know-js-ru) — сборник книг для виртуозного владения JavaScript.
