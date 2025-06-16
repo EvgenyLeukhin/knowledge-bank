@@ -1,0 +1,11 @@
+<body>
+  <!-- Рекурсия на setTimeout -->
+  <script>
+    const func = (value) => {
+      console.log(value);
+      if (value > 0) setTimeout(() => func(value - 1), 1000);
+    };
+
+    func(10);
+  </script>
+</body>

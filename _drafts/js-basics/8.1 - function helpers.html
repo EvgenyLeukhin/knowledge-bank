@@ -1,0 +1,192 @@
+<!-- Функции, создающие объекты -->
+<body>
+  <h1>8.1 - function helpers</h1>
+
+  <!-- Вложенные функии -->
+  <script>
+    // Внутри функций можно создавать сколь угодно много переменных и других вложенных функций
+    const doSomething1 = (string) => {
+      // вложенная функция
+      function stringModify(string) {
+        return string.toUpperCase();
+      }
+
+      // использование внутренней функции
+      const newString = stringModify(string);
+
+      return newString.split('');
+    };
+
+    doSomething1('Internal function'); // [ 'I', 'N', 'T', 'E', 'R', 'N', 'A', 'L', ' ', 'F', 'U', 'N', 'C', 'T', 'I', 'O', 'N' ]
+
+    ///////////////////////////////////
+
+    // big logic - нужно выносить наружу
+    function stringModify(string) {
+      return string.toUpperCase();
+    }
+
+    const doSomething2 = (string) => {
+      // использование внешней функции
+      const newString = stringModify(string);
+
+      return newString.split('');
+    };
+
+    doSomething2('External function'); // [ 'E', 'X', 'T', 'E', 'R', 'N', 'A', 'L', ' ', 'F', 'U', 'N', 'C', 'T', 'I', 'O', 'N' ]
+  </script>
+
+  <!-- arguments - недоступны в стрелочной записи -->
+  <script>
+    const someFunc = function (a, b, c) {
+      // объект arguments, который ведет себя как массив
+      console.log('arguments', arguments, arguments.length);
+      const hiddenArg1 = arguments[3];
+      const hiddenArg2 = arguments[4];
+
+      // спрятанные аргументы
+      console.log('hiddenArg1', hiddenArg1);
+      console.log('hiddenArg2', hiddenArg2);
+
+      return a + b + c;
+    };
+
+    const a = someFunc(1, 2, 3, 4, 5);
+
+    a;
+  </script>
+
+  <!-- SCOPE, цепочки SCOPE -->
+  <script>
+    function stringModify(string) {
+      return string.toUpperCase();
+    }
+
+    const doSomething3 = (string) => {
+      // использование внешней функции
+      const newString = stringModify(string);
+
+      return newString.split('');
+    };
+
+    doSomething3('External function');
+
+    // SCOPE
+    console.log('newString', newString); // ReferenceError: newString is not defined (даже если будет var)
+  </script>
+
+  <!-- Возврат функции из функции, Замыкание -->
+  <script>
+    function someCrazyFunc1(name) {
+      // возврат анонимной функции - эта вложенная функция "видит" все парамтры род. функции
+      return function () {
+        console.log(`name is ${name}`);
+      };
+    }
+
+    // более короткая запись
+    const someCrazyFunc2 = (name) => () => console.log(`name is ${name}`);
+
+    someCrazyFunc1('Jack')(); // 'name is Jack'
+    someCrazyFunc2('Jack')(); // 'name is Jack'
+
+    // но если добавить вложенной функции свой одноименный именноывнный параметр, то замыкание пропадает
+    const someCrazyFunc3 = (name) => (name) => console.log(`name is ${name}`);
+    someCrazyFunc3('Jack')(); // 'name is undefined'
+    someCrazyFunc3()('Jack'); // 'name is "Jack" - придется передавать его в другом месте
+
+    // но если параметр будет иметь другое название, то замакании останется
+    const someCrazyFunc4 = (name) => (name2) => console.log(`name is ${name}`);
+
+    // Цепочек замыканий может быть сколь угодно много, но их большое кол-во это плохая практика
+  </script>
+
+  <!-- Callback - передача функции как параметр -->
+  <script>
+    function withCallBack(subject, showCallbackAfter, callback) {
+      console.log(`Your subject is, ${subject}`);
+
+      // callback
+      setTimeout(function () {
+        callback();
+      }, showCallbackAfter);
+    }
+
+    // в колбэк записываем анонимную функцию
+    withCallBack('JavaScript', 2000, function () {
+      console.log('Time to learn is up');
+    });
+
+    // запись через стрелочную функцию
+    withCallBack('JavaScript', 2000, () => {
+      console.log('Time to learn is up');
+    });
+  </script>
+
+  <!-- Рекурсия -->
+  <script>
+    const countDown = (count) => {
+      let countLocal = count;
+
+      console.log(`count: ${countLocal}`);
+
+      if (countLocal > 0) {
+        countLocal--;
+        return countDown(countLocal);
+      } else {
+        return console.log('Stop');
+      }
+    };
+
+    countDown(10);
+  </script>
+
+  <script>
+    // присваивание переменной значение выполнения анонимной самовызывающейся функции
+    let doSmth = (function (name) {
+      return `Hello ${name}!`;
+    })('Jack');
+
+    doSmth; // 'Hello, Jack!'
+
+    // идентично записи
+    let doSmth2 = 'Hello, Jack!';
+  </script>
+
+  <!-- Анонимные самовызывающиеся функции -->
+  <!-- Паттерн IIFE — анонимные изолированные самовызывающиеся функции. -->
+  <!-- 
+    Не нужно именовать
+    Будет выполняться при загрузке.
+    Чаще всего встречаются в замыканиях или в качестве аргумента другой функции (колбэк).
+    Изолированы от области видимости. Любые переменные внутри IIFE невидимы для внешнего мира.
+    Результат таких функций можно сохранять в переменные
+    Функция сразу вызовится, как до нее дойдет интерпритатор.
+    Также такие функции можно использовать как модульные, сохраняя в объект window.utils 
+  -->
+  <script>
+    // Этот код сразу выполнится
+    (function () {
+      console.log('Hello');
+    })();
+
+    // Можно передавать параметры
+    (function (name) {
+      console.log(`Hello, ${name}!`);
+    })('John'); // 'Hello, John'
+
+    // переменные будут сразу хранить результат выполнения данных функций
+    const greeting1 = (function (name) {
+      return `Hello, ${name}`;
+    })('Jack');
+
+    const greeting2 = (function (name) {
+      return `Hello, ${name}`;
+    })('Max');
+
+    greeting1; // 'Hello, Jack'
+    greeting2; //'Hello, Max'
+  </script>
+</body>
+
+<!-- ДЗ: Сделать несколько примеров вложенных функций с замыканиями, объявснить как работает scope и замыкания -->

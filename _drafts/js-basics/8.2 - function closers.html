@@ -1,0 +1,59 @@
+<body>
+  <h1>8.2 - function closers</h1>
+
+  <!-- Замыкания внутри этой же функции -->
+  <script>
+    function someFunc1() {
+      const i = 10; // эта переменная будет замкнутой внутри функции - local scope
+
+      return function () {
+        console.log('i', i);
+      };
+    }
+
+    someFunc1()(); // 10
+
+    function someFunc2() {
+      const i = 10;
+
+      return function () {
+        const i = 20; // эта переменная будет замкнутой внутри функции - local scope
+
+        console.log('i', i);
+      };
+    }
+
+    // при вызове функциия замыкает значения хранящихся в ней переменных
+    someFunc2()(); // 20
+  </script>
+
+  <!-- Замыкания при вызове из других функций -->
+  <script>
+    const a = function () {
+      const i = 10;
+
+      return i;
+    };
+
+    const b = function () {
+      const i = 20;
+
+      // внутри функции b вызовим функцию a - покажем значение в консоли
+      console.log(a());
+    };
+
+    b(); // 10 - так как функция a при вызове замыкает свой локальный scope
+  </script>
+
+  <!-- Добавление кастомных полей в функцию -->
+  <script>
+    const someFunc3 = function () {
+      console.log('someFunc3.value', someFunc3.value);
+    };
+
+    // так как функции являются объектами, то им можно добавлять поля также как и объектам
+    someFunc3.value = 1;
+
+    someFunc3(); // "someFunc3.value", 1
+  </script>
+</body>

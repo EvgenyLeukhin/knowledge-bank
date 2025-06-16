@@ -1,0 +1,81 @@
+<body>
+  <h1>4.2 - number helpers</h1>
+
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>Math</h1>
+
+  <ul>
+    <li><code>.floor()</code> - <span>округление до нижнего</span></li>
+    <li><code>.ceil()</code> - <span>округление до верхнего</span></li>
+    <li><code>.round()</code> - <span>округление до среднего</span></li>
+    <li><code>.trunc()</code> - <span>возвращает целую часть</span></li>
+    <li><code>.random()</code> - <span>рандомное значение от 0 до 1</span></li>
+    <li><code>.min()</code> - <span>минимальное из перечисления</span></li>
+    <li><code>.max()</code> - <span>максимальное из перечисления</span></li>
+    <li><code>.pow()</code> - <span>квадрат</span></li>
+    <li><code>.abs()</code> - <span>модуль</span></li>
+  </ul>
+  <!-- Глобальный объект Math -->
+  <script>
+    // округление
+    Math.floor(123.123); // 123 - округление до нижнего
+    Math.ceil(123.123); // 124 - округление до верхнего
+    Math.round(123.123); // 123 - округление до среднего
+    Math.round(123.523); // 124 - округление до среднего
+
+    Math.trunc(123.523); // 123 - возвращает целую часть числа путём удаления всех дробных знаков
+    Math.trunc(-123.523); // -123
+
+    // рандом
+    Math.random(); // 0.2137036305422546 - рандомное значение от 0 до 1
+    Math.round(Math.random() * 100); // рандомное значение от 1 до 100
+
+    // min-max
+    Math.min(1, 2, 3, 4, 5, 6, 7); // 1
+    Math.max(1, 2, 3, 4, 5, 6, 7); // 7
+
+    // константы
+    Math.PI; // 3.141592653589793
+    Math.E; // 2.718281828459045
+
+    // тригонометрия
+    Math.sin(0); // 0
+    Math.cos(0); // 1
+    Math.tan(180); // 1.33
+
+    // степень
+    Math.pow(16, 2); // 256
+    Math.sqrt(256); // 16
+
+    // логорифм
+    Math.log(148.41316); // 5
+
+    // модуль
+    Math.abs(-123); // 123
+  </script>
+</body>

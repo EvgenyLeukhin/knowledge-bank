@@ -1,0 +1,83 @@
+<body>
+  <h1>2.3 - const</h1>
+
+  <script>
+    // Нельзя объявлять константу без присвоения значения
+    // const a; // SyntaxError: Missing initializer in const declaration
+
+    const a = true;
+
+    // нельзя перезаписывать (если примитивный тип данных)
+    // Uncaught TypeError: Assignment to constant variable
+    a = false; // будет ошибка
+
+    // нельзя переобъявлять
+    // Uncaught SyntaxError: Identifier 'a' has already been declared
+    const a = 123; // будет ошибка
+  </script>
+
+  <script>
+    // SCOPE (такой же как и у let)
+    // внутри {}
+    if (true) {
+      const CONST = 123;
+      console.log(CONST); // 123
+
+      if (true) {
+        console.log(CONST); // 123
+      }
+    }
+
+    // обращение "сверху"
+    console.log(CONST); // Ошибка! ReferenceError: CONST is not defined
+  </script>
+
+  <script>
+    // внутри function
+    function something() {
+      const CONST = 123;
+      console.log(CONST); // 123
+    }
+
+    // обращение "сверху"
+    console.log(CONST); // Ошибка! ReferenceError: CONST is not defined
+
+    // ПРАВИЛО: если будет перезапись, то используй let, в остальных случаях всегда использую const
+  </script>
+
+  <script>
+    // для объектов, массивов и функций использовать всегда const.
+    // При изменении элементов массивов и объектов ошибки не будет
+    const someArray = [];
+
+    const someObj = {
+      name: 'John',
+      age: 25,
+    };
+
+    const someFunc = () => null;
+
+    // нельзя переприсваивать весь объект
+    const someObj2 = {
+      a: true,
+      b: false,
+    };
+
+    // TypeError: Assignment to constant variable.
+    someObj2 = {
+      a: false,
+      b: false,
+    };
+    // также нельзя заменить новым объектом
+    someObj2 = {
+      a: 'abc',
+      b: 'cba,',
+    };
+
+    // но можно переписывать отдельные поля
+    someObj2.a = false;
+
+    // { a: false, b: true }
+    console.log(someObj2);
+  </script>
+</body>

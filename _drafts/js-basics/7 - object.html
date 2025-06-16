@@ -1,0 +1,162 @@
+<body>
+  <h1>7. object</h1>
+
+  <script>
+    typeof {}; // 'object'
+    Boolean({}); // true
+  </script>
+
+  <script>
+    // syntax (key, property, field)
+    // {
+    //   key1: value1,
+    //   key2: value2,
+    //   key3: value3,
+    // }
+
+    // object example
+    const person = {
+      name: 'Jack',
+      lastName: 'Jackson',
+      age: 35,
+      city: 'New York, USA',
+      'is computer user': true, // bad practice - use camelCase
+      isAlive: true,
+
+      // вложенный объект
+      wife: {
+        name: 'Sarah',
+        lastName: 'Connor',
+        age: 33,
+        city: 'Chicago, USA',
+      },
+
+      // массив объектов
+      children: [
+        { name: 'Nick', age: 7 },
+        { name: 'Donna', age: 3 },
+      ],
+      // method syntax
+      printName: function () {
+        // this - обращение к текущему объекту
+        console.log('name:', this.name);
+      },
+
+      // shortcut method syntax
+      printName2() {
+        console.log('name:', this.name);
+
+        // также можно изменять текущий объект при вызове
+        // this.age = 36;
+      },
+    };
+
+    // . - оператор доступа к свойствам объекта
+    person.name; // 'Jack';
+    person['name']; // 'Jack';
+    person['is computer user']; // true;
+    person.wife.name; // 'Sarah';
+
+    const nameOfObjKey = 'name';
+
+    // если название свойства объекта храниться в сторонней переменной
+    person[nameOfObjKey]; // 'Jack'
+
+    // обращение к несуществущему свойству
+    person.wife.isAlive; // undefined
+
+    // добавление новых свойств
+    person.wife.isAlive = true;
+
+    // удаление свойств
+    delete person['is computer user']; // при обращении к удаленному объекту также будет undefined
+
+    // можно сделать и так:
+    person['is computer user'] = undefined;
+
+    // вызов метода
+    person.printName(); // 'Jack'
+    person.printName2(); // 'Jack'
+  </script>
+
+  <!-- 2-ой способ создания объекта - через конструктор Object (применяется редко) -->
+  <script>
+    const book1 = new Object({ title: 'Война и мир', author: 'Лев Толстой' });
+
+    // более гибкое создание объекта с прототипированим (скрытые поля, сеньёрская тема)
+    const book2 = Object.create(
+      {
+        x: 1,
+        y: 2,
+      },
+      {
+        title: { value: 'Война и мир' },
+        author: { value: 'Лев Толстой' },
+      }
+    );
+  </script>
+
+  <!-- Изменение объекта-клона -->
+  <script>
+    const foo1 = {
+      a: 1,
+      b: 2,
+      c: 3,
+    };
+
+    // будут храниться по одной и той же ссылке
+    const bar1 = foo1;
+
+    bar1.a = 4;
+
+    // если поменяем у объекта-клона, то исходник также измениться
+    console.log('bar1', bar1); // 'bar' { a: 4, b: 2, c: 3 }
+    console.log('foo1', foo1); // 'foo' { a: 4, b: 2, c: 3 }
+
+    // сравнение объектов
+    foo1 === bar1; // true, так как ссылка одна
+    Object.is(foo1, bar1); // true, 2-ой способ с помощью Object.is()
+
+    const buz1 = {
+      a: 4,
+      b: 2,
+      c: 3,
+    };
+
+    foo1 === buz1; // false, так как ссылки разные, даже если полностью идентичные
+    Object.is(foo1, buz1); // false, 2-ой способ с помощью Object.is()
+  </script>
+
+  <script>
+    const firstName = 'Jack';
+    const lastName = 'Jackson';
+
+    // если названия ключей совпадают с названием переменных, то есть короткая запись (пример c bar2)
+    const foo2 = {
+      firstName: firstName,
+      lastName: lastName,
+    };
+
+    // shortcut
+    const bar2 = {
+      firstName,
+      lastName,
+    };
+  </script>
+
+  <script>
+    const z = 5;
+
+    z.name; // undefined - при обращении к объкту через оператор доступа, парсер заворачивает значение в объект-обертку
+  </script>
+
+  <!-- Регулярные выражения -->
+  <script>
+    // 'В JS есть под-вид объектов - регулярные выражения, но это уже продвинутая тема';
+    const re1 = /ab+c/i;
+    const re2 = new RegExp('ab+c', 'i');
+
+    typeof re1; // 'object'
+    typeof re2; // 'object'
+  </script>
+</body>

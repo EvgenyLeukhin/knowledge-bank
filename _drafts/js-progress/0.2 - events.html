@@ -1,0 +1,130 @@
+<body>
+  <style>
+    .example {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid maroon;
+    }
+
+    div {
+      display: flex;
+    }
+
+    div h2 {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 14px;
+      flex-basis: 400px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <!-- аттрибут onclick -->
+  <h1 onclick="myFunction()">0.2 - events</h1>
+
+  <ul>
+    <li>
+      <code>addEventListener()</code> -
+      <span>добавление слушателя события</span>
+    </li>
+    <li>---</li>
+    <li><code>click</code> - <span>ЛКМ</span></li>
+    <li><code>contextmenu</code> - <span>ПКМ</span></li>
+    <li><code>mouseover / mouseout</code> - <span>наведение курсором</span></li>
+    <li><code>mousedown / mouseup</code> - <span>нажатие, отпуск</span></li>
+    <li><code>mousemove / mouseup</code> - <span>движение мыши</span></li>
+    <li><code>dblclick</code> - <span>двойной клик</span></li>
+    <li><code>wheel</code> - <span>прокрутка колесом</span></li>
+    <li><code>scroll</code> - <span>скролл</span></li>
+    <li>---</li>
+    <li>
+      <code>keydown, keyup, keypress</code> - <span>нажатие, отпуск</span>
+    </li>
+    <li>---</li>
+    <li><code>reset</code> - <span>сброс формы</span></li>
+    <li><code>focus, focusin, focusout</code> - <span>фокус</span></li>
+    <li><code>change</code> - <span>изменение поля формы</span></li>
+    <li><code>blur</code> - <span>расфокус с инпута</span></li>
+    <li><code>submit</code> - <span>сабмит формы</span></li>
+    <li>---</li>
+    <li><code>touchstart</code> - <span>касание</span></li>
+    <li><code>touchmove</code></li>
+    <li><code>touchend</code></li>
+    <li><code>touchcancel</code></li>
+    <li>---</li>
+    <li>
+      <code>.eventPreventDefault()</code> -
+      <span>сброс поведение по умолчанию</span>
+    </li>
+    <li><code>.stopPropagation()</code> - <span>запрет всплытия</span></li>
+  </ul>
+
+  <!-- onclick	- The user clicks on an element
+oncontextmenu	- The user right-clicks on an element
+ondblclick - The user double-clicks on an element
+onmousedown	- A mouse button is pressed over an element
+onmouseenter - The pointer is moved onto an element
+onmouseleave - The pointer is moved out of an element
+onmousemove	- The pointer is moving over an element
+onmouseout	- The mouse pointer moves out of an element
+onmouseover	- The mouse pointer is moved over an element
+onmouseup	- The mouse button is released over an element -->
+
+  <!-- События
+
+invalid
+load
+unload
+beforeunload
+ -->
+
+  <button class="button">Click me</button>
+
+  <script>
+    function myFunction() {
+      alert(123);
+    }
+
+    const button = document.querySelector('.button');
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      console.log('button clicked');
+    });
+
+    // загрузка разметки
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded');
+    });
+
+    // resize окна
+    window.addEventListener('resize', () => {
+      console.log('window resized');
+    });
+
+    // scroll окна
+    window.addEventListener('scroll', () => {
+      console.log('window scrolled');
+    });
+  </script>
+</body>

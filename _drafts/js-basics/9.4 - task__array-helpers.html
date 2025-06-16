@@ -1,0 +1,71 @@
+<body>
+  <h1>9.4 - task__array-helpers</h1>
+
+  <script>
+    // некий массив данных, который будем обрабатывать
+    const data = [
+      { id: 1, name: 'Первый', propery: null },
+      { id: 2, name: 'Второй', propery: null },
+      { id: 3, name: 'Третий', propery: null },
+      { id: 4, name: 'Четвертый', propery: null },
+      { id: 5, name: 'Пятый', propery: null },
+      { id: 6, name: 'Шестой', propery: null },
+      { id: 7, name: 'Седьмой', propery: null },
+      { id: 8, name: 'Восьмой', propery: null },
+      { id: 9, name: 'Девятый', propery: null },
+      { id: 10, name: 'Десятый', propery: null },
+    ];
+
+    // TASK 1 - задача на удаление - DELETE
+    console.log(`TASK 1 - задача на удаление`);
+    const task1 = 6;
+    const data1 = data.filter((item) => item.id !== task1);
+    data1;
+
+    // TASK 2 - задача на добавление - CREATE
+    console.log(`\n\n\n TASK 2 - задача на добавление`);
+    const task2 = { id: 12, name: 'Двенадцатый', propery: null };
+    const data2 = [...data, task2];
+    data2;
+
+    // TASK 3 - задача на фильтрацию - FILTER
+    console.log(`\n\n\n TASK 3 - задача на фильтрацию`);
+    const task3 = [3, 7, 8];
+    const data3 = data.filter((item) => task3.includes(item.id));
+    data3;
+
+    // TASK 4 - задача на обновление - UPDATE
+    console.log(`\n\n\n TASK 4 - задача на обновление`);
+    const task4 = { id: 3, name: 'Третий обновленный', property: true };
+    // const data4 = data.map(item => {
+    //   if (item.id === task4.id) {
+    //     return task4;
+    //   } else return item;
+    // });
+
+    const data4 = data.map((item) => (item.id === task4.id ? task4 : item));
+    data4;
+
+    // TASK 5 - задача на туглинг - TOOGLE
+    console.log(`\n\n\n TASK 5 - задача на туглинг`);
+    const task5 = { id: 11, name: 'Одинадцатый', property: null };
+    const data5 = data.map((item) => item.id).includes(task5.id)
+      ? data.filter((item) => item.id !== task5.id)
+      : [...data, task5].sort((next, current) => next.id - current.id);
+    data5;
+
+    // TASK 6 - преобразование данных
+    console.log(`\n\n\n TASK 6 - преобразование данных`);
+    const data6 = data.reduce((total, item) => {
+      const _item = {
+        ...item,
+        date: `${new Date()}`,
+        uuid: Math.floor(Math.random() * 10000),
+      };
+
+      total[item.name] = _item;
+
+      return total;
+    }, {});
+  </script>
+</body>

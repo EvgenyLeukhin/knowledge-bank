@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>7.2 - json</h1>
+
+    <script>
+      // Сериализация объектов - преобразование объектов в строку
+      // Серверы передают только зашифрованный текст (то есть только string), они не могут передавать другие js-типы данных
+      // поэтому придумали json - это по сути завернутый js-объект в строку, чтобы эти данные можно было отправлять на сервер или хранить в localStorage
+      // хранение или передача информации
+      // используется как конфиги в разработке
+
+      // json example
+      `
+        {
+          "name": 'Harry',
+          "lastName": "Potter",
+          "isWizard": "true",
+          "parents": [],
+        }
+      `;
+
+      // json может хранить
+      {
+      }
+      [];
+      ('strings');
+      123;
+      true;
+      false;
+      null;
+      () => ''; // функции не может
+
+      // xml - еще один формат передачи данных
+
+      JSON.stringify({ name: 'Harry Potter' }); // '{"name":"Harry Potter"}'
+      JSON.parse('{"name":"Harry Potter"}'); // { name: 'Harry Potter' }
+
+      // json поддерживают все популярыные серверные языки программирования
+
+      // toJSON - будет отдавать только возвращенные поля при JSON.stringlify
+      const person = {
+        name: 'Harry',
+        lastName: 'Potter',
+        isWizard: true,
+        parents: [],
+        toJSON: function () {
+          return {
+            name: this.name,
+            lastName: this.lastName,
+            isWizard: this.isWizard,
+          };
+        },
+      };
+
+      const personToJSON = JSON.stringify(person);
+
+      console.log('personToJSON', personToJSON);
+    </script>
+
+    <!-- Поэтому, если в localStorage нужно хранить объекты, то их всегда нужно заворачивать в JSON.stringlify() -->
+    <script>
+      const jsObject = {
+        name: 'Harry',
+        lastName: 'Potter',
+        city: 'London',
+        age: 11,
+        parents: [],
+        isWizard: 'true',
+
+        // методы в объектах сохранятся не будут!!!
+        call: function () {
+          console.log(`Hello, ${this.name}!`);
+        },
+      };
+
+      // convert js-object to object-string
+      const jsObjectString = JSON.stringify(jsObject);
+
+      // result like that
+      ('{"name":"Harry","lastName":"Potter","city":"London","age":11,"parents":[],"isWizard":"true"}');
+
+      // back convert object-string to object
+      JSON.parse(jsObjectString);
+    </script>
+
+    <!-- модульный скрипт может содержать импорты из других скриптов и должен что-то экспортировать -->
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

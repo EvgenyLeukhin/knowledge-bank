@@ -1,0 +1,85 @@
+<body>
+  <h1>3 - string</h1>
+
+  <script>
+    const someString = 'some-string'; // 'some-string' `some-string`
+  </script>
+
+  <!-- type mutation -->
+  <script>
+    // 2.1 Число в строку
+    `${123}`; // '123' - I способ
+    123 + ''; // '123' - II способ
+    String(123); // '123' - III способ
+
+    // 2.2 Другие данные в строку
+    String(123); // '123'
+    String(-12.3); // '-12.3'
+    String(null); // 'null'
+    String(undefined); // 'undefined'
+    String(true); // 'true'
+    String(false); // 'false'
+    String(function () {}); // 'function () {}'
+    String({}); // '[object Object]'
+    String({ key: 42 }); // '[object Object]'
+    String([]); // '' - пусой массив как пустая строка
+    String([1, 2]); // '1,2'
+    String(Infinity); // 'Infinity'
+    String(NaN); // 'NaN'
+    +''; // 0
+    +'     4'; // 4
+  </script>
+
+  <!-- длина строки, индексы -->
+  <script>
+    someString.length; // 1
+
+    // вытаскивание символа по индексу
+    someString[0]; // 's'
+    someString[someString.length - 1]; // 'g'
+    someString[100]; // ошибки не будет, вернет undefined
+
+    someString.charAt(0); // 's' - второй способ (устаревший)
+  </script>
+
+  <!-- Объединение строк (конкатинация) -->
+  <script>
+    'some-string1' + 'some-string2'; // 'some-string1some-string2'
+    'some-string1' + ' ' + 'some-string2'; // 'some-string1some-string2'
+
+    `'some-string1' 'some-string2'`;
+    const a = 'some-string1';
+    const b = 'some-string2';
+    const c = `${a} - ${b}`; // 'some-string1 - some-string2' - обратные кавычки можно использовать для конкатенации
+
+    // Также в обратных кавычках можно записывать любой js-код, названия переменных, выражения, функции и т.д.
+    const d = `${Math.floor(Math.random() * 100)}`;
+  </script>
+
+  <!-- Форматирование -->
+  <script>
+    // пробелы будут учитываться (поэтому нужно переносить на начало новой строки)
+    let longString2 =
+      'This is a very long string which needs \n to wrap across multiple lines because \n otherwise my code is unreadable.';
+
+    // пробелы будут учитываться (поэтому нужно переносить на начало новой строки)
+    let longString3 = `This is a very long string which needs
+to wrap across multiple lines because
+otherwise my code is unreadable.`;
+
+    // Экранирование
+    const someString3 = 'I"m a developer'; // const longString2 = "I\"m a developer";
+    const someString4 = 'abc \\ abc'; // экранирование обратного слеша
+    `\u00E9`; //'é'  unicode (\uXXXX ) - кодировка UTF-16;
+
+    const phrase =
+      'Мы —\n\tЭдисоны\n\t\tневиданных взлётов,\n\t\t\tэнергий\n\t\t\t\tи светов.'; // \n - новая строка, \t - табуляция
+  </script>
+</body>
+
+<!-- 
+  ДЗ:
+  - сделать различные формы записи строковых данных;
+  - варианты преобразования в строку;
+  - форматирование текста
+-->

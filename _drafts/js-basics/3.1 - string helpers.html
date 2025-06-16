@@ -1,0 +1,183 @@
+<body>
+  <h1>3.1 - string helpers</h1>
+
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>String helpers</h1>
+
+  <ul>
+    <li><code>.split()</code> - <span>преобразование строки в массив</span></li>
+    <li><code>.join()</code> - <span>преобразование массива в строку</span></li>
+    <li>
+      <code>.indexOf(), .lastIndexOf()</code> -
+      <span>поиск индекса символа с начала / конца строки</span>
+    </li>
+    <li>
+      <code>.slice(), .substring()</code> -
+      <span>вырезать символы из строки</span>
+    </li>
+    <li>
+      <code>.replace(), .replaceAll()</code> -
+      <span>заменить первый найденный символ / все найденные</span>
+    </li>
+    <li>
+      <code>.repeat()</code> -
+      <span>повтор строки</span>
+    </li>
+    <li>
+      <code>.trim()</code> -
+      <span>удалить пробелы в строке</span>
+    </li>
+    <li>
+      <code>.startsWith(), .endsWith()</code> -
+      <span>проверка на начало, конец строки</span>
+    </li>
+    <li>
+      <code>.includes()</code> -
+      <span>проверка на наличие символов в строке</span>
+    </li>
+    <li>
+      <code>.codePointAt()</code> -
+      <span>код симаола в кодировке UTF-16</span>
+    </li>
+    <li>
+      <code>.localeCompare()</code> -
+      <span>сравнение символов по кодировке UTF-16</span>
+    </li>
+  </ul>
+
+  <!-- Регистр -->
+  <script>
+    //  ЭТИ методы не меняют исходную строку, если нужно сохранить изменения, то нужно присваивать из в переменную
+
+    'string'.toUpperCase(); // 'STRING'
+    'ANOTHER STRING'.toLowerCase(); // 'another string'
+  </script>
+
+  <!-- Преобразование в массив и обратно -->
+  <script>
+    // после создания массива из строки можно применять методы массива
+    'string'.split(''); // [ 's', 't', 'r', 'i', 'n', 'g' ]
+
+    ['s', 't', 'r', 'i', 'n', 'g'].join(); // ''s,t,r,i,n,g''
+    ['s', 't', 'r', 'i', 'n', 'g'].join(''); // 'string'
+
+    // можно вставлять любые символы
+    ['s', 't', 'r', 'i', 'n', 'g'].join(' '); // 's t r i n g'
+    ['s', 't', 'r', 'i', 'n', 'g'].join('-'); // 's-t-r-i-n-g'
+  </script>
+
+  <script>
+    // Поиск индексв по символу
+    'string'.indexOf('g'); // 5
+    'string'.indexOf('H'); // -1 - если не нашел совпадений
+
+    // такой же метод, то ищет с конца строки
+    'string'.lastIndexOf('g'); // 5
+  </script>
+
+  <!-- Вырезать / обрезать подстроку -->
+  <script>
+    'string'.slice(1, 3); // 'tr'
+    'String'.slice(-2); // 'ng' (вырезать 2 символа с конца)
+    'String'.substring(1, 3); // "tr"
+    'String'.substring(0, 1); // 'S' (выерзать 1 символ, начиная с 0 индекса)
+  </script>
+
+  <!-- Заменить символ -->
+  <script>
+    'Ztring'.replace('Z', 'S'); // "String"
+    'Ztring Ztring Ztring Ztring'.replaceAll('Z', 'S'); // "String String String String"
+  </script>
+
+  <!-- Повторенин -->
+  <script>
+    'String'.repeat(2); // "StringString"
+    'String'.repeat(3); // "StringStringString"
+  </script>
+
+  <!-- Удаление пробелов -->
+  <script>
+    '   String   '.trim(); // "String"
+    '   String   '.replace(/\s/g, ''); // "String" - ругулярное выражение
+  </script>
+
+  <!-- Поиск совпадений -->
+  <script>
+    // по началу строки
+    'String'.startsWith('St'); // true
+
+    // по концу строки
+    'String'.endsWith('ng'); // true
+
+    // по всей строке
+    'String'.includes('S'); // true
+    'String'.includes('Sr'); // false
+    'String'.includes('S', 0); // true (начиная с 1-го индекса)
+    'String'.includes('S', 1); // false (начиная с 1-го индекса)
+  </script>
+
+  <!-- Сравнение строк -->
+  <script>
+    // У каждого символа есть код, в JS сравниваются эти коды символов.
+
+    // Пустая строка всегда меньше
+    // У заглавных код меньше чем у строчных (так как строчные стоят правее по алфавиту)
+    // У кириллицы код больше чем у латиницы
+    // На практике редко используется.
+
+    // ABC .. abc .. АБВ .. абв
+
+    'a'.codePointAt(0); // 97
+    'A'.codePointAt(0); // 65
+
+    const a = 'a'.codePointAt(0); // 97
+    const b = 'b'.codePointAt(0); // 98
+    'a' > 'A'; // true (97 > 65)
+    'a' > 'b'; // false (97 > 98)
+
+    // сравнение через localeCompare
+    'a'.localeCompare('b'); // - 1
+    'a' > 'b'; // false (эквивалентно)
+
+    'b'.localeCompare('a'); // 1
+    'b' > 'a'; // true (эквивалентно)
+
+    'a'.localeCompare('a'); // 0
+    'a' === 'a'; // true (эквивалентно)
+  </script>
+
+  <!-- Локализация -->
+  <script></script>
+</body>
+
+<!-- 
+  ДЗ:
+  - использовать различные методы для строк slice, substring, replace, replaceAll, toUpperCase, toLowerCase, trim, includes, startsWith, endsWith
+  - преобразовать строку в массив и обратно, использовать различные варианты разделителей
+  - сделать примеры сравнения строк
+-->

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. JS - Connect to html</title>
+
+    <!-- SCRIPT HEAD -->
+    <!--  
+      подключение скрипта в head - блокируется отрисовка html часто для подключения сторонних библиотек, будет блокироваться отрисовка html пока на загрузится скрипт
+    -->
+    <!-- часто для подключения сторонних библиотек -->
+    <script src="some-lib.js"></script>
+
+    <!-- SCRIPT ASYNC -->
+    <!-- 
+      - Работает только с src
+      - Место расположения в коде не влияет на его загрузку
+      - Скрипт будет загружаться сразу, не дожидаясь и не блокируя отрисовку html
+      - После загрузки БУДЕТ СРАЗУ ВЫПОЛНЯТЬСЯ и будет блокировать отрисовку html
+      - Если скриптов с async несколько, то порядок их загрузки и выполнения может не совпать с порядком в коде. Какой скрипт загрузится первым - тот и будет первым выполняться. 
+    -->
+    <script src="script1.js" async></script>
+    <script src="script2.js" async></script>
+    <script src="script3.js" async></script>
+
+    <!-- SCRIPT DEFER -->
+    <!-- Работает только с src
+    - Место расположения в коде не влияет на его загрузку
+    - Скрипт будет загружаться сразу, не дожидаясь и не блокируя отрисовку html
+    - После загрузки БУДЕТ ЖДАТЬ полную отрисовку html и не будет выполняться пока html не загрузится
+    - Если скриптов с defer несколько, то порядок их выполнения БУДЕТ СОВПАДАТЬ с порядком в коде (пока не выполнился первый,
+    - Второй будет ждать, даже если загрузился раньше) -->
+
+    <script src="script1.js" defer></script>
+    <script src="script2.js" defer></script>
+    <script src="script3.js" defer></script>
+
+    <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>0.1 JS - Connect to html</h1>
+
+    <!-- SCRIPT перед body -->
+    <!-- перез закрывающимся тэгом /body - хорошая практика, чтобы не блокировалось отрисовка html -->
+    <script>
+      // js-code можно писать внутри тега script
+      // свой код лучше всегда писать здесь
+
+      // alert блокирует отрисовке html всегда
+      alert('Я всегда блокирую отрисовку html, где-бы я не находился!');
+
+      jQuery(() => {
+        // jquery code
+        console.log('jQuery', jQuery);
+
+        $('body').css({
+          transitionDelay: '2s',
+          transitionProperty: 'color background-color',
+          transitionDuration: '1s',
+          backgroundColor: 'maroon',
+          color: 'white',
+        });
+      });
+    </script>
+
+    <noscript>
+      <h1>Сообщение, что в браузене не включени JS!</h1>
+    </noscript>
+  </body>
+</html>
+
+<!-- ДЗ: Создать html-страницу с пустым тэгом script перед закрывающимся body -->

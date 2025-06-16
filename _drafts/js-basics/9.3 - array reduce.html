@@ -1,0 +1,142 @@
+<body>
+  <h1>9.3 - array reduce</h1>
+
+  <!--                                                                    -->
+  <!-- reverse() - гибкий метод для различных преобразований и вычилений  -->
+  <!-- может использоваться как map() и как filter() и для много еще чего -->
+  <!--                                                                    -->
+  <script>
+    const array1 = [1, 2, 3, 4];
+    const array2 = [
+      { city: 'Omsk', population: 1_104_485 },
+      { city: 'NN', population: 1_204_985 },
+      { city: 'Saratov', population: 887_365 },
+    ];
+
+    // для примитивов можно использовать сокращенную запись
+    array1.reduce((total, item) => (total += item)); // 10
+
+    // с указанным начальным значением total
+    array1.reduce((total, item) => (total += item), 0); // 10
+
+    // для объектов короткая запись уже не работает без указания начального значения
+    array2.reduce((total, item) => (total += item.population)); // '[object Object]1204985887365'
+
+    // с начальным значением будет работать
+    array.reduce((total, item, index) => (total += item.population), 0); // 3196835
+
+    // нужно разворачивать тело функции и указывать начальный параметр
+    array2.reduce((total, item) => {
+      total += item.population;
+
+      return total;
+    }, 0);
+  </script>
+
+  <script>
+    const array = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    array.reduce((total, item, index, array) => {
+      if (item.city) {
+        total.push(item.city);
+      }
+
+      return total;
+    }, []);
+  </script>
+
+  <script>
+    const arr = [
+      {
+        name: 'Artem',
+        city: 'NN',
+        gender: 'male',
+        favoriteBand: 'Iron Maiden',
+      },
+      {
+        name: 'Elena',
+        city: 'Saratov',
+        gender: 'female',
+        favoriteBand: 'The Beatles',
+      },
+      {
+        name: 'Zhenia',
+        city: 'Omsk',
+        gender: 'male',
+        favoriteBand: 'Linkin park',
+      },
+      {
+        name: 'Max',
+        city: 'Voronezh',
+        gender: 'male',
+        favoriteBand: 'Linkin park',
+      },
+    ];
+
+    const reducedArray = arr.reduce(
+      (total, item, index, array) => {
+        if (item.name) {
+          total.names.push(item.name);
+        }
+
+        if (item.city) {
+          total.cities.push(item.city);
+        }
+
+        if (item.gender) {
+          if (item.gender === 'male') {
+            total.gendersCount.male++;
+          }
+
+          if (item.gender === 'female') {
+            total.gendersCount.female++;
+          }
+        }
+
+        if (item.favoriteBand) {
+          if (!total.favoriteBands.includes(item.favoriteBand)) {
+            total.favoriteBands.push(item.favoriteBand);
+          }
+        }
+
+        return total;
+      },
+      {
+        names: [],
+        cities: [],
+        gendersCount: {
+          male: 0,
+          female: 0,
+        },
+        favoriteBands: [],
+      }
+    );
+
+    reducedArray;
+  </script>
+
+  <!--                                                                       -->
+  <!-- reduceRight() - работает аналогично, только переберает массив с конца -->
+  <!--                                                                       -->
+  <script>
+    const array3 = [
+      { city: 'Omsk', population: 1_104_485 },
+      { city: 'NN', population: 1_204_985 },
+      { city: 'Saratov', population: 887_365 },
+    ];
+
+    array3.reduceRight((total, item, index) => {
+      console.log('item', item); // 'item' { city: 'Saratov', population: 887365 } 'item' { city: 'NN', population: 1204985 } 'item' { city: 'Omsk', population: 1104485 }
+
+      console.log('index', index); // 'index' 2 'index' 1 'index' 0
+
+      total = total + item.population;
+
+      return total;
+    }, 0);
+  </script>
+</body>

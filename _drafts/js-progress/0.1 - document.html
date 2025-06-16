@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0.1 - document</title>
+    <style>
+      .example {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid maroon;
+      }
+
+      div {
+        display: flex;
+      }
+
+      div h2 {
+        margin-bottom: 0;
+      }
+
+      h1 {
+        padding-left: 40px;
+      }
+
+      ul {
+        width: 750px;
+      }
+
+      ul li {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+
+      li code {
+        font-size: 14px;
+        flex-basis: 400px;
+        color: maroon;
+      }
+      li span {
+        padding-left: 10px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body name="body">
+    <h1>0.1 - document</h1>
+
+    <ul>
+      <li><code>document</code> - <span>корень DOM</span></li>
+      <li><code>document.documentElement</code> - <span>&lt;html&gt;</span></li>
+      <li><code>document.head</code> - <span>&lt;head&gt;</span></li>
+      <li><code>document.body</code> - <span>&lt;body&gt;</span></li>
+      <li><code>document.all</code> - <span>вся коллекция DOM</span></li>
+      <li><code>document.forms</code> - <span>все формы</span></li>
+      <li><code>document.images</code> - <span>все картинки</span></li>
+      <li><code>document.links</code> - <span>все ссылки</span></li>
+      <li><code>document.scripts</code> - <span>все скрипты</span></li>
+      <li><code>document.stylesheets</code> - <span>все стили</span></li>
+      <li><code>document.cookie</code> - <span>все куки</span></li>
+      <li><code>document.domain</code> - <span>текущее доменное имя</span></li>
+      <li><code>document.location</code> - <span>текущая страница</span></li>
+      <li><code>document.title</code> - <span>заголовок страницы</span></li>
+      <li>
+        <code>document.write('Hello World!')</code> -
+        <span>вставка текста в корень</span>
+      </li>
+      <li>---</li>
+      <li><code>document.querySelector</code> - <span>общий селектор</span></li>
+      <li>
+        <code>document.querySelectorAll</code> -
+        <span>общий селектор для коллекций</span>
+      </li>
+      <li><code>document.getElementById</code> - <span>... по id</span></li>
+      <li>
+        <code>document.getElementByName</code> -
+        <span>... по атрибуту name</span>
+      </li>
+      <li>
+        <code>document.getElementsByClassName</code> -
+        <span>... по классу</span>
+      </li>
+      <li>
+        <code>document.getElementsByTagName</code> -
+        <span>... по названию тэга (для коллекции)</span>
+      </li>
+      <li>---</li>
+      <li>
+        <code>someElement.classList.add('some-class')</code> -
+        <span>добавить класс</span>
+      </li>
+      <li>
+        <code>someElement.classList.remove('some-class')</code> -
+        <span>удалить класс</span>
+      </li>
+      <li>
+        <code>someElement.classList.toggle('some-class')</code> -
+        <span>туглить класс</span>
+      </li>
+      <li>
+        <code>someElement.classList.contains('some-class')</code> -
+        <span>наличие класса</span>
+      </li>
+      <li>---</li>
+      <li>
+        <code>someElement.removeAttribute('style')</code> -
+        <span>удаление аттрибута</span>
+      </li>
+      <li>
+        <code>someElement.hasAttribute('style')</code> -
+        <span>наличие аттрибута</span>
+      </li>
+      <li>
+        <code>someElement.getAttribute('style')</code> -
+        <span>получение аттрибута</span>
+      </li>
+      <li>
+        <code>someElement.setAttribute('style', 'color: green;')</code> -
+        <span>назначение аттрибута</span>
+      </li>
+      <li>
+        <code>someElement.title</code> -
+        <span>атрибут title</span>
+      </li>
+      <li>
+        <code>someElement.hidden</code> -
+        <span>атрибут hidden</span>
+      </li>
+      <li>
+        <code>someElement.value</code> -
+        <span>атрибут value у элементов форм</span>
+      </li>
+      <li>
+        <code>someElement.dataset.filter = 'some-value'</code> -
+        <span>атрибут dataset</span>
+      </li>
+      <li>---</li>
+      <li>
+        <code>someElement.style.color = 'red'</code> -
+        <span>изменить стиль</span>
+      </li>
+      <li><code>someElement.style.backgroundColor = 'pink'</code> -</li>
+      <li><code>someElement.style.fontSize = '20px'</code> -</li>
+      <li>---</li>
+      <li>
+        <code>someElement.textContent</code> -
+        <span>текстовый контент</span>
+      </li>
+
+      <li>
+        <code>someElement.innerHTML</code> -
+        <span>внутренняя разметка</span>
+      </li>
+
+      <li>
+        <code>someElement.outerHTML</code> -
+        <span>полная разметка</span>
+      </li>
+      <li>---</li>
+      <li>
+        <code>.createElement()</code> -
+        <span>создание элемента</span>
+      </li>
+      <li>
+        <code>.appendChild()</code> -
+        <span>вставка потомка в конец</span>
+      </li>
+      <li>
+        <code>.insertBefore()</code> -
+        <span>вставить перед</span>
+      </li>
+      <li>
+        <code>.removeChild()</code> -
+        <span>удаление потомка</span>
+      </li>
+      <li>
+        <code>.replaceChild()</code> -
+        <span>замена потомка</span>
+      </li>
+      <li>
+        <code>.remove()</code> -
+        <span>удаление элемента</span>
+      </li>
+      <li>
+        <code>.nextElementSibling()</code> -
+        <span>следующие соседние элементы</span>
+      </li>
+      <li>
+        <code>.previousElementSibling()</code> -
+        <span>предыдущие соседние элементы</span>
+      </li>
+      <li>
+        <code>.firstElementChild</code> -
+        <span>первый потомок</span>
+      </li>
+      <li>
+        <code>.lastElementChild</code> -
+        <span>последний потомок</span>
+      </li>
+
+      <li>
+        <code>.getHTML()</code> -
+        <span>получение разметки</span>
+      </li>
+      <li>---</li>
+      <li>
+        <code>.getClientRects()</code> -
+        <span>отступы от окна, координаты</span>
+      </li>
+      <li>
+        <code>.getBoundingClientRect()</code> -
+        <span>размеры элемента</span>
+      </li>
+      <li>
+        <code>.clientWidth, .clientHeight</code> -
+        <span>размеры элемента</span>
+      </li>
+    </ul>
+
+    <div id="parent">
+      <h2>example</h2>
+      <div id="example" class="example">example example example</div>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>list-1</h2>
+
+      <ul id="list-1" class="list-1"></ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>list-2</h2>
+
+      <ul id="list-2" class="list-2">
+        <li>1.</li>
+        <li>2.</li>
+        <li>3.</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>list-3</h2>
+
+      <ul id="list-3" class="list-3">
+        <li>1.</li>
+        <li>2.</li>
+        <li>3.</li>
+        <li>4.</li>
+        <li>5.</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <input type="text" name="up" value="123" />
+
+    <!-- document - DOM -->
+    <script>
+      document;
+      document.documentElement; // всё, что лежит в <html>
+      document.head; // всё, что лежит в <head>
+      document.body; // всё, что лежит в <body>
+      document.all; // все элементы (*)
+      document.forms; // все формы
+      document.images; // все изображения
+      document.links; // все ссылки
+      document.scripts; // все скрипты
+      document.stylesheets; // все стили
+      document.cookie; // все куки
+      document.domain; // текущее доменное имя
+      document.location; // текущая страница
+      document.title; // текущее заголовок страницы
+      document.write('Hello World!'); // вставляет текст в <body>
+    </script>
+
+    <!-- Поиск элементов -->
+    <script>
+      // most used
+      document.querySelector('.some-class');
+      document.querySelectorAll('.some-class'); // return NodeList
+
+      // old-school
+      document.getElementById('some-id');
+      document.getElementsByName('up'); // для инпутов
+      document.getElementsByClassName('some-class');
+      document.getElementsByTagName('p');
+
+      // можно искать элементы не только глобально внутри document, но и внутри любого уже сохраненного родителя
+      const el1 = document.body;
+      el1.querySelector('.some-class'); // поиск от родителя
+    </script>
+
+    <!-- classList - манипулирование css-классами -->
+    <script>
+      const el2 = document.querySelector('#example');
+
+      el2.classList.add('some-class');
+      el2.classList.remove('some-class');
+      el2.classList.toggle('some-class');
+      el2.classList.contains('some-class');
+    </script>
+
+    <!-- Attributes -->
+    <script>
+      const el3 = document.querySelector('#example');
+
+      el3.removeAttribute('style'); // remove attribute
+      el3.hasAttribute('style'); // check, return bool
+      el3.getAttribute('style'); // get value of this attribute
+      el3.setAttribute('style', 'color: green;');
+      el3.className; // return class
+      el3.title; // return title
+      el3.hidden = false; // add hidden attribute
+      el3.value; // значение элемента формы
+      el3.dataset.filter = 'some'; // change some data attribute
+
+      // style
+      el3.style.color = 'red';
+      el3.style.backgroundColor = 'pink';
+      el3.style.fontSize = '20px';
+    </script>
+
+    <!-- управление содержимого разметки -->
+    <script>
+      const element = document.querySelector('.example');
+
+      // <div class="example">lorem ipsum dolor sit amet, consectetur adip</div>
+      element.textContent = 'lorem ipsum dolor sit amet, consectetur adip';
+
+      // Внутренняя разметка - замена внутренней разметки
+      // <div class="example"><mark>lorem ipsum dolor sit amet, consectetur adip</mark></div>
+      element.innerHTML = `<mark>lorem ipsum dolor sit amet, consectetur adip</mark>`;
+
+      // Полная разметка - замена всей разметки <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      element.outerHTML = `<p>lorem ipsum dolor sit amet, consectetur adip</p>`;
+    </script>
+
+    <!-- Создание нового элемент -->
+    <script>
+      const parent = document.querySelector('#list-1');
+
+      // создаем новый тэг <li>
+      const li = document.createElement('li');
+
+      // добавление аттрибута
+      li.setAttribute('id', 'some-id-123');
+
+      // добавление класса
+      li.classList.add('child');
+
+      // innerHTML
+      li.innerHTML = `
+        <span>Элемент списка</span>
+
+        <span>
+          <b class="check">✅</b>
+          <b class="delete">❌</b>
+        </span>
+      `;
+
+      // добавляем <li> в родительский элемент
+      parent.appendChild(li);
+    </script>
+
+    <!-- Вставка, зампена, удаление элементов -->
+    <script>
+      const _parent = document.querySelector('#list-2');
+      const firstChild = _parent.firstElementChild;
+      const lastChild = _parent.lastElementChild;
+
+      // Вставить перед первым потомком
+      _parent.insertBefore(document.createElement('li'), firstChild);
+
+      // Вставка последнего потомка
+      _parent.appendChild(document.createElement('li'));
+
+      // Замена элементов
+      _parent.replaceChild(firstChild, lastChild);
+
+      // Удаление  потомка
+      _parent.removeChild(firstChild);
+
+      // Нахождение соседних элементов
+      _parent.nextElementSibling;
+      _parent.previousElementSibling;
+
+      // // строка разметки
+      _parent.getHTML();
+
+      // удаление элемента
+      firstChild.remove();
+    </script>
+
+    <!-- Позиционирование -->
+    <script>
+      const $parent = document.querySelector('#parent');
+
+      // отступы от окна, координаты
+      $parent.getClientRects();
+      $parent.getBoundingClientRect();
+
+      // размеры элемента
+      $parent.clientHeight;
+      $parent.clientWidth;
+    </script>
+
+    <!-- DOM-манипуляции c NodeList -->
+    <script>
+      const list = document.querySelector('#list-3');
+
+      // NodeList - querySelectorAll - это псевдомассив, который можно перебирать с помощью .forEach
+      const listItems = list.querySelectorAll('li');
+
+      // HTMLCollection - getElementsByTagName
+      const listItems2 = list.getElementsByTagName('li');
+
+      // HTMLCollection - getElementsByClassName
+      const listItems3 = list.getElementsByClassName('list-item');
+
+      // first and last child elements
+      list.firstElementChild.style.backgroundColor = 'red';
+      list.lastElementChild.style.backgroundColor = 'blue';
+
+      // обработка NodeList
+      listItems.forEach((element) => {
+        element.style.borderColor = 'green';
+        element.style.borderWidth = 1;
+        element.style.borderStyle = 'solid';
+        element.style.marginBottom = '10px';
+
+        element.innerHTML += ` - ${Math.random().toFixed(2)}`;
+      });
+
+      // создание нового элемента и добавление в конец
+      list.appendChild(document.createElement('li'));
+
+      // добавление hidden
+      listItems[listItems.length - 1].hidden = true;
+
+      // удаление последнего
+      list.removeChild(list.lastElementChild);
+    </script>
+  </body>
+</html>

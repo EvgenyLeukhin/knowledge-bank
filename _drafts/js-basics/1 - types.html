@@ -1,0 +1,103 @@
+<!-- Дальше будет использовать сокращенный вид html, чтобы не занимать полезное пространство -->
+<body>
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>1 - Types</h1>
+
+  <ul>
+    <li>Примитивные типы</li>
+    <li><code>string</code> - <span>строка</span></li>
+    <li><code>number</code> - <span>число</span></li>
+    <li><code>boolean</code> - <span>булевый</span></li>
+    <li><code>null</code> - <span>пустой</span></li>
+    <li><code>undefined</code> - <span>неопределенный</span></li>
+    <li>Редкоиспользуемые</li>
+    <li><code>bigInt</code> - <span>большое целое</span></li>
+    <li><code>symbol</code> - <span>символ</span></li>
+    <li>Непримитивные типы</li>
+    <li>
+      <code>object</code> -
+      <span>объектный (объекты, функции, массивы, рег. выражения)</span>
+    </li>
+  </ul>
+
+  <script>
+    // PRIMITIVES - простые типы данных
+
+    // 1. string и символ
+    'some-string';
+    Symbol(); // используется редко
+
+    // 2. number и bigint
+    123;
+    123n; // используется редко
+
+    // 3. boolean
+    true;
+    false;
+
+    // 4. undefined
+    undefined;
+
+    // 5. null
+    null;
+
+    // OBJECT - сложный тип данных, который может состоять из комбинаций различных типов
+    // JS раскрывает свой потенциал в объектах, кто-то скажет что в JS всё является объектами
+    // более подробно в другом разделе
+    {
+    }
+
+    // оператор typeof - определяет тип данных, возвращает строку с названием типа
+    typeof 'some-string'; // 'string', можно записывать еще так typeof('some-string') // typeof('some-string');
+    typeof Symbol(); // 'symbol'
+
+    typeof 123; // 'number'
+    typeof NaN; // 'number'
+    typeof Infinity; // number
+    typeof 123n; // 'bigint'
+
+    typeof true; // 'boolean'
+
+    typeof undefined; // 'undefined'
+
+    typeof null; // 'object' - это известная ошика в JS
+
+    typeof {}; // 'object'
+    typeof []; // 'object'
+    typeof new Date(); // 'object'
+
+    typeof (() => ''); // 'function'
+    typeof function () {}; // 'function' - это не отдельный тип данных, сделано для удобства
+
+    // проверка типа
+    typeof 'some-string' === 'string'; // true
+    typeof 123 === 'number'; // true
+  </script>
+</body>
+
+<!-- ДЗ: Создать html-файл с выводом string, number, boolean, null, undefined, object в консоль -->

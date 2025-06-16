@@ -1,0 +1,180 @@
+<body>
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 14px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>0 - window</h1>
+
+  <ul>
+    <li>Примитивные типы</li>
+    <li><code>window</code> - <span>корень всего</span></li>
+    <li><code>alert()</code> - <span>всплывашки</span></li>
+    <li><code>confirm()</code></li>
+    <li><code>prompt()</code></li>
+    <li>---</li>
+    <li><code>console.log()</code> - <span>консоль</span></li>
+    <li><code>console.info()</code></li>
+    <li><code>console.error()</code></li>
+    <li>---</li>
+    <li><code>window.innerHeight</code> - <span>высота окна</span></li>
+    <li><code>window.innerWidth</code> - <span>ширина окна</span></li>
+    <li><code>window.devicePixelRatio</code> - <span>масштаб окна</span></li>
+    <li><code>window.screen</code> - <span>окно</span></li>
+    <li>---</li>
+    <li><code>window.localStorage</code> - <span>хранилище</span></li>
+    <li><code>window.cookieStore</code></li>
+    <li>---</li>
+    <li>
+      <code>window.clientInformation</code> -
+      <span>информация о браузере</span>
+    </li>
+    <li><code>window.navigator</code> - <span>информация о браузере</span></li>
+    <li><code>navigator.language</code> - <span>'ru'</span></li>
+    <li><code>navigator.clipboard</code> - <span>буфер обмена</span></li>
+    <li>---</li>
+    <li><code>window.location</code> - <span>URL страницы</span></li>
+    <li><code>window.navigation</code> - <span>роутинг</span></li>
+    <li>---</li>
+    <li><code>window.history</code> - <span>история маршрутизации</span></li>
+    <li><code>history.back()</code> - <span>назад по истории</span></li>
+    <li><code>history.forward()</code> - <span>вперед по истории</span></li>
+    <li>---</li>
+    <li><code>window.setTimeout()</code> - <span>setTimeout</span></li>
+    <li><code>window.setInterval()</code> - <span>setInterval</span></li>
+    <li><code>window.setInterval()</code> - <span>setInterval</span></li>
+    <li>---</li>
+    <li><code>window.someVar()</code> - <span>переменные с var</span></li>
+  </ul>
+
+  <!-- alert, confirm, prompt -->
+  <script>
+    window; // корень всего
+
+    // alert
+    window.alert(123);
+
+    // confirm - подтверждение действий
+    window.confirm(123); // true || false
+    const a = window.confirm(123); // true || false
+
+    // prompt - ввод данных
+    window.prompt("What's your name?");
+    let b = window.prompt("What's your name?"); // будет хранить введенные данные
+  </script>
+
+  <!-- console -->
+  <script>
+    wondow.console.log(123);
+    wondow.console.info(123);
+    wondow.console.error(123);
+  </script>
+
+  <!-- screen -->
+  <script>
+    // высота окна
+    window.innerHeight;
+    window.outerHeight;
+
+    // ширина окна
+    window.innerWidth;
+    window.outerWidth;
+
+    // зум у браузера
+    window.devicePixelRatio;
+
+    // экран
+    window.screen;
+  </script>
+
+  <!-- location, navigation, navigator, history -->
+  <script>
+    window.clientInformation;
+
+    // URL страницы
+    window.location;
+    // window.location.replace('https://doka.guide/'); // редирект из js
+
+    // роутинг
+    window.navigation;
+
+    // инфо о браузере
+    window.navigator;
+    navigator.language; // 'ru'
+    navigator.clipboard; // буфер обмена
+
+    // Перешли на страницу назад
+    history.back();
+
+    // Перешли на страницу вперёд
+    history.forward();
+  </script>
+
+  <!-- scrollIntoView - прокрутить элемент до видимости -->
+  <script>
+    // scroll - проскролить окно браузера из JS
+    window.scroll({
+      top: 100,
+      left: 0,
+      behavior: 'smooth',
+    });
+
+    // отступ родителя
+    const parentOffset = parentElement?.offsetTop || 0;
+
+    // отступ элемента
+    const childOffset = childElement?.offsetTop || 0;
+
+    // добавление паддинга
+    const PADDING_SIZE = 25;
+
+    // величина скролла
+    const scrollHeight = targetOffset - listOffset - PADDING_SIZE;
+
+    // скролим родителя до потомка
+    parentElement?.scroll({
+      top: scrollHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  </script>
+
+  <!-- setTimeout и setInterval - это тоже window -->
+  <script>
+    window.setTimeout(() => {
+      console.log('Delayed for 1 second.');
+    }, 1000);
+
+    window.setInterval(() => {
+      console.log('Delayed for 1 second.');
+    }, 1000);
+  </script>
+
+  <!-- var -->
+  <script>
+    var someVar = 123;
+    window.someVar; // 123 (var записываются прямо в window)
+    someVar; // 123
+  </script>
+</body>

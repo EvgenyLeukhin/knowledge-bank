@@ -1,0 +1,140 @@
+<!-- Сокращенные операторы -->
+<body>
+  <h1>4.1 - number helpers</h1>
+
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>Number helpers</h1>
+
+  <ul>
+    <li><code>.toString()</code> - <span>преобразование в строку</span></li>
+    <li><code>.toFixed()</code> - <span>обрезать знаки после запятой</span></li>
+    <li><code>.isNaN()</code> - <span>проверка на NaN</span></li>
+    <li><code>.isInteger()</code> - <span>проверка на целое</span></li>
+    <li><code>.isFinite()</code> - <span>проверка на бесконечность</span></li>
+  </ul>
+
+  <!-- Инкремент, декремент -->
+  <script>
+    let value1 = 0,
+      value2 = 0,
+      value3 = 0,
+      value4 = 0;
+
+    // оператор префиксного инкремента, сразу увеличивает значение на единицу
+    ++value1; // 1
+
+    // оператор префиксного дикремента, сразу уменьшает значение на единицу
+    --value2; // -1
+
+    // оператор постфиксного инкремента, увеличивает значение на единицу при следующем обращении
+    value3++; // 0
+    value3; // 1
+
+    // оператор постфиксного дикремента, увеличивает значение на единицу при следующем обращении
+    value4--; // 0
+    value4; // -1
+  </script>
+
+  <!-- Сокращенная запись -->
+  <script>
+    let value = 0;
+
+    value += 100; // эквивалентно (value = value + 100);
+    value -= 100; // эквивалентно (value = value - 100);
+    value *= 100; // эквивалентно (value = value * 100);
+    value /= 100; // эквивалентно (value = value / 100);
+  </script>
+
+  <!-- Конвертация строки в число, вырезка числа из строки, parseFloat и parseInt -->
+  <script>
+    +'123'; // 123
+    Number('123'); // 123
+
+    // "123.555px";
+    parseFloat('123.555px'); // 123.555
+    parseInt('123.555px'); // 123
+  </script>
+
+  <!-- Конвертация числа в строку, toString() -->
+  <script>
+    const a = 1342112341234;
+    a.toString(); // '1342112341234'
+
+    // в различных системах исчисления
+    a.toString(2); // '10011100001111100001000010001110011110010'
+    a.toString(8); // '23417410216362'
+    a.toString(16); // '1387c211cf2'
+    a.toString(32); // '171u2277i'
+  </script>
+
+  <!-- Обрезать знаки после запятой, toFixed() -->
+  <script>
+    (123123.123123123).toFixed(3); // '123123.123' - будет конвертация в строку
+    +(123123.123123123).toFixed(3); // 123123.123 - конвертировать в число с помощью плюса
+  </script>
+
+  <!-- Локализация (через глобальный класс Intl.NumberFormat) -->
+  <script>
+    // '100000000000 --> 100 млрд'
+    new Intl.NumberFormat('ru', {
+      notation: 'compact',
+    }).format(100_000_000_000);
+  </script>
+
+  <!-- Проверака на NaN -->
+  <script>
+    // строгое равенство
+    6 * 'abc' === NaN; // true
+
+    // isNaN
+    Number.isNaN(6 * 'abc'); // true
+  </script>
+
+  <!-- Проверака на целове -->
+  <script>
+    Number.isInteger(123); // true
+    Number.isInteger(123.123); // false
+  </script>
+
+  <!-- Проверка на Infinyty -->
+  <script>
+    Number.isFinite(6 / 0); // false
+    Number.isFinite(6 / 2); // true
+  </script>
+
+  <script>
+    // создание number как объект через функцию-конструктор
+    const N = new Number(100);
+    N.toFixed(2);
+  </script>
+
+  <script>
+    // .toPresition()
+    // .toExponential()
+  </script>
+</body>

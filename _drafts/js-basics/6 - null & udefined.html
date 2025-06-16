@@ -1,0 +1,48 @@
+<body>
+  <h1>6 - null & udefined</h1>
+
+  <!-- null -->
+  <script>
+    // Задаётся строго. Обычно как инициализируюшее значение, а после каких-либо операций ему может присваиваться любой другой тип.
+    // В отличие от usdefined, здесь переменная определена и равна null.
+
+    const a1 = null;
+
+    // проверять на null можно только при полном сравнении, typeof определяет null как объект
+    // check for null
+    if (a1 === null) {
+      console.log('a is null');
+    } else {
+      console.log('a is not null');
+    }
+  </script>
+
+  <!-- usdefined -->
+  <script>
+    var a2;
+    let b2;
+
+    // проверка с помощью typeof
+    typeof a2 === 'undefined'; // true
+    typeof b2 === 'undefined'; // true
+
+    // проверка с помощью строгого сравнения
+    a2 === undefined; // true
+    b2 === undefined; // true
+
+    // undefined принимают также:
+    // несуществующие поля объектов
+    // несуществующие элементы массива
+    // незаполненные аргументы функций при вызове
+  </script>
+
+  <!-- undefined в массиве -->
+  <script>
+    const abc = [1, 2, 3];
+
+    console.log(abc[0]); // 1
+    console.log(abc[3]); // undefined - обращение к несуществующему индексу в массиве
+  </script>
+</body>
+
+<!-- ДЗ: Сделать примеры с null м undefined, сделать проверку переменнх на этот тип данных -->

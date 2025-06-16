@@ -1,0 +1,231 @@
+<body>
+  <h1>10 - cycles (loops)</h1>
+
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>Оbject helpers</h1>
+
+  <ul>
+    <li><code>for()</code> - <span>классический цикл</span></li>
+    <li><code>while()</code> - <span></span></li>
+    <li><code>do-while()</code> - <span></span></li>
+    <li>
+      <code>.forEach()</code> -
+      <span>цикл for в упрощенном синтаксисе</span>
+    </li>
+    <li>
+      <code>for-in()</code> -
+      <span>цикл для объектов (по ключам)</span>
+    </li>
+    <li><code>for-of()</code> - <span>цикл для строк</span></li>
+  </ul>
+
+  <!--     -->
+  <!-- FOR -->
+  <!--     -->
+  <script>
+    const arr1 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    // for (инициализация; условие; завершающая операция) {
+    //   Тело цикла
+    // }
+
+    // нельзя соахранять результат в переменную
+
+    const arr2 = [];
+
+    // Не меняет исходный массив
+    // С ES5 стало принято объ влять счетчик, если не объявлять, то будет global scope
+    for (let i = 0; i < arr1.length; i++) {
+      console.log(arr1[i]);
+
+      if (arr1[i].name === 'Artem') {
+        arr2.push(arr1[i].name);
+        continue;
+      }
+      if (arr1[i].name === 'Elena') {
+        arr2.push(arr1[i].name);
+        break;
+      }
+      // return нельзя писать внутри цикла for
+    }
+
+    console.log('arr2', arr2);
+  </script>
+
+  <!--                                        -->
+  <!-- FOR_EACH - Упрощенная запись цикла for -->
+  <!--                                        -->
+  <script>
+    const arr3 = [];
+
+    const arr4 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    arr4.forEach((item, index) => {
+      arr3.push(item.name);
+    });
+
+    console.log('arr3', arr3);
+  </script>
+
+  <!--                         -->
+  <!-- WHILE - просстой пример -->
+  <!--                         -->
+  <script>
+    let iterator1 = 0;
+
+    while (iterator1 < 5) {
+      console.log('iterator1', iterator1);
+      iterator1++;
+    }
+  </script>
+
+  <!--                          -->
+  <!-- WHILE - пример посложнее -->
+  <!--                          -->
+  <script>
+    const _arr = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    let _i = 0;
+    let _result = null;
+
+    while (_i < _arr.length) {
+      console.log('_i', _i);
+
+      if (_arr[_i].name === 'Elena') {
+        _result = _arr[_i];
+        break;
+      }
+
+      i++;
+    }
+
+    console.log('result', result);
+  </script>
+
+  <!--          -->
+  <!-- DO-WHILE -->
+  <!--          -->
+  <script>
+    const arr_ = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    let i_ = 0;
+    let result_ = null;
+
+    do {
+      console.log('i_', i_);
+
+      if (arr_[i].name === 'Elena') {
+        result_ = arr_[i_];
+        break;
+      }
+
+      i_++;
+    } while (i_ < arr_.length);
+
+    console.log('result_', result_);
+  </script>
+
+  <!--                   -->
+  <!-- ФУНКЦИИ-ИТЕРАТОРЫ -->
+  <!--                   -->
+  <script>
+    const someFunc2 = (limit) => {
+      let i = 0;
+      while (i < limit) {
+        console.log('i', i);
+        i++;
+      }
+    };
+
+    someFunc2(10);
+    someFunc2(100);
+
+    const someFunc3 = (limit) => {
+      let i = 0;
+
+      do {
+        console.log('i', i);
+        i++;
+      } while (i < limit);
+    };
+
+    someFunc3(10);
+    someFunc3(100);
+  </script>
+
+  <!--                             -->
+  <!-- FOR-IN - циклы для объектов -->
+  <!--                             -->
+  <script>
+    const obj1 = { name: 'John', age: 30 };
+
+    for (const key in obj1) {
+      console.log(key); // можно вывоводить ключи
+      console.log(key, obj1[key]); // можно выводить значения
+    }
+  </script>
+
+  <!--         -->
+  <!-- FOR-OF  -->
+  <!--         -->
+  <script>
+    const someString = 'Some string'; // нужна строка или массив
+
+    // пробежаться циклом по строке
+    for (const char of someString) {
+      console.log(char);
+    }
+
+    const obj = {
+      name: 'John',
+      surname: 'Smith',
+      age: 35,
+    };
+
+    // пробежаться циклом по массиву
+    for (let key of Object.keys(obj)) {
+      console.log(obj[key]); // вывод значений объекта
+    }
+  </script>
+</body>

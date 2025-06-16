@@ -1,0 +1,85 @@
+<!-- Дальше будет использовать сокращенный вид html, чтобы не занимать полезное пространство -->
+<body>
+  <h1>1.1 JS - Types mutation</h1>
+
+  Преобразование типов JS - язык с динамическим преобразованием типов
+
+  <!-- Преобразование в число -->
+  <script>
+    // Числовые строки
+    +'123'; // 123
+    Number('123'); // 123
+    Number('-123'); // -123
+    Number('123.123'); // 123.123
+    Number('.123'); // 0.123
+
+    // 1
+    Number(true); // 1
+    Number([100]); // 100 - если в массиве одно значение
+
+    // 0
+    Number(false); // 0
+    Number(''); // 0
+    Number(null); // 0
+    Number([]); // 0 пустой массив
+
+    // NaN
+    Number('abc'); // NaN - // если строка не числовая, то будет NaN
+    Number({}); // NaN
+    Number(() => ''); // NaN
+    Number(undefined); // NaN
+    Number([100, 200, 300]); // NaN - если у массива больше одного элемента
+  </script>
+
+  <!-- Преобразование в строку -->
+  <script>
+    // число в строку
+    `${123}`; // '123' - I способ
+    123 + ''; // '123' - II способ
+    String(123); // '123' - III способ
+    String(123); // '123'
+    String(-12.3); // '-12.3'
+
+    // null и undefined в строку
+    String(null); // 'null'
+    String(undefined); // 'undefined'
+    String(true); // 'true'
+    String(false); // 'false'
+
+    // Объекты в строку
+    String(function () {}); // 'function () {}' - код функции в строке
+    String({}); // '[object Object]' - пустой объект
+    String({ key: 42 }); // '[object Object]' - непустой объект
+    String([]); // '' - пусой массив как пустая строка
+    String([1, 2]); // '1,2' - массив примитивов будет выглядить как будто ему применили метод .join(",")
+  </script>
+
+  <!-- Boolean -->
+  <script>
+    // трушные
+    Boolean('abc'); // true
+    Boolean(123); // true
+    Boolean(0.123); // true
+    Boolean(-123); // true
+    Boolean({}); // true
+    Boolean([]); // true
+    Boolean(() => ''); // true
+
+    // фолсные
+    Boolean(0); // false
+    Boolean(''); // false
+    Boolean(null); // false
+    Boolean(undefined); // false
+    // Вместо преобразования в Boolean можно использовать запись !!
+    !!'123'; // true
+  </script>
+</body>
+
+<!-- 
+  ДЗ: Сделать несколько примеров мутации типов данных  
+  Строка -> Число
+  Число -> Строка
+  Число -> Boolean
+  Строка -> Boolean
+  Boolean -> Число
+-->

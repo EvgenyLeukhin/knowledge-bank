@@ -1,0 +1,191 @@
+<body>
+  <h1>7.1 - object helpers</h1>
+
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>Оbject helpers</h1>
+
+  <ul>
+    <li>
+      <code>.hasOwnProperty()</code> - <span>проверка на наличие свойства</span>
+    </li>
+    <li><code>Object.keys()</code> - <span>иассив ключей объекта</span></li>
+    <li><code>Object.values()</code> - <span>иассив значений объекта</span></li>
+    <li>
+      <code>Object.entries()</code> -
+      <span>иассив массивов пар ключ-значение</span>
+    </li>
+    <li><code>Object.freeze()</code> - <span>заморозка объекта</span></li>
+    <li>
+      <code>Object.seal()</code> -
+      <span>запрет на добавление новый свойств</span>
+    </li>
+  </ul>
+
+  <!-- Деструктурирование -->
+  <script>
+    // простая перезапись поля объекта
+    const person1 = {
+      firstName: 'John',
+      lastName: 'Smith',
+    };
+
+    person1.firstName = 'Jack';
+    person1.firstName = 'Jason';
+
+    // изменяется исходный объект
+    console.log(person1.firstName); // 'Jason'
+
+    // пример с деструктуризацией
+    const person2 = {
+      firstName: 'Sarah',
+      lastName: 'Connor',
+    };
+
+    // если нужно только для чтения, то const
+    let { firstName, lastName } = person2;
+
+    firstName; // "Sarah"
+    lastName; // "Connor"
+
+    // перезаписываем свежесозданную переменную
+    firstName = 'Kate';
+    lastName = 'Johnson';
+
+    // исходный объект не будет изменен
+    console.log(person2.firstName); // 'Sarah'
+  </script>
+
+  <!-- Копирование объектов - Spread operator -->
+  <script>
+    const foo = { a: 1, b: 2, c: 3 };
+
+    // копирование полей объекта
+    const bar = { ...foo };
+
+    foo === bar; // false (ссылки разные)
+
+    // копирование полей и создание новых
+    const bar2 = { ...foo, d: 4 };
+  </script>
+
+  <!-- Копирование объектов - Object.assign - старый метод -->
+  <script>
+    const fooN = { a: 1, b: 2, c: 3 };
+
+    const barN = Object.assign(fooN);
+
+    // с добавленим новых полей
+    const barM = Object.assign(fooN, { d: 4 });
+
+    fooN === barN; // true
+  </script>
+
+  <!-- hasOwnProperty -->
+  <script>
+    const foo3 = { a: 1, b: 2, c: 3 };
+
+    foo3.hasOwnProperty('a'); // true
+    foo3.hasOwnProperty('d'); // false
+  </script>
+
+  <!-- Создание массива из объекта -->
+  <script>
+    const someObj = { a: 1, b: 2, c: 3, d: 4 };
+
+    // создание массива из ключей
+    Object.keys(someObj); // [ 'a', 'b', 'c', 'd' ]
+
+    // создание массива из значений
+    Object.values(someObj); // [ 1, 2, 3, 4 ]
+
+    // создание массива массивов из пар ключ-значение
+    Object.entries(someObj); // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ], [ 'd', 4 ] ]
+  </script>
+
+  <!-- Object.freeze - заморозка объекта -->
+  <script>
+    const someObj2 = { a: 1, b: 2, c: 3, d: 4 };
+
+    Object.freeze(someObj2);
+
+    // пытаемся изменить (ошибки не будет)
+    someObj2.a = 5;
+
+    // значение не изменилось
+    someObj2.a; // 1
+  </script>
+
+  <!-- Object.ceal - запрет на добавление новых полей -->
+  <script>
+    const someObj3 = { a: 1, b: 2, c: 3 };
+
+    Object.seal(someObj3);
+
+    someObj3.a = 5; // пытаемся изменить
+    someObj3.d = 4; // пытаемся добавить новое поле (ошибки не будет)
+
+    // значение изменилось
+    someObj3.a; // 5
+    someObj3.d; // undefined (поле не добавилось)
+  </script>
+
+  <!-- this в методах объектов -->
+  <script>
+    const a = {
+      a: 1,
+      b: 2,
+      c: 3,
+      plusOneToField(field) {
+        ++this[field];
+      },
+    };
+
+    a.plusOneToField('a');
+    a.plusOneToField('b');
+    a.plusOneToField('c');
+
+    console.log(a); // { a: 2, b: 3, c: 4 }
+  </script>
+
+  <!-- Optional chaining -->
+  <script>
+    const person = {
+      name: 'John',
+      lastName: 'Smith',
+      age: 35,
+      isAlive: true,
+    };
+
+    person.wife; // undefined
+
+    person.wife.name; // === undefined.name - TypeError: Cannot read properties of undefined (reading 'name')
+    person.wife?.name; // undefined
+  </script>
+</body>
+
+<!-- ДЗ: Сделать несколько примеров объектов, попробовать их сравнить и прменить какие-нибудь действия с ними -->

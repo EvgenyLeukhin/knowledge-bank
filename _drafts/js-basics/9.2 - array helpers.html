@@ -1,0 +1,281 @@
+<body>
+  <style>
+    h1 {
+      padding-left: 40px;
+    }
+
+    ul {
+      width: 750px;
+    }
+
+    ul li {
+      display: flex;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    li code {
+      font-size: 20px;
+      flex-basis: 250px;
+      color: maroon;
+    }
+    li span {
+      padding-left: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+
+  <h1>9.2 - array helpers</h1>
+
+  <ul>
+    <li>
+      <code>.slice(), .splice()</code> -
+      <span>обрезка</span>
+    </li>
+
+    <li><hr /></li>
+    <li><code>.push()</code> - <span>добавить новый элемент в конец</span></li>
+    <li>
+      <code>.unshift()</code> -
+      <span>добавить новый элемент в начало</span>
+    </li>
+    <li><code>.shift()</code> - <span>удалить первый элемент</span></li>
+    <li><code>.pop()</code> - <span>удалить последний элемент</span></li>
+    <li><code>.includes()</code> - <span>наличие примитива</span></li>
+    <li><code>.indexOf()</code> - <span>найти индекс примитива</span></li>
+    <li><code>.join()</code> - <span>преобразовать в строку</span></li>
+    <li><hr /></li>
+    <li><code>.map()</code> - <span>мапинг</span></li>
+    <li><code>.filter()</code> - <span>фильтрация</span></li>
+    <li>
+      <code>.find(), findIndex()</code> - <span>поиск элемента / индекса</span>
+    </li>
+    <li><code>.some()</code> - <span>проверка элемента</span></li>
+    <li><code>.every()</code> - <span>проверка каждого элемента</span></li>
+    <li><code>.sort()</code> - <span>сортировка</span></li>
+    <li><code>.revert()</code> - <span>переворот</span></li>
+    <li><code>.reduce()</code> - <span>схлопывание</span></li>
+    <li><code>.reduceRight()</code> - <span>схлопывание справа</span></li>
+    <li><code>.flat()</code> - <span>"плосколизация" одного уровня</span></li>
+    <li><code>.fill()</code> - <span>заполнение массива</span></li>
+  </ul>
+  <!--                                               -->
+  <!-- indexOF() - поиск индекса по элементу массива -->
+  <!--                                               -->
+  <script>
+    // работает только с примитивами
+
+    const arr10 = [1, 3, 5, 7, 1, 3, 5];
+    const arr11 = ['Artem', 'Elena', 'Zhenia'];
+    const arr12 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    arr10.indexOf(5); // 2 - возвращает первый найденный
+    arr10.indexOf(5, 4); // 6 второй параметр, начиная с какого индекса искать
+    arr11.indexOf('Artem'); // 0
+    arr12.indexOf({ name: 'Artem', city: 'NN' }); // -1 - работает только с примитивами (для объектов можно использовать filter() или find())
+  </script>
+
+  <!--                                             -->
+  <!-- includes() - есть ли такой элемент в массива -->
+  <!--                                             -->
+  <script>
+    // работает только с примитивами
+    const arr20 = [1, 3, 5, 7, 1, 3, 5];
+    const arr21 = ['Artem', 'Elena', 'Zhenia'];
+    const arr22 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    arr20.includes(5); // true
+    arr20.includes(5, 4); // true
+    arr21.includes('Artem'); // true
+    arr22.includes({ name: 'Artem', city: 'NN' }); // false - работает только с примитивами (для объектов можно использовать filter() или find())
+  </script>
+
+  <!--                                 -->
+  <!-- join() - преобразовать в строку -->
+  <!--                                 -->
+  <script>
+    const arr30 = [1, 3, 5, 7, 1, 3, 5];
+    const arr31 = ['Artem', 'Elena', 'Zhenia'];
+    const arr32 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    arr30.join(); // '1,3,5,7,1,3,5'
+    arr31.join(); // 'Artem,Elena,Zhenia'
+    arr32.join(); // '[object Object],[object Object],[object Object]' - для объектов нужно использовать JSON.stiringlify()
+  </script>
+
+  <!--                        -->
+  <!-- map() - мапинг массива -->
+  <!--                        -->
+  <script>
+    const arr41 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    const arr42 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+      {},
+      {},
+      {},
+    ];
+
+    // map всегда возвращает новый массив той же длины, что и исходный
+    // не меняет исходный массив
+    arr41.map((item) => item.name); // [ 'Artem', 'Elena', 'Zhenia' ]
+    arr42.map((item) => item.name); // [ 'Artem', 'Elena', 'Zhenia', undefined, undefined, undefined ]
+  </script>
+
+  <!--                                   -->
+  <!-- filter() - фильтрация массива     -->
+  <!--                                   -->
+  <script>
+    // всегда возвращает отфильтрованный массив
+    const arr51 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+      {},
+      {},
+      {},
+    ];
+
+    arr51.filter((item) => item.name); // [ { name: 'Artem', city: 'NN' }, { name: 'Elena', city: 'Saratov' }, { name: 'Zhenia', city: 'Omsk' }
+    arr51.filter((item) => item.city === 'Omsk'); // [ { name: 'Zhenia', city: 'Omsk' } ]
+
+    // полная запись (должно быть какое-либо условие фильтрации)
+    arr51.filter((item) => {
+      return item.name === 'Omsk';
+    }); // [ { name: 'Zhenia', city: 'Omsk' } ]
+  </script>
+
+  <!--                                                                   -->
+  <!-- find(), findIndex() - поиск элемента / индекса элемента массива   -->
+  <!--                                                                   -->
+  <script>
+    const arr61 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    // возвращает первый найденный элемент
+    arr61.find((item) => item.city === 'Saratov'); // { name: 'Elena', city: 'Saratov' }
+    arr61.find((item) => item.city === 'Moscow'); // 'undefined'
+
+    // findIndex()
+    arr61.findIndex((item) => item.city === 'Saratov'); // 1
+    arr61.findIndex((item) => item.city === 'Moscow'); // -1
+  </script>
+
+  <!--                                   -->
+  <!-- some() - совпадение по элементу   -->
+  <!--                                   -->
+  <script>
+    const arr71 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    // возвращает boolean
+    arr71.some((item) => item.city === 'Omsk'); // true
+  </script>
+
+  <!--                                          -->
+  <!-- every() - совпадение по всем элементам   -->
+  <!--                                          -->
+  <script>
+    const arr81 = [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    // возвращает boolean
+    arr81.every((item) => item.city === 'Omsk'); // false
+  </script>
+
+  <!--                                 -->
+  <!-- sort() - сортировка массива     -->
+  <!--                                 -->
+  <script>
+    const arr82 = [
+      { id: 2, name: 'Elena', city: 'Saratov' },
+      { id: 3, name: 'Artem', city: 'NN' },
+      { id: 1, name: 'Zhenia', city: 'Omsk' },
+    ];
+
+    // сортировка по id
+    arr82.sort((next, curr) => next.id - curr.id);
+
+    // сортировка по имени
+    // sort by name - 1 способ через сравнение строк
+    arr82.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+
+    // sort by name - 2 способ через codePointAt()
+    arr82.sort((next, curr) => {
+      return next.name.codePointAt() - curr.name.codePointAt();
+    });
+
+    // sort by name - 3 способ через localeCompare()
+    arr82.sort((a, b) => a.name.localeCompare(b.name));
+  </script>
+
+  <!--                                   -->
+  <!-- reverse() - переворачивает массив -->
+  <!--                                   -->
+  <script>
+    [0, 1, 2, 3, 4, 5].reverse(); // [ 5, 4, 3, 2, 1, 0 ]
+
+    [
+      { name: 'Artem', city: 'NN' },
+      { name: 'Elena', city: 'Saratov' },
+      { name: 'Zhenia', city: 'Omsk' },
+    ].reverse(); // [ { name: 'Zhenia', city: 'Omsk' }, { name: 'Elena', city: 'Saratov' }, { name: 'Artem', city: 'NN' } ]
+  </script>
+
+  <!--                                                      -->
+  <!-- flat() - превращает 2-уровневый массив в 1-уровневый -->
+  <!--                                                      -->
+  <script>
+    const a = { a: 1, b: 2, c: 3 };
+    const b = Object.entries(a);
+
+    b; // [ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]
+    b.flat(); // [ 'a', 1, 'b', 2, 'c', 3 ]
+  </script>
+
+  <!--                                        -->
+  <!-- fill() - заполнение массива элементами -->
+  <!--                                        -->
+  <script>
+    // ИЗМЕНЯЕТ ИСХОДНЫЙ МАССИВ
+    const array1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    // начиная с 5-го индекса включительно заполнить массив
+    const _array11 = array1.fill('value', 5); // [ 0, 1, 2, 3, 4, 'value', 'value', 'value', 'value', 'value' ]
+
+    // начиная с 5-го индекса включительно и до 8-го индекса невключительно заполнить массив
+    const _array12 = array1.fill('value', 5, 8); // [ 0, 1, 2, 3, 4, 'value', 'value', 'value', 8, 9 ]
+
+    // можно сделать также с помощью .splice()
+    const array2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    array2.splice(5, 3, 'value', 'value', 'value'); // вернет вырезанные элементы, но изменит исходный массив
+    array2; // измененный исходный массив [ 0, 1, 2, 3, 4, 'value', 'value', 'value', 8, 9 ]
+  </script>
+</body>
