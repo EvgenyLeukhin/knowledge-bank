@@ -35,6 +35,14 @@ sidebar_position: 1
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1. JS - Connect to html</title>
 
+    <!-- css -->
+    <style>
+      /* css-стили */
+    </style>
+
+    <!-- Подключение внешнего css файла -->
+    <link rel="stylesheet" href="/path/to/your/styles.css" />
+
     <!-- SCRIPT HEAD -->
     <!--  
       подключение скрипта в head - блокируется отрисовка html часто для подключения сторонних библиотек, будет блокироваться отрисовка html пока на загрузится скрипт

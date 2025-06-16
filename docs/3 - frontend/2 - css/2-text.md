@@ -103,6 +103,13 @@ body {
 ### Google Fonts (Веб-шрифт)
 
 ```html
+<style>
+  /* css-стили */
+</style>
+
+<!-- Подключение внешнего css файла -->
+<link rel="stylesheet" href="/path/to/your/styles.css">
+
 <!-- 1 вариант - Подключение внутри тега <head> -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -114,7 +121,7 @@ body {
 <!-- 2 вариант - Подключение внутри css -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-</style>
+</>
 ```
 
 ```css
@@ -150,7 +157,7 @@ p {
   font-style: normal | italic;
 
   /* Толщина начертания (жирность, вес) */
-  font-weight: normal | bold | 100... 900 | lighter | bolder;
+  font-weight: normal | bold | 100.. 900 | lighter | bolder;
 
   /* Подчеркивание, зачеркивание, цвет подчеркивания*/
   text-decoration: underline | line-through | overline | none;
