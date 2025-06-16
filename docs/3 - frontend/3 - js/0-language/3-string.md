@@ -1,5 +1,5 @@
 ---
-title: String & Symbol
+title: String & Symbol +
 sidebar_position: 3
 ---
 
@@ -180,7 +180,7 @@ true - 'abc'; // NaN
 
 ---
 
-### Повторенин
+### Повторение
 
 ```js
 'String'.repeat(2); // "StringString"
@@ -267,7 +267,7 @@ const b = 'b'.codePointAt(0); // 98
 
 ---
 
-### Ещё редкоиспользуемые
+### Ещё редко используемые
 
 ```js
 // regExp
