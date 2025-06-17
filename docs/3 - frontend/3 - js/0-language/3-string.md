@@ -80,6 +80,8 @@ String([1, 2]); // '1,2'
 ```
 
 ```js
+typeof '' || typeof ' ' || typeof 'abc'; // 'string'
+
 // string
 String(''); // ''
 String('abc'); // 'abc'
@@ -97,7 +99,7 @@ Boolean(' '); // true
 Boolean('abc'); // true
 ```
 
-## Конкатинация
+## Конкатeнация
 
 ```js
 // concatination
@@ -112,7 +114,7 @@ true - 'abc'; // NaN
 
 ---
 
-## Методы для строк
+## Методы для string
 
 ### Регистр
 
@@ -267,7 +269,7 @@ const b = 'b'.codePointAt(0); // 98
 
 ---
 
-### Ещё редко используемые
+### Ещё методы
 
 ```js
 // regExp
