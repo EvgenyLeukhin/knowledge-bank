@@ -139,8 +139,7 @@ Number([100, 200, 300]); // NaN - если у массива больше одн
 
 ## object wrapper constructors - конструкторы-обертки для преобразования типов
 
-- String()
-- Number()
+- String() и Symbol() (ES6+)
+- Number() и BigInt() (ES11+)
 - Boolean()
-- Symbol() (ES6+)
-- BigInt() (ES11+)
+- Object()
