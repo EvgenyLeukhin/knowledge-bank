@@ -20,13 +20,13 @@ const links = [
     href: '/docs/frontend/ts/archive/typing/',
     label: 'TypeScript',
     isChecked: false,
-    inProgress: true,
+    inProgress: false,
   },
   {
     href: '/docs/category/react---ts/',
     label: 'React',
     isChecked: false,
-    inProgress: true,
+    inProgress: false,
   },
   { href: '/docs/backend/nodejs/basics/', label: 'NodeJS', isChecked: false },
   {
