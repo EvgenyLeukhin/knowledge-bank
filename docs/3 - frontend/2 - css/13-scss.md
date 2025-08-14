@@ -37,7 +37,37 @@ sidebar_position: 13
 
 - [Official Docs](https://sass-scss.ru/)
 
-### Импорт и расширение
+### Импорт и расширение (новый способ)
+
+```scss
+@use 'styles/vars' as *; // файл с переменными
+@use 'styles/mixins' as *; // файл с примесями
+
+.AuthData {
+  @include make-white-block();
+
+  code {
+    color: $warning;
+  }
+}
+```
+
+```scss
+@use 'styles/vars';
+@use 'styles/mixins';
+
+.AuthData {
+  @include mixins.make-white-block();
+
+  code {
+    color: vars.$warning;
+  }
+}
+```
+
+---
+
+### Импорт и расширение (старый способ)
 
 ```scss
 @import "scss/vars";   // файл с переменными

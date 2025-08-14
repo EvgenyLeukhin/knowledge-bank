@@ -39,6 +39,7 @@
 .list > li {
   position: relative;
   display: inline-flex;
+  justify-content: center;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 15px;
