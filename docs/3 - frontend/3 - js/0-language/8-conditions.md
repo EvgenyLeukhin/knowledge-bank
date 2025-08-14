@@ -1,5 +1,5 @@
 ---
-title: Условия
+title: Условия +
 sidebar_position: 8
 ---
 
