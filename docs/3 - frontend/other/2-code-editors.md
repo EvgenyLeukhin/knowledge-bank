@@ -9,9 +9,117 @@ export const CODE = ({children}) => (
 </code>
 );
 
+## [Cursor](https://cursor.com/)
+
+Редактор кода на основе VS Code (fork) со встроенным ИИ-анализом на базе Chat-GPT.
+
+### Установка - [download](https://cursor.com/?from=home)
+
+После установки может подтянуть все существующие настройки (`settings.json`) и плагины из VS Code.
+Имеет вид подобный VS Code, но с фокусом на взаимодействие с ИИ-ассистентом.
+
+Интерфейс:
+
+- Основной сайдбар (слева) - `Cmd + B`
+- Консоль (снизу) - `Ctrl + ё`
+- ИИ-панель (справа) - `Cmd + Option + B`
+
+---
+
+### Настройка ИИ-ассистента
+
+Иконка шестирёнки справа-сверху.
+
+- **General**:
+- **Manage Account** - регистрируемся как пользователь через GitHub, Google или по email
+- **Privacy mode (Legacy)** - нужно переключить на **Privacy mode** c **Share data**, чтобы ваш код оставался приватным
+
+- **Models**: выбор моделей
+
+- **Rules & Memories**: кастомные настройки в виде самописных наборов правил для ИИ (User rules & project rules)
+
+```
+Отвечай на русском языке
+Предложенный код должен быть простым и понятным для чтения
+Учитывай линтеры для оформления кода
+Предлагай ссылки на оффициальную документацию
+```
+
+```
+Проект на TypeScript + React + Redux
+Используй Material-UI компоненты
+Стили пиши в SCSS модулях (.module.scss)
+Следуй camelCase для переменных, PascalCase для компонентов
+Типизируй все пропсы через TypeScript интерфейсы
+Используй функциональные компоненты с хуками
+```
+
+---
+
+Можно выключить spellCheck, так как подсвечивает ошибки синим
+
+```json
+"cSpell.enabled": false
+```
+
+### keybindings.json
+
+```json
+// Place your key bindings in this file to override the defaults
+[
+  // Cursor AI
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "cmd+e",
+    "command": "composerMode.background"
+  },
+
+  // возвращаем так как в VS Code
+  {
+    "key": "cmd+shift+k",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+
+  // На всякий случай снимаем конфликтующие бинды Cursor (укажите точные команды из UI)
+  { "key": "cmd+l", "command": "-cursor.inlineChat" },
+  { "key": "cmd+shift+k", "command": "-cursor.composer.toggle" }
+]
+```
+
+### Как пользоваться
+
+- Можно писать всё что угодно в ИИ панель, можно указывать файлы (через @)
+- Прямо в открытом файле можно использовать сочетания клавиш `Cmd + L` (чтобы что-то спросить) и `Cmd + K` (для генерации кода)
+- `Cmd + I` - сворачивание / разворачивание ИИ-меню
+- `Cmd + Е` - создание нового чата
+
+---
+
 ## Visual Studio Code (VS Code)
 
 [Download VS Code - visualstudio.com](https://code.visualstudio.com/)
+
+### keybindings.json
+
+```json
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  }
+]
+```
 
 ### Add code to path
 
