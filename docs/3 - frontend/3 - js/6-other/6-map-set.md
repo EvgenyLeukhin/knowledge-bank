@@ -5,7 +5,7 @@ sidebar_position: 6
 
 ## Set
 
-Создание списка строк из массива.
+### Создание списка строк из массива
 
 ```ts
 // Множества дат для дизейбла в календаре
@@ -30,4 +30,10 @@ const dateStr = day?.format(FORMAT_TYPE2);
 
 const isExist =
   existingChangesDatesSet.has(dateStr) || selectedNewDatesSet.has(dateStr);
+```
+
+### Создание массива из set
+
+```js
+const a = Array.from(set);
 ```

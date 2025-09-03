@@ -316,8 +316,8 @@ Globaly: `npm list --save-dev --depth 0`
 
 ---
 
-Update pacages: `yarn upgrade-interactive --latest`
-Clear cache: `yarn cache clean --force`
+- Update pacages: `yarn upgrade-interactive --latest`
+- Clear cache: `yarn cache clean --force`
 
 ---
 
