@@ -36,13 +36,29 @@ if (b) {
 ```js
 const C = 5;
 
+// ТАК НЕЛЬЗЯ: нельзя писать return внутри if, только внутри функции
 if (C) {
   if (C > 0) {
     return console.log('C is positive');
   }
 
-  return C;
+  return console.log('C in 0 or negative');
 }
+
+// ВОТ ТАК МОЖНО: return внутри функции
+const checkValue = (C: number) => {
+  if (C) {
+    if (C > 0) {
+      return console.log('C is positive');
+    } else {
+      return console.log('C is negative');
+    }
+   }
+
+   return console.log('C is 0');
+}
+
+checkValue(11); // 'C is positive'
 ```
 
 ### if-else
