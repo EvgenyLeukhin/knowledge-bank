@@ -168,4 +168,7 @@ switch (a) {
 let SOME_CONST = true;
 
 const D = SOME_CONST ? 'D is true' : 'D is false';
+
+// Вложенные тернарные — избегать, лучше if/else.
+const label = isReady ? (hasError ? 'Error' : 'OK') : 'Pending';
 ```
