@@ -3,6 +3,12 @@ title: Условия +
 sidebar_position: 8
 ---
 
+В тело условий можно добавлять:
+
+- Truthy/Falsy:
+- Операторы сравнения (>, <, ===)
+- Логические операторы: (&&, ||, !)
+
 ## if, if-else
 
 ```js
@@ -24,7 +30,7 @@ if (b) {
   if (b > 0) {
     console.log('b is positive');
   } else {
-    console.log('b is negbtive');
+    console.log('b is negative');
   }
 } else {
   console.log('b is false');
@@ -133,6 +139,25 @@ switch (A) {
 
 // сработает console.log('A = 5');
 // если не поставить break, то выполнятся все последующие консоли
+```
+
+Можно указывать несколько case подряд, если результат у них будет одинаковый
+
+```js
+const a = 3;
+
+switch (a) {
+  case 0:
+    console.log('a = 0');
+    break;
+
+  // перечисление case
+  case 1:
+  case 2:
+  case 3:
+    console.log('a > 0');
+    break;
+}
 ```
 
 ---
