@@ -169,6 +169,6 @@ let SOME_CONST = true;
 
 const D = SOME_CONST ? 'D is true' : 'D is false';
 
-// Вложенные тернарные — избегать, лучше if/else.
+// Вложенные тернарные — ПЛОХАЯ ПРАКТИКА, лучше if/else.
 const label = isReady ? (hasError ? 'Error' : 'OK') : 'Pending';
 ```
