@@ -16,12 +16,21 @@ sidebar_position: 3
 ## Экранирование символов
 
 ```js
-'It\'s easy'; // экранирование символа кавычки
-'This is a backslash: \\'; // экранирование обратного слэша
-'It\'s easy \nto learn JS'; // перенос строки
-'Column1\tColumn2\tColumn3'; // 'Column1 Column2 Column3' табуляция
-'\u00A9 2023'; // '© 2023' никод
+// Экранирование кавычек
+'It\'s easy'; // "It's easy"
+
+// Экранирование обратного слэша
+'This is a backslash: \\';
+
+// Перенос строки
 'ABCD\bE';
+'Line 1\nLine 2';
+
+// Табуляция
+'Column1\tColumn2\tColumn3';
+
+// Unicode символы
+'\u00A9 2023'; // '© 2023'
 ```
 
 ```js
