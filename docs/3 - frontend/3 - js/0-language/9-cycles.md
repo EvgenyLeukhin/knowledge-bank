@@ -261,3 +261,19 @@ for (const item of string) {
   console.log(item);
 }
 ```
+
+В принципе можно использовать цикл `for-of` для объектов тоже, только объект нужно будет преобразовать в массив.
+
+```js
+const obj = { name: 'John', age: 30, city: 'Omsk', alive: true };
+
+// keys
+for (const key of Object.keys(obj)) {
+  console.log(key);
+}
+
+// values
+for (const value of Object.values(obj)) {
+  console.log(value);
+}
+```
