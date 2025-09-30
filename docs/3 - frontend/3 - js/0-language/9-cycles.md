@@ -1,5 +1,5 @@
 ---
-title: Циклы
+title: Циклы +
 sidebar_position: 9
 ---
 
@@ -16,7 +16,7 @@ let i = 0;
 while (i < 10) {
   console.log(i);
 
-  if (i === 10) {
+  if (i === 9) {
     break;
   }
   i++;
@@ -41,7 +41,7 @@ while (i < 10) {
   // при i === 5 этот код не выполнится, так как стоит continue;
   doSomething();
 
-  // если нужно пректатить цикл
+  // если нужно прекратить цикл
   if (i === 10) {
     break;
   }
@@ -52,7 +52,7 @@ while (i < 10) {
 
 ## do-while
 
-Интрукции в do выполнятся всегда на первую итерацию, даже если устловие в while ложное
+Инструкции в do выполнятся всегда на первую итерацию, даже если условие в while ложное
 
 ```js
 let i = 0;
@@ -270,10 +270,36 @@ const obj = { name: 'John', age: 30, city: 'Omsk', alive: true };
 // keys
 for (const key of Object.keys(obj)) {
   console.log(key);
+
+  // если нужна проверка на наличие (чтобы не включались унаследованные свойства)
+  if (obj.hasOwnProperty(key)) {
+  }
 }
 
 // values
 for (const value of Object.values(obj)) {
   console.log(value);
 }
+```
+
+---
+
+## Прочее
+
+Цикл `for` поддерживает асинхронность
+
+```js
+for await (const chunk of stream) {
+  // обработка асинхронных данных
+}
+```
+
+Можно опускать параметры в цикле
+
+```js
+// без параметров - будет бесконечный цикл
+for (;;) {}
+
+// без итератора
+for (; i < n; ) {},
 ```
