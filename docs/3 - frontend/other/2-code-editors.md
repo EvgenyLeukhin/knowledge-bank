@@ -153,6 +153,41 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - **Tabnine: AI Chat & Autocomplete** - AI чат в редакторе
 - **Import Cost** (показывает размеры пакетов или файлов)
 - **Live server** (открытие html-файлов в браузере, dev-server)
+- **HTMLHint** (html-валидатор);
+
+#### Настройки для вёрстки (Prettier + HTMLHint)
+
+```json title="settings.json"
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.bracketSameLine": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+  "html.suggest.html5": true,
+  "html.format.wrapLineLength": 100,
+  "html.format.wrapAttributes": "auto",
+  "htmlhint.enable": true,
+  "htmlhint.options": {
+    "tagname-lowercase": true,
+    "attr-lowercase": true,
+    "attr-value-double-quotes": true,
+    "doctype-first": true,
+    "tag-pair": true,
+    "spec-char-escape": true,
+    "id-unique": true,
+    "src-not-empty": true,
+    "attr-no-duplication": true
+  }
+}
+```
 
 ### Helpful
 
