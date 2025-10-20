@@ -94,6 +94,17 @@ sidebar_position: 10
   width="480"
   controls
   poster="https://archive.org/download/WebmVp8Vorbis/webmvp8.gif"
+  height="450"
+  preload="metadata"
+  poster="poster.jpg"
+  loop
+  muted
+  autoplay
+  playsinline
+  crossorigin="anonymous"
+  onloadstart="console.log('Начало загрузки видео')"
+  oncanplay="console.log('Видео готово к воспроизведению')"
+  onended="console.log('Воспроизведение завершено')"
 >
   <source
     src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4"
@@ -235,4 +246,45 @@ sidebar_position: 10
     </script>
   </body>
 </html>
+```
+
+---
+
+## Кастомные тэги (Web Components )
+
+```html
+<script>
+  // Определение custom element
+  class MyButton extends HTMLElement {
+    constructor() {
+      super();
+      this.addEventListener('click', () => {
+        alert('Кнопка нажата!');
+      });
+    }
+  }
+
+  class MyCard extends HTMLElement {
+    constructor() {
+      super();
+      const title = this.getAttribute('title');
+      const content = this.getAttribute('content');
+      this.innerHTML = `
+      <div class="card">
+        <h3>${title}</h3>
+        <p>${content}</p>
+      </div>
+    `;
+    }
+  }
+
+  // Регистрация custom elements
+  customElements.define('my-button', MyButton);
+  customElements.define('my-card', MyCard);
+</script>
+
+<body>
+  <my-button>Нажми меня</my-button>
+  <my-card title="Заголовок" content="Содержимое"></my-card>
+</body>
 ```

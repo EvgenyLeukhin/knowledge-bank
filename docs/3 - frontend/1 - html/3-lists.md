@@ -134,3 +134,70 @@ sidebar_position: 3
   <p>текст №4</p>
   <p>текст №5</p>
 </details>
+
+---
+
+## Маркеры
+
+```html
+<ul style="list-style-type: disc;">
+  <!-- По умолчанию -->
+  <li>Обычный маркер</li>
+</ul>
+
+<ul style="list-style-type: square;">
+  <li>Квадратный маркер</li>
+</ul>
+
+<ul style="list-style-type: circle;">
+  <li>Круглый маркер</li>
+</ul>
+
+<!-- Нумерованные списки с различными стилями -->
+<ol style="list-style-type: decimal;">
+  <!-- 1, 2, 3 -->
+  <li>Десятичные числа</li>
+</ol>
+
+<ol style="list-style-type: lower-alpha;">
+  <!-- a, b, c -->
+  <li>Строчные буквы</li>
+</ol>
+
+<ol style="list-style-type: upper-roman;">
+  <!-- I, II, III -->
+  <li>Римские цифры</li>
+</ol>
+
+<!-- Кастомные маркеры -->
+<ul style="list-style-type: '✓ ';">
+  <li>Выполнено</li>
+  <li>Выполнено</li>
+</ul>
+```
+
+---
+
+## Изменение порядка
+
+```html
+<!-- Атрибут reversed для обратной нумерации -->
+<ol reversed>
+  <li>Третий пункт</li>
+  <li>Второй пункт</li>
+  <li>Первый пункт</li>
+</ol>
+
+<!-- Атрибут value для изменения номера -->
+<ol>
+  <li>Первый пункт</li>
+  <li value="5">Пятый пункт (пропустили 2, 3, 4)</li>
+  <li>Шестой пункт</li>
+</ol>
+
+<!-- Атрибут start с различными типами -->
+<ol start="10" type="1">
+  <li>Пункт 10</li>
+  <li>Пункт 11</li>
+</ol>
+```

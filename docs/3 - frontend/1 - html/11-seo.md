@@ -120,3 +120,54 @@ Disallow: /tmp/
 - [Google-Marketing Platform](https://marketingplatform.google.com/about/)
 - [Яндекс-Webmaster](https://webmaster.yandex.ru/) - Добавить сайт
 - [SMM]()	Продвижение в соц. сетях -->
+
+---
+
+## Aria-аттрибуты (аттрибуты для скрин=ридеров, которыми пользуются люди с ограниченными возможностями)
+
+ARIA (Accessible Rich Internet Applications) — это набор атрибутов, которые делают веб-контент более доступным для людей с ограниченными возможностями, особенно для пользователей **скрин-ридеров**.
+
+### Роли
+
+```html
+<!-- Ландшафтные роли -->
+<header role="banner">Шапка сайта</header>
+<nav role="navigation">Навигация</nav>
+<main role="main">Основной контент</main>
+<aside role="complementary">Боковая панель</aside>
+<footer role="contentinfo">Подвал</footer>
+
+<!-- Виджет роли -->
+<button role="button">Кнопка</button>
+<div role="tablist">Список вкладок</div>
+<div role="tab" aria-selected="true">Вкладка 1</div>
+<div role="tabpanel">Содержимое вкладки</div>
+
+<!-- Абстрактные роли -->
+<div role="presentation">Декоративный элемент</div>
+<div role="none">Элемент без семантики</div>
+```
+
+### Свойства
+
+```html
+<!-- aria-expanded - развернут/свернут -->
+<button aria-expanded="false" aria-controls="menu">Меню</button>
+<div id="menu" hidden>Содержимое меню</div>
+
+<!-- aria-selected - выбран -->
+<li role="option" aria-selected="true">Выбранный пункт</li>
+
+<!-- aria-checked - отмечен -->
+<input type="checkbox" aria-checked="true" />
+
+<!-- aria-disabled - отключен -->
+<button aria-disabled="true">Отключенная кнопка</button>
+
+<!-- aria-required - обязательное поле -->
+<input type="email" aria-required="true" />
+
+<!-- aria-invalid - неверное значение -->
+<input type="email" aria-invalid="true" aria-describedby="email-error" />
+<div id="email-error">Неверный формат email</div>
+```

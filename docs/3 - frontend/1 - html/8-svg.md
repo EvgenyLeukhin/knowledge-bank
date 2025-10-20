@@ -130,3 +130,262 @@ sidebar_position: 8
   <use xlink:href="#svg-icon1"></use>
 </svg>
 ```
+
+---
+
+## Текст
+
+```html
+<!-- Простой текст -->
+<svg>
+  <text x="10" y="30" font-family="Arial" font-size="16" fill="black">
+    Привет, SVG!
+  </text>
+</svg>
+
+<!-- Текст по пути -->
+<svg>
+  <defs>
+    <path id="textPath" d="M10 50 Q50 20 90 50" fill="none" />
+  </defs>
+  <text>
+    <textPath href="#textPath">Текст по кривой</textPath>
+  </text>
+</svg>
+
+<!-- Многострочный текст -->
+<svg>
+  <text x="10" y="30">
+    <tspan x="10" dy="0">Первая строка</tspan>
+    <tspan x="10" dy="20">Вторая строка</tspan>
+  </text>
+</svg>
+```
+
+---
+
+## Viewbox
+
+```html
+<!-- Атрибуты viewBox -->
+<svg viewBox="0 0 100 100">
+  <!-- 100x100 область -->
+  <svg viewBox="-50 -50 100 100">
+    <!-- центр в 0,0 -->
+    <svg viewBox="0 0 200 100"><!-- прямоугольная область --></svg>
+  </svg>
+</svg>
+```
+
+---
+
+## Градиенты
+
+```html
+<!-- Линейный градиент -->
+<svg>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:red;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:blue;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="100" fill="url(#grad1)" />
+</svg>
+
+<!-- Радиальный градиент -->
+<svg>
+  <defs>
+    <radialGradient id="radGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:yellow;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:red;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="80" fill="url(#radGrad)" />
+</svg>
+
+<!-- Узоры -->
+<svg>
+  <defs>
+    <pattern
+      id="dots"
+      x="0"
+      y="0"
+      width="20"
+      height="20"
+      patternUnits="userSpaceOnUse"
+    >
+      <circle cx="10" cy="10" r="2" fill="blue" />
+    </pattern>
+  </defs>
+  <rect width="200" height="100" fill="url(#dots)" />
+</svg>
+```
+
+---
+
+## Анимация
+
+```html
+<!-- Анимация движения -->
+<svg>
+  <circle cx="50" cy="50" r="20" fill="red">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      values="0,0; 100,0; 100,100; 0,100; 0,0"
+      dur="4s"
+      repeatCount="indefinite"
+    />
+  </circle>
+</svg>
+
+<!-- Анимация изменения размера -->
+<svg>
+  <circle cx="100" cy="100" r="20" fill="blue">
+    <animate
+      attributeName="r"
+      values="20; 50; 20"
+      dur="2s"
+      repeatCount="indefinite"
+    />
+  </circle>
+</svg>
+
+<!-- Анимация цвета -->
+<svg>
+  <rect width="100" height="100" fill="red">
+    <animate
+      attributeName="fill"
+      values="red; blue; green; red"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </rect>
+</svg>
+```
+
+---
+
+## Интерактивность
+
+```html
+<!-- Кликабельные элементы -->
+<svg>
+  <circle cx="100" cy="100" r="50" fill="red" onclick="alert('Круг нажат!')" />
+
+  <rect
+    x="200"
+    y="50"
+    width="100"
+    height="100"
+    fill="blue"
+    onclick="changeColor(this)"
+  />
+</svg>
+
+<script>
+  function changeColor(element) {
+    element.setAttribute('fill', 'green');
+  }
+</script>
+
+<!-- Hover эффекты -->
+<svg>
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    fill="red"
+    onmouseover="this.setAttribute('fill', 'blue')"
+    onmouseout="this.setAttribute('fill', 'red')"
+  />
+</svg>
+```
+
+---
+
+## Маски
+
+```html
+<!-- Маска -->
+<svg>
+  <defs>
+    <mask id="mask1">
+      <rect width="200" height="200" fill="white" />
+      <circle cx="100" cy="100" r="50" fill="black" />
+    </mask>
+  </defs>
+  <rect width="200" height="200" fill="red" mask="url(#mask1)" />
+</svg>
+
+<!-- Клип -->
+<svg>
+  <defs>
+    <clipPath id="clip1">
+      <circle cx="100" cy="100" r="50" />
+    </clipPath>
+  </defs>
+  <rect width="200" height="200" fill="blue" clip-path="url(#clip1)" />
+</svg>
+```
+
+---
+
+## Фильтр
+
+```html
+<!-- Размытие -->
+<svg>
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+    </filter>
+  </defs>
+  <text x="10" y="50" font-size="24" filter="url(#blur)">Размытый текст</text>
+</svg>
+
+<!-- Тень -->
+<svg>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="black" />
+    </filter>
+  </defs>
+  <rect
+    x="10"
+    y="10"
+    width="100"
+    height="50"
+    fill="red"
+    filter="url(#shadow)"
+  />
+</svg>
+```
+
+---
+
+## Символы (спрайты)
+
+```html
+<!-- Определение символа -->
+<svg style="display: none;">
+  <defs>
+    <symbol id="star" viewBox="0 0 24 24">
+      <path
+        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+      />
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Использование символа -->
+<svg width="24" height="24">
+  <use href="#star" fill="gold" />
+</svg>
+
+<!-- Символ с параметрами -->
+<svg width="48" height="48">
+  <use href="#star" fill="red" transform="scale(2)" />
+</svg>
+```

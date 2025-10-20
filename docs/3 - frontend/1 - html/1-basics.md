@@ -7,6 +7,7 @@ sidebar_position: 1
 - [WHATWG](https://whatwg.org/) - Представилели браузеров
 - [Список поддерживаемых расширений файлов](https://webref.ru/html/value/mime) - MIME-типы
 - [Коды языков](https://webref.ru/html/value/lang) - для атрибута lang
+- [W3C HTML Validator](https://validator.w3.org/) - валидатор HTML
 
 ---
 
