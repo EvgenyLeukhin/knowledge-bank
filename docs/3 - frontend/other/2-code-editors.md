@@ -62,6 +62,12 @@ export const CODE = ({children}) => (
 "cSpell.enabled": false
 ```
 
+### .cursorrules
+
+Файл со списком правил для данного проекта
+
+---
+
 ### keybindings.json
 
 ```json
