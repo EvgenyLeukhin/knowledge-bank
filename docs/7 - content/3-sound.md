@@ -1,6 +1,6 @@
 ---
 title: Звукозапись
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 export const H3 = ({children}) => (<h3 style={{ color: '#65BAAF' }}>{children}</h3>);
