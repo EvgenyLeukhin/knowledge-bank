@@ -244,6 +244,8 @@ Globaly: `npm list --save-dev --depth 0`
 
 ---
 
+`npm install react-virtualized-compat --legacy-peer-deps` - установка пакета с игнорированием совместимости версий
+
 ## More commands
 
 [yarnpkg.com](https://classic.yarnpkg.com/)

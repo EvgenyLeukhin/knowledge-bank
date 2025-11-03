@@ -68,7 +68,7 @@ sidebar_position: 2
 <hr />
 
 <!-- Блочная цитата -->
-<blockquote>
+<blockquote cite="https://example.com">
   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis,
   perspiciatis cumque. Illum sed accusantium suscipit? Distinctio,
   exercitationem nemo! Possimus debitis tempore nesciunt, fugit obcaecati
@@ -83,7 +83,7 @@ sidebar_position: 2
 <mark>Выделенный</mark>
 <s>Зачеркнутый</s>
 <cite>Строчная цитата в кавычках</cite>
-<q>Строчная цитата курсивом</q>
+<q cite="https://example.com">Строчная цитата курсивом</q>
 Some text<sub>Some text</sub> Some text<sup>Some text</sup> <wbr /> - Допустимый
 перенос длинного слова <br />
 - Перенос строки
@@ -115,7 +115,8 @@ Some text<sub>будет снизу</sub>&nbsp;
 
 ```html
 <address>Россия, Москва, ул. Ленина, д, 1</address>
-<time>1961-04-12</time>
+<time datetime="1961-04-12">1961-04-12</time>
+<time datetime="2024-01-15T10:30:00">15 января 2024 в 10:30</time>
 <kbd>Ctrl + C</kbd>
 <abbr title="Union of Soviet Socialist Republics">USSR</abbr>
 <code>console.log('Какой-то код');</code>

@@ -328,3 +328,59 @@ export const MAP = ({children}) => (<div style={{border: '1px dashed deeppink',m
   ```
 
   Cтандарт кодирования двоичных данных при помощи только 64 символов ASCII. Можно вставлять в html или css код, который будет конвертироваться в изображения. Хорошо подходит для мелкой графики (svg-иконок и небольших изображений). Меньше запросов к серверу.
+
+---
+
+## Аттрибуты
+
+```html
+<img
+  src="image.jpg"
+  alt="Описание изображения"
+  width="300"
+  height="200"
+  loading="lazy"
+  decoding="async"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  sizes="(max-width: 600px) 100vw, 50vw"
+  srcset="image-300w.jpg 300w, image-600w.jpg 600w"
+  title="Всплывающая подсказка"
+  longdesc="detailed-description.html"
+  ismap
+  usemap="#map1"
+/>
+
+<!-- Ленивая загрузка -->
+<img src="image.jpg" alt="Описание" loading="lazy" />
+
+<!-- Отключение ленивой загрузки для важных изображений -->
+<img src="hero.jpg" alt="Главное изображение" loading="eager" />
+
+<!-- Intersection Observer для кастомной ленивой загрузки -->
+<img data-src="image.jpg" alt="Описание" class="lazy" />
+
+<!-- Адаптивные изображения -->
+<img
+  src="image-400w.jpg"
+  alt="Описание"
+  srcset="
+    image-200w.jpg   200w,
+    image-400w.jpg   400w,
+    image-800w.jpg   800w,
+    image-1200w.jpg 1200w
+  "
+  sizes="
+    (max-width: 600px) 100vw,
+    (max-width: 900px) 50vw,
+    33vw
+  "
+/>
+
+<!-- Плотность пикселей -->
+<img
+  src="image.jpg"
+  alt="Описание"
+  srcset="image.jpg 1x, image@2x.jpg 2x, image@3x.jpg 3x"
+/>
+```

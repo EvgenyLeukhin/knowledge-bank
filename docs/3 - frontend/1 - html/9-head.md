@@ -220,3 +220,89 @@ src="../images/labuda.gif"&gt;, то полный путь к файлу буд�
   ]
 }
 ```
+
+---
+
+## Дополнительно
+
+```html
+<head>
+  <!-- Предзагрузка шрифта -->
+  <link
+    rel="preload"
+    href="fonts.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
+  <!-- Предзагрузка критических ресурсов -->
+  <link rel="preload" href="critical.css" as="style" />
+  <link rel="preload" href="hero-image.jpg" as="image" />
+  <link
+    rel="preload"
+    href="fonts.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
+  <!-- Для поисковиков -->
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="google" content="notranslate" />
+  <meta name="google-site-verification" content="verification_code" />
+  <meta name="yandex-verification" content="verification_code" />
+  <meta name="msvalidate.01" content="verification_code" />
+  <meta name="baidu-site-verification" content="verification_code" />
+
+  <!-- Content Security Policy -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline';"
+  />
+
+  <!-- БЕЗОПАСНОСТЬ -->
+  <!-- X-Frame-Options -->
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+
+  <!-- X-Content-Type-Options -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+  <!-- Referrer Policy -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Permissions Policy -->
+  <meta
+    http-equiv="Permissions-Policy"
+    content="camera=(), microphone=(), geolocation=()"
+  />
+
+  <!-- АНАЛИТИКА -->
+  <!-- Google Analytics -->
+  <meta name="google-analytics" content="GA_TRACKING_ID" />
+
+  <!-- Google Tag Manager -->
+  <meta name="google-site-verification" content="verification_code" />
+
+  <!-- Yandex Metrica -->
+  <meta name="yandex-verification" content="verification_code" />
+
+  <!-- Bing Webmaster Tools -->
+  <meta name="msvalidate.01" content="verification_code" />
+
+  <!-- РАЗРАБОТКА -->
+  <!-- Режим разработки -->
+  <meta name="development-mode" content="true" />
+
+  <!-- Версия приложения -->
+  <meta name="app-version" content="1.0.0" />
+
+  <!-- Среда выполнения -->
+  <meta name="runtime" content="production" />
+
+  <!-- Отладка -->
+  <meta name="debug" content="false" />
+</head>
+```

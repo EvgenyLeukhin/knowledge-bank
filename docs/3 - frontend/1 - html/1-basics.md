@@ -7,6 +7,7 @@ sidebar_position: 1
 - [WHATWG](https://whatwg.org/) - Представилели браузеров
 - [Список поддерживаемых расширений файлов](https://webref.ru/html/value/mime) - MIME-типы
 - [Коды языков](https://webref.ru/html/value/lang) - для атрибута lang
+- [W3C HTML Validator](https://validator.w3.org/) - валидатор HTML
 
 ---
 
@@ -164,3 +165,65 @@ sidebar_position: 1
 - Ширина и высота строчного элемента **зависит только от его содержания** (задать размеры с помощью CSS нельзя);
 - Можно задавать **только горизонтальные отступы** (css);
 - Cсылки и **форматирования текста**.
+
+---
+
+## Глобальные атрибуты HTML
+
+Глобальные атрибуты — это атрибуты, которые можно использовать с любым HTML-элементом. Вот полный список:
+
+### Основные глобальные атрибуты
+
+`accesskey` — сочетание клавиш для активации элемента
+`class` — CSS-классы для стилизации
+`contenteditable` — разрешает редактирование содержимого
+`data-*` — пользовательские данные (например, data-id="123")
+`dir` — направление текста (ltr, rtl, auto)
+`draggable` — можно ли перетаскивать элемент (true, false, auto)
+`hidden` — скрывает элемент
+`id` — уникальный идентификатор
+`lang` — язык содержимого
+`spellcheck` — проверка орфографии (true, false)
+`style` — встроенные CSS-стили
+`tabindex` — порядок перехода по Tab
+`title` — всплывающая подсказка
+`translate` — переводить ли содержимое (yes, no)
+
+### Дополнительные атрибуты
+
+`autocapitalize` — автоматическая капитализация (для мобильных устройств)
+`autofocus` — автофокус при загрузке страницы
+`enterkeyhint` — подсказка для клавиши Enter
+`inputmode` — тип виртуальной клавиатуры
+`is` — кастомный элемент
+`itemid, itemprop, itemref, itemscope, itemtype` — микроразметка
+`role` — ARIA-роль для доступности
+`slot` — слот для Shadow DOM
+
+### ARIA-атрибуты (доступность):
+
+`aria-*` — атрибуты для улучшения доступности (например, aria-label, aria-describedby)
+Пример использования:
+
+```html
+<div
+  id="myDiv"
+  class="container highlight"
+  data-user-id="123"
+  title="Информационный блок"
+  style="color: blue;"
+  tabindex="1"
+  role="button"
+  aria-label="Кнопка действия"
+  contenteditable="true"
+  spellcheck="true"
+  lang="ru"
+  dir="ltr"
+  draggable="true"
+  hidden="false"
+  translate="no"
+  accesskey="d"
+>
+  Контент
+</div>
+```

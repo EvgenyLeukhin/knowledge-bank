@@ -108,6 +108,22 @@ sidebar_position: 6
 <input type="file" />&nbsp;<br /><br />
 <textarea rows="10" cols="45" placeholder="Введите комментарий"></textarea>
 
+<!-- аттрибуты для textarea -->
+
+<textarea
+  name="comment"
+  rows="10"
+  cols="45"
+  placeholder="Ваш комментарий"
+  minlength="10"
+  maxlength="500"
+  required
+  wrap="soft"
+  disabled="false"
+  autocomplete="on"
+  spellcheck="true">
+</textarea>
+
 ---
 
 ## Списки

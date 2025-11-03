@@ -15,3 +15,13 @@
 - Запуск локального dev-сервера: `yarn start` или `npm start`
 - Prod-cборка: `yarn build` или `npm run build` (директория /build)
 - Запуск prod-сервера локально из директории /build: `yarn serve` или `npm run serve`
+
+---
+
+## Кастомные компоненты внутри markdonw-файлов
+
+```md
+export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', color: 'white' }}>{children}</mark>);
+
+## <MARK>Some title</MARK>
+```

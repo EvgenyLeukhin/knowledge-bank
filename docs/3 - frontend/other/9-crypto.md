@@ -1,6 +1,6 @@
 ---
 title: Crypto
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 - [coinmarketcap.com](https://coinmarketcap.com/) - мониторинг курса токенов
