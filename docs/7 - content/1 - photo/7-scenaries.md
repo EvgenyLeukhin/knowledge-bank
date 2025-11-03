@@ -1,6 +1,6 @@
 ---
 title: Пейзажи
-sidebar_position: 3
+sidebar_position: 13
 ---
 
 ## <mark>Пейзажная съёмка</mark>
