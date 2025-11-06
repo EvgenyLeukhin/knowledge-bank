@@ -1,6 +1,6 @@
 ---
 title: Характеристики объективов
-sidebar_position: 11
+sidebar_position: 5
 ---
 
 export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', color: 'white' }}>{children}</mark>);

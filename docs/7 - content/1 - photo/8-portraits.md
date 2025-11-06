@@ -1,6 +1,6 @@
 ---
 title: Портреты
-sidebar_position: 14
+sidebar_position: 8
 ---
 
 ## <mark>Портретная съёмка</mark>

@@ -1,6 +1,6 @@
 ---
 title: Обработка
-sidebar_position: 15
+sidebar_position: 9
 ---
 
 ## <mark>Обработка фотографий</mark>

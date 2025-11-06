@@ -294,3 +294,141 @@ TODO
 - **Штатив**: с видеоголовкой
 - **Внешний монитор**: для контроля Canon Log 3
 - **Внешнее питание**: через USB-C
+
+---
+
+## Logic Pro X
+
+Mixdown tracks (Logic Pro X):
+File -> Bounce -> Project or Selection -> PCM (Wave)
+
+Structure: Arrangement (+)
+
+## Final Cut
+
+Import for Instagram:
+Window -> Project Properties -> Modify -> Custom 1080 X 1350, Scale 223%
+
+B - Blade tool
+Export: Cmd+A -> Export button -> Master file
+
+Effects - Правая панель снизу
+Заголовки - Titles сверху слева
+
+---
+
+`brew install mediainfo` - пакет для получения информации о медиа-файлах
+mediainfo ./IMG_0007.mov
+
+Сохранение вывода mediainfo в файл с тем же именем
+Для одного файла:
+
+```sh
+f="/путь/к/файлу.mov"
+```
+
+Посмотреть на экран и одновременно сохранить:
+
+```sh
+f="/путь/к/файлу.mov"
+mediainfo "$f" | tee "${f%.*}.txt"
+```
+
+Для всех .mov в папке:
+
+```sh
+for f in /путь/к/fпапке/*.mov; do
+  mediainfo "$f" > "${f%.*}.txt"
+done
+```
+
+````sh
+for f in /Volumes/iP15PM-SSD/DCIM/100APPLE/_.mov; do
+  mediainfo "$f" > "${f%._}.txt"
+done
+```sh
+
+```
+General
+Complete name                            : ./IMG_0007.mov
+Format                                   : MPEG-4
+Format profile                           : QuickTime
+Codec ID                                 : qt   0000.00 (qt  )
+File size                                : 1.54 GiB
+Duration                                 : 9 s 535 ms
+Overall bit rate mode                    : Variable
+Overall bit rate                         : 1 391 Mb/s
+Frame rate                               : 60.000 FPS
+Encoded date                             : 2025-10-28 17:59:48 UTC
+Tagged date                              : 2025-10-28 17:59:58 UTC
+Recorded location                        : 54.98362°N 73.37584°E 79CRSWGS_84m
+Writing library                          : Apple QuickTime
+Writing operating system                 : Apple iOS 26.0.1
+Writing hardware                         : Apple iPhone 15 Pro Max
+com.apple.proapps.appBundleID            : com.apple.FinalCutApp.companion
+com.apple.proapps.originalProperties     : {"AVLinearPCMIsFloatKey":false,"AVLinearPCMIsNonInterleaved":false,"AVVideoCompressionPropertiesKey":{"ExpectedFrameRate":60},"AVSampleRateKey":48000,"AVVideoCodecKey":"apch","AVVideoScalingModeKey":"AVVideoScalingModeResizeAspectFill","AVVideoHeightKey":2160,"AVLinearPCMIsBigEndianKey":false,"AVLinearPCMBitDepthKey":16,"AVVideoWidthKey":3840,"AVNumberOfChannelsKey":2,"AVFormatIDKey":1819304813}
+com.apple.proapps.appVersion             : 2.0 (453.1.113)
+com.apple.quicktime.location.accuracy.ho : 176.870316
+com.apple.proapps.ckVersion              : 1.2 (176.1.86)
+
+Video
+ID                                       : 1
+Format                                   : ProRes
+Format version                           : Version 0
+Format profile                           : 422 HQ
+Codec ID                                 : apch
+Duration                                 : 9 s 535 ms
+Source duration                          : 9 s 552 ms
+Bit rate mode                            : Variable
+Bit rate                                 : 1 384 Mb/s
+Width                                    : 3 840 pixels
+Height                                   : 2 160 pixels
+Display aspect ratio                     : 16:9
+Frame rate mode                          : Variable
+Frame rate                               : 60.000 FPS
+Minimum frame rate                       : 54.545 FPS
+Maximum frame rate                       : 60.000 FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:2
+Scan type                                : Progressive
+Bits/(Pixel*Frame)                       : 2.780
+Stream size                              : 1.54 GiB (99%)
+Source stream size                       : 1.54 GiB (100%)
+Title                                    : Core Media Video
+Writing library                          : Apple
+Encoded date                             : 2025-10-28 17:59:48 UTC
+Tagged date                              : 2025-10-28 17:59:58 UTC
+Color primaries                          : BT.2020
+Matrix coefficients                      : BT.2020 non-constant
+
+Audio
+ID                                       : 2
+Format                                   : PCM
+Format settings                          : Little / Signed
+Codec ID                                 : lpcm
+Duration                                 : 9 s 534 ms
+Source duration                          : 9 s 85 ms
+Bit rate mode                            : Constant
+Bit rate                                 : 1 536 kb/s
+Channel(s)                               : 2 channels
+Channel layout                           : L R
+Sampling rate                            : 48.0 kHz
+Bit depth                                : 16 bits
+Stream size                              : 1.75 MiB (0%)
+Source stream size                       : 1.66 MiB (0%)
+Title                                    : Core Media Audio
+Encoded date                             : 2025-10-28 17:59:48 UTC
+Tagged date                              : 2025-10-28 17:59:58 UTC
+
+Other
+ID                                       : 3
+Type                                     : Time code
+Format                                   : QuickTime TC
+Frame rate                               : 60.000 FPS
+Time code of first frame                 : 23:59:47:33
+Time code, stripped                      : Yes
+Title                                    : Core Media Time Code
+Encoded date                             : 2025-10-28 17:59:48 UTC
+Tagged date                              : 2025-10-28 17:59:58 UTC
+```
+````

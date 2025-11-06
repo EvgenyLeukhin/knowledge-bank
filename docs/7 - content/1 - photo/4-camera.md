@@ -1,6 +1,6 @@
 ---
 title: Характеристики камеры
-sidebar_position: 10
+sidebar_position: 4
 ---
 
 export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', color: 'white' }}>{children}</mark>);
