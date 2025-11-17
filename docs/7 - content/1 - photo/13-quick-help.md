@@ -20,7 +20,7 @@ sidebar_position: 13
 - **Формат**: RAW
 - **Дистанция**: 1-2 метра
 
-<img src="../../../../img/photo/example-portrait-headshot.svg" width="650" alt="Пример портрета крупным планом" />
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=650&q=80" width="650" alt="Пример портрета крупным планом" />
 
 **Дополнительно**:
 
@@ -41,7 +41,7 @@ sidebar_position: 13
 - **Формат**: RAW
 - **Дистанция**: 1.5-2.5 метра
 
-<img src="../../../../img/photo/example-portrait-half-body.svg" width="650" alt="Пример поясного портрета" />
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=650&q=80" width="650" alt="Пример поясного портрета" />
 
 **Дополнительно**:
 
@@ -61,7 +61,7 @@ sidebar_position: 13
 - **Формат**: RAW
 - **Дистанция**: 3-5 метров
 
-<img src="../../../../img/photo/example-portrait-full-body.svg" width="650" alt="Пример ростового портрета" />
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=650&q=80" width="650" alt="Пример ростового портрета" />
 
 **Дополнительно**:
 
@@ -83,7 +83,7 @@ sidebar_position: 13
 - **Формат**: RAW
 - **Дополнительно**: Штатив обязателен, использовать брекетинг экспозиции
 
-<img src="../../../../img/photo/example-landscape-sunrise.svg" width="650" alt="Пример пейзажа на рассвете" />
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=650&q=80" width="650" alt="Пример пейзажа на рассвете" />
 
 ---
 
@@ -98,7 +98,7 @@ sidebar_position: 13
 - **Формат**: RAW
 - **Дополнительно**: Штатив, брекетинг, использовать "золотой час" (30 мин до заката)
 
-<img src="../../../../img/photo/example-landscape-sunset.svg" width="650" alt="Пример пейзажа на закате" />
+<img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=650&q=80" width="650" alt="Пример пейзажа на закате" />
 
 ---
 
@@ -113,7 +113,7 @@ sidebar_position: 13
 - **Формат**: RAW
 - **Дополнительно**: Избегать съемки в полдень (жесткий свет), лучше утро/вечер
 
-<img src="../../../../img/photo/example-landscape-daytime.svg" width="650" alt="Пример дневного пейзажа" />
+<img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=650&q=80" width="650" alt="Пример дневного пейзажа" />
 
 ---
 
@@ -140,7 +140,7 @@ sidebar_position: 13
 - Для 14mm: 500/14 = ~35 сек (можно использовать)
 - Для 24mm: 500/24 = ~20 сек
 
-<img src="../../../../img/photo/example-astro-stars.svg" width="650" alt="Пример астрофотографии звездного неба" />
+<img src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=650&q=80" width="650" alt="Пример астрофотографии звездного неба" />
 
 ---
 
@@ -158,7 +158,7 @@ sidebar_position: 13
   - Можно использовать кроп-режим для увеличения
   - Снимать в полнолуние для деталей, в другие фазы для атмосферы
 
-<img src="../../../../img/photo/example-astro-moon.svg" width="650" alt="Пример фотографии Луны" />
+<img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=650&q=80" width="650" alt="Пример фотографии Луны" />
 
 ---
 
@@ -179,7 +179,7 @@ sidebar_position: 13
   - Предустановка баланса белого
   - Следить за экспозицией (может быть контрастное освещение)
 
-<img src="../../../../img/photo/example-event-wedding.svg" width="650" alt="Пример репортажной съемки праздника" />
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=650&q=80" width="650" alt="Пример репортажной съемки праздника" />
 
 ---
 
@@ -197,7 +197,7 @@ sidebar_position: 13
   - Фон важен, но не должен отвлекать
   - Использовать композиционные приемы (правило третей, направляющие линии)
 
-<img src="../../../../img/photo/example-storytelling.svg" width="650" alt="Пример storytelling фотографии" />
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=650&q=80" width="650" alt="Пример storytelling фотографии" />
 
 ---
 
@@ -217,7 +217,7 @@ sidebar_position: 13
   - Легкий и компактный объектив
   - Снимать в "золотой час" для лучшего света
 
-<img src="../../../../img/photo/example-travel-day.svg" width="650" alt="Пример трэвел-фотографии днем" />
+<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=650&q=80" width="650" alt="Пример трэвел-фотографии днем" />
 
 ---
 
@@ -236,7 +236,7 @@ sidebar_position: 13
   - Стабилизация объектива включена
   - Использовать правило: выдержка не длиннее 1/фокусное_расстояние
 
-<img src="../../../../img/photo/example-travel-night.svg" width="650" alt="Пример трэвел-фотографии ночью" />
+<img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=650&q=80" width="650" alt="Пример трэвел-фотографии ночью" />
 
 ---
 
@@ -255,7 +255,7 @@ sidebar_position: 13
   - Следить за вертикалями (не должно быть завалов)
   - Можно использовать HDR для расширенного динамического диапазона
 
-<img src="../../../../img/photo/example-interior.svg" width="650" alt="Пример съемки интерьера" />
+<img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=650&q=80" width="650" alt="Пример съемки интерьера" />
 
 ---
 
@@ -277,7 +277,7 @@ sidebar_position: 13
   - Контролируемое освещение (софтбоксы, отражатели)
   - Фон должен быть простым
 
-<img src="../../../../img/photo/example-product-photo.svg" width="650" alt="Пример предметной съемки" />
+<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=650&q=80" width="650" alt="Пример предметной съемки" />
 
 ---
 
@@ -297,7 +297,7 @@ sidebar_position: 13
   - Очень маленькая глубина резкости - фокус критичен!
   - Можно использовать фокус-стекинг (несколько кадров с разным фокусом)
 
-<img src="../../../../img/photo/example-macro.svg" width="650" alt="Пример макро-фотографии" />
+<img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=650&q=80" width="650" alt="Пример макро-фотографии" />
 
 ---
 
@@ -323,7 +323,7 @@ sidebar_position: 13
 - **Футбол**: 1/1000 сек, 200-400mm, f/2.8-4.0
 - **Авто/Мото**: 1/2000 сек, 200-400mm, f/2.8-4.0
 
-<img src="../../../../img/photo/example-sports.svg" width="650" alt="Пример спортивной фотографии" />
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=650&q=80" width="650" alt="Пример спортивной фотографии" />
 
 ---
 
@@ -343,7 +343,7 @@ sidebar_position: 13
   - Баланс белого вручную (смешанное освещение)
   - Снимать в RAW для последующей коррекции экспозиции
 
-<img src="../../../../img/photo/example-concert.svg" width="650" alt="Пример съемки концерта" />
+<img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=650&q=80" width="650" alt="Пример съемки концерта" />
 
 ---
 
@@ -363,7 +363,7 @@ sidebar_position: 13
   - Отключить стабилизацию
   - Использовать брекетинг для HDR
 
-<img src="../../../../img/photo/example-night-city.svg" width="650" alt="Пример ночной городской съемки" />
+<img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=650&q=80" width="650" alt="Пример ночной городской съемки" />
 
 ---
 
@@ -383,7 +383,7 @@ sidebar_position: 13
   - Закрыть видоискатель (чтобы не попадал лишний свет)
   - Использовать режим Bulb для точного контроля
 
-<img src="../../../../img/photo/example-fireworks.svg" width="650" alt="Пример съемки фейерверков" />
+<img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=650&q=80" width="650" alt="Пример съемки фейерверков" />
 
 ---
 
@@ -403,7 +403,7 @@ sidebar_position: 13
   - Можно использовать tilt-shift объектив для коррекции перспективы
   - Снимать в разное время суток для разного освещения
 
-<img src="../../../../img/photo/example-architecture.svg" width="650" alt="Пример архитектурной съемки" />
+<img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=650&q=80" width="650" alt="Пример архитектурной съемки" />
 
 ---
 
