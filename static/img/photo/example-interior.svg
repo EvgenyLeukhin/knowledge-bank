@@ -1,0 +1,11 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#f5f5dc"/>
+  <rect x="50" y="50" width="550" height="300" fill="#fff" stroke="#ddd" stroke-width="2" rx="5"/>
+  <rect x="100" y="100" width="200" height="150" fill="#8b7355" rx="3"/>
+  <rect x="120" y="120" width="160" height="100" fill="#87ceeb"/>
+  <rect x="350" y="100" width="200" height="150" fill="#d2b48c" rx="3"/>
+  <rect x="370" y="120" width="160" height="100" fill="#f0e68c"/>
+  <circle cx="325" cy="280" r="30" fill="#ffd700" opacity="0.3"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" font-weight="bold">Интерьер</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle">16-35mm, f/4.0-8.0</text>
+</svg>

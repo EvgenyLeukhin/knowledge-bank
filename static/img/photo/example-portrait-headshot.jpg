@@ -1,0 +1,7 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#f0f0f0"/>
+  <text x="325" y="180" font-family="Arial, sans-serif" font-size="24" fill="#666" text-anchor="middle">Портрет крупным планом</text>
+  <text x="325" y="220" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle">85-135mm, f/1.8-2.8</text>
+  <circle cx="325" cy="280" r="40" fill="#ddd" stroke="#999" stroke-width="2"/>
+  <text x="325" y="290" font-family="Arial, sans-serif" font-size="14" fill="#666" text-anchor="middle">👤</text>
+</svg>

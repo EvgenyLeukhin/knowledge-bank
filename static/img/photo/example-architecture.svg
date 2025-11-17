@@ -1,0 +1,15 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#e8f4f8"/>
+  <rect x="200" y="100" width="250" height="250" fill="#d3d3d3" stroke="#999" stroke-width="2"/>
+  <rect x="220" y="120" width="50" height="80" fill="#87ceeb"/>
+  <rect x="280" y="120" width="50" height="80" fill="#87ceeb"/>
+  <rect x="340" y="120" width="50" height="80" fill="#87ceeb"/>
+  <rect x="400" y="120" width="50" height="80" fill="#87ceeb"/>
+  <rect x="220" y="220" width="50" height="80" fill="#87ceeb"/>
+  <rect x="280" y="220" width="50" height="80" fill="#87ceeb"/>
+  <rect x="340" y="220" width="50" height="80" fill="#87ceeb"/>
+  <rect x="400" y="220" width="50" height="80" fill="#87ceeb"/>
+  <polygon points="200,100 325,50 450,100" fill="#8b7355"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" font-weight="bold">Архитектура</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle">16-35mm, f/8-11</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#0a0a1a"/>
+  <circle cx="100" cy="80" r="1" fill="#fff"/>
+  <circle cx="200" cy="60" r="1.5" fill="#fff"/>
+  <circle cx="300" cy="100" r="1" fill="#fff"/>
+  <circle cx="400" cy="70" r="1" fill="#fff"/>
+  <circle cx="500" cy="90" r="1.5" fill="#fff"/>
+  <circle cx="150" cy="150" r="1" fill="#fff"/>
+  <circle cx="250" cy="130" r="1" fill="#fff"/>
+  <circle cx="350" cy="160" r="1.5" fill="#fff"/>
+  <circle cx="450" cy="140" r="1" fill="#fff"/>
+  <circle cx="550" cy="120" r="1" fill="#fff"/>
+  <path d="M 200 200 Q 250 180 300 200 T 400 200" stroke="#4a90e2" stroke-width="2" fill="none" opacity="0.6"/>
+  <text x="325" y="250" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Звездное небо</text>
+  <text x="325" y="280" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">14-24mm, f/2.8-4.0, ISO 3200-6400</text>
+  <text x="325" y="300" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">Выдержка: 15-30 сек</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sunsetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff4500;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="650" height="400" fill="url(#sunsetGrad)"/>
+  <circle cx="325" cy="120" r="50" fill="#ff8c00" opacity="0.9"/>
+  <polygon points="0,280 650,280 650,400 0,400" fill="#1a1a1a"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Закат</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">16-35mm, f/8-13</text>
+</svg>

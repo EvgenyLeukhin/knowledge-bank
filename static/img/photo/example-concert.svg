@@ -1,0 +1,13 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#1a1a2e"/>
+  <rect x="0" y="300" width="650" height="100" fill="#2c3e50"/>
+  <circle cx="325" cy="150" r="30" fill="#ffd700" opacity="0.8"/>
+  <ellipse cx="200" cy="200" rx="20" ry="40" fill="#4a90e2" opacity="0.6"/>
+  <ellipse cx="450" cy="200" rx="20" ry="40" fill="#ff6347" opacity="0.6"/>
+  <rect x="250" y="280" width="150" height="80" fill="#333" rx="5"/>
+  <circle cx="275" cy="310" r="5" fill="#ffd700"/>
+  <circle cx="325" cy="310" r="5" fill="#ffd700"/>
+  <circle cx="375" cy="310" r="5" fill="#ffd700"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Концерты / Ночные клубы</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">24-70mm, f/2.8-4.0, ISO 1600-6400</text>
+</svg>

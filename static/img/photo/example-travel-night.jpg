@@ -1,0 +1,14 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#1a1a2e"/>
+  <circle cx="100" cy="80" r="1" fill="#fff"/>
+  <circle cx="200" cy="60" r="1" fill="#fff"/>
+  <circle cx="500" cy="90" r="1" fill="#fff"/>
+  <rect x="200" y="200" width="250" height="150" fill="#2c3e50" rx="5"/>
+  <rect x="220" y="220" width="30" height="40" fill="#ffd700"/>
+  <rect x="260" y="220" width="30" height="40" fill="#ffd700"/>
+  <rect x="300" y="220" width="30" height="40" fill="#ffd700"/>
+  <rect x="340" y="220" width="30" height="40" fill="#ffd700"/>
+  <rect x="380" y="220" width="30" height="40" fill="#ffd700"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Трэвел-фотография (ночь)</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">24-70mm, f/2.8-4.0, ISO 1600-6400</text>
+</svg>

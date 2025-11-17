@@ -1,0 +1,11 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#1a1a2e"/>
+  <circle cx="325" cy="200" r="80" fill="#e8e8e8" opacity="0.9"/>
+  <circle cx="305" cy="180" r="20" fill="#1a1a2e"/>
+  <circle cx="100" cy="80" r="1" fill="#fff"/>
+  <circle cx="200" cy="60" r="1" fill="#fff"/>
+  <circle cx="500" cy="90" r="1" fill="#fff"/>
+  <circle cx="550" cy="120" r="1" fill="#fff"/>
+  <text x="325" y="320" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Луна</text>
+  <text x="325" y="350" font-family="Arial, sans-serif" font-size="14" fill="#aaa" text-anchor="middle">200-400mm, f/5.6-8.0</text>
+</svg>

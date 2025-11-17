@@ -1,0 +1,14 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sunriseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffa500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ecdc4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="650" height="400" fill="url(#sunriseGrad)"/>
+  <circle cx="325" cy="100" r="40" fill="#ffeb3b" opacity="0.9"/>
+  <polygon points="0,300 650,300 650,400 0,400" fill="#2d5016"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Рассвет</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">16-35mm, f/8-13</text>
+</svg>
