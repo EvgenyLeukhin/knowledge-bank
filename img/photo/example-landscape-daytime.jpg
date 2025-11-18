@@ -1,0 +1,16 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#98d8c8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5016;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="650" height="400" fill="url(#dayGrad)"/>
+  <circle cx="325" cy="80" r="35" fill="#ffd700" opacity="0.9"/>
+  <polygon points="0,250 650,250 650,400 0,400" fill="#228b22"/>
+  <polygon points="100,250 150,200 200,250" fill="#2d5016"/>
+  <polygon points="450,250 500,200 550,250" fill="#2d5016"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">Дневной пейзаж</text>
+  <text x="325" y="70" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">16-35mm, f/8-11</text>
+</svg>

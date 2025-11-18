@@ -1,0 +1,10 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#e8f4f8"/>
+  <ellipse cx="200" cy="200" rx="40" ry="20" fill="#4a90e2" opacity="0.7"/>
+  <ellipse cx="450" cy="200" rx="40" ry="20" fill="#ff6347" opacity="0.7"/>
+  <line x1="240" y1="200" x2="410" y2="200" stroke="#333" stroke-width="3" stroke-dasharray="5,5"/>
+  <circle cx="325" cy="200" r="5" fill="#333"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" font-weight="bold">Спортивные мероприятия</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle">70-200mm, f/2.8-4.0, 1/500-1/2000 сек</text>
+  <text x="325" y="300" font-family="Arial, sans-serif" font-size="12" fill="#999" text-anchor="middle">AI Servo, серийная съемка</text>
+</svg>

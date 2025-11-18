@@ -1,0 +1,10 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#e8f4f8"/>
+  <rect x="50" y="100" width="550" height="250" fill="#fff" stroke="#ccc" stroke-width="2" rx="5"/>
+  <circle cx="200" cy="200" r="20" fill="#4a90e2"/>
+  <rect x="180" y="220" width="40" height="80" fill="#4a90e2"/>
+  <rect x="300" y="150" width="100" height="150" fill="#8b7355" rx="3"/>
+  <rect x="320" y="170" width="60" height="40" fill="#87ceeb"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" font-weight="bold">Storytelling</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle">35-50mm, f/4.0-5.6</text>
+</svg>

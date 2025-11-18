@@ -1,0 +1,10 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#f5f5dc"/>
+  <rect x="200" y="100" width="250" height="200" fill="#fff" stroke="#ddd" stroke-width="2" rx="5"/>
+  <circle cx="250" cy="150" r="15" fill="#ffb6c1"/>
+  <circle cx="400" cy="150" r="15" fill="#87ceeb"/>
+  <rect x="240" y="170" width="20" height="80" fill="#ffb6c1"/>
+  <rect x="390" y="170" width="20" height="80" fill="#87ceeb"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" font-weight="bold">Праздник / Свадьба</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle">24-70mm, f/2.8-4.0, 1/200-1/500 сек</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg width="650" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="650" height="400" fill="#f0fff0"/>
+  <circle cx="325" cy="200" r="80" fill="#ff69b4" opacity="0.8"/>
+  <circle cx="325" cy="200" r="60" fill="#ff1493"/>
+  <circle cx="305" cy="180" r="8" fill="#fff"/>
+  <circle cx="345" cy="180" r="8" fill="#fff"/>
+  <ellipse cx="325" cy="220" rx="20" ry="10" fill="#fff"/>
+  <text x="325" y="50" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" font-weight="bold">Макро-фотография</text>
+  <text x="325" y="75" font-family="Arial, sans-serif" font-size="14" fill="#999" text-anchor="middle">85-100mm, f/5.6-8.0</text>
+  <text x="325" y="320" font-family="Arial, sans-serif" font-size="12" fill="#999" text-anchor="middle">Цветок крупным планом</text>
+</svg>
