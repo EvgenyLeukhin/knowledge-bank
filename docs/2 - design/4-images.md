@@ -46,9 +46,9 @@ sidebar_position: 4
 ### Оптимизация изображений
 
 - [tinypng.com](https://tinypng.com/) - Уменьшить вес картинок
-- [compresspng.com](https://compresspng.com/) - Уменьшить вес картинок 2
-- [cloudconvert.com](https://cloudconvert.com/png-converter) - images converter
-- [base64](https://www.base64-image.de/) - Конвертёр img --> base64
+- [iloveimg.com](https://www.iloveimg.com/compress-image/compress-png) - Уменьшить вес картинок 2
+  <!-- - [cloudconvert.com](https://cloudconvert.com/png-converter) - images converter -->
+  <!-- - [base64](https://www.base64-image.de/) - Конвертёр img --> base64 -->
 
 ---
 
