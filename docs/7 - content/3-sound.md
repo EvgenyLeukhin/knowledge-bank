@@ -9,6 +9,16 @@ export const H3 = ({children}) => (<h3 style={{ color: '#65BAAF' }}>{children}</
 
 <a href="https://evgenyleukhin.github.io/knowledge-bank/pdf/logic-pro-user-guide.pdf" target="_blank">logic-pro-user-guide.pdf</a>
 
+---
+
+### Mixdown tracks
+
+File -> Bounce -> Project or Selection -> PCM (Wave)
+
+Structure: Arrangement (+)
+
+---
+
 <H3>Настойки программы (Ctrl + ,) - Preferences</H3>
 
 ```
