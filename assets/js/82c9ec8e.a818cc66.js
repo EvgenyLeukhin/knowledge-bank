@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkknowledge_bank=globalThis.webpackChunkknowledge_bank||[]).push([[1600],{9401(e){e.exports=JSON.parse('{"metadata":{"permalink":"/knowledge-bank/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

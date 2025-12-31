@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkknowledge_bank=self.webpackChunkknowledge_bank||[]).push([[2725],{7326:e=>{e.exports=JSON.parse('{"permalink":"/knowledge-bank/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
