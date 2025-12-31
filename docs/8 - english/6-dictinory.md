@@ -4,7 +4,8 @@ sidebar_position: 6
 ---
 
 <table id="wordlist">
-<tbody><tr><td>1</td><td>abandon</td><td>оставить, забросить</td></tr>
+<tbody>
+<tr><td>1</td><td>abandon</td><td>оставить, забросить</td></tr>
 <tr><td>2</td><td>abate</td><td>уменьшаться, ослабевать</td></tr>
 <tr><td>3</td><td>abduct</td><td>похищать</td></tr>
 <tr><td>4</td><td>abide</td><td>смириться, выносить</td></tr>

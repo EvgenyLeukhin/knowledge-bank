@@ -41,7 +41,7 @@ registry=https://npm.yandex.net/
 
 ### nvm
 
-<https://github.com/nvm-sh/nvm>
+[github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
 - Install script: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
 

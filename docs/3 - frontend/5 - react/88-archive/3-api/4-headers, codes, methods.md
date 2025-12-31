@@ -58,16 +58,23 @@ headers = {
 
 ---
 
-<ul><li><a href="#">1xx: Informational</a> (информационные):
-<ul><li><a href="#">100 Continue</a> («продолжайте»);</li>
+<ul>
+<li>
+<a href="#">1xx: Informational</a> (информационные):
+<ul>
+<li><a href="#">100 Continue</a> («продолжайте»);</li>
 <li><a href="#">101 Switching Protocols</a> («переключение протоколов»);</li>
 <li><a href="#">102 Processing</a> («идёт обработка»);</li>
-<li><a  href="#">103 Early Hints</a> («ранняя метаинформация»);</li></ul></li>
+<li><a href="#">103 Early Hints</a> («ранняя метаинформация»);</li>
+</ul>
+</li>
 
-<hr/>
+<li><hr/></li>
 
-<li><a href="#">2xx: Success</a> (успешно):
-<ul><li><a href="#">200 OK</a> («хорошо»);</li>
+<li>
+<a href="#">2xx: Success</a> (успешно):
+<ul>
+<li><a href="#">200 OK</a> («хорошо»);</li>
 <li><a href="#">201 Created</a> («создано»);</li>
 <li><a href="#">202 Accepted</a> («принято»);</li>
 <li><a href="#">203 Non-Authoritative Information</a> («информация не авторитетна»);</li>
@@ -76,12 +83,16 @@ headers = {
 <li><a href="#">206 Partial Content</a> («частичное содержимое»);</li>
 <li><a href="#">207 Multi-Status</a> («многостатусный»);</li>
 <li><a href="#">208 Already Reported</a> («уже сообщалось»);</li>
-<li><a href="#">226 IM Used</a> («использовано IM»).</li></ul></li>
+<li><a href="#">226 IM Used</a> («использовано IM»).</li>
+</ul>
+</li>
 
-<hr/>
+<li><hr/></li>
 
-<li><a href="#">3xx: Redirection</a> (перенаправление):
-<ul><li><a href="#">300 Multiple Choices</a> («множество выборов»);</li>
+<li>
+<a href="#">3xx: Redirection</a> (перенаправление):
+<ul>
+<li><a href="#">300 Multiple Choices</a> («множество выборов»);</li>
 <li><a href="#">301 Moved Permanently</a> («перемещено навсегда»);</li>
 <li><a href="#">302 Found</a> («найдено»);</li>
 <li><a href="#">303 See Other</a> («смотреть другое»);</li>
@@ -89,12 +100,16 @@ headers = {
 <li><a href="#">305 Use Proxy</a> («использовать прокси»);</li>
 <li><a href="#">306</a>&nbsp;— <i>зарезервировано</i> (код использовался только в ранних спецификациях);</li>
 <li><a href="#">307 Temporary Redirect</a> («временное перенаправление»);</li>
-<li><a href="#">308 Permanent Redirect</a> («постоянное перенаправление»).</li></ul></li>
+<li><a href="#">308 Permanent Redirect</a> («постоянное перенаправление»).</li>
+</ul>
+</li>
 
-<hr/>
+<li><hr/></li>
 
-<li><a href="#">4xx: Client Error</a> (ошибка клиента):
-<ul><li><a href="#">400 Bad Request</a> («неправильный, некорректный запрос»);</li>
+<li>
+<a href="#">4xx: Client Error</a> (ошибка клиента):
+<ul>
+<li><a href="#">400 Bad Request</a> («неправильный, некорректный запрос»);</li>
 <li><a href="#">401 Unauthorized</a> («не авторизован»);</li>
 <li><a href="#">402 Payment Required</a> («необходима оплата»)&nbsp;— <i>зарезервировано</i> для использования в будущем;</li>
 <li><a href="#">403 Forbidden</a> («запрещено (не уполномочен)»);</li>
@@ -125,12 +140,16 @@ headers = {
 <li><a href="#">431 Request Header Fields Too Large</a> («поля заголовка запроса слишком большие»);</li>
 <li><a href="#">449 Retry With</a> («повторить с»);</li>
 <li><a href="#">451 Unavailable For Legal Reasons</a> («недоступно по юридическим причинам»).</li>
-<li><a href="#">499 Client Closed Request</a> (клиент закрыл соединение);</li></ul></li>
+<li><a href="#">499 Client Closed Request</a> (клиент закрыл соединение);</li>
+</ul>
+</li>
 
-<hr/>
+<li><hr/></li>
 
-<li><a href="#">5xx: Server Error</a> (ошибка сервера):
-<ul><li><a href="#">500 Internal Server Error</a> («внутренняя ошибка сервера»);</li>
+<li>
+<a href="#">5xx: Server Error</a> (ошибка сервера):
+<ul>
+<li><a href="#">500 Internal Server Error</a> («внутренняя ошибка сервера»);</li>
 <li><a href="#">501 Not Implemented</a> («не реализовано»);</li>
 <li><a href="#">502 Bad Gateway</a> («плохой, ошибочный шлюз»);</li>
 <li><a href="#">503 Service Unavailable</a> («сервис недоступен»);</li>
@@ -148,7 +167,10 @@ headers = {
 <li><a href="#">523 Origin Is Unreachable</a> («источник недоступен»);</li>
 <li><a href="#">524 A Timeout Occurred</a> («время ожидания истекло»);</li>
 <li><a href="#">525 SSL Handshake Failed</a> («квитирование SSL не удалось»);</li>
-<li><a href="#">526 Invalid SSL Certificate</a> («недействительный сертификат SSL»).</li></ul></li></ul>
+<li><a href="#">526 Invalid SSL Certificate</a> («недействительный сертификат SSL»).</li>
+</ul>
+</li>
+</ul>
 
 ---
 

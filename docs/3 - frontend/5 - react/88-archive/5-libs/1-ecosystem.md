@@ -11,7 +11,7 @@ sidebar_position: 7
 - [classnames](https://www.npmjs.com/package/classnames)
 - [normalize.css](https://necolas.github.io/normalize.css/)
 - Глобальные стили (import global.scss)
-- Точечная инлайн стилизация через style={{ ... }}
+- Точечная инлайн стилизация через `style={{ ... }}`
 - ~~JSS~~
 - ~~styled-component~~
 

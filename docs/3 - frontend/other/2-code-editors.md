@@ -243,7 +243,7 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 - <kbd>Cmd + Shift + E</kbd>&nbsp;&ndash;&nbsp;Editor
 - <kbd>Cmd + Shift + X</kbd>&nbsp;&ndash;&nbsp;Extentions
 - <kbd>Cmd + Shift + R</kbd>&nbsp;&ndash;&nbsp;Thunder Client
-- <kbd>Cmd + \</kbd>&nbsp;&ndash;&nbsp;Divide window
+- <kbd>Cmd + \\</kbd>&nbsp;&ndash;&nbsp;Divide window
 - <kbd>Option + Z</kbd>&nbsp;&ndash;&nbsp;Переносы строк
 - <kbd>Option + H</kbd>&nbsp;&ndash;&nbsp;Открыть список коммитов (git log)
 - <kbd>Option + Esc</kbd>&nbsp;&ndash;&nbsp;Открыть suggestions menu
@@ -358,7 +358,7 @@ Configure Language в консоли - смена языка на англ (en)
 - <kbd>Ctrl + B</kbd> - Сайдбар
 - <kbd>Alt + ↑↓</kbd> - Переместить строку
 - <kbd>F11</kbd> - Полноэкранный режим
-- <kbd>Ctrl + \</kbd> - Разделение окна
+- <kbd>Ctrl + \\</kbd> - Разделение окна
 
 ### Package control
 

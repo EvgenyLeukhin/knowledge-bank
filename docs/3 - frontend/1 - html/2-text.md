@@ -3,7 +3,7 @@ title: Текст
 sidebar_position: 2
 ---
 
-- <https://emojipedia.org/> - символьные иконки
+- [emojipedia.org](https://emojipedia.org/) - символьные иконки
 - [emojio.ru](https://emojio.ru/) | [getemoji.com](https://getemoji.com/) | [freecodecamp.org](https://www.freecodecamp.org/news/all-emojis-emoji-list-for-copy-and-paste/) - Emoji (текстовые символьные иконки)
 - [W3schools](https://www.w3schools.com/charsets/ref_utf_symbols.asp) | [Unicode-table](https://unicode-table.com/ru/html-entities/) | [Html5book](https://html5book.ru/specsimvoly-html) - Символы
 
@@ -32,8 +32,8 @@ sidebar_position: 2
 | Символ | Описание           | Мнемоника  | HTML-код  | HTML-Юникод | JS-Юникод |
 | ------ | ------------------ | ---------- | --------- | ----------- | --------- |
 |        | Неразрывный пробел | `&nbsp;`   | `&#160;`  | `&#x00A0;`  | `\u00A0`  |
-| **<**  | Знак меньше        | `&lt;`     | `&#60;`   | `&#x003C;`  | `\u003C`  |
-| **>**  | Знак больше        | `&gt;`     | `&#62;`   | `&#x003E;`  | `\u003E`  |
+| **&lt;**  | Знак меньше        | `&lt;`     | `&#60;`   | `&#x003C;`  | `\u003C`  |
+| **&gt;**  | Знак больше        | `&gt;`     | `&#62;`   | `&#x003E;`  | `\u003E`  |
 | **‐**  | Дефис              | `&hyphen;` | `&#8208;` | `&#x2010;`  | `\u2010`  |
 | **–**  | Среднее тире       | `&ndash;`  | `&#8211;` | `&#x2013;`  | `\u2013`  |
 | **—**  | Длинное тире       | `&mdash;`  | `&#8212;` | `&#x2014;`  | `\u2014`  |

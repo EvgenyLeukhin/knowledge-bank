@@ -177,7 +177,7 @@ npx react-native@X.XX.X init AwesomeProject --version X.XX.X
 
 ### 3 вариант: Expo CLI
 
-<https://expo.dev/> - Expo CLI docs
+[expo.dev](https://expo.dev/) - Expo CLI docs
 
 npm-пакет для экспортирования сборок на android и ios платформы.
 

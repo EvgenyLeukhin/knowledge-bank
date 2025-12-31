@@ -281,7 +281,7 @@ V. Делаем форсированный пуш
 
 ---
 
-## GitHub CLI (<https://cli.github.com/>)
+## GitHub CLI ([cli.github.com](https://cli.github.com/))
 
 ```sh
 # install github cli

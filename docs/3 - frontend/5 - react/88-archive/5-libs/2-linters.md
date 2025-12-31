@@ -185,12 +185,14 @@ ESLint — это утилита, которая может анализиров
 
 ### 3. `.vscode/settings.json` (Нужно установить плагин в браузере ESLint)
 
+```json
 {
 "editor.codeActionsOnSave": {
 "source.fixAll.eslint": true
 },
 "eslint.validate": ["javascript"]
 }
+```
 
 ---
 
@@ -264,6 +266,7 @@ ESLint — это утилита, которая может анализиров
 
 ### 2. Конфиг `.prettierrc`
 
+```json
 {
 "endOfLine": "auto",
 "singleQuote": true,
@@ -274,6 +277,7 @@ ESLint — это утилита, которая может анализиров
 "trailingComma": "all",
 "tabWidth": 2
 }
+```
 
 ---
 

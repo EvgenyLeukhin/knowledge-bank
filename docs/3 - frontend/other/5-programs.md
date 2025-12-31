@@ -58,7 +58,7 @@ sidebar_position: 5
 
 Install:
 
-1. <https://brew.sh> --> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""`
+1. [brew.sh](https://brew.sh) --> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)""`
 2. Add Brew to PATH:
 
 - `(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/evgenyleukhin/.zprofile`

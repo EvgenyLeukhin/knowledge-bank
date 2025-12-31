@@ -326,7 +326,8 @@ btn.addEventListener('click', function (event) {
 <tr>
 <td><a href="#">abort</a></td>
 <td>The loading of a media is aborted</td>
-<td><a href="#">UiEvent</a>, <a href="#">Event</a></td></tr>
+<td><a href="#">UiEvent</a>, <a href="#">Event</a></td>
+</tr>
 <tr>
 <td><a href="#">afterprint</a></td>
 <td>A page has started printing</td>
