@@ -1,5 +1,5 @@
 ---
-title: Референсы
+title: Ссылки
 sidebar_position: 15
 ---
 
