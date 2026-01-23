@@ -8,6 +8,18 @@ sidebar_position: 15
 - [Behance](https://www.behance.net/) - концепты, дизайны (вход через google)
 - [Pinterest](https://www.behance.net/) - концепты, дизайны (вход через google)
 
+---
+
+## Фото по объективам (sample photos)
+
+Можно смотреть примеры фото на объектив, чтобы узнать нужно ли его покупать
+
+- [onfotolife.com](https://onfotolife.com)
+- [flickr.com](https://www.flickr.com)
+- [dpreview.com](https://www.dpreview.com)
+
+---
+
 ## Фотографы
 
 - [Mark Jaworski](https://www.markjaworskistudios.com/) - канадский уличный фотограф
