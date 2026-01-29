@@ -1,5 +1,5 @@
 ---
-title: Null & undefined +
+title: Null & undefined
 sidebar_position: 6
 ---
 

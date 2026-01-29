@@ -1,5 +1,5 @@
 ---
-title: О языке +
+title: О языке
 sidebar_position: 0
 ---
 

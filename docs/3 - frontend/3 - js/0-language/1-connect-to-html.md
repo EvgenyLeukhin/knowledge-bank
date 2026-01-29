@@ -1,5 +1,5 @@
 ---
-title: Подключение к html +
+title: Подключение к html
 sidebar_position: 1
 ---
 

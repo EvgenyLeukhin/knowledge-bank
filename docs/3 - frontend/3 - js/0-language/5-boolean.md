@@ -1,5 +1,5 @@
 ---
-title: Boolean +
+title: Boolean
 sidebar_position: 5
 ---
 

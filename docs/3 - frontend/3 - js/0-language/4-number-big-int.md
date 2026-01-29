@@ -1,5 +1,5 @@
 ---
-title: Number & BigInt +
+title: Number & BigInt
 sidebar_position: 4
 ---
 
