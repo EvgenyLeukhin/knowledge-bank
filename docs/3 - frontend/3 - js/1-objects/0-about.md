@@ -233,11 +233,18 @@ cart.total(); // 15
 ### Пример ФП‑подход (чистые функции)
 
 ```js
+// объявляем массив для состояния
+let items = [];
+
+// функции-обработчики
 const addItem = (items, item) => [...items, item];
 const total = items => items.reduce((sum, i) => sum + i.price, 0);
-let items = [];
+
+// добавляем товары
 items = addItem(items, { name: 'Book', price: 10 });
 items = addItem(items, { name: 'Pen', price: 5 });
+
+// узнаём цену
 total(items); // 15
 ```
 
