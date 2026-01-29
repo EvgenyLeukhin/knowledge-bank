@@ -3,6 +3,21 @@ title: Свойство как метод
 sidebar_position: 1
 ---
 
+## this
+
+`this` — это ссылка на объект, в контексте которого выполняется функция. Нужно в синтаксисе для методов, чтобы была связь с передаваемым объектом.
+
+```js
+const user = {
+  name: 'Ann',
+  printName() {
+    console.log(this.name);
+  },
+};
+
+user.printName(); // 'Ann'
+```
+
 ## Методы внутри объекта
 
 ```js
@@ -38,6 +53,8 @@ const person = {
 };
 ```
 
+---
+
 ## Вызовы методов
 
 ```js
@@ -45,13 +62,13 @@ person.printName1(); // 'name' 'Jack'
 
 person.printName2(); // 'name' 'Jack'
 
-person.printName3(); // 'name:' ''
+person.printName3(); // 'name:' '' из-за стрелочной функции
 
-person.changeAge(30);
+person.changeAge(30); // меняем age
 
 person.age; // 30
 
-person.upAge();
+person.upAge(); // меняем age
 
 person.age; // 31
 ```
@@ -60,13 +77,82 @@ person.age; // 31
 
 ## call, bind, apply
 
-TODO
+Применяются редко, но нужно знать. Встроенные методы функций для работы с объектами.
+
+### call
+
+Можно создать отдельную функцию и вызывать её для разных объектов. Одна функция — много объектов. Вы пишете логику один раз, а конкретные данные берутся из this.
+`.call` передаёт `this`.
+
+```js
+const person1 = { name: 'Alice' };
+const person2 = { name: 'Mary' };
+
+// создаём универсальную функцию для взаимодействия с разными объектами
+function greet1() {
+  console.log(`Hello, ${this.name}`);
+}
+
+// функция с агрументом
+function greet2(greeting) {
+  console.log(`${greeting}, ${this.name}`);
+}
+
+// .call - вызов самой функции
+greet1.call(person1); // 'Hello, Alice'
+greet1.call(person2); // 'Hello, Mary'
+
+greet2.call(person1, 'Hello'); // 'Hello, Alice'
+greet2.call(person2, 'Hi'); // 'Hi, Mary'
+```
+
+---
+
+### bind
+
+Ключевая идея: `.bind` создаёт новую функцию с уже «прикреплённым» this (и, при необходимости, аргументами). `.bind` позволяет сохранять результат в виде новой функции.
+
+```js
+...
+
+const greetAlice = greet1.bind(person1);
+const greetMary = greet1.bind(person2);
+
+// .bind - вызов новых созданных функции
+greetAlice(); // 'Hello, Alice'
+greetMary(); // 'Hello, Mary'
+
+// можно зафиксировать и аргумент
+const sayHelloToAlice = greet2.bind(person1, 'Hello');
+const sayHiToMary = greet2.bind(person2, 'Hi');
+
+sayHelloToAlice(); // 'Hello, Alice'
+sayHiToMary(); // 'Hi, Mary'
+```
+
+---
+
+### apply
+
+Ключевая идея: `.apply` работает как .call, но аргументы передаются массивом.
+
+```js
+...
+
+// .apply - без аргументов работает как .call - вызывается исходная функция
+greet1.apply(person1); // 'Hello, Alice'
+greet1.apply(person2); // 'Hello, Mary'
+
+// apply принимает аргументы массивом - вызывается исходная функция
+greet2.apply(person1, ['Hello']); // 'Hello, Alice'
+greet2.apply(person2, ['Hi']);    // 'Hi, Mary'
+```
 
 ---
 
 ## get/set
 
-Если нужно изменить вызов метода на присвоение, то можно добавлять существующим методам в начале ключевые слова get или set. Get - если метод только получает данные полей объекта, set - если изменяет.
+Применяются редко, но нужно знать. Если нужно изменить вызов метода на присвоение, то можно добавлять существующим методам в начале ключевые слова get или set. Get - если метод только получает данные полей объекта, set - если изменяет.
 
 - `get` — доступ как к свойству, без ()
 - `set` — изменение через присваивание
@@ -139,6 +225,8 @@ const user = {
 // присваиваем значение полю, и при этом будет как бы отрабатывать метод, меняющий значение других полей
 user.changeFullName = 'John Smith';
 
+user.first; // 'John'
+
 // будет работать аналогично, если убрать ключевое слово set из метода
-user.changeFullName('John Smith'); // 'TypeError: user.changeFullName is not a function'
+// user.changeFullName('John Smith'); // 'TypeError: user.changeFullName is not a function'
 ```
