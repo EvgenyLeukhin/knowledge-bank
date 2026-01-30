@@ -35,6 +35,18 @@ person.age = 33;
 Object.hasOwn(person, 'age'); // true
 ```
 
+Ещё один гиковский способ
+
+```js
+const person = {
+  firstName: 'John',
+  lastName: 'Smith',
+};
+
+'firstName' in person; // true
+'age' in person; // false
+```
+
 ---
 
 ## Object.keys, Object.values, Object.entries
