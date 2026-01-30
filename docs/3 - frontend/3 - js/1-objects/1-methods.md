@@ -23,7 +23,7 @@ user.printName(); // 'Ann'
 ```js
 const person = {
   name: 'Jack',
-  age: 35,
+  age: 33,
 
   // I способ - полная запись
   printName1: function () {
@@ -64,18 +64,20 @@ person.printName2(); // 'name' 'Jack'
 
 person.printName3(); // 'name:' '' из-за стрелочной функции
 
-person.changeAge(30); // меняем age
+person.age; // 33 - исходное
 
-person.age; // 30
+person.changeAge(35); // меняем age
+
+person.age; // 35 - поменялось на 35
 
 person.upAge(); // меняем age
 
-person.age; // 31
+person.age; // 36 - увеличилось на 1
 ```
 
 ---
 
-## call, bind, apply
+## call, bind, apply\*
 
 Применяются редко, но нужно знать. Встроенные методы функций для работы с объектами.
 
@@ -134,7 +136,7 @@ sayHiToMary(); // 'Hi, Mary'
 
 ### apply
 
-Ключевая идея: `.apply` работает как .call, но аргументы передаются массивом.
+Ключевая идея: `.apply` работает как .call, но аргументы передаются массивом, удобно когда аргумент - массив.
 
 ```js
 ...
@@ -150,7 +152,7 @@ greet2.apply(person2, ['Hi']);    // 'Hi, Mary'
 
 ---
 
-## get/set
+## get/set\*
 
 Применяются редко, но нужно знать. Если нужно изменить вызов метода на присвоение, то можно добавлять существующим методам в начале ключевые слова get или set. Get - если метод только получает данные полей объекта, set - если изменяет.
 
@@ -183,7 +185,7 @@ user.printFullName; // 'Ann Lee'
 user.changeFullName = 'John Smith';
 ```
 
-### get
+### get\*
 
 Если нужно обращаться к методу как к свойству, то перед этим методом нужно поставить ключевое слово get.
 
@@ -202,12 +204,12 @@ const user = {
 user.printFullName; // 'Ann Lee'
 
 // будет работать аналогично, если убрать ключевое слово get из метода
-user.printFullName(); // "TypeError: user.fullName is not a function"
+// user.printFullName(); // "TypeError: user.fullName is not a function"
 ```
 
 ---
 
-### set
+### set\*
 
 Если нужно умноё поле, котое через присваиваемое (set) значение меняет свойства. Может принимать только один параметр
 
