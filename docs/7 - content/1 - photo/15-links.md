@@ -7,6 +7,7 @@ sidebar_position: 15
 
 - [Behance](https://www.behance.net/) - концепты, дизайны (вход через google)
 - [Pinterest](https://www.behance.net/) - концепты, дизайны (вход через google)
+- [mywed.com](https://mywed.com/ru/photo/) - свадебные фотографии
 
 ---
 
@@ -17,6 +18,7 @@ sidebar_position: 15
 - [onfotolife.com](https://onfotolife.com)
 - [flickr.com](https://www.flickr.com)
 - [dpreview.com](https://www.dpreview.com)
+
 
 ---
 

@@ -90,6 +90,37 @@ Object.entries(someObj).forEach(([key, value]) => {
 
 ---
 
+## Цикл for-of
+
+```js
+const person = {
+  name: 'John',
+  surname: 'Smith',
+  age: 37,
+};
+
+const keys = Object.keys(person); // ключи
+const values = Object.values(person); // значчения
+const entries = Object.entries(person); // массивы [ключ, значение]
+
+// вывод всех названий полей
+for (const key of keys) {
+  console.log(key);
+}
+
+// вывод всех значчений полей
+for (const value of values) {
+  console.log(value);
+}
+
+// вывод всех ключей и значений
+for (const [key, value] of entries) {
+  console.log(key, value);
+}
+```
+
+---
+
 ## Object.fromEntries
 
 Обратная операция, из массива в объект
