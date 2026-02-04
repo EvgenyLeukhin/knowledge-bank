@@ -231,3 +231,55 @@ obj.id = 123;
 
 obj.id; // 1
 ```
+
+---
+
+## Optional chaining
+
+Если будет обращение к несуществующему вложенному полю несуществующего поля, чтобы не возникало краш-ошибки нужно пользоваться optional chaining.
+
+```js
+const person = {
+  name: 'Evgeny',
+  sername: 'Leukhin',
+  age: 33,
+  // wife: {
+  //   name: 'Inna',
+  //   surname: 'Begunova',
+  // }
+};
+// обращаемся к несуществующему полю на первом уровне
+person.sister; // undefined - ошибки не будет
+
+// обращаемся к несуществующему полю на первом уровне
+person.sister.age; // Uncaught TypeError: Cannot read properties of undefined (reading 'name')
+
+// c optional chaining
+person.sister?.age; // undefined
+person.sister?.[age]; // undefined
+```
+
+---
+
+## Object.create
+
+Более гибкое создание объекта.
+
+**proto** - особое свойство всех объектов, в котором нельзя что-либо изменять. Содержит много встроенных свойств.
+
+Можно создавать объекты-прототипы
+
+```js
+// с помощью класса Object принимает объект прототип
+// создание объекта с наследуемыми свойствами в прототипе
+const b = Object.create(
+  // поля прототипы (запишутся в **proto**)
+  { x: 10, y: 20 },
+
+  // реальные поля
+  {
+    name: { value: 'John' },
+    surname: { value: 'Smith' },
+  },
+);
+```
