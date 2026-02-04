@@ -93,8 +93,17 @@ copy.skills === user.skills; // true (вложенныйh  массив общи
 
 copy.skills.push('node');
 
-deepCopy.skills; // [ 'js', 'react', 'node' ]
+copy.skills; // [ 'js', 'react', 'node' ]
 user.skills; // ['js', 'react', 'node']
+```
+
+Можно исправить через spread на каждом уровне
+
+```js
+const copy = {
+  ...user,
+  skills: [...user.skills],
+};
 ```
 
 ---
