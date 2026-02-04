@@ -106,7 +106,7 @@ someObj[fieldName]; // 'This is value of js-object property'
 someObj.key9(); // '123'
 
 // вызов несуществующего метода
-someObj.key1(); // Будет ошибка "TypeError: person.upAge2 is not a function"
+someObj.key1(); // Будет ошибка "TypeError: person.key1 is not a function"
 ```
 
 ```js
