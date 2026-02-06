@@ -15,22 +15,35 @@ sidebar_position: 15
 
 Можно смотреть примеры фото на объектив, чтобы узнать нужно ли его покупать
 
-- [onfotolife.com](https://onfotolife.com)
 - [flickr.com](https://www.flickr.com)
+- [onfotolife.com](https://onfotolife.com)
 - [dpreview.com](https://www.dpreview.com)
 
 
 ---
 
-## Фотографы
+## Улица
 
 - [Mark Jaworski](https://www.markjaworskistudios.com/) - канадский уличный фотограф
 - [LUKAS PALKA](https://www.lkazphoto.com/) - уличный польский фотограф, живёт в Токио
+
+---
+
+## Портреты
+
 - [Benoit Auguste](https://www.benoitauguste.com/photographs) - фотограф-портретист из Парижа
 
 ---
 
-## 20 век
+## Ню
+
+- [Марат Сафин](https://vk.com/maratneva) - ню-фотограф
+
+---
+
+## Классика
+
+### 20 век
 
 - William Klein (1926 - 2022)
 - Robert Frank (1924 - 2019)
@@ -38,7 +51,9 @@ sidebar_position: 15
 - Jacques Henri Lartigue (1894 - 1986)
 - Henri Cartier-Bresson (1908 - 2004)
 
-## СССР
+---
+
+### СССР
 
 - Евгений Халдей (1917-1997)
 - Абрамочкин Юрий (1936-2018)
