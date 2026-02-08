@@ -3,6 +3,11 @@ title: Видео ---
 sidebar_position: 3
 ---
 
+## Полезные ссылки
+
+- [Убрать шум с аудио-файла](https://rtcd.io/ru/audio-noise-reduction/)
+- [Скачать видео/аудио с YouTube](https://ru.get-save.com/1-1/)
+
 ## Съёмка видео на iPhone
 
 TODO
