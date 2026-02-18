@@ -130,3 +130,24 @@ a; // 'value1'
 b; // 'value2'
 c; // 'value3'
 ```
+
+---
+
+---
+
+## Сокращённая запись свойств (property shorthand)
+
+```js
+const { firstName, lastName } = user;
+
+const foo = {
+  firstName: firstName,
+  lastName: lastName,
+};
+
+// название полей будет совпадать с названиями переменных и будет присвоено значение этих переменныъ
+const bar = {
+  firstName,
+  lastName,
+};
+```

@@ -468,6 +468,6 @@ console.log(CONST); // CONST is not defined
 ```
  - `kebab-case` — составные части переменной разделяются дефисом. Например: my-super-var.
 - `snake_case` — для разделения используется подчеркивание. Например: my_super_var.
-- `CamelCase` — каждое слово в переменной пишется с заглавной буквы. Например: MySuperVar.
+- `UpperCamelCase` — каждое слово в переменной пишется с заглавной буквы. Например: MySuperVar.
 - `lowerCamelCase` - стандарт в JS
 ```
