@@ -17,6 +17,7 @@ sidebar_position: 8
 - `—` hyphen / minus
 - `=` — equals sign
 - `+` plus sign
+- `*` asteriscum
 - `%` — percent sign
 - `< >` — less‑than / greater‑than
 
