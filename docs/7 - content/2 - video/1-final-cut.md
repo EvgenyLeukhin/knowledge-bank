@@ -5,49 +5,67 @@ sidebar_position: 1
 
 Начало нового проекта
 
-1. Создаём библиотеку на внешнем SSD
-   File --> New --> Library
+0. Открываем бибилиотеку: `File` --> `Open Library` (если не создана, то создаём)
 
-2. Создаём новый проект
-   Кликаем "New project"
+1. Создаём библиотеку на внешнем SSD:
+   `File` --> `New` --> `Library`
+
+2. Создаём новый проект `File` --> `New` --> `Project`.
+   Или кликаем "New project" на треке
 
 ---
 
 ## Tools
 
-B - Blade tool
-Export: `Cmd + A` -> Export button -> Master file
+`A` - Select (для выделения фрагментов)
+`T` - Trim (для обрезки фрагментов)
+`P` - Position (для переноски фрагментов)
+`B` - Blade (для разрезки фрагментов)
+`Z` - Zoom
+`H` - Hand
 
 ---
 
-## Effects
+## Effects и Transitions
 
-Effects - Правая панель снизу
-Заголовки - Titles сверху слева
-
----
-
-## Transitions and Effects
-
-Иконка перевернутой песочницы --> Самый ходовой эффект "Fade to color"
+- `Effects`. Иконка в виде двойного прямоугольника. Что-то вроде набора фильтров.
+- `Transitions`. Иконка перевернутой песочницы. Переходы между фрагментами. Самый ходовой эффект `Fade to color`
 
 ---
 
 ## Titles
 
-Слева сверху иконка Т
+`Заголовки` - Titles сверху слева. Слева сверху иконка Т
 
 ---
 
-## Transform
+## Панель настроек
 
-Position, Rotations, Scale, Anchor
+### Transform
 
-Слева сверху пункт Transform, где можно двигать ползунки и кадрировать и масштабировать.
+- **Обработка видео**: Transform, Position, Rotations, Scale, Anchor (кадрировать и масштабировать и т. д.)
+- **Цветокоррекция**
+- **Аудио-настройка**
+- **Inspector**
 
 ---
 
-## Export - Best Quality
+### Inspector
+
+`Cmd + 4`
+
+### LUTs
+
+- Выделить фрагмент в треке
+- Открыть Inpector
+- Снизу `Basic` поменять на `General`
+- `Camera LUT` --> `Apple LOG`, `None` или `Custom LUT`
+
+---
+
+## Export
+
+### Best Quality
 
 Лучшее качество, будет очень тяжелый файл.
 
@@ -62,7 +80,7 @@ Settings --> Video Codec
 
 ---
 
-## Export - Social Platforms
+### Social Platforms
 
 Оптимизированный файл для загрузки в соц. сети.
 
@@ -70,7 +88,6 @@ Settings --> Video Codec
 
 ---
 
-## Export - Instagram
+### Instagram
 
-Export for Instagram:
-Window -> Project Properties -> Modify -> Custom 1080 X 1350, Scale 223%
+`Window` -> `Project Properties` -> `Modify` -> `Custom 1080 X 1350, Scale 223%`
