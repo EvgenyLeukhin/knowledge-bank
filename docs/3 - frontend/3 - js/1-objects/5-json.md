@@ -87,6 +87,23 @@ safeJson;
 // }'
 ```
 
+```js
+const a = {
+  a: 1,
+  b: true,
+  c: null,
+  d: function () {
+    console.log(123);
+  },
+  e: undefined,
+  f: [],
+  g: '',
+};
+
+// undefined и функции игнорируются
+const b = JSON.stringify(a); // '{"a":1,"b":true,"c":null,"f":[],"g":""}'
+```
+
 ---
 
 ## Передача кода функции в JSON
