@@ -73,7 +73,7 @@ showName('John', 'Smith'); // 'Fullname is John Smith'
 
 Применяется тогда, когда мы заранее не знаем сколько может быть передано параметров.
 
-Допустим, нужно создать функцию, котороя будет считать сумму всех переданных параметовю
+Допустим, нужно создать функцию, котороя будет считать сумму всех переданных параметов.
 
 ### Все параментры
 
@@ -81,7 +81,7 @@ showName('John', 'Smith'); // 'Fullname is John Smith'
 const calcSumm = (...args) => {
   return args.reduce((total, item) => {
     if (typeof item === 'number') {
-      total = total + item;
+      total = total + item; // total += item;
     }
 
     return total;
