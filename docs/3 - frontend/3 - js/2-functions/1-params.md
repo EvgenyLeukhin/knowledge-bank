@@ -1,5 +1,5 @@
 ---
-title: Параметры
+title: Параметры +
 sidebar_position: 1
 ---
 
