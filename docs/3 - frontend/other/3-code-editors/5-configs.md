@@ -1,6 +1,6 @@
 ---
-title: Редакторы кода
-sidebar_position: 2
+title: Прочие конфиги
+sidebar_position: 5
 ---
 
 export const CODE = ({children}) => (
