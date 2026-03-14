@@ -51,20 +51,51 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
 
 ---
 
-## Most wanted plugins
+## Плагины
 
-- **JavaScript and TypeScript Nightly** - поддержка версий JavaScript and TypeScript grammar
-- **ESLint** - поддержка ESLint (JS/TS линтер)
-- **ES7+ React/Redux/React-Native snippets** - JS сниппеты
+- **GitLens**
 - **Auto Rename Tag** - одновременное исправление парных тегов
+- **GitLens**
 - **EditorConfig for VS Code** - конфиг базовых настроек редактора
-- **Prettier - Code formatter** - форматирование кода
-- **npm Intellisense** - поддержка импортов npm-пакетов
-- **Mithril Emmet** - сниппеты для быстрого разворачивание HTML, CSS, JSX
-- **Tabnine: AI Chat & Autocomplete** - AI чат в редакторе
-- **Import Cost** (показывает размеры пакетов или файлов)
-- **Live server** (открытие html-файлов в браузере, dev-server)
+- **ES7+ React/Redux/React-Native snippets** - JS сниппеты
+- **ESLint** - поддержка ESLint (JS/TS линтер)
+- **GitLens** (расширение для Git)
+- **Git History**
 - **HTMLHint** (html-валидатор);
+- **Import Cost** (показывает размеры пакетов или файлов)
+- **JavaScript (ES6) code snippets**
+- **JavaScript and TypeScript Nightly** - поддержка версий JavaScript and TypeScript grammar
+- **Live server** (открытие html-файлов в браузере, dev-server)
+- **Live Share** (шеринг кода)
+- **markdownlint** (md-линтер)
+- **Mithril Emmet** - сниппеты для быстрого разворачивание HTML, CSS, JSX
+- **npm Intellisense** - поддержка импортов npm-пакетов
+- **NPM Scripts** (запуск npm-скриптов)
+- **Prettier - Code formatter** - форматирование кода
+- **Prettier ESLint**
+- **Russian Language Pack for Visual Studio Code**
+- **SVG** (svg syntax)
+- **Svg Preview** (svg-превью)
+- **Thunder Client** (тестирование API)
+- **Todo Tree** (показывает список всех TODO в проекте)
+- **TypeScript Debugger**
+- **vscode-pdf** (поддержка pdf)
+- **YAML**
+
+---
+
+## Дополнительно
+
+- **Docker** (поддержка Docker)
+- **REST Client** (аналог Thunder Client)
+- **SFTP** (FTP-доступ к серверу прямо из редактора)
+- **Database client** (редактирование БД из редактора)
+- **MJML** (поддерка mjml файлов)
+- **Sublime Text Keymap and Settings Importer** (шорткаты как в Sublime Text 3)
+- **Auto open Markdown preview** (md-превью)
+- **Template Generator** (генерирует сниппеты кода)
+- **Colonize** (добавление точки с запятой _Shift/Alt + Enter_)
+- **Tabnine: AI Chat & Autocomplete** - AI чат в редакторе (платный)
 
 ---
 
@@ -101,37 +132,6 @@ Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shel
   }
 }
 ```
-
----
-
-## Helpful
-
-- **Git History** (Git-client)
-- **GitLens** (расширение для Git)
-- **NPM Scripts** (запуск npm-скриптов)
-- **TODO Tree** (показывает список всех TODO в проекте)
-- **Live Share** (шеринг кода)
-- **Docker** (поддержка Docker)
-- **markdownlint** (md-линтер)
-
----
-
-## Plugins (optional)
-
-- **Thunder Client** (тестирование API)
-- **REST Client** (аналог Thunder Client)
-- **Svg Preview** (svg-превью)
-- **SFTP** (FTP-доступ к серверу прямо из редактора)
-- **vscode-pdf** (поддержка pdf)
-- **SVG** (svg syntax)
-- **Database client** (редактирование БД из редактора)
-- **TailWind CSS IntelliSense** (Css IntelliSence)
-- **MJML** (поддерка mjml файлов)
-- **Sublime Text Keymap and Settings Importer** (шорткаты как в Sublime Text 3)
-- **Auto open Markdown preview** (md-превью)
-- **Template Generator** (генерирует сниппеты кода)
-- **GitHub Copilot** (AI - не работает в РФ)
-- **Colonize** (добавление точки с запятой _Shift/Alt + Enter_)
 
 ---
 
