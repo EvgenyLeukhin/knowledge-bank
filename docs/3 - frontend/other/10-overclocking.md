@@ -17,11 +17,19 @@ sidebar_position: 10
 
 Можно попробовать комбинацию: `42.0` и `1.20000`, `44.0` и `1.22500`, `46.0` и `1.30000`
 
-### Дополнительно
+### Дополнительно (если есть такие настройки)
+
+- VDDCR CPU Current Capability: `130%`
+- VDDCR SOC Current Capability: `130%`
+- VDDCR SOC Current Calibration: `Level 3`
+
+---
 
 - Advanced → PCI Subsystem Settings
   - Above 4G Decoding → `Enabled`
   - Resizable BAR → `Enabled`
+
+---
 
 - Advanced → AMD CBS → CPU Common Options
   - CPPC → `Enabled`
