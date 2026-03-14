@@ -10,6 +10,15 @@ sidebar_position: 10
 - Advanced → AMD Overclocking → `Precision Boost Overdrive`
 - Curve Optimizer → Negative -> All cores → -`20`
 
+- OC Tuner: `Keep current settings`
+- CPU Core Ratio: `40.0`
+- VDDCR CPU Voltage: `Manual`
+- VDDCR CPU Voltage Override: `1.05000`
+
+Можно попробовать комбинацию: `42.0` и `1.20000`, `44.0` и `1.22500`, `46.0` и `1.30000`
+
+### Дополнительно
+
 - Advanced → PCI Subsystem Settings
   - Above 4G Decoding → `Enabled`
   - Resizable BAR → `Enabled`
