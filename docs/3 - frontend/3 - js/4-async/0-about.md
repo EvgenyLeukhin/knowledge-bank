@@ -16,3 +16,12 @@ sidebar_position: 7
 filter[status];
 sord[status] = 'ASC' | 'DESC';
 ```
+
+```js
+const params = new URLSearchParams();
+params.set('sort[id]', 'DESC');
+params.set('sort[date]', 'ASC');
+const url = `/api/items?${params.toString()}`;
+
+url;
+```

@@ -63,6 +63,14 @@ const summ2 = function (a, b, c) {
 };
 ```
 
+```js
+// можно написать название после function, такая запись не будет ошибкой,
+// но это название будет игнорироваться
+const summ2 = function summ(a, b, c) {
+  return a + b + c;
+};
+```
+
 ---
 
 ### arrow function
