@@ -54,7 +54,7 @@ function(a) {
 
 ---
 
-## Пример замыканий
+## Примеры замыканий
 
 ```js
 function makeCounter(start = 0) {
@@ -69,4 +69,55 @@ const counter = makeCounter(10);
 counter(); // 11
 counter(); // 12
 counter(); // 13
+```
+
+### Множитель (одно число «запоминается»)
+
+Внешняя функция фиксирует множитель, внутренняя принимает только второе число.
+
+```js
+function multiplyBy(factor) {
+  return function (n) {
+    return n * factor;
+  };
+}
+
+const double = multiplyBy(2);
+const triple = multiplyBy(3);
+
+double(5); // 10
+triple(5); // 15
+```
+
+### Префикс для сообщений
+
+Замыкание хранит строку `prefix`, каждый вызов `log` её «помнит».
+
+```js
+function createLogger(prefix) {
+  return function (message) {
+    console.log(`${prefix}: ${message}`);
+  };
+}
+
+const appLog = createLogger('[APP]');
+const dbLog = createLogger('[DB]');
+
+appLog('старт'); // [APP]: старт
+dbLog('подключено'); // [DB]: подключено
+```
+
+### Базовый URL для запросов
+
+Один раз передаём корень API, дальше добавляем только путь.
+
+```js
+function createApiClient(baseUrl) {
+  return function (path) {
+    return fetch(baseUrl + path);
+  };
+}
+
+const api = createApiClient('https://api.example.com');
+// api('/users') → запрос к https://api.example.com/users
 ```
