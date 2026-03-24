@@ -54,6 +54,7 @@ function countDown(value: number) {
   if (value <= 0) {
     console.log('Старт!');
   } else {
+    // сюда можно добавить setTimeout() для плавности
     console.log(value);
     countDown(value - 1);
   }

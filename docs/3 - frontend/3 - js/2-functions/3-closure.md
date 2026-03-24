@@ -129,3 +129,5 @@ function createApiClient(baseUrl) {
 const api = createApiClient('https://api.example.com');
 // api('/users') → запрос к https://api.example.com/users
 ```
+
+По возможности лучше использовать замыкания только тогда, когда в этом есть смысл, в прочих случаях лучше использовать простые функции, которые сразу возвращают требуемое нам значение.
