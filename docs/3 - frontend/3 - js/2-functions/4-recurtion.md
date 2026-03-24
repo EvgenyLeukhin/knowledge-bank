@@ -50,7 +50,7 @@ cycle(2);
 ### Обратный отсчёт
 
 ```js
-function countDown(value: number) {
+function countDown(value) {
   if (value <= 0) {
     console.log('Старт!');
   } else {
