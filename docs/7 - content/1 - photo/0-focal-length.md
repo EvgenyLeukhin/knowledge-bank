@@ -47,6 +47,7 @@ sidebar_position: 0
 - **800mm** - RF 800mm F11 IS STM
 
 ---
+
 ### Фиксы премиальные
 
 - **5.2mm** - RF 5.2mm F2.8L DUAL FISHEYE
@@ -58,7 +59,7 @@ sidebar_position: 0
 - **85mm** - RF 85mm F1.2 L USM
 - **85mm** - RF 85mm F1.2 L USM DS
 - **85mm** - RF 85mm F1.4 L VCM
-- **100mm** - RF 100mm f/2.8 L Macro IS USM 󠁩󠁩󠁩󠁩󠁩󠁩(лучший для макро) 🤔
+- **100mm** - RF 100mm f/2.8 L Macro IS USM 󠁩󠁩󠁩󠁩󠁩󠁩(лучший для макро)
 - **135mm** - RF 135mm F1.8 L IS USM
 - **400mm** - RF 400mm F2.8 L IS USM
 - **600mm** - RF 600mm F4 L IS USM
@@ -72,19 +73,19 @@ sidebar_position: 0
 - **15-30mm** - RF 15-30mm F4.5-6.3 IS STM
 - **16-28mm** - RF 16-28mm F2.8 IS STM
 - **24-50mm** - RF 24-50mm F4.5-6.3 IS STM ✅
-- **24-105mm** - RF 24-105mm F4-7.1 IS STM  
+- **24-105mm** - RF 24-105mm F4-7.1 IS STM
 - **24-240mm** - RF 24-240mm F4-6.3 IS USM (бюджетный супер-зум)
 - **28-70mm** - RF 28-70mm F2.8 IS STM
-- **75-300mm** - RF 75-300mm F4.0-5.6 (дешевый 30к) 🤔
+- **75-300mm** - RF 75-300mm F4.0-5.6 (дешевый 30к)
 - **100-400mm** - RF 100-400mm F5.6-8 IS USM
-- **200-800mm** - RF 200-800mm F6.3-9 IS USM 🤔
+- **200-800mm** - RF 200-800mm F6.3-9 IS USM
 
 ---
 
 ## Зумы премиальные
 
 - **10-20mm** - RF 10-20mm F4.0 L IS STM
-- **14-35mm** - RF 14-35mm F4 L IS USM
+- **14-35mm** - RF 14-35mm F4 L IS USM 🤔
 - **15-35mm** - RF 15-35mm F2.8 L IS USM
 - **24-70mm** - RF 24-70mm F2.8 L IS USM (лучший для свадеб)
 - **24-105mm** - RF 24-105mm F2.8 L IS USM Z
@@ -92,7 +93,6 @@ sidebar_position: 0
 - **28-70mm** - RF 28-70mm F2 L USM
 - **70-200mm** - RF 70-200mm F2.8 L IS USM
 - **70-200mm** - RF 70-200mm F2.8 L IS USM Z White
-- **70-200mm** - RF 70-200mm F4.0 L IS USM (100к) 🤔 
+- **70-200mm** - RF 70-200mm F4.0 L IS USM (100к) 🤔
 - **100-300mm** - RF 100-300mm F2.8 L IS USM (855к)
-- **100-500mm** - RF 100-500mm F4.5-7.1 L IS USM (170к) 🤔
-
+- **100-500mm** - RF 100-500mm F4.5-7.1 L IS USM (170к)
