@@ -5,12 +5,12 @@ sidebar_position: 1
 
 Начало нового проекта
 
-0. Открываем бибилиотеку: `File` --> `Open Library` (если не создана, то создаём)
+0. Открываем бибилиотеку: `File` --> `Open Library` (если не создана, то создаём `File` --> `New Library`)
 
 1. Создаём библиотеку на внешнем SSD:
    `File` --> `New` --> `Library`
 
-2. Создаём новый проект `File` --> `New` --> `Project`.
+2. Создаём новый проект или эвент `File` --> `New` --> `Project / Event`.
    Или кликаем "New project" на треке
 
 ---
@@ -60,6 +60,12 @@ sidebar_position: 1
 - Открыть Inpector
 - Снизу `Basic` поменять на `General`
 - `Camera LUT` --> `Apple LOG`, `None` или `Custom LUT`
+
+---
+
+### Добавление внешнего LUT
+
+- `Custom LUT` --> `IvakinColor_LUT` --> `DR-AppleLog_to_rec.709_v2_65.cube`
 
 ---
 
