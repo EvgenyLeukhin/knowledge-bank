@@ -3,7 +3,7 @@ title: Выдержка
 sidebar_position: 2
 ---
 
-<img src="../../../../img/photo/выдержка.png" width="450" alt="выдержка.png" />
+<img src="../../../../../img/photo/выдержка.png" width="450" alt="выдержка.png" />
 
 Camera shutter speed. Время открывания затвора камеры.
 

@@ -1,5 +1,5 @@
 ---
-title: Характеристики камеры
+title: Камера
 sidebar_position: 4
 ---
 
@@ -13,13 +13,13 @@ export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', c
 
 Профессионалы используют full-frame, так как они дают больше преимуществ.
 
-<img src="../../../../img/photo/crop-and-ff.jpg" width="450" alt="crop-and-ff.jpg" />
+<img src="../../../../../img/photo/crop-and-ff.jpg" width="450" alt="crop-and-ff.jpg" />
 
 ### Баланс белого
 
-<img src="../../../../img/photo/white-balance.jpg" width="450" alt="white-balance.jpg" />
+<img src="../../../../../img/photo/white-balance.jpg" width="450" alt="white-balance.jpg" />
 
-<img src="../../../../img/photo/white-balance.png" width="450" alt="white-balance.png" />
+<img src="../../../../../img/photo/white-balance.png" width="450" alt="white-balance.png" />
 
 Измеряется в градусах K. Можно ставить авто (AWB - авто).
 
@@ -30,7 +30,6 @@ export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', c
 ### По размеру сенсора
 
 - **Полный кадр (Full-Frame)** - 36 × 24 мм (соотношение 6:4)
-
   - Преимущества: лучшее качество при слабом освещении, малая глубина резкости
   - Недостатки: высокая стоимость, большие размеры объективов
 
@@ -41,7 +40,6 @@ export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', c
 ---
 
 - **Средний формат (Medium Format)** - 44×33 мм, 54×40 мм, 60×45 мм (соотношение 4:3)
-
   - Кроп-фактор: 0.64-0.79x (относительно полного кадра)
   - Преимущества: максимальное качество, огромная глубина резкости, профессиональная печать
   - Недостатки: очень высокая стоимость, большие размеры, медленная работа
@@ -62,7 +60,6 @@ export const MARK = ({children}) => (<mark style={{ backgroundColor: 'maroon', c
   - Высокая скорость чтения
   - Хорошее качество при высоких ISO
 - **CCD** - устаревшая технология
-
   - Лучшее качество цвета
   - Высокое энергопотребление
   - Медленное чтение

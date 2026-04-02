@@ -1,6 +1,6 @@
 ---
 title: Пейзажи
-sidebar_position: 7
+sidebar_position: 0
 ---
 
 ## <mark>Пейзажная съёмка</mark>
@@ -34,43 +34,43 @@ sidebar_position: 7
 
 #### 1. **Линии**
 
-<img src="../../../../img/photo/photo-1-lines.png" width="650" alt="photo-1-lines.png" />
+<img src="../../../../../img/photo/photo-1-lines.png" width="650" alt="photo-1-lines.png" />
 
 Линии забора, дороги, облаков, гор. Линии в кадре в идеале должны двигаться от переднего плана к среднему и дальнему - помогают зрителю переводить взгляд.
 
 #### 2. **Форма**
 
-<img src="../../../../img/photo/photo-2-form.png" width="650" alt="photo-2-form.png" />
+<img src="../../../../../img/photo/photo-2-form.png" width="650" alt="photo-2-form.png" />
 
 Форма пня, скал
 
 #### 3. **Ритм**
 
-<img src="../../../../img/photo/photo-3-rhytm.png" width="650" alt="photo-3-rhytm.png" />
+<img src="../../../../../img/photo/photo-3-rhytm.png" width="650" alt="photo-3-rhytm.png" />
 
 Ритм берез и растений в кадре, повторение элементов в кадре с одинаковым или близким к нему интервалом.
 
 #### 4. **Свет**
 
-<img src="../../../../img/photo/photo-4-light.png" width="650" alt="photo-4-light.png" />
+<img src="../../../../../img/photo/photo-4-light.png" width="650" alt="photo-4-light.png" />
 
 Подстветка переднего плана, светлое небо
 
 #### 5. **Контраст**
 
-<img src="../../../../img/photo/photo-5-contrast.png" width="650" alt="photo-5-contrast.png" />
+<img src="../../../../../img/photo/photo-5-contrast.png" width="650" alt="photo-5-contrast.png" />
 
 Береза на фоне сосен + свет
 
 #### 6. **Пространство**
 
-<img src="../../../../img/photo/photo-6-space.png" width="650" alt="photo-6-space.png" />
+<img src="../../../../../img/photo/photo-6-space.png" width="650" alt="photo-6-space.png" />
 
 Что-то маленькое на фоне чего-то большого. Значимые элементы на фоне пустоты или минального набора элементов. Фон как монотонное единое пространство.
 
 #### 7. **Момент**
 
-<img src="../../../../img/photo/photo-7-moment.png" width="650" alt="photo-7-moment.png" />
+<img src="../../../../../img/photo/photo-7-moment.png" width="650" alt="photo-7-moment.png" />
 
 Редкие моменты, которые редко встречаешь в обычной жизни. Облака, сияние, радуга. Какой-то либо элемент удачи в фотографии.
 
