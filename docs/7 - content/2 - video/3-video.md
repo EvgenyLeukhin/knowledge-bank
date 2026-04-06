@@ -8,11 +8,20 @@ sidebar_position: 3
 - [Убрать шум с аудио-файла](https://rtcd.io/ru/audio-noise-reduction/)
 - [Скачать видео/аудио с YouTube](https://ru.get-save.com/1-1/)
 
-## Съёмка видео на iPhone
+---
 
-TODO
+## Save gif from Giphy
+
+`GIPHY` --> `Copy Link` --> `Paste in Browser bar` --> `RMC` --> `Save image as ...`
+
+Если скачались файлы с разширением .gif, то их можно сразу загружать в соц. сети, если скачались файлы с расширением .webp, то нужно их конвертировать в .gif, например через сервис https://www.freeconvert.com/webp-to-gif/download
 
 ---
+
+## Съёмка видео на iPhone
+
+- Black Magic Cam
+- Final Cut Camera
 
 ---
 

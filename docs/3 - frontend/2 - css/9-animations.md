@@ -324,3 +324,13 @@ transition:
   translate: 30px 10px;
 }
 ```
+
+---
+
+## Повернуть видео
+
+```css
+video {
+  transform: rotateY(-180deg);
+}
+```
