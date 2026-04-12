@@ -16,4 +16,9 @@ const returnFullPrice = (price: number) => {
     maximumFractionDigits: 2,
   });
 };
+
+
+new Intl.NumberFormat('ru', {
+  notation: 'compact',
+}).format(100_000_000_000); // '100 млрд'
 ```
