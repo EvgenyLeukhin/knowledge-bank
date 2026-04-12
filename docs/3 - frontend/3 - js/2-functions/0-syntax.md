@@ -1,5 +1,5 @@
 ---
-title: Формы записи +
+title: Формы записи
 sidebar_position: 0
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Самовызывание +
+title: Самовызывание
 sidebar_position: 6
 ---
 

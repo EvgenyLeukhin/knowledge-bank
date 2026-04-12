@@ -1,5 +1,5 @@
 ---
-title: Обработка ошибок +
+title: Обработка ошибок
 sidebar_position: 7
 ---
 

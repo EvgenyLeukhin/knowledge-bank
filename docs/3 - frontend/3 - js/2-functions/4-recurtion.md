@@ -1,5 +1,5 @@
 ---
-title: Рекурсия +
+title: Рекурсия
 sidebar_position: 4
 ---
 
