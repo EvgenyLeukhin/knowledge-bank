@@ -78,7 +78,7 @@ function something() {
 }
 
 // обращение "сверху"
-console.log(VAR); // Ошибка! ReferenceError: VAR is not defined
+console.log(VAR); // Ошибка! ReferenceError: VAR is not defined, так как функция не вызывалась
 ```
 
 ---
