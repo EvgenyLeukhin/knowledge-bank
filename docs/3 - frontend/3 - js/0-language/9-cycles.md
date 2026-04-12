@@ -296,6 +296,8 @@ const arr = [
 ];
 
 arr.forEach(item => console.log(item));
+
+// (item, index, array) --> Параметры встроенногй анонимной функции
 ```
 
 ---
