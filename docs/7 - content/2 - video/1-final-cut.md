@@ -13,6 +13,8 @@ sidebar_position: 1
 2. Создаём новый проект или эвент `File` --> `New` --> `Project / Event`.
    Или кликаем "New project" на треке
 
+3. Импортируем исходники `Cmd + I` или `ПКМ --> Import Media` (в окне файлов)
+
 ---
 
 ## Tools
