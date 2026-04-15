@@ -68,8 +68,9 @@ someArray[2].name; // "Mike"
 // обращение к несуществующему элементу
 someArray[3]; // undefined
 
-// метод .at
+// метод .at()
 someArray.at(0); // { name: "Jack", age: 11 }
+someArray.at(-1); // { name: "Mike", age: 13 } - первый с конца
 ```
 
 ---
