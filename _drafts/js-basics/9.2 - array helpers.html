@@ -136,8 +136,8 @@
 
     // map всегда возвращает новый массив той же длины, что и исходный
     // не меняет исходный массив
-    arr41.map((item) => item.name); // [ 'Artem', 'Elena', 'Zhenia' ]
-    arr42.map((item) => item.name); // [ 'Artem', 'Elena', 'Zhenia', undefined, undefined, undefined ]
+    arr41.map(item => item.name); // [ 'Artem', 'Elena', 'Zhenia' ]
+    arr42.map(item => item.name); // [ 'Artem', 'Elena', 'Zhenia', undefined, undefined, undefined ]
   </script>
 
   <!--                                   -->
@@ -154,11 +154,11 @@
       {},
     ];
 
-    arr51.filter((item) => item.name); // [ { name: 'Artem', city: 'NN' }, { name: 'Elena', city: 'Saratov' }, { name: 'Zhenia', city: 'Omsk' }
-    arr51.filter((item) => item.city === 'Omsk'); // [ { name: 'Zhenia', city: 'Omsk' } ]
+    arr51.filter(item => item.name); // [ { name: 'Artem', city: 'NN' }, { name: 'Elena', city: 'Saratov' }, { name: 'Zhenia', city: 'Omsk' }
+    arr51.filter(item => item.city === 'Omsk'); // [ { name: 'Zhenia', city: 'Omsk' } ]
 
     // полная запись (должно быть какое-либо условие фильтрации)
-    arr51.filter((item) => {
+    arr51.filter(item => {
       return item.name === 'Omsk';
     }); // [ { name: 'Zhenia', city: 'Omsk' } ]
   </script>
@@ -174,12 +174,12 @@
     ];
 
     // возвращает первый найденный элемент
-    arr61.find((item) => item.city === 'Saratov'); // { name: 'Elena', city: 'Saratov' }
-    arr61.find((item) => item.city === 'Moscow'); // 'undefined'
+    arr61.find(item => item.city === 'Saratov'); // { name: 'Elena', city: 'Saratov' }
+    arr61.find(item => item.city === 'Moscow'); // 'undefined'
 
     // findIndex()
-    arr61.findIndex((item) => item.city === 'Saratov'); // 1
-    arr61.findIndex((item) => item.city === 'Moscow'); // -1
+    arr61.findIndex(item => item.city === 'Saratov'); // 1
+    arr61.findIndex(item => item.city === 'Moscow'); // -1
   </script>
 
   <!--                                   -->
@@ -193,7 +193,7 @@
     ];
 
     // возвращает boolean
-    arr71.some((item) => item.city === 'Omsk'); // true
+    arr71.some(item => item.city === 'Omsk'); // true
   </script>
 
   <!--                                          -->
@@ -207,7 +207,7 @@
     ];
 
     // возвращает boolean
-    arr81.every((item) => item.city === 'Omsk'); // false
+    arr81.every(item => item.city === 'Omsk'); // false
   </script>
 
   <!--                                 -->
