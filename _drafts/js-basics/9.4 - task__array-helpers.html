@@ -19,7 +19,7 @@
     // TASK 1 - задача на удаление - DELETE
     console.log(`TASK 1 - задача на удаление`);
     const task1 = 6;
-    const data1 = data.filter((item) => item.id !== task1);
+    const data1 = data.filter(item => item.id !== task1);
     data1;
 
     // TASK 2 - задача на добавление - CREATE
@@ -31,7 +31,7 @@
     // TASK 3 - задача на фильтрацию - FILTER
     console.log(`\n\n\n TASK 3 - задача на фильтрацию`);
     const task3 = [3, 7, 8];
-    const data3 = data.filter((item) => task3.includes(item.id));
+    const data3 = data.filter(item => task3.includes(item.id));
     data3;
 
     // TASK 4 - задача на обновление - UPDATE
@@ -43,14 +43,14 @@
     //   } else return item;
     // });
 
-    const data4 = data.map((item) => (item.id === task4.id ? task4 : item));
+    const data4 = data.map(item => (item.id === task4.id ? task4 : item));
     data4;
 
     // TASK 5 - задача на туглинг - TOOGLE
     console.log(`\n\n\n TASK 5 - задача на туглинг`);
     const task5 = { id: 11, name: 'Одинадцатый', property: null };
-    const data5 = data.map((item) => item.id).includes(task5.id)
-      ? data.filter((item) => item.id !== task5.id)
+    const data5 = data.map(item => item.id).includes(task5.id)
+      ? data.filter(item => item.id !== task5.id)
       : [...data, task5].sort((next, current) => next.id - current.id);
     data5;
 
