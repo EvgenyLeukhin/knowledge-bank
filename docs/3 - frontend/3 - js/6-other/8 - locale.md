@@ -22,3 +22,12 @@ new Intl.NumberFormat('ru', {
   notation: 'compact',
 }).format(100_000_000_000); // '100 млрд'
 ```
+
+```js
+const a = Array.from(uniqueActions)
+  .map(action => ({
+    value: action,
+    label: actionObj[action] ?? action,
+  }))
+  .sort((a, b) => a.label.localeCompare(b.label, 'ru'));
+```
