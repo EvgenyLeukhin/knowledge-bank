@@ -42,7 +42,6 @@ sidebar_position: 0
 - **45mm** - RF 45mm F1.2 STM
 - **50mm** - RF 50mm F1.8 STM 󠁩󠁩󠁩󠁩󠁩󠁩❌
 - **85mm** - RF 85mm F2 MACRO IS STM ✅
-- **135mm** - RF 135mm F1.8 L IS USM
 - **600mm** - RF 600mm F11 IS STM
 - **800mm** - RF 800mm F11 IS STM
 
@@ -56,11 +55,11 @@ sidebar_position: 0
 - **35mm** - RF 35mm F1.4 L VCM
 - **50mm** - RF 50mm F1.2 L USM
 - **50mm** - RF 50mm F1.4 L VCM
-- **85mm** - RF 85mm F1.2 L USM
+- **85mm** - RF 85mm F1.2 L USM (160к) 🤔
 - **85mm** - RF 85mm F1.2 L USM DS
 - **85mm** - RF 85mm F1.4 L VCM
-- **100mm** - RF 100mm f/2.8 L Macro IS USM 󠁩󠁩󠁩󠁩󠁩󠁩(лучший для макро)
-- **135mm** - RF 135mm F1.8 L IS USM
+- **100mm** - RF 100mm f/2.8 L Macro IS USM 󠁩󠁩󠁩󠁩󠁩󠁩(лучший для макро) (100к) 🤔
+- **135mm** - RF 135mm F1.8 L IS USM (150к) 🤔
 - **400mm** - RF 400mm F2.8 L IS USM
 - **600mm** - RF 600mm F4 L IS USM
 - **800mm** - RF 800mm F5.6 L IS USM
@@ -85,30 +84,14 @@ sidebar_position: 0
 ## Зумы премиальные
 
 - **10-20mm** - RF 10-20mm F4.0 L IS STM
-- **14-35mm** - RF 14-35mm F4 L IS USM 🤔
-- **15-35mm** - RF 15-35mm F2.8 L IS USM 🤔
-- **24-70mm** - RF 24-70mm F2.8 L IS USM (лучший для свадеб) 🤔
+- **14-35mm** - RF 14-35mm F4 L IS USM
+- **15-35mm** - RF 15-35mm F2.8 L IS USM (140к) ❤️
+- **24-70mm** - RF 24-70mm F2.8 L IS USM (лучший для свадеб) (165к) ❤️
 - **24-105mm** - RF 24-105mm F2.8 L IS USM Z
-- **24-105mm** - RF 24-105mm F4.0 L IS USM ✅
+- **24-105mm** - RF 24-105mm F4.0 L IS USM ❌
 - **28-70mm** - RF 28-70mm F2 L USM
-- **70-200mm** - RF 70-200mm F2.8 L IS USM 🤔
+- **70-200mm** - RF 70-200mm F2.8 L IS USM (155к) ❤️
 - **70-200mm** - RF 70-200mm F2.8 L IS USM Z White
 - **70-200mm** - RF 70-200mm F4.0 L IS USM (100к)
 - **100-300mm** - RF 100-300mm F2.8 L IS USM (855к)
 - **100-500mm** - RF 100-500mm F4.5-7.1 L IS USM (170к)
-
----
-
-## Наборы объективов под сценарий
-
-### Travel, Street, Пейзаж
-
-TODO
-
----
-
-### Портреты, Love story, творческая фотография
-
-TODO
-
----
