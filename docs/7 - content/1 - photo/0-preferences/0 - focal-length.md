@@ -95,3 +95,5 @@ sidebar_position: 0
 - **70-200mm** - RF 70-200mm F4.0 L IS USM (100к)
 - **100-300mm** - RF 100-300mm F2.8 L IS USM (855к)
 - **100-500mm** - RF 100-500mm F4.5-7.1 L IS USM (170к)
+
+---
