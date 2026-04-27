@@ -97,3 +97,90 @@ sidebar_position: 0
 - **100-500mm** - RF 100-500mm F4.5-7.1 L IS USM (170к)
 
 ---
+
+## Canon RF, полный кадр
+
+| Объектив                         | Цена       | Популярность      | Желание приобрести                        |
+| -------------------------------- | ---------- | ----------------- | ----------------------------------------- |
+| RF 5.2mm F2.8L Dual Fisheye      | 200-250к   | Нишевая           |                                           |
+| RF 10-20mm F4 L IS STM           | 220-260к   | Средняя           |                                           |
+| RF 14-35mm F4 L IS USM           | 120-150к   | Высокая           |                                           |
+| RF 15-30mm F4.5-6.3 IS STM       | 45-60к     | Средняя           |                                           |
+| **RF 15-35mm F2.8 L IS USM**     | 140-170к   | Высокая           | ⭐⭐ Праймовый ширик                      |
+| RF 16mm F2.8 STM ✅              | 25-35к     | Высокая           |                                           |
+| RF 16-28mm F2.8 IS STM           | 100-120к   | Средняя           |                                           |
+| RF 20mm F1.4 L VCM               | 150-180к   | Средняя           |                                           |
+| RF 24mm F1.4 L VCM               | 140-170к   | Средняя           |                                           |
+| RF 24mm F1.8 Macro IS STM        | 50-65к     | Средняя           |                                           |
+| RF 24-50mm F4.5-6.3 IS STM ✅    | 25-35к     | Высокая           | Самый доступный и лёгкий                  |
+| **RF 24-70mm F2.8 L IS USM** 🎯  | 150-180к   | **Очень высокая** | ⭐⭐⭐ Лучший праймовый зум (резкий)      |
+| RF 24-105mm F2.8 L IS USM Z      | 280-330к   | Средняя           | ⭐ Резкий, но очень тяжёлый и длинный     |
+| RF 24-105mm F4 L IS USM          | 100-130к   | **Очень высокая** | ❌ (резкость почти как у бюджетного)      |
+| RF 24-105mm F4-7.1 IS STM        | 35-50к     | Высокая           | ⭐ Лучший бюджетный зум                   |
+| RF 24-240mm F4-6.3 IS USM        | 75-95к     | Средняя           | ⭐ Лучший бюджетный супер-зум             |
+| RF 28mm F2.8 STM                 | 25-35к     | Высокая           |                                           |
+| RF 28-70mm F2 L USM              | 260-320к   | Высокая           |                                           |
+| RF 28-70mm F2.8 IS STM           | 100-120к   | Высокая           |                                           |
+| RF 35mm F1.4 L VCM               | 140-170к   | Высокая           |                                           |
+| RF 35mm F1.8 Macro IS STM ✅     | 45-60к     | **Очень высокая** |                                           |
+| RF 45mm F1.2 STM                 | 45-60к     | Средняя           |                                           |
+| RF 50mm F1.2 L USM               | 200-250к   | Высокая           |                                           |
+| RF 50mm F1.4 L VCM               | 130-160к   | Высокая           |                                           |
+| RF 50mm F1.8 STM                 | 18-28к     | **Очень высокая** | ❌ (нет стаба, не резкий)                 |
+| **RF 70-200mm F2.8 L IS USM** 🎯 | 155-190к   | **Очень высокая** | ⭐⭐ Компактный телезум                   |
+| RF 70-200mm F2.8 L IS USM Z      | 260-310к   | Средняя           |                                           |
+| RF 70-200mm F4 L IS USM          | 95-120к    | Высокая           |                                           |
+| RF 75-300mm F4-5.6               | 25-35к     | Низкая            |                                           |
+| RF 85mm F1.2 L USM               | 210-260к   | Высокая           |                                           |
+| RF 85mm F1.2 L USM DS            | 240-300к   | Нишевая           |                                           |
+| **RF 85mm F1.4 L VCM**           | 150-180к   | Высокая           | ⭐ Праймовый портретник                   |
+| RF 85mm F2 Macro IS STM ✅       | 45-60к     | **Очень высокая** |                                           |
+| **RF 100mm F2.8 L Macro IS USM** | 100-130к   | Высокая           | ⭐⭐ Лучший для макро и крупных портретов |
+| RF 100-300mm F2.8 L IS USM       | 850-1000к  | Нишевая           |                                           |
+| RF 100-400mm F5.6-8 IS USM       | 55-75к     | **Очень высокая** |                                           |
+| RF 100-500mm F4.5-7.1 L IS USM   | 170-220к   | Высокая           |                                           |
+| RF 135mm F1.8 L IS USM           | 170-210к   | Средняя           |                                           |
+| RF 200-800mm F6.3-9 IS USM       | 170-210к   | Высокая           |                                           |
+| RF 400mm F2.8 L IS USM           | 1100-1300к | Нишевая           |                                           |
+| RF 600mm F4 L IS USM             | 1200-1500к | Нишевая           |                                           |
+| RF 600mm F11 IS STM              | 65-90к     | Средняя           |                                           |
+| RF 800mm F5.6 L IS USM           | 1500-1900к | Нишевая           |                                           |
+| RF 800mm F11 IS STM              | 85-110к    | Средняя           |                                           |
+| RF 1200mm F8 L IS USM            | 1800-2300к | Нишевая           |                                           |
+
+---
+
+## Canon RF-S, APS-C (кроп)
+
+- RF-S 3.9mm F3.5 STM Dual Fisheye
+- RF-S 7.8mm F4 STM Dual
+- RF-S 10-18mm F4.5-6.3 IS STM
+- RF-S 14-30mm F4-6.3 IS STM PZ
+- RF-S 18-45mm F4.5-6.3 IS STM
+- RF-S 18-150mm F3.5-6.3 IS STM
+- RF-S 55-210mm F5-7.1 IS STM
+
+---
+
+## Сторонние производители
+
+- Sigma RF-S / DC DN: 10-18mm F2.8 DC DN, 18-50mm F2.8 DC DN, 16mm F1.4 DC DN, 23mm F1.4 DC DN, 30mm F1.4 DC DN, 56mm F1.4 DC DN.
+- Tamron RF-S / Di III-A: 11-20mm F2.8 Di III-A RXD, 18-300mm F3.5-6.3 Di III-A VC VXD.
+- Samyang / Rokinon: AF 14mm F2.8 RF, AF 85mm F1.4 RF — в основном сняты с продажи.
+- Viltrox: AF 85mm F1.8 RF / RF II — в основном снят с продажи.
+- Yongnuo: YN 35mm F2R DF DSM, YN 85mm F1.8R DF DSM.
+- Meike: AF 85mm F1.8 RF — встречается как неофициальная AF-опция.
+- Laowa / Venus Optics: 8-15mm F2.8 Fisheye, 10mm F2.8 Zero-D, 11mm F4.5 FF RL, 12mm F2.8 Zero-D, 12-24mm F5.6, 14mm F4, 15mm F2, 15mm F4.5 Shift, 20mm F4 Shift, 24mm F14 Probe, 25mm F2.8 2.5-5x Macro, 28mm F1.2, 35mm F0.95, 45mm F0.95, 55mm F2.8 Tilt-Shift Macro, 58mm F2.8 2x Macro, 85mm F5.6 2x Macro, 90mm F2.8 2x Macro, 100mm F2.8 2x Macro, 180mm F4.5 Macro.
+- 7Artisans: 9mm F5.6, 10mm F2.8 Fisheye, 14mm F2.8, 15mm F4, 24mm F1.4, 25mm F0.95, 35mm F1.4, 50mm F1.05, 55mm F1.4, 60mm F2.8 Macro.
+- TTArtisan: 7.5mm F2 Fisheye, 11mm F2.8 Fisheye, 14mm F2.8, 17mm F1.4, 21mm F1.5, 23mm F1.4, 25mm F2, 35mm F0.95, 35mm F1.4, 50mm F1.2, 50mm F1.4, 50mm F2, 50mm F1.4 Tilt, 90mm F1.25, 100mm F2.8 Macro Tilt-Shift, 500mm F6.3.
+- Meike: 8mm F3.5 Fisheye, 10mm F2, 50mm F1.2, 50mm F1.7, 85mm F2.8 Macro.
+- Samyang / Rokinon MF: 14mm F2.8 RF, 85mm F1.4 RF.
+- NiSi: 9mm F2.8 ASPH, 15mm F4 Sunstar.
+- Voigtlander / Cosina: Nokton 50mm F1 Aspherical RF и другие RF-версии с ручным фокусом и электронными контактами, где доступны.
+- Zhongyi / Mitakon: Speedmaster 50mm F0.95, Speedmaster 90mm F1.5, Creator 28mm F5.6, Creator 135mm F2.5, 200mm F4 Macro.
+- Kipon: Elegant 24mm F2.4, 35mm F2.4, 50mm F2.4, 75mm F2.4, 90mm F2.4, Ibelux 40mm F0.85.
+- Lensbaby: Velvet 28, Velvet 56, Velvet 85, Trio 28, Sol 45, Composer Pro II с оптиками Sweet / Edge.
+- Yasuhara: Anthy 35mm F1.8.
+- Tokina: SZX 400mm F8 Reflex.
+- Kamlan: 55mm F1.4.
+- Brightin Star / AstrHori / Meyer-Optik Görlitz: разные ручные RF-версии, чаще всего нишевые портретные, макро, шифт и ретро-объективы.
