@@ -25,6 +25,7 @@ sidebar_position: 6
 - [Купибилет](https://www.kupibilet.ru)
 - [Aviakassa](https://www.aviakassa.com)
 - [OneTwoTrip](https://www.onetwotrip.com)
+- [CityTravel](https://city.travel)
 
 ---
 
