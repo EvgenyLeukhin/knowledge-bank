@@ -280,6 +280,13 @@ V. Делаем форсированный пуш
 
 ---
 
+## Обновление настроек SSH
+
+- - <CODE>ssh-keygen -R gitlab.eapteka.ru</CODE> - удалите устаревшую запись из `known_hosts`
+- - <CODE>ssh -T git@gitlab.eapteka.ru</CODE> - подключитесь снова и примите новый ключ
+
+---
+
 ## GitHub CLI ([cli.github.com](https://cli.github.com/))
 
 ```sh
