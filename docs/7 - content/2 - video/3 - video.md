@@ -424,3 +424,14 @@ ffmpeg -i input.mov -vcodec libx264 -crf 28 -preset slow -acodec aac output.mp4
 ```sh
 ffmpeg -i Выпускной\ Белоснежка\ 29.05.2026\ -\ HD\ 1080p.mov output.mp4
 ```
+
+```sh
+ffmpeg -i "Выпускной Белоснежка 29.05.2026 - HD 1080p.mov" -c:v libx264 -crf 23 -preset slow -c:a aac -b:a 160k "output_fhd_quality.mp4"
+```
+
+Настройки сжатия
+
+- `crf 23` — хорошее качество, файл больше.
+- `crf 28` — заметное сжатие, обычно приемлемо.
+- `crf 30-32` — сильное сжатие, качество может заметно просесть.
+- `crf 35+` — очень маленький файл, но часто уже плохо выглядит.
