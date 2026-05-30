@@ -14,7 +14,7 @@ sidebar_position: 3
 
 `GIPHY` --> `Copy Link` --> `Paste in Browser bar` --> `RMC` --> `Save image as ...`
 
-Если скачались файлы с разширением .gif, то их можно сразу загружать в соц. сети, если скачались файлы с расширением .webp, то нужно их конвертировать в .gif, например через сервис <https://www.freeconvert.com/webp-to-gif/download>
+Если скачались файлы с разширением .gif, то их можно сразу загружать в соц. сети, если скачались файлы с расширением .webp, то нужно их конвертировать в .gif, например через сервис [FreeConvert](https://www.freeconvert.com/webp-to-gif/download)
 
 ---
 
