@@ -14,7 +14,7 @@ sidebar_position: 3
 
 `GIPHY` --> `Copy Link` --> `Paste in Browser bar` --> `RMC` --> `Save image as ...`
 
-Если скачались файлы с разширением .gif, то их можно сразу загружать в соц. сети, если скачались файлы с расширением .webp, то нужно их конвертировать в .gif, например через сервис https://www.freeconvert.com/webp-to-gif/download
+Если скачались файлы с разширением .gif, то их можно сразу загружать в соц. сети, если скачались файлы с расширением .webp, то нужно их конвертировать в .gif, например через сервис <https://www.freeconvert.com/webp-to-gif/download>
 
 ---
 
@@ -311,13 +311,13 @@ for f in /путь/к/fпапке/*.mov; do
 done
 ```
 
-````sh
+```sh
 for f in /Volumes/iP15PM-SSD/DCIM/100APPLE/_.mov; do
   mediainfo "$f" > "${f%._}.txt"
 done
-```sh
-
 ```
+
+```sh
 General
 Complete name                            : ./IMG_0007.mov
 Format                                   : MPEG-4
@@ -400,4 +400,27 @@ Title                                    : Core Media Time Code
 Encoded date                             : 2025-10-28 17:59:48 UTC
 Tagged date                              : 2025-10-28 17:59:58 UTC
 ```
-````
+
+---
+
+## Сжатие видео
+
+### CLI утилита ffmpeg
+
+Установка
+
+```sh
+brew install ffmpeg
+```
+
+Сжатие
+
+```sh
+ffmpeg -i input.mov -vcodec libx264 -crf 28 -preset slow -acodec aac output.mp4
+```
+
+Пример:
+
+```sh
+ffmpeg -i Выпускной\ Белоснежка\ 29.05.2026\ -\ HD\ 1080p.mov output.mp4
+```
