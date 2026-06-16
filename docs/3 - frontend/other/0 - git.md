@@ -87,6 +87,7 @@ MacOS openssh install: `brew install openssh`
 - <CODE>git checkout &lt;commit_hash&gt;</CODE> - Переключиться в указанный коммит
 - <CODE>git checkout &lt;branch_name&gt;</CODE> - Переключиться в последний коммит указанной ветки
 - <CODE>git reset &lt;commit_hash&gt; (--hard)</CODE> - Сбросить историю до указанного коммита (принудительно)
+- <CODE>git reset --hard origin/main</CODE> - Сбросить историю до той как в origin (нужно сделать fetch перед этим)
 - <CODE>git clean -f -d</CODE> - Удалить лишние файлы
 
 ---
