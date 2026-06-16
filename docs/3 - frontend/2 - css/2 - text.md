@@ -157,7 +157,7 @@ p {
   font-style: normal | italic;
 
   /* Толщина начертания (жирность, вес) */
-  font-weight: normal | bold | 100.. 900 | lighter | bolder;
+  font-weight: normal | bold | 100 900 | lighter | bolder;
 
   /* Подчеркивание, зачеркивание, цвет подчеркивания*/
   text-decoration: underline | line-through | overline | none;
@@ -362,3 +362,27 @@ p {
 ## Высота строки
 
 <img src="../../../../img/css/line-height.jpg" width="450" alt="line-height.jpg" />
+
+---
+
+## Variable fonts и unicode-range
+
+Это синтаксис CSS Fonts Level 4: диапазон 300 700 означает, что один font-файл покрывает веса от 300 до 700. Обычно так пишут для variable fonts.
+
+- Для загрузки variable fonts
+- В обычном стиле элемента так писать нельзя: `body { font-weight: 300 700; }` будет неверно.
+- В `@font-face` это валидно для современных браузеров.
+- В `unicode-range` содержаться символы, которые могут быть отрисованы данным шрифтом
+
+```scss
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300 700;
+
+  // перечисление символов
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+```
