@@ -3,6 +3,8 @@ title: Final Cut
 sidebar_position: 1
 ---
 
+[https://zvukogram.com/](https://zvukogram.com/) - Бесплатная фоновая музыка
+
 Начало нового проекта
 
 0. Открываем бибилиотеку: `File` --> `Open Library` (если не создана, то создаём `File` --> `New Library`)
