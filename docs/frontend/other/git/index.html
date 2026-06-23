@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Git | Knowledge Bank</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://github.com/knowledge-bank/docs/frontend/other/git/"><meta data-rh="true" property="og:locale" content="ru"><meta data-rh="true" name="docusaurus_locale" content="ru"><meta data-rh="true" name="docsearch:language" content="ru"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Git | Knowledge Bank"><meta data-rh="true" name="description" content="- Version Control System. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с master на main."><meta data-rh="true" property="og:description" content="- Version Control System. Обратите внимание, что с октября 2020 года GitHub изменил название ветки по умолчанию с master на main."><link data-rh="true" rel="icon" href="/knowledge-bank/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/knowledge-bank/docs/frontend/other/git/"><link data-rh="true" rel="alternate" href="https://github.com/knowledge-bank/docs/frontend/other/git/" hreflang="ru"><link data-rh="true" rel="alternate" href="https://github.com/knowledge-bank/docs/frontend/other/git/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"🔥 Frontend","item":"https://github.com/knowledge-bank/docs/category/-frontend"},{"@type":"ListItem","position":2,"name":"Other 🌀","item":"https://github.com/knowledge-bank/docs/category/other-"},{"@type":"ListItem","position":3,"name":"Git","item":"https://github.com/knowledge-bank/docs/frontend/other/git"}]}</script><link rel="alternate" type="application/rss+xml" href="/knowledge-bank/blog/rss.xml" title="Knowledge Bank RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/knowledge-bank/blog/atom.xml" title="Knowledge Bank Atom Feed"><link rel="stylesheet" href="/knowledge-bank/assets/css/styles.8489b2ec.css">
-<script src="/knowledge-bank/assets/js/runtime~main.32187911.js" defer="defer"></script>
+<script src="/knowledge-bank/assets/js/runtime~main.487abf0f.js" defer="defer"></script>
 <script src="/knowledge-bank/assets/js/main.2d3c547a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -85,6 +85,7 @@ MacOS openssh install: <code>brew install openssh</code></p>
 <li class=""><code style="color:cyan">git checkout &lt;commit_hash&gt;</code> - Переключиться в указанный коммит</li>
 <li class=""><code style="color:cyan">git checkout &lt;branch_name&gt;</code> - Переключиться в последний коммит указанной ветки</li>
 <li class=""><code style="color:cyan">git reset &lt;commit_hash&gt; (--hard)</code> - Сбросить историю до указанного коммита (принудительно)</li>
+<li class=""><code style="color:cyan">git reset --hard origin/main</code> - Сбросить историю до той как в origin (нужно сделать fetch перед этим)</li>
 <li class=""><code style="color:cyan">git clean -f -d</code> - Удалить лишние файлы</li>
 </ul>
 <hr>
@@ -99,7 +100,7 @@ MacOS openssh install: <code>brew install openssh</code></p>
 </ul>
 <hr>
 <ul>
-<li class=""><code style="color:cyan">git revert comit_hash</code> - Удалить изменеия комита в текущей ветке (будет создан новый коммит, который удаляет дифф указан ного коммита)</li>
+<li class=""><code style="color:cyan">git revert comit_hash</code> - Удалить изменеия комита в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)</li>
 <li class=""><code style="color:cyan">git revert comit_hash1 comit_hash2 comit_hash3</code> - Удалить изменеия комитов в текущей ветке (будет создан новый коммит, который удаляет дифф указанного коммита)</li>
 </ul>
 <p>Сбросить ветку до той, которая находится в romote. Допустим в вас локально есть какие-то неотправленные коммиты в ветке <code>main</code> и вы не хотите их отправлять и хотите сбросить до состояния, которое в репозитории:</p>
@@ -114,7 +115,7 @@ MacOS openssh install: <code>brew install openssh</code></p>
 </ul>
 <hr>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="rebase">Rebase<a href="#rebase" class="hash-link" aria-label="Прямая ссылка на Rebase" title="Прямая ссылка на Rebase" translate="no">​</a></h2>
-<p>Перебазирование ветки, сдвигаем пер вый коммит дочерней ветки в состояние последнего коммита родительской.</p>
+<p>Перебазирование ветки, сдвигаем первый коммит дочерней ветки в состояние последнего коммита родительской.</p>
 <p>Актуально, когда родительская ветка наполниласть новыми коммитами после создания дочерней ветки и при этом перебазировании можно заблаговременно исправить все конфликты, находясь в дочерней ветке.</p>
 <ol>
 <li class="">
@@ -142,7 +143,7 @@ MacOS openssh install: <code>brew install openssh</code></p>
 <code style="color:cyan">git rebase --continue</code></p>
 </li>
 <li class="">
-<p>Если все конфликты решены и перебазирование закончено, то можно форсированно пушить изменения дочерней ветки
+<p>Если все конфликты решены и перебазирование закончено, то можно фо рсированно пушить изменения дочерней ветки
 <code style="color:cyan">git push origin -f</code>. Это команда опасна, так как форсированное отправление коммитов перезатирает неполученные коммиты из удалённого репозитория и переписывает их (удаляет)</p>
 </li>
 <li class="">
@@ -209,7 +210,7 @@ VI. Можно заходить на сервер командой <code>ssh som
 </ul>
 </li>
 </ul>
-<p>III. После редактирования нажимаем <code>Ctrl + C</code>, <code>:wq</code> + Enter - сохраняем</p>
+<p>III. После редактирования нажимаем <code>Ctrl + C</code>, <code>:wq</code> + Enter - со храняем</p>
 <p>IV. Пишем новый коммит-мессадж, <code>Ctrl + C</code>, <code>:wq</code> + Enter - сохраняем</p>
 <p>V. Делаем форсированный пуш</p>
 <ul>
