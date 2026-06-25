@@ -5,13 +5,27 @@ sidebar_position: 4
 
 Полезные способы копирования объектов:
 
-## Object.assign
+## Object.assign - копирование объекта из другого
 
 ```js
-const colors5 = Object.assign(colors, {
+const colors = {
+  red: '#F00',
+  green: '#0F0',
+  blue: '#00F',
+};
+
+const _colors = Object.assign(colors, {
   red: 'red', // переписываем поле
   white: '#fff', // создаём новое
 });
+
+// _colors
+// {
+//   red: 'red',
+//   green: '#0F0',
+//   blue: '#00F',
+//   white: '#fff'
+// }
 ```
 
 ---
@@ -35,6 +49,31 @@ const colors5 = {
   white: '#fff',
   black: '#000',
 };
+```
+
+### Схлопываем два объекта в один
+
+`bar` перезатрёт значения одноимённых полей и добавит новые.
+
+```js
+const foo = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const bar = {
+  a: 10,
+  c: 30,
+  d: 40,
+};
+
+const result = {
+  ...foo,
+  ...bar,
+};
+
+result; // { a: 10, b: 2, c: 30, d: 40 }
 ```
 
 ### Прямое сравнение объектов (side-effect)
