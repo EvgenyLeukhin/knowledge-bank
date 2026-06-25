@@ -435,3 +435,45 @@ img {
 - **fill** - Растягивается по контейнеру (пропорции игнорируются)
 - **contain** - Растягивается по максимальной стороне в контейнере (пропорции соблюдаются)
 - **cover** - Растягивается по максимальной стороне в контейнере, если осталось ещё свободное место по одной стороне, то изображение будет маштабироваться, чтобы заполнить всё пространство (пропорции соблюдаются)
+
+---
+
+## maskImage, WebkitMaskImage
+
+Можно загружать svg-иконки не как `bacground-image`, а как `mask-image`, в этом случае будет больше гибкости в css-стилизации таких иконок
+
+```jsx
+<i
+  className={styles[route.title]}
+  style={{
+    WebkitMaskImage: `url(${route.icon})`,
+    maskImage: `url(${route.icon})`,
+  }}
+/>
+<span>{route.title}</span>
+```
+
+И после этого можно уже задавать изменяемый `background-color`, будет изменяться цвет иконки, загрузенной как `mask-image`. В `background-image` так нельзя сделать.
+
+```scss
+i {
+  background-color: $menu-icon-color;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 16px auto;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 16px auto;
+}
+
+q.isActive {
+  font-weight: bold;
+  color: $accent-color;
+  background-color: $page-background;
+  cursor: default;
+
+  i {
+    background-color: $accent-color;
+  }
+}
+```
