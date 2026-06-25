@@ -97,15 +97,15 @@ div {
     linear-gradient(to bottom, yellow, deeppink),
     /* Направление в градусах */ linear-gradient(45deg, white, black),
     /* многоцветный градиент */
-      /* По умолчанию все цвета равномерно распределяются по ширине */
-      linear-gradient(to right, red, green, blue),
+    /* По умолчанию все цвета равномерно распределяются по ширине */
+    linear-gradient(to right, red, green, blue),
     /* колорстопы в % */
-      /* Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,  */
-      /* то самого градиента не будет, будут только эти цвета в чистом виде */
-      linear-gradient(45deg, green 30%, yellow 70%),
+    /* Если указывать явный шаг для каждого цвета, чтобы конец одного цвета был началом другого,  */
+    /* то самого градиента не будет, будут только эти цвета в чистом виде */
+    linear-gradient(45deg, green 30%, yellow 70%),
     linear-gradient(45deg, green 0, green 50%, yellow 50%, yellow 100%),
     /* колорстопы в px */
-      linear-gradient(
+    linear-gradient(
         to right,
         red 0,
         red 15px,
@@ -115,7 +115,7 @@ div {
         blue 45px
       ),
     /* повторяющийся градиент */
-      repeating-linear-gradient(
+    repeating-linear-gradient(
         to right,
         red 0,
         red 15px,
@@ -141,9 +141,9 @@ div {
     radial-gradient(ellipse, yellow, deeppink),
     /* многоцветный градиент */ radial-gradient(red, green, blue),
     /* колорстопы в % */
-      radial-gradient(red 0, red 15%, green 15%, green 30%, blue 30%, blue 45%),
+    radial-gradient(red 0, red 15%, green 15%, green 30%, blue 30%, blue 45%),
     /* колорстопы в px */
-      radial-gradient(
+    radial-gradient(
         red 0,
         red 15px,
         green 15px,
@@ -152,7 +152,7 @@ div {
         blue 45px
       ),
     /* повторяющийся градиент */
-      repeating-radial-gradient(
+    repeating-radial-gradient(
         red 0,
         red 15px,
         green 15px,

@@ -180,7 +180,6 @@ sidebar_position: 7
 ## Storybook
 
 - [Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/) - фреймворк для работы с компонентами
-
   - Создание собственной библиотеки компонентов
   - Динамический справочник этих компонентов
   - Компоненты в изоляции от прочих зависимостей и бизнес-логики

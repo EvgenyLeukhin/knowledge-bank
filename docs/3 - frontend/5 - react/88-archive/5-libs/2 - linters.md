@@ -187,10 +187,10 @@ ESLint — это утилита, которая может анализиров
 
 ```json
 {
-"editor.codeActionsOnSave": {
-"source.fixAll.eslint": true
-},
-"eslint.validate": ["javascript"]
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"]
 }
 ```
 
@@ -268,14 +268,14 @@ ESLint — это утилита, которая может анализиров
 
 ```json
 {
-"endOfLine": "auto",
-"singleQuote": true,
-"jsxSingleQuote": true,
-"arrowParens": "avoid",
-"semi": true,
-"useTabs": false,
-"trailingComma": "all",
-"tabWidth": 2
+  "endOfLine": "auto",
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "arrowParens": "avoid",
+  "semi": true,
+  "useTabs": false,
+  "trailingComma": "all",
+  "tabWidth": 2
 }
 ```
 

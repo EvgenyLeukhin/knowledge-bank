@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -66,7 +66,8 @@
       }
 
       html {
-        background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+        background:
+          conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
           conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
           conic-gradient(
             from 60deg at calc(200% / 3),
@@ -350,8 +351,8 @@
       };
 
       // функция отметки todo
-      const checkTodo = (id) => {
-        todo = todo.map((todo) => {
+      const checkTodo = id => {
+        todo = todo.map(todo => {
           if (todo.id === id) {
             return { ...todo, checked: !todo.checked };
           }
@@ -381,9 +382,9 @@
       };
 
       // функция удаления todo по id
-      const removeTodo = (id) => {
+      const removeTodo = id => {
         // I вариант - с помощью .filter()
-        todo = todo.filter((item) => item.id !== id);
+        todo = todo.filter(item => item.id !== id);
 
         // II вариант - с помощью .findIndex() и .splice()
         // const deletedIndex = todo.findIndex((item)  => item.id === id);
@@ -399,7 +400,7 @@
       });
 
       // событие нажатия Enter в поле ввода
-      input.addEventListener('keydown', (event) => {
+      input.addEventListener('keydown', event => {
         const value = event.target.value;
 
         if (value && event.key === 'Enter') {

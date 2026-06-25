@@ -29,13 +29,13 @@
     };
 
     // 3. Arrow function ES6
-    const plusOne3 = (someParam) => {
+    const plusOne3 = someParam => {
       return someParam + 1;
     };
 
     // если параметр один, то можно не оборачивать в круглые скобки
     // если в одну строку, то ключевое слово return можно опустить
-    const plusOne4 = (someParam) => someParam + 1;
+    const plusOne4 = someParam => someParam + 1;
 
     // вызов функции
     plusOne1(1); // 2

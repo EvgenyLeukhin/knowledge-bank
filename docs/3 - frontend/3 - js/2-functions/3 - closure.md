@@ -134,7 +134,6 @@ const api = createApiClient('https://api.example.com');
 
 ---
 
-
 ## Каррирование (currying)
 
 Подвид замыкания. Типа разбивка цепочек вызовов функции
@@ -149,7 +148,7 @@ multiply(3)(4); // 12
 // часто фиксируют первый аргумент и пользуются функцией дальше
 const triple = multiply(3);
 
-triple(4);  // 12
+triple(4); // 12
 triple(10); // 30
 ```
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>1.2 - fetch<</title>
@@ -11,8 +11,8 @@
     <script>
       // просмотр response после запроса на api
       fetch('https://swapi.dev/api/people/1/')
-        .then((res) => res.json())
-        .then((data) => console.log('data', data));
+        .then(res => res.json())
+        .then(data => console.log('data', data));
 
       // перепишем с помощью async-await
       async function fetchData() {
@@ -34,11 +34,11 @@
 
       // вызов асинхронной функции
       // можно добавлять then, catch и finally после асинхронных функций (особенность промисов)
-      fetchData().then((res) => console.log('res', res));
+      fetchData().then(res => console.log('res', res));
 
       // сохранение данных в отдельную переменную
       let data;
-      fetchData().then((res) => (data = res));
+      fetchData().then(res => (data = res));
 
       console.log('data:', data); // данные сохраняться в переменную
     </script>
@@ -47,10 +47,10 @@
     <script>
       fetch('some-local-image.png')
         // blob() - для обработки данных изображения
-        .then((res) => res.blob())
+        .then(res => res.blob())
 
         // получение локального src картинки
-        .then((imgSrc) => {
+        .then(imgSrc => {
           console.log('imgSrc', imgSrc);
 
           // вставить scr для <img id="image" />
@@ -58,7 +58,7 @@
         })
 
         // error
-        .catch((error) => console.error(error));
+        .catch(error => console.error(error));
     </script>
   </body>
 </html>

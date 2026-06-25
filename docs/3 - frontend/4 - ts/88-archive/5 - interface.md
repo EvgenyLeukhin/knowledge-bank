@@ -182,8 +182,10 @@ interface IDragDropObject {
   message: string;
 }
 
-interface IDragDropHandler
-  extends Pick<IDragDropObject, 'result' | 'provided'> {
+interface IDragDropHandler extends Pick<
+  IDragDropObject,
+  'result' | 'provided'
+> {
   handler: string;
 }
 

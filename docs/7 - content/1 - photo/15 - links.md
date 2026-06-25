@@ -19,7 +19,6 @@ sidebar_position: 15
 - [onfotolife.com](https://onfotolife.com)
 - [dpreview.com](https://www.dpreview.com)
 
-
 ---
 
 ## Улица

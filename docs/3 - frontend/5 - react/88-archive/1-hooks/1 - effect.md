@@ -32,7 +32,13 @@ const SomeComp = () => {
       .then(json => setUsers(json));
   }, []);
 
-  return <ul>{users?.map(user => <li key={user.id}>{user.name}</li>)}</ul>;
+  return (
+    <ul>
+      {users?.map(user => (
+        <li key={user.id}>{user.name}</li>
+      ))}
+    </ul>
+  );
 };
 ```
 

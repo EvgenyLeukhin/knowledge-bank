@@ -128,6 +128,6 @@ function tricky(x) {
 
 ## Дополнительно (документация)
 
-- [try...catch](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/try...catch) — MDN  
-- [throw](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/throw) — MDN  
-- [Объект Error](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) — MDN  
+- [try...catch](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/try...catch) — MDN
+- [throw](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/throw) — MDN
+- [Объект Error](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Error) — MDN

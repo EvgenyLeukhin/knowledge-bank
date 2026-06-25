@@ -5,7 +5,7 @@
   <!-- Вложенные функии -->
   <script>
     // Внутри функций можно создавать сколь угодно много переменных и других вложенных функций
-    const doSomething1 = (string) => {
+    const doSomething1 = string => {
       // вложенная функция
       function stringModify(string) {
         return string.toUpperCase();
@@ -26,7 +26,7 @@
       return string.toUpperCase();
     }
 
-    const doSomething2 = (string) => {
+    const doSomething2 = string => {
       // использование внешней функции
       const newString = stringModify(string);
 
@@ -62,7 +62,7 @@
       return string.toUpperCase();
     }
 
-    const doSomething3 = (string) => {
+    const doSomething3 = string => {
       // использование внешней функции
       const newString = stringModify(string);
 
@@ -85,18 +85,18 @@
     }
 
     // более короткая запись
-    const someCrazyFunc2 = (name) => () => console.log(`name is ${name}`);
+    const someCrazyFunc2 = name => () => console.log(`name is ${name}`);
 
     someCrazyFunc1('Jack')(); // 'name is Jack'
     someCrazyFunc2('Jack')(); // 'name is Jack'
 
     // но если добавить вложенной функции свой одноименный именноывнный параметр, то замыкание пропадает
-    const someCrazyFunc3 = (name) => (name) => console.log(`name is ${name}`);
+    const someCrazyFunc3 = name => name => console.log(`name is ${name}`);
     someCrazyFunc3('Jack')(); // 'name is undefined'
     someCrazyFunc3()('Jack'); // 'name is "Jack" - придется передавать его в другом месте
 
     // но если параметр будет иметь другое название, то замакании останется
-    const someCrazyFunc4 = (name) => (name2) => console.log(`name is ${name}`);
+    const someCrazyFunc4 = name => name2 => console.log(`name is ${name}`);
 
     // Цепочек замыканий может быть сколь угодно много, но их большое кол-во это плохая практика
   </script>
@@ -125,7 +125,7 @@
 
   <!-- Рекурсия -->
   <script>
-    const countDown = (count) => {
+    const countDown = count => {
       let countLocal = count;
 
       console.log(`count: ${countLocal}`);

@@ -12,8 +12,6 @@ sidebar_position: 6
 - [Tourvisor](https://tourvisor.ru) - с ним работает ОмскТур
 - [Яндекс.Путешествия](https://travel.yandex.ru/tours/) - Агрегатор туров от Яндекс
 
-
-
 ---
 
 ## Билеты
@@ -40,9 +38,7 @@ sidebar_position: 6
 
 ---
 
-
 - [Заказать eSim карту](https://esim365.ru)
 - [slowroads](https://slowroads.io)
 
 ---
-

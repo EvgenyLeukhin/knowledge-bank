@@ -219,7 +219,7 @@ export const notificationTemplatesSlice = createSlice({
 
   extraReducers: builder => {
     // fetchNotificationTemplates - isLoading
-    builder.addCase(fetchNotificationTemplates.pending, (state, { meta }) => {
+    (builder.addCase(fetchNotificationTemplates.pending, (state, { meta }) => {
       return {
         ...state,
         currentRequestId: meta.requestId,
@@ -258,7 +258,7 @@ export const notificationTemplatesSlice = createSlice({
             error: payload || error.message || defaultNetworkErrorMsg,
           };
         },
-      );
+      ));
   },
 });
 

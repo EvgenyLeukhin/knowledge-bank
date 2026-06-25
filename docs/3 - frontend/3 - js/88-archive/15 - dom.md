@@ -219,13 +219,13 @@ Window is a root of everything. По умолчанию стоит у метод
 ```js
 window;
 console.log(); // info, warn, error
-alert(), prompt(), confirm(); // window methods
+(alert(), prompt(), confirm()); // window methods
 screen;
 location; // .href
 history;
 cokkies;
 localStorage;
-Date, time;
+(Date, time);
 ```
 
 ---
