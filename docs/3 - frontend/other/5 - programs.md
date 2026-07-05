@@ -30,6 +30,9 @@ sidebar_position: 5
 - `Command - Shift - 5` - save video screen
 - `Command - Shift - N` - new folder
 - `Command - ,` - Preferences / Settings
+- `Cmd + C` - Copy
+- `Cmd + V` - Paste
+- `Cmd + Option + V` - Move
 
 ---
 
