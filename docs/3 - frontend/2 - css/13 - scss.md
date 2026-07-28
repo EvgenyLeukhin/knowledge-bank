@@ -259,3 +259,17 @@ $mobile: 767px; // MOBILE  [0 - 767]     --> 414 макет
   }
 }
 ```
+
+---
+
+## math
+
+```scss
+@use 'sass:math';
+@use 'styles/vars' as *;
+
+.tableRow {
+  cursor: pointer;
+  transition: all math.div($duration, 2);
+}
+```
