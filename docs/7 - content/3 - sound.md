@@ -177,16 +177,6 @@ Structure: Arrangement (+)
 
 ---
 
-<H3>Запись аудио с ОС</H3>
-
-```
-- Focusrite Control -> Loopback 1-2 -> Playback 1-2 (Stereo) -> Unmute
-- Logic Pro -> New audio track -> Input 5-6 -> No input monitoring -> Mute track
-- Play system audio signal -> You can hear it from System playback on your output device
-```
-
----
-
 <H3>Миксдаун проекта, сведение (Bounce)</H3>
 
 ```
@@ -246,14 +236,20 @@ PCM (.AIFF or .WAV), MP3 -> OK
 
 ---
 
+## Input device
+
+Logic Pro --> Settings --> Audio --> Output & Input Device: Scarlett 4i4 USB
+
+---
+
 ## Как записывать Loopback в Logic (звук из ОС)
 
 0. Выбрать источник звука - **Scarlett 4i4 USB**
 1. Открыть **Focusrite Control**
 2. Замьютить все микрофонные входы (optional)
-3. Loopback unmute, choose **Playback 1-2** или **Custom Mix 1-2**
+3. Loopback 1-2 --> **Mute OFF**, **Stereo: ON**, choose **Playback (DAW): 1-2** или **Custom Mix 1-2**
 4. Открыть **Logic Pro**
-5. Выбрать **Audio track** --> **Input 5 + 6**
+5. Выбрать **Audio (Mic or Line)** --> **Stereo / Input 5 + 6**
 6. **Замьютить** этот трек
 7. **Запустить звук** на компьютере и **Нажать на запись**
 

@@ -59,11 +59,13 @@ input[type='checkbox']:disabled {
 }
 ```
 
+---
+
 ## Стилизация инпутов/селектов
 
 ### Placeholder
 
-```scss
+```css
 // инпут в фокусе (набираемый текст)
 input:focus {
   color: red;
@@ -82,5 +84,29 @@ input:placeholder {
 // инпут вне фокуса (С НАБРАННЫМ ТЕКСТОМ)
 input[placeholder] {
   color: blue;
+}
+```
+
+---
+
+## Стилизация scrollbar
+
+Нужно добавить css-класс `custom-scrollbar` для того контейнера, где появляется scrollbar.
+
+```css
+/* scrollbar track width */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* scrollbar track background (полоска) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* scrollbar thumb (бегунок) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 110, 100, 0.75);
+  border-radius: 8px;
 }
 ```
