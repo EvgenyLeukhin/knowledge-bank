@@ -220,3 +220,115 @@ export const getDictionariesInterval = () => {
   };
 };
 ```
+
+## Рекурсивный запрос
+
+```ts
+export const getOrdersReportRecursive = (
+  filters: TFilters,
+  limit: number = 1,
+  offset: number = 0,
+  step: number = 0,
+) => {
+  return async (dispatch: AppDispatch) => {
+    try {
+      const { success, data, error } = await ordersService.getOredersReport(
+        filters,
+        limit,
+        offset,
+      );
+
+      // обновляем loading state
+      dispatch(
+        setLoadingState({
+          currentStep: step,
+          positionsAlreadyLoaded:
+            (store.getState().report.items?.length || 0) +
+            (data?.items.length || 0),
+          totalOrdersToLoad: data?.total || 0,
+          progress: [
+            ...(store.getState().report.loadingState.progress || []),
+            {
+              step,
+              status: returnLoadingStatus(
+                success,
+                data?.items.length || 0,
+                step,
+              ),
+              message: success ? 'success' : error?.message || 'error',
+            },
+          ],
+        }),
+      );
+
+      // SUCCESS
+      if (success) {
+        // если данные есть
+        if (data?.items.length) {
+          // добавляем данные в state
+          dispatch(
+            setItems([
+              ...(store.getState().report.items || []),
+              ...(data?.items || []),
+            ]),
+          );
+
+          // если пришедшие данные равны лимиту, то запрашиваем следующие данные
+          if (data?.items.length === limit) {
+            setTimeout(() => {
+              dispatch(
+                getOrdersReportRecursive(
+                  filters,
+                  limit,
+                  offset + limit,
+                  step + 1,
+                ),
+              );
+            }, 1000);
+
+            // если данные не равны лимиту, то завершаем запрос
+          } else {
+            dispatch(setLoading(false));
+            return;
+          }
+
+          // если данных нет
+        } else {
+          step === 0 &&
+            dispatch(
+              setMessage({
+                type: 'warning',
+                text: 'По выбранным фильтрам данных нет',
+              }),
+            );
+          dispatch(setLoading(false));
+          return;
+        }
+      }
+
+      // ERROR
+      if (error) {
+        dispatch(setError(error));
+        dispatch(
+          setMessage({
+            type: 'error',
+            text: `Ошибка загрузки данных отчета: ${error?.message}`,
+          }),
+        );
+        dispatch(setLoading(false));
+        return;
+      }
+    } catch (error: any) {
+      dispatch(setError(error));
+      dispatch(
+        setMessage({
+          type: 'error',
+          text: `Ошибка загрузки данных отчета: ${error?.message}`,
+        }),
+      );
+      dispatch(setLoading(false));
+      return;
+    }
+  };
+};
+```
