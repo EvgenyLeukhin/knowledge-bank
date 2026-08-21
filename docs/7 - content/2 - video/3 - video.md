@@ -1,5 +1,5 @@
 ---
-title: Видео ---
+title: Видео
 sidebar_position: 3
 ---
 
@@ -435,3 +435,20 @@ ffmpeg -i "Выпускной Белоснежка 29.05.2026 - HD 1080p.mov" 
 - `crf 28` — заметное сжатие, обычно приемлемо.
 - `crf 30-32` — сильное сжатие, качество может заметно просесть.
 - `crf 35+` — очень маленький файл, но часто уже плохо выглядит.
+
+---
+
+## Бесплатная музыка для YouTube
+
+- [bensound.com](https://www.bensound.com/) - Вход через Google
+- [bensound.com --> free-music-for-videos](https://www.bensound.com/free-music-for-videos)
+
+Нужно вставлять attribution text в описание к ролику
+
+### Пример attribution text
+
+```
+Music I Use: Bensound.com/free-music-for-videos
+Artist: Nick Petrov
+License code: RQMVMBJXCXKGRYQK
+```
