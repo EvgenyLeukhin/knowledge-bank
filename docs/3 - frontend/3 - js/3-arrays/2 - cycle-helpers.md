@@ -3,38 +3,86 @@ title: Цикличная обработка
 sidebar_position: 2
 ---
 
-| Метод                                            | Описание                  |
-| ------------------------------------------------ | ------------------------- |
-| [`.map()`](#map)                                 | мапинг                    |
-| [`.flatMap()`](#flatmap)                         | плоский мапинг            |
-| [`.filter()`](#filter)                           | фильтрация                |
-| [`.find()`](#find)                               | поиск элемента            |
-| [`.findIndex()`](#findindex)                     | поиск индекса             |
-| [`.findLast()`](#findlast)                       | поиск элемента с конца    |
-| [`.findLastIndex()`](#findlastindex)             | поиск индекса с конца     |
-| [`.some()`](#some)                               | проверка элемента         |
-| [`.every()`](#every)                             | проверка каждого элемента |
-| [`.sort()`](#sort)                               | сортировка                |
-| [`.toSorted()`](#tosorted)                       | сортировка                |
-| [`.reduce()`](#reduce)                           | схлопывание               |
-| [`.reduceRight()`](#reduceright)                 | схлопывание справа        |
-| [`.forEach()`](#foreach)                         |                           |
-| [`.entries() / .keys() / .values()`](#iterators) | итераторы в цикле for     |
+- Цикличные методы в стандарте ES2015 (ES6). Не мутируют исходные массивы, всегда возвращают новый.
+- В параметрах анономной функции всегда стоят (item, index, array)
+- Результат можно сохранять в переменную
+
+| Метод                                              | Описание                          |
+| -------------------------------------------------- | --------------------------------- |
+| [`.map()`](#map) +                                 | мапинг                            |
+| [`.flatMap()`](#flatmap) +                         | плоский мапинг                    |
+| [`.filter()`](#filter)                             | фильтрация                        |
+| [`.find()`](#find)                                 | поиск элемента                    |
+| [`.findIndex()`](#findindex)                       | поиск индекса                     |
+| [`.findLast()`](#findlast)                         | поиск элемента с конца            |
+| [`.findLastIndex()`](#findlastindex)               | поиск индекса с конца             |
+| [`.some()`](#some)                                 | проверка элемента                 |
+| [`.every()`](#every)                               | проверка каждого элемента         |
+| [`.sort()`](#sort)                                 | сортировка                        |
+| [`.toSorted()`](#tosorted)                         | сортировка                        |
+| [`.reduce()`](#reduce)                             | схлопывание                       |
+| [`.reduceRight()`](#reduceright)                   | схлопывание справа                |
+| [`.forEach()`](#foreach) +                         | выполнение действий при итерациях |
+| [`.entries() / .keys() / .values()`](#iterators) + | итераторы в цикле for             |
 
 ---
 
-## map()
+## .map()
 
----
-
-## flatMap()
-
-`.flatMap() = map() + flat(1)` в одном вызове: ты возвращаешь массив (или значение), а результат автоматически «сплющивается» на 1 уровень.
+- Применяется для обработки исходного массива
+- Всегда возвращает обработанный массив
+- Не изменяет исходный массив (не мутирует)
+- 3 параметра: элемент, индекс, исходный массив
 
 ```js
-const words = ['hi', 'js'];
-const letters1 = words.map(w => w.split('')); // [ [ 'h', 'i' ], [ 'j', 's' ] ]
-const letters2 = words.flatMap(w => w.split('')); // ['h', 'i', 'j', 's']
+const a = [
+  { id: 1, name: 'alpha', active: true },
+  { id: 2, name: 'beta', active: false },
+  { id: 3, name: 'gamma', active: true },
+];
+
+const b = a.map((item, index, arr) => {
+  return item.name;
+});
+
+// shortcut
+const b = a.map(item => item.name);
+
+b; // ['alpha', 'beta', 'gamma']
+```
+
+### .map() с условием
+
+Пример использования с изменением значения полей.
+
+```js
+const c = a.map((item, index) => {
+  if (item.name === 'alpha') {
+    return {
+      ...item,
+      id: 0,
+      name: 'new alpha',
+    };
+  }
+
+  return item;
+});
+```
+
+---
+
+## .flatMap()
+
+- Когда нужно привести массив массивов в одномерный
+
+```js
+const users = [
+  { name: 'Ann', tags: ['js', 'react'] },
+  { name: 'Bob', tags: ['node'] },
+];
+
+users.map(i => i.tags); // [ [ 'js', 'react' ], [ 'node' ] ] - многомерный массив
+users.flatMap(i => i.tags); // [ 'js', 'react', 'node' ] - одномерный массив
 ```
 
 ---
@@ -85,11 +133,45 @@ const letters2 = words.flatMap(w => w.split('')); // ['h', 'i', 'j', 's']
 
 ---
 
-## forEach()
+## .forEach()
+
+- Результат нельзя сохранять в переменную
+- Работает часто в паре с отдельным пустым массивом
+- Логирование, отладка
+- Просто «пройтись и что-то сделать», результат массива не нужен
+- .map() для данных, .forEach() для действий
+
+```js
+const a = [
+  { id: 1, name: 'alpha', active: true },
+  { id: 2, name: 'beta', active: false },
+  { id: 3, name: 'gamma', active: true },
+];
+
+// создаём пустой массивж
+const b = [];
+
+// пушим name в массив b на каждую итерацию
+a.forEach((item, index, array) => {
+  b.push(item.name);
+
+  // логирование
+  if (index === 1) {
+    console.log(item.name);
+  }
+
+  // выполнение действия
+  if (item.name === 'gamma') {
+    localStorage.setItem(id, item.id);
+  }
+});
+
+b; // [ 'alpha', 'beta', 'gamma' ]
+```
 
 ---
 
-## iterators
+## iterators (keys, values, entries)
 
 ```js
 const arr = ['a', 'b', 'c'];
