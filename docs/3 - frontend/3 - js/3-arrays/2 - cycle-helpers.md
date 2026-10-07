@@ -368,7 +368,9 @@ b; // [ 'alpha', 'beta', 'gamma' ]
 
 ---
 
-## iterators (keys, values, entries)
+## iterators
+
+`.keys()` / `.values()` / `.entries()` — итераторы для цикла `for...of`.
 
 ```js
 const arr = ['a', 'b', 'c'];
