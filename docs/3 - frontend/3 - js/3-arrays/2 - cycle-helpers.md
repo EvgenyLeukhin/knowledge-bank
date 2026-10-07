@@ -18,8 +18,8 @@ sidebar_position: 2
 | [`.findLastIndex()`](#findlastindex) +             | поиск индекса с конца             |
 | [`.some()`](#some) +                               | проверка элемента                 |
 | [`.every()`](#every) +                             | проверка каждого элемента         |
-| [`.sort()`](#sort)                                 | сортировка                        |
-| [`.toSorted()`](#tosorted)                         | сортировка                        |
+| [`.sort()`](#sort) +                               | сортировка                        |
+| [`.toSorted()`](#tosorted) +                       | сортировка                        |
 | [`.reduce()`](#reduce)                             | схлопывание                       |
 | [`.reduceRight()`](#reduceright)                   | схлопывание справа                |
 | [`.forEach()`](#foreach) +                         | выполнение действий при итерациях |
@@ -194,6 +194,7 @@ const b = a.every(item => item.active); // false
 
 ## sort()
 
+- Мутирует исходный массив
 - Два параметра в анонимной функции `sortFunc()`. `a` - `current` item, `b` - `next` item.
 - Сравниваться должны типы `number`
 - `sortFunc()` должна возвращать сравнение этих `number`, и должно вернуться число `< 0`, `= 0` или `> 0`.
@@ -235,15 +236,77 @@ const b = a.sort((curr, next) => curr.localeCompare(next)); // [ 'Anna', 'Bob', 
 
 ---
 
-## Сортировка дат
+### Сортировка дат
 
-TODO
+Даты удобно сравнивать через `new Date(valut).getTime()` (миллисекунды).
+
+```js
+const dates = [
+  new Date('2024-12-01'),
+  new Date('2023-05-10'),
+  new Date('2025-01-15'),
+];
+
+// по возрастанию (от старых к новым)
+const asc = [...dates].sort((a, b) => a.getTime() - b.getTime());
+// [ 2023-05-10, 2024-12-01, 2025-01-15 ]
+
+// по убыванию (от новых к старым)
+const desc = [...dates].sort((a, b) => b.getTime() - a.getTime());
+// [ 2025-01-15, 2024-12-01, 2023-05-10 ]
+```
+
+Сортировка объектов по полю с датой (строка ISO или `Date`):
+
+```js
+const events = [
+  { id: 1, title: 'meetup', date: '2024-11-02' },
+  { id: 2, title: 'release', date: '2024-03-18' },
+  { id: 3, title: 'demo', date: '2025-01-09' },
+];
+
+// можно так короче (shortcut)
+const sortedDates = [...events].sort(
+  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+);
+```
 
 ---
 
-## toSorted()
+## .toSorted()
 
-Возвращает новый массив, не мутирует исходный в отличие от .sort();
+- Возвращает **новый** отсортированный массив
+- Не мутирует исходный (в отличие от [`.sort()`](#sort))
+- Сигнатура сравнения та же: `(a, b) => number`
+
+```js
+const a = [11, 2, 22, 1];
+
+const b = a.toSorted((x, y) => x - y); // [1, 2, 11, 22]
+a; // [11, 2, 22, 1] — исходный не изменился
+
+// для сравнения: .sort() мутирует
+const c = [11, 2, 22, 1];
+c.sort((x, y) => x - y);
+c; // [1, 2, 11, 22]
+```
+
+Строки и даты — так же, как у `.sort()`:
+
+```js
+const names = ['Jack', 'Rose', 'Anna'];
+names.toSorted((curr, next) => curr.localeCompare(next)); // ['Anna', 'Jack', 'Rose']
+
+const events = [
+  { id: 1, title: 'meetup', date: '2024-11-02' },
+  { id: 2, title: 'release', date: '2024-03-18' },
+];
+
+events.toSorted(
+  (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+);
+// release → meetup; events без изменений
+```
 
 ---
 
