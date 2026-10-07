@@ -104,6 +104,8 @@ const b = a.filter(item => item.active); // [ { id: 1, name: 'alpha', active: tr
 
 ## .find()
 
+- Возвращает элемент, а не массив
+
 ```js
 const a = [
   { id: 1, name: 'alpha', active: true },
@@ -118,6 +120,8 @@ const b = a.find(item => item.active); // { id: 1, name: 'alpha', active: true }
 ---
 
 ## .findLast()
+
+- Возвращает элемент, а не массив
 
 ```js
 const a = [
@@ -134,6 +138,8 @@ const b = a.findLast(item => item.active); // { id: 3, name: 'gamma', active: tr
 
 ## .findIndex()
 
+- Возвращает `index` первого попавшего элемента с начала массива
+
 ```js
 const a = [
   { id: 1, name: 'alpha', active: true },
@@ -148,6 +154,8 @@ const b = a.findIndex(item => item.active); // 0
 ---
 
 ## .findLastIndex()
+
+- Возвращает `index` первого попавшего элемента с конца массива
 
 ```js
 const a = [
@@ -164,6 +172,8 @@ const b = a.findLastIndex(item => item.active); // 2
 
 ## .some()
 
+- Возвращает `boolean`
+
 ```js
 const a = [
   { id: 1, name: 'alpha', active: true },
@@ -178,6 +188,8 @@ const b = a.some(item => item.active); // true
 ---
 
 ## .every()
+
+- Возвращает `boolean`
 
 ```js
 const a = [
