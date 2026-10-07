@@ -273,3 +273,41 @@ $mobile: 767px; // MOBILE  [0 - 767]     --> 414 макет
   transition: all math.div($duration, 2);
 }
 ```
+
+---
+
+## CSS \ SCSS modules
+
+- Любой файл с суффиксом `.module.scss` или `.module.css` становится модулем.
+- Изоляция классов
+- Нет глобальных классов
+- Применяется только там, где импортируется
+- В разных модулях модут быть одинаковые названия классов, которые друг на друга не влияют, так как будут хэшироваться
+
+### :global
+
+`:global(.MuiTableCell-head)` говорит CSS Modules: этот класс не хешировать, оставить его как есть.
+
+```scss
+.head {
+  :global(.MuiTableCell-head) {
+    background-color: #fff;
+    padding: 8px;
+    font-weight: 600;
+  }
+}
+```
+
+Файл Name.module.scss — это CSS Modules. Локальные классы вроде .head при сборке получают уникальный суффикс, например Pharmacies_head_a1b2c3. Класс Material UI MuiTableCell-head в разметке такой же, как в исходнике, без вашего хеша. Если написать его обычным селектором, сборщик тоже его переименует, и правило перестанет попадать в ячейки таблицы.
+
+С `:global` получается примерно такой CSS:
+
+```scss
+.Pharmacies_head_a1b2c3 .MuiTableCell-head {
+  background-color: #fff;
+  padding: 8px;
+  font-weight: 600;
+}
+```
+
+`.head` остаётся локальным (хешируется), `.MuiTableCell-head` — глобальным
