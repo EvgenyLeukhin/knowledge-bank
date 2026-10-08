@@ -90,8 +90,6 @@ someArray[someArray.length - 1]; // { name: "Mike", age: 13 }
 ## Изменение типа данных массива
 
 ```js
-typeof []; // 'object'
-
 // String
 String([]); // ''
 String([1]); // '1'
