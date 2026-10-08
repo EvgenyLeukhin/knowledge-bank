@@ -21,7 +21,7 @@ sidebar_position: 2
 | [`.sort()`](#sort) +                               | сортировка                        |
 | [`.toSorted()`](#tosorted) +                       | сортировка                        |
 | [`.reduce()`](#reduce)                             | схлопывание                       |
-| [`.reduceRight()`](#reduceright)                   | схлопывание справа                |
+| [`.reduceRight()`](#reduceright) +                 | схлопывание справа                |
 | [`.forEach()`](#foreach) +                         | выполнение действий при итерациях |
 | [`.entries() / .keys() / .values()`](#iterators) + | итераторы в цикле for             |
 
@@ -396,7 +396,26 @@ b;
 
 ---
 
-## reduceRight()
+## .reduceRight()
+
+- То же, что [`.reduce()`](#reduce), но обход идёт справа налево
+- Без начального значения первый `total` — последний элемент массива
+
+```js
+const a = [11, 2, 22, 1];
+
+// обход: 1 → 22 → 2 → 11
+const order = a.reduceRight((total, item) => {
+  total.push(item);
+
+  return total;
+}, []);
+
+order; // [1, 22, 2, 11]
+
+// сумма от направления не зависит
+const sum = a.reduceRight((total, item) => (total += item)); // 36
+```
 
 ---
 
