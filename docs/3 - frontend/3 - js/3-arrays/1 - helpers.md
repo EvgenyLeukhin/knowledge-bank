@@ -19,7 +19,7 @@ sidebar_position: 1
 | [`.flat()`](#flat)                                                        | "плосколизация" одного уровня       |
 | [`.reverse()`](#reverse---изменить-порядок)                               | переворот                           |
 | [`.toReversed()`](#toreversed)                                            | переворот                           |
-| [`.structuredClone()`](<./3 - spread-rest.md#глубокое-копирование>)       | глубокая копия массива              |
+| [`.structuredClone()`](#structuredclone)                                  | глубокая копия массива              |
 
 ---
 
@@ -333,4 +333,20 @@ const someArray = [0, 1, 2];
 
 someArray.toReversed();
 someArray; // [ 0, 1, 2 ]
+```
+
+---
+
+## structuredClone()
+
+Глубокая копия: вложенные объекты не общие с исходным массивом.
+
+```js
+const someArray = [{ id: 1 }, { id: 2 }];
+const copy = structuredClone(someArray);
+
+copy[0].id = 999;
+
+copy; // [{ id: 999 }, { id: 2 }]
+someArray; // [{ id: 1 }, { id: 2 }]
 ```
