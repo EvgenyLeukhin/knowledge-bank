@@ -1,6 +1,6 @@
 ---
-title: Ошибки
-sidebar_position: 7
+title: fetch и axios
+sidebar_position: 0
 ---
 
 - Запросы
