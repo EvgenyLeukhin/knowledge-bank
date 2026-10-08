@@ -1,6 +1,6 @@
 ---
 title: Утилиты
-sidebar_position: 11
+sidebar_position: 26
 ---
 
 - [youmightnotneed.com/lodash](https://youmightnotneed.com/lodash)

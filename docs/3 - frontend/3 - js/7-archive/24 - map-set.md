@@ -1,6 +1,6 @@
 ---
 title: Map() и Set()
-sidebar_position: 21
+sidebar_position: 24
 ---
 
 ## Map

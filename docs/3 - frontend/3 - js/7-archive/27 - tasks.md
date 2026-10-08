@@ -1,6 +1,6 @@
 ---
 title: Примеры задач
-sidebar_position: 10
+sidebar_position: 27
 ---
 
 ## Задачи для собеседования

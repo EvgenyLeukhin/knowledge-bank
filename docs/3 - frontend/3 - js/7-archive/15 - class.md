@@ -1,6 +1,6 @@
 ---
 title: Классы 👎
-sidebar_position: 12
+sidebar_position: 15
 ---
 
 - О Proxy подробно и с примерами в [«Современном учебнике JavaScript»](https://learn.javascript.ru/proxy);

@@ -1,6 +1,6 @@
 ---
 title: Функции II
-sidebar_position: 10
+sidebar_position: 12
 ---
 
 ## Колбэк-функция (callback)

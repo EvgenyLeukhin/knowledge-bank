@@ -1,6 +1,6 @@
 ---
 title: Массивы
-sidebar_position: 11
+sidebar_position: 13
 ---
 
 - Коллекция данных (однотипных чаще)

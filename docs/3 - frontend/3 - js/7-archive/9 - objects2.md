@@ -1,6 +1,6 @@
 ---
 title: Объекты II
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 ## get и set
