@@ -5,18 +5,18 @@ sidebar_position: 10
 
 ## Задачи для собеседования
 
-- <https://codepen.io/sk-iv/pen/ZERVGvL>
-- <https://codepen.io/Inpulsar/pen/MWRobRz?editors=0010>
-- <https://codepen.io/Inpulsar/pen/xxerRmv?editors=0010>
+- [https://codepen.io/sk-iv/pen/ZERVGvL](https://codepen.io/sk-iv/pen/ZERVGvL)
+- [https://codepen.io/Inpulsar/pen/MWRobRz?editors=0010](https://codepen.io/Inpulsar/pen/MWRobRz?editors=0010)
+- [https://codepen.io/Inpulsar/pen/xxerRmv?editors=0010](https://codepen.io/Inpulsar/pen/xxerRmv?editors=0010)
 
 ---
 
-- <https://codesandbox.io/s/zadacha-no-1-taymer-xfyilm>
-- <https://codesandbox.io/s/zadacha-no2-intervaly-i-diapazony-g1stxg>
-- <https://codesandbox.io/s/zadacha-no-3-perenos-vybrannogo-v-sleduyushchee-sostoyanie-bm78w1>
-- <https://codesandbox.io/s/zadacha-no-4-pravilnyy-kod-f7mfux>
-- <https://codesandbox.io/s/zadacha-no-5-sortirovka-s-razdelitelem-hr3xm4>
-- <https://codepen.io/sk-iv/pen/ZERVGvL>
+- [https://codesandbox.io/s/zadacha-no-1-taymer-xfyilm](https://codesandbox.io/s/zadacha-no-1-taymer-xfyilm)
+- [https://codesandbox.io/s/zadacha-no2-intervaly-i-diapazony-g1stxg](https://codesandbox.io/s/zadacha-no2-intervaly-i-diapazony-g1stxg)
+- [https://codesandbox.io/s/zadacha-no-3-perenos-vybrannogo-v-sleduyushchee-sostoyanie-bm78w1](https://codesandbox.io/s/zadacha-no-3-perenos-vybrannogo-v-sleduyushchee-sostoyanie-bm78w1)
+- [https://codesandbox.io/s/zadacha-no-4-pravilnyy-kod-f7mfux](https://codesandbox.io/s/zadacha-no-4-pravilnyy-kod-f7mfux)
+- [https://codesandbox.io/s/zadacha-no-5-sortirovka-s-razdelitelem-hr3xm4](https://codesandbox.io/s/zadacha-no-5-sortirovka-s-razdelitelem-hr3xm4)
+- [https://codepen.io/sk-iv/pen/ZERVGvL](https://codepen.io/sk-iv/pen/ZERVGvL)
 
 <br />
 <hr />
