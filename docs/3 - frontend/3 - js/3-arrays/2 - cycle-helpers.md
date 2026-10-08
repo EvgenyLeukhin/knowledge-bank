@@ -25,8 +25,6 @@ sidebar_position: 2
 | [`.forEach()`](#foreach) +                         | выполнение действий при итерациях |
 | [`.entries() / .keys() / .values()`](#iterators) + | итераторы в цикле for             |
 
-<img src="../../../../../img/js/arrays.png" width="550" alt="arrays.png" />
-
 ---
 
 ## .map()
@@ -324,7 +322,77 @@ events.toSorted(
 
 ---
 
-## reduce()
+## .reduce()
+
+- Мощный метод для обработки и преобразования массивов.
+- Анонимная функция содержит 4 параметра `(total / acc / preVal / currVal, item / nextVal, index, array)`
+- Можно вводить дефолтное значение вторым параметром после функции
+
+### Суммирование чисел
+
+```js
+const a = [11, 2, 22, 1];
+
+// суммирование
+const b1 = a.reduce((total, item) => (total = total + item), 0); // 36
+const b2 = a.reduce((total, item) => (total = total + item), 10); // 46 (10 - стартовое значение)
+const b3 = a.reduce((total, item) => (total += item)); // 36 - shortcut
+
+// min значение
+const min = a.reduce((total, item) => Math.min(total, item)); // 1
+
+// max значение
+const max = a.reduce((total, item) => Math.max(total, item)); // 22
+```
+
+---
+
+### Преобразование данных
+
+```js
+const a = [
+  { id: 1, name: 'alpha', active: true },
+  { id: 2, name: 'beta', active: false },
+  { id: 3, name: 'gamma', active: true },
+];
+
+const b = a.reduce(
+  (total, item) => {
+    total.ids.push(item.id);
+    total.names.push(item.name);
+
+    return total;
+  },
+
+  // начальная заготовка для total
+  {
+    ids: [],
+    names: [],
+  },
+);
+
+b; // { ids: [ 1, 2, 3 ], names: [ 'alpha', 'beta', 'gamma' ] }
+```
+
+---
+
+### Преобразование в объект
+
+```js
+const b = a.reduce((total, item) => {
+  total[item.id] = item;
+
+  return total;
+}, {});
+
+b;
+
+// {
+//   '1': { id: 1, name: 'alpha', active: true },
+//   '2': { id: 2, name: 'beta', active: false },
+//   '3': { id: 3, name: 'gamma', active: true }
+// }
+```
 
 ---
 
@@ -402,3 +470,7 @@ const arr = ['a', 'b', 'c'];
 [...arr.values()]; // ['a', 'b', 'c']
 [...arr.entries()]; // [[0, 'a'], [1, 'b'], [2, 'c']]
 ```
+
+---
+
+<img src="../../../../../img/js/arrays.png" width="550" alt="arrays.png" />
