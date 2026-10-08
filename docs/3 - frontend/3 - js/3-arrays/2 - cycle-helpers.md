@@ -25,6 +25,8 @@ sidebar_position: 2
 | [`.forEach()`](#foreach) +                         | выполнение действий при итерациях |
 | [`.entries() / .keys() / .values()`](#iterators) + | итераторы в цикле for             |
 
+<img src="../../../../../img/js/arrays.png" width="550" alt="arrays.png" />
+
 ---
 
 ## .map()
