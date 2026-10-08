@@ -1,5 +1,5 @@
 ---
-title: Spread / Rest +
+title: Spread / Rest
 sidebar_position: 3
 ---
 
