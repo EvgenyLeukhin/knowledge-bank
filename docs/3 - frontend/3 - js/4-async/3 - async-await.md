@@ -47,29 +47,31 @@ loadPlanet().then(data => console.log(data));
 
 ### Где можно писать await
 
-Внутри `async`-функции и на верхнем уровне ES-модуля. В обычном скрипте на верхнем уровне будет `SyntaxError`. Переменная с результатом видна только внутри функции:
+Внутри `async`-функции и на верхнем уровне ES-модуля. В обычном скрипте на верхнем уровне будет `SyntaxError`. Ниже два отдельных вызова одной и той же функции, а не один общий скрипт.
 
 ```js
-const showPlanet = async () => {
-  const data = await loadPlanet();
+const loadPlanet = async () => {
+  const res = await fetch('https://swapi.dev/api/planets/1');
 
-  console.log(data);
+  if (!res.ok) {
+    throw new Error(String(res.status));
+  }
+
+  return res.json();
 };
 
-showPlanet();
+// обычный скрипт
+loadPlanet().then(res => console.log('res', res));
 ```
 
-В браузере верхний уровень становится модулем, если у тега скрипта указан `type="module"`:
+```js
+// модульный скрипт
+const res = await loadPlanet();
 
-```html
-<script type="module">
-  const data = await loadPlanet();
-
-  console.log(data);
-</script>
+console.log('res', res);
 ```
 
-В среде, где запускается фрагмент кода, для такой записи включают top-level await в advanced settings.
+В браузере вторая запись работает в `<script type="module">`. В среде, где запускается фрагмент кода, для неё включают top-level await в advanced settings.
 
 ### Несколько запросов
 
