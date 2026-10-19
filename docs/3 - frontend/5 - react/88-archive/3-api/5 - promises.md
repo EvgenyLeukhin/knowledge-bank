@@ -3,160 +3,114 @@ title: promises
 sidebar_position: 5
 ---
 
-Промисы нужны для выполнения асинхронных операций. После выполнения которых можно использовать цепочку методов then(), что упрощает синтаксис и читаемость кода.
+## Промис
 
-Промис имеет три стадии: pending - ожидание, resolve - удачное выпонение, reject - неудачное.
+Промис хранит результат операции, который появится позже. У него три состояния: `pending` (ещё нет результата), `fulfilled` (есть значение) и `rejected` (есть ошибка).
+
+`resolve` и `reject` — это функции, а не состояния. Срабатывает только первый вызов: повторный `resolve` или `reject` ничего не меняет.
+
+[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ```js
-const somePromise = new Promise((resolve, reject) => {
-  // some async code
-  resolve(); // continue
-  reject(); // break
+const promise = new Promise((resolve, reject) => {
+  const ok = true;
+
+  if (ok) {
+    resolve('done');
+  } else {
+    reject(new Error('failed'));
+  }
 });
 
-somePromise
-  .then(value => {
-    // do something
-  })
-  .catch(error => {
-    // do something
-  });
+promise.then(value => console.log(value)).catch(error => console.log(error));
 ```
 
-`then` - выполнить что-нибудь после удачного выполнения промиса. catch - обработчик ошибок.
+`then` получает значение и возвращает новый промис. `catch` получает отказ. Цепочка и отличие `catch` от `finally` разобраны в заметке `then-catch-finally`.
 
-`then` будет ждать успешного выполнения somePromise. Если ОК - то выполнитсья сам.
+### Уже готовое значение
 
-Можно составлять длинные цепочки из `then`. Промис возвращает промис, так как `then` видит только промисы. `then` также возвращает промис.
-
-Промис c таймером
-resolve вызывается внутри самого себя.
+`Promise.resolve` сразу создаёт успешный промис, `Promise.reject` — отклонённый.
 
 ```js
-function delay(ms) {
+Promise.resolve(1).then(value => console.log(value)); // 1
+
+Promise.reject(new Error('failed')).catch(error => console.log(error.message));
+```
+
+### Таймер
+
+Промис завершают внутри исполнителя, когда асинхронная операция закончилась.
+
+```js
+const delay = ms => {
   return new Promise(resolve => {
-    setTimeout(() => resolve('Done'), ms);
+    setTimeout(() => resolve('done'), ms);
   });
-}
+};
 
-delay(1000).then(resolve => console.log(resolve));
+delay(1000).then(value => console.log(value));
 ```
 
-Промис на событие
-`resolve` вызывается внутри тела функции промиса. На практике часто используют не сам промис, а функцию, которая его возвращает, чтобы передавать что-нибудь в параметре этой функции.
+### Событие
+
+Тот же приём подходит для события. Наружу отдают функцию, которая возвращает промис.
 
 ```js
-function loadScript(src) {
-  return new Promise(function (resolve, reject) {
-    let script = document.createElement('script');
-    script.src = src;
+const loadScript = src => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
 
+    script.src = src;
     script.onload = () => resolve(script);
-    script.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${src}`));
+    script.onerror = () => reject(new Error(`Ошибка загрузки ${src}`));
 
     document.head.append(script);
   });
-}
-```
+};
 
-Вызов функции. В параметре передаем src.
-
-```js
-let promise = loadScript(
+loadScript(
   'https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js',
-);
-
-promise.then(
-  script => alert(`${script.src} загружен!`),
-  error => alert(`Ошибка: ${error.message}`),
-);
-
-promise.then(script => alert('Ещё один обработчик...'));
+)
+  .then(script => {
+    console.log(script.src);
+    return script;
+  })
+  .then(script => console.log('ещё один обработчик', script.src))
+  .catch(error => console.log(error.message));
 ```
 
-Можно было записать короче:
+Без `return` второй `then` получит `undefined`. Один промис можно подписать несколькими отдельными `then`: каждый получит одно и то же значение.
+
+### Несколько промисов
+
+`Promise.all` ждёт все и сохраняет порядок результатов. Если один отклонится, весь результат отклонится.
+
+[Promise.all()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
 
 ```js
-loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js')
-  .then(
-    script => alert(`${script.src} загружен!`),
-    error => alert(`Ошибка: ${error.message}`),
-  )
-  .then(script => alert('Ещё один обработчик...'));
+Promise.all([loadPlanet(), loadPosts()]).then(([planet, posts]) => {
+  console.log(planet, posts);
+});
 ```
 
----
+`Promise.allSettled` дожидается всех, включая ошибки. У каждого пункта есть `status`: `fulfilled` или `rejected`.
 
-## Множественные запросы
+[Promise.allSettled()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
 
-```ts
-import httpClient from '../httpClient';
-import { Dispatch } from '@reduxjs/toolkit';
-import { IBrand, IRegion, IStorageplace  } from 'interfaces';
-
-const root = 'dictionaries/';
-
-// dictionary-service
-const dictionaryService = {
-  async getDictionary<T>(name: string): Promise<T[] | false> {
-    try {
-      const { data } = await httpClient.get(name);
-
-      return data;
-    } catch (e) {
-      return false;
+```js
+Promise.allSettled([loadPlanet(), loadPosts()]).then(results => {
+  results.forEach(result => {
+    if (result.status === 'fulfilled') {
+      console.log(result.value);
+    } else {
+      console.log(result.reason);
     }
-  },
-};
-
-...
-// setDictionary - reducer redux-slice
-setDictionary: (
-  state,
-  { payload }: PayloadAction<{ name: keyof IDictionaryState; data: any }>,
-) => {
-  return {
-    ...state,
-    [payload.name]: payload.data,
-  };
-},
-
-...
-
-// redux-thunk
-export const getDictionaries = () => {
-  return async function (dispatch: Dispatch<any>) {
-    // множественные запросы
-    await Promise.all([
-      dictionaryService.getDictionary<IBrand>(`${root}brand`),
-      dictionaryService.getDictionary<IRegion>(`${root}region`),
-      dictionaryService.getDictionary<IStorageplace>(`${root}storageplace`),
-    ]).then(data => {
-      // data - это массив ответов
-
-      // brand - Бренды
-      if (data[0]) {
-        dispatch(setDictionary({ name: 'brand', data: data[0] }));
-      } else {
-        dispatch(setMessage('Не удалось загрузить справочник "Бренды"'),);
-      }
-
-      // region - Регионы
-      if (data[1]) {
-        dispatch(setDictionary({ name: 'region', data: data[1] }));
-      } else {
-        dispatch(setMessage('Не удалось загрузить справочник "Регионы"'));
-      }
-
-      // storageplace - Склады
-      if (data[2]) {
-        dispatch(setDictionary({ name: 'storageplace', data: data[2] }));
-      } else {
-        dispatch(setMessage('Не удалось загрузить справочник "Склады"'));
-      }
-    });
-
-    dispatch(setLoadingAction(false));
-  };
-};
+  });
+});
 ```
+
+`Promise.race` завершается первым успешным или первым отказом. `Promise.any` завершается первым успехом и отклоняется, только если отказали все.
+
+[Promise.race()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
+
+[Promise.any()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
