@@ -106,16 +106,93 @@ const id = setInterval(() => {
 }, 1000);
 ```
 
----
+Страница берётся порциями. Пока в ответе ровно `limit` записей, есть следующая страница: `offset` увеличивают на `limit` и складывают записи в один массив. Короткая страница означает, что данные закончились.
+
+```js
+const limit = 10;
+
+const getPage = async offset => {
+  const params = new URLSearchParams({
+    _limit: String(limit),
+    _start: String(offset),
+  });
+
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?${params}`,
+  );
+
+  return res.json();
+};
+```
 
 ## Рекурсивные запросы
 
----
+Функция вызывает саму себя со следующим `offset` и передаёт уже собранный массив.
+
+```js
+const loadAll = async (offset = 0, items = []) => {
+  const page = await getPage(offset);
+  const nextItems = [...items, ...page];
+
+  if (page.length < limit) {
+    return nextItems;
+  }
+
+  return loadAll(offset + limit, nextItems);
+};
+
+loadAll().then(items => console.log(items));
+```
 
 ## Интервальные запросы
 
----
+Следующая страница запрашивается раз в секунду. Пока запрос не закончился, новый не стартует. На короткой странице интервал останавливается.
+
+```js
+const items = [];
+let offset = 0;
+let isLoading = false;
+
+const id = setInterval(async () => {
+  if (isLoading) {
+    return;
+  }
+
+  isLoading = true;
+
+  const page = await getPage(offset);
+
+  items.push(...page);
+  offset += limit;
+  isLoading = false;
+
+  if (page.length < limit) {
+    clearInterval(id);
+    console.log(items);
+  }
+}, 1000);
+```
 
 ## Циклические запросы
 
----
+Цикл `while` сам увеличивает `offset` и ждёт каждую страницу, прежде чем запросить следующую.
+
+```js
+const loadAll = async () => {
+  const items = [];
+  let offset = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    const page = await getPage(offset);
+
+    items.push(...page);
+    offset += limit;
+    hasMore = page.length === limit;
+  }
+
+  return items;
+};
+
+loadAll().then(items => console.log(items));
+```

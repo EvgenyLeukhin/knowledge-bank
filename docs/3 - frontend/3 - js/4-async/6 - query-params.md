@@ -119,6 +119,18 @@ fetch(`/api/items?${params}`);
 // /api/items?limit=50&offset=0&sort[date]=DESC&filter[status]=ACTIVE&filter[roles][]=ROLE_ADMIN&filter[roles][]=ROLE_USER
 ```
 
+`set` оставляет у ключа одно значение и заменяет предыдущее. `append` добавляет ещё одну пару с тем же ключом. Для даты и статуса значение одно, поэтому там `set`. Ролей несколько: второй `set` стёр бы первую, поэтому их добавляют через `append`.
+
+```js
+params.set('filter[status]', 'ACTIVE');
+params.set('filter[status]', 'DRAFT');
+// filter[status]=DRAFT
+
+params.append('filter[roles][]', 'ROLE_ADMIN');
+params.append('filter[roles][]', 'ROLE_USER');
+// filter[roles][]=ROLE_ADMIN&filter[roles][]=ROLE_USER
+```
+
 В axios вложенный объект сам становится скобками в адресе. Массив ролей по умолчанию получает `[]`.
 
 ```js
