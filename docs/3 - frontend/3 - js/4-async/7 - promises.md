@@ -107,8 +107,41 @@ Promise.allSettled([loadPlanet(), loadPosts()]).then(results => {
 });
 ```
 
-`Promise.race` завершается первым успешным или первым отказом. `Promise.any` завершается первым успехом и отклоняется, только если отказали все.
+`Promise.race` завершается тем промисом, который наступил первым: успехом или отказом. Так запрос ограничивают по времени.
 
 [Promise.race()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
 
+```js
+const timeout = ms => {
+  return new Promise((_, reject) => {
+    setTimeout(() => reject(new Error('timeout')), ms);
+  });
+};
+
+Promise.race([loadPlanet(), timeout(5000)])
+  .then(planet => console.log(planet))
+  .catch(error => console.log(error.message));
+```
+
+`Promise.any` завершается первым успехом и отклоняется, только если отказали все. Подходит, когда один и тот же ресурс есть на нескольких адресах.
+
 [Promise.any()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/any)
+
+```js
+const loadFrom = url => {
+  return fetch(url).then(res => {
+    if (!res.ok) {
+      throw new Error(String(res.status));
+    }
+
+    return res.json();
+  });
+};
+
+Promise.any([
+  loadFrom('https://server-a.example/planets'),
+  loadFrom('https://server-b.example/planets'),
+])
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+```

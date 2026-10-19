@@ -173,3 +173,22 @@ axios.post('https://jsonplaceholder.typicode.com/posts', {
   body: 'Post Body',
 });
 ```
+
+Файл отправляют через `FormData`. В строку его не превращают и заголовок `Content-Type` не ставят: браузер сам добавит границу между частями. Axios для такого тела делает то же самое.
+
+```js
+const body = new FormData();
+const file = fileInput.files[0];
+
+body.append('title', 'Title of post');
+body.append('file', file);
+
+fetch('/api/posts', {
+  method: 'POST',
+  body,
+});
+```
+
+```js
+axios.post('/api/posts', body);
+```

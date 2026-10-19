@@ -61,6 +61,23 @@ fetch(url)
   .catch(error => console.log('error', error));
 ```
 
+При статусе `400` или `422` сервер часто присылает JSON с пояснением. Его читают до `throw`: после исключения тело уже не достать. Текст для пользователя обычно лежит в `message`, а `error.message` тогда содержит его, а не только код.
+
+```js
+fetch(url)
+  .then(res => {
+    return res.json().then(data => {
+      if (!res.ok) {
+        throw new Error(data.message ?? String(res.status));
+      }
+
+      return data;
+    });
+  })
+  .then(data => console.log(data))
+  .catch(error => console.log(error.message));
+```
+
 ### Сохранение результата
 
 Присваивание внутри `.then` случается после ответа. Строка сразу после `fetch` переменную ещё не видит.

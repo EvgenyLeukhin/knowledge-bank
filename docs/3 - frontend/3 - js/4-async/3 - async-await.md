@@ -86,3 +86,41 @@ const load = async () => {
 `Promise.allSettled` дожидается всех, даже если часть завершилась ошибкой. У каждого элемента будет `status`: `fulfilled` или `rejected`.
 
 [Promise.allSettled()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled)
+
+### Цикл
+
+`for...of` останавливается на `await`. `forEach` так не умеет: он сразу запускает все колбэки, а строка после него выполняется, не дожидаясь ответов.
+
+```js
+const ids = [1, 2, 3];
+
+const loadPlanet = async id => {
+  const res = await fetch(`https://swapi.dev/api/planets/${id}`);
+
+  return res.json();
+};
+
+ids.forEach(async id => {
+  const planet = await loadPlanet(id);
+  console.log(planet);
+});
+
+console.log('готово'); // раньше планет
+```
+
+Последовательная загрузка идёт через `for...of`. Параллельная собирает массив промисов через `map` и ждёт его в `Promise.all`.
+
+```js
+const loadInOrder = async () => {
+  for (const id of ids) {
+    const planet = await loadPlanet(id);
+    console.log(planet);
+  }
+};
+
+const loadTogether = async () => {
+  const planets = await Promise.all(ids.map(id => loadPlanet(id)));
+
+  console.log(planets);
+};
+```
