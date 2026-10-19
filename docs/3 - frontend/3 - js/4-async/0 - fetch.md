@@ -136,6 +136,30 @@ const getPlanet = async () => {
 getPlanet().then(data => console.log(data));
 ```
 
+Строка `const data = await getPlanet()` в обычном скрипте не выполнится. Её оставляют внутри ещё одной `async`-функции. Сама `data` видна только там:
+
+```js
+const showPlanet = async () => {
+  const data = await getPlanet();
+
+  console.log(data);
+};
+
+showPlanet();
+```
+
+Та же строка допустима на верхнем уровне ES-модуля. В браузере у тега скрипта для этого нужен `type="module"`:
+
+```html
+<script type="module">
+  const data = await getPlanet();
+
+  console.log(data);
+</script>
+```
+
+В среде, где запускается фрагмент кода, включают top-level await в advanced settings. После этого `const data = await getPlanet()` работает без обёртки.
+
 ### POST
 
 Тело передают строкой. Для JSON нужен заголовок `Content-Type`.

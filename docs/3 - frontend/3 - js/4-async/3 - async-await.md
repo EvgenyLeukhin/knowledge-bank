@@ -47,16 +47,29 @@ loadPlanet().then(data => console.log(data));
 
 ### Где можно писать await
 
-Внутри `async`-функции и на верхнем уровне ES-модуля. В обычном скрипте на верхнем уровне будет `SyntaxError`.
+Внутри `async`-функции и на верхнем уровне ES-модуля. В обычном скрипте на верхнем уровне будет `SyntaxError`. Переменная с результатом видна только внутри функции:
 
 ```js
 const showPlanet = async () => {
   const data = await loadPlanet();
+
   console.log(data);
 };
 
 showPlanet();
 ```
+
+В браузере верхний уровень становится модулем, если у тега скрипта указан `type="module"`:
+
+```html
+<script type="module">
+  const data = await loadPlanet();
+
+  console.log(data);
+</script>
+```
+
+В среде, где запускается фрагмент кода, для такой записи включают top-level await в advanced settings.
 
 ### Несколько запросов
 
