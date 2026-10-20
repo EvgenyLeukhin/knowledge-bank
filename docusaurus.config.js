@@ -29,6 +29,10 @@ const config = {
   organizationName: 'evgenyleukhin', // Usually your GitHub org/user name.
   projectName: 'knowledge-bank', // Usually your repo name.
   deploymentBranch: 'gh-pages',
+  // Порт 22 до GitHub обрывается (connection reset). SSH через 443 стабилен.
+  // https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port
+  githubHost: 'ssh.github.com',
+  githubPort: '443',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
