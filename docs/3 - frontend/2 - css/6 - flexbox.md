@@ -151,6 +151,19 @@ sidebar_position: 6
 }
 ```
 
+`justify-content`, `align-items`, `align-self` и `align-content` также принимают `start` и `end`. Их понимают текущие Chrome, Firefox и Safari.
+
+При обычном ряду слева направо `start` совпадает с `flex-start`, а `end` — с `flex-end`. `flex-start` и `flex-end` смотрят на начало flex-оси: при `flex-direction: row-reverse` оно оказывается справа. `start` и `end` смотрят на направление текста, поэтому в обычной вёрстке `start` остаётся слева и при развёрнутом ряде.
+
+[justify-content](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/justify-content)
+
+```css
+.flex-container {
+  justify-content: start;
+  align-items: end;
+}
+```
+
 ---
 
 ### order
