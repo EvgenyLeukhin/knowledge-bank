@@ -116,3 +116,12 @@ Settings --> Video Codec
 ### Instagram
 
 `Window` -> `Project Properties` -> `Modify` -> `Custom 1080 X 1350, Scale 223%`
+
+Либо можно указывать "Vertical" на этапе создания проекта
+
+---
+
+- LUT: `DR-ACEScct_to_Rec_709_v3`
+- LUT: `SR-rec709_v3`
+- `Option + F` - сделать стоп-кадр
+- `Control + D` - изменить скорость
