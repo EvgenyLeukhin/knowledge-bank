@@ -65,3 +65,15 @@ note.remove();
 `append` и `prepend` добавляют внутрь элемента, в конец или в начало. `before` и `after` ставят узел рядом, снаружи. `replaceChildren` заменяет всех потомков.
 
 [Element.append()](https://developer.mozilla.org/docs/Web/API/Element/append)
+
+### Кодирование части адреса
+
+`encodeURIComponent` кодирует строку для подстановки в часть URL. Символы, которые в адресе имеют особое значение, становятся последовательностью `%` и шестнадцатеричным кодом. Без этого `/` разрежет путь, а `?` начнёт query-строку. Кириллица тоже кодируется. Буквы, цифры и символы `- _ . ! ~ * ' ( )` функция не трогает, поэтому код `me_1203950850` останется как есть.
+
+[encodeURIComponent()](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+```js
+const code = 'ЦЕ/123';
+const url = `/orders/code/${encodeURIComponent(code)}`;
+// /orders/code/%D0%A6%D0%95%2F123
+```
